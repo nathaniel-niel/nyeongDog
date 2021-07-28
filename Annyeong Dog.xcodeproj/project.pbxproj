@@ -1,0 +1,494 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D5C421C26B1689900382A0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5C421B26B1689900382A0F /* AppDelegate.swift */; };
+		2D5C421E26B1689900382A0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5C421D26B1689900382A0F /* SceneDelegate.swift */; };
+		2D5C422526B1689A00382A0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D5C422426B1689A00382A0F /* Assets.xcassets */; };
+		2D5C422826B1689A00382A0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D5C422626B1689A00382A0F /* LaunchScreen.storyboard */; };
+		2D5C423B26B16A7400382A0F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D5C423A26B16A7400382A0F /* GoogleService-Info.plist */; };
+		7201C9E5BA03A43150EE0D2D /* Pods_Annyeong_Dog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBD6A1C34602C148FF42B40 /* Pods_Annyeong_Dog.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2D5C421826B1689900382A0F /* Annyeong Dog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Annyeong Dog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D5C421B26B1689900382A0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2D5C421D26B1689900382A0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2D5C422426B1689A00382A0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2D5C422726B1689A00382A0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2D5C422926B1689A00382A0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D5C423A26B16A7400382A0F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6EBD6A1C34602C148FF42B40 /* Pods_Annyeong_Dog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Annyeong_Dog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BED1602437A27696C8148C8 /* Pods-Annyeong Dog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Annyeong Dog.release.xcconfig"; path = "Target Support Files/Pods-Annyeong Dog/Pods-Annyeong Dog.release.xcconfig"; sourceTree = "<group>"; };
+		BA19E79707123E2C9E4CD631 /* Pods-Annyeong Dog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Annyeong Dog.debug.xcconfig"; path = "Target Support Files/Pods-Annyeong Dog/Pods-Annyeong Dog.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2D5C421526B1689900382A0F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7201C9E5BA03A43150EE0D2D /* Pods_Annyeong_Dog.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D5C420F26B1689900382A0F = {
+			isa = PBXGroup;
+			children = (
+				2D5C421A26B1689900382A0F /* Annyeong Dog */,
+				2D5C421926B1689900382A0F /* Products */,
+				E3987939F82127E1B684206B /* Pods */,
+				49D27C72FE5A8F36D5508D86 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2D5C421926B1689900382A0F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2D5C421826B1689900382A0F /* Annyeong Dog.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2D5C421A26B1689900382A0F /* Annyeong Dog */ = {
+			isa = PBXGroup;
+			children = (
+				2D5C423126B168BC00382A0F /* Resources */,
+				2D5C422F26B168A500382A0F /* Vendor */,
+				2D5C423026B168AE00382A0F /* Feature */,
+				2D5C422426B1689A00382A0F /* Assets.xcassets */,
+				2D5C422926B1689A00382A0F /* Info.plist */,
+				2D5C423A26B16A7400382A0F /* GoogleService-Info.plist */,
+			);
+			path = "Annyeong Dog";
+			sourceTree = "<group>";
+		};
+		2D5C422F26B168A500382A0F /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				2D5C423326B168D800382A0F /* Util */,
+				2D5C423226B168CE00382A0F /* Network */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		2D5C423026B168AE00382A0F /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				2D5C423826B16A4E00382A0F /* LaunchScreen */,
+				2D5C423426B168F600382A0F /* Example */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		2D5C423126B168BC00382A0F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2D5C421B26B1689900382A0F /* AppDelegate.swift */,
+				2D5C421D26B1689900382A0F /* SceneDelegate.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2D5C423226B168CE00382A0F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		2D5C423326B168D800382A0F /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		2D5C423426B168F600382A0F /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				2D5C423526B168FC00382A0F /* Model */,
+				2D5C423626B1690200382A0F /* View */,
+				2D5C423726B1690700382A0F /* ViewModel */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+		2D5C423526B168FC00382A0F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2D5C423626B1690200382A0F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2D5C423726B1690700382A0F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2D5C423826B16A4E00382A0F /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				2D5C423926B16A5800382A0F /* View */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		2D5C423926B16A5800382A0F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D5C422626B1689A00382A0F /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		49D27C72FE5A8F36D5508D86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6EBD6A1C34602C148FF42B40 /* Pods_Annyeong_Dog.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3987939F82127E1B684206B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BA19E79707123E2C9E4CD631 /* Pods-Annyeong Dog.debug.xcconfig */,
+				9BED1602437A27696C8148C8 /* Pods-Annyeong Dog.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2D5C421726B1689900382A0F /* Annyeong Dog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D5C422C26B1689A00382A0F /* Build configuration list for PBXNativeTarget "Annyeong Dog" */;
+			buildPhases = (
+				DFC16DFDE4519CB6E5754A32 /* [CP] Check Pods Manifest.lock */,
+				2D5C421426B1689900382A0F /* Sources */,
+				2D5C421526B1689900382A0F /* Frameworks */,
+				2D5C421626B1689900382A0F /* Resources */,
+				44D9459AA56ADC4D251447CF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Annyeong Dog";
+			productName = "Annyeong Dog";
+			productReference = 2D5C421826B1689900382A0F /* Annyeong Dog.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2D5C421026B1689900382A0F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					2D5C421726B1689900382A0F = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = 2D5C421326B1689900382A0F /* Build configuration list for PBXProject "Annyeong Dog" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2D5C420F26B1689900382A0F;
+			productRefGroup = 2D5C421926B1689900382A0F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2D5C421726B1689900382A0F /* Annyeong Dog */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2D5C421626B1689900382A0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D5C422826B1689A00382A0F /* LaunchScreen.storyboard in Resources */,
+				2D5C422526B1689A00382A0F /* Assets.xcassets in Resources */,
+				2D5C423B26B16A7400382A0F /* GoogleService-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		44D9459AA56ADC4D251447CF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Annyeong Dog/Pods-Annyeong Dog-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Annyeong Dog/Pods-Annyeong Dog-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Annyeong Dog/Pods-Annyeong Dog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DFC16DFDE4519CB6E5754A32 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Annyeong Dog-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D5C421426B1689900382A0F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D5C421C26B1689900382A0F /* AppDelegate.swift in Sources */,
+				2D5C421E26B1689900382A0F /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2D5C422626B1689A00382A0F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2D5C422726B1689A00382A0F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2D5C422A26B1689A00382A0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2D5C422B26B1689A00382A0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2D5C422D26B1689A00382A0F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA19E79707123E2C9E4CD631 /* Pods-Annyeong Dog.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 577NLUCH43;
+				INFOPLIST_FILE = "Annyeong Dog/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.annyeong.Annyeong-Dog";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2D5C422E26B1689A00382A0F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BED1602437A27696C8148C8 /* Pods-Annyeong Dog.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 577NLUCH43;
+				INFOPLIST_FILE = "Annyeong Dog/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.annyeong.Annyeong-Dog";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D5C421326B1689900382A0F /* Build configuration list for PBXProject "Annyeong Dog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D5C422A26B1689A00382A0F /* Debug */,
+				2D5C422B26B1689A00382A0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D5C422C26B1689A00382A0F /* Build configuration list for PBXNativeTarget "Annyeong Dog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D5C422D26B1689A00382A0F /* Debug */,
+				2D5C422E26B1689A00382A0F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2D5C421026B1689900382A0F /* Project object */;
+}
