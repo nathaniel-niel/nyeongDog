@@ -1,5 +1,5 @@
 //
-//  ExampleViewController.swift
+//  MainViewController.swift
 //  Annyeong Dog
 //
 //  Created by Nathaniel Andrian on 28/07/21.
@@ -7,22 +7,15 @@
 
 import UIKit
 
-class ExampleViewController: UIViewController {
+class MainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .systemBlue
-        self.navigationController?.isNavigationBarHidden = false
-        
-        
 
         // Do any additional setup after loading the view.
-        
-        
-        
+        view.backgroundColor = .blue
     }
-
+    
 
     /*
     // MARK: - Navigation
