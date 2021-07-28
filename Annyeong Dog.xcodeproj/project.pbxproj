@@ -12,6 +12,12 @@
 		2D5C422526B1689A00382A0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D5C422426B1689A00382A0F /* Assets.xcassets */; };
 		2D5C422826B1689A00382A0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D5C422626B1689A00382A0F /* LaunchScreen.storyboard */; };
 		2D5C423B26B16A7400382A0F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D5C423A26B16A7400382A0F /* GoogleService-Info.plist */; };
+		2DF37D9826B1A1E60026FE0C /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF37D9726B1A1E60026FE0C /* Helper.swift */; };
+		2DF37D9A26B1A1F90026FE0C /* DataManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF37D9926B1A1F90026FE0C /* DataManipulation.swift */; };
+		2DF37D9C26B1A2080026FE0C /* ExampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF37D9B26B1A2080026FE0C /* ExampleModel.swift */; };
+		2DF37D9F26B1A22F0026FE0C /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF37D9D26B1A22F0026FE0C /* ExampleViewController.swift */; };
+		2DF37DA026B1A22F0026FE0C /* ExampleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DF37D9E26B1A22F0026FE0C /* ExampleViewController.xib */; };
+		2DF37DA226B1A23C0026FE0C /* ExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF37DA126B1A23C0026FE0C /* ExampleViewModel.swift */; };
 		7201C9E5BA03A43150EE0D2D /* Pods_Annyeong_Dog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBD6A1C34602C148FF42B40 /* Pods_Annyeong_Dog.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +30,12 @@
 		2D5C422926B1689A00382A0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D5C423A26B16A7400382A0F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2DF37D9626B19E300026FE0C /* Annyeong Dog.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Annyeong Dog.entitlements"; sourceTree = "<group>"; };
+		2DF37D9726B1A1E60026FE0C /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		2DF37D9926B1A1F90026FE0C /* DataManipulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManipulation.swift; sourceTree = "<group>"; };
+		2DF37D9B26B1A2080026FE0C /* ExampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleModel.swift; sourceTree = "<group>"; };
+		2DF37D9D26B1A22F0026FE0C /* ExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewController.swift; sourceTree = "<group>"; };
+		2DF37D9E26B1A22F0026FE0C /* ExampleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ExampleViewController.xib; sourceTree = "<group>"; };
+		2DF37DA126B1A23C0026FE0C /* ExampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewModel.swift; sourceTree = "<group>"; };
 		6EBD6A1C34602C148FF42B40 /* Pods_Annyeong_Dog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Annyeong_Dog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BED1602437A27696C8148C8 /* Pods-Annyeong Dog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Annyeong Dog.release.xcconfig"; path = "Target Support Files/Pods-Annyeong Dog/Pods-Annyeong Dog.release.xcconfig"; sourceTree = "<group>"; };
 		BA19E79707123E2C9E4CD631 /* Pods-Annyeong Dog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Annyeong Dog.debug.xcconfig"; path = "Target Support Files/Pods-Annyeong Dog/Pods-Annyeong Dog.debug.xcconfig"; sourceTree = "<group>"; };
@@ -103,6 +115,7 @@
 		2D5C423226B168CE00382A0F /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				2DF37D9926B1A1F90026FE0C /* DataManipulation.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -110,6 +123,7 @@
 		2D5C423326B168D800382A0F /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				2DF37D9726B1A1E60026FE0C /* Helper.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -127,6 +141,7 @@
 		2D5C423526B168FC00382A0F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2DF37D9B26B1A2080026FE0C /* ExampleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -134,6 +149,8 @@
 		2D5C423626B1690200382A0F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2DF37D9D26B1A22F0026FE0C /* ExampleViewController.swift */,
+				2DF37D9E26B1A22F0026FE0C /* ExampleViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -141,6 +158,7 @@
 		2D5C423726B1690700382A0F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2DF37DA126B1A23C0026FE0C /* ExampleViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -238,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D5C422826B1689A00382A0F /* LaunchScreen.storyboard in Resources */,
+				2DF37DA026B1A22F0026FE0C /* ExampleViewController.xib in Resources */,
 				2D5C422526B1689A00382A0F /* Assets.xcassets in Resources */,
 				2D5C423B26B16A7400382A0F /* GoogleService-Info.plist in Resources */,
 			);
@@ -292,8 +311,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DF37D9A26B1A1F90026FE0C /* DataManipulation.swift in Sources */,
+				2DF37D9C26B1A2080026FE0C /* ExampleModel.swift in Sources */,
 				2D5C421C26B1689900382A0F /* AppDelegate.swift in Sources */,
 				2D5C421E26B1689900382A0F /* SceneDelegate.swift in Sources */,
+				2DF37D9826B1A1E60026FE0C /* Helper.swift in Sources */,
+				2DF37DA226B1A23C0026FE0C /* ExampleViewModel.swift in Sources */,
+				2DF37D9F26B1A22F0026FE0C /* ExampleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
