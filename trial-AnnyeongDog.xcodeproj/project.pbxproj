@@ -45,6 +45,7 @@
 		C037879A26B2B5E7004344E0 /* MedicalRecordsFilledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037879926B2B5E7004344E0 /* MedicalRecordsFilledViewController.swift */; };
 		C037879D26B2B81F004344E0 /* MedicalRecordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037879B26B2B81F004344E0 /* MedicalRecordsTableViewCell.swift */; };
 		C037879E26B2B81F004344E0 /* MedicalRecordsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C037879C26B2B81F004344E0 /* MedicalRecordsTableViewCell.xib */; };
+		C03787A126B2F133004344E0 /* dummyTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03787A026B2F133004344E0 /* dummyTesting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		C037879B26B2B81F004344E0 /* MedicalRecordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MedicalRecordsTableViewCell.swift; path = "../../../../../nyong-main/MedicalRecordsTableViewCell.swift"; sourceTree = "<group>"; };
 		C037879C26B2B81F004344E0 /* MedicalRecordsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MedicalRecordsTableViewCell.xib; path = "../../../../../nyong-main/MedicalRecordsTableViewCell.xib"; sourceTree = "<group>"; };
 		C037879F26B2BF30004344E0 /* MedicalRecordsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedicalRecordsTableViewCell.xib; sourceTree = "<group>"; };
+		C03787A026B2F133004344E0 /* dummyTesting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = dummyTesting.swift; path = "../../../../../nyong-main/dummyTesting.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,6 +357,7 @@
 				C037879926B2B5E7004344E0 /* MedicalRecordsFilledViewController.swift */,
 				C037879B26B2B81F004344E0 /* MedicalRecordsTableViewCell.swift */,
 				C037879C26B2B81F004344E0 /* MedicalRecordsTableViewCell.xib */,
+				C03787A026B2F133004344E0 /* dummyTesting.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C03787A126B2F133004344E0 /* dummyTesting.swift in Sources */,
 				C037879D26B2B81F004344E0 /* MedicalRecordsTableViewCell.swift in Sources */,
 				B584B3C826B28D13005A02C5 /* SigninViewController.swift in Sources */,
 				C037879126B2A1CB004344E0 /* DogProfileDetailViewController.swift in Sources */,
