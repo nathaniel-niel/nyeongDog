@@ -19,27 +19,46 @@ class DogProfileDetailViewController: UIViewController {
     @IBOutlet weak var colorTextField: UITextField!
     @IBOutlet weak var allergyTextField: UITextField!
     @IBOutlet weak var medicalRecordsUI: UIButton!
-  
+    
+    @IBOutlet weak var rightBarButtonItem: UIBarButtonItem!
+    
     var pickerView = UIPickerView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         pickerView.delegate = self
         pickerView.dataSource = self
         
         genderTextField.inputView = pickerView
         
+        //      editButtonLogic()
+        
     }
     
     @IBAction func medicalRecordsPressed(_ sender: UIButton) {
-     
-        self.navigationController?.pushViewController(prepareForMedical.navigateToMedicalRecords(), animated: true)
-       
+        
+        present(prepareForMedical.navigateToMedicalRecords(), animated: true, completion: nil)
+        
+    }
+    
+    func editButtonLogic(){
+        
+        let editButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editDogProfileNiel))
+        
+        
+        self.navigationItem.rightBarButtonItem = editButton
+        
+    }
+    
+    @objc func editDogProfileNiel(){
+        
+        print("go to niel")
     }
     
 }
+// Picker buat Keyboard Gender
 
 extension DogProfileDetailViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

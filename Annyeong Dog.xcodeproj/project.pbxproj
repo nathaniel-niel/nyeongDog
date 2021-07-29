@@ -45,6 +45,7 @@
 		C037875626B1C52B004344E0 /* MedicalRecords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C037875526B1C52B004344E0 /* MedicalRecords.storyboard */; };
 		C037875926B1C53F004344E0 /* MedicalRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037875826B1C53F004344E0 /* MedicalRecordsViewController.swift */; };
 		C037875E26B1C83D004344E0 /* PrepareForMedical.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037875D26B1C83D004344E0 /* PrepareForMedical.swift */; };
+		C037876026B2729F004344E0 /* ModelBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037875F26B2729F004344E0 /* ModelBackButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +92,7 @@
 		C037875526B1C52B004344E0 /* MedicalRecords.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MedicalRecords.storyboard; sourceTree = "<group>"; };
 		C037875826B1C53F004344E0 /* MedicalRecordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalRecordsViewController.swift; sourceTree = "<group>"; };
 		C037875D26B1C83D004344E0 /* PrepareForMedical.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrepareForMedical.swift; sourceTree = "<group>"; };
+		C037875F26B2729F004344E0 /* ModelBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelBackButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,6 +261,7 @@
 			children = (
 				C037874F26B1C3C2004344E0 /* GenderModel.swift */,
 				C037875D26B1C83D004344E0 /* PrepareForMedical.swift */,
+				C037875F26B2729F004344E0 /* ModelBackButton.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -482,6 +485,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C037876026B2729F004344E0 /* ModelBackButton.swift in Sources */,
 				C037875026B1C3C2004344E0 /* GenderModel.swift in Sources */,
 				2DF37D9A26B1A1F90026FE0C /* DataManipulation.swift in Sources */,
 				2DF37D9C26B1A2080026FE0C /* ExampleModel.swift in Sources */,

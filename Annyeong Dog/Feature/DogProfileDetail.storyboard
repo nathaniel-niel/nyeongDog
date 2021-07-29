@@ -204,6 +204,7 @@
                         <outlet property="dogsTextField" destination="yz1-iW-7Te" id="arB-SO-DO4"/>
                         <outlet property="genderTextField" destination="4zA-LN-8Xz" id="1Yi-5x-7nf"/>
                         <outlet property="medicalRecordsUI" destination="oAy-mK-rec" id="4c3-8r-ayQ"/>
+                        <outlet property="rightBarButtonItem" destination="9AM-JC-0wc" id="GnP-95-HoB"/>
                         <outlet property="weightTextField" destination="TYK-OW-Txu" id="vHy-IC-7CX"/>
                     </connections>
                 </viewController>
