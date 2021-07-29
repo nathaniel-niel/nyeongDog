@@ -34,6 +34,17 @@
 		B584B3DC26B28DF2005A02C5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3D626B28DF2005A02C5 /* MainViewController.swift */; };
 		B584B3DD26B28DF2005A02C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B584B3D726B28DF2005A02C5 /* Main.storyboard */; };
 		B584B3DF26B28E10005A02C5 /* DataManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3DE26B28E10005A02C5 /* DataManipulation.swift */; };
+		C037876A26B2A199004344E0 /* MedicalRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037876626B2A199004344E0 /* MedicalRecordsViewController.swift */; };
+		C037876B26B2A199004344E0 /* MedicalRecords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C037876926B2A199004344E0 /* MedicalRecords.storyboard */; };
+		C037878726B2A1CB004344E0 /* DogProfileDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C037877126B2A1CB004344E0 /* DogProfileDetail.storyboard */; };
+		C037878826B2A1CB004344E0 /* GenderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037877226B2A1CB004344E0 /* GenderModel.swift */; };
+		C037879126B2A1CB004344E0 /* DogProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */; };
+		C037879226B2A1CB004344E0 /* PrepareForMedical.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037878426B2A1CB004344E0 /* PrepareForMedical.swift */; };
+		C037879326B2A1CB004344E0 /* ModelBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037878526B2A1CB004344E0 /* ModelBackButton.swift */; };
+		C037879826B2AF02004344E0 /* MedicalRecordsFilledState.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C037879726B2AF02004344E0 /* MedicalRecordsFilledState.storyboard */; };
+		C037879A26B2B5E7004344E0 /* MedicalRecordsFilledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037879926B2B5E7004344E0 /* MedicalRecordsFilledViewController.swift */; };
+		C037879D26B2B81F004344E0 /* MedicalRecordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037879B26B2B81F004344E0 /* MedicalRecordsTableViewCell.swift */; };
+		C037879E26B2B81F004344E0 /* MedicalRecordsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C037879C26B2B81F004344E0 /* MedicalRecordsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +80,18 @@
 		B584B3D626B28DF2005A02C5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B584B3D726B28DF2005A02C5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B584B3DE26B28E10005A02C5 /* DataManipulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManipulation.swift; sourceTree = "<group>"; };
+		C037876626B2A199004344E0 /* MedicalRecordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalRecordsViewController.swift; sourceTree = "<group>"; };
+		C037876926B2A199004344E0 /* MedicalRecords.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MedicalRecords.storyboard; sourceTree = "<group>"; };
+		C037877126B2A1CB004344E0 /* DogProfileDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DogProfileDetail.storyboard; sourceTree = "<group>"; };
+		C037877226B2A1CB004344E0 /* GenderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenderModel.swift; sourceTree = "<group>"; };
+		C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogProfileDetailViewController.swift; sourceTree = "<group>"; };
+		C037878426B2A1CB004344E0 /* PrepareForMedical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareForMedical.swift; sourceTree = "<group>"; };
+		C037878526B2A1CB004344E0 /* ModelBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelBackButton.swift; sourceTree = "<group>"; };
+		C037879726B2AF02004344E0 /* MedicalRecordsFilledState.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = MedicalRecordsFilledState.storyboard; path = "../../../../../nyong-main/MedicalRecordsFilledState.storyboard"; sourceTree = "<group>"; };
+		C037879926B2B5E7004344E0 /* MedicalRecordsFilledViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MedicalRecordsFilledViewController.swift; path = "../../../../../nyong-main/MedicalRecordsFilledViewController.swift"; sourceTree = "<group>"; };
+		C037879B26B2B81F004344E0 /* MedicalRecordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MedicalRecordsTableViewCell.swift; path = "../../../../../nyong-main/MedicalRecordsTableViewCell.swift"; sourceTree = "<group>"; };
+		C037879C26B2B81F004344E0 /* MedicalRecordsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MedicalRecordsTableViewCell.xib; path = "../../../../../nyong-main/MedicalRecordsTableViewCell.xib"; sourceTree = "<group>"; };
+		C037879F26B2BF30004344E0 /* MedicalRecordsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedicalRecordsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +226,8 @@
 		B584B3C126B28C71005A02C5 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				C037876C26B2A1CB004344E0 /* DogProfile */,
+				C037876426B2A199004344E0 /* MedicalRecords */,
 				2D628E8826B297350008ECD2 /* MedicalRecordDetail */,
 				B584B3E026B28E3A005A02C5 /* LaunchScreen */,
 				B584B3CE26B28DF2005A02C5 /* Example */,
@@ -313,6 +338,80 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C037876426B2A199004344E0 /* MedicalRecords */ = {
+			isa = PBXGroup;
+			children = (
+				C037876726B2A199004344E0 /* Model */,
+				C037876826B2A199004344E0 /* View */,
+				C037876526B2A199004344E0 /* ViewModel */,
+			);
+			path = MedicalRecords;
+			sourceTree = "<group>";
+		};
+		C037876526B2A199004344E0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C037876626B2A199004344E0 /* MedicalRecordsViewController.swift */,
+				C037879926B2B5E7004344E0 /* MedicalRecordsFilledViewController.swift */,
+				C037879B26B2B81F004344E0 /* MedicalRecordsTableViewCell.swift */,
+				C037879C26B2B81F004344E0 /* MedicalRecordsTableViewCell.xib */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C037876726B2A199004344E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C037876826B2A199004344E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C037876926B2A199004344E0 /* MedicalRecords.storyboard */,
+				C037879726B2AF02004344E0 /* MedicalRecordsFilledState.storyboard */,
+				C037879F26B2BF30004344E0 /* MedicalRecordsTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C037876C26B2A1CB004344E0 /* DogProfile */ = {
+			isa = PBXGroup;
+			children = (
+				C037879626B2A226004344E0 /* Model */,
+				C037879526B2A21F004344E0 /* View */,
+				C037879426B2A210004344E0 /* ViewModel */,
+			);
+			path = DogProfile;
+			sourceTree = "<group>";
+		};
+		C037879426B2A210004344E0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C037879526B2A21F004344E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C037877126B2A1CB004344E0 /* DogProfileDetail.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C037879626B2A226004344E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C037877226B2A1CB004344E0 /* GenderModel.swift */,
+				C037878426B2A1CB004344E0 /* PrepareForMedical.swift */,
+				C037878526B2A1CB004344E0 /* ModelBackButton.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C30359627F5E9F0180384BB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -382,6 +481,12 @@
 			files = (
 				5B05C39826B2A9160034A66A /* MRDE.storyboard in Resources */,
 				B584B3C626B28D01005A02C5 /* Signin.storyboard in Resources */,
+				C037879826B2AF02004344E0 /* MedicalRecordsFilledState.storyboard in Resources */,
+				B584B3DD26B28DF2005A02C5 /* Main.storyboard in Resources */,
+				C037878726B2A1CB004344E0 /* DogProfileDetail.storyboard in Resources */,
+				B584B3DB26B28DF2005A02C5 /* ExampleViewController.xib in Resources */,
+				B584B3B526B264CD005A02C5 /* LaunchScreen.storyboard in Resources */,
+				C037879E26B2B81F004344E0 /* MedicalRecordsTableViewCell.xib in Resources */,
 				2D628ED426B297B20008ECD2 /* LargeTextFieldTableViewCell.xib in Resources */,
 				B584B3DD26B28DF2005A02C5 /* Main.storyboard in Resources */,
 				2D628ED526B297B20008ECD2 /* MRDTableViewCell.xib in Resources */,
@@ -391,6 +496,7 @@
 				5B05C39E26B2B3B00034A66A /* DeleteButtonTableViewCell.xib in Resources */,
 				B584B3BD26B265C0005A02C5 /* GoogleService-Info.plist in Resources */,
 				B584B3B226B264CD005A02C5 /* Assets.xcassets in Resources */,
+				C037876B26B2A199004344E0 /* MedicalRecords.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,7 +549,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C037879D26B2B81F004344E0 /* MedicalRecordsTableViewCell.swift in Sources */,
 				B584B3C826B28D13005A02C5 /* SigninViewController.swift in Sources */,
+				C037879126B2A1CB004344E0 /* DogProfileDetailViewController.swift in Sources */,
+				C037876A26B2A199004344E0 /* MedicalRecordsViewController.swift in Sources */,
 				B584B3DA26B28DF2005A02C5 /* ExampleViewController.swift in Sources */,
 				B584B3D826B28DF2005A02C5 /* ExampleViewModel.swift in Sources */,
 				2D628EDA26B297DE0008ECD2 /* MRD-dummyData.swift in Sources */,
@@ -451,13 +560,17 @@
 				B584B3DF26B28E10005A02C5 /* DataManipulation.swift in Sources */,
 				B584B3CD26B28DCD005A02C5 /* Helper.swift in Sources */,
 				B584B3D926B28DF2005A02C5 /* ExampleModel.swift in Sources */,
+				C037879326B2A1CB004344E0 /* ModelBackButton.swift in Sources */,
+				C037879A26B2B5E7004344E0 /* MedicalRecordsFilledViewController.swift in Sources */,
 				B584B3DC26B28DF2005A02C5 /* MainViewController.swift in Sources */,
 				5B05C39A26B2A9450034A66A /* MRDEViewController.swift in Sources */,
 				2D628ED326B297B20008ECD2 /* MRDTableViewCell.swift in Sources */,
 				2D628ED826B297B20008ECD2 /* MRDViewController.swift in Sources */,
 				2D628ED626B297B20008ECD2 /* LargeTextFieldTableViewCell.swift in Sources */,
 				B584B3A926B264CC005A02C5 /* AppDelegate.swift in Sources */,
+				C037878826B2A1CB004344E0 /* GenderModel.swift in Sources */,
 				B584B3AB26B264CC005A02C5 /* SceneDelegate.swift in Sources */,
+				C037879226B2A1CB004344E0 /* PrepareForMedical.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
