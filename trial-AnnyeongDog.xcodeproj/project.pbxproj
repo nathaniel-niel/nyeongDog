@@ -23,6 +23,13 @@
 		B584B3DC26B28DF2005A02C5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3D626B28DF2005A02C5 /* MainViewController.swift */; };
 		B584B3DD26B28DF2005A02C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B584B3D726B28DF2005A02C5 /* Main.storyboard */; };
 		B584B3DF26B28E10005A02C5 /* DataManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3DE26B28E10005A02C5 /* DataManipulation.swift */; };
+		C037876A26B2A199004344E0 /* MedicalRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037876626B2A199004344E0 /* MedicalRecordsViewController.swift */; };
+		C037876B26B2A199004344E0 /* MedicalRecords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C037876926B2A199004344E0 /* MedicalRecords.storyboard */; };
+		C037878726B2A1CB004344E0 /* DogProfileDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C037877126B2A1CB004344E0 /* DogProfileDetail.storyboard */; };
+		C037878826B2A1CB004344E0 /* GenderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037877226B2A1CB004344E0 /* GenderModel.swift */; };
+		C037879126B2A1CB004344E0 /* DogProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */; };
+		C037879226B2A1CB004344E0 /* PrepareForMedical.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037878426B2A1CB004344E0 /* PrepareForMedical.swift */; };
+		C037879326B2A1CB004344E0 /* ModelBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037878526B2A1CB004344E0 /* ModelBackButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +54,13 @@
 		B584B3D626B28DF2005A02C5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B584B3D726B28DF2005A02C5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B584B3DE26B28E10005A02C5 /* DataManipulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManipulation.swift; sourceTree = "<group>"; };
+		C037876626B2A199004344E0 /* MedicalRecordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalRecordsViewController.swift; sourceTree = "<group>"; };
+		C037876926B2A199004344E0 /* MedicalRecords.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MedicalRecords.storyboard; sourceTree = "<group>"; };
+		C037877126B2A1CB004344E0 /* DogProfileDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DogProfileDetail.storyboard; sourceTree = "<group>"; };
+		C037877226B2A1CB004344E0 /* GenderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenderModel.swift; sourceTree = "<group>"; };
+		C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogProfileDetailViewController.swift; sourceTree = "<group>"; };
+		C037878426B2A1CB004344E0 /* PrepareForMedical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareForMedical.swift; sourceTree = "<group>"; };
+		C037878526B2A1CB004344E0 /* ModelBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelBackButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +137,8 @@
 		B584B3C126B28C71005A02C5 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				C037876C26B2A1CB004344E0 /* Feature */,
+				C037876426B2A199004344E0 /* MedicalRecords */,
 				B584B3E026B28E3A005A02C5 /* LaunchScreen */,
 				B584B3CE26B28DF2005A02C5 /* Example */,
 				B584B3C426B28CA4005A02C5 /* SignIn */,
@@ -232,6 +248,75 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C037876426B2A199004344E0 /* MedicalRecords */ = {
+			isa = PBXGroup;
+			children = (
+				C037876526B2A199004344E0 /* ViewModel */,
+				C037876726B2A199004344E0 /* Model */,
+				C037876826B2A199004344E0 /* View */,
+			);
+			path = MedicalRecords;
+			sourceTree = "<group>";
+		};
+		C037876526B2A199004344E0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C037876626B2A199004344E0 /* MedicalRecordsViewController.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C037876726B2A199004344E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C037876826B2A199004344E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C037876926B2A199004344E0 /* MedicalRecords.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C037876C26B2A1CB004344E0 /* Feature */ = {
+			isa = PBXGroup;
+			children = (
+				C037879626B2A226004344E0 /* Model */,
+				C037879526B2A21F004344E0 /* View */,
+				C037879426B2A210004344E0 /* ViewModel */,
+			);
+			path = Feature;
+			sourceTree = "<group>";
+		};
+		C037879426B2A210004344E0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C037879526B2A21F004344E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C037877126B2A1CB004344E0 /* DogProfileDetail.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C037879626B2A226004344E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C037877226B2A1CB004344E0 /* GenderModel.swift */,
+				C037878426B2A1CB004344E0 /* PrepareForMedical.swift */,
+				C037878526B2A1CB004344E0 /* ModelBackButton.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C30359627F5E9F0180384BB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,10 +386,12 @@
 			files = (
 				B584B3C626B28D01005A02C5 /* Signin.storyboard in Resources */,
 				B584B3DD26B28DF2005A02C5 /* Main.storyboard in Resources */,
+				C037878726B2A1CB004344E0 /* DogProfileDetail.storyboard in Resources */,
 				B584B3DB26B28DF2005A02C5 /* ExampleViewController.xib in Resources */,
 				B584B3B526B264CD005A02C5 /* LaunchScreen.storyboard in Resources */,
 				B584B3BD26B265C0005A02C5 /* GoogleService-Info.plist in Resources */,
 				B584B3B226B264CD005A02C5 /* Assets.xcassets in Resources */,
+				C037876B26B2A199004344E0 /* MedicalRecords.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,14 +445,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				B584B3C826B28D13005A02C5 /* SigninViewController.swift in Sources */,
+				C037879126B2A1CB004344E0 /* DogProfileDetailViewController.swift in Sources */,
+				C037876A26B2A199004344E0 /* MedicalRecordsViewController.swift in Sources */,
 				B584B3DA26B28DF2005A02C5 /* ExampleViewController.swift in Sources */,
 				B584B3D826B28DF2005A02C5 /* ExampleViewModel.swift in Sources */,
 				B584B3DF26B28E10005A02C5 /* DataManipulation.swift in Sources */,
 				B584B3CD26B28DCD005A02C5 /* Helper.swift in Sources */,
 				B584B3D926B28DF2005A02C5 /* ExampleModel.swift in Sources */,
+				C037879326B2A1CB004344E0 /* ModelBackButton.swift in Sources */,
 				B584B3DC26B28DF2005A02C5 /* MainViewController.swift in Sources */,
 				B584B3A926B264CC005A02C5 /* AppDelegate.swift in Sources */,
+				C037878826B2A1CB004344E0 /* GenderModel.swift in Sources */,
 				B584B3AB26B264CC005A02C5 /* SceneDelegate.swift in Sources */,
+				C037879226B2A1CB004344E0 /* PrepareForMedical.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
