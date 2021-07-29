@@ -11,15 +11,20 @@ import Firebase
 import AuthenticationServices
 
 class SigninViewController: UIViewController {
+    @IBOutlet weak var signinButton: UIButton!
+//    let views: ViewSignin?
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSignInButton()
+//        view.addSubview(views)
     }
+
+    
     func setupSignInButton() {
-        let button = ASAuthorizationAppleIDButton()
-        button.addTarget(self, action: #selector(handleSignInWithAppleTapped), for: .touchUpInside)
-        button.center = view.center
-        view.addSubview(button)
+//        let button = ASAuthorizationAppleIDButton()
+        signinButton.addTarget(self, action: #selector(handleSignInWithAppleTapped), for: .touchUpInside)
+//        button.center = signinButton.center
+//        signinButton.addSubview(button)
     }
     @objc func handleSignInWithAppleTapped() {
         performSignIn()
@@ -33,6 +38,10 @@ class SigninViewController: UIViewController {
         authorizationController.presentationContextProvider = self
         
         authorizationController.performRequests()
+        
+        let dataManipulation = DataManipulation()
+        
+//        dataManipulation.insertUser()
     }
     
     func createAppleIDRequest() -> ASAuthorizationAppleIDRequest {
@@ -65,7 +74,14 @@ extension SigninViewController: ASAuthorizationControllerDelegate {
                 return
             }
             
-            let credential = OAuthProvider.credential(withProviderID: "apple.com", idToken: idTokenString , rawNonce: nonce )
+            let credential = OAuthProvider.credential(withProviderID: "apple.com", idToken: idTokenString , rawNonce: nonce)
+            
+            Auth.auth().signIn(with: credential) { authDataResult, error in
+                if let user = authDataResult?.user {
+                    print("Nice! You're now signed in as \(user.uid), email : \(user.email ?? "unknown")")
+                    DataManipulation.sharedData.insertUser(with: UserModel(id: user.uid, email: user.email ?? "no email"))
+                }
+            }
             
         }
     }
