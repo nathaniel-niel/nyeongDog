@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D4DA8C526B2474A0094138A /* MRD.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D4DA8C426B2474A0094138A /* MRD.storyboard */; };
+		2D4DA8C726B247610094138A /* MRDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4DA8C626B247610094138A /* MRDViewController.swift */; };
+		2D4DA8CA26B247730094138A /* MRDTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4DA8C826B247730094138A /* MRDTableViewCell.swift */; };
+		2D4DA8CB26B247730094138A /* MRDTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D4DA8C926B247730094138A /* MRDTableViewCell.xib */; };
+		2D4DA8CE26B2596E0094138A /* LargeTextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4DA8CC26B2596E0094138A /* LargeTextFieldTableViewCell.swift */; };
+		2D4DA8CF26B2596E0094138A /* LargeTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D4DA8CD26B2596E0094138A /* LargeTextFieldTableViewCell.xib */; };
 		2D5C421C26B1689900382A0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5C421B26B1689900382A0F /* AppDelegate.swift */; };
 		2D5C421E26B1689900382A0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5C421D26B1689900382A0F /* SceneDelegate.swift */; };
 		2D5C422526B1689A00382A0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D5C422426B1689A00382A0F /* Assets.xcassets */; };
@@ -20,6 +26,11 @@
 		2DF37DA226B1A23C0026FE0C /* ExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF37DA126B1A23C0026FE0C /* ExampleViewModel.swift */; };
 		2DF37DA426B1AC550026FE0C /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DF37DA326B1AC550026FE0C /* main.storyboard */; };
 		2DF37DA626B1AC620026FE0C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF37DA526B1AC620026FE0C /* MainViewController.swift */; };
+		5B05C36E26B23F120034A66A /* DogProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05C36D26B23F120034A66A /* DogProfileTableViewCell.swift */; };
+		5B05C37026B2404B0034A66A /* DogProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05C36F26B2404B0034A66A /* DogProfileListViewController.swift */; };
+		5B05C37226B2427E0034A66A /* dummyDataDogProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05C37126B2427E0034A66A /* dummyDataDogProfile.swift */; };
+		5B05C38226B26A390034A66A /* DogProfileFilledState.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B05C38126B26A390034A66A /* DogProfileFilledState.storyboard */; };
+		5B2C3B5926B1C06900E68D56 /* DogProfileEmptyStage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B2C3B5826B1C06900E68D56 /* DogProfileEmptyStage.storyboard */; };
 		7201C9E5BA03A43150EE0D2D /* Pods_Annyeong_Dog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBD6A1C34602C148FF42B40 /* Pods_Annyeong_Dog.framework */; };
 		C037871326B1AFB3004344E0 /* DogProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037871226B1AFB3004344E0 /* DogProfileDetailViewController.swift */; };
 		C037871726B1AFDE004344E0 /* DogProfileDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C037871626B1AFDE004344E0 /* DogProfileDetail.storyboard */; };
@@ -49,6 +60,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D4DA8C426B2474A0094138A /* MRD.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MRD.storyboard; sourceTree = "<group>"; };
+		2D4DA8C626B247610094138A /* MRDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRDViewController.swift; sourceTree = "<group>"; };
+		2D4DA8C826B247730094138A /* MRDTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRDTableViewCell.swift; sourceTree = "<group>"; };
+		2D4DA8C926B247730094138A /* MRDTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MRDTableViewCell.xib; sourceTree = "<group>"; };
+		2D4DA8CC26B2596E0094138A /* LargeTextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		2D4DA8CD26B2596E0094138A /* LargeTextFieldTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LargeTextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		2D5C421826B1689900382A0F /* Annyeong Dog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Annyeong Dog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D5C421B26B1689900382A0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D5C421D26B1689900382A0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +82,11 @@
 		2DF37DA126B1A23C0026FE0C /* ExampleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleViewModel.swift; sourceTree = "<group>"; };
 		2DF37DA326B1AC550026FE0C /* main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
 		2DF37DA526B1AC620026FE0C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		5B05C36D26B23F120034A66A /* DogProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileTableViewCell.swift; sourceTree = "<group>"; };
+		5B05C36F26B2404B0034A66A /* DogProfileListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileListViewController.swift; sourceTree = "<group>"; };
+		5B05C37126B2427E0034A66A /* dummyDataDogProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummyDataDogProfile.swift; sourceTree = "<group>"; };
+		5B05C38126B26A390034A66A /* DogProfileFilledState.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DogProfileFilledState.storyboard; sourceTree = "<group>"; };
+		5B2C3B5826B1C06900E68D56 /* DogProfileEmptyStage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DogProfileEmptyStage.storyboard; sourceTree = "<group>"; };
 		6EBD6A1C34602C148FF42B40 /* Pods_Annyeong_Dog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Annyeong_Dog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BED1602437A27696C8148C8 /* Pods-Annyeong Dog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Annyeong Dog.release.xcconfig"; path = "Target Support Files/Pods-Annyeong Dog/Pods-Annyeong Dog.release.xcconfig"; sourceTree = "<group>"; };
 		BA19E79707123E2C9E4CD631 /* Pods-Annyeong Dog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Annyeong Dog.debug.xcconfig"; path = "Target Support Files/Pods-Annyeong Dog/Pods-Annyeong Dog.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +129,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D4DA8BF26B246E20094138A /* withXIB */ = {
+			isa = PBXGroup;
+			children = (
+				2D4DA8D026B26D9A0094138A /* TableViewCell */,
+			);
+			path = withXIB;
+			sourceTree = "<group>";
+		};
+		2D4DA8D026B26D9A0094138A /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				2D4DA8C826B247730094138A /* MRDTableViewCell.swift */,
+				2D4DA8C926B247730094138A /* MRDTableViewCell.xib */,
+				2D4DA8CC26B2596E0094138A /* LargeTextFieldTableViewCell.swift */,
+				2D4DA8CD26B2596E0094138A /* LargeTextFieldTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		2D5C420F26B1689900382A0F = {
 			isa = PBXGroup;
 			children = (
@@ -152,8 +193,12 @@
 		2D5C423026B168AE00382A0F /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+
 				C037875126B1C4D5004344E0 /* MedicalRecords */,
 				C037870E26B1AF40004344E0 /* DogProfileDetail */,
+				5B2C3B6526B1CF5B00E68D56 /* Medical Records */,
+				5B2C3B5426B1AFB100E68D56 /* DogProfile */,
+				2DF37DB826B1D8DC0026FE0C /* MedicalRecordDetail */,
 				2D5C423826B16A4E00382A0F /* LaunchScreen */,
 				2D5C423426B168F600382A0F /* Example */,
 			);
@@ -238,6 +283,40 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		2DF37DB826B1D8DC0026FE0C /* MedicalRecordDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2DF37DBB26B1D9110026FE0C /* ViewModel */,
+				2DF37DBA26B1D90B0026FE0C /* Model */,
+				2DF37DB926B1D9040026FE0C /* View */,
+			);
+			path = MedicalRecordDetail;
+			sourceTree = "<group>";
+		};
+		2DF37DB926B1D9040026FE0C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D4DA8C426B2474A0094138A /* MRD.storyboard */,
+				2D4DA8C626B247610094138A /* MRDViewController.swift */,
+				2D4DA8BF26B246E20094138A /* withXIB */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2DF37DBA26B1D90B0026FE0C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2DF37DBB26B1D9110026FE0C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		49D27C72FE5A8F36D5508D86 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +325,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+
 		C037870E26B1AF40004344E0 /* DogProfileDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -321,10 +401,45 @@
 			isa = PBXGroup;
 			children = (
 				C037875826B1C53F004344E0 /* MedicalRecordsViewController.swift */,
+
+		5B2C3B5426B1AFB100E68D56 /* DogProfile */ = {
+			isa = PBXGroup;
+			children = (
+				5B2C3B5726B1C05100E68D56 /* ViewModel */,
+				5B2C3B5626B1C04C00E68D56 /* View */,
+				5B2C3B5526B1C04300E68D56 /* Model */,
+			);
+			path = DogProfile;
+			sourceTree = "<group>";
+		};
+		5B2C3B5526B1C04300E68D56 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B05C37126B2427E0034A66A /* dummyDataDogProfile.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5B2C3B5626B1C04C00E68D56 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B2C3B5826B1C06900E68D56 /* DogProfileEmptyStage.storyboard */,
+				5B05C38126B26A390034A66A /* DogProfileFilledState.storyboard */,
+				5B05C36D26B23F120034A66A /* DogProfileTableViewCell.swift */,
+				5B05C36F26B2404B0034A66A /* DogProfileListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5B2C3B5726B1C05100E68D56 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+
 		C037875326B1C4EC004344E0 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -338,6 +453,13 @@
 			children = (
 			);
 			path = Model;
+
+		5B2C3B6526B1CF5B00E68D56 /* Medical Records */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Medical Records";
+
 			sourceTree = "<group>";
 		};
 		E3987939F82127E1B684206B /* Pods */ = {
@@ -408,11 +530,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
 				C037874226B1C2DD004344E0 /* Poppins-ExtraLight.ttf in Resources */,
 				C037871726B1AFDE004344E0 /* DogProfileDetail.storyboard in Resources */,
 				C037874926B1C2DD004344E0 /* Poppins-ExtraLightItalic.ttf in Resources */,
 				C037873D26B1C2DD004344E0 /* Poppins-Medium.ttf in Resources */,
 				C037874326B1C2DD004344E0 /* Poppins-SemiBoldItalic.ttf in Resources */,
+				2D4DA8C526B2474A0094138A /* MRD.storyboard in Resources */,
+				2D4DA8CB26B247730094138A /* MRDTableViewCell.xib in Resources */,
 				2DF37DA426B1AC550026FE0C /* main.storyboard in Resources */,
 				C037874726B1C2DD004344E0 /* Poppins-Regular.ttf in Resources */,
 				C037873E26B1C2DD004344E0 /* Poppins-Light.ttf in Resources */,
@@ -424,6 +549,7 @@
 				C037874B26B1C2DD004344E0 /* Poppins-ThinItalic.ttf in Resources */,
 				C037874026B1C2DD004344E0 /* Poppins-SemiBold.ttf in Resources */,
 				2DF37DA026B1A22F0026FE0C /* ExampleViewController.xib in Resources */,
+				5B2C3B5926B1C06900E68D56 /* DogProfileEmptyStage.storyboard in Resources */,
 				2D5C422526B1689A00382A0F /* Assets.xcassets in Resources */,
 				C037874426B1C2DD004344E0 /* Poppins-ExtraBold.ttf in Resources */,
 				C037874E26B1C2DD004344E0 /* Poppins-Italic.ttf in Resources */,
@@ -432,7 +558,9 @@
 				C037873F26B1C2DD004344E0 /* Poppins-MediumItalic.ttf in Resources */,
 				C037874826B1C2DD004344E0 /* Poppins-BlackItalic.ttf in Resources */,
 				C037874D26B1C2DD004344E0 /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				5B05C38226B26A390034A66A /* DogProfileFilledState.storyboard in Resources */,
 				2D5C423B26B16A7400382A0F /* GoogleService-Info.plist in Resources */,
+				2D4DA8CF26B2596E0094138A /* LargeTextFieldTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,13 +617,19 @@
 				C037875026B1C3C2004344E0 /* GenderModel.swift in Sources */,
 				2DF37D9A26B1A1F90026FE0C /* DataManipulation.swift in Sources */,
 				2DF37D9C26B1A2080026FE0C /* ExampleModel.swift in Sources */,
+				5B05C36E26B23F120034A66A /* DogProfileTableViewCell.swift in Sources */,
 				2D5C421C26B1689900382A0F /* AppDelegate.swift in Sources */,
 				2D5C421E26B1689900382A0F /* SceneDelegate.swift in Sources */,
 				2DF37D9826B1A1E60026FE0C /* Helper.swift in Sources */,
 				2DF37DA226B1A23C0026FE0C /* ExampleViewModel.swift in Sources */,
+				5B05C37026B2404B0034A66A /* DogProfileListViewController.swift in Sources */,
+				2D4DA8C726B247610094138A /* MRDViewController.swift in Sources */,
+				2D4DA8CA26B247730094138A /* MRDTableViewCell.swift in Sources */,
+				2D4DA8CE26B2596E0094138A /* LargeTextFieldTableViewCell.swift in Sources */,
 				2DF37D9F26B1A22F0026FE0C /* ExampleViewController.swift in Sources */,
 				C037875926B1C53F004344E0 /* MedicalRecordsViewController.swift in Sources */,
 				C037871326B1AFB3004344E0 /* DogProfileDetailViewController.swift in Sources */,
+				5B05C37226B2427E0034A66A /* dummyDataDogProfile.swift in Sources */,
 				2DF37DA626B1AC620026FE0C /* MainViewController.swift in Sources */,
 				C037875E26B1C83D004344E0 /* PrepareForMedical.swift in Sources */,
 			);
