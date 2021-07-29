@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
@@ -11,32 +11,32 @@
         <!--View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="mrd" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="MRDViewController" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MRDEStoryboard" id="Y6W-OH-hqX" customClass="MRDEViewController" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="650-mZ-YuY">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Ako-MC-S5d">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
-                                <color key="backgroundColor" red="0.9137254901960784" green="0.9137254901960784" blue="0.91764705882352937" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.91372549020000005" green="0.91372549020000005" blue="0.91764705879999997" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="650-mZ-YuY" secondAttribute="bottom" id="8my-nE-vzX"/>
-                            <constraint firstItem="650-mZ-YuY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="GBd-qH-ZG3"/>
-                            <constraint firstItem="650-mZ-YuY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="GnW-fv-cXf"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="650-mZ-YuY" secondAttribute="trailing" id="OOY-XV-R2S"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Ako-MC-S5d" secondAttribute="bottom" id="99e-Gn-LRw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Ako-MC-S5d" secondAttribute="trailing" id="RKR-IH-jc6"/>
+                            <constraint firstItem="Ako-MC-S5d" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="SSo-d2-PgC"/>
+                            <constraint firstItem="Ako-MC-S5d" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="XY3-Rf-9GR"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="table" destination="650-mZ-YuY" id="zv4-SE-qOk"/>
+                        <outlet property="MRDEtable" destination="Ako-MC-S5d" id="WoE-bL-wZ6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="133" y="88"/>
+            <point key="canvasLocation" x="-9" y="102"/>
         </scene>
     </scenes>
     <resources>

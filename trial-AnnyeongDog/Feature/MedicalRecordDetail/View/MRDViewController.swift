@@ -65,13 +65,13 @@ class MRDViewController: UIViewController {
     
     // Function to go show modally edit page
     @objc private func didEditButtonTapped(){
-//        let storyboard = UIStoryboard(name: "storyboardName", bundle: nil)
-//
-//        let vc = storyboard.instantiateViewController(identifier: "storyBoardIdentifier")
-//
-//        let navVc = UINavigationController(rootViewController: vc)
-//
-//        self.present(navVc, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "MRDE", bundle: nil)
+
+        let vc = storyboard.instantiateViewController(identifier: "MRDEStoryboard")
+
+        let navVc = UINavigationController(rootViewController: vc)
+
+        self.present(navVc, animated: false, completion: nil)
         
     }
 

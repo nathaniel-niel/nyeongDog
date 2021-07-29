@@ -32,6 +32,14 @@
                                     <action selector="didTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ukL-b1-ZiZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4i-tG-d30">
+                                <rect key="frame" x="148" y="538" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go to Dog Profile"/>
+                                <connections>
+                                    <action selector="goToDogProfile:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8oZ-Fw-28e"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
