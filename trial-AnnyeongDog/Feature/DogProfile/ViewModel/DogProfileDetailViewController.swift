@@ -40,7 +40,12 @@ class DogProfileDetailViewController: UIViewController {
     
     @IBAction func medicalRecordsPressed(_ sender: UIButton) {
         
-        self.navigationController?.pushViewController(prepareForMedical.navigateToMedicalRecords(), animated: true)
+        if prepareForMedical.statement(){
+            self.navigationController?.pushViewController(prepareForMedical.navigateToMedicalRecords(), animated: true)
+            
+        }else{
+            self.navigationController?.pushViewController(prepareForMedical.navigateToMedicalRecordsEmpty(), animated: true)
+        }
         
     }
     

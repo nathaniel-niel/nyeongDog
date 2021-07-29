@@ -34,6 +34,7 @@
 		B584B3DC26B28DF2005A02C5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3D626B28DF2005A02C5 /* MainViewController.swift */; };
 		B584B3DD26B28DF2005A02C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B584B3D726B28DF2005A02C5 /* Main.storyboard */; };
 		B584B3DF26B28E10005A02C5 /* DataManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3DE26B28E10005A02C5 /* DataManipulation.swift */; };
+		C00DE8F126B312D400E99343 /* MedicalRecordsDummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00DE8F026B312D400E99343 /* MedicalRecordsDummyData.swift */; };
 		C037876A26B2A199004344E0 /* MedicalRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037876626B2A199004344E0 /* MedicalRecordsViewController.swift */; };
 		C037876B26B2A199004344E0 /* MedicalRecords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C037876926B2A199004344E0 /* MedicalRecords.storyboard */; };
 		C037878726B2A1CB004344E0 /* DogProfileDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C037877126B2A1CB004344E0 /* DogProfileDetail.storyboard */; };
@@ -82,6 +83,7 @@
 		B584B3D626B28DF2005A02C5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B584B3D726B28DF2005A02C5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B584B3DE26B28E10005A02C5 /* DataManipulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManipulation.swift; sourceTree = "<group>"; };
+		C00DE8F026B312D400E99343 /* MedicalRecordsDummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalRecordsDummyData.swift; sourceTree = "<group>"; };
 		C037876626B2A199004344E0 /* MedicalRecordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalRecordsViewController.swift; sourceTree = "<group>"; };
 		C037876926B2A199004344E0 /* MedicalRecords.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MedicalRecords.storyboard; sourceTree = "<group>"; };
 		C037877126B2A1CB004344E0 /* DogProfileDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DogProfileDetail.storyboard; sourceTree = "<group>"; };
@@ -412,6 +414,7 @@
 			isa = PBXGroup;
 			children = (
 				C03787A726B2F574004344E0 /* PrepareToMRD.swift */,
+				C00DE8F026B312D400E99343 /* MedicalRecordsDummyData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -571,6 +574,7 @@
 				B584B3DC26B28DF2005A02C5 /* MainViewController.swift in Sources */,
 				5B05C39A26B2A9450034A66A /* MRDEViewController.swift in Sources */,
 				2D628ED326B297B20008ECD2 /* MRDTableViewCell.swift in Sources */,
+				C00DE8F126B312D400E99343 /* MedicalRecordsDummyData.swift in Sources */,
 				2D628ED826B297B20008ECD2 /* MRDViewController.swift in Sources */,
 				2D628ED626B297B20008ECD2 /* LargeTextFieldTableViewCell.swift in Sources */,
 				B584B3A926B264CC005A02C5 /* AppDelegate.swift in Sources */,
