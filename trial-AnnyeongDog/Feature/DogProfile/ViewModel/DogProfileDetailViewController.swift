@@ -34,7 +34,7 @@ class DogProfileDetailViewController: UIViewController {
         genderTextField.inputView = pickerView
         navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.3733734488, green: 0.4266925454, blue: 0.6893113852, alpha: 1)
         
-        //      editButtonLogic()
+        updateUI()
         
     }
     
@@ -42,6 +42,10 @@ class DogProfileDetailViewController: UIViewController {
         
         self.navigationController?.pushViewController(prepareForMedical.navigateToMedicalRecords(), animated: true)
         
+    }
+    
+    func updateUI(){
+        navigationItem.largeTitleDisplayMode = .never
     }
     
     func editButtonLogic(){
