@@ -30,6 +30,10 @@
 		C037879126B2A1CB004344E0 /* DogProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */; };
 		C037879226B2A1CB004344E0 /* PrepareForMedical.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037878426B2A1CB004344E0 /* PrepareForMedical.swift */; };
 		C037879326B2A1CB004344E0 /* ModelBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037878526B2A1CB004344E0 /* ModelBackButton.swift */; };
+		C037879826B2AF02004344E0 /* MedicalRecordsFilledState.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C037879726B2AF02004344E0 /* MedicalRecordsFilledState.storyboard */; };
+		C037879A26B2B5E7004344E0 /* MedicalRecordsFilledViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037879926B2B5E7004344E0 /* MedicalRecordsFilledViewController.swift */; };
+		C037879D26B2B81F004344E0 /* MedicalRecordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037879B26B2B81F004344E0 /* MedicalRecordsTableViewCell.swift */; };
+		C037879E26B2B81F004344E0 /* MedicalRecordsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C037879C26B2B81F004344E0 /* MedicalRecordsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +65,11 @@
 		C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogProfileDetailViewController.swift; sourceTree = "<group>"; };
 		C037878426B2A1CB004344E0 /* PrepareForMedical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareForMedical.swift; sourceTree = "<group>"; };
 		C037878526B2A1CB004344E0 /* ModelBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelBackButton.swift; sourceTree = "<group>"; };
+		C037879726B2AF02004344E0 /* MedicalRecordsFilledState.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = MedicalRecordsFilledState.storyboard; path = "../../../../../nyong-main/MedicalRecordsFilledState.storyboard"; sourceTree = "<group>"; };
+		C037879926B2B5E7004344E0 /* MedicalRecordsFilledViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MedicalRecordsFilledViewController.swift; path = "../../../../../nyong-main/MedicalRecordsFilledViewController.swift"; sourceTree = "<group>"; };
+		C037879B26B2B81F004344E0 /* MedicalRecordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MedicalRecordsTableViewCell.swift; path = "../../../../../nyong-main/MedicalRecordsTableViewCell.swift"; sourceTree = "<group>"; };
+		C037879C26B2B81F004344E0 /* MedicalRecordsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = MedicalRecordsTableViewCell.xib; path = "../../../../../nyong-main/MedicalRecordsTableViewCell.xib"; sourceTree = "<group>"; };
+		C037879F26B2BF30004344E0 /* MedicalRecordsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedicalRecordsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,9 +260,9 @@
 		C037876426B2A199004344E0 /* MedicalRecords */ = {
 			isa = PBXGroup;
 			children = (
-				C037876526B2A199004344E0 /* ViewModel */,
 				C037876726B2A199004344E0 /* Model */,
 				C037876826B2A199004344E0 /* View */,
+				C037876526B2A199004344E0 /* ViewModel */,
 			);
 			path = MedicalRecords;
 			sourceTree = "<group>";
@@ -262,6 +271,9 @@
 			isa = PBXGroup;
 			children = (
 				C037876626B2A199004344E0 /* MedicalRecordsViewController.swift */,
+				C037879926B2B5E7004344E0 /* MedicalRecordsFilledViewController.swift */,
+				C037879B26B2B81F004344E0 /* MedicalRecordsTableViewCell.swift */,
+				C037879C26B2B81F004344E0 /* MedicalRecordsTableViewCell.xib */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -277,6 +289,8 @@
 			isa = PBXGroup;
 			children = (
 				C037876926B2A199004344E0 /* MedicalRecords.storyboard */,
+				C037879726B2AF02004344E0 /* MedicalRecordsFilledState.storyboard */,
+				C037879F26B2BF30004344E0 /* MedicalRecordsTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -385,10 +399,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B584B3C626B28D01005A02C5 /* Signin.storyboard in Resources */,
+				C037879826B2AF02004344E0 /* MedicalRecordsFilledState.storyboard in Resources */,
 				B584B3DD26B28DF2005A02C5 /* Main.storyboard in Resources */,
 				C037878726B2A1CB004344E0 /* DogProfileDetail.storyboard in Resources */,
 				B584B3DB26B28DF2005A02C5 /* ExampleViewController.xib in Resources */,
 				B584B3B526B264CD005A02C5 /* LaunchScreen.storyboard in Resources */,
+				C037879E26B2B81F004344E0 /* MedicalRecordsTableViewCell.xib in Resources */,
 				B584B3BD26B265C0005A02C5 /* GoogleService-Info.plist in Resources */,
 				B584B3B226B264CD005A02C5 /* Assets.xcassets in Resources */,
 				C037876B26B2A199004344E0 /* MedicalRecords.storyboard in Resources */,
@@ -444,6 +460,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C037879D26B2B81F004344E0 /* MedicalRecordsTableViewCell.swift in Sources */,
 				B584B3C826B28D13005A02C5 /* SigninViewController.swift in Sources */,
 				C037879126B2A1CB004344E0 /* DogProfileDetailViewController.swift in Sources */,
 				C037876A26B2A199004344E0 /* MedicalRecordsViewController.swift in Sources */,
@@ -453,6 +470,7 @@
 				B584B3CD26B28DCD005A02C5 /* Helper.swift in Sources */,
 				B584B3D926B28DF2005A02C5 /* ExampleModel.swift in Sources */,
 				C037879326B2A1CB004344E0 /* ModelBackButton.swift in Sources */,
+				C037879A26B2B5E7004344E0 /* MedicalRecordsFilledViewController.swift in Sources */,
 				B584B3DC26B28DF2005A02C5 /* MainViewController.swift in Sources */,
 				B584B3A926B264CC005A02C5 /* AppDelegate.swift in Sources */,
 				C037878826B2A1CB004344E0 /* GenderModel.swift in Sources */,

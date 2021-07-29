@@ -9,11 +9,11 @@ import UIKit
 
 struct PrepareForMedical {
     
-    func navigateToMedicalRecords() -> MedicalRecordsViewController {
+    func navigateToMedicalRecords() -> UIViewController {
         
-        let storyBoard: UIStoryboard = UIStoryboard(name: "MedicalRecords", bundle: nil)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "MedicalRecordsFilledState", bundle: nil)
         
-        let medicalVC = storyBoard.instantiateViewController(withIdentifier: "MedicalRecords") as! MedicalRecordsViewController
+        let medicalVC = storyBoard.instantiateViewController(withIdentifier: "medicalRecordsFilled") as! MedicalRecordsFilledViewController
         
         return medicalVC
         
