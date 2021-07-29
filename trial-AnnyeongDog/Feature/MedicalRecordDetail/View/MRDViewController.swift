@@ -11,6 +11,8 @@ class MRDViewController: UIViewController {
 
     @IBOutlet weak var table: UITableView!
     
+    let ViewModel = MRDViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -111,7 +113,7 @@ extension MRDViewController: UITableViewDataSource{
             case 0:
                 let cell =  table.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
                  
-                cell.configure(title: "Date", placeholder: "MM//DD/YYY")
+                cell.configure(title: "Date", placeholder: ViewModel.dataSource[0].date)
                 return cell
             default:
                 fatalError()
@@ -121,19 +123,19 @@ extension MRDViewController: UITableViewDataSource{
             case 0:
                 let cell =  table.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
                  
-                cell.configure(title: "Veterinarian", placeholder: "Vet name")
+                cell.configure(title: "Veterinarian", placeholder: ViewModel.dataSource[0].veterinarian)
                 return cell
                 
             case 1:
                 let cell =  table.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
                  
-                cell.configure(title: "Diagnosis", placeholder: "Diagnosis")
+                cell.configure(title: "Diagnosis", placeholder: ViewModel.dataSource[0].diagnosis)
                 return cell
                 
             case 2:
                 let cell =  table.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
                  
-                cell.configure(title: "Vaccine", placeholder: "Vaccine")
+                cell.configure(title: "Vaccine", placeholder: ViewModel.dataSource[0].vaccine)
                 return cell
                 
             default:
@@ -144,17 +146,17 @@ extension MRDViewController: UITableViewDataSource{
             case 0:
                 let cell =  table.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
                  
-                cell.configure(title: "Medicine", placeholder: "Medicine")
+                cell.configure(title: "Medicine", placeholder: ViewModel.dataSource[0].medicine)
                 return cell
             case 1:
                 let cell =  table.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
                  
-                cell.configure(title: "Vaccine Type", placeholder: "Vaccine type")
+                cell.configure(title: "Vaccine Type", placeholder: ViewModel.dataSource[0].vaccineType)
                 return cell
             case 2:
                 let cell =  table.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
                  
-                cell.configure(title: "Dosage", placeholder: "Dosage")
+                cell.configure(title: "Dosage", placeholder: ViewModel.dataSource[0].dosage)
                 return cell
                 
             default:
@@ -166,7 +168,7 @@ extension MRDViewController: UITableViewDataSource{
                 
                 let largeCell = table.dequeueReusableCell(withIdentifier: LargeTextFieldTableViewCell.identifier, for: indexPath) as! LargeTextFieldTableViewCell
                 
-                largeCell.configuration(description: "hello world")
+                largeCell.configuration(description: ViewModel.dataSource[indexPath.row].description)
                 
                 return largeCell
             default:
@@ -215,7 +217,6 @@ extension MRDViewController: UITableViewDataSource{
         else{
             return 100
         }
-        
         
     }
 
