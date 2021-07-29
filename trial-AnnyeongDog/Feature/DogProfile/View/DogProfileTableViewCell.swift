@@ -15,6 +15,5 @@ class DogProfileTableViewCell: UITableViewCell {
     @IBOutlet weak var dogName: UILabel!
     @IBOutlet weak var dogWeight: UILabel!
     @IBOutlet weak var dogGender: UILabel!
-    @IBOutlet weak var detailButton: UIButton!
     
 }

@@ -14,7 +14,10 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     let dogs = [
         Dogs(dogName: "Rayzki", dogGender: "Male", dogWeight: "2 Kg"),
         Dogs(dogName: "Chiko", dogGender: "Male", dogWeight: "1 Kg"),
-        Dogs(dogName: "Cara", dogGender: "Female", dogWeight: "2 Kg")
+        Dogs(dogName: "Cara", dogGender: "Female", dogWeight: "2 Kg"),
+        Dogs(dogName: "Buddy", dogGender: "Male", dogWeight: "10 Kg"),
+        Dogs(dogName: "Rexy", dogGender: "Male", dogWeight: "5 Kg"),
+        Dogs(dogName: "Brody", dogGender: "Male", dogWeight: "7 Kg")
     ]
     
     override func viewDidLoad() {
@@ -45,7 +48,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         let cell = tableView.dequeueReusableCell(withIdentifier: "dogProfileListIdentifier") as! DogProfileTableViewCell
         
         cell.dogProfileView.layer.cornerRadius = 8
-        cell.dogProfileView.layer.borderWidth = 1
+        cell.dogProfileView.layer.borderWidth = 2
         cell.dogProfileView.layer.borderColor = UIColor(red: 0.37, green: 0.43, blue: 0.69, alpha: 1).cgColor
     
         cell.dogPicture.layer.cornerRadius = 8
