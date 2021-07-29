@@ -7,7 +7,7 @@
 
 import UIKit
 import Firebase
-//import FirebaseAuth
+import CryptoKit
 import AuthenticationServices
 
 class SigninViewController: UIViewController {
@@ -21,10 +21,7 @@ class SigninViewController: UIViewController {
 
     
     func setupSignInButton() {
-//        let button = ASAuthorizationAppleIDButton()
         signinButton.addTarget(self, action: #selector(handleSignInWithAppleTapped), for: .touchUpInside)
-//        button.center = signinButton.center
-//        signinButton.addSubview(button)
     }
     @objc func handleSignInWithAppleTapped() {
         performSignIn()
@@ -38,12 +35,9 @@ class SigninViewController: UIViewController {
         authorizationController.presentationContextProvider = self
         
         authorizationController.performRequests()
-        
-        let dataManipulation = DataManipulation()
-        
-//        dataManipulation.insertUser()
     }
     
+    //Create request ke user untuk minta data dari mereka
     func createAppleIDRequest() -> ASAuthorizationAppleIDRequest {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
@@ -58,7 +52,7 @@ class SigninViewController: UIViewController {
 }
 
 extension SigninViewController: ASAuthorizationControllerDelegate {
-    
+    //Authentiation
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
             guard let nonce = currentNonce else {
@@ -95,6 +89,8 @@ extension SigninViewController: ASAuthorizationControllerPresentationContextProv
     
 }
 // Adapted from https://auth0.com/docs/api-auth/tutorials/nonce#generate-a-cryptographically-random-nonce
+
+//Randomize nonceString untuk sekuritas info yang dikirimkan sebagai respon dari request
 private func randomNonceString(length: Int = 32) -> String {
   precondition(length > 0)
   let charset: Array<Character> =
@@ -127,7 +123,7 @@ private func randomNonceString(length: Int = 32) -> String {
   return result
 }
 
-import CryptoKit
+
 
 // Unhashed nonce.
 fileprivate var currentNonce: String?
