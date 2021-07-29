@@ -37,6 +37,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "segueDogProfileDetail", sender: nil)
+        
     }
     
     //ViewCell
@@ -59,5 +60,22 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     
 }
 
+// If statement from segue storyboard
+
+//func navigateToDogProfileEmptyStage() -> DogProfileEmptyStage {
+//
+//        let storyBoard: UIStoryboard = UIStoryboard(name: "DogProfileEmptyStage", bundle: nil)
+//
+//        let dogProfileVC = storyBoard.instantiateViewController(withIdentifier: "DogProfileEmptyStage") as! DogProfileEmptyStage
+//
+//        return dogProfileVC
+//
+//
+//    }
+//if data == nil{
+//present(prepareForMedical.navigateToDogProfileEmptyStage(), animated: true, completion: nil)
+//}
+// else {
+// present(prepareForMedical.navigateToDogProfileFilledStage(), animated: true, completion: nil)
 
 
