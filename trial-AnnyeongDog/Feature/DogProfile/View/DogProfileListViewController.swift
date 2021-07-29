@@ -45,10 +45,10 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         let cell = tableView.dequeueReusableCell(withIdentifier: "dogProfileListIdentifier") as! DogProfileTableViewCell
         
         cell.dogProfileView.layer.cornerRadius = 8
-        
         cell.dogProfileView.layer.borderWidth = 1
         cell.dogProfileView.layer.borderColor = UIColor(red: 0.37, green: 0.43, blue: 0.69, alpha: 1).cgColor
     
+        cell.dogPicture.layer.cornerRadius = 8
         cell.dogName.text = dogs[indexPath.row].dogName
         cell.dogGender.text = dogs[indexPath.row].dogGender
         cell.dogWeight.text = dogs[indexPath.row].dogWeight
@@ -56,6 +56,9 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         cell.selectionStyle = .none
         
         return cell
+    }
+    @IBAction func addDidTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "segueDogProfileDetail", sender: nil)
     }
     
 }

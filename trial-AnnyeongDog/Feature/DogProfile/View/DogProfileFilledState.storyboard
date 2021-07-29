@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uex-sC-TXn">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -12,7 +11,7 @@
         <!--DogProfileFilledStage-->
         <scene sceneID="BYe-xZ-Z7M">
             <objects>
-                <viewController title="DogProfileFilledStage" id="szM-O7-auD" customClass="DogProfileListViewController" customModule="Annyeong_Dog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DogProfileListViewController" title="DogProfileFilledStage" id="szM-O7-auD" customClass="DogProfileListViewController" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0GJ-aY-qhs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -33,7 +32,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationWidth="120" reuseIdentifier="dogProfileListIdentifier" rowHeight="137" id="rJX-o2-BaH" customClass="DogProfileTableViewCell" customModule="Annyeong_Dog" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationWidth="120" reuseIdentifier="dogProfileListIdentifier" rowHeight="137" id="rJX-o2-BaH" customClass="DogProfileTableViewCell" customModule="trial_AnnyeongDog" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="24.5" width="374" height="137"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rJX-o2-BaH" id="FHt-zF-125">
@@ -107,6 +106,9 @@
                                 <state key="normal" title="Add">
                                     <color key="titleColor" red="0.21960784310000001" green="0.25882352939999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addDidTapped:" destination="szM-O7-auD" eventType="touchUpInside" id="SHb-zh-pXd"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -133,11 +135,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ULW-5w-nYh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2839" y="834"/>
+            <point key="canvasLocation" x="2851" y="834"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zZZ-lE-dv0">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Vt-qr-cKr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uex-sC-TXn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Uzg-ui-sBN">
@@ -149,7 +152,6 @@
                         <segue destination="szM-O7-auD" kind="relationship" relationship="rootViewController" id="9J6-1d-THC"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Vt-qr-cKr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1059.4202898550725" y="834.375"/>
         </scene>

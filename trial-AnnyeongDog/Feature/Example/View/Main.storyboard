@@ -11,7 +11,7 @@
         <!--Main View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="MainViewController" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="main" id="Y6W-OH-hqX" customClass="MainViewController" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,6 +24,15 @@
                                     <action selector="didSignInTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7OJ-ZS-Rof"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Yk-Ks-dhZ">
+                                <rect key="frame" x="169" y="492" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Dog Profile"/>
+                                <connections>
+                                    <action selector="dogprofiledidtapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="I3I-dQ-Aa0"/>
+                                    <segue destination="i3s-4M-Xha" kind="presentation" identifier="segueDogProfile" animates="NO" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="9of-Wy-48p"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -33,6 +42,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1952.1739130434785" y="44.866071428571423"/>
+        </scene>
+        <!--DogProfileFilledState-->
+        <scene sceneID="krH-U4-Add">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="DogProfileListViewController" storyboardName="DogProfileFilledState" id="i3s-4M-Xha" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="oPc-se-hLZ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7Y2-lu-CHp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2580" y="76"/>
         </scene>
         <!--Item-->
         <scene sceneID="rJ6-Em-SRy">
