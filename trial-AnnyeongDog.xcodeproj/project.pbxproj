@@ -137,7 +137,7 @@
 		B584B3C126B28C71005A02C5 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				C037876C26B2A1CB004344E0 /* Feature */,
+				C037876C26B2A1CB004344E0 /* DogProfile */,
 				C037876426B2A199004344E0 /* MedicalRecords */,
 				B584B3E026B28E3A005A02C5 /* LaunchScreen */,
 				B584B3CE26B28DF2005A02C5 /* Example */,
@@ -281,14 +281,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		C037876C26B2A1CB004344E0 /* Feature */ = {
+		C037876C26B2A1CB004344E0 /* DogProfile */ = {
 			isa = PBXGroup;
 			children = (
 				C037879626B2A226004344E0 /* Model */,
 				C037879526B2A21F004344E0 /* View */,
 				C037879426B2A210004344E0 /* ViewModel */,
 			);
-			path = Feature;
+			path = DogProfile;
 			sourceTree = "<group>";
 		};
 		C037879426B2A210004344E0 /* ViewModel */ = {
