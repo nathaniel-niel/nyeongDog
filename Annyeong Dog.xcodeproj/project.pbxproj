@@ -23,7 +23,7 @@
 		5B05C36E26B23F120034A66A /* DogProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05C36D26B23F120034A66A /* DogProfileTableViewCell.swift */; };
 		5B05C37026B2404B0034A66A /* DogProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05C36F26B2404B0034A66A /* DogProfileListViewController.swift */; };
 		5B05C37226B2427E0034A66A /* dummyDataDogProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05C37126B2427E0034A66A /* dummyDataDogProfile.swift */; };
-		5B05C38226B26A390034A66A /* DogProfileFilledStage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B05C38126B26A390034A66A /* DogProfileFilledStage.storyboard */; };
+		5B05C38226B26A390034A66A /* DogProfileFilledState.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B05C38126B26A390034A66A /* DogProfileFilledState.storyboard */; };
 		5B2C3B5926B1C06900E68D56 /* DogProfileEmptyStage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B2C3B5826B1C06900E68D56 /* DogProfileEmptyStage.storyboard */; };
 		7201C9E5BA03A43150EE0D2D /* Pods_Annyeong_Dog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBD6A1C34602C148FF42B40 /* Pods_Annyeong_Dog.framework */; };
 /* End PBXBuildFile section */
@@ -48,7 +48,7 @@
 		5B05C36D26B23F120034A66A /* DogProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileTableViewCell.swift; sourceTree = "<group>"; };
 		5B05C36F26B2404B0034A66A /* DogProfileListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileListViewController.swift; sourceTree = "<group>"; };
 		5B05C37126B2427E0034A66A /* dummyDataDogProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummyDataDogProfile.swift; sourceTree = "<group>"; };
-		5B05C38126B26A390034A66A /* DogProfileFilledStage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DogProfileFilledStage.storyboard; sourceTree = "<group>"; };
+		5B05C38126B26A390034A66A /* DogProfileFilledState.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DogProfileFilledState.storyboard; sourceTree = "<group>"; };
 		5B2C3B5826B1C06900E68D56 /* DogProfileEmptyStage.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DogProfileEmptyStage.storyboard; sourceTree = "<group>"; };
 		6EBD6A1C34602C148FF42B40 /* Pods_Annyeong_Dog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Annyeong_Dog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BED1602437A27696C8148C8 /* Pods-Annyeong Dog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Annyeong Dog.release.xcconfig"; path = "Target Support Files/Pods-Annyeong Dog/Pods-Annyeong Dog.release.xcconfig"; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				5B2C3B5826B1C06900E68D56 /* DogProfileEmptyStage.storyboard */,
-				5B05C38126B26A390034A66A /* DogProfileFilledStage.storyboard */,
+				5B05C38126B26A390034A66A /* DogProfileFilledState.storyboard */,
 				5B05C36D26B23F120034A66A /* DogProfileTableViewCell.swift */,
 				5B05C36F26B2404B0034A66A /* DogProfileListViewController.swift */,
 			);
@@ -321,7 +321,7 @@
 				2DF37DA026B1A22F0026FE0C /* ExampleViewController.xib in Resources */,
 				5B2C3B5926B1C06900E68D56 /* DogProfileEmptyStage.storyboard in Resources */,
 				2D5C422526B1689A00382A0F /* Assets.xcassets in Resources */,
-				5B05C38226B26A390034A66A /* DogProfileFilledStage.storyboard in Resources */,
+				5B05C38226B26A390034A66A /* DogProfileFilledState.storyboard in Resources */,
 				2D5C423B26B16A7400382A0F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
