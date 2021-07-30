@@ -65,23 +65,3 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     }
     
 }
-
-// If statement from segue storyboard
-
-//func navigateToDogProfileEmptyState() -> DogProfileEmptyState {
-//
-//        let storyBoard: UIStoryboard = UIStoryboard(name: "DogProfileEmptyState", bundle: nil)
-//
-//        let dogProfileVC = storyBoard.instantiateViewController(withIdentifier: "DogProfileEmptyState") as! DogProfileEmptyState
-//
-//        return dogProfileVC
-//
-//
-//    }
-//if data == nil{
-//present(prepareForMedical.navigateToDogProfileEmptyState(), animated: true, completion: nil)
-//}
-// else {
-// present(prepareForMedical.navigateToDogProfileFilledState(), animated: true, completion: nil)
-
-
