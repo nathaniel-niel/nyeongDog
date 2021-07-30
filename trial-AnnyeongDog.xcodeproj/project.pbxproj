@@ -25,8 +25,6 @@
 		5B05C39A26B2A9450034A66A /* MRDEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05C39926B2A9450034A66A /* MRDEViewController.swift */; };
 		5B05C39D26B2B3B00034A66A /* DeleteButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05C39B26B2B3B00034A66A /* DeleteButtonTableViewCell.swift */; };
 		5B05C39E26B2B3B00034A66A /* DeleteButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B05C39C26B2B3B00034A66A /* DeleteButtonTableViewCell.xib */; };
-		5B3F4BEB26B3FA7F004448DA /* MRDA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3F4BEA26B3FA7F004448DA /* MRDA.storyboard */; };
-		5B3F4BEE26B3FAD7004448DA /* MRDAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F4BEC26B3FAD7004448DA /* MRDAViewController.swift */; };
 		7ACD3D5FCF25095A1818F235 /* Pods_trial_AnnyeongDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717D5942BF1328C6EDE1986A /* Pods_trial_AnnyeongDog.framework */; };
 		B584B3A926B264CC005A02C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3A826B264CC005A02C5 /* AppDelegate.swift */; };
 		B584B3AB26B264CC005A02C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3AA26B264CC005A02C5 /* SceneDelegate.swift */; };
@@ -85,8 +83,6 @@
 		5B05C39926B2A9450034A66A /* MRDEViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRDEViewController.swift; sourceTree = "<group>"; };
 		5B05C39B26B2B3B00034A66A /* DeleteButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButtonTableViewCell.swift; sourceTree = "<group>"; };
 		5B05C39C26B2B3B00034A66A /* DeleteButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteButtonTableViewCell.xib; sourceTree = "<group>"; };
-		5B3F4BEA26B3FA7F004448DA /* MRDA.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MRDA.storyboard; sourceTree = "<group>"; };
-		5B3F4BEC26B3FAD7004448DA /* MRDAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRDAViewController.swift; sourceTree = "<group>"; };
 
 		717D5942BF1328C6EDE1986A /* Pods_trial_AnnyeongDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trial_AnnyeongDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B584B3A526B264CC005A02C5 /* trial-AnnyeongDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "trial-AnnyeongDog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,8 +170,6 @@
 			children = (
 				2D628ED126B297B20008ECD2 /* MRD.storyboard */,
 				5B05C39726B2A9160034A66A /* MRDE.storyboard */,
-				5B3F4BEA26B3FA7F004448DA /* MRDA.storyboard */,
-				5B3F4BEC26B3FAD7004448DA /* MRDAViewController.swift */,
 				2D628ED226B297B20008ECD2 /* MRDViewController.swift */,
 				5B05C39926B2A9450034A66A /* MRDEViewController.swift */,
 				2D628ECB26B297B10008ECD2 /* withXIB */,
@@ -560,7 +554,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B3F4BEB26B3FA7F004448DA /* MRDA.storyboard in Resources */,
 				5B05C39826B2A9160034A66A /* MRDE.storyboard in Resources */,
 				B584B3C626B28D01005A02C5 /* Signin.storyboard in Resources */,
 				B584B3DD26B28DF2005A02C5 /* Main.storyboard in Resources */,
@@ -654,7 +647,6 @@
 				B584B3CD26B28DCD005A02C5 /* Helper.swift in Sources */,
 				B584B3E726B2B26C005A02C5 /* ViewSignin.swift in Sources */,
 				B584B3D926B28DF2005A02C5 /* ExampleModel.swift in Sources */,
-				5B3F4BEE26B3FAD7004448DA /* MRDAViewController.swift in Sources */,
 				C00DE8FD26B3D8AE00E99343 /* MedicalRecordsFilledViewController.swift in Sources */,
 				B584B3DC26B28DF2005A02C5 /* MainViewController.swift in Sources */,
 
