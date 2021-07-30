@@ -6,13 +6,16 @@
 //
 
 import UIKit
+import Firebase
 
 class DogProfileDetailViewController: UIViewController {
     
     var genderModel = GenderModel()
     var prepareForMedical = PrepareForMedical()
     
+    
     @IBOutlet weak var dogsTextField: UITextField!
+    @IBOutlet weak var dateOfBirth: UIDatePicker!
     @IBOutlet weak var genderTextField: UITextField!
     @IBOutlet weak var breedTextField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
@@ -20,23 +23,20 @@ class DogProfileDetailViewController: UIViewController {
     @IBOutlet weak var allergyTextField: UITextField!
     @IBOutlet weak var medicalRecordsUI: UIButton!
     
-    @IBOutlet weak var rightBarButtonItem: UIBarButtonItem!
     
     var pickerView = UIPickerView()
+    var genderDogs = ""
+    var dogsModel: DogProfileData?
+    var helper: Helper?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        pickerView.delegate = self
-        pickerView.dataSource = self
-        
-        genderTextField.inputView = pickerView
-        navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.3733734488, green: 0.4266925454, blue: 0.6893113852, alpha: 1)
-        
+      
+        delegate()
         updateUI()
-        
-    }
+   }
     
     @IBAction func medicalRecordsPressed(_ sender: UIButton) {
         
@@ -49,7 +49,31 @@ class DogProfileDetailViewController: UIViewController {
         
     }
     
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        
+        let currentUser = Firebase.Auth.auth().currentUser
+        
+        DataManipulation.sharedData.uploadDogsProfileDataToDatabase(with: UserModel(id: currentUser!.uid, email: (currentUser?.email)!), with: dogsModel!)
+        }
+    
+    
+    func delegate(){
+        
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        
+        dogsTextField.delegate = self
+        genderTextField.delegate = self
+        breedTextField.delegate = self
+        weightTextField.delegate = self
+        colorTextField.delegate = self
+        allergyTextField.delegate = self
+        
+    }
     func updateUI(){
+        
+        genderTextField.inputView = pickerView
+        navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.3733734488, green: 0.4266925454, blue: 0.6893113852, alpha: 1)
         navigationItem.largeTitleDisplayMode = .never
     }
     
@@ -68,6 +92,25 @@ class DogProfileDetailViewController: UIViewController {
     }
     
 }
+
+extension DogProfileDetailViewController: UITextFieldDelegate{
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        
+   
+        dogsModel = DogProfileData(dogName: dogsTextField.text!, DOB: dateOfBirth.date , gender: genderDogs, breed: breedTextField.text!, weight: weightTextField.text!, color: colorTextField.text!, allergy: allergyTextField.text!, dogID: helper?.dogID() ?? 0)
+        
+        
+        
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+    
+    
+}
+
 // Picker buat Keyboard Gender
 
 extension DogProfileDetailViewController: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -85,6 +128,11 @@ extension DogProfileDetailViewController: UIPickerViewDelegate, UIPickerViewData
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         genderTextField.text = genderModel.genderArray[row]
+        genderDogs = genderModel.genderArray[row]
+        
+        
     }
+    
+    
     
 }

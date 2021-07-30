@@ -21,4 +21,14 @@ class DataManipulation {
             "email": user.email
         ])
     }
+    
+    func uploadDogsProfileDataToDatabase(with user: UserModel, with DogProfile: DogProfileData){
+        
+        ref.child("users").child(user.id).child("dog").setValue([
+            "dogID" : DogProfile.dogID,
+            "dog name": DogProfile.dogName
+            
+        ])
+        
+    }
 }

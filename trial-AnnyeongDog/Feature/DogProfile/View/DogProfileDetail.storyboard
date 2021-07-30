@@ -107,10 +107,10 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad" returnKeyType="next"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkL-dh-E76">
-                                <rect key="frame" x="40" y="523" width="71" height="19"/>
+                                <rect key="frame" x="40" y="523" width="110" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Weight">
+                                    <fragment content="Weight in KG">
                                         <attributes>
                                             <font key="NSFont" size="13" name="Poppins-Regular"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -195,16 +195,19 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="9AM-JC-0wc">
                             <color key="tintColor" red="0.3835351467" green="0.42501482369999999" blue="0.67061495780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="Y6W-OH-hqX" id="mPG-7e-l8m"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="allergyTextField" destination="bns-DZ-WW2" id="uBq-dB-M6Y"/>
                         <outlet property="breedTextField" destination="Mrd-Hw-TlD" id="ysN-G8-m9E"/>
                         <outlet property="colorTextField" destination="D37-PO-dRK" id="GsV-Pn-IjZ"/>
+                        <outlet property="dateOfBirth" destination="alh-Dj-LaB" id="AAr-lT-BYp"/>
                         <outlet property="dogsTextField" destination="yz1-iW-7Te" id="arB-SO-DO4"/>
                         <outlet property="genderTextField" destination="4zA-LN-8Xz" id="1Yi-5x-7nf"/>
                         <outlet property="medicalRecordsUI" destination="oAy-mK-rec" id="4c3-8r-ayQ"/>
-                        <outlet property="rightBarButtonItem" destination="9AM-JC-0wc" id="GnP-95-HoB"/>
                         <outlet property="weightTextField" destination="TYK-OW-Txu" id="vHy-IC-7CX"/>
                     </connections>
                 </viewController>

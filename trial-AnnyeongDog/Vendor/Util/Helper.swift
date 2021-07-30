@@ -60,4 +60,10 @@ class Helper {
 
       return hashString
     }
+    
+    func dogID() -> Int{
+        let a = 0
+        return a + 1
+        
+    }
 }

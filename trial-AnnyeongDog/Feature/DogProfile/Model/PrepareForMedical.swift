@@ -20,6 +20,10 @@ struct PrepareForMedical {
         }
     }
     
+    func printDogProfile(){
+        
+    }
+    
     func navigateToMedicalRecords() -> UIViewController {
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "MedicalRecordsFilledState", bundle: nil)
