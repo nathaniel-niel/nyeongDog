@@ -190,9 +190,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Dog Profile" id="bUd-Mr-8SX">
                         <barButtonItem key="backBarButtonItem" title=" " id="uGa-xJ-0mc"/>
-                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" id="Rqk-Ux-iPS">
-                            <color key="tintColor" red="0.3835351467" green="0.42501482369999999" blue="0.67061495780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="9AM-JC-0wc">
                             <color key="tintColor" red="0.3835351467" green="0.42501482369999999" blue="0.67061495780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
@@ -235,7 +232,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

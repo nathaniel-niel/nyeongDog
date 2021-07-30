@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
 
 //        view.backgroundColor = .blue
         
+        
 
         
     }
@@ -33,9 +34,9 @@ class MainViewController: UIViewController {
         
     @IBAction func dogprofiledetail(_ sender: UIButton) {
         
-        let storyboard = UIStoryboard(name: "MRDA", bundle: nil)
+        let storyboard = UIStoryboard(name: "DogProfileDetail", bundle: nil)
 
-       let vc = storyboard.instantiateViewController(identifier: "mrda")
+       let vc = storyboard.instantiateViewController(identifier: "DogProfileDetail")
 
      let navVc = UINavigationController(rootViewController: vc)
         
