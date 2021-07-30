@@ -30,6 +30,7 @@ struct PrepareForMedical {
         
         
     }
+    
     func navigateToMedicalRecordsEmpty() -> UIViewController {
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "MedicalRecords", bundle: nil)
