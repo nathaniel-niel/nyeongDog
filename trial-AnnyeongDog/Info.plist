@@ -34,7 +34,7 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
-					<string>DogProfileDetail</string>
+					<string>Signin</string>
 				</dict>
 			</array>
 		</dict>
@@ -44,7 +44,7 @@
 	<key>UILaunchStoryboardName</key>
 	<string>DogProfileDetail</string>
 	<key>UIMainStoryboardFile</key>
-	<string>DogProfileDetail</string>
+	<string>Signin</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

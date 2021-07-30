@@ -18,6 +18,7 @@
 		5B05C39A26B2A9450034A66A /* MRDEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05C39926B2A9450034A66A /* MRDEViewController.swift */; };
 		5B05C39D26B2B3B00034A66A /* DeleteButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05C39B26B2B3B00034A66A /* DeleteButtonTableViewCell.swift */; };
 		5B05C39E26B2B3B00034A66A /* DeleteButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B05C39C26B2B3B00034A66A /* DeleteButtonTableViewCell.xib */; };
+		2D628F0426B2FB590008ECD2 /* MRDViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D628F0326B2FB590008ECD2 /* MRDViewModel.swift */; };
 		7ACD3D5FCF25095A1818F235 /* Pods_trial_AnnyeongDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717D5942BF1328C6EDE1986A /* Pods_trial_AnnyeongDog.framework */; };
 		B584B3A926B264CC005A02C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3A826B264CC005A02C5 /* AppDelegate.swift */; };
 		B584B3AB26B264CC005A02C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3AA26B264CC005A02C5 /* SceneDelegate.swift */; };
@@ -48,7 +49,11 @@
 		C037878826B2A1CB004344E0 /* GenderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037877226B2A1CB004344E0 /* GenderModel.swift */; };
 		C037879126B2A1CB004344E0 /* DogProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */; };
 		C037879226B2A1CB004344E0 /* PrepareForMedical.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037878426B2A1CB004344E0 /* PrepareForMedical.swift */; };
-		C037879326B2A1CB004344E0 /* ModelBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037878526B2A1CB004344E0 /* ModelBackButton.swift */; };
+		B584B3E326B2AF43005A02C5 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3E226B2AF43005A02C5 /* UserModel.swift */; };
+		B584B3E526B2B05B005A02C5 /* Signin.xib in Resources */ = {isa = PBXBuildFile; fileRef = B584B3E426B2B05B005A02C5 /* Signin.xib */; };
+		B584B3E726B2B26C005A02C5 /* ViewSignin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3E626B2B26C005A02C5 /* ViewSignin.swift */; };
+		B5D247B826B2FFAE002B2F8F /* MR.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D247B726B2FFAE002B2F8F /* MR.storyboard */; };
+		B5D247BA26B2FFC1002B2F8F /* MRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D247B926B2FFC1002B2F8F /* MRViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +70,7 @@
 		5B05C39926B2A9450034A66A /* MRDEViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRDEViewController.swift; sourceTree = "<group>"; };
 		5B05C39B26B2B3B00034A66A /* DeleteButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButtonTableViewCell.swift; sourceTree = "<group>"; };
 		5B05C39C26B2B3B00034A66A /* DeleteButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteButtonTableViewCell.xib; sourceTree = "<group>"; };
+		2D628F0326B2FB590008ECD2 /* MRDViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRDViewModel.swift; sourceTree = "<group>"; };
 		717D5942BF1328C6EDE1986A /* Pods_trial_AnnyeongDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trial_AnnyeongDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B584B3A526B264CC005A02C5 /* trial-AnnyeongDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "trial-AnnyeongDog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B584B3A826B264CC005A02C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +105,11 @@
 		C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogProfileDetailViewController.swift; sourceTree = "<group>"; };
 		C037878426B2A1CB004344E0 /* PrepareForMedical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareForMedical.swift; sourceTree = "<group>"; };
 		C037878526B2A1CB004344E0 /* ModelBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelBackButton.swift; sourceTree = "<group>"; };
+		B584B3E226B2AF43005A02C5 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		B584B3E426B2B05B005A02C5 /* Signin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Signin.xib; sourceTree = "<group>"; };
+		B584B3E626B2B26C005A02C5 /* ViewSignin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSignin.swift; sourceTree = "<group>"; };
+		B5D247B726B2FFAE002B2F8F /* MR.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MR.storyboard; sourceTree = "<group>"; };
+		B5D247B926B2FFC1002B2F8F /* MRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,8 +157,9 @@
 		2D628E8B26B297530008ECD2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				2D628F0326B2FB590008ECD2 /* MRDViewModel.swift */,
 			);
-			path = ViewModel;
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 		2D628ECB26B297B10008ECD2 /* withXIB */ = {
@@ -272,6 +284,7 @@
 		B584B3C926B28D18005A02C5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B584B3E226B2AF43005A02C5 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -281,6 +294,10 @@
 			children = (
 				B584B3C526B28D01005A02C5 /* Signin.storyboard */,
 				B584B3C726B28D13005A02C5 /* SigninViewController.swift */,
+				B584B3E426B2B05B005A02C5 /* Signin.xib */,
+				B584B3E626B2B26C005A02C5 /* ViewSignin.swift */,
+				B5D247B726B2FFAE002B2F8F /* MR.storyboard */,
+				B5D247B926B2FFC1002B2F8F /* MRViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -507,6 +524,8 @@
 				B584B3DD26B28DF2005A02C5 /* Main.storyboard in Resources */,
 				2D628ED526B297B20008ECD2 /* MRDTableViewCell.xib in Resources */,
 				B584B3DB26B28DF2005A02C5 /* ExampleViewController.xib in Resources */,
+				B5D247B826B2FFAE002B2F8F /* MR.storyboard in Resources */,
+				B584B3E526B2B05B005A02C5 /* Signin.xib in Resources */,
 				B584B3B526B264CD005A02C5 /* LaunchScreen.storyboard in Resources */,
 				C00DE90026B3D8AE00E99343 /* MedicalRecordsFilledState.storyboard in Resources */,
 				2D628ED726B297B20008ECD2 /* MRD.storyboard in Resources */,
@@ -574,11 +593,14 @@
 				C00DE8FF26B3D8AE00E99343 /* MedicalFiilledTableViewCell.swift in Sources */,
 				C00DE8FB26B3D8AE00E99343 /* dummyTesting.swift in Sources */,
 				B584B3D826B28DF2005A02C5 /* ExampleViewModel.swift in Sources */,
+				B5D247BA26B2FFC1002B2F8F /* MRViewController.swift in Sources */,
 				2D628EDA26B297DE0008ECD2 /* MRD-dummyData.swift in Sources */,
 				5B05C39D26B2B3B00034A66A /* DeleteButtonTableViewCell.swift in Sources */,
 				C00DE8FE26B3D8AE00E99343 /* PrepareToMRD.swift in Sources */,
+				2D628F0426B2FB590008ECD2 /* MRDViewModel.swift in Sources */,
 				B584B3DF26B28E10005A02C5 /* DataManipulation.swift in Sources */,
 				B584B3CD26B28DCD005A02C5 /* Helper.swift in Sources */,
+				B584B3E726B2B26C005A02C5 /* ViewSignin.swift in Sources */,
 				B584B3D926B28DF2005A02C5 /* ExampleModel.swift in Sources */,
 				C037879326B2A1CB004344E0 /* ModelBackButton.swift in Sources */,
 				C00DE8FD26B3D8AE00E99343 /* MedicalRecordsFilledViewController.swift in Sources */,
@@ -591,6 +613,7 @@
 				B584B3A926B264CC005A02C5 /* AppDelegate.swift in Sources */,
 				C037878826B2A1CB004344E0 /* GenderModel.swift in Sources */,
 				C00DE8F326B3CEA800E99343 /* MedicalRecordsDummy.swift in Sources */,
+				B584B3E326B2AF43005A02C5 /* UserModel.swift in Sources */,
 				B584B3AB26B264CC005A02C5 /* SceneDelegate.swift in Sources */,
 				C037879226B2A1CB004344E0 /* PrepareForMedical.swift in Sources */,
 			);
