@@ -85,9 +85,12 @@ extension SigninViewController: ASAuthorizationControllerDelegate {
             }
         }
         print("Login success")
-        let storyboard = UIStoryboard(name: "MR", bundle: nil)
-        let mrVC = storyboard.instantiateViewController(identifier: "MR") as! MRViewController
-        self.present(mrVC, animated: true, completion: nil)
+        
+        //Navigate to Medical Record Detail Add
+//        let storyboard = UIStoryboard(name: "MRDA", bundle: nil)
+//        let medicalRecordDetailAddVC = storyboard.instantiateViewController(identifier: "MRDA") as! MRDAViewController
+//        self.present(medicalRecordDetailAddVC, animated: true, completion: nil)
+//        self.navigationController?.pushViewController(medicalRecordDetailAddVC, animated: true)
         
     }
     

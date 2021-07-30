@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
+		5B05C38E26B29E590034A66A /* DogProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05C38A26B29E560034A66A /* DogProfileListViewController.swift */; };
+		5B05C38F26B29E590034A66A /* DogProfileEmptyState.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B05C38B26B29E570034A66A /* DogProfileEmptyState.storyboard */; };
+		5B05C39026B29E590034A66A /* DogProfileFilledState.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B05C38C26B29E580034A66A /* DogProfileFilledState.storyboard */; };
+		5B05C39126B29E590034A66A /* DogProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05C38D26B29E590034A66A /* DogProfileTableViewCell.swift */; };
+		5B05C39626B29ECF0034A66A /* dummyDataDogProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05C39526B29ECF0034A66A /* dummyDataDogProfile.swift */; };
 		2D628ED326B297B20008ECD2 /* MRDTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D628ECD26B297B10008ECD2 /* MRDTableViewCell.swift */; };
 		2D628ED426B297B20008ECD2 /* LargeTextFieldTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D628ECE26B297B10008ECD2 /* LargeTextFieldTableViewCell.xib */; };
 		2D628ED526B297B20008ECD2 /* MRDTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D628ECF26B297B10008ECD2 /* MRDTableViewCell.xib */; };
@@ -61,6 +67,12 @@
 /* Begin PBXFileReference section */
 		1F067EF30DC9F907FC10B78B /* Pods-trial-AnnyeongDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trial-AnnyeongDog.release.xcconfig"; path = "Target Support Files/Pods-trial-AnnyeongDog/Pods-trial-AnnyeongDog.release.xcconfig"; sourceTree = "<group>"; };
 		26A2976778E2B79F56C882C7 /* Pods-trial-AnnyeongDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trial-AnnyeongDog.debug.xcconfig"; path = "Target Support Files/Pods-trial-AnnyeongDog/Pods-trial-AnnyeongDog.debug.xcconfig"; sourceTree = "<group>"; };
+
+		5B05C38A26B29E560034A66A /* DogProfileListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogProfileListViewController.swift; sourceTree = "<group>"; };
+		5B05C38B26B29E570034A66A /* DogProfileEmptyState.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DogProfileEmptyState.storyboard; sourceTree = "<group>"; };
+		5B05C38C26B29E580034A66A /* DogProfileFilledState.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DogProfileFilledState.storyboard; sourceTree = "<group>"; };
+		5B05C38D26B29E590034A66A /* DogProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogProfileTableViewCell.swift; sourceTree = "<group>"; };
+		5B05C39526B29ECF0034A66A /* dummyDataDogProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dummyDataDogProfile.swift; sourceTree = "<group>"; };
 		2D628ECD26B297B10008ECD2 /* MRDTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRDTableViewCell.swift; sourceTree = "<group>"; };
 		2D628ECE26B297B10008ECD2 /* LargeTextFieldTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LargeTextFieldTableViewCell.xib; sourceTree = "<group>"; };
 		2D628ECF26B297B10008ECD2 /* MRDTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MRDTableViewCell.xib; sourceTree = "<group>"; };
@@ -75,6 +87,7 @@
 		5B05C39C26B2B3B00034A66A /* DeleteButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteButtonTableViewCell.xib; sourceTree = "<group>"; };
 		5B3F4BEA26B3FA7F004448DA /* MRDA.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MRDA.storyboard; sourceTree = "<group>"; };
 		5B3F4BEC26B3FAD7004448DA /* MRDAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRDAViewController.swift; sourceTree = "<group>"; };
+
 		717D5942BF1328C6EDE1986A /* Pods_trial_AnnyeongDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trial_AnnyeongDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B584B3A526B264CC005A02C5 /* trial-AnnyeongDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "trial-AnnyeongDog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B584B3A826B264CC005A02C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +141,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+
+		5B05C38926B29E3E0034A66A /* DogProfile */ = {
+			isa = PBXGroup;
+			children = (
+				5B05C39426B29EB50034A66A /* ViewModel */,
+				5B05C39326B29E9B0034A66A /* Model */,
+				5B05C39226B29E960034A66A /* View */,
+			);
+			path = DogProfile;
+			sourceTree = "<group>";
+		};
+		5B05C39226B29E960034A66A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5B05C38B26B29E570034A66A /* DogProfileEmptyState.storyboard */,
+				5B05C38C26B29E580034A66A /* DogProfileFilledState.storyboard */,
+				5B05C38A26B29E560034A66A /* DogProfileListViewController.swift */,
+				5B05C38D26B29E590034A66A /* DogProfileTableViewCell.swift */,
 		2D628E8826B297350008ECD2 /* MedicalRecordDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,18 +179,32 @@
 				2D628ED226B297B20008ECD2 /* MRDViewController.swift */,
 				5B05C39926B2A9450034A66A /* MRDEViewController.swift */,
 				2D628ECB26B297B10008ECD2 /* withXIB */,
+
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
+		5B05C39326B29E9B0034A66A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B05C39526B29ECF0034A66A /* dummyDataDogProfile.swift */,
+
 		2D628E8A26B2974F0008ECD2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				2D628ED926B297DE0008ECD2 /* MRD-dummyData.swift */,
+
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
+
+		5B05C39426B29EB50034A66A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+
 		2D628E8B26B297530008ECD2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +232,7 @@
 				5B05C39C26B2B3B00034A66A /* DeleteButtonTableViewCell.xib */,
 			);
 			path = TableViewCell;
+
 			sourceTree = "<group>";
 		};
 		90B83845868CD0FB085773B5 /* Pods */ = {
@@ -251,9 +297,11 @@
 		B584B3C126B28C71005A02C5 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				C037876C26B2A1CB004344E0 /* DogProfile */,
+
+				5B05C38926B29E3E0034A66A /* DogProfile */,
 				C037876426B2A199004344E0 /* MedicalRecords */,
 				2D628E8826B297350008ECD2 /* MedicalRecordDetail */,
+
 				B584B3E026B28E3A005A02C5 /* LaunchScreen */,
 				B584B3CE26B28DF2005A02C5 /* Example */,
 				B584B3C426B28CA4005A02C5 /* SignIn */,
@@ -368,17 +416,9 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		C00DE8F426B3D55C00E99343 /* View1 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View1;
-			sourceTree = "<group>";
-		};
 		C037876426B2A199004344E0 /* MedicalRecords */ = {
 			isa = PBXGroup;
 			children = (
-				C00DE8F426B3D55C00E99343 /* View1 */,
 				C03787A426B2F53C004344E0 /* Model */,
 				C037876826B2A199004344E0 /* View */,
 				C037876526B2A199004344E0 /* ViewModel */,
@@ -540,7 +580,12 @@
 				B584B3BD26B265C0005A02C5 /* GoogleService-Info.plist in Resources */,
 				C00DE8FC26B3D8AE00E99343 /* MedicalFiilledTableViewCell.xib in Resources */,
 				B584B3B226B264CD005A02C5 /* Assets.xcassets in Resources */,
+
+				5B05C39026B29E590034A66A /* DogProfileFilledState.storyboard in Resources */,
+				5B05C38F26B29E590034A66A /* DogProfileEmptyState.storyboard in Resources */,
+
 				C037876B26B2A199004344E0 /* MedicalRecords.storyboard in Resources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,6 +657,11 @@
 				5B3F4BEE26B3FAD7004448DA /* MRDAViewController.swift in Sources */,
 				C00DE8FD26B3D8AE00E99343 /* MedicalRecordsFilledViewController.swift in Sources */,
 				B584B3DC26B28DF2005A02C5 /* MainViewController.swift in Sources */,
+
+				5B05C38E26B29E590034A66A /* DogProfileListViewController.swift in Sources */,
+				5B05C39626B29ECF0034A66A /* dummyDataDogProfile.swift in Sources */,
+				5B05C39126B29E590034A66A /* DogProfileTableViewCell.swift in Sources */,
+
 				5B05C39A26B2A9450034A66A /* MRDEViewController.swift in Sources */,
 				2D628ED326B297B20008ECD2 /* MRDTableViewCell.swift in Sources */,
 				C00DE8F126B312D400E99343 /* MedicalRecordsDummyData.swift in Sources */,
