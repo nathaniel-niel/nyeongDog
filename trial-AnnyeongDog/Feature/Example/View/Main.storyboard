@@ -40,6 +40,15 @@
                                     <action selector="goToDogProfile:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8oZ-Fw-28e"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVc-su-iTq">
+                                <rect key="frame" x="133" y="723" width="152" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Dog Profile Detail"/>
+                                <connections>
+                                    <action selector="dogprofiledetail:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ibO-B1-YED"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

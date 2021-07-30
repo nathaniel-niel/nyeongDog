@@ -31,6 +31,18 @@ class MainViewController: UIViewController {
         self.present(navVc, animated: true, completion: nil)
     }
         
+    @IBAction func dogprofiledetail(_ sender: UIButton) {
+        
+        let storyboard = UIStoryboard(name: "MRDA", bundle: nil)
+
+       let vc = storyboard.instantiateViewController(identifier: "mrda")
+
+     let navVc = UINavigationController(rootViewController: vc)
+        
+    self.present(navVc, animated: true, completion: nil)
+        
+        
+    }
     @IBAction func goToDogProfile(_ sender: Any) {
         let storyboard = UIStoryboard(name: "MRDA", bundle: nil)
 
