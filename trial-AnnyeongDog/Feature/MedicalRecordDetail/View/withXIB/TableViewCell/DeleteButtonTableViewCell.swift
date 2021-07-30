@@ -13,7 +13,7 @@ protocol deletedelegate {
 }
 
 class DeleteButtonTableViewCell: UITableViewCell {
-//   week var delegate: deletedelegate?
+    var delegate: deletedelegate?
     static let identifier = "deletebutton"
     @IBOutlet weak var deleteButton: UIButton!
     
@@ -22,9 +22,9 @@ class DeleteButtonTableViewCell: UITableViewCell {
         
     }
     
-//    @IBAction func deleteButtonDidTapped(_ sender: Any) {
-//        delegate?.deleteAlert()
-//    }
+    @IBAction func deleteButtonDidTapped(_ sender: Any) {
+        delegate?.deleteAlert()
+    }
     
     
     

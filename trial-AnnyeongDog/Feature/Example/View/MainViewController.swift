@@ -14,7 +14,7 @@ class MainViewController: UIViewController {
 
         // Do any additional setup after loading the view.
 
-        view.backgroundColor = .blue
+//        view.backgroundColor = .blue
         
 
         
@@ -32,22 +32,21 @@ class MainViewController: UIViewController {
     }
         
     @IBAction func goToDogProfile(_ sender: Any) {
-//        let storyboard = UIStoryboard(name: "MRD", bundle: nil)
-//
-//        let vc = storyboard.instantiateViewController(identifier: "mrd")
-//        //        let vc = MedicalRecordDetailTableViewController(style: .grouped)
-//
-//        let navVc = UINavigationController(rootViewController: vc)
-//
-//        self.present(navVc, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "MRDA", bundle: nil)
+
+       let vc = storyboard.instantiateViewController(identifier: "mrda")
+
+     let navVc = UINavigationController(rootViewController: vc)
+        
+    self.present(navVc, animated: true, completion: nil)
     }
     
     
     @IBAction func didSignInTapped(_ sender: UIButton) {
-//        let storyboard = UIStoryboard(name: "SignIn", bundle: nil)
-//        let signInVC = (storyboard.instantiateViewController(identifier: "SignInViewController")) as SignInViewController
-//
-//        self.present(signInVC, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "Signin", bundle: nil)
+        let signInVC = (storyboard.instantiateViewController(identifier: "Signin")) as! SigninViewController
+        
+        self.navigationController?.pushViewController(signInVC, animated: true)
     }
 
 }

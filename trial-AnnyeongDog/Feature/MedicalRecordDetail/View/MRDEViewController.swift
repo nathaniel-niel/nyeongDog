@@ -207,6 +207,9 @@ extension MRDEViewController: UITableViewDataSource{
             switch indexPath.row {
             case 0:
                 let deletebutton =  MRDEtable.dequeueReusableCell(withIdentifier: DeleteButtonTableViewCell.identifier, for: indexPath) as! DeleteButtonTableViewCell
+                
+                deletebutton.delegate = self
+                
                 return deletebutton
             
             default:
@@ -263,3 +266,12 @@ extension MRDEViewController: UITableViewDataSource{
 
 }
 
+// DeleteButtonDelegate //perlu di benerin alur waktu yes
+extension MRDEViewController: deletedelegate{
+    func deleteAlert() {
+        let alert = UIAlertController(title: "Delete Dog Profile", message: "Once you delete this, you won't be able to return it. Do you want to proceed?", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.destructive, handler: {action in self.cancelaction()}))
+        self.present(alert, animated: true, completion: nil)
+    }
+}

@@ -7,17 +7,25 @@
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="poppins.regular.ttf">
+            <string>Poppins-Regular</string>
+        </array>
+        <array key="poppins.semibold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Signin View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="SignIn" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="SigninViewController" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Signin" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="SigninViewController" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rf4-5V-Vun">
-                                <rect key="frame" x="45" y="618" width="300" height="44"/>
+                                <rect key="frame" x="45" y="636" width="300" height="44"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Fra-gm-fFQ"/>
@@ -32,25 +40,47 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XWZ-Qk-4Hr">
-                                <rect key="frame" x="45" y="251" width="300" height="300"/>
+                                <rect key="frame" x="45" y="248" width="300" height="300"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="3Wf-nb-fAm"/>
                                     <constraint firstAttribute="height" constant="300" id="Dih-7U-7NW"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
+                                        <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Start Maintaining Your Pet's Health" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaU-98-Qdy">
+                                <rect key="frame" x="20" y="143" width="350" height="78.666666666666686"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QQk-gF-EhG">
+                                <rect key="frame" x="45" y="700" width="300" height="36"/>
+                                <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                <state key="normal" title="Skip for now">
+                                    <color key="titleColor" red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="skipButtonDidTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="UAJ-US-f5P"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="XWZ-Qk-4Hr" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="163" id="Naf-AW-De0"/>
+                            <constraint firstItem="QQk-gF-EhG" firstAttribute="trailing" secondItem="Rf4-5V-Vun" secondAttribute="trailing" id="8cP-Xj-k9X"/>
+                            <constraint firstItem="QQk-gF-EhG" firstAttribute="leading" secondItem="Rf4-5V-Vun" secondAttribute="leading" id="M0l-0b-UGQ"/>
+                            <constraint firstItem="XWZ-Qk-4Hr" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="160" id="Naf-AW-De0"/>
                             <constraint firstItem="XWZ-Qk-4Hr" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="45" id="S7v-k2-e7R"/>
-                            <constraint firstItem="Rf4-5V-Vun" firstAttribute="top" secondItem="XWZ-Qk-4Hr" secondAttribute="bottom" constant="67" id="hyL-fa-EJk"/>
+                            <constraint firstItem="NaU-98-Qdy" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="55" id="Sej-jg-fdL"/>
+                            <constraint firstItem="QQk-gF-EhG" firstAttribute="top" secondItem="Rf4-5V-Vun" secondAttribute="bottom" constant="20" id="T9W-n5-7zO"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="NaU-98-Qdy" secondAttribute="trailing" constant="20" id="dZx-Kb-sYW"/>
+                            <constraint firstItem="Rf4-5V-Vun" firstAttribute="top" secondItem="XWZ-Qk-4Hr" secondAttribute="bottom" constant="88" id="hyL-fa-EJk"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="XWZ-Qk-4Hr" secondAttribute="trailing" constant="45" id="nr5-Zf-Ens"/>
+                            <constraint firstItem="NaU-98-Qdy" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="onE-tL-uyc"/>
                             <constraint firstItem="Rf4-5V-Vun" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="45" id="uwP-u2-sbn"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Rf4-5V-Vun" secondAttribute="trailing" constant="45" id="wua-bg-lv2"/>
                         </constraints>
