@@ -42,7 +42,8 @@
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
-	<string>DogProfileDetail</string>
+	<string>Main</string>
+
 	<key>UIMainStoryboardFile</key>
 	<string>Signin</string>
 	<key>UIRequiredDeviceCapabilities</key>
