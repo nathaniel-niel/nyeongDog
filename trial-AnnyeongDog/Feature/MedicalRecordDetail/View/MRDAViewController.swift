@@ -59,6 +59,14 @@ class MRDAViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(didSaveButtonTapped))
     }
     
+    //Function View
+    @objc private func alertView(){
+        let alert = UIAlertController(title: "Unchanged Changes", message: "You have unsaved change, are you sure you want to cancel?", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.destructive, handler:{ action in self.dismissModal() }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     
     // Function to dismiss modal view
     @objc private func dismissModal(){
