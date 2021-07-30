@@ -16,8 +16,7 @@ class DataManipulation {
     
     
     func insertUser(with user : UserModel ) {
-        ref.child("users").setValue([
-            "id": user.id,
+        ref.child("users").child("\(user.id)").setValue([
             "email": user.email
         ])
     }

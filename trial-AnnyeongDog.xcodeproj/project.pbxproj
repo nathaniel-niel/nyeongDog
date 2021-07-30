@@ -362,17 +362,9 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		C00DE8F426B3D55C00E99343 /* View1 */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View1;
-			sourceTree = "<group>";
-		};
 		C037876426B2A199004344E0 /* MedicalRecords */ = {
 			isa = PBXGroup;
 			children = (
-				C00DE8F426B3D55C00E99343 /* View1 */,
 				C03787A426B2F53C004344E0 /* Model */,
 				C037876826B2A199004344E0 /* View */,
 				C037876526B2A199004344E0 /* ViewModel */,
