@@ -11,7 +11,7 @@
         <!--Main View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController id="Y6W-OH-hqX" customClass="MainViewController" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="main " id="Y6W-OH-hqX" customClass="MainViewController" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,6 +22,22 @@
                                 <state key="normal" title="Go to Sign in page"/>
                                 <connections>
                                     <action selector="didSignInTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7OJ-ZS-Rof"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNh-ch-ZS8">
+                                <rect key="frame" x="112" y="481" width="191" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go to Medical Record Detail"/>
+                                <connections>
+                                    <action selector="didTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ukL-b1-ZiZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4i-tG-d30">
+                                <rect key="frame" x="96" y="538" width="223" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go to Medical Record Detail Add"/>
+                                <connections>
+                                    <action selector="goToDogProfile:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8oZ-Fw-28e"/>
                                 </connections>
                             </button>
                         </subviews>
