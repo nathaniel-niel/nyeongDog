@@ -54,13 +54,16 @@ extension MedicalRecordsFilledViewController: UITableViewDelegate, UITableViewDa
             
             cell.medicineLable.text = dummyData.arrayDummy[indexPath.row]
             
-            cell.accessoryType = .disclosureIndicator
-            
+           
+          
             return cell
             
         }
         
+        
         return UITableViewCell()
     }
     
+    
 }
+
