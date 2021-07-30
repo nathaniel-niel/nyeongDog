@@ -43,10 +43,10 @@ class MainViewController: UIViewController {
     
     
     @IBAction func didSignInTapped(_ sender: UIButton) {
-//        let storyboard = UIStoryboard(name: "SignIn", bundle: nil)
-//        let signInVC = (storyboard.instantiateViewController(identifier: "SignInViewController")) as SignInViewController
-//
-//        self.present(signInVC, animated: true, completion: nil)
+        let storyboard = UIStoryboard(name: "Signin", bundle: nil)
+        let signInVC = (storyboard.instantiateViewController(identifier: "Signin")) as! SigninViewController
+        
+        self.navigationController?.pushViewController(signInVC, animated: true)
     }
 
 }

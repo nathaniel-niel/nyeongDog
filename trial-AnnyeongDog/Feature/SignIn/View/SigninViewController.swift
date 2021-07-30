@@ -13,7 +13,14 @@ import AuthenticationServices
 class SigninViewController: UIViewController {
     let helper = Helper()
     @IBOutlet weak var signinButton: UIButton!
-//    let views: ViewSignin?
+    
+    @IBAction func skipButtonDidTapped(_ sender: UIButton) {
+        let storyBoard = UIStoryboard(name: "DogProfileDetail", bundle: nil)
+        let dogProfileDetailVC = storyBoard.instantiateViewController(identifier: "DogProfileDetail") as! DogProfileDetailViewController
+        
+        self.navigationController?.pushViewController(dogProfileDetailVC, animated: true)
+    }
+    //    let views: ViewSignin?
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSignInButton()
