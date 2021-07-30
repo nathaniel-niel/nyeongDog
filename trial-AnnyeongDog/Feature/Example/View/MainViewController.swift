@@ -13,6 +13,10 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+
+        view.backgroundColor = .blue
+        
+
         
     }
     
@@ -27,6 +31,17 @@ class MainViewController: UIViewController {
         self.present(navVc, animated: true, completion: nil)
     }
         
+    @IBAction func goToDogProfile(_ sender: Any) {
+//        let storyboard = UIStoryboard(name: "MRD", bundle: nil)
+//
+//        let vc = storyboard.instantiateViewController(identifier: "mrd")
+//        //        let vc = MedicalRecordDetailTableViewController(style: .grouped)
+//
+//        let navVc = UINavigationController(rootViewController: vc)
+//
+//        self.present(navVc, animated: true, completion: nil)
+    }
+    
     
     @IBAction func didSignInTapped(_ sender: UIButton) {
 //        let storyboard = UIStoryboard(name: "SignIn", bundle: nil)

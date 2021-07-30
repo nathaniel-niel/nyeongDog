@@ -7,6 +7,9 @@
 
 import Foundation
 
+
+
+
 struct MRDDummyData{
     let date: String
     let veterinarian: String
@@ -18,3 +21,4 @@ struct MRDDummyData{
     let description: String
    
 }
+
