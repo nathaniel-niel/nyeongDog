@@ -69,12 +69,21 @@ class DogProfileDetailViewController: UIViewController {
         colorTextField.delegate = self
         allergyTextField.delegate = self
         
+        
+        
     }
     func updateUI(){
         
         genderTextField.inputView = pickerView
         navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.3733734488, green: 0.4266925454, blue: 0.6893113852, alpha: 1)
         navigationItem.largeTitleDisplayMode = .never
+        
+        dogsTextField.addBottomBorder()
+        genderTextField.addBottomBorder()
+        breedTextField.addBottomBorder()
+        weightTextField.addBottomBorder()
+        colorTextField.addBottomBorder()
+        allergyTextField.addBottomBorder()
     }
     
     func editButtonLogic(){
@@ -135,4 +144,14 @@ extension DogProfileDetailViewController: UIPickerViewDelegate, UIPickerViewData
     
     
     
+}
+
+extension UITextField {
+    func addBottomBorder(){
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect(x: 0, y: self.frame.size.height - 1, width: self.frame.size.width, height: 1)
+        bottomLine.backgroundColor = UIColor.black.cgColor
+        borderStyle = .none
+        layer.addSublayer(bottomLine)
+    }
 }
