@@ -11,6 +11,7 @@ import CryptoKit
 import AuthenticationServices
 
 class SigninViewController: UIViewController {
+    static let helper = Helper()
     @IBOutlet weak var signinButton: UIButton!
 //    let views: ViewSignin?
     override func viewDidLoad() {
@@ -43,6 +44,7 @@ class SigninViewController: UIViewController {
         let request = appleIDProvider.createRequest()
         request.requestedScopes = [.fullName, .email]
         
+        
         let nonce = randomNonceString()
         request.nonce = sha256(nonce)
         //save it in temporary variable
@@ -52,12 +54,14 @@ class SigninViewController: UIViewController {
 }
 
 extension SigninViewController: ASAuthorizationControllerDelegate {
-    //Authentiation
+    
+    //This function is called after authentiation's successful
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
             guard let nonce = currentNonce else {
                 fatalError("Invalid state : A login callback was received but no login request was sent")
             }
+            // Create an account in your system
             guard let appleIDToken = appleIDCredential.identityToken else {
                 print("Unable to fetch identity token")
                 return
@@ -70,14 +74,24 @@ extension SigninViewController: ASAuthorizationControllerDelegate {
             
             let credential = OAuthProvider.credential(withProviderID: "apple.com", idToken: idTokenString , rawNonce: nonce)
             
+            
+            //Sign in with Firebase
             Auth.auth().signIn(with: credential) { authDataResult, error in
                 if let user = authDataResult?.user {
                     print("Nice! You're now signed in as \(user.uid), email : \(user.email ?? "unknown")")
                     DataManipulation.sharedData.insertUser(with: UserModel(id: user.uid, email: user.email ?? "no email"))
                 }
             }
-            
         }
+        print("Login success")
+        let storyboard = UIStoryboard(name: "MR", bundle: nil)
+        let mrVC = storyboard.instantiateViewController(identifier: "MR") as! MRViewController
+        self.present(mrVC, animated: true, completion: nil)
+        
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        print("Login failed")
     }
     
 }
@@ -88,6 +102,7 @@ extension SigninViewController: ASAuthorizationControllerPresentationContextProv
     
     
 }
+
 // Adapted from https://auth0.com/docs/api-auth/tutorials/nonce#generate-a-cryptographically-random-nonce
 
 //Randomize nonceString untuk sekuritas info yang dikirimkan sebagai respon dari request

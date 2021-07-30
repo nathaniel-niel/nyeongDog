@@ -26,6 +26,8 @@
 		B584B3E326B2AF43005A02C5 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3E226B2AF43005A02C5 /* UserModel.swift */; };
 		B584B3E526B2B05B005A02C5 /* Signin.xib in Resources */ = {isa = PBXBuildFile; fileRef = B584B3E426B2B05B005A02C5 /* Signin.xib */; };
 		B584B3E726B2B26C005A02C5 /* ViewSignin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3E626B2B26C005A02C5 /* ViewSignin.swift */; };
+		B5D247B826B2FFAE002B2F8F /* MR.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D247B726B2FFAE002B2F8F /* MR.storyboard */; };
+		B5D247BA26B2FFC1002B2F8F /* MRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D247B926B2FFC1002B2F8F /* MRViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		B584B3E226B2AF43005A02C5 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B584B3E426B2B05B005A02C5 /* Signin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Signin.xib; sourceTree = "<group>"; };
 		B584B3E626B2B26C005A02C5 /* ViewSignin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSignin.swift; sourceTree = "<group>"; };
+		B5D247B726B2FFAE002B2F8F /* MR.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MR.storyboard; sourceTree = "<group>"; };
+		B5D247B926B2FFC1002B2F8F /* MRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,8 @@
 				B584B3C726B28D13005A02C5 /* SigninViewController.swift */,
 				B584B3E426B2B05B005A02C5 /* Signin.xib */,
 				B584B3E626B2B26C005A02C5 /* ViewSignin.swift */,
+				B5D247B726B2FFAE002B2F8F /* MR.storyboard */,
+				B5D247B926B2FFC1002B2F8F /* MRViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -311,6 +317,7 @@
 				B584B3C626B28D01005A02C5 /* Signin.storyboard in Resources */,
 				B584B3DD26B28DF2005A02C5 /* Main.storyboard in Resources */,
 				B584B3DB26B28DF2005A02C5 /* ExampleViewController.xib in Resources */,
+				B5D247B826B2FFAE002B2F8F /* MR.storyboard in Resources */,
 				B584B3E526B2B05B005A02C5 /* Signin.xib in Resources */,
 				B584B3B526B264CD005A02C5 /* LaunchScreen.storyboard in Resources */,
 				B584B3BD26B265C0005A02C5 /* GoogleService-Info.plist in Resources */,
@@ -370,6 +377,7 @@
 				B584B3C826B28D13005A02C5 /* SigninViewController.swift in Sources */,
 				B584B3DA26B28DF2005A02C5 /* ExampleViewController.swift in Sources */,
 				B584B3D826B28DF2005A02C5 /* ExampleViewModel.swift in Sources */,
+				B5D247BA26B2FFC1002B2F8F /* MRViewController.swift in Sources */,
 				B584B3DF26B28E10005A02C5 /* DataManipulation.swift in Sources */,
 				B584B3CD26B28DCD005A02C5 /* Helper.swift in Sources */,
 				B584B3E726B2B26C005A02C5 /* ViewSignin.swift in Sources */,
