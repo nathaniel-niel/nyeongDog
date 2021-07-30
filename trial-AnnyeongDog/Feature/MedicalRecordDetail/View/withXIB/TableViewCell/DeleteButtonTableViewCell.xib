@@ -24,15 +24,14 @@
                             <color key="titleColor" systemColor="systemRedColor"/>
                         </state>
                         <connections>
-                            <action selector="deleteButtonDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="FY2-Qy-eBx"/>
-                            <action selector="deleteDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="fC7-kg-Ano"/>
+                            <action selector="deleteButtonDidTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="LL6-uc-z3a"/>
                         </connections>
                     </button>
                 </subviews>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="deleteButton" destination="BIa-ry-FF2" id="yUn-hy-qC9"/>
+                <outlet property="deleteButton" destination="BIa-ry-FF2" id="kNK-Aq-PwQ"/>
             </connections>
             <point key="canvasLocation" x="194.20289855072465" y="116.51785714285714"/>
         </tableViewCell>
