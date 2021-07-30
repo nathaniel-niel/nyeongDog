@@ -33,9 +33,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4i-tG-d30">
-                                <rect key="frame" x="148" y="538" width="118" height="30"/>
+                                <rect key="frame" x="96" y="538" width="223" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Go to Dog Profile"/>
+                                <state key="normal" title="Go to Medical Record Detail Add"/>
                                 <connections>
                                     <action selector="goToDogProfile:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8oZ-Fw-28e"/>
                                 </connections>
