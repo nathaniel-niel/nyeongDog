@@ -21,6 +21,11 @@
 		5B05C39E26B2B3B00034A66A /* DeleteButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B05C39C26B2B3B00034A66A /* DeleteButtonTableViewCell.xib */; };
 		5B3F4BEB26B3FA7F004448DA /* MRDA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3F4BEA26B3FA7F004448DA /* MRDA.storyboard */; };
 		5B3F4BEE26B3FAD7004448DA /* MRDAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F4BEC26B3FAD7004448DA /* MRDAViewController.swift */; };
+		5B67966E26B41787004514F3 /* dummyDataDogProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B67966D26B41787004514F3 /* dummyDataDogProfile.swift */; };
+		5B67967326B41796004514F3 /* DogProfileEmptyState.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B67966F26B41793004514F3 /* DogProfileEmptyState.storyboard */; };
+		5B67967426B41796004514F3 /* DogProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B67967026B41794004514F3 /* DogProfileTableViewCell.swift */; };
+		5B67967526B41796004514F3 /* DogProfileFilledState.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B67967126B41795004514F3 /* DogProfileFilledState.storyboard */; };
+		5B67967626B41796004514F3 /* DogProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B67967226B41796004514F3 /* DogProfileListViewController.swift */; };
 		7ACD3D5FCF25095A1818F235 /* Pods_trial_AnnyeongDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717D5942BF1328C6EDE1986A /* Pods_trial_AnnyeongDog.framework */; };
 		B584B3A926B264CC005A02C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3A826B264CC005A02C5 /* AppDelegate.swift */; };
 		B584B3AB26B264CC005A02C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3AA26B264CC005A02C5 /* SceneDelegate.swift */; };
@@ -75,6 +80,11 @@
 		5B05C39C26B2B3B00034A66A /* DeleteButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteButtonTableViewCell.xib; sourceTree = "<group>"; };
 		5B3F4BEA26B3FA7F004448DA /* MRDA.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MRDA.storyboard; sourceTree = "<group>"; };
 		5B3F4BEC26B3FAD7004448DA /* MRDAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRDAViewController.swift; sourceTree = "<group>"; };
+		5B67966D26B41787004514F3 /* dummyDataDogProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dummyDataDogProfile.swift; sourceTree = "<group>"; };
+		5B67966F26B41793004514F3 /* DogProfileEmptyState.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DogProfileEmptyState.storyboard; sourceTree = "<group>"; };
+		5B67967026B41794004514F3 /* DogProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogProfileTableViewCell.swift; sourceTree = "<group>"; };
+		5B67967126B41795004514F3 /* DogProfileFilledState.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DogProfileFilledState.storyboard; sourceTree = "<group>"; };
+		5B67967226B41796004514F3 /* DogProfileListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogProfileListViewController.swift; sourceTree = "<group>"; };
 		717D5942BF1328C6EDE1986A /* Pods_trial_AnnyeongDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trial_AnnyeongDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B584B3A526B264CC005A02C5 /* trial-AnnyeongDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "trial-AnnyeongDog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B584B3A826B264CC005A02C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -428,6 +438,10 @@
 		C037879526B2A21F004344E0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B67966F26B41793004514F3 /* DogProfileEmptyState.storyboard */,
+				5B67967126B41795004514F3 /* DogProfileFilledState.storyboard */,
+				5B67967226B41796004514F3 /* DogProfileListViewController.swift */,
+				5B67967026B41794004514F3 /* DogProfileTableViewCell.swift */,
 				C037877126B2A1CB004344E0 /* DogProfileDetail.storyboard */,
 			);
 			path = View;
@@ -436,6 +450,7 @@
 		C037879626B2A226004344E0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5B67966D26B41787004514F3 /* dummyDataDogProfile.swift */,
 				C037877226B2A1CB004344E0 /* GenderModel.swift */,
 				C037878426B2A1CB004344E0 /* PrepareForMedical.swift */,
 				C037878526B2A1CB004344E0 /* ModelBackButton.swift */,
@@ -524,11 +539,13 @@
 				5B05C39826B2A9160034A66A /* MRDE.storyboard in Resources */,
 				B584B3C626B28D01005A02C5 /* Signin.storyboard in Resources */,
 				B584B3DD26B28DF2005A02C5 /* Main.storyboard in Resources */,
+				5B67967526B41796004514F3 /* DogProfileFilledState.storyboard in Resources */,
 				C037878726B2A1CB004344E0 /* DogProfileDetail.storyboard in Resources */,
 				B584B3DB26B28DF2005A02C5 /* ExampleViewController.xib in Resources */,
 				B584B3B526B264CD005A02C5 /* LaunchScreen.storyboard in Resources */,
 				2D628ED426B297B20008ECD2 /* LargeTextFieldTableViewCell.xib in Resources */,
 				B584B3DD26B28DF2005A02C5 /* Main.storyboard in Resources */,
+				5B67967326B41796004514F3 /* DogProfileEmptyState.storyboard in Resources */,
 				2D628ED526B297B20008ECD2 /* MRDTableViewCell.xib in Resources */,
 				B584B3DB26B28DF2005A02C5 /* ExampleViewController.xib in Resources */,
 				B5D247B826B2FFAE002B2F8F /* MR.storyboard in Resources */,
@@ -599,16 +616,19 @@
 				B584B3DA26B28DF2005A02C5 /* ExampleViewController.swift in Sources */,
 				C00DE8FF26B3D8AE00E99343 /* MedicalFiilledTableViewCell.swift in Sources */,
 				C00DE8FB26B3D8AE00E99343 /* dummyTesting.swift in Sources */,
+				5B67967426B41796004514F3 /* DogProfileTableViewCell.swift in Sources */,
 				B584B3D826B28DF2005A02C5 /* ExampleViewModel.swift in Sources */,
 				B5D247BA26B2FFC1002B2F8F /* MRViewController.swift in Sources */,
 				2D628EDA26B297DE0008ECD2 /* MRD-dummyData.swift in Sources */,
 				5B05C39D26B2B3B00034A66A /* DeleteButtonTableViewCell.swift in Sources */,
 				C00DE8FE26B3D8AE00E99343 /* PrepareToMRD.swift in Sources */,
 				2D628F0426B2FB590008ECD2 /* MRDViewModel.swift in Sources */,
+				5B67966E26B41787004514F3 /* dummyDataDogProfile.swift in Sources */,
 				B584B3DF26B28E10005A02C5 /* DataManipulation.swift in Sources */,
 				B584B3CD26B28DCD005A02C5 /* Helper.swift in Sources */,
 				B584B3E726B2B26C005A02C5 /* ViewSignin.swift in Sources */,
 				B584B3D926B28DF2005A02C5 /* ExampleModel.swift in Sources */,
+				5B67967626B41796004514F3 /* DogProfileListViewController.swift in Sources */,
 				5B3F4BEE26B3FAD7004448DA /* MRDAViewController.swift in Sources */,
 				C00DE8FD26B3D8AE00E99343 /* MedicalRecordsFilledViewController.swift in Sources */,
 				B584B3DC26B28DF2005A02C5 /* MainViewController.swift in Sources */,
