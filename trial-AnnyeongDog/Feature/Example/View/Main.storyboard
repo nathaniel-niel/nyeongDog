@@ -24,6 +24,14 @@
                                     <action selector="didSignInTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="7OJ-ZS-Rof"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DNh-ch-ZS8">
+                                <rect key="frame" x="112" y="481" width="191" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go to Medical Record Detail"/>
+                                <connections>
+                                    <action selector="didTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ukL-b1-ZiZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
