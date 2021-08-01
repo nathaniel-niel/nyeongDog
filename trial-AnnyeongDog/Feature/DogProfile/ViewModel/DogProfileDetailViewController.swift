@@ -19,6 +19,7 @@ class DogProfileDetailViewController: UIViewController {
     @IBOutlet weak var colorTextField: UITextField!
     @IBOutlet weak var allergyTextField: UITextField!
     @IBOutlet weak var medicalRecordsUI: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var rightBarButtonItem: UIBarButtonItem!
     
@@ -33,6 +34,9 @@ class DogProfileDetailViewController: UIViewController {
         
         genderTextField.inputView = pickerView
         navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.3733734488, green: 0.4266925454, blue: 0.6893113852, alpha: 1)
+        
+        scrollView.contentSize = CGSize(width: self.view.frame.width - 40, height: self.view.frame.height - 80)
+
         
         updateUI()
         

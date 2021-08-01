@@ -18,6 +18,16 @@ struct PrepareToMRD {
         let navVc = UINavigationController(rootViewController: vc)
         
         return navVc
-      
+        
+    }
+    
+    func prepareToAddMRD() -> UINavigationController {
+        let storyboard = UIStoryboard(name: "MRDA", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(identifier: "mrda")
+        
+        let navVc = UINavigationController(rootViewController: vc)
+        
+        return navVc
     }
 }
