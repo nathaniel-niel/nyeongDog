@@ -27,7 +27,7 @@ class MainViewController: UIViewController {
         self.navigationController?.pushViewController(signInVC, animated: true)
     }
     
-    @IBAction func didTapped(_ sender: Any) {
+    @IBAction func didMedicalRecordDetailTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "MRD", bundle: nil)
         
         let vc = storyboard.instantiateViewController(identifier: "mrd")

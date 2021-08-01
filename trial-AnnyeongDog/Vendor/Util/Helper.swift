@@ -44,8 +44,6 @@ class Helper {
       return result
     }
 
-
-
     // Unhashed nonce.
     var currentNonce: String?
 
