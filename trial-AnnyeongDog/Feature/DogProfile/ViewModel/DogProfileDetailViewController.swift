@@ -22,11 +22,14 @@ class DogProfileDetailViewController: UIViewController {
     @IBOutlet weak var medicalRecordsUI: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var dogImage: UIImageView!
+    @IBOutlet weak var dogsDOB: UIDatePicker!
+    
     
     @IBOutlet weak var rightBarButtonItem: UIBarButtonItem!
     
     var pickerView = UIPickerView()
     var isExpand = false
+    var dogsModel: DogProfileModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +54,14 @@ class DogProfileDetailViewController: UIViewController {
     
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
-    
+        
+        updateModel()
+        
+        let user = Auth.auth().currentUser
+        DataManipulation.sharedData.insertDogProfileData(with: UserModel(id: user!.uid, email: (user?.email)!), with: dogsModel!)
+        print("masok")
+        
+        
     }
     
     
@@ -96,6 +106,11 @@ class DogProfileDetailViewController: UIViewController {
     @objc func keyboardDissapear(notification:NSNotification){
         let contentInset:UIEdgeInsets = UIEdgeInsets.zero
         scrollView.contentInset = contentInset
+    }
+    
+    func updateModel(){
+        
+        dogsModel = DogProfileModel(dogId: 1,dogName: dogsTextField.text!, dateOfBirth: "", gender: genderTextField.text!, breed: breedTextField.text!, weight: weightTextField.text!, color: colorTextField.text!, alergen: allergyTextField.text!)
     }
     
     
