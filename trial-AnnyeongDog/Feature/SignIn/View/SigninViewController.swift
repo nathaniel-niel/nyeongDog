@@ -12,24 +12,18 @@ import AuthenticationServices
 
 class SigninViewController: UIViewController {
     let helper = Helper()
-    @IBOutlet weak var signinButton: UIButton!
+    @IBOutlet weak var signInButtonView: Signin!
     
-    @IBAction func skipButtonDidTapped(_ sender: UIButton) {
-        let storyBoard = UIStoryboard(name: "DogProfileDetail", bundle: nil)
-        let dogProfileDetailVC = storyBoard.instantiateViewController(identifier: "DogProfileDetail") as! DogProfileDetailViewController
-        
-        self.navigationController?.pushViewController(dogProfileDetailVC, animated: true)
-    }
-    //    let views: ViewSignin?
     override func viewDidLoad() {
         super.viewDidLoad()
+        signInButtonView.delegate = self
         setupSignInButton()
 //        view.addSubview(views)
     }
 
     
     func setupSignInButton() {
-        signinButton.addTarget(self, action: #selector(handleSignInWithAppleTapped), for: .touchUpInside)
+        signInButtonView.appleSignInButton.addTarget(self, action: #selector(handleSignInWithAppleTapped), for: .touchUpInside)
     }
     @objc func handleSignInWithAppleTapped() {
         performSignIn()
@@ -110,4 +104,15 @@ extension SigninViewController: ASAuthorizationControllerPresentationContextProv
     }
     
     
+}
+
+//MARK:- Delegate Button Sign In
+extension SigninViewController: signinDelegate {
+    
+    func skipSignin() {
+        print("Ini harusnya ke page vetlist")
+    }
+    func appleSignin() {
+        setupSignInButton()
+    }
 }

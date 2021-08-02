@@ -31,14 +31,18 @@
 		5B67967526B41796004514F3 /* DogProfileFilledState.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B67967126B41795004514F3 /* DogProfileFilledState.storyboard */; };
 		5B67967626B41796004514F3 /* DogProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B67967226B41796004514F3 /* DogProfileListViewController.swift */; };
 		7ACD3D5FCF25095A1818F235 /* Pods_trial_AnnyeongDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717D5942BF1328C6EDE1986A /* Pods_trial_AnnyeongDog.framework */; };
+		B52BF31E26B7E11900DC3B74 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52BF31426B7E11900DC3B74 /* UserModel.swift */; };
+		B52BF31F26B7E11900DC3B74 /* SignInViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52BF31726B7E11900DC3B74 /* SignInViewExtension.swift */; };
+		B52BF32026B7E11900DC3B74 /* Signin.xib in Resources */ = {isa = PBXBuildFile; fileRef = B52BF31826B7E11900DC3B74 /* Signin.xib */; };
+		B52BF32126B7E11900DC3B74 /* Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52BF31926B7E11900DC3B74 /* Signin.swift */; };
+		B52BF32426B7E11900DC3B74 /* Signin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52BF31C26B7E11900DC3B74 /* Signin.storyboard */; };
+		B52BF32526B7E11900DC3B74 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52BF31D26B7E11900DC3B74 /* SigninViewController.swift */; };
 		B57E0EB826B45B2900FACDAC /* Poppins in Resources */ = {isa = PBXBuildFile; fileRef = B57E0EB726B45B2900FACDAC /* Poppins */; };
 		B584B3A926B264CC005A02C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3A826B264CC005A02C5 /* AppDelegate.swift */; };
 		B584B3AB26B264CC005A02C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3AA26B264CC005A02C5 /* SceneDelegate.swift */; };
 		B584B3B226B264CD005A02C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B584B3B126B264CD005A02C5 /* Assets.xcassets */; };
 		B584B3B526B264CD005A02C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B584B3B326B264CD005A02C5 /* LaunchScreen.storyboard */; };
 		B584B3BD26B265C0005A02C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B584B3BC26B265C0005A02C5 /* GoogleService-Info.plist */; };
-		B584B3C626B28D01005A02C5 /* Signin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B584B3C526B28D01005A02C5 /* Signin.storyboard */; };
-		B584B3C826B28D13005A02C5 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3C726B28D13005A02C5 /* SigninViewController.swift */; };
 		B584B3CD26B28DCD005A02C5 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3CC26B28DCD005A02C5 /* Helper.swift */; };
 		B584B3D826B28DF2005A02C5 /* ExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3D026B28DF2005A02C5 /* ExampleViewModel.swift */; };
 		B584B3D926B28DF2005A02C5 /* ExampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3D226B28DF2005A02C5 /* ExampleModel.swift */; };
@@ -47,11 +51,6 @@
 		B584B3DC26B28DF2005A02C5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3D626B28DF2005A02C5 /* MainViewController.swift */; };
 		B584B3DD26B28DF2005A02C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B584B3D726B28DF2005A02C5 /* Main.storyboard */; };
 		B584B3DF26B28E10005A02C5 /* DataManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3DE26B28E10005A02C5 /* DataManipulation.swift */; };
-		B584B3E326B2AF43005A02C5 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3E226B2AF43005A02C5 /* UserModel.swift */; };
-		B584B3E526B2B05B005A02C5 /* Signin.xib in Resources */ = {isa = PBXBuildFile; fileRef = B584B3E426B2B05B005A02C5 /* Signin.xib */; };
-		B584B3E726B2B26C005A02C5 /* ViewSignin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3E626B2B26C005A02C5 /* ViewSignin.swift */; };
-		B5D247B826B2FFAE002B2F8F /* MR.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5D247B726B2FFAE002B2F8F /* MR.storyboard */; };
-		B5D247BA26B2FFC1002B2F8F /* MRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D247B926B2FFC1002B2F8F /* MRViewController.swift */; };
 		C00DE8F126B312D400E99343 /* MedicalRecordsDummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00DE8F026B312D400E99343 /* MedicalRecordsDummyData.swift */; };
 		C00DE8F326B3CEA800E99343 /* MedicalRecordsDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00DE8F226B3CEA800E99343 /* MedicalRecordsDummy.swift */; };
 		C00DE8FB26B3D8AE00E99343 /* dummyTesting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00DE8F526B3D8AE00E99343 /* dummyTesting.swift */; };
@@ -95,6 +94,12 @@
 		5B67967126B41795004514F3 /* DogProfileFilledState.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DogProfileFilledState.storyboard; sourceTree = "<group>"; };
 		5B67967226B41796004514F3 /* DogProfileListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogProfileListViewController.swift; sourceTree = "<group>"; };
 		717D5942BF1328C6EDE1986A /* Pods_trial_AnnyeongDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trial_AnnyeongDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B52BF31426B7E11900DC3B74 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		B52BF31726B7E11900DC3B74 /* SignInViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewExtension.swift; sourceTree = "<group>"; };
+		B52BF31826B7E11900DC3B74 /* Signin.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Signin.xib; sourceTree = "<group>"; };
+		B52BF31926B7E11900DC3B74 /* Signin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signin.swift; sourceTree = "<group>"; };
+		B52BF31C26B7E11900DC3B74 /* Signin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Signin.storyboard; sourceTree = "<group>"; };
+		B52BF31D26B7E11900DC3B74 /* SigninViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		B57E0EB726B45B2900FACDAC /* Poppins */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Poppins; sourceTree = "<group>"; };
 		B584B3A526B264CC005A02C5 /* trial-AnnyeongDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "trial-AnnyeongDog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B584B3A826B264CC005A02C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,8 +109,6 @@
 		B584B3B626B264CD005A02C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B584B3BC26B265C0005A02C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B584B3BE26B2690E005A02C5 /* trial-AnnyeongDog.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "trial-AnnyeongDog.entitlements"; sourceTree = "<group>"; };
-		B584B3C526B28D01005A02C5 /* Signin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Signin.storyboard; sourceTree = "<group>"; };
-		B584B3C726B28D13005A02C5 /* SigninViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		B584B3CC26B28DCD005A02C5 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		B584B3D026B28DF2005A02C5 /* ExampleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewModel.swift; sourceTree = "<group>"; };
 		B584B3D226B28DF2005A02C5 /* ExampleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleModel.swift; sourceTree = "<group>"; };
@@ -114,11 +117,6 @@
 		B584B3D626B28DF2005A02C5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B584B3D726B28DF2005A02C5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B584B3DE26B28E10005A02C5 /* DataManipulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManipulation.swift; sourceTree = "<group>"; };
-		B584B3E226B2AF43005A02C5 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		B584B3E426B2B05B005A02C5 /* Signin.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Signin.xib; sourceTree = "<group>"; };
-		B584B3E626B2B26C005A02C5 /* ViewSignin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSignin.swift; sourceTree = "<group>"; };
-		B5D247B726B2FFAE002B2F8F /* MR.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MR.storyboard; sourceTree = "<group>"; };
-		B5D247B926B2FFC1002B2F8F /* MRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRViewController.swift; sourceTree = "<group>"; };
 		C00DE8F026B312D400E99343 /* MedicalRecordsDummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalRecordsDummyData.swift; sourceTree = "<group>"; };
 		C00DE8F226B3CEA800E99343 /* MedicalRecordsDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalRecordsDummy.swift; sourceTree = "<group>"; };
 		C00DE8F526B3D8AE00E99343 /* dummyTesting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dummyTesting.swift; sourceTree = "<group>"; };
@@ -251,6 +249,43 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		B52BF31226B7E11900DC3B74 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				B52BF31326B7E11900DC3B74 /* Model */,
+				B52BF31526B7E11900DC3B74 /* View */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		B52BF31326B7E11900DC3B74 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B52BF31426B7E11900DC3B74 /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B52BF31526B7E11900DC3B74 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B52BF31626B7E11900DC3B74 /* XIB */,
+				B52BF31C26B7E11900DC3B74 /* Signin.storyboard */,
+				B52BF31D26B7E11900DC3B74 /* SigninViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B52BF31626B7E11900DC3B74 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				B52BF31726B7E11900DC3B74 /* SignInViewExtension.swift */,
+				B52BF31826B7E11900DC3B74 /* Signin.xib */,
+				B52BF31926B7E11900DC3B74 /* Signin.swift */,
+			);
+			path = XIB;
+			sourceTree = "<group>";
+		};
 		B584B39C26B264CB005A02C5 = {
 			isa = PBXGroup;
 			children = (
@@ -305,13 +340,13 @@
 		B584B3C126B28C71005A02C5 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				B52BF31226B7E11900DC3B74 /* SignIn */,
 				2D74BE1126B454E8009B3629 /* DogProfileDetailEdit */,
 				C037876C26B2A1CB004344E0 /* DogProfile */,
 				C037876426B2A199004344E0 /* MedicalRecords */,
 				2D628E8826B297350008ECD2 /* MedicalRecordDetail */,
 				B584B3E026B28E3A005A02C5 /* LaunchScreen */,
 				B584B3CE26B28DF2005A02C5 /* Example */,
-				B584B3C426B28CA4005A02C5 /* SignIn */,
 			);
 			path = Feature;
 			sourceTree = "<group>";
@@ -331,44 +366,6 @@
 				B584B3DE26B28E10005A02C5 /* DataManipulation.swift */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		B584B3C426B28CA4005A02C5 /* SignIn */ = {
-			isa = PBXGroup;
-			children = (
-				B584B3CB26B28D23005A02C5 /* ModelView */,
-				B584B3CA26B28D1D005A02C5 /* View */,
-				B584B3C926B28D18005A02C5 /* Model */,
-			);
-			path = SignIn;
-			sourceTree = "<group>";
-		};
-		B584B3C926B28D18005A02C5 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				B584B3E226B2AF43005A02C5 /* UserModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		B584B3CA26B28D1D005A02C5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				B584B3C526B28D01005A02C5 /* Signin.storyboard */,
-				B584B3C726B28D13005A02C5 /* SigninViewController.swift */,
-				B584B3E426B2B05B005A02C5 /* Signin.xib */,
-				B584B3E626B2B26C005A02C5 /* ViewSignin.swift */,
-				B5D247B726B2FFAE002B2F8F /* MR.storyboard */,
-				B5D247B926B2FFC1002B2F8F /* MRViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		B584B3CB26B28D23005A02C5 /* ModelView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ModelView;
 			sourceTree = "<group>";
 		};
 		B584B3CE26B28DF2005A02C5 /* Example */ = {
@@ -575,10 +572,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B57E0EB826B45B2900FACDAC /* Poppins in Resources */,
+				B52BF32026B7E11900DC3B74 /* Signin.xib in Resources */,
 				5B3F4BEB26B3FA7F004448DA /* MRDA.storyboard in Resources */,
 				2D74BE1726B454E8009B3629 /* DogProfileDetailEdit.storyboard in Resources */,
 				5B05C39826B2A9160034A66A /* MRDE.storyboard in Resources */,
-				B584B3C626B28D01005A02C5 /* Signin.storyboard in Resources */,
+				B52BF32426B7E11900DC3B74 /* Signin.storyboard in Resources */,
 				B584B3DD26B28DF2005A02C5 /* Main.storyboard in Resources */,
 				5B67967526B41796004514F3 /* DogProfileFilledState.storyboard in Resources */,
 				C037878726B2A1CB004344E0 /* DogProfileDetail.storyboard in Resources */,
@@ -589,8 +587,6 @@
 				5B67967326B41796004514F3 /* DogProfileEmptyState.storyboard in Resources */,
 				2D628ED526B297B20008ECD2 /* MRDTableViewCell.xib in Resources */,
 				B584B3DB26B28DF2005A02C5 /* ExampleViewController.xib in Resources */,
-				B5D247B826B2FFAE002B2F8F /* MR.storyboard in Resources */,
-				B584B3E526B2B05B005A02C5 /* Signin.xib in Resources */,
 				B584B3B526B264CD005A02C5 /* LaunchScreen.storyboard in Resources */,
 				C00DE90026B3D8AE00E99343 /* MedicalRecordsFilledState.storyboard in Resources */,
 				2D628ED726B297B20008ECD2 /* MRD.storyboard in Resources */,
@@ -651,24 +647,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B584B3C826B28D13005A02C5 /* SigninViewController.swift in Sources */,
 				C037879126B2A1CB004344E0 /* DogProfileDetailViewController.swift in Sources */,
 				2D74BE1826B454E8009B3629 /* DogProfileDetailEditViewController.swift in Sources */,
 				C037876A26B2A199004344E0 /* MedicalRecordsViewController.swift in Sources */,
 				B584B3DA26B28DF2005A02C5 /* ExampleViewController.swift in Sources */,
+				B52BF32126B7E11900DC3B74 /* Signin.swift in Sources */,
 				C00DE8FF26B3D8AE00E99343 /* MedicalFiilledTableViewCell.swift in Sources */,
 				C00DE8FB26B3D8AE00E99343 /* dummyTesting.swift in Sources */,
 				5B67967426B41796004514F3 /* DogProfileTableViewCell.swift in Sources */,
 				B584B3D826B28DF2005A02C5 /* ExampleViewModel.swift in Sources */,
-				B5D247BA26B2FFC1002B2F8F /* MRViewController.swift in Sources */,
 				2D628EDA26B297DE0008ECD2 /* MRD-dummyData.swift in Sources */,
 				5B05C39D26B2B3B00034A66A /* DeleteButtonTableViewCell.swift in Sources */,
+				B52BF31E26B7E11900DC3B74 /* UserModel.swift in Sources */,
 				C00DE8FE26B3D8AE00E99343 /* PrepareToMRD.swift in Sources */,
 				2D628F0426B2FB590008ECD2 /* MRDViewModel.swift in Sources */,
 				5B67966E26B41787004514F3 /* dummyDataDogProfile.swift in Sources */,
 				B584B3DF26B28E10005A02C5 /* DataManipulation.swift in Sources */,
 				B584B3CD26B28DCD005A02C5 /* Helper.swift in Sources */,
-				B584B3E726B2B26C005A02C5 /* ViewSignin.swift in Sources */,
 				B584B3D926B28DF2005A02C5 /* ExampleModel.swift in Sources */,
 				5B67967626B41796004514F3 /* DogProfileListViewController.swift in Sources */,
 				5B3F4BEE26B3FAD7004448DA /* MRDAViewController.swift in Sources */,
@@ -680,12 +675,13 @@
 				C00DE8F126B312D400E99343 /* MedicalRecordsDummyData.swift in Sources */,
 				2D628ED826B297B20008ECD2 /* MRDViewController.swift in Sources */,
 				2D628ED626B297B20008ECD2 /* LargeTextFieldTableViewCell.swift in Sources */,
+				B52BF32526B7E11900DC3B74 /* SigninViewController.swift in Sources */,
 				B584B3A926B264CC005A02C5 /* AppDelegate.swift in Sources */,
 				C037878826B2A1CB004344E0 /* GenderModel.swift in Sources */,
 				C00DE8F326B3CEA800E99343 /* MedicalRecordsDummy.swift in Sources */,
 				2D74BE1D26B4558F009B3629 /* UserControl.swift in Sources */,
-				B584B3E326B2AF43005A02C5 /* UserModel.swift in Sources */,
 				B584B3AB26B264CC005A02C5 /* SceneDelegate.swift in Sources */,
+				B52BF31F26B7E11900DC3B74 /* SignInViewExtension.swift in Sources */,
 				C037879226B2A1CB004344E0 /* PrepareForMedical.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
