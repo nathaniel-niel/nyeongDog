@@ -36,9 +36,6 @@ class DogProfileDetailViewController: UIViewController {
         genderTextField.inputView = pickerView
         navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.3733734488, green: 0.4266925454, blue: 0.6893113852, alpha: 1)
         
-        scrollView.contentSize = CGSize(width: self.view.frame.width - 40, height: self.view.frame.height - 80)
-        
-        
         updateUI()
         
     }
@@ -46,6 +43,11 @@ class DogProfileDetailViewController: UIViewController {
     @IBAction func didBackButtonTapped(_ sender: UIBarButtonItem) {
         
         _ = navigationController?.popViewController(animated: true)
+        
+        
+        scrollView.contentSize = CGSize(width: self.view.frame.width - 40, height: self.view.frame.height - 80)
+        
+        
     }
     
     @IBAction func medicalRecordsPressed(_ sender: UIButton) {
@@ -72,7 +74,18 @@ class DogProfileDetailViewController: UIViewController {
     
     func updateUI(){
         navigationItem.largeTitleDisplayMode = .never
+        makeRounded()
     }
+    
+    func makeRounded() {
+        
+        dogImage.layer.borderWidth = 1
+        dogImage.layer.masksToBounds = false
+        dogImage.layer.borderColor = UIColor.black.cgColor
+        dogImage.layer.cornerRadius = dogImage.frame.height/2
+        dogImage.clipsToBounds = true
+    }
+    
     
     func editButtonLogic(){
         
@@ -98,6 +111,7 @@ extension DogProfileDetailViewController: UIImagePickerControllerDelegate, UINav
         
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage{
             dogImage.image = image
+            
             picker.dismiss(animated: true, completion: nil)
         }
         
