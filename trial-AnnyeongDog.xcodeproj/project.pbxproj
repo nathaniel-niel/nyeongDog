@@ -32,13 +32,13 @@
 		5B67967626B41796004514F3 /* DogProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B67967226B41796004514F3 /* DogProfileListViewController.swift */; };
 		7ACD3D5FCF25095A1818F235 /* Pods_trial_AnnyeongDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717D5942BF1328C6EDE1986A /* Pods_trial_AnnyeongDog.framework */; };
 		B52BF32926B7E62200DC3B74 /* LaunchScreen in Resources */ = {isa = PBXBuildFile; fileRef = B52BF32826B7E62200DC3B74 /* LaunchScreen */; };
-		B52BF34A26B7E98800DC3B74 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52BF34026B7E98800DC3B74 /* UserModel.swift */; };
-		B52BF34B26B7E98800DC3B74 /* SignInViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52BF34326B7E98800DC3B74 /* SignInViewExtension.swift */; };
-		B52BF34C26B7E98800DC3B74 /* Signin.xib in Resources */ = {isa = PBXBuildFile; fileRef = B52BF34426B7E98800DC3B74 /* Signin.xib */; };
-		B52BF34D26B7E98800DC3B74 /* Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52BF34526B7E98800DC3B74 /* Signin.swift */; };
-		B52BF35026B7E98800DC3B74 /* Signin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B52BF34826B7E98800DC3B74 /* Signin.storyboard */; };
-		B52BF35126B7E98800DC3B74 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52BF34926B7E98800DC3B74 /* SigninViewController.swift */; };
 		B57E0EB826B45B2900FACDAC /* Poppins in Resources */ = {isa = PBXBuildFile; fileRef = B57E0EB726B45B2900FACDAC /* Poppins */; };
+		B5821A6126B7EEA0006DDED9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5821A5926B7EEA0006DDED9 /* UserModel.swift */; };
+		B5821A6226B7EEA0006DDED9 /* SignInViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5821A5C26B7EEA0006DDED9 /* SignInViewExtension.swift */; };
+		B5821A6326B7EEA0006DDED9 /* Signin.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5821A5D26B7EEA0006DDED9 /* Signin.xib */; };
+		B5821A6426B7EEA0006DDED9 /* Signin.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5821A5E26B7EEA0006DDED9 /* Signin.swift */; };
+		B5821A6526B7EEA0006DDED9 /* Signin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5821A5F26B7EEA0006DDED9 /* Signin.storyboard */; };
+		B5821A6626B7EEA0006DDED9 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5821A6026B7EEA0006DDED9 /* SigninViewController.swift */; };
 		B584B3A926B264CC005A02C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3A826B264CC005A02C5 /* AppDelegate.swift */; };
 		B584B3AB26B264CC005A02C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3AA26B264CC005A02C5 /* SceneDelegate.swift */; };
 		B584B3B226B264CD005A02C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B584B3B126B264CD005A02C5 /* Assets.xcassets */; };
@@ -96,13 +96,13 @@
 		5B67967226B41796004514F3 /* DogProfileListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogProfileListViewController.swift; sourceTree = "<group>"; };
 		717D5942BF1328C6EDE1986A /* Pods_trial_AnnyeongDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trial_AnnyeongDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B52BF32826B7E62200DC3B74 /* LaunchScreen */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LaunchScreen; sourceTree = "<group>"; };
-		B52BF34026B7E98800DC3B74 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		B52BF34326B7E98800DC3B74 /* SignInViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewExtension.swift; sourceTree = "<group>"; };
-		B52BF34426B7E98800DC3B74 /* Signin.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Signin.xib; sourceTree = "<group>"; };
-		B52BF34526B7E98800DC3B74 /* Signin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signin.swift; sourceTree = "<group>"; };
-		B52BF34826B7E98800DC3B74 /* Signin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Signin.storyboard; sourceTree = "<group>"; };
-		B52BF34926B7E98800DC3B74 /* SigninViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		B57E0EB726B45B2900FACDAC /* Poppins */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Poppins; sourceTree = "<group>"; };
+		B5821A5926B7EEA0006DDED9 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		B5821A5C26B7EEA0006DDED9 /* SignInViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewExtension.swift; sourceTree = "<group>"; };
+		B5821A5D26B7EEA0006DDED9 /* Signin.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Signin.xib; sourceTree = "<group>"; };
+		B5821A5E26B7EEA0006DDED9 /* Signin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Signin.swift; sourceTree = "<group>"; };
+		B5821A5F26B7EEA0006DDED9 /* Signin.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Signin.storyboard; sourceTree = "<group>"; };
+		B5821A6026B7EEA0006DDED9 /* SigninViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		B584B3A526B264CC005A02C5 /* trial-AnnyeongDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "trial-AnnyeongDog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B584B3A826B264CC005A02C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B584B3AA26B264CC005A02C5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -251,40 +251,40 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		B52BF33E26B7E98800DC3B74 /* SignIn */ = {
+		B5821A5726B7EEA0006DDED9 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
-				B52BF33F26B7E98800DC3B74 /* Model */,
-				B52BF34126B7E98800DC3B74 /* View */,
+				B5821A5826B7EEA0006DDED9 /* Model */,
+				B5821A5A26B7EEA0006DDED9 /* View */,
 			);
 			name = SignIn;
-			path = "../../../trial-annyeongDog [Updated]/trial-AnnyeongDog/Feature/SignIn";
+			path = "../../../../../Dropbox (DeveloperAcademy-ID)/Mini Challenge 3 - Pets/SignIn";
 			sourceTree = "<group>";
 		};
-		B52BF33F26B7E98800DC3B74 /* Model */ = {
+		B5821A5826B7EEA0006DDED9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				B52BF34026B7E98800DC3B74 /* UserModel.swift */,
+				B5821A5926B7EEA0006DDED9 /* UserModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		B52BF34126B7E98800DC3B74 /* View */ = {
+		B5821A5A26B7EEA0006DDED9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B52BF34226B7E98800DC3B74 /* XIB */,
-				B52BF34826B7E98800DC3B74 /* Signin.storyboard */,
-				B52BF34926B7E98800DC3B74 /* SigninViewController.swift */,
+				B5821A5B26B7EEA0006DDED9 /* XIB */,
+				B5821A5F26B7EEA0006DDED9 /* Signin.storyboard */,
+				B5821A6026B7EEA0006DDED9 /* SigninViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		B52BF34226B7E98800DC3B74 /* XIB */ = {
+		B5821A5B26B7EEA0006DDED9 /* XIB */ = {
 			isa = PBXGroup;
 			children = (
-				B52BF34326B7E98800DC3B74 /* SignInViewExtension.swift */,
-				B52BF34426B7E98800DC3B74 /* Signin.xib */,
-				B52BF34526B7E98800DC3B74 /* Signin.swift */,
+				B5821A5C26B7EEA0006DDED9 /* SignInViewExtension.swift */,
+				B5821A5D26B7EEA0006DDED9 /* Signin.xib */,
+				B5821A5E26B7EEA0006DDED9 /* Signin.swift */,
 			);
 			path = XIB;
 			sourceTree = "<group>";
@@ -343,7 +343,7 @@
 		B584B3C126B28C71005A02C5 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-				B52BF33E26B7E98800DC3B74 /* SignIn */,
+				B5821A5726B7EEA0006DDED9 /* SignIn */,
 				2D74BE1126B454E8009B3629 /* DogProfileDetailEdit */,
 				C037876C26B2A1CB004344E0 /* DogProfile */,
 				C037876426B2A199004344E0 /* MedicalRecords */,
@@ -580,16 +580,16 @@
 				2D74BE1726B454E8009B3629 /* DogProfileDetailEdit.storyboard in Resources */,
 				5B05C39826B2A9160034A66A /* MRDE.storyboard in Resources */,
 				B584B3DD26B28DF2005A02C5 /* Main.storyboard in Resources */,
+				B5821A6526B7EEA0006DDED9 /* Signin.storyboard in Resources */,
 				5B67967526B41796004514F3 /* DogProfileFilledState.storyboard in Resources */,
 				C037878726B2A1CB004344E0 /* DogProfileDetail.storyboard in Resources */,
 				B584B3DB26B28DF2005A02C5 /* ExampleViewController.xib in Resources */,
 				B584B3B526B264CD005A02C5 /* LaunchScreen.storyboard in Resources */,
 				2D628ED426B297B20008ECD2 /* LargeTextFieldTableViewCell.xib in Resources */,
 				B584B3DD26B28DF2005A02C5 /* Main.storyboard in Resources */,
-				B52BF34C26B7E98800DC3B74 /* Signin.xib in Resources */,
+				B5821A6326B7EEA0006DDED9 /* Signin.xib in Resources */,
 				5B67967326B41796004514F3 /* DogProfileEmptyState.storyboard in Resources */,
 				2D628ED526B297B20008ECD2 /* MRDTableViewCell.xib in Resources */,
-				B52BF35026B7E98800DC3B74 /* Signin.storyboard in Resources */,
 				B584B3DB26B28DF2005A02C5 /* ExampleViewController.xib in Resources */,
 				B584B3B526B264CD005A02C5 /* LaunchScreen.storyboard in Resources */,
 				C00DE90026B3D8AE00E99343 /* MedicalRecordsFilledState.storyboard in Resources */,
@@ -656,14 +656,15 @@
 				2D74BE1826B454E8009B3629 /* DogProfileDetailEditViewController.swift in Sources */,
 				C037876A26B2A199004344E0 /* MedicalRecordsViewController.swift in Sources */,
 				B584B3DA26B28DF2005A02C5 /* ExampleViewController.swift in Sources */,
-				B52BF34D26B7E98800DC3B74 /* Signin.swift in Sources */,
+				B5821A6426B7EEA0006DDED9 /* Signin.swift in Sources */,
 				C00DE8FF26B3D8AE00E99343 /* MedicalFiilledTableViewCell.swift in Sources */,
 				C00DE8FB26B3D8AE00E99343 /* dummyTesting.swift in Sources */,
 				5B67967426B41796004514F3 /* DogProfileTableViewCell.swift in Sources */,
+				B5821A6626B7EEA0006DDED9 /* SigninViewController.swift in Sources */,
 				B584B3D826B28DF2005A02C5 /* ExampleViewModel.swift in Sources */,
 				2D628EDA26B297DE0008ECD2 /* MRD-dummyData.swift in Sources */,
 				5B05C39D26B2B3B00034A66A /* DeleteButtonTableViewCell.swift in Sources */,
-				B52BF34A26B7E98800DC3B74 /* UserModel.swift in Sources */,
+				B5821A6126B7EEA0006DDED9 /* UserModel.swift in Sources */,
 				C00DE8FE26B3D8AE00E99343 /* PrepareToMRD.swift in Sources */,
 				2D628F0426B2FB590008ECD2 /* MRDViewModel.swift in Sources */,
 				5B67966E26B41787004514F3 /* dummyDataDogProfile.swift in Sources */,
@@ -680,13 +681,12 @@
 				C00DE8F126B312D400E99343 /* MedicalRecordsDummyData.swift in Sources */,
 				2D628ED826B297B20008ECD2 /* MRDViewController.swift in Sources */,
 				2D628ED626B297B20008ECD2 /* LargeTextFieldTableViewCell.swift in Sources */,
-				B52BF35126B7E98800DC3B74 /* SigninViewController.swift in Sources */,
 				B584B3A926B264CC005A02C5 /* AppDelegate.swift in Sources */,
 				C037878826B2A1CB004344E0 /* GenderModel.swift in Sources */,
 				C00DE8F326B3CEA800E99343 /* MedicalRecordsDummy.swift in Sources */,
 				2D74BE1D26B4558F009B3629 /* UserControl.swift in Sources */,
 				B584B3AB26B264CC005A02C5 /* SceneDelegate.swift in Sources */,
-				B52BF34B26B7E98800DC3B74 /* SignInViewExtension.swift in Sources */,
+				B5821A6226B7EEA0006DDED9 /* SignInViewExtension.swift in Sources */,
 				C037879226B2A1CB004344E0 /* PrepareForMedical.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
