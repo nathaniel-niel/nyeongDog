@@ -44,8 +44,18 @@ class DogProfileDetailViewController: UIViewController {
     }
     
     @IBAction func didBackButtonTapped(_ sender: UIBarButtonItem) {
+        let alert = UIAlertController(title: "Unsaved Changes", message: "You have unsaved changes, are you sure you want to cancel?.", preferredStyle: .alert)
         
-        _ = navigationController?.popViewController(animated: true)
+        alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Yes", style: .destructive,handler: { action in
+            
+            // back to dog profile view
+            let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
+            
+            let vc = storyboard.instantiateViewController(identifier: "DPDE")
+            self.navigationController?.pushViewController(vc, animated: false)
+        }))
+        self.present(alert, animated: true)
     }
     
     @IBAction func deleteDidTapped(_ sender: UIButton) {
