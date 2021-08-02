@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MRDEViewController: UIViewController /*, deletedelegate*/{
+class MRDEViewController: UIViewController, UITextFieldDelegate /*, deletedelegate*/{
 //    func deleteAlert() {
 //        <#code#>
 //    }
@@ -16,7 +16,14 @@ class MRDEViewController: UIViewController /*, deletedelegate*/{
 //        <#code#>
 //    }
     
- 
+    let ViewModel = MRDViewModel()
+    var date: String = ""
+    var vet: String = ""
+    var diagnosis: String = ""
+    var vaccine: String = ""
+    var medicine: String = ""
+    var vaccineType: String = ""
+    var dosage: String = ""
     @IBOutlet weak var MRDEtable: UITableView!
     
     override func viewDidLoad() {
@@ -106,14 +113,9 @@ class MRDEViewController: UIViewController /*, deletedelegate*/{
     
 }
 
-extension MRDEViewController: UITableViewDelegate{
-    
-}
-extension MRDEViewController: UITableViewDataSource{
-   
-    
+extension MRDEViewController: UITableViewDataSource, UITableViewDelegate{
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 5
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -121,27 +123,26 @@ extension MRDEViewController: UITableViewDataSource{
         case 0:
             return 1
         case 1:
-            return 3
+            return 2
         case 2:
             return 3
-        case 3:
-            return 1
-        case 4:
-            return 1
+        //        case 3:
+        //            return 1
         default:
             fatalError()
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      
+        let cell = tableView.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
+        cell.contenTextField.delegate = self
+        cell.contenTextField.autocorrectionType = .no
+        
         switch indexPath.section {
         case 0:
             switch indexPath.row {
             case 0:
-                let cell =  MRDEtable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
-                 
-                cell.configure(title: "Date", placeholder: "MM//DD/YYY", tag: 0)
+                cell.configure(title: "Tanggal", placeholder: ViewModel.dataSource[0].date, tag: 0)
                 return cell
             default:
                 fatalError()
@@ -149,90 +150,81 @@ extension MRDEViewController: UITableViewDataSource{
         case 1:
             switch indexPath.row {
             case 0:
-                let cell =  MRDEtable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
-                 
-                cell.configure(title: "Veterinarian", placeholder: "Vet name", tag: 1)
-                return cell
                 
+                cell.configure(title: "Dokter Hewan", placeholder: ViewModel.dataSource[0].veterinarian,tag: 1)
+                return cell
             case 1:
-                let cell =  MRDEtable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
-                 
-                cell.configure(title: "Diagnosis", placeholder: "Diagnosis", tag: 2)
-                return cell
                 
-            case 2:
-                let cell =  MRDEtable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
-                 
-                cell.configure(title: "Vaccine", placeholder: "Vaccine", tag: 3)
+                cell.configure(title: "Tipe Vaksin", placeholder: ViewModel.dataSource[0].diagnosis, tag: 2)
                 return cell
-                
+           
             default:
                 fatalError()
             }
         case 2:
             switch indexPath.row {
             case 0:
-                let cell =  MRDEtable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
-                 
-                cell.configure(title: "Medicine", placeholder: "Medicine", tag: 4)
+                cell.configure(title: "Diagnosa", placeholder: ViewModel.dataSource[0].medicine, tag: 3)
                 return cell
             case 1:
-                let cell =  MRDEtable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
-                 
-                cell.configure(title: "Vaccine Type", placeholder: "Vaccine type", tag: 5)
+                
+                
+                cell.configure(title: "Obat", placeholder: ViewModel.dataSource[0].vaccineType, tag: 4)
                 return cell
             case 2:
-                let cell =  MRDEtable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
-                 
-                cell.configure(title: "Dosage", placeholder: "Dosage", tag: 6)
+                
+                
+                cell.configure(title: "Dosis", placeholder: ViewModel.dataSource[0].dosage, tag: 5)
                 return cell
-                
             default:
                 fatalError()
             }
-        case 3:
-            switch indexPath.row {
-            case 0:
-                
-                let largeCell = MRDEtable.dequeueReusableCell(withIdentifier: LargeTextFieldTableViewCell.identifier, for: indexPath) as! LargeTextFieldTableViewCell
-                
-                largeCell.configuration(description: "hello world", tag: 7)
-                
-                return largeCell
-            default:
-                fatalError()
-            }
-            
-        case 4:
-            switch indexPath.row {
-            case 0:
-                let deletebutton =  MRDEtable.dequeueReusableCell(withIdentifier: DeleteButtonTableViewCell.identifier, for: indexPath) as! DeleteButtonTableViewCell
-                
-                deletebutton.delegate = self
-                
-                return deletebutton
-            
-            default:
-                fatalError()
-            }
+
         default:
             fatalError()
         }
         
+        
     }
+    
+    //MARK: - Read data from text field
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        textField.addTarget(self, action: #selector(valueTextFieldChanged), for: .editingChanged)
+        return true
+    }
+    
+    @objc func valueTextFieldChanged(_ textField: UITextField) {
+        switch textField.tag {
+        case 0:
+            date = textField.text ?? "no value"
+        case 1:
+            vet = textField.text ?? "no value"
+        case 2:
+            diagnosis = textField.text ?? "no value"
+        case 3:
+            vaccine = textField.text ?? "no value"
+        case 4:
+            medicine = textField.text ?? "no value"
+        case 5:
+            vaccineType = textField.text ?? "no value"
+
+        default:
+            print("not yet developed")
+        }
+    }
+
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return "Time"
+            return "Waktu"
         case 1:
-            return "Details"
+            return "Detail"
         case 2:
-            return "Medical History"
-        case 3:
-            return "Description"
-        case 4:
-            return " "
+            return "Riwayat Kesehatan"
+        //        case 3:
+        //
+        //            return "Description"
         default:
             fatalError()
         }
@@ -242,15 +234,15 @@ extension MRDEViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30.0
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       
+        
         tableView.allowsSelection = false
         tableView.deselectRow(at: indexPath, animated: false)
         
         
     }
-     
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section != 3{
             return 45
@@ -260,18 +252,6 @@ extension MRDEViewController: UITableViewDataSource{
             return 100
         }
         
-        
     }
     
-
-}
-
-// DeleteButtonDelegate //perlu di benerin alur waktu yes
-extension MRDEViewController: deletedelegate{
-    func deleteAlert() {
-        let alert = UIAlertController(title: "Delete Dog Profile", message: "Once you delete this, you won't be able to return it. Do you want to proceed?", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.destructive, handler: {action in self.cancelaction()}))
-        self.present(alert, animated: true, completion: nil)
-    }
 }

@@ -94,16 +94,8 @@ class MRDAViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
         
         self.present(navVc, animated: false, completion: nil)
         
-        let user = Auth.auth().currentUser
-        
-        
-//        print("date :",date)
-//        print("vet :",vet)
-//        print("diagnosis :",diagnosis)
-//        print("vaccine :",vaccine)
-//        print("medicine :",medicine)
-//        print("vaccine type :",vaccineType)
-//        print("dosage :",dosage)
+    
+        DataManipulation.sharedData.insertDataToMedicalRecord(with: UserControl.shared.user?.uid ?? "unknown", with: 0, with: MRDModel(id: 0, date: date, veterinarian: vet, diagnosis: diagnosis, vaccine: vaccine, medicine: medicine, vaccineType: vaccineType, dosage: dosage))
         
         
     }
@@ -119,7 +111,7 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
         case 0:
             return 1
         case 1:
-            return 3
+            return 2
         case 2:
             return 3
         //        case 3:
@@ -138,7 +130,7 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
         case 0:
             switch indexPath.row {
             case 0:
-                cell.configure(title: "Date", placeholder: ViewModel.dataSource[0].date, tag: 0)
+                cell.configure(title: "Tanggal", placeholder: ViewModel.dataSource[0].date, tag: 0)
                 return cell
             default:
                 fatalError()
@@ -147,51 +139,35 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
             switch indexPath.row {
             case 0:
                 
-                cell.configure(title: "Veterinarian", placeholder: ViewModel.dataSource[0].veterinarian,tag: 1)
+                cell.configure(title: "Dokter Hewan", placeholder: ViewModel.dataSource[0].veterinarian,tag: 1)
                 return cell
             case 1:
                 
-                cell.configure(title: "Diagnosis", placeholder: ViewModel.dataSource[0].diagnosis, tag: 2)
+                cell.configure(title: "Tipe Vaksin", placeholder: ViewModel.dataSource[0].diagnosis, tag: 2)
                 return cell
-            case 2:
-                
-                cell.configure(title: "Vaccine", placeholder: ViewModel.dataSource[0].vaccine, tag: 3)
-                return cell
+           
             default:
                 fatalError()
             }
         case 2:
             switch indexPath.row {
             case 0:
-                
-                
-                cell.configure(title: "Medicine", placeholder: ViewModel.dataSource[0].medicine, tag: 4)
+                cell.configure(title: "Diagnosa", placeholder: ViewModel.dataSource[0].medicine, tag: 3)
                 return cell
             case 1:
                 
                 
-                cell.configure(title: "Vaccine Type", placeholder: ViewModel.dataSource[0].vaccineType, tag: 5)
+                cell.configure(title: "Obat", placeholder: ViewModel.dataSource[0].vaccineType, tag: 4)
                 return cell
             case 2:
                 
                 
-                cell.configure(title: "Dosage", placeholder: ViewModel.dataSource[0].dosage, tag: 6)
+                cell.configure(title: "Dosis", placeholder: ViewModel.dataSource[0].dosage, tag: 5)
                 return cell
             default:
                 fatalError()
             }
-        //        case 3:
-        //            switch indexPath.row {
-        //            case 0:
-        //                let largeCell = mrdaTable.dequeueReusableCell(withIdentifier: LargeTextFieldTableViewCell.identifier) as! LargeTextFieldTableViewCell
-        //
-        //                largeCell.largeTextField.delegate = self
-        //                largeCell.configuration(description: ViewModel.dataSource[indexPath.row].description, tag: 8)
-        //
-        //                return largeCell
-        //            default:
-        //                fatalError()
-        //            }
+
         default:
             fatalError()
         }
@@ -219,46 +195,21 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
             medicine = textField.text ?? "no value"
         case 5:
             vaccineType = textField.text ?? "no value"
-        case 6:
-            dosage = textField.text ?? "no value"
-        //        case 0:
-        //            text1 = textField.text ?? "no value"
-        //        case 0:
-        //            text1 = textField.text ?? "no value"
-        //        case 0:
-        //            text1 = textField.text ?? "no value"
-        //        case 0:
-        //            text1 = textField.text ?? "no value"
-        //        case 0:
-        //            text1 = textField.text ?? "no value"
-        //        case 0:
-        //            text1 = textField.text ?? "no value"
+
         default:
             print("not yet developed")
         }
     }
-    //
-    //    func textViewDidEndEditing(_ textView: UITextView) {
-    //        <#code#>
-    //    }
-    //    func textViewDidChange(_ textView: UITextView) -> Bool {
-    //        var val = false
-    //        if (textView.hasText) {
-    //            text7 = textView.text
-    //            val = true
-    //        }
-    //        return val
-    //
-    //    }
+
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return "Time"
+            return "Waktu"
         case 1:
-            return "Details"
+            return "Detail"
         case 2:
-            return "Medical History"
+            return "Riwayat Kesehatan"
         //        case 3:
         //
         //            return "Description"

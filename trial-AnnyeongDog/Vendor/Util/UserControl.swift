@@ -7,14 +7,22 @@
 
 import Foundation
 import Firebase
+import FirebaseAuth
 
 class UserControl {
     
+    static let shared = UserControl()
+    
+    // initialize user
+    var user = FirebaseAuth.Auth.auth().currentUser
+    
     // check if user is login or not
     func userIsLogin(){
-        if Firebase.Auth.auth().currentUser == nil{
+        if FirebaseAuth.Auth.auth().currentUser == nil{
             //go to login page
         }
     }
+    
+    
     
 }

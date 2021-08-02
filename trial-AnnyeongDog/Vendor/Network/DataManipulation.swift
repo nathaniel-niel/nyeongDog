@@ -12,6 +12,8 @@ import FirebaseDatabase
 class DataManipulation {
     static let sharedData = DataManipulation()
     
+
+    
     // MARK: Firebase configuration
     
     //Connection ke Firebase
@@ -59,9 +61,9 @@ class DataManipulation {
     
     //MARK: Function for Medical Record
     
-    func insertDataToMedicalRecord(with user: UserModel, with dog: DogProfileModel, with mrd: MRDModel ){
+    func insertDataToMedicalRecord(with userId: String, with dogID: Int, with mrd: MRDModel ){
         
-        ref.child("users/\(user.id)/dogs/\(dog.dogId)/medical-records\(mrd.id)").setValue([
+        ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrd.id)").setValue([
             "date": mrd.date,
             "vets": mrd.veterinarian,
             "diagnosis": mrd.diagnosis,

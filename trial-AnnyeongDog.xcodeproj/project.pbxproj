@@ -349,7 +349,6 @@
 				C037876426B2A199004344E0 /* MedicalRecords */,
 				2D628E8826B297350008ECD2 /* MedicalRecordDetail */,
 				B584B3E026B28E3A005A02C5 /* LaunchScreen */,
-				B52BF32826B7E62200DC3B74 /* LaunchScreen */,
 				B584B3CE26B28DF2005A02C5 /* Example */,
 			);
 			path = Feature;
