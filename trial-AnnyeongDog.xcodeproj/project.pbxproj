@@ -458,6 +458,7 @@
 			isa = PBXGroup;
 			children = (
 				B52BF32826B7E62200DC3B74 /* LaunchScreen */,
+				C079A37526B844490061EC30 /* Controller */,
 				C037879626B2A226004344E0 /* Model */,
 				C037879526B2A21F004344E0 /* View */,
 				C037879426B2A210004344E0 /* ViewModel */,
@@ -468,9 +469,6 @@
 		C037879426B2A210004344E0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				5B67967226B41796004514F3 /* DogProfileListViewController.swift */,
-				5B67967026B41794004514F3 /* DogProfileTableViewCell.swift */,
-				C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -478,9 +476,9 @@
 		C037879526B2A21F004344E0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5B67966F26B41793004514F3 /* DogProfileEmptyState.storyboard */,
-				5B67967126B41795004514F3 /* DogProfileFilledState.storyboard */,
-				C037877126B2A1CB004344E0 /* DogProfileDetail.storyboard */,
+				5B67967226B41796004514F3 /* DogProfileListViewController.swift */,
+				5B67967026B41794004514F3 /* DogProfileTableViewCell.swift */,
+				C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -505,6 +503,16 @@
 				C00DE8F826B3D8AE00E99343 /* PrepareToMRD.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C079A37526B844490061EC30 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B67966F26B41793004514F3 /* DogProfileEmptyState.storyboard */,
+				5B67967126B41795004514F3 /* DogProfileFilledState.storyboard */,
+				C037877126B2A1CB004344E0 /* DogProfileDetail.storyboard */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		C30359627F5E9F0180384BB1 /* Frameworks */ = {
