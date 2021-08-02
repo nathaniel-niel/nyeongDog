@@ -68,7 +68,5 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Please allow us to access your Gallery to pick the image</string>
 </dict>
 </plist>

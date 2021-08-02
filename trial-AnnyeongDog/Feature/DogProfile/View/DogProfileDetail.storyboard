@@ -21,15 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bZo-TN-99i">
-                                <rect key="frame" x="122.66666666666669" y="94.999999999999986" width="145" height="143.66666666666669"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="145" id="0zd-5m-AoD"/>
-                                    <constraint firstAttribute="width" constant="145" id="RKQ-Sp-abL"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yz1-iW-7Te">
-                                <rect key="frame" x="40" y="307" width="310" height="29"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NXe-SJ-AfA">
+                                <rect key="frame" x="18" y="73.999999999999986" width="352" height="727"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bZo-TN-99i">
@@ -190,15 +183,6 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="04j-wC-bK0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="oAy-mK-rec" firstAttribute="leading" secondItem="04j-wC-bK0" secondAttribute="leading" constant="40" id="9CI-dn-ZBY"/>
-                            <constraint firstItem="04j-wC-bK0" firstAttribute="trailing" secondItem="oAy-mK-rec" secondAttribute="trailing" constant="40" id="Ij6-3n-ddv"/>
-                            <constraint firstItem="bZo-TN-99i" firstAttribute="centerX" secondItem="Hyv-I9-Sfh" secondAttribute="centerX" id="Qme-Dk-7YO"/>
-                            <constraint firstItem="W7c-aa-5zY" firstAttribute="top" secondItem="Hyv-I9-Sfh" secondAttribute="top" constant="283" id="RJ8-pX-jWK"/>
-                            <constraint firstAttribute="bottom" secondItem="oAy-mK-rec" secondAttribute="bottom" constant="63" id="c7n-oG-iDg"/>
-                            <constraint firstItem="W7c-aa-5zY" firstAttribute="leading" secondItem="04j-wC-bK0" secondAttribute="leading" constant="40" id="f5q-ey-Plw"/>
-                            <constraint firstItem="bZo-TN-99i" firstAttribute="top" secondItem="Hyv-I9-Sfh" secondAttribute="top" constant="94" id="qkt-Ay-L4J"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Dog Profile" id="bUd-Mr-8SX">
                         <barButtonItem key="backBarButtonItem" title=" " id="uGa-xJ-0mc"/>
@@ -221,6 +205,7 @@
                         <outlet property="genderTextField" destination="4zA-LN-8Xz" id="1Yi-5x-7nf"/>
                         <outlet property="medicalRecordsUI" destination="oAy-mK-rec" id="4c3-8r-ayQ"/>
                         <outlet property="rightBarButtonItem" destination="9AM-JC-0wc" id="GnP-95-HoB"/>
+                        <outlet property="scrollView" destination="NXe-SJ-AfA" id="DLL-hl-D82"/>
                         <outlet property="weightTextField" destination="TYK-OW-Txu" id="vHy-IC-7CX"/>
                     </connections>
                 </viewController>

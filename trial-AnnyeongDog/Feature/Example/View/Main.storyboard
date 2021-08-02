@@ -72,7 +72,8 @@
         <!--Tab Bar Controller-->
         <scene sceneID="j2b-8W-wqo">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dcK-Wt-qDu" sceneMemberID="viewController">
+                <tabBarController id="dcK-Wt-qDu" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r5R-ut-VCn">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
