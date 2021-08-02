@@ -257,8 +257,7 @@
 				B5821A5826B7EEA0006DDED9 /* Model */,
 				B5821A5A26B7EEA0006DDED9 /* View */,
 			);
-			name = SignIn;
-			path = "../../../../../Dropbox (DeveloperAcademy-ID)/Mini Challenge 3 - Pets/SignIn";
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 		B5821A5826B7EEA0006DDED9 /* Model */ = {
