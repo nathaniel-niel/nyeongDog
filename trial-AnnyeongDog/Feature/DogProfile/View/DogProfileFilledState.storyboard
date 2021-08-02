@@ -11,7 +11,7 @@
         <!--DogProfileFilledStage-->
         <scene sceneID="BYe-xZ-Z7M">
             <objects>
-                <viewController storyboardIdentifier="DogProfileListViewController" title="DogProfileFilledStage" id="szM-O7-auD" customClass="DogProfileListViewController" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DogProfileListViewController" title="DogProfileFilledStage" useStoryboardIdentifierAsRestorationIdentifier="YES" id="szM-O7-auD" customClass="DogProfileListViewController" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0GJ-aY-qhs">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
