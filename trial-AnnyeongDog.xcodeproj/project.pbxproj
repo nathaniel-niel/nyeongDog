@@ -30,6 +30,8 @@
 		5B67967426B41796004514F3 /* DogProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B67967026B41794004514F3 /* DogProfileTableViewCell.swift */; };
 		5B67967526B41796004514F3 /* DogProfileFilledState.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B67967126B41795004514F3 /* DogProfileFilledState.storyboard */; };
 		5B67967626B41796004514F3 /* DogProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B67967226B41796004514F3 /* DogProfileListViewController.swift */; };
+		5B94FFF826B7A3DD0020C09C /* CallOngoing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B94FFF726B7A3DD0020C09C /* CallOngoing.storyboard */; };
+		5B94FFFA26B7AA1E0020C09C /* CallOnGoingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B94FFF926B7AA1E0020C09C /* CallOnGoingViewController.swift */; };
 		7ACD3D5FCF25095A1818F235 /* Pods_trial_AnnyeongDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717D5942BF1328C6EDE1986A /* Pods_trial_AnnyeongDog.framework */; };
 		B57E0EB826B45B2900FACDAC /* Poppins in Resources */ = {isa = PBXBuildFile; fileRef = B57E0EB726B45B2900FACDAC /* Poppins */; };
 		B584B3A926B264CC005A02C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3A826B264CC005A02C5 /* AppDelegate.swift */; };
@@ -94,6 +96,8 @@
 		5B67967026B41794004514F3 /* DogProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogProfileTableViewCell.swift; sourceTree = "<group>"; };
 		5B67967126B41795004514F3 /* DogProfileFilledState.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DogProfileFilledState.storyboard; sourceTree = "<group>"; };
 		5B67967226B41796004514F3 /* DogProfileListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogProfileListViewController.swift; sourceTree = "<group>"; };
+		5B94FFF726B7A3DD0020C09C /* CallOngoing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CallOngoing.storyboard; sourceTree = "<group>"; };
+		5B94FFF926B7AA1E0020C09C /* CallOnGoingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallOnGoingViewController.swift; sourceTree = "<group>"; };
 		717D5942BF1328C6EDE1986A /* Pods_trial_AnnyeongDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trial_AnnyeongDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B57E0EB726B45B2900FACDAC /* Poppins */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Poppins; sourceTree = "<group>"; };
 		B584B3A526B264CC005A02C5 /* trial-AnnyeongDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "trial-AnnyeongDog.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,6 +246,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5B94FFF626B7A18D0020C09C /* Call Ongoing */ = {
+			isa = PBXGroup;
+			children = (
+				5B94FFF726B7A3DD0020C09C /* CallOngoing.storyboard */,
+				5B94FFF926B7AA1E0020C09C /* CallOnGoingViewController.swift */,
+			);
+			path = "Call Ongoing";
+			sourceTree = "<group>";
+		};
 		90B83845868CD0FB085773B5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,6 +318,7 @@
 		B584B3C126B28C71005A02C5 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				5B94FFF626B7A18D0020C09C /* Call Ongoing */,
 				2D74BE1126B454E8009B3629 /* DogProfileDetailEdit */,
 				C037876C26B2A1CB004344E0 /* DogProfile */,
 				C037876426B2A199004344E0 /* MedicalRecords */,
@@ -588,6 +602,7 @@
 				B584B3DD26B28DF2005A02C5 /* Main.storyboard in Resources */,
 				5B67967326B41796004514F3 /* DogProfileEmptyState.storyboard in Resources */,
 				2D628ED526B297B20008ECD2 /* MRDTableViewCell.xib in Resources */,
+				5B94FFF826B7A3DD0020C09C /* CallOngoing.storyboard in Resources */,
 				B584B3DB26B28DF2005A02C5 /* ExampleViewController.xib in Resources */,
 				B5D247B826B2FFAE002B2F8F /* MR.storyboard in Resources */,
 				B584B3E526B2B05B005A02C5 /* Signin.xib in Resources */,
@@ -685,6 +700,7 @@
 				C00DE8F326B3CEA800E99343 /* MedicalRecordsDummy.swift in Sources */,
 				2D74BE1D26B4558F009B3629 /* UserControl.swift in Sources */,
 				B584B3E326B2AF43005A02C5 /* UserModel.swift in Sources */,
+				5B94FFFA26B7AA1E0020C09C /* CallOnGoingViewController.swift in Sources */,
 				B584B3AB26B264CC005A02C5 /* SceneDelegate.swift in Sources */,
 				C037879226B2A1CB004344E0 /* PrepareForMedical.swift in Sources */,
 			);
