@@ -39,8 +39,11 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "segueDogProfileDetail", sender: nil)
+//        performSegue(withIdentifier: "segueDogProfileDetail", sender: nil)
+        let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
+        let nVC = (storyboard.instantiateViewController(identifier: "DPDE"))
         
+        self.navigationController?.pushViewController(nVC, animated: true)
     }
     
     //ViewCell

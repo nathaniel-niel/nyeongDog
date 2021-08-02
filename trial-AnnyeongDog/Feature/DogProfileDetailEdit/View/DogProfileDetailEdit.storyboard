@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Poppins-Bold.ttf">
+        <array key="poppins.bold.ttf">
             <string>Poppins-Bold</string>
         </array>
     </customFonts>
@@ -167,6 +167,9 @@
                                 <state key="normal" title="Medical Records">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="MedicalRecordButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="KG9-oK-bm2"/>
+                                </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="Cfc-ab-yAv">
                                 <rect key="frame" x="40" y="364" width="133" height="38"/>

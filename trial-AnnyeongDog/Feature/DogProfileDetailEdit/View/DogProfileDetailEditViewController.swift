@@ -36,7 +36,7 @@ class DogProfileDetailEditViewController: UIViewController {
         
         print("testing 1234")
         
-        
+        navigationItem.largeTitleDisplayMode = .never
         setup()
         
         
@@ -48,30 +48,28 @@ class DogProfileDetailEditViewController: UIViewController {
         self.navigationItem.title = "Dog Profile"
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonTapped))
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveButtonTapped))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editButtonTapped))
     }
     
     @objc func backButtonTapped(){
-        let alert = UIAlertController(title: "Unsaved Changes", message: "You have unsaved changes, are you sure you want to cancel?.", preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
-        alert.addAction(UIAlertAction(title: "Yes", style: .destructive,handler: { action in
-            
-            // back to dog profile view
-            let storyboard = UIStoryboard(name: "Storyboard_name", bundle: nil)
-            
-            let vc = storyboard.instantiateViewController(identifier: "Storyboard_Identifier")
-            self.navigationController?.popToViewController(vc, animated: true)
-        }))
-        self.present(alert, animated: true)
+        _ = navigationController?.popViewController(animated: true)
     }
     
     
-    @objc func saveButtonTapped(){
+    @objc func editButtonTapped(){
+        let storyboard = UIStoryboard(name: "DogProfileDetail", bundle: nil)
         
-        //call function to update data to firebase from class DatabaseManager
+        let vc = storyboard.instantiateViewController(identifier: "DogProfileDetail")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    @IBAction func MedicalRecordButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "MedicalRecordsFilledState", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(identifier: "medicalRecordsFilled")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 
