@@ -19,6 +19,8 @@ class DogProfileDetailViewController: UIViewController {
     @IBOutlet weak var colorTextField: UITextField!
     @IBOutlet weak var allergyTextField: UITextField!
     @IBOutlet weak var medicalRecordsUI: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var dogImage: UIImageView!
     
     @IBOutlet weak var rightBarButtonItem: UIBarButtonItem!
     
@@ -34,13 +36,18 @@ class DogProfileDetailViewController: UIViewController {
         genderTextField.inputView = pickerView
         navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.3733734488, green: 0.4266925454, blue: 0.6893113852, alpha: 1)
         
+        scrollView.contentSize = CGSize(width: self.view.frame.width - 40, height: self.view.frame.height - 80)
+        
+        
         updateUI()
         
     }
     
     @IBAction func didBackButtonTapped(_ sender: UIBarButtonItem) {
+        
         _ = navigationController?.popViewController(animated: true)
     }
+    
     @IBAction func medicalRecordsPressed(_ sender: UIButton) {
         
         if prepareForMedical.statement(){
@@ -51,6 +58,17 @@ class DogProfileDetailViewController: UIViewController {
         }
         
     }
+    
+    @IBAction func dogImage(_ sender: UIButton) {
+        let vc = UIImagePickerController()
+        
+        vc.sourceType = .photoLibrary
+        vc.delegate = self
+        vc.allowsEditing = true
+        present(vc, animated: true, completion: nil)
+        
+    }
+    
     
     func updateUI(){
         navigationItem.largeTitleDisplayMode = .never
@@ -71,6 +89,22 @@ class DogProfileDetailViewController: UIViewController {
     }
     
 }
+
+extension DogProfileDetailViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        print(info)
+        
+        
+        if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage{
+            dogImage.image = image
+            picker.dismiss(animated: true, completion: nil)
+        }
+        
+    }
+    
+}
+
 // Picker buat Keyboard Gender
 
 extension DogProfileDetailViewController: UIPickerViewDelegate, UIPickerViewDataSource {
