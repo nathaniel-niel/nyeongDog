@@ -31,7 +31,6 @@
 		5B67967526B41796004514F3 /* DogProfileFilledState.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B67967126B41795004514F3 /* DogProfileFilledState.storyboard */; };
 		5B67967626B41796004514F3 /* DogProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B67967226B41796004514F3 /* DogProfileListViewController.swift */; };
 		7ACD3D5FCF25095A1818F235 /* Pods_trial_AnnyeongDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717D5942BF1328C6EDE1986A /* Pods_trial_AnnyeongDog.framework */; };
-		B52BF32926B7E62200DC3B74 /* LaunchScreen in Resources */ = {isa = PBXBuildFile; fileRef = B52BF32826B7E62200DC3B74 /* LaunchScreen */; };
 		B57E0EB826B45B2900FACDAC /* Poppins in Resources */ = {isa = PBXBuildFile; fileRef = B57E0EB726B45B2900FACDAC /* Poppins */; };
 		B5821A6126B7EEA0006DDED9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5821A5926B7EEA0006DDED9 /* UserModel.swift */; };
 		B5821A6226B7EEA0006DDED9 /* SignInViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5821A5C26B7EEA0006DDED9 /* SignInViewExtension.swift */; };
@@ -95,7 +94,6 @@
 		5B67967126B41795004514F3 /* DogProfileFilledState.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DogProfileFilledState.storyboard; sourceTree = "<group>"; };
 		5B67967226B41796004514F3 /* DogProfileListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogProfileListViewController.swift; sourceTree = "<group>"; };
 		717D5942BF1328C6EDE1986A /* Pods_trial_AnnyeongDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trial_AnnyeongDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B52BF32826B7E62200DC3B74 /* LaunchScreen */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LaunchScreen; sourceTree = "<group>"; };
 		B57E0EB726B45B2900FACDAC /* Poppins */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Poppins; sourceTree = "<group>"; };
 		B5821A5926B7EEA0006DDED9 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B5821A5C26B7EEA0006DDED9 /* SignInViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewExtension.swift; sourceTree = "<group>"; };
@@ -457,7 +455,6 @@
 		C037876C26B2A1CB004344E0 /* DogProfile */ = {
 			isa = PBXGroup;
 			children = (
-				B52BF32826B7E62200DC3B74 /* LaunchScreen */,
 				C037879626B2A226004344E0 /* Model */,
 				C037879526B2A21F004344E0 /* View */,
 				C037879426B2A210004344E0 /* ViewModel */,
@@ -598,7 +595,6 @@
 				C00DE8FC26B3D8AE00E99343 /* MedicalFiilledTableViewCell.xib in Resources */,
 				B584B3B226B264CD005A02C5 /* Assets.xcassets in Resources */,
 				C037876B26B2A199004344E0 /* MedicalRecords.storyboard in Resources */,
-				B52BF32926B7E62200DC3B74 /* LaunchScreen in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
