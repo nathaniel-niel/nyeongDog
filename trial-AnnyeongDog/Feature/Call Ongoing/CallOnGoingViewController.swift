@@ -17,13 +17,13 @@ class CallOnGoingViewController: UIViewController {
         super.viewDidLoad()
         
         micOffButton.layer.cornerRadius = 0.5 * micOffButton.frame.height
-        micOffButton.layer.masksToBounds =  true
+        micOffButton.clipsToBounds =  true
         videoOffButton.layer.cornerRadius = 0.5 * videoOffButton.frame.height
-        videoOffButton.layer.masksToBounds = true
+        videoOffButton.clipsToBounds = true
         cameraFlipButton.layer.cornerRadius =  0.5 * cameraFlipButton.frame.height
-        cameraFlipButton.layer.masksToBounds = true
+        cameraFlipButton.clipsToBounds = true
         hangUpButton.layer.cornerRadius =  0.5 * hangUpButton.frame.height
-        hangUpButton.layer.masksToBounds = true
+        hangUpButton.clipsToBounds = true
         
     }
     
