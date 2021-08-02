@@ -7,6 +7,7 @@
 
 import Foundation
 import Firebase
+import FirebaseDatabase
 
 class DataManipulation {
     static let sharedData = DataManipulation()
@@ -54,5 +55,21 @@ class DataManipulation {
             "color": dog.color,
             "alergen": dog.alergen
         ])
+    }
+    
+    //MARK: Function for Medical Record
+    
+    func insertDataToMedicalRecord(with user: UserModel, with dog: DogProfileModel, with mrd: MRDModel ){
+        
+        ref.child("users/\(user.id)/dogs/\(dog.dogId)/medical-records\(mrd.id)").setValue([
+            "date": mrd.date,
+            "vets": mrd.veterinarian,
+            "diagnosis": mrd.diagnosis,
+            "vaccinne": mrd.vaccine,
+            "medicine": mrd.medicine,
+            "vaccineType": mrd.vaccineType,
+            "dosage": mrd.dosage
+        ])
+        
     }
 }

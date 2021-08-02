@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class MRDAViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     
@@ -19,7 +21,7 @@ class MRDAViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
     var medicine: String = ""
     var vaccineType: String = ""
     var dosage: String = ""
-//    var text7: String = ""
+    //    var text7: String = ""
     var isExpand: Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,28 +86,32 @@ class MRDAViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
     
     //MARK: - Save Medical Record
     @objc private func didSaveButtonTapped(){
-        //        let storyboard = UIStoryboard(name: "MRD", bundle: nil)
-        //
-        //        let vc = storyboard.instantiateViewController(identifier: "mrd")
-        //
-        //        let navVc = UINavigationController(rootViewController: vc)
-        //
-        //        self.present(navVc, animated: false, completion: nil)
-        print("date :",date)
-        print("vet :",vet)
-        print("diagnosis :",diagnosis)
-        print("vaccine :",vaccine)
-        print("medicine :",medicine)
-        print("vaccine type :",vaccineType)
-        print("dosage :",dosage)
-//        print("text ke 7 :",text7)
+        let storyboard = UIStoryboard(name: "MRD", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(identifier: "mrd")
+        
+        let navVc = UINavigationController(rootViewController: vc)
+        
+        self.present(navVc, animated: false, completion: nil)
+        
+        let user = Auth.auth().currentUser
+        
+        
+//        print("date :",date)
+//        print("vet :",vet)
+//        print("diagnosis :",diagnosis)
+//        print("vaccine :",vaccine)
+//        print("medicine :",medicine)
+//        print("vaccine type :",vaccineType)
+//        print("dosage :",dosage)
+        
         
     }
 }
 
 extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -116,8 +122,8 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
             return 3
         case 2:
             return 3
-//        case 3:
-//            return 1
+        //        case 3:
+        //            return 1
         default:
             fatalError()
         }
@@ -174,18 +180,18 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
             default:
                 fatalError()
             }
-//        case 3:
-//            switch indexPath.row {
-//            case 0:
-//                let largeCell = mrdaTable.dequeueReusableCell(withIdentifier: LargeTextFieldTableViewCell.identifier) as! LargeTextFieldTableViewCell
-//
-//                largeCell.largeTextField.delegate = self
-//                largeCell.configuration(description: ViewModel.dataSource[indexPath.row].description, tag: 8)
-//
-//                return largeCell
-//            default:
-//                fatalError()
-//            }
+        //        case 3:
+        //            switch indexPath.row {
+        //            case 0:
+        //                let largeCell = mrdaTable.dequeueReusableCell(withIdentifier: LargeTextFieldTableViewCell.identifier) as! LargeTextFieldTableViewCell
+        //
+        //                largeCell.largeTextField.delegate = self
+        //                largeCell.configuration(description: ViewModel.dataSource[indexPath.row].description, tag: 8)
+        //
+        //                return largeCell
+        //            default:
+        //                fatalError()
+        //            }
         default:
             fatalError()
         }
@@ -231,19 +237,19 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
             print("not yet developed")
         }
     }
-//
-//    func textViewDidEndEditing(_ textView: UITextView) {
-//        <#code#>
-//    }
-//    func textViewDidChange(_ textView: UITextView) -> Bool {
-//        var val = false
-//        if (textView.hasText) {
-//            text7 = textView.text
-//            val = true
-//        }
-//        return val
-//
-//    }
+    //
+    //    func textViewDidEndEditing(_ textView: UITextView) {
+    //        <#code#>
+    //    }
+    //    func textViewDidChange(_ textView: UITextView) -> Bool {
+    //        var val = false
+    //        if (textView.hasText) {
+    //            text7 = textView.text
+    //            val = true
+    //        }
+    //        return val
+    //
+    //    }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
@@ -253,9 +259,9 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
             return "Details"
         case 2:
             return "Medical History"
-//        case 3:
-//
-//            return "Description"
+        //        case 3:
+        //
+        //            return "Description"
         default:
             fatalError()
         }
