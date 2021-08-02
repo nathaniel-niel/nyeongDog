@@ -6,12 +6,12 @@
 //
 
 import UIKit
-import Firebase
 
 class DogProfileDetailViewController: UIViewController {
     
     var genderModel = GenderModel()
     var prepareForMedical = PrepareForMedical()
+    var dogsModel = DogsModel()
     
     @IBOutlet weak var dogsTextField: UITextField!
     @IBOutlet weak var genderTextField: UITextField!
@@ -23,14 +23,14 @@ class DogProfileDetailViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var dogImage: UIImageView!
     @IBOutlet weak var dogsDOB: UIDatePicker!
-    
-    
     @IBOutlet weak var rightBarButtonItem: UIBarButtonItem!
+    
     
     var pickerView = UIPickerView()
     var isExpand = false
-    var dogsModel: DogProfileModel?
-    
+    var dogsDateofBirth = ""
+
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -55,14 +55,8 @@ class DogProfileDetailViewController: UIViewController {
     
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         
-        updateModel()
-        
-        let user = Auth.auth().currentUser
-        DataManipulation.sharedData.insertDogProfileData(with: UserModel(id: user!.uid, email: (user?.email)!), with: dogsModel!)
-        print("masok")
-        
-        
-    }
+        getTextfieldData()
+   }
     
     
     @IBAction func didBackButtonTapped(_ sender: UIBarButtonItem) {
@@ -102,15 +96,17 @@ class DogProfileDetailViewController: UIViewController {
         contentInset.bottom = keyboardFrame.size.height + 20
         scrollView.contentInset = contentInset
     }
+        
     
     @objc func keyboardDissapear(notification:NSNotification){
         let contentInset:UIEdgeInsets = UIEdgeInsets.zero
         scrollView.contentInset = contentInset
     }
     
-    func updateModel(){
+    func getTextfieldData(){
+    
+        dogsModel.updateModel(1, dogsTextField.text ?? "" , dogsModel.dateToString(dogsDOB.date), genderTextField.text ?? "" , breedTextField.text ?? "" , weightTextField.text ?? "" , colorTextField.text ?? "" , allergyTextField.text ?? "")
         
-        dogsModel = DogProfileModel(dogId: 1,dogName: dogsTextField.text!, dateOfBirth: "", gender: genderTextField.text!, breed: breedTextField.text!, weight: weightTextField.text!, color: colorTextField.text!, alergen: allergyTextField.text!)
     }
     
     
@@ -119,6 +115,7 @@ class DogProfileDetailViewController: UIViewController {
         scrollView.contentSize = CGSize(width: self.view.frame.width - 40, height: self.view.frame.height - 80)
         
         navigationItem.largeTitleDisplayMode = .never
+        
         makeRounded()
     }
     
@@ -148,6 +145,7 @@ class DogProfileDetailViewController: UIViewController {
     
 }
 
+// Picker untuk Gender
 extension DogProfileDetailViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {

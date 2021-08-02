@@ -66,6 +66,7 @@
 		C037878826B2A1CB004344E0 /* GenderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037877226B2A1CB004344E0 /* GenderModel.swift */; };
 		C037879126B2A1CB004344E0 /* DogProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */; };
 		C037879226B2A1CB004344E0 /* PrepareForMedical.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037878426B2A1CB004344E0 /* PrepareForMedical.swift */; };
+		C079A37726B844D00061EC30 /* DogsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C079A37626B844D00061EC30 /* DogsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,6 +135,7 @@
 		C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogProfileDetailViewController.swift; sourceTree = "<group>"; };
 		C037878426B2A1CB004344E0 /* PrepareForMedical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareForMedical.swift; sourceTree = "<group>"; };
 		C037878526B2A1CB004344E0 /* ModelBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelBackButton.swift; sourceTree = "<group>"; };
+		C079A37626B844D00061EC30 /* DogsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -469,6 +471,7 @@
 		C037879426B2A210004344E0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C079A37626B844D00061EC30 /* DogsModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -667,6 +670,7 @@
 				C00DE8FF26B3D8AE00E99343 /* MedicalFiilledTableViewCell.swift in Sources */,
 				C00DE8FB26B3D8AE00E99343 /* dummyTesting.swift in Sources */,
 				5B67967426B41796004514F3 /* DogProfileTableViewCell.swift in Sources */,
+				C079A37726B844D00061EC30 /* DogsModel.swift in Sources */,
 				B5821A6626B7EEA0006DDED9 /* SigninViewController.swift in Sources */,
 				B584B3D826B28DF2005A02C5 /* ExampleViewModel.swift in Sources */,
 				2D628EDA26B297DE0008ECD2 /* MRD-dummyData.swift in Sources */,
