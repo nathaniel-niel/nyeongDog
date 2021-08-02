@@ -11,6 +11,7 @@ import Firebase
 struct DogsModel {
     
     var dogsModel: DogProfileModel?
+    var dogsID = 0
     
     mutating func updateModel(_ dogsId: Int, _ dogName: String, _ dateOfBirth: String, _ gender: String, _ breed: String, _ weight: String, _ color: String, _ alergen: String){
         
@@ -38,5 +39,10 @@ struct DogsModel {
         return dateFormate
     }
     
-   
+    mutating func dogsIdGenerator() -> Int{
+        dogsID += 1
+        return dogsID
+    }
+    
+    
 }
