@@ -17,11 +17,12 @@ class LargeTextFieldTableViewCell: UITableViewCell {
         
     }
     
-    func configuration(description: String){
+    func configuration(description: String, tag: Int){
         largeTextField.text = description
         largeTextField.layer.borderWidth = 1
         largeTextField.layer.cornerRadius = 10
         largeTextField.layer.borderColor = #colorLiteral(red: 0.5921568627, green: 0.5921568627, blue: 0.5921568627, alpha: 1)
+        largeTextField.tag = tag
         
     }
     override func awakeFromNib() {

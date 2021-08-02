@@ -141,7 +141,7 @@ extension MRDEViewController: UITableViewDataSource{
             case 0:
                 let cell =  MRDEtable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
                  
-                cell.configure(title: "Date", placeholder: "MM//DD/YYY")
+                cell.configure(title: "Date", placeholder: "MM//DD/YYY", tag: 0)
                 return cell
             default:
                 fatalError()
@@ -151,19 +151,19 @@ extension MRDEViewController: UITableViewDataSource{
             case 0:
                 let cell =  MRDEtable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
                  
-                cell.configure(title: "Veterinarian", placeholder: "Vet name")
+                cell.configure(title: "Veterinarian", placeholder: "Vet name", tag: 1)
                 return cell
                 
             case 1:
                 let cell =  MRDEtable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
                  
-                cell.configure(title: "Diagnosis", placeholder: "Diagnosis")
+                cell.configure(title: "Diagnosis", placeholder: "Diagnosis", tag: 2)
                 return cell
                 
             case 2:
                 let cell =  MRDEtable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
                  
-                cell.configure(title: "Vaccine", placeholder: "Vaccine")
+                cell.configure(title: "Vaccine", placeholder: "Vaccine", tag: 3)
                 return cell
                 
             default:
@@ -174,17 +174,17 @@ extension MRDEViewController: UITableViewDataSource{
             case 0:
                 let cell =  MRDEtable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
                  
-                cell.configure(title: "Medicine", placeholder: "Medicine")
+                cell.configure(title: "Medicine", placeholder: "Medicine", tag: 4)
                 return cell
             case 1:
                 let cell =  MRDEtable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
                  
-                cell.configure(title: "Vaccine Type", placeholder: "Vaccine type")
+                cell.configure(title: "Vaccine Type", placeholder: "Vaccine type", tag: 5)
                 return cell
             case 2:
                 let cell =  MRDEtable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
                  
-                cell.configure(title: "Dosage", placeholder: "Dosage")
+                cell.configure(title: "Dosage", placeholder: "Dosage", tag: 6)
                 return cell
                 
             default:
@@ -196,7 +196,7 @@ extension MRDEViewController: UITableViewDataSource{
                 
                 let largeCell = MRDEtable.dequeueReusableCell(withIdentifier: LargeTextFieldTableViewCell.identifier, for: indexPath) as! LargeTextFieldTableViewCell
                 
-                largeCell.configuration(description: "hello world")
+                largeCell.configuration(description: "hello world", tag: 7)
                 
                 return largeCell
             default:

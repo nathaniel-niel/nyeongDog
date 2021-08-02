@@ -7,15 +7,22 @@
 
 import UIKit
 
-class MRDAViewController: UIViewController {
-
+class MRDAViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
+    
     @IBOutlet weak var mrdaTable: UITableView!
     
     let ViewModel = MRDViewModel()
-    
+    var text0: String = ""
+    var text1: String = ""
+    var text2: String = ""
+    var text3: String = ""
+    var text4: String = ""
+    var text5: String = ""
+    var text6: String = ""
+    var text7: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setup()
         
         //setup delegate
@@ -31,7 +38,7 @@ class MRDAViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDisapear), name: UIResponder.keyboardWillHideNotification, object: nil)
         
     }
-
+    
     var isExpand: Bool = false
     
     // table view will expand size by + 300
@@ -51,7 +58,7 @@ class MRDAViewController: UIViewController {
             isExpand = false
         }
     }
-
+    
     private func setup(){
         self.navigationItem.title = "Medical Record"
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(alertView))
@@ -75,24 +82,34 @@ class MRDAViewController: UIViewController {
     
     // Function to flow after save // not yet save data
     @objc private func didSaveButtonTapped(){
-        let storyboard = UIStoryboard(name: "MRD", bundle: nil)
+        //        let storyboard = UIStoryboard(name: "MRD", bundle: nil)
+        //
+        //        let vc = storyboard.instantiateViewController(identifier: "mrd")
+        //
+        //        let navVc = UINavigationController(rootViewController: vc)
+        //
+        //        self.present(navVc, animated: false, completion: nil)
+        
 
-        let vc = storyboard.instantiateViewController(identifier: "mrd")
-
-        let navVc = UINavigationController(rootViewController: vc)
-
-        self.present(navVc, animated: false, completion: nil)
+        print(text0)
+        print(text1)
+        print(text2)
+        print(text3)
+        print(text4)
+        print(text5)
+        print(text6)
+        print(text7)
         
     }
-
+    
     
 }
 
-extension MRDAViewController: UITableViewDelegate{
+//extension MRDAViewController: UITableViewDelegate{
+//
+//}
+extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
     
-}
-extension MRDAViewController: UITableViewDataSource{
-   
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 4
@@ -114,37 +131,34 @@ extension MRDAViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-      
+        let cell = mrdaTable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
+        
+        
+        
+        cell.contenTextField.delegate = self
+        
         switch indexPath.section {
         case 0:
             switch indexPath.row {
             case 0:
-                let cell =  mrdaTable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
-                 
-                cell.configure(title: "Date", placeholder: ViewModel.dataSource[0].date)
-                return cell
+                cell.configure(title: "Date", placeholder: ViewModel.dataSource[0].date, tag: 0)
+                
             default:
                 fatalError()
             }
         case 1:
             switch indexPath.row {
             case 0:
-                let cell =  mrdaTable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
-                 
-                cell.configure(title: "Veterinarian", placeholder: ViewModel.dataSource[0].veterinarian)
-                return cell
+                
+                cell.configure(title: "Veterinarian", placeholder: ViewModel.dataSource[0].veterinarian,tag: 1)
                 
             case 1:
-                let cell =  mrdaTable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
-                 
-                cell.configure(title: "Diagnosis", placeholder: ViewModel.dataSource[0].diagnosis)
-                return cell
+                
+                cell.configure(title: "Diagnosis", placeholder: ViewModel.dataSource[0].diagnosis, tag: 2)
                 
             case 2:
-                let cell =  mrdaTable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
-                 
-                cell.configure(title: "Vaccine", placeholder: ViewModel.dataSource[0].vaccine)
-                return cell
+                
+                cell.configure(title: "Vaccine", placeholder: ViewModel.dataSource[0].vaccine, tag: 3)
                 
             default:
                 fatalError()
@@ -152,20 +166,19 @@ extension MRDAViewController: UITableViewDataSource{
         case 2:
             switch indexPath.row {
             case 0:
-                let cell =  mrdaTable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
-                 
-                cell.configure(title: "Medicine", placeholder: ViewModel.dataSource[0].medicine)
-                return cell
+                
+                
+                cell.configure(title: "Medicine", placeholder: ViewModel.dataSource[0].medicine, tag: 4)
+                
             case 1:
-                let cell =  mrdaTable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
-                 
-                cell.configure(title: "Vaccine Type", placeholder: ViewModel.dataSource[0].vaccineType)
-                return cell
+                
+                
+                cell.configure(title: "Vaccine Type", placeholder: ViewModel.dataSource[0].vaccineType, tag: 5)
+                
             case 2:
-                let cell =  mrdaTable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
-                 
-                cell.configure(title: "Dosage", placeholder: ViewModel.dataSource[0].dosage)
-                return cell
+                
+                
+                cell.configure(title: "Dosage", placeholder: ViewModel.dataSource[0].dosage, tag: 6)
                 
             default:
                 fatalError()
@@ -173,10 +186,10 @@ extension MRDAViewController: UITableViewDataSource{
         case 3:
             switch indexPath.row {
             case 0:
+                let largeCell = mrdaTable.dequeueReusableCell(withIdentifier: LargeTextFieldTableViewCell.identifier) as! LargeTextFieldTableViewCell
                 
-                let largeCell = mrdaTable.dequeueReusableCell(withIdentifier: LargeTextFieldTableViewCell.identifier, for: indexPath) as! LargeTextFieldTableViewCell
-                
-                largeCell.configuration(description: ViewModel.dataSource[indexPath.row].description)
+                largeCell.largeTextField.delegate = self
+                largeCell.configuration(description: ViewModel.dataSource[indexPath.row].description, tag: 7)
                 
                 return largeCell
             default:
@@ -185,9 +198,49 @@ extension MRDAViewController: UITableViewDataSource{
         default:
             fatalError()
         }
+        return cell
         
     }
     
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        textField.addTarget(self, action: #selector(valueChanged), for: .editingChanged)
+        return true
+    }
+    
+    @objc func valueChanged(_ textField: UITextField) {
+        switch textField.tag {
+        case 0:
+            text0 = textField.text ?? "no value"
+        case 1:
+            text1 = textField.text ?? "no value"
+        case 2:
+            text2 = textField.text ?? "no value"
+        case 3:
+            text3 = textField.text ?? "no value"
+        case 4:
+            text4 = textField.text ?? "no value"
+        case 5:
+            text5 = textField.text ?? "no value"
+        case 6:
+            text6 = textField.text ?? "no value"
+        case 7:
+            text7 = textField.text ?? "no value"
+//        case 0:
+//            text1 = textField.text ?? "no value"
+//        case 0:
+//            text1 = textField.text ?? "no value"
+//        case 0:
+//            text1 = textField.text ?? "no value"
+//        case 0:
+//            text1 = textField.text ?? "no value"
+//        case 0:
+//            text1 = textField.text ?? "no value"
+//        case 0:
+//            text1 = textField.text ?? "no value"
+        default:
+            print("not yet developed")
+        }
+    }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
@@ -208,15 +261,15 @@ extension MRDAViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 30.0
     }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       
+        
         tableView.allowsSelection = false
         tableView.deselectRow(at: indexPath, animated: false)
         
         
     }
-     
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section != 3{
             return 45
@@ -227,6 +280,6 @@ extension MRDAViewController: UITableViewDataSource{
         }
         
     }
-
+    
 }
 

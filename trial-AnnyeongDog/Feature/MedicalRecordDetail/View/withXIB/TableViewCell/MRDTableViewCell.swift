@@ -18,10 +18,15 @@ class MRDTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contenTextField: UITextField!
     
-    func configure(title: String, placeholder: String){
+    func configure(title: String, placeholder: String, tag: Int){
         titleLabel.text = title
         contenTextField.placeholder = placeholder
         contenTextField.borderStyle = .none
+        contenTextField.tag = tag
+    }
+    
+    func setValue(value: String){
+        contenTextField.text = value
     }
     
     override func awakeFromNib() {
