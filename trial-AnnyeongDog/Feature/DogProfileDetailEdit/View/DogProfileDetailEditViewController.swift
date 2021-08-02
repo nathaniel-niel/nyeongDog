@@ -36,7 +36,7 @@ class DogProfileDetailEditViewController: UIViewController {
         
         print("testing 1234")
         
-        
+        navigationItem.largeTitleDisplayMode = .never
         setup()
         
         
@@ -58,10 +58,10 @@ class DogProfileDetailEditViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Yes", style: .destructive,handler: { action in
             
             // back to dog profile view
-            let storyboard = UIStoryboard(name: "Storyboard_name", bundle: nil)
+            let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
             
-            let vc = storyboard.instantiateViewController(identifier: "Storyboard_Identifier")
-            self.navigationController?.popToViewController(vc, animated: true)
+            let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
+            self.navigationController?.pushViewController(vc, animated: false)
         }))
         self.present(alert, animated: true)
     }
@@ -72,6 +72,12 @@ class DogProfileDetailEditViewController: UIViewController {
         //call function to update data to firebase from class DatabaseManager
     }
     
+    @IBAction func MedicalRecordButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "MedicalRecordsFilledState", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(identifier: "medicalRecordsFilled")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 
