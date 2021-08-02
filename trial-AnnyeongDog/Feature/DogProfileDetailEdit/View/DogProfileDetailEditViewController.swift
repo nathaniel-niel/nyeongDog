@@ -52,8 +52,10 @@ class DogProfileDetailEditViewController: UIViewController {
     }
     
     @objc func backButtonTapped(){
+        let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
         
-        _ = navigationController?.popViewController(animated: true)
+        let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
+        self.navigationController?.pushViewController(vc, animated: false)
     }
     
     

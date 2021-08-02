@@ -64,7 +64,10 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         return cell
     }
     @IBAction func addDidTapped(_ sender: Any) {
-        self.performSegue(withIdentifier: "segueDogProfileDetail", sender: nil)
+        let storyboard = UIStoryboard(name: "DogProfileDetailAdd", bundle: nil)
+        let nVC = (storyboard.instantiateViewController(identifier: "DogProfileDetailAdd"))
+        
+        self.navigationController?.pushViewController(nVC, animated: true)
     }
     
 }
