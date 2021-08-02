@@ -194,6 +194,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="9AM-JC-0wc">
                             <color key="tintColor" red="0.3835351467" green="0.42501482369999999" blue="0.67061495780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="Y6W-OH-hqX" id="t36-dR-ped"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

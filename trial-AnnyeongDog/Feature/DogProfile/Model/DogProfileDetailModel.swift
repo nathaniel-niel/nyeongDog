@@ -8,7 +8,6 @@
 import Foundation
 
 struct DogProfileModel {
-    let dogId: Int
     let dogName: String
     let dateOfBirth: String
     let gender: String

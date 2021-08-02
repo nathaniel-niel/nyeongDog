@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class DogProfileDetailViewController: UIViewController {
     
@@ -47,6 +48,12 @@ class DogProfileDetailViewController: UIViewController {
         
         
     }
+    
+    
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+    
+    }
+    
     
     @IBAction func didBackButtonTapped(_ sender: UIBarButtonItem) {
         
