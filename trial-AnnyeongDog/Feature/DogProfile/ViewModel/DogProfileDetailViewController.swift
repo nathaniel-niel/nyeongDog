@@ -25,6 +25,7 @@ class DogProfileDetailViewController: UIViewController {
     @IBOutlet weak var rightBarButtonItem: UIBarButtonItem!
     
     var pickerView = UIPickerView()
+    var isExpand = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,15 +39,18 @@ class DogProfileDetailViewController: UIViewController {
         
         updateUI()
         
+        // Move the Content that blocked by the Keyboard
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppear), name:UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDissapear), name:UIResponder.keyboardWillHideNotification, object: nil)
+        
+        
+        
     }
     
     @IBAction func didBackButtonTapped(_ sender: UIBarButtonItem) {
         
         _ = navigationController?.popViewController(animated: true)
-        
-        
-        scrollView.contentSize = CGSize(width: self.view.frame.width - 40, height: self.view.frame.height - 80)
-        
         
     }
     
@@ -71,8 +75,27 @@ class DogProfileDetailViewController: UIViewController {
         
     }
     
+    @objc func keyboardAppear(notification:NSNotification){
+        
+        guard let userInfo = notification.userInfo else { return }
+        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        
+        var contentInset:UIEdgeInsets = self.scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height + 20
+        scrollView.contentInset = contentInset
+    }
+    
+    @objc func keyboardDissapear(notification:NSNotification){
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInset
+    }
+    
     
     func updateUI(){
+        
+        scrollView.contentSize = CGSize(width: self.view.frame.width - 40, height: self.view.frame.height - 80)
+        
         navigationItem.largeTitleDisplayMode = .never
         makeRounded()
     }
