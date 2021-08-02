@@ -48,16 +48,28 @@ class DogProfileDetailViewController: UIViewController {
         _ = navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func medicalRecordsPressed(_ sender: UIButton) {
+    @IBAction func deleteDidTapped(_ sender: UIButton) {
         
-        if prepareForMedical.statement(){
-            self.navigationController?.pushViewController(prepareForMedical.navigateToMedicalRecords(), animated: true)
+//        if prepareForMedical.statement(){
+//            self.navigationController?.pushViewController(prepareForMedical.navigateToMedicalRecords(), animated: true)
+//
+//        }else{
+//            self.navigationController?.pushViewController(prepareForMedical.navigateToMedicalRecordsEmpty(), animated: true)
+//        }
+        let alert = UIAlertController(title: "Hapus Profil Anjing", message: "Setelah anda menghapus profil ini, anda tidak akan dapat mengembalikannya. Apakah anda tetap ingin melanjutkan?", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Tidak", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Ya", style: .destructive,handler: { action in
             
-        }else{
-            self.navigationController?.pushViewController(prepareForMedical.navigateToMedicalRecordsEmpty(), animated: true)
-        }
-        
+            // back to dog profile view
+            let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
+            
+            let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
+            self.navigationController?.pushViewController(vc, animated: false)
+        }))
+        self.present(alert, animated: true)
     }
+        
     
     @IBAction func dogImage(_ sender: UIButton) {
         let vc = UIImagePickerController()

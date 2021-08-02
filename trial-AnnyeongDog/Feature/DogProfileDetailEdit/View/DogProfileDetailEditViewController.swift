@@ -48,7 +48,7 @@ class DogProfileDetailEditViewController: UIViewController {
         self.navigationItem.title = "Dog Profile"
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonTapped))
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveButtonTapped))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editButtonTapped))
     }
     
     @objc func backButtonTapped(){
@@ -67,9 +67,11 @@ class DogProfileDetailEditViewController: UIViewController {
     }
     
     
-    @objc func saveButtonTapped(){
+    @objc func editButtonTapped(){
+        let storyboard = UIStoryboard(name: "DogProfileDetail", bundle: nil)
         
-        //call function to update data to firebase from class DatabaseManager
+        let vc = storyboard.instantiateViewController(identifier: "DogProfileDetail")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func MedicalRecordButton(_ sender: Any) {
