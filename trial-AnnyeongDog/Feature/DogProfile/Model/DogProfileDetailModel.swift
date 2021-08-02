@@ -16,4 +16,5 @@ struct DogProfileModel {
     let weight: String
     let color: String
     let alergen: String
+    
 }
