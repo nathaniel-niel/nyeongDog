@@ -32,7 +32,7 @@ class MedicalRecordsFilledViewController: UIViewController {
     
     @IBAction func addPressed(_ sender: UIBarButtonItem) {
         
-        self.present(prepareToMRD.prepare(), animated: true, completion: nil)
+        self.present(prepareToMRD.prepareToAddMRD(), animated: true, completion: nil)
     }
     
     func updateUI(){
@@ -64,7 +64,13 @@ extension MedicalRecordsFilledViewController: UITableViewDelegate, UITableViewDa
     }
     
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableViewMedicalRecords.deselectRow(at: indexPath, animated: true)
+        
+        self.present(prepareToMRD.prepare(), animated: true, completion: nil)
+        
+    }
     
     
 }
