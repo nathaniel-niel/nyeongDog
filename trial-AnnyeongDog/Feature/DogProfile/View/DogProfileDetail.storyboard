@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="poppins.bold.ttf">
+        <array key="Poppins-Bold.ttf">
             <string>Poppins-Bold</string>
         </array>
     </customFonts>
@@ -41,7 +41,7 @@
                                         <attributedString key="attributedText">
                                             <fragment content="Dog Name">
                                                 <attributes>
-                                                    <font key="NSFont" size="13" name="Poppins-Regular"/>
+                                                    <font key="NSFont" metaFont="system"/>
                                                 </attributes>
                                             </fragment>
                                         </attributedString>
@@ -53,7 +53,7 @@
                                         <attributedString key="attributedText">
                                             <fragment content="Date of Birth">
                                                 <attributes>
-                                                    <font key="NSFont" size="13" name="Poppins-Regular"/>
+                                                    <font key="NSFont" metaFont="system"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -72,7 +72,7 @@
                                         <attributedString key="attributedText">
                                             <fragment content="Gender">
                                                 <attributes>
-                                                    <font key="NSFont" size="13" name="Poppins-Regular"/>
+                                                    <font key="NSFont" metaFont="system"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -91,7 +91,7 @@
                                         <attributedString key="attributedText">
                                             <fragment content="Breed">
                                                 <attributes>
-                                                    <font key="NSFont" size="13" name="Poppins-Regular"/>
+                                                    <font key="NSFont" metaFont="system"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -110,7 +110,7 @@
                                         <attributedString key="attributedText">
                                             <fragment content="Weight">
                                                 <attributes>
-                                                    <font key="NSFont" size="13" name="Poppins-Regular"/>
+                                                    <font key="NSFont" metaFont="system"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -129,7 +129,7 @@
                                         <attributedString key="attributedText">
                                             <fragment content="Color">
                                                 <attributes>
-                                                    <font key="NSFont" size="13" name="Poppins-Regular"/>
+                                                    <font key="NSFont" metaFont="system"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>
@@ -148,7 +148,7 @@
                                         <attributedString key="attributedText">
                                             <fragment content="Allergen">
                                                 <attributes>
-                                                    <font key="NSFont" size="13" name="Poppins-Regular"/>
+                                                    <font key="NSFont" metaFont="system"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                 </attributes>
                                             </fragment>

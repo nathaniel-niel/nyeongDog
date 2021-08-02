@@ -30,6 +30,7 @@
 		5B67967426B41796004514F3 /* DogProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B67967026B41794004514F3 /* DogProfileTableViewCell.swift */; };
 		5B67967526B41796004514F3 /* DogProfileFilledState.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B67967126B41795004514F3 /* DogProfileFilledState.storyboard */; };
 		5B67967626B41796004514F3 /* DogProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B67967226B41796004514F3 /* DogProfileListViewController.swift */; };
+		5B94000C26B7F8CA0020C09C /* MRDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B94000B26B7F8CA0020C09C /* MRDModel.swift */; };
 		7ACD3D5FCF25095A1818F235 /* Pods_trial_AnnyeongDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717D5942BF1328C6EDE1986A /* Pods_trial_AnnyeongDog.framework */; };
 		B52BF32926B7E62200DC3B74 /* LaunchScreen in Resources */ = {isa = PBXBuildFile; fileRef = B52BF32826B7E62200DC3B74 /* LaunchScreen */; };
 		B57E0EB826B45B2900FACDAC /* Poppins in Resources */ = {isa = PBXBuildFile; fileRef = B57E0EB726B45B2900FACDAC /* Poppins */; };
@@ -94,8 +95,9 @@
 		5B67967026B41794004514F3 /* DogProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogProfileTableViewCell.swift; sourceTree = "<group>"; };
 		5B67967126B41795004514F3 /* DogProfileFilledState.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DogProfileFilledState.storyboard; sourceTree = "<group>"; };
 		5B67967226B41796004514F3 /* DogProfileListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogProfileListViewController.swift; sourceTree = "<group>"; };
+		5B94000B26B7F8CA0020C09C /* MRDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRDModel.swift; sourceTree = "<group>"; };
 		717D5942BF1328C6EDE1986A /* Pods_trial_AnnyeongDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trial_AnnyeongDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B52BF32826B7E62200DC3B74 /* LaunchScreen */ = {isa = PBXFileReference; lastKnownFileType = folder; path = LaunchScreen; sourceTree = "<group>"; };
+		B52BF32826B7E62200DC3B74 /* LaunchScreen */ = {isa = PBXFileReference; lastKnownFileType = folder; name = LaunchScreen; path = MedicalRecordDetail/View/LaunchScreen; sourceTree = "<group>"; };
 		B57E0EB726B45B2900FACDAC /* Poppins */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Poppins; sourceTree = "<group>"; };
 		B5821A5926B7EEA0006DDED9 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		B5821A5C26B7EEA0006DDED9 /* SignInViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewExtension.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				2D628ED926B297DE0008ECD2 /* MRD-dummyData.swift */,
+				5B94000B26B7F8CA0020C09C /* MRDModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				C037876426B2A199004344E0 /* MedicalRecords */,
 				2D628E8826B297350008ECD2 /* MedicalRecordDetail */,
 				B584B3E026B28E3A005A02C5 /* LaunchScreen */,
+				B52BF32826B7E62200DC3B74 /* LaunchScreen */,
 				B584B3CE26B28DF2005A02C5 /* Example */,
 			);
 			path = Feature;
@@ -457,7 +461,6 @@
 		C037876C26B2A1CB004344E0 /* DogProfile */ = {
 			isa = PBXGroup;
 			children = (
-				B52BF32826B7E62200DC3B74 /* LaunchScreen */,
 				C037879626B2A226004344E0 /* Model */,
 				C037879526B2A21F004344E0 /* View */,
 				C037879426B2A210004344E0 /* ViewModel */,
@@ -662,6 +665,7 @@
 				B5821A6626B7EEA0006DDED9 /* SigninViewController.swift in Sources */,
 				B584B3D826B28DF2005A02C5 /* ExampleViewModel.swift in Sources */,
 				2D628EDA26B297DE0008ECD2 /* MRD-dummyData.swift in Sources */,
+				5B94000C26B7F8CA0020C09C /* MRDModel.swift in Sources */,
 				5B05C39D26B2B3B00034A66A /* DeleteButtonTableViewCell.swift in Sources */,
 				B5821A6126B7EEA0006DDED9 /* UserModel.swift in Sources */,
 				C00DE8FE26B3D8AE00E99343 /* PrepareToMRD.swift in Sources */,
