@@ -105,7 +105,7 @@ class MRDAViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
 
 extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
