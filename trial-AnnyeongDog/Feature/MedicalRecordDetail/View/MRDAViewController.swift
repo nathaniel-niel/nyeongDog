@@ -12,14 +12,14 @@ class MRDAViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
     @IBOutlet weak var mrdaTable: UITableView!
     
     let ViewModel = MRDViewModel()
-    var text0: String = ""
-    var text1: String = ""
-    var text2: String = ""
-    var text3: String = ""
-    var text4: String = ""
-    var text5: String = ""
-    var text6: String = ""
-    var text7: String = ""
+    var date: String = ""
+    var vet: String = ""
+    var diagnosis: String = ""
+    var vaccine: String = ""
+    var medicine: String = ""
+    var vaccineType: String = ""
+    var dosage: String = ""
+//    var text7: String = ""
     var isExpand: Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -91,21 +91,18 @@ class MRDAViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
         //        let navVc = UINavigationController(rootViewController: vc)
         //
         //        self.present(navVc, animated: false, completion: nil)
-        print(text0)
-        print(text1)
-        print(text2)
-        print(text3)
-        print(text4)
-        print(text5)
-        print(text6)
-        print(text7)
+        print("date :",date)
+        print("vet :",vet)
+        print("diagnosis :",diagnosis)
+        print("vaccine :",vaccine)
+        print("medicine :",medicine)
+        print("vaccine type :",vaccineType)
+        print("dosage :",dosage)
+//        print("text ke 7 :",text7)
         
     }
 }
 
-//extension MRDAViewController: UITableViewDelegate{
-//
-//}
 extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
     func numberOfSections(in tableView: UITableView) -> Int {
         return 4
@@ -119,8 +116,8 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
             return 3
         case 2:
             return 3
-        case 3:
-            return 1
+//        case 3:
+//            return 1
         default:
             fatalError()
         }
@@ -177,18 +174,18 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
             default:
                 fatalError()
             }
-        case 3:
-            switch indexPath.row {
-            case 0:
-                let largeCell = mrdaTable.dequeueReusableCell(withIdentifier: LargeTextFieldTableViewCell.identifier) as! LargeTextFieldTableViewCell
-                
-                largeCell.largeTextField.delegate = self
-                largeCell.configuration(description: ViewModel.dataSource[indexPath.row].description, tag: 7)
-                
-                return largeCell
-            default:
-                fatalError()
-            }
+//        case 3:
+//            switch indexPath.row {
+//            case 0:
+//                let largeCell = mrdaTable.dequeueReusableCell(withIdentifier: LargeTextFieldTableViewCell.identifier) as! LargeTextFieldTableViewCell
+//
+//                largeCell.largeTextField.delegate = self
+//                largeCell.configuration(description: ViewModel.dataSource[indexPath.row].description, tag: 8)
+//
+//                return largeCell
+//            default:
+//                fatalError()
+//            }
         default:
             fatalError()
         }
@@ -205,19 +202,19 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
     @objc func valueTextFieldChanged(_ textField: UITextField) {
         switch textField.tag {
         case 0:
-            text0 = textField.text ?? "no value"
+            date = textField.text ?? "no value"
         case 1:
-            text1 = textField.text ?? "no value"
+            vet = textField.text ?? "no value"
         case 2:
-            text2 = textField.text ?? "no value"
+            diagnosis = textField.text ?? "no value"
         case 3:
-            text3 = textField.text ?? "no value"
+            vaccine = textField.text ?? "no value"
         case 4:
-            text4 = textField.text ?? "no value"
+            medicine = textField.text ?? "no value"
         case 5:
-            text5 = textField.text ?? "no value"
+            vaccineType = textField.text ?? "no value"
         case 6:
-            text6 = textField.text ?? "no value"
+            dosage = textField.text ?? "no value"
         //        case 0:
         //            text1 = textField.text ?? "no value"
         //        case 0:
@@ -234,16 +231,19 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
             print("not yet developed")
         }
     }
-    
-    func textViewDidChange(_ textView: UITextView) -> Bool {
-        var val = false
-        if (textView.hasText) {
-            text7 = textView.text
-            val = true
-        }
-        return val
-        
-    }
+//
+//    func textViewDidEndEditing(_ textView: UITextView) {
+//        <#code#>
+//    }
+//    func textViewDidChange(_ textView: UITextView) -> Bool {
+//        var val = false
+//        if (textView.hasText) {
+//            text7 = textView.text
+//            val = true
+//        }
+//        return val
+//
+//    }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
@@ -253,9 +253,9 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
             return "Details"
         case 2:
             return "Medical History"
-        case 3:
-            
-            return "Description"
+//        case 3:
+//
+//            return "Description"
         default:
             fatalError()
         }
