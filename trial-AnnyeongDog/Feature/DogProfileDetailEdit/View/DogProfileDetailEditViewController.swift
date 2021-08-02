@@ -34,6 +34,9 @@ class DogProfileDetailEditViewController: UIViewController {
         
         genderTextField.inputView = pickerView
         
+        print("testing 1234")
+        
+        
         setup()
         
         
