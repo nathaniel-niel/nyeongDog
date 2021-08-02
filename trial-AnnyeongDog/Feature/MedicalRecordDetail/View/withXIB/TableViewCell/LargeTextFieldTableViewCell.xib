@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -17,34 +16,24 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="desc" translatesAutoresizingMaskIntoConstraints="NO" id="4Sg-GX-Du7">
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EQh-Zf-y0z">
                         <rect key="frame" x="10" y="10" width="300" height="80"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <color key="textColor" systemColor="labelColor"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                    </textView>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="4Sg-GX-Du7" secondAttribute="trailing" constant="10" id="FHd-vB-uAK"/>
-                    <constraint firstItem="4Sg-GX-Du7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Hls-TU-7He"/>
-                    <constraint firstItem="4Sg-GX-Du7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ni4-bc-Btj"/>
-                    <constraint firstAttribute="bottom" secondItem="4Sg-GX-Du7" secondAttribute="bottom" constant="10" id="teV-V1-ytI"/>
+                    <constraint firstItem="EQh-Zf-y0z" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="A60-nv-iW2"/>
+                    <constraint firstItem="EQh-Zf-y0z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Hv1-HZ-Tge"/>
+                    <constraint firstAttribute="trailing" secondItem="EQh-Zf-y0z" secondAttribute="trailing" constant="10" id="LcI-FM-hIc"/>
+                    <constraint firstAttribute="bottom" secondItem="EQh-Zf-y0z" secondAttribute="bottom" constant="10" id="hg3-Pl-RNj"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="largeTextField" destination="4Sg-GX-Du7" id="hev-C3-j0R"/>
+                <outlet property="largeTextField" destination="EQh-Zf-y0z" id="k9o-y4-D0k"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="119.86607142857142"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

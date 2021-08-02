@@ -10,7 +10,8 @@ import UIKit
 class LargeTextFieldTableViewCell: UITableViewCell {
 
     static let identifier = "largeCell"
-    @IBOutlet weak var largeTextField: UITextView!
+    
+    @IBOutlet weak var largeTextField: UITextField!
     
     static func nib() -> UINib{
         return UINib(nibName: "LargeTextFieldTableViewCell", bundle: nil)
