@@ -468,6 +468,8 @@
 		C037879426B2A210004344E0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				5B67967226B41796004514F3 /* DogProfileListViewController.swift */,
+				5B67967026B41794004514F3 /* DogProfileTableViewCell.swift */,
 				C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */,
 			);
 			path = ViewModel;
@@ -478,8 +480,6 @@
 			children = (
 				5B67966F26B41793004514F3 /* DogProfileEmptyState.storyboard */,
 				5B67967126B41795004514F3 /* DogProfileFilledState.storyboard */,
-				5B67967226B41796004514F3 /* DogProfileListViewController.swift */,
-				5B67967026B41794004514F3 /* DogProfileTableViewCell.swift */,
 				C037877126B2A1CB004344E0 /* DogProfileDetail.storyboard */,
 			);
 			path = View;
