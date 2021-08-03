@@ -18,6 +18,7 @@ class DogProfileDetailAddViewController: UIViewController {
     @IBOutlet weak var dogImage: UIImageView!
     @IBOutlet weak var allergyTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var dogsDOB: UITextField!
     
     
     // MARK: Object Declaration
@@ -107,23 +108,75 @@ class DogProfileDetailAddViewController: UIViewController {
 
     
 
-// Picker buat Keyboard Gender
+// MARK: Function for UiPicker on Keyboard ( Both DOB and Gender )
 
 extension DogProfileDetailAddViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        if pickerView.tag == 2 {
+            return 1
+        }else{
+            return 4
+        }
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return genderModel.genderArray.count
+        if pickerView.tag == 2 {
+            return genderModel.genderArray.count
+            
+        }else{
+            switch component {
+            case 0:
+                return genderModel.dogYear.count
+            case 1:
+                return 1
+            case 2:
+                return genderModel.dogMonth.count
+            case 3:
+                return 1
+            default:
+                return 1
+                
+            }
+        }
+        
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return genderModel.genderArray[row]
+        if pickerView.tag == 2 {
+            return genderModel.genderArray[row]
+        }else{
+            switch component {
+            case 0:
+                return genderModel.dogYear[row]
+            case 1 :
+                return "Tahun"
+            case 2:
+                return genderModel.dogMonth[row]
+            case 3:
+                return "Bulan"
+            default:
+                return genderModel.dogMonth[row]
+            }
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        genderTextField.text = genderModel.genderArray[row]
+        if pickerView.tag == 2{
+            
+            genderTextField.text = genderModel.genderArray[row]
+            
+        } else {
+            
+            let dogMonth = pickerView.selectedRow(inComponent: 2)
+            let dogYear = pickerView.selectedRow(inComponent: 0)
+            let selectedDogYear = genderModel.dogYear[dogYear]
+            let selectedDogMonth = genderModel.dogMonth[dogMonth]
+            
+            dogsDOB.text = "\(selectedDogYear) Tahun \(selectedDogMonth) Bulan"
+        }
+        
     }
     
 }

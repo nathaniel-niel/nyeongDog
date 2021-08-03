@@ -19,6 +19,7 @@ class DogProfileDetailEditViewController: UIViewController {
     @IBOutlet weak var colorTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var allergyTextField: UITextField!
+    @IBOutlet weak var dogsDOB: UITextField!
     
     
     // MARK: Object Declaration
