@@ -15,7 +15,9 @@ class DogProfileDetailAddViewController: UIViewController {
     @IBOutlet weak var breedTextField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var colorTextField: UITextField!
+    @IBOutlet weak var dogImage: UIImageView!
     @IBOutlet weak var allergyTextField: UITextField!
+    @IBOutlet weak var scrollView: UIScrollView!
     
     
     // MARK: Object Declaration
@@ -27,6 +29,7 @@ class DogProfileDetailAddViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        updateUI()
         // Do any additional setup after loading the view.
         pickerView.delegate = self
         pickerView.dataSource = self
@@ -48,6 +51,26 @@ class DogProfileDetailAddViewController: UIViewController {
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonTapped))
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveButtonTapped))
+    }
+    
+    //MARK: - Scroll function
+    func updateUI(){
+        
+        scrollView.contentSize = CGSize(width: self.view.frame.width - 40, height: self.view.frame.height - 80)
+        
+        navigationItem.largeTitleDisplayMode = .never
+        
+        makeRounded()
+    }
+    
+    //MARK: - Dog profile rounded
+    func makeRounded() {
+        
+        dogImage.layer.borderWidth = 1
+        dogImage.layer.masksToBounds = false
+        dogImage.layer.borderColor = UIColor.black.cgColor
+        dogImage.layer.cornerRadius = dogImage.frame.height/2
+        dogImage.clipsToBounds = true
     }
     
     // MARK: - Back button

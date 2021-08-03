@@ -12,10 +12,12 @@ class DogProfileDetailEditViewController: UIViewController {
     
     //MARK: UI Components Declaration
     @IBOutlet weak var dogsTextField: UITextField!
+    @IBOutlet weak var dogImage: UIImageView!
     @IBOutlet weak var genderTextField: UITextField!
     @IBOutlet weak var breedTextField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var colorTextField: UITextField!
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var allergyTextField: UITextField!
     
     
@@ -27,6 +29,8 @@ class DogProfileDetailEditViewController: UIViewController {
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        updateUI()
         
         // Do any additional setup after loading the view.
         pickerView.delegate = self
@@ -51,6 +55,7 @@ class DogProfileDetailEditViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editButtonTapped))
     }
     
+    //MARK: - back button did tapped
     @objc func backButtonTapped(){
         let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
         
@@ -58,7 +63,28 @@ class DogProfileDetailEditViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: false)
     }
     
+    //MARK: - Scroll function
+    func updateUI(){
+        
+        scrollView.contentSize = CGSize(width: self.view.frame.width - 40, height: self.view.frame.height - 80)
+        
+        navigationItem.largeTitleDisplayMode = .never
+        
+        makeRounded()
+    }
     
+    //MARK: - Dog profile rounded
+    func makeRounded() {
+        
+        dogImage.layer.borderWidth = 1
+        dogImage.layer.masksToBounds = false
+        dogImage.layer.borderColor = UIColor.black.cgColor
+        dogImage.layer.cornerRadius = dogImage.frame.height/2
+        dogImage.clipsToBounds = true
+    }
+    
+    
+    //MARK: - edit buttin did tapped
     @objc func editButtonTapped(){
         let storyboard = UIStoryboard(name: "DogProfileDetail", bundle: nil)
         
@@ -66,6 +92,7 @@ class DogProfileDetailEditViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    //MARK: - Medical Record Button
     @IBAction func MedicalRecordButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "MedicalRecordsFilledState", bundle: nil)
         
