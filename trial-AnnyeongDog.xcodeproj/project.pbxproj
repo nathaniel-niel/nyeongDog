@@ -23,6 +23,7 @@
 		5B05C39A26B2A9450034A66A /* MRDEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05C39926B2A9450034A66A /* MRDEViewController.swift */; };
 		5B05C39D26B2B3B00034A66A /* DeleteButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05C39B26B2B3B00034A66A /* DeleteButtonTableViewCell.swift */; };
 		5B05C39E26B2B3B00034A66A /* DeleteButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B05C39C26B2B3B00034A66A /* DeleteButtonTableViewCell.xib */; };
+		5B3CE4A426B8E96700ECF396 /* DogProfileDetailAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3CE4A326B8E96700ECF396 /* DogProfileDetailAddViewController.swift */; };
 		5B3F4BEB26B3FA7F004448DA /* MRDA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3F4BEA26B3FA7F004448DA /* MRDA.storyboard */; };
 		5B3F4BEE26B3FAD7004448DA /* MRDAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F4BEC26B3FAD7004448DA /* MRDAViewController.swift */; };
 		5B67966E26B41787004514F3 /* dummyDataDogProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B67966D26B41787004514F3 /* dummyDataDogProfile.swift */; };
@@ -87,6 +88,7 @@
 		5B05C39926B2A9450034A66A /* MRDEViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRDEViewController.swift; sourceTree = "<group>"; };
 		5B05C39B26B2B3B00034A66A /* DeleteButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButtonTableViewCell.swift; sourceTree = "<group>"; };
 		5B05C39C26B2B3B00034A66A /* DeleteButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteButtonTableViewCell.xib; sourceTree = "<group>"; };
+		5B3CE4A326B8E96700ECF396 /* DogProfileDetailAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileDetailAddViewController.swift; sourceTree = "<group>"; };
 		5B3F4BEA26B3FA7F004448DA /* MRDA.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MRDA.storyboard; sourceTree = "<group>"; };
 		5B3F4BEC26B3FAD7004448DA /* MRDAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRDAViewController.swift; sourceTree = "<group>"; };
 		5B67966D26B41787004514F3 /* dummyDataDogProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = dummyDataDogProfile.swift; sourceTree = "<group>"; };
@@ -469,6 +471,7 @@
 			isa = PBXGroup;
 			children = (
 				C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */,
+				5B3CE4A326B8E96700ECF396 /* DogProfileDetailAddViewController.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -654,6 +657,7 @@
 				2D74BE1826B454E8009B3629 /* DogProfileDetailEditViewController.swift in Sources */,
 				C037876A26B2A199004344E0 /* MedicalRecordsViewController.swift in Sources */,
 				B584B3DA26B28DF2005A02C5 /* ExampleViewController.swift in Sources */,
+				5B3CE4A426B8E96700ECF396 /* DogProfileDetailAddViewController.swift in Sources */,
 				B5821A6426B7EEA0006DDED9 /* Signin.swift in Sources */,
 				C00DE8FF26B3D8AE00E99343 /* MedicalFiilledTableViewCell.swift in Sources */,
 				C00DE8FB26B3D8AE00E99343 /* dummyTesting.swift in Sources */,
