@@ -24,7 +24,9 @@ class DogProfileDetailAddViewController: UIViewController {
     // MARK: Object Declaration
     var genderModel = GenderModel()
     var prepareForMedical = PrepareForMedical()
+    var dogsModel = DogsModel()
     var pickerView = UIPickerView()
+    var dobPickerView = UIPickerView()
     
     // MARK: Life Cycle
     override func viewDidLoad() {
@@ -32,17 +34,39 @@ class DogProfileDetailAddViewController: UIViewController {
         
         updateUI()
         // Do any additional setup after loading the view.
-        pickerView.delegate = self
-        pickerView.dataSource = self
+        genderTextField.inputView = pickerView
+        dogsDOB.inputView = dobPickerView
+        
+        uiPickerView()
         
         genderTextField.inputView = pickerView
         
-        print("testing 1234")
-        
         navigationItem.largeTitleDisplayMode = .never
+        
         setup()
         
+        //MARK: - Risen the View that blocked by the Keyboard
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppear), name:UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDissapear), name:UIResponder.keyboardWillHideNotification, object: nil)
         
+        
+    }
+    // MARK: Keyboard Function
+    @objc func keyboardAppear(notification:NSNotification){
+        
+        guard let userInfo = notification.userInfo else { return }
+        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        
+        var contentInset:UIEdgeInsets = self.scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height + 20
+        scrollView.contentInset = contentInset
+    }
+    
+    
+    @objc func keyboardDissapear(notification:NSNotification){
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInset
     }
     
     // MARK: Functions to Navigation Bar
@@ -74,6 +98,19 @@ class DogProfileDetailAddViewController: UIViewController {
         dogImage.clipsToBounds = true
     }
     
+    //MARK: - for Picker View function
+    func uiPickerView(){
+        
+        dobPickerView.tag = 1
+        pickerView.tag = 2
+        
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        dobPickerView.delegate = self
+        dobPickerView.dataSource = self
+        
+    }
+    
     // MARK: - Back button
     @objc func backButtonTapped(){
         let alert = UIAlertController(title: "Unsaved Changes", message: "You have unsaved changes, are you sure you want to cancel?.", preferredStyle: .alert)
@@ -90,12 +127,20 @@ class DogProfileDetailAddViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
-    // MARK: - Save button (belum bisa simpen data)
+    // MARK: - Save button udah bisa simpen data
     @objc func saveButtonTapped(){
+        getTextfieldData()
+        
         let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
         
         let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
         self.navigationController?.pushViewController(vc, animated: false)
+    }
+    
+    func getTextfieldData(){
+        
+        dogsModel.updateModel(dogsModel.dogsIdGenerator(), dogsTextField.text ?? "" , dogsDOB.text ?? "", genderTextField.text ?? "" , breedTextField.text ?? "" , weightTextField.text ?? "" , colorTextField.text ?? "" , allergyTextField.text ?? "")
+        
     }
     
 //    @IBAction func MedicalRecordButton(_ sender: Any) {
