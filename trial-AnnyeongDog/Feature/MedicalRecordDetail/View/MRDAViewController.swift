@@ -197,13 +197,13 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
         case 1:
             vet = textField.text ?? "no value"
         case 2:
-            diagnosis = textField.text ?? "no value"
+            vaccineType = textField.text ?? "no value"
         case 3:
-            vaccine = textField.text ?? "no value"
+            diagnosis = textField.text ?? "no value"
         case 4:
             medicine = textField.text ?? "no value"
         case 5:
-            vaccineType = textField.text ?? "no value"
+            dosage = textField.text ?? "no value"
 
         default:
             print("not yet developed")
