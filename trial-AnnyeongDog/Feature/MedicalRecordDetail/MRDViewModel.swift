@@ -15,6 +15,15 @@ class MRDViewModel{
     
     ]
     
+    let dataModel: [MRDModel] = []
+    
+    
+    func fetchData(){
+        
+        
+        //dataModel = [ ]
+    }
+    
     
     
     
