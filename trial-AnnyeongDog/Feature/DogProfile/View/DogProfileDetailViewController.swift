@@ -29,30 +29,20 @@ class DogProfileDetailViewController: UIViewController {
     var pickerView = UIPickerView()
     var dobPickerView = UIPickerView()
     var isExpand = false
-    var dogsDateofBirth = ""
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        pickerView.delegate = self
-        pickerView.dataSource = self
-        dobPickerView.delegate = self
-        dobPickerView.dataSource = self
-        
         genderTextField.inputView = pickerView
         dogsDOB.inputView = dobPickerView
         
-        dobPickerView.tag = 1
-        pickerView.tag = 2
-        
-        
-        
         updateUI()
+        uiPickerView()
         
-        // Move the Content that blocked by the Keyboard
         
+        
+        //Risen the View that blocked by the Keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppear), name:UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDissapear), name:UIResponder.keyboardWillHideNotification, object: nil)
         
@@ -80,6 +70,7 @@ class DogProfileDetailViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
+    //MARK: - Delete Button on Dog's Profile
     @IBAction func deleteDidTapped(_ sender: UIButton) {
         
         //        if prepareForMedical.statement(){
@@ -130,6 +121,7 @@ class DogProfileDetailViewController: UIViewController {
         scrollView.contentInset = contentInset
     }
     
+    //MARK: - Get user data from Text Field
     func getTextfieldData(){
         
         dogsModel.updateModel(dogsModel.dogsIdGenerator(), dogsTextField.text ?? "" , dogsDOB.text ?? "", genderTextField.text ?? "" , breedTextField.text ?? "" , weightTextField.text ?? "" , colorTextField.text ?? "" , allergyTextField.text ?? "")
@@ -156,6 +148,18 @@ class DogProfileDetailViewController: UIViewController {
         dogImage.clipsToBounds = true
     }
     
+    //MARK: - for Picker View function
+    func uiPickerView(){
+        
+        dobPickerView.tag = 1
+        pickerView.tag = 2
+        
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        dobPickerView.delegate = self
+        dobPickerView.dataSource = self
+        
+    }
     
     func editButtonLogic(){
         
@@ -173,7 +177,7 @@ class DogProfileDetailViewController: UIViewController {
     
 }
 
-// Picker untuk Gender
+//MARK: - Image Picker for Dog's Photos
 extension DogProfileDetailViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -190,8 +194,7 @@ extension DogProfileDetailViewController: UIImagePickerControllerDelegate, UINav
     
 }
 
-// Picker buat Keyboard Gender
-
+//MARK: - Extension Picker View on Keyboard
 extension DogProfileDetailViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         if pickerView.tag == 2 {
