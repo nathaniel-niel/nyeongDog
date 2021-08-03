@@ -1,15 +1,14 @@
 //
-//  DogProfileDetailEditViewController.swift
+//  DogProfileDetailAddViewController.swift
 //  trial-AnnyeongDog
 //
-//  Created by Nathaniel Andrian on 30/07/21.
+//  Created by Pieter Yonathan on 03/08/21.
 //
 
 import UIKit
 
-class DogProfileDetailEditViewController: UIViewController {
-    
-    
+class DogProfileDetailAddViewController: UIViewController {
+
     //MARK: UI Components Declaration
     @IBOutlet weak var dogsTextField: UITextField!
     @IBOutlet weak var genderTextField: UITextField!
@@ -42,15 +41,16 @@ class DogProfileDetailEditViewController: UIViewController {
         
     }
     
-    // MARK: Functions
+    // MARK: Functions to Navigation Bar
     
     func setup(){
         self.navigationItem.title = "Dog Profile"
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonTapped))
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editButtonTapped))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveButtonTapped))
     }
     
+    // MARK: - Back button
     @objc func backButtonTapped(){
         let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
         
@@ -58,30 +58,27 @@ class DogProfileDetailEditViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: false)
     }
     
-    
-    @objc func editButtonTapped(){
-        let storyboard = UIStoryboard(name: "DogProfileDetail", bundle: nil)
+    // MARK: - Save button (belum bisa simpen data)
+    @objc func saveButtonTapped(){
+        let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
         
-        let vc = storyboard.instantiateViewController(identifier: "DogProfileDetail")
-        self.navigationController?.pushViewController(vc, animated: true)
+        let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
+        self.navigationController?.pushViewController(vc, animated: false)
     }
     
-    @IBAction func MedicalRecordButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "MedicalRecordsFilledState", bundle: nil)
-        
-        let vc = storyboard.instantiateViewController(identifier: "medicalRecordsFilled")
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
+//    @IBAction func MedicalRecordButton(_ sender: Any) {
+//        let storyboard = UIStoryboard(name: "MedicalRecordsFilledState", bundle: nil)
+//
+//        let vc = storyboard.instantiateViewController(identifier: "medicalRecordsFilled")
+//        self.navigationController?.pushViewController(vc, animated: true)
+//    }
 }
 
-
-    
-    
     
 
 // Picker buat Keyboard Gender
 
-extension DogProfileDetailEditViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+extension DogProfileDetailAddViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
