@@ -16,7 +16,7 @@ class DataManipulation {
     static let sharedData = DataManipulation()
     
     // MARK: Model Declaration
-    var mrdModel: [MRDModel] = []
+    var mrdModel : [MRDModel] = []
     // MARK: Firebase configuration
     
     //Connection ke Firebase
@@ -64,39 +64,44 @@ class DataManipulation {
     
     //MARK: Function for Medical Record
     
+    // insert data medical record to firebase
     func insertDataToMedicalRecord(with userId: String, with dogID: Int, with mrd: MRDModel ){
         
         let object: [String: Any] = [
-            "date": mrd.date,
-            "vets": mrd.veterinarian,
-            "diagnosis": mrd.diagnosis,
-            "vaccinne": mrd.vaccine,
-            "medicine": mrd.medicine,
-            "vaccineType": mrd.vaccineType,
-            "dosage": mrd.dosage
+            "date": mrd.date ?? "no data",
+            "vets": mrd.veterinarian ?? "no data",
+            "diagnosis": mrd.diagnosis ?? "no data",
+            "vaccinne": mrd.vaccine ?? "no data",
+            "medicine": mrd.medicine ?? "no data",
+            "vaccineType": mrd.vaccineType ?? "no data",
+            "dosage": mrd.dosage ?? "no data"
         ]
-        ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrd.id)").setValue(object)
+        ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrd.id ?? 0)").setValue(object)
         
     }
     
-    // MARK: Function for Medical Record
-    
+    // retrieve medical record data from firebase
     func fetchMedicalRecordData(with userId: String, with dogID: Int){
-        ref.child("users/\(userId)/dogs/\(dogID)/medical-records").getData { error, snapshot in
-            if let error = error {
-                print("Error getting data \(error)")
-            }
-            else if snapshot.exists() {
-              
-                if let date = snapshot.value as? String {
-                    print(date)
+        
+        // remove all data in model
+        mrdModel.removeAll()
+        
+        
+        ref.child("users/\(userId)/dogs/\(dogID)/medical-records").observe(DataEventType.value) { snapshot in
+            
+            if snapshot.exists(){
+                for child in snapshot.children{
+                    if let snap = child as? DataSnapshot{
+                        guard let val = snap.value as? [String : AnyObject] else { return }
+                        
+                        self.mrdModel.append(MRDModel(id: 0, date: val["date"] as? String, veterinarian: val["vets"] as? String, diagnosis: val["diagnosis"] as? String , vaccine: val["vaccinne"] as? String, medicine: val["medicine"] as? String, vaccineType: val["vaccineType"] as? String, dosage: val["dosage"] as? String))
+                    }
                 }
-//
+                print(self.mrdModel)
             }
-            else {
-                print("No data available")
+            else{
+                print(Error.self)
             }
         }
-        
     }
 }

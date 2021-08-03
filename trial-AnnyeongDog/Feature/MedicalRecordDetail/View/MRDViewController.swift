@@ -12,6 +12,7 @@ class MRDViewController: UIViewController, UITextFieldDelegate {
     // MARK: UI Component Declaration
     @IBOutlet weak var table: UITableView!
     
+    
     // MARK: Variable declaration
     var date: String = ""
     var vet: String = ""
@@ -22,6 +23,8 @@ class MRDViewController: UIViewController, UITextFieldDelegate {
     var dosage: String = ""
     
     let ViewModel = MRDViewModel()
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,8 +42,13 @@ class MRDViewController: UIViewController, UITextFieldDelegate {
         //Moving Content that is located under the keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDisapear), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
+       
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        DataManipulation.sharedData.fetchMedicalRecordData(with: UserControl.shared.user?.uid ?? "unknown", with: 0)
+    }
+   
 
     var isExpand: Bool = false
     
@@ -120,7 +128,7 @@ extension MRDViewController: UITableViewDataSource, UITableViewDelegate{
         case 0:
             switch indexPath.row {
             case 0:
-                cell.configure(title: "Tanggal", placeholder: ViewModel.dataSource[0].date, tag: 0)
+                cell.configure(title: "Tanggal", placeholder: "\(DataManipulation.sharedData.mrdModel.count)", tag: 0)
                 return cell
             default:
                 fatalError()
