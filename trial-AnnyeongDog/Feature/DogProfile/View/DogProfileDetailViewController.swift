@@ -13,6 +13,7 @@ class DogProfileDetailViewController: UIViewController {
     var prepareForMedical = PrepareForMedical()
     var dogsModel = DogsModel()
     
+    //MARK: - IBConnection to Storyboard
     @IBOutlet weak var dogsTextField: UITextField!
     @IBOutlet weak var genderTextField: UITextField!
     @IBOutlet weak var breedTextField: UITextField!
@@ -25,7 +26,7 @@ class DogProfileDetailViewController: UIViewController {
     @IBOutlet weak var dogsDOB: UITextField!
     @IBOutlet weak var rightBarButtonItem: UIBarButtonItem!
     
-    
+    //MARK: - Object Declaration
     var pickerView = UIPickerView()
     var dobPickerView = UIPickerView()
     var isExpand = false
@@ -42,13 +43,31 @@ class DogProfileDetailViewController: UIViewController {
         
         
         
-        //Risen the View that blocked by the Keyboard
+        //MARK: - Risen the View that blocked by the Keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppear), name:UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDissapear), name:UIResponder.keyboardWillHideNotification, object: nil)
         
     }
     
+    @objc func keyboardAppear(notification:NSNotification){
+        
+        guard let userInfo = notification.userInfo else { return }
+        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        
+        var contentInset:UIEdgeInsets = self.scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height + 20
+        scrollView.contentInset = contentInset
+    }
     
+    
+    @objc func keyboardDissapear(notification:NSNotification){
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInset
+    }
+    
+    
+    //MARK: - Save Button Pressed
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         
         getTextfieldData()
@@ -93,7 +112,7 @@ class DogProfileDetailViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
-    
+    //MARK: - Button to Choose Dog Image
     @IBAction func dogImage(_ sender: UIButton) {
         let vc = UIImagePickerController()
         
@@ -103,24 +122,7 @@ class DogProfileDetailViewController: UIViewController {
         present(vc, animated: true, completion: nil)
         
     }
-    
-    @objc func keyboardAppear(notification:NSNotification){
-        
-        guard let userInfo = notification.userInfo else { return }
-        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
-        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
-        
-        var contentInset:UIEdgeInsets = self.scrollView.contentInset
-        contentInset.bottom = keyboardFrame.size.height + 20
-        scrollView.contentInset = contentInset
-    }
-    
-    
-    @objc func keyboardDissapear(notification:NSNotification){
-        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
-        scrollView.contentInset = contentInset
-    }
-    
+   
     //MARK: - Get user data from Text Field
     func getTextfieldData(){
         
@@ -160,7 +162,7 @@ class DogProfileDetailViewController: UIViewController {
         dobPickerView.dataSource = self
         
     }
-    
+    //MARK: - Logic for Edit Button
     func editButtonLogic(){
         
         let editButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editDogProfileNiel))
