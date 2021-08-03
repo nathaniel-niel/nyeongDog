@@ -25,7 +25,7 @@
                                 <rect key="frame" x="18" y="73.999999999999986" width="352" height="727"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="bZo-TN-99i">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bZo-TN-99i">
                                         <rect key="frame" x="104.66666666666669" y="21" width="145" height="143.66666666666669"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -33,7 +33,7 @@
                                         <rect key="frame" x="22" y="233" width="310" height="29"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7c-aa-5zY">
                                         <rect key="frame" x="22" y="209" width="71" height="19"/>
@@ -194,6 +194,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="9AM-JC-0wc">
                             <color key="tintColor" red="0.3835351467" green="0.42501482369999999" blue="0.67061495780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="Y6W-OH-hqX" id="t36-dR-ped"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -201,6 +204,7 @@
                         <outlet property="breedTextField" destination="Mrd-Hw-TlD" id="ysN-G8-m9E"/>
                         <outlet property="colorTextField" destination="D37-PO-dRK" id="GsV-Pn-IjZ"/>
                         <outlet property="dogImage" destination="bZo-TN-99i" id="3ih-S9-xwN"/>
+                        <outlet property="dogsDOB" destination="alh-Dj-LaB" id="Enc-Ic-GWJ"/>
                         <outlet property="dogsTextField" destination="yz1-iW-7Te" id="arB-SO-DO4"/>
                         <outlet property="genderTextField" destination="4zA-LN-8Xz" id="1Yi-5x-7nf"/>
                         <outlet property="medicalRecordsUI" destination="oAy-mK-rec" id="4c3-8r-ayQ"/>
@@ -234,7 +238,6 @@
     </scenes>
     <resources>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
-        <image name="circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
