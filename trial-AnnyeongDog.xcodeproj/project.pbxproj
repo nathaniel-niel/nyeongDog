@@ -462,7 +462,6 @@
 		C037876C26B2A1CB004344E0 /* DogProfile */ = {
 			isa = PBXGroup;
 			children = (
-				B52BF32826B7E62200DC3B74 /* LaunchScreen */,
 				C079A37526B844490061EC30 /* Controller */,
 				C037879626B2A226004344E0 /* Model */,
 				C037879526B2A21F004344E0 /* View */,
@@ -475,7 +474,6 @@
 			isa = PBXGroup;
 			children = (
 				C079A37626B844D00061EC30 /* DogsModel.swift */,
-				C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */,
 				5B3CE4A326B8E96700ECF396 /* DogProfileDetailAddViewController.swift */,
 			);
 			path = ViewModel;
