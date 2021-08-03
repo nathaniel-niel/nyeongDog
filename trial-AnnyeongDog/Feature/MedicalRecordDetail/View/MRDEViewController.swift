@@ -7,15 +7,8 @@
 
 import UIKit
 
-class MRDEViewController: UIViewController, UITextFieldDelegate /*, deletedelegate*/{
-//    func deleteAlert() {
-//        <#code#>
-//    }
-//    , deletedelegate
-//    func deleteAlert() {
-//        <#code#>
-//    }
-    
+class MRDEViewController: UIViewController/*, deletedelegate*/{
+
     let ViewModel = MRDViewModel()
     var date: String = ""
     var vet: String = ""
@@ -29,7 +22,8 @@ class MRDEViewController: UIViewController, UITextFieldDelegate /*, deletedelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-     //   var delete = DeleteButtonTableViewCell.instancef
+        //MARK: - Disable dismiss modal
+        self.isModalInPresentation = true
         
         setup()
         
@@ -59,6 +53,14 @@ class MRDEViewController: UIViewController, UITextFieldDelegate /*, deletedelega
         }
     }
     
+    //MARK: - Delete Button
+    
+    @IBAction func deleteDidTapped(_ sender: Any) {
+        alertViewDelete()
+    }
+    
+    
+    
     // table view will back to normal size by - 300
     @objc func keyboardDisapear(){
         
@@ -72,7 +74,7 @@ class MRDEViewController: UIViewController, UITextFieldDelegate /*, deletedelega
         self.navigationItem.title = "Medical Record"
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(alertView))
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(didEditButtonTapped))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(didSaveButtonTapped))
     }
     
     
@@ -92,16 +94,9 @@ class MRDEViewController: UIViewController, UITextFieldDelegate /*, deletedelega
         self.present(alert, animated: true, completion: nil)
     }
     
-    // Function to go show modally edit page
-    @objc private func didEditButtonTapped(){
-//        let storyboard = UIStoryboard(name: "storyboardName", bundle: nil)
-//
-//        let vc = storyboard.instantiateViewController(identifier: "storyBoardIdentifier")
-//
-//        let navVc = UINavigationController(rootViewController: vc)
-//
-//        self.present(navVc, animated: true, completion: nil)
-        
+    //MARK: - save button (belum ke save ke database)
+    @objc private func didSaveButtonTapped(){
+        dismiss(animated: true, completion: nil)
     }
     
     //Function to cancelaction
@@ -113,11 +108,13 @@ class MRDEViewController: UIViewController, UITextFieldDelegate /*, deletedelega
     
 }
 
+//MARK: - buat section
 extension MRDEViewController: UITableViewDataSource, UITableViewDelegate{
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
     
+//MARK: - buat baris dalam section
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
@@ -126,8 +123,6 @@ extension MRDEViewController: UITableViewDataSource, UITableViewDelegate{
             return 2
         case 2:
             return 3
-        //        case 3:
-        //            return 1
         default:
             fatalError()
         }
@@ -179,15 +174,28 @@ extension MRDEViewController: UITableViewDataSource, UITableViewDelegate{
             default:
                 fatalError()
             }
-
+//        case 3:
+//            switch indexPath.row {
+//            case 0:
+//                let deletebutton =  MRDEtable.dequeueReusableCell(withIdentifier: DeleteButtonTableViewCell.identifier) as! DeleteButtonTableViewCell
+//
+//                deletebutton.delegate = self
+//
+//                return deletebutton
+//
+//            default:
+//                fatalError()
+//            }
         default:
             fatalError()
         }
         
         
     }
+}
     
     //MARK: - Read data from text field
+    extension  MRDEViewController: UITextFieldDelegate{
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         textField.addTarget(self, action: #selector(valueTextFieldChanged), for: .editingChanged)
         return true
@@ -222,9 +230,6 @@ extension MRDEViewController: UITableViewDataSource, UITableViewDelegate{
             return "Detail"
         case 2:
             return "Riwayat Kesehatan"
-        //        case 3:
-        //
-        //            return "Description"
         default:
             fatalError()
         }
@@ -255,3 +260,15 @@ extension MRDEViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
 }
+
+
+//// DeleteButtonDelegate //perlu di benerin alur waktu yes
+//extension MRDEViewController: deletedelegate{
+//    func deleteAlert() {
+//        let alert = UIAlertController(title: "Delete Dog Profile", message: "Once you delete this, you won't be able to return it. Do you want to proceed?", preferredStyle: UIAlertController.Style.alert)
+//        alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.cancel, handler: nil))
+//        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.destructive, handler: {action in self.cancelaction()}))
+//        self.present(alert, animated: true, completion: nil)
+//    }
+//}
+
