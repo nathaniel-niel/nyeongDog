@@ -64,8 +64,8 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         return cell
     }
     @IBAction func addDidTapped(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "DogProfileDetailAdd", bundle: nil)
-        let nVC = (storyboard.instantiateViewController(identifier: "DogProfileDetailAdd"))
+        let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
+        let nVC = (storyboard.instantiateViewController(identifier: "DPDA"))
         
         self.navigationController?.pushViewController(nVC, animated: true)
     }
