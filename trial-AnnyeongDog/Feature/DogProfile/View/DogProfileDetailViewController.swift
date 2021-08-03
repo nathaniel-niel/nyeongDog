@@ -22,15 +22,15 @@ class DogProfileDetailViewController: UIViewController {
     @IBOutlet weak var medicalRecordsUI: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var dogImage: UIImageView!
-    @IBOutlet weak var dogsDOB: UIDatePicker!
+    @IBOutlet weak var dogsDOB: UITextField!
     @IBOutlet weak var rightBarButtonItem: UIBarButtonItem!
     
     
     var pickerView = UIPickerView()
     var isExpand = false
     var dogsDateofBirth = ""
-
-  
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,7 +56,7 @@ class DogProfileDetailViewController: UIViewController {
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         
         getTextfieldData()
-   }
+    }
     
     
     @IBAction func didBackButtonTapped(_ sender: UIBarButtonItem) {
@@ -76,12 +76,12 @@ class DogProfileDetailViewController: UIViewController {
     
     @IBAction func deleteDidTapped(_ sender: UIButton) {
         
-//        if prepareForMedical.statement(){
-//            self.navigationController?.pushViewController(prepareForMedical.navigateToMedicalRecords(), animated: true)
-//
-//        }else{
-//            self.navigationController?.pushViewController(prepareForMedical.navigateToMedicalRecordsEmpty(), animated: true)
-//        }
+        //        if prepareForMedical.statement(){
+        //            self.navigationController?.pushViewController(prepareForMedical.navigateToMedicalRecords(), animated: true)
+        //
+        //        }else{
+        //            self.navigationController?.pushViewController(prepareForMedical.navigateToMedicalRecordsEmpty(), animated: true)
+        //        }
         let alert = UIAlertController(title: "Hapus Profil Anjing", message: "Setelah anda menghapus profil ini, anda tidak akan dapat mengembalikannya. Apakah anda tetap ingin melanjutkan?", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Tidak", style: .default, handler: nil))
@@ -95,7 +95,7 @@ class DogProfileDetailViewController: UIViewController {
         }))
         self.present(alert, animated: true)
     }
-        
+    
     
     @IBAction func dogImage(_ sender: UIButton) {
         let vc = UIImagePickerController()
@@ -117,7 +117,7 @@ class DogProfileDetailViewController: UIViewController {
         contentInset.bottom = keyboardFrame.size.height + 20
         scrollView.contentInset = contentInset
     }
-        
+    
     
     @objc func keyboardDissapear(notification:NSNotification){
         let contentInset:UIEdgeInsets = UIEdgeInsets.zero
@@ -125,8 +125,8 @@ class DogProfileDetailViewController: UIViewController {
     }
     
     func getTextfieldData(){
-    
-        dogsModel.updateModel(dogsModel.dogsIdGenerator(), dogsTextField.text ?? "" , dogsModel.dateToString(dogsDOB.date), genderTextField.text ?? "" , breedTextField.text ?? "" , weightTextField.text ?? "" , colorTextField.text ?? "" , allergyTextField.text ?? "")
+        
+        dogsModel.updateModel(dogsModel.dogsIdGenerator(), dogsTextField.text ?? "" , dogsDOB.text ?? "", genderTextField.text ?? "" , breedTextField.text ?? "" , weightTextField.text ?? "" , colorTextField.text ?? "" , allergyTextField.text ?? "")
         
     }
     
