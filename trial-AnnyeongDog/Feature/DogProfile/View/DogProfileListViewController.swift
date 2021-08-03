@@ -27,17 +27,18 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         dogProfileTableView.delegate = self
     }
  
-    //HeightCell
+    //MARK: - Height Cell Setting
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 130
 
     }
     
-    //JumlahCell
+    //MARK: - Jumlah Cell
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dogs.count
     }
     
+    //MARK: - Ketika Row di klik
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        performSegue(withIdentifier: "segueDogProfileDetail", sender: nil)
         let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
@@ -46,7 +47,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         self.navigationController?.pushViewController(nVC, animated: true)
     }
     
-    //ViewCell
+    //MARK: - Tampilan CEll
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "dogProfileListIdentifier") as! DogProfileTableViewCell
         
@@ -63,6 +64,8 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         
         return cell
     }
+    
+    //MARK: - Add button di klik
     @IBAction func addDidTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
         let nVC = (storyboard.instantiateViewController(identifier: "DPDA"))
