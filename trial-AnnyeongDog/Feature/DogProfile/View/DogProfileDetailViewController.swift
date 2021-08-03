@@ -11,6 +11,7 @@ class DogProfileDetailViewController: UIViewController {
     
     var genderModel = GenderModel()
     var prepareForMedical = PrepareForMedical()
+    var dogsModel = DogsModel()
     
     @IBOutlet weak var dogsTextField: UITextField!
     @IBOutlet weak var genderTextField: UITextField!
@@ -21,11 +22,15 @@ class DogProfileDetailViewController: UIViewController {
     @IBOutlet weak var medicalRecordsUI: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var dogImage: UIImageView!
-    
+    @IBOutlet weak var dogsDOB: UIDatePicker!
     @IBOutlet weak var rightBarButtonItem: UIBarButtonItem!
     
-    var pickerView = UIPickerView()
     
+    var pickerView = UIPickerView()
+    var isExpand = false
+    var dogsDateofBirth = ""
+
+  
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,12 +41,23 @@ class DogProfileDetailViewController: UIViewController {
         genderTextField.inputView = pickerView
         navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.3733734488, green: 0.4266925454, blue: 0.6893113852, alpha: 1)
         
-        scrollView.contentSize = CGSize(width: self.view.frame.width - 40, height: self.view.frame.height - 80)
-        
-        
         updateUI()
         
+        // Move the Content that blocked by the Keyboard
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppear), name:UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDissapear), name:UIResponder.keyboardWillHideNotification, object: nil)
+        
+        
+        
     }
+    
+    
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        
+        getTextfieldData()
+   }
+    
     
     @IBAction func didBackButtonTapped(_ sender: UIBarButtonItem) {
         let alert = UIAlertController(title: "Unsaved Changes", message: "You have unsaved changes, are you sure you want to cancel?.", preferredStyle: .alert)
@@ -91,10 +107,48 @@ class DogProfileDetailViewController: UIViewController {
         
     }
     
+    @objc func keyboardAppear(notification:NSNotification){
+        
+        guard let userInfo = notification.userInfo else { return }
+        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        
+        var contentInset:UIEdgeInsets = self.scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height + 20
+        scrollView.contentInset = contentInset
+    }
+        
+    
+    @objc func keyboardDissapear(notification:NSNotification){
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInset
+    }
+    
+    func getTextfieldData(){
+    
+        dogsModel.updateModel(dogsModel.dogsIdGenerator(), dogsTextField.text ?? "" , dogsModel.dateToString(dogsDOB.date), genderTextField.text ?? "" , breedTextField.text ?? "" , weightTextField.text ?? "" , colorTextField.text ?? "" , allergyTextField.text ?? "")
+        
+    }
+    
     
     func updateUI(){
+        
+        scrollView.contentSize = CGSize(width: self.view.frame.width - 40, height: self.view.frame.height - 80)
+        
         navigationItem.largeTitleDisplayMode = .never
+        
+        makeRounded()
     }
+    
+    func makeRounded() {
+        
+        dogImage.layer.borderWidth = 1
+        dogImage.layer.masksToBounds = false
+        dogImage.layer.borderColor = UIColor.black.cgColor
+        dogImage.layer.cornerRadius = dogImage.frame.height/2
+        dogImage.clipsToBounds = true
+    }
+    
     
     func editButtonLogic(){
         
@@ -112,6 +166,7 @@ class DogProfileDetailViewController: UIViewController {
     
 }
 
+// Picker untuk Gender
 extension DogProfileDetailViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -120,6 +175,7 @@ extension DogProfileDetailViewController: UIImagePickerControllerDelegate, UINav
         
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage{
             dogImage.image = image
+            
             picker.dismiss(animated: true, completion: nil)
         }
         
