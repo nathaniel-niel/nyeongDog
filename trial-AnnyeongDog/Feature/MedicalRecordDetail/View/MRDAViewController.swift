@@ -32,6 +32,10 @@ class MRDAViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
         mrdaTable.delegate = self
         mrdaTable.dataSource = self
         
+        //MARK: - Disable dismiss modal
+        self.isModalInPresentation = true
+        
+        
         //MARK: -Register XIB cell
         mrdaTable.register(MRDTableViewCell.nib(), forCellReuseIdentifier: MRDTableViewCell.identifier)
         mrdaTable.register(LargeTextFieldTableViewCell.nib(), forCellReuseIdentifier: LargeTextFieldTableViewCell.identifier)
@@ -56,6 +60,7 @@ class MRDAViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
         }
     }
     
+   
     //MARK: -Table view will back to normal size by - 300
     @objc func keyboardDisapear(){
         

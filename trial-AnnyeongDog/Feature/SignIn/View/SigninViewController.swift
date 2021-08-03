@@ -87,8 +87,8 @@ extension SigninViewController: ASAuthorizationControllerDelegate {
             }
         }
         print("Login success")
-        let storyboard = UIStoryboard(name: "DogProfileDetail", bundle: nil)
-        let dogProfileVC = storyboard.instantiateViewController(identifier: "DogProfileDetail") as! DogProfileDetailViewController
+        let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
+        let dogProfileVC = storyboard.instantiateViewController(identifier: "DogProfileListViewController") as! DogProfileListViewController
         self.navigationController?.pushViewController(dogProfileVC, animated: true)
         
     }

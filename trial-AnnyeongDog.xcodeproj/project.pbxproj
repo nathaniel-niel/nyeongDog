@@ -483,8 +483,8 @@
 			isa = PBXGroup;
 			children = (
 				5B67967226B41796004514F3 /* DogProfileListViewController.swift */,
-				5B67967026B41794004514F3 /* DogProfileTableViewCell.swift */,
 				C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */,
+				5B67967026B41794004514F3 /* DogProfileTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

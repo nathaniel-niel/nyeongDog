@@ -52,10 +52,18 @@ class DogProfileDetailAddViewController: UIViewController {
     
     // MARK: - Back button
     @objc func backButtonTapped(){
-        let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
+        let alert = UIAlertController(title: "Unsaved Changes", message: "You have unsaved changes, are you sure you want to cancel?.", preferredStyle: .alert)
         
-        let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
-        self.navigationController?.pushViewController(vc, animated: false)
+        alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Yes", style: .destructive,handler: { action in
+            
+            // back to dog profile view
+            let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
+            
+            let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
+            self.navigationController?.pushViewController(vc, animated: false)
+        }))
+        self.present(alert, animated: true)
     }
     
     // MARK: - Save button (belum bisa simpen data)
