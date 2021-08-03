@@ -27,6 +27,7 @@ class DogProfileDetailViewController: UIViewController {
     
     
     var pickerView = UIPickerView()
+    var dobPickerView = UIPickerView()
     var isExpand = false
     var dogsDateofBirth = ""
     
@@ -37,9 +38,16 @@ class DogProfileDetailViewController: UIViewController {
         // Do any additional setup after loading the view.
         pickerView.delegate = self
         pickerView.dataSource = self
+        dobPickerView.delegate = self
+        dobPickerView.dataSource = self
         
         genderTextField.inputView = pickerView
-        navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.3733734488, green: 0.4266925454, blue: 0.6893113852, alpha: 1)
+        dogsDOB.inputView = dobPickerView
+        
+        dobPickerView.tag = 1
+        pickerView.tag = 2
+        
+        
         
         updateUI()
         
@@ -47,8 +55,6 @@ class DogProfileDetailViewController: UIViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppear), name:UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDissapear), name:UIResponder.keyboardWillHideNotification, object: nil)
-        
-        
         
     }
     
@@ -130,12 +136,13 @@ class DogProfileDetailViewController: UIViewController {
         
     }
     
-    //MARK: - Scroll function
+    //MARK: - UpdateUI function
     func updateUI(){
         
         scrollView.contentSize = CGSize(width: self.view.frame.width - 40, height: self.view.frame.height - 80)
         
         navigationItem.largeTitleDisplayMode = .never
+        navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.3733734488, green: 0.4266925454, blue: 0.6893113852, alpha: 1)
         
         makeRounded()
     }
@@ -187,19 +194,71 @@ extension DogProfileDetailViewController: UIImagePickerControllerDelegate, UINav
 
 extension DogProfileDetailViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        if pickerView.tag == 2 {
+            return 1
+        }else{
+            return 4
+        }
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return genderModel.genderArray.count
+        if pickerView.tag == 2 {
+            return genderModel.genderArray.count
+            
+        }else{
+            switch component {
+            case 0:
+                return genderModel.dogYear.count
+            case 1:
+                return 1
+            case 2:
+                return genderModel.dogMonth.count
+            case 3:
+                return 1
+            default:
+                return 1
+                
+            }
+        }
+        
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return genderModel.genderArray[row]
+        if pickerView.tag == 2 {
+            return genderModel.genderArray[row]
+        }else{
+            switch component {
+            case 0:
+                return genderModel.dogYear[row]
+            case 1 :
+                return "Tahun"
+            case 2:
+                return genderModel.dogMonth[row]
+            case 3:
+                return "Bulan"
+            default:
+                return genderModel.dogMonth[row]
+            }
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        genderTextField.text = genderModel.genderArray[row]
+        if pickerView.tag == 2{
+            
+            genderTextField.text = genderModel.genderArray[row]
+            
+        } else {
+            
+            let dogMonth = pickerView.selectedRow(inComponent: 2)
+            let dogYear = pickerView.selectedRow(inComponent: 0)
+            let selectedDogYear = genderModel.dogYear[dogYear]
+            let selectedDogMonth = genderModel.dogMonth[dogMonth]
+            
+            dogsDOB.text = "\(selectedDogYear) Tahun \(selectedDogMonth) Bulan"
+        }
+        
     }
     
 }
