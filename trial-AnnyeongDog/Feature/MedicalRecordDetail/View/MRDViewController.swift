@@ -23,8 +23,8 @@ class MRDViewController: UIViewController, UITextFieldDelegate {
     var dosage: String = ""
     
     let ViewModel = MRDViewModel()
-    
-
+    var mrdModel : [MRDModel] = []
+    var isExpand: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,11 +46,13 @@ class MRDViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        DataManipulation.sharedData.fetchMedicalRecordData(with: UserControl.shared.user?.uid ?? "unknown", with: 0)
+        DataManipulation.sharedData.fetchMedicalRecordData(with: UserControl.shared.user?.uid ?? "unknown", with: 0) { responseData in
+            self.mrdModel = responseData
+            DispatchQueue.main.async {
+                self.table.reloadData()
+            }
+        }
     }
-   
-
-    var isExpand: Bool = false
     
     // table view will expand size by + 300
     @objc func keyboardAppear(){

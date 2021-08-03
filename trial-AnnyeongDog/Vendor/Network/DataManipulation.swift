@@ -81,7 +81,9 @@ class DataManipulation {
     }
     
     // retrieve medical record data from firebase
-    func fetchMedicalRecordData(with userId: String, with dogID: Int){
+    func fetchMedicalRecordData(with userId: String,
+                                with dogID: Int,
+                                completion: @escaping ([MRDModel]) -> Void){
         
         // remove all data in model
         mrdModel.removeAll()
@@ -98,6 +100,7 @@ class DataManipulation {
                     }
                 }
                 print(self.mrdModel)
+                completion(self.mrdModel)
             }
             else{
                 print(Error.self)
