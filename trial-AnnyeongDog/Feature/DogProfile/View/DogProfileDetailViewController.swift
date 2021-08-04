@@ -40,9 +40,7 @@ class DogProfileDetailViewController: UIViewController {
         
         updateUI()
         uiPickerView()
-        
-        
-        
+      
         //MARK: - Risen the View that blocked by the Keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppear), name:UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDissapear), name:UIResponder.keyboardWillHideNotification, object: nil)
