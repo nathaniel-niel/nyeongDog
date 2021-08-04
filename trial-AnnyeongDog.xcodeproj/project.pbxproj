@@ -51,6 +51,9 @@
 		B584B3DC26B28DF2005A02C5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3D626B28DF2005A02C5 /* MainViewController.swift */; };
 		B584B3DD26B28DF2005A02C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B584B3D726B28DF2005A02C5 /* Main.storyboard */; };
 		B584B3DF26B28E10005A02C5 /* DataManipulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3DE26B28E10005A02C5 /* DataManipulation.swift */; };
+		B59BDB9426BAFE3300AED6D6 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59BDB9326BAFE3300AED6D6 /* StorageManager.swift */; };
+		B59BDB9626BAFF6A00AED6D6 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59BDB9526BAFF6A00AED6D6 /* NavigationManager.swift */; };
+		B59BDB9826BB02B400AED6D6 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B59BDB9726BB02B400AED6D6 /* LoadingViewController.swift */; };
 		B5A0B08926BA974000D5C273 /* TextDescCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0B08726BA974000D5C273 /* TextDescCell.swift */; };
 		B5A0B08A26BA974000D5C273 /* TextDescCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5A0B08826BA974000D5C273 /* TextDescCell.xib */; };
 		B5A0B08D26BA9E2F00D5C273 /* DescriptionTextViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A0B08B26BA9E2F00D5C273 /* DescriptionTextViewCell.swift */; };
@@ -122,6 +125,9 @@
 		B584B3D626B28DF2005A02C5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B584B3D726B28DF2005A02C5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B584B3DE26B28E10005A02C5 /* DataManipulation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManipulation.swift; sourceTree = "<group>"; };
+		B59BDB9326BAFE3300AED6D6 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		B59BDB9526BAFF6A00AED6D6 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
+		B59BDB9726BB02B400AED6D6 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		B5A0B08726BA974000D5C273 /* TextDescCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDescCell.swift; sourceTree = "<group>"; };
 		B5A0B08826BA974000D5C273 /* TextDescCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextDescCell.xib; sourceTree = "<group>"; };
 		B5A0B08B26BA9E2F00D5C273 /* DescriptionTextViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionTextViewCell.swift; sourceTree = "<group>"; };
@@ -369,6 +375,9 @@
 			children = (
 				B584B3CC26B28DCD005A02C5 /* Helper.swift */,
 				2D74BE1C26B4558F009B3629 /* UserControl.swift */,
+				B59BDB9326BAFE3300AED6D6 /* StorageManager.swift */,
+				B59BDB9526BAFF6A00AED6D6 /* NavigationManager.swift */,
+				B59BDB9726BB02B400AED6D6 /* LoadingViewController.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -692,7 +701,9 @@
 				2D628F0426B2FB590008ECD2 /* MRDViewModel.swift in Sources */,
 				5B67966E26B41787004514F3 /* dummyDataDogProfile.swift in Sources */,
 				B584B3DF26B28E10005A02C5 /* DataManipulation.swift in Sources */,
+				B59BDB9426BAFE3300AED6D6 /* StorageManager.swift in Sources */,
 				B584B3CD26B28DCD005A02C5 /* Helper.swift in Sources */,
+				B59BDB9626BAFF6A00AED6D6 /* NavigationManager.swift in Sources */,
 				B584B3D926B28DF2005A02C5 /* ExampleModel.swift in Sources */,
 				5B67967626B41796004514F3 /* DogProfileListViewController.swift in Sources */,
 				5B3F4BEE26B3FAD7004448DA /* MRDAViewController.swift in Sources */,
@@ -701,6 +712,7 @@
 				5B05C39A26B2A9450034A66A /* MRDEViewController.swift in Sources */,
 				2D74BE1B26B45535009B3629 /* DogProfileDetailModel.swift in Sources */,
 				2D628ED326B297B20008ECD2 /* MRDTableViewCell.swift in Sources */,
+				B59BDB9826BB02B400AED6D6 /* LoadingViewController.swift in Sources */,
 				C00DE8F126B312D400E99343 /* MedicalRecordsDummyData.swift in Sources */,
 				2D628ED826B297B20008ECD2 /* MRDViewController.swift in Sources */,
 				B584B3A926B264CC005A02C5 /* AppDelegate.swift in Sources */,
