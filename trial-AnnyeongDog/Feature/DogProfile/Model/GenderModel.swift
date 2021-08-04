@@ -10,4 +10,6 @@ import Foundation
 struct GenderModel {
     
     let genderArray: [String] = ["Male", "Female"]
+    let dogYear = (1...49).map(String.init)
+    let dogMonth = (1...12).map(String.init)
 }

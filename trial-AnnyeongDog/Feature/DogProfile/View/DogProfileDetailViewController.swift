@@ -13,6 +13,7 @@ class DogProfileDetailViewController: UIViewController {
     var prepareForMedical = PrepareForMedical()
     var dogsModel = DogsModel()
     
+    //MARK: - IBConnection to Storyboard
     @IBOutlet weak var dogsTextField: UITextField!
     @IBOutlet weak var genderTextField: UITextField!
     @IBOutlet weak var breedTextField: UITextField!
@@ -22,41 +23,55 @@ class DogProfileDetailViewController: UIViewController {
     @IBOutlet weak var medicalRecordsUI: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var dogImage: UIImageView!
-    @IBOutlet weak var dogsDOB: UIDatePicker!
+    @IBOutlet weak var dogsDOB: UITextField!
     @IBOutlet weak var rightBarButtonItem: UIBarButtonItem!
     
-    
+    //MARK: - Object Declaration
     var pickerView = UIPickerView()
+    var dobPickerView = UIPickerView()
     var isExpand = false
-    var dogsDateofBirth = ""
-
-  
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        pickerView.delegate = self
-        pickerView.dataSource = self
-        
         genderTextField.inputView = pickerView
-        navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.3733734488, green: 0.4266925454, blue: 0.6893113852, alpha: 1)
+        dogsDOB.inputView = dobPickerView
         
         updateUI()
+        uiPickerView()
         
-        // Move the Content that blocked by the Keyboard
         
+        
+        //MARK: - Risen the View that blocked by the Keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppear), name:UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDissapear), name:UIResponder.keyboardWillHideNotification, object: nil)
         
+    }
+    
+    @objc func keyboardAppear(notification:NSNotification){
         
+        guard let userInfo = notification.userInfo else { return }
+        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
         
+        var contentInset:UIEdgeInsets = self.scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height + 20
+        scrollView.contentInset = contentInset
     }
     
     
+    @objc func keyboardDissapear(notification:NSNotification){
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInset
+    }
+    
+    
+    //MARK: - Save Button Pressed
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         
         getTextfieldData()
-   }
+    }
     
     
     @IBAction func didBackButtonTapped(_ sender: UIBarButtonItem) {
@@ -74,14 +89,15 @@ class DogProfileDetailViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
+    //MARK: - Delete Button on Dog's Profile
     @IBAction func deleteDidTapped(_ sender: UIButton) {
         
-//        if prepareForMedical.statement(){
-//            self.navigationController?.pushViewController(prepareForMedical.navigateToMedicalRecords(), animated: true)
-//
-//        }else{
-//            self.navigationController?.pushViewController(prepareForMedical.navigateToMedicalRecordsEmpty(), animated: true)
-//        }
+        //        if prepareForMedical.statement(){
+        //            self.navigationController?.pushViewController(prepareForMedical.navigateToMedicalRecords(), animated: true)
+        //
+        //        }else{
+        //            self.navigationController?.pushViewController(prepareForMedical.navigateToMedicalRecordsEmpty(), animated: true)
+        //        }
         let alert = UIAlertController(title: "Hapus Profil Anjing", message: "Setelah anda menghapus profil ini, anda tidak akan dapat mengembalikannya. Apakah anda tetap ingin melanjutkan?", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Tidak", style: .default, handler: nil))
@@ -95,8 +111,8 @@ class DogProfileDetailViewController: UIViewController {
         }))
         self.present(alert, animated: true)
     }
-        
     
+    //MARK: - Button to Choose Dog Image
     @IBAction func dogImage(_ sender: UIButton) {
         let vc = UIImagePickerController()
         
@@ -106,36 +122,25 @@ class DogProfileDetailViewController: UIViewController {
         present(vc, animated: true, completion: nil)
         
     }
-    
-    @objc func keyboardAppear(notification:NSNotification){
-        
-        guard let userInfo = notification.userInfo else { return }
-        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
-        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
-        
-        var contentInset:UIEdgeInsets = self.scrollView.contentInset
-        contentInset.bottom = keyboardFrame.size.height + 20
-        scrollView.contentInset = contentInset
-    }
-        
-    
-    @objc func keyboardDissapear(notification:NSNotification){
-        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
-        scrollView.contentInset = contentInset
-    }
-    
+   
+    //MARK: - Get user data from Text Field
     func getTextfieldData(){
-    
-        dogsModel.updateModel(dogsModel.dogsIdGenerator(), dogsTextField.text ?? "" , dogsModel.dateToString(dogsDOB.date), genderTextField.text ?? "" , breedTextField.text ?? "" , weightTextField.text ?? "" , colorTextField.text ?? "" , allergyTextField.text ?? "")
+        
+        dogsModel.updateModel(dogsModel.dogsIdGenerator(), dogsTextField.text ?? "" , dogsDOB.text ?? "", genderTextField.text ?? "" , breedTextField.text ?? "" , weightTextField.text ?? "" , colorTextField.text ?? "" , allergyTextField.text ?? "")
         
     }
     
+
+    //MARK: - UpdateUI function
+
     
+
     func updateUI(){
         
         scrollView.contentSize = CGSize(width: self.view.frame.width - 40, height: self.view.frame.height - 80)
         
         navigationItem.largeTitleDisplayMode = .never
+        navigationItem.backBarButtonItem?.tintColor = #colorLiteral(red: 0.3733734488, green: 0.4266925454, blue: 0.6893113852, alpha: 1)
         
         makeRounded()
     }
@@ -149,7 +154,19 @@ class DogProfileDetailViewController: UIViewController {
         dogImage.clipsToBounds = true
     }
     
-    
+    //MARK: - for Picker View function
+    func uiPickerView(){
+        
+        dobPickerView.tag = 1
+        pickerView.tag = 2
+        
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        dobPickerView.delegate = self
+        dobPickerView.dataSource = self
+        
+    }
+    //MARK: - Logic for Edit Button
     func editButtonLogic(){
         
         let editButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editDogProfileNiel))
@@ -166,7 +183,7 @@ class DogProfileDetailViewController: UIViewController {
     
 }
 
-// Picker untuk Gender
+//MARK: - Image Picker for Dog's Photos
 extension DogProfileDetailViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -183,23 +200,74 @@ extension DogProfileDetailViewController: UIImagePickerControllerDelegate, UINav
     
 }
 
-// Picker buat Keyboard Gender
-
+//MARK: - Extension Picker View on Keyboard
 extension DogProfileDetailViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        if pickerView.tag == 2 {
+            return 1
+        }else{
+            return 4
+        }
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return genderModel.genderArray.count
+        if pickerView.tag == 2 {
+            return genderModel.genderArray.count
+            
+        }else{
+            switch component {
+            case 0:
+                return genderModel.dogYear.count
+            case 1:
+                return 1
+            case 2:
+                return genderModel.dogMonth.count
+            case 3:
+                return 1
+            default:
+                return 1
+                
+            }
+        }
+        
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return genderModel.genderArray[row]
+        if pickerView.tag == 2 {
+            return genderModel.genderArray[row]
+        }else{
+            switch component {
+            case 0:
+                return genderModel.dogYear[row]
+            case 1 :
+                return "Tahun"
+            case 2:
+                return genderModel.dogMonth[row]
+            case 3:
+                return "Bulan"
+            default:
+                return genderModel.dogMonth[row]
+            }
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        genderTextField.text = genderModel.genderArray[row]
+        if pickerView.tag == 2{
+            
+            genderTextField.text = genderModel.genderArray[row]
+            
+        } else {
+            
+            let dogMonth = pickerView.selectedRow(inComponent: 2)
+            let dogYear = pickerView.selectedRow(inComponent: 0)
+            let selectedDogYear = genderModel.dogYear[dogYear]
+            let selectedDogMonth = genderModel.dogMonth[dogMonth]
+            
+            dogsDOB.text = "\(selectedDogYear) Tahun \(selectedDogMonth) Bulan"
+        }
+        
     }
     
 }

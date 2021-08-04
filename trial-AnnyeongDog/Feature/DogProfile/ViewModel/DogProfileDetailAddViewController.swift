@@ -18,12 +18,15 @@ class DogProfileDetailAddViewController: UIViewController {
     @IBOutlet weak var dogImage: UIImageView!
     @IBOutlet weak var allergyTextField: UITextField!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var dogsDOB: UITextField!
     
     
     // MARK: Object Declaration
     var genderModel = GenderModel()
     var prepareForMedical = PrepareForMedical()
+    var dogsModel = DogsModel()
     var pickerView = UIPickerView()
+    var dobPickerView = UIPickerView()
     
     // MARK: Life Cycle
     override func viewDidLoad() {
@@ -31,17 +34,39 @@ class DogProfileDetailAddViewController: UIViewController {
         
         updateUI()
         // Do any additional setup after loading the view.
-        pickerView.delegate = self
-        pickerView.dataSource = self
+        genderTextField.inputView = pickerView
+        dogsDOB.inputView = dobPickerView
+        
+        uiPickerView()
         
         genderTextField.inputView = pickerView
         
-        print("testing 1234")
-        
         navigationItem.largeTitleDisplayMode = .never
+        
         setup()
         
+        //MARK: - Risen the View that blocked by the Keyboard
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppear), name:UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDissapear), name:UIResponder.keyboardWillHideNotification, object: nil)
         
+        
+    }
+    // MARK: Keyboard Function
+    @objc func keyboardAppear(notification:NSNotification){
+        
+        guard let userInfo = notification.userInfo else { return }
+        var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        keyboardFrame = self.view.convert(keyboardFrame, from: nil)
+        
+        var contentInset:UIEdgeInsets = self.scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height + 20
+        scrollView.contentInset = contentInset
+    }
+    
+    
+    @objc func keyboardDissapear(notification:NSNotification){
+        let contentInset:UIEdgeInsets = UIEdgeInsets.zero
+        scrollView.contentInset = contentInset
     }
     
     // MARK: Functions to Navigation Bar
@@ -73,6 +98,19 @@ class DogProfileDetailAddViewController: UIViewController {
         dogImage.clipsToBounds = true
     }
     
+    //MARK: - for Picker View function
+    func uiPickerView(){
+        
+        dobPickerView.tag = 1
+        pickerView.tag = 2
+        
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        dobPickerView.delegate = self
+        dobPickerView.dataSource = self
+        
+    }
+    
     // MARK: - Back button
     @objc func backButtonTapped(){
         let alert = UIAlertController(title: "Unsaved Changes", message: "You have unsaved changes, are you sure you want to cancel?.", preferredStyle: .alert)
@@ -89,12 +127,20 @@ class DogProfileDetailAddViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
-    // MARK: - Save button (belum bisa simpen data)
+    // MARK: - Save button udah bisa simpen data
     @objc func saveButtonTapped(){
+        getTextfieldData()
+        
         let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
         
         let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
         self.navigationController?.pushViewController(vc, animated: false)
+    }
+    
+    func getTextfieldData(){
+        
+        dogsModel.updateModel(dogsModel.dogsIdGenerator(), dogsTextField.text ?? "" , dogsDOB.text ?? "", genderTextField.text ?? "" , breedTextField.text ?? "" , weightTextField.text ?? "" , colorTextField.text ?? "" , allergyTextField.text ?? "")
+        
     }
     
 //    @IBAction func MedicalRecordButton(_ sender: Any) {
@@ -107,23 +153,75 @@ class DogProfileDetailAddViewController: UIViewController {
 
     
 
-// Picker buat Keyboard Gender
+// MARK: Function for UiPicker on Keyboard ( Both DOB and Gender )
 
 extension DogProfileDetailAddViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+        if pickerView.tag == 2 {
+            return 1
+        }else{
+            return 4
+        }
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return genderModel.genderArray.count
+        if pickerView.tag == 2 {
+            return genderModel.genderArray.count
+            
+        }else{
+            switch component {
+            case 0:
+                return genderModel.dogYear.count
+            case 1:
+                return 1
+            case 2:
+                return genderModel.dogMonth.count
+            case 3:
+                return 1
+            default:
+                return 1
+                
+            }
+        }
+        
+        
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return genderModel.genderArray[row]
+        if pickerView.tag == 2 {
+            return genderModel.genderArray[row]
+        }else{
+            switch component {
+            case 0:
+                return genderModel.dogYear[row]
+            case 1 :
+                return "Tahun"
+            case 2:
+                return genderModel.dogMonth[row]
+            case 3:
+                return "Bulan"
+            default:
+                return genderModel.dogMonth[row]
+            }
+        }
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        genderTextField.text = genderModel.genderArray[row]
+        if pickerView.tag == 2{
+            
+            genderTextField.text = genderModel.genderArray[row]
+            
+        } else {
+            
+            let dogMonth = pickerView.selectedRow(inComponent: 2)
+            let dogYear = pickerView.selectedRow(inComponent: 0)
+            let selectedDogYear = genderModel.dogYear[dogYear]
+            let selectedDogMonth = genderModel.dogMonth[dogMonth]
+            
+            dogsDOB.text = "\(selectedDogYear) Tahun \(selectedDogMonth) Bulan"
+        }
+        
     }
     
 }

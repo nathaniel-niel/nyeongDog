@@ -29,15 +29,6 @@ struct DogsModel {
         
     }
     
-    func dateToString(_ dob: Date) -> String {
-        let dateFormatter = DateFormatter()
-        
-        dateFormatter.dateFormat = "dd/MM/YY"
-        
-        let dateFormate = dateFormatter.string(from: dob)
-        print(dateFormate)
-        return dateFormate
-    }
     
     mutating func dogsIdGenerator() -> Int{
         dogsID += 1
