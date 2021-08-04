@@ -33,7 +33,7 @@ class MRDEViewController: UIViewController/*, deletedelegate*/{
         
         //register XIB cell
         MRDEtable.register(MRDTableViewCell.nib(), forCellReuseIdentifier: MRDTableViewCell.identifier)
-        MRDEtable.register(LargeTextFieldTableViewCell.nib(), forCellReuseIdentifier: LargeTextFieldTableViewCell.identifier)
+//        MRDEtable.register(LargeTextFieldTableViewCell.nib(), forCellReuseIdentifier: LargeTextFieldTableViewCell.identifier)
         MRDEtable.register(DeleteButtonTableViewCell.nib(), forCellReuseIdentifier: DeleteButtonTableViewCell.identifier)
         
         //Moving Content that is located under the keyboard

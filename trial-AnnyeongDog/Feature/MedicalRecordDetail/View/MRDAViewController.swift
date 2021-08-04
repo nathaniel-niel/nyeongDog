@@ -21,11 +21,11 @@ class MRDAViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
     var medicine: String = ""
     var vaccineType: String = ""
     var dosage: String = ""
-    //    var text7: String = ""
+    var desc: String = ""
     var isExpand: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setup()
         
         //MARK: -Setup Delegate
@@ -38,15 +38,12 @@ class MRDAViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
         
         //MARK: -Register XIB cell
         mrdaTable.register(MRDTableViewCell.nib(), forCellReuseIdentifier: MRDTableViewCell.identifier)
-        mrdaTable.register(LargeTextFieldTableViewCell.nib(), forCellReuseIdentifier: LargeTextFieldTableViewCell.identifier)
+//        mrdaTable.register(UINib(nibName: "TextDescCell", bundle: nil), forCellReuseIdentifier: "descIdentifier")
+        mrdaTable.register(DescriptionTextViewCell.nib(), forCellReuseIdentifier: DescriptionTextViewCell.identifier)
         
         //MARK: -Moving Content that is located under the keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDisapear), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
-    
-        
-        
         
     }
     
@@ -61,7 +58,7 @@ class MRDAViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
         }
     }
     
-   
+    
     //MARK: -Table view will back to normal size by - 300
     @objc func keyboardDisapear(){
         
@@ -95,24 +92,22 @@ class MRDAViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
     
     //MARK: - Save Medical Record
     @objc private func didSaveButtonTapped(){
-        let storyboard = UIStoryboard(name: "MRD", bundle: nil)
-        
-        let vc = storyboard.instantiateViewController(identifier: "mrd")
-        
-        let navVc = UINavigationController(rootViewController: vc)
-        
-        self.present(navVc, animated: false, completion: nil)
-        
-    
-        DataManipulation.sharedData.insertDataToMedicalRecord(with: UserControl.shared.user?.uid ?? "unknown", with: 0, with: MRDModel(id: 0, date: date, veterinarian: vet, diagnosis: diagnosis, vaccine: vaccine, medicine: medicine, vaccineType: vaccineType, dosage: dosage))
-        
+//                let storyboard = UIStoryboard(name: "MRD", bundle: nil)
+//
+//                let vc = storyboard.instantiateViewController(identifier: "mrd")
+//
+//                let navVc = UINavigationController(rootViewController: vc)
+//
+//                self.present(navVc, animated: false, completion: nil)
+        DataManipulation.sharedData.insertDataToMedicalRecord(with: UserControl.shared.user?.uid ?? "unknown", with: 0, with: MRDModel(id: 0, date: date, veterinarian: vet, diagnosis: diagnosis, vaccine: vaccine, medicine: medicine, vaccineType: vaccineType, dosage: dosage, description: desc))
+        print("Description: \(desc)")
         
     }
 }
 
 extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -123,64 +118,58 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
             return 2
         case 2:
             return 3
-        //        case 3:
-        //            return 1
+        case 3:
+            return 1
         default:
             fatalError()
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = mrdaTable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
-        cell.contenTextField.delegate = self
-        cell.contenTextField.autocorrectionType = .no
-        
-        switch indexPath.section {
-        case 0:
-            switch indexPath.row {
-            case 0:
-                cell.configure(title: "Tanggal", placeholder: ViewModel.dataSource[0].date, tag: 0)
-                return cell
-            default:
-                fatalError()
-            }
-        case 1:
-            switch indexPath.row {
-            case 0:
-                
+        //Waktu
+        if indexPath.section == 0 {
+            let cell = mrdaTable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
+            cell.contenTextField.delegate = self
+            cell.contenTextField.autocorrectionType = .no
+            cell.configure(title: "Tanggal", placeholder: ViewModel.dataSource[0].date, tag: 0)
+            return cell
+        }
+        //Detail
+        else if indexPath.section == 1 {
+            let cell = mrdaTable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
+            cell.contenTextField.delegate = self
+            cell.contenTextField.autocorrectionType = .no
+            if indexPath.row == 0 {
                 cell.configure(title: "Dokter Hewan", placeholder: ViewModel.dataSource[0].veterinarian,tag: 1)
-                return cell
-            case 1:
-                
+            } else {
                 cell.configure(title: "Tipe Vaksin", placeholder: ViewModel.dataSource[0].diagnosis, tag: 2)
-                return cell
-           
-            default:
-                fatalError()
             }
-        case 2:
-            switch indexPath.row {
-            case 0:
-                cell.configure(title: "Diagnosa", placeholder: ViewModel.dataSource[0].medicine, tag: 3)
-                return cell
-            case 1:
-                
-                
-                cell.configure(title: "Obat", placeholder: ViewModel.dataSource[0].vaccineType, tag: 4)
-                return cell
-            case 2:
-                
-                
-                cell.configure(title: "Dosis", placeholder: ViewModel.dataSource[0].dosage, tag: 5)
-                return cell
-            default:
-                fatalError()
-            }
-
-        default:
-            fatalError()
+            return cell
         }
         
+        //Riwayat Kesehatan
+        else if indexPath.section == 2 {
+            let cell = mrdaTable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
+            cell.contenTextField.delegate = self
+            cell.contenTextField.autocorrectionType = .no
+            
+            if indexPath.row == 0 {
+                cell.configure(title: "Diagnosa", placeholder: ViewModel.dataSource[0].medicine, tag: 3)
+            } else if indexPath.row == 1 {
+                cell.configure(title: "Obat", placeholder: ViewModel.dataSource[0].vaccineType, tag: 4)
+            } else {
+                cell.configure(title: "Dosis", placeholder: ViewModel.dataSource[0].dosage, tag: 5)
+            }
+            
+            return cell
+        }
+        //Deskripsi
+        else {
+            let largeCell = mrdaTable.dequeueReusableCell(withIdentifier: DescriptionTextViewCell.identifier) as! DescriptionTextViewCell
+            largeCell.descriptionTextView.delegate = self
+            largeCell.configure(description: desc)
+            return largeCell
+        }
         
     }
     
@@ -204,13 +193,23 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
             medicine = textField.text ?? "no value"
         case 5:
             dosage = textField.text ?? "no value"
-
+            
         default:
             print("not yet developed")
         }
     }
-
     
+    //MARK: -Read data from textView
+    func textViewShouldBeginEditing(_ textView: UITextView) {
+        if textView.tag == 6 {
+            desc = textView.text
+        }
+        else{
+            desc = "no value"
+        }
+        
+    }
+    //MARK: -Return Title in Section
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
@@ -219,9 +218,8 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
             return "Detail"
         case 2:
             return "Riwayat Kesehatan"
-        //        case 3:
-        //
-        //            return "Description"
+        case 3:
+            return "Deskripsi"
         default:
             fatalError()
         }
@@ -251,5 +249,5 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
         
     }
     
+    
 }
-

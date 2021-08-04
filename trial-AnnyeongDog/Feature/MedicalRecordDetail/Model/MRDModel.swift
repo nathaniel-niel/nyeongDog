@@ -17,7 +17,7 @@ struct MRDModel {
     var medicine: String?
     var vaccineType: String?
     var dosage: String?
-    //var description: String = ""
+    var description: String = ""
     
 //    init(id: Int,date: String, veterinarian: String, diagnosis: String, vaccine: String, medicine: String, vaccineType: String, dosage: String) {
 //        self.id = id
