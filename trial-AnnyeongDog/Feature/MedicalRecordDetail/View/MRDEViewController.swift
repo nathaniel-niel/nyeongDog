@@ -103,7 +103,11 @@ class MRDEViewController: UIViewController/*, deletedelegate*/{
     
     //Function to cancelaction
     private func cancelaction(){
+        
         self.dismiss(animated: true, completion: nil)
+        
+        DataManipulation.sharedData.deleteDataToMedicalRecord(with: UserControl.shared.user?.uid ?? "unknown", with: 0, with: 0)
+        
     }
 
     

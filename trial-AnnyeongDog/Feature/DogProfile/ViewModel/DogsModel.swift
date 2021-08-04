@@ -9,6 +9,15 @@ import UIKit
 import Firebase
 
 struct DogsModel {
+    var dogID: Int?
+    var dogName: String?
+    var dateofBirth: String?
+    var gender: String?
+    var breed: String?
+    var weight: String?
+    var color: String?
+    var alergen: String?
+    
     
     var dogsModel: DogProfileModel?
     var dogsID = 0
@@ -23,9 +32,9 @@ struct DogsModel {
     
     func nembakFirebase(){
         
-        let user = Auth.auth().currentUser
-        DataManipulation.sharedData.insertDogProfileData(with: UserModel(id: user!.uid, email: (user?.email)!), with: dogsModel!)
-        print("masok")
+//        let user = Auth.auth().currentUser
+//        DataManipulation.sharedData.insertDogProfileData(with: UserModel(id: user!.uid, email: (user?.email)!), with: dogsModel!)
+//        print("masok")
         
     }
     

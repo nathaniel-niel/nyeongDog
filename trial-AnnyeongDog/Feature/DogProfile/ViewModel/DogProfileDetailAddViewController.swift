@@ -139,7 +139,7 @@ class DogProfileDetailAddViewController: UIViewController {
     
     func getTextfieldData(){
         
-        dogsModel.updateModel(dogsModel.dogsIdGenerator(), dogsTextField.text ?? "" , dogsDOB.text ?? "", genderTextField.text ?? "" , breedTextField.text ?? "" , weightTextField.text ?? "" , colorTextField.text ?? "" , allergyTextField.text ?? "")
+        DataManipulation.sharedData.insertDogProfile(with: UserControl.shared.user?.uid ?? "unknown", with: DogsModel(dogID: 0, dogName: dogsTextField.text, dateofBirth: dogsDOB.text, gender: genderTextField.text, breed: breedTextField.text, weight: weightTextField.text, color: colorTextField.text, alergen: allergyTextField.text))
         
     }
     
