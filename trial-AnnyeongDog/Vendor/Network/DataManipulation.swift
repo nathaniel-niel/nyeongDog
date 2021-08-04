@@ -80,6 +80,23 @@ class DataManipulation {
         
     }
     
+    // update data medicar record to firebase
+    func updateDataToMedicalRecord(with userId: String, with dogID: Int, with mrd: MRDModel ){
+        
+        let object: [String: Any] = [
+            "date": mrd.date ?? "no data",
+            "vets": mrd.veterinarian ?? "no data",
+            "diagnosis": mrd.diagnosis ?? "no data",
+            "vaccinne": mrd.vaccine ?? "no data",
+            "medicine": mrd.medicine ?? "no data",
+            "vaccineType": mrd.vaccineType ?? "no data",
+            "dosage": mrd.dosage ?? "no data"
+        ]
+        ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrd.id ?? 0)").updateChildValues(object)
+        
+    }
+    
+    
     // retrieve medical record data from firebase
     func fetchMedicalRecordData(with userId: String,
                                 with dogID: Int,

@@ -74,14 +74,14 @@ class MRDViewController: UIViewController, UITextFieldDelegate {
 
     private func setup(){
         self.navigationItem.title = "Medical Record"
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(dismissModal))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonTapped))
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(didEditButtonTapped))
     }
     
     
     // Function to dismiss modal view
-    @objc private func dismissModal(){
+    @objc private func backButtonTapped(){
         self.dismiss(animated: true, completion: nil)
     }
     
