@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DescriptionTextViewCell: UITableViewCell, UITextViewDelegate {
+class DescriptionTextViewCell: UITableViewCell{
 
     @IBOutlet weak var descriptionTextView: UITextView!
     static let identifier = "descCell"
@@ -23,24 +23,14 @@ class DescriptionTextViewCell: UITableViewCell, UITextViewDelegate {
     
     func configure(description: String){
         descriptionTextView.text = description
+        descriptionTextView.layer.borderWidth = 1
+        descriptionTextView.layer.cornerRadius = 10
     }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
-    
-//    func textViewDidEndEditing(_ textView: UITextView) {
-//       print(descriptionTextView.text)
-//    }
-    
-//    func textViewDidChangeSelection(_ textView: UITextView) {
-//        print(descriptionTextView.text)
-//    }
-    
-//    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
-//        return true
-//        print(descriptionTextView.text)
-//    }
+
 
 }

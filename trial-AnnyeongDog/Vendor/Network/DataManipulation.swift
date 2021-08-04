@@ -49,22 +49,11 @@ class DataManipulation {
             "color": dog.color ?? "no data",
             "alergen": dog.alergen ?? "no data"
         ]
-        ref.child("users/\(userId)/dogs/\(dog.dogID ?? 0)").setValue(object)
+        ref.child("users/\(userId)/dogs/\(dog.dogID ?? "no data")").setValue(object)
         
     }
     
-    // update Dog Profile data in Firebase
-//    func updateDogProfileData(with user: UserModel, with dog: DogProfileModel){
-//        ref.child("users").child("\(user.id)").child("dogs").child("\(dog.dogId)").updateChildValues([
-//            "dog name": dog.dogName,
-//            "DOB": dog.dateOfBirth,
-//            "gender": dog.gender,
-//            "breed": dog.breed,
-//            "weight": dog.weight,
-//            "color": dog.color,
-//            "alergen": dog.alergen
-//        ])
-//    }
+    //update dog profile data in Firebase
     func updateDogProfile(with userId: String, with dog: DogsModel){
 
         let object: [String: Any] = [
@@ -77,9 +66,12 @@ class DataManipulation {
             "color": dog.color ?? "no data",
             "alergen": dog.alergen ?? "no data"
         ]
-        ref.child("users/\(userId)/dogs/\(dog.dogID ?? 0)").updateChildValues(object)
+        ref.child("users/\(userId)/dogs/\(dog.dogID ?? "no data")").updateChildValues(object)
         
     }
+    
+    //retrieve dog profile data from Firebase
+    
     
     //MARK: -Function for Medical Record
     

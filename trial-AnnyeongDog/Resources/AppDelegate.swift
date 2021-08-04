@@ -16,19 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
-        let user =  Auth.auth().currentUser
-        if user != nil{
-            print("You're signed in as \(user?.uid ?? "unknown"), email: \(user?.email ?? "unknown")")
-        }
-        else{
-            // view login page
-            let storyboard = UIStoryboard(name: "Signin", bundle: nil)
-            
-            let vc = storyboard.instantiateViewController(identifier: "Signin") as! SigninViewController
-            
-            self.window?.rootViewController = vc
-            window?.makeKeyAndVisible()
-        }
+//        let user =  Auth.auth().currentUser
+//        
+//        if user != nil{
+//            print("You're signed in as \(user?.uid ?? "unknown"), email: \(user?.email ?? "unknown")")
+//        }
         
         return true
     }

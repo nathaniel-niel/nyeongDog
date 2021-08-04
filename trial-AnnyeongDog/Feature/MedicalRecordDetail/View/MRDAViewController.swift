@@ -9,7 +9,7 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-class MRDAViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
+class MRDAViewController: UIViewController  {
     
     @IBOutlet weak var mrdaTable: UITableView!
     
@@ -38,7 +38,7 @@ class MRDAViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
         
         //MARK: -Register XIB cell
         mrdaTable.register(MRDTableViewCell.nib(), forCellReuseIdentifier: MRDTableViewCell.identifier)
-//        mrdaTable.register(UINib(nibName: "TextDescCell", bundle: nil), forCellReuseIdentifier: "descIdentifier")
+        //        mrdaTable.register(UINib(nibName: "TextDescCell", bundle: nil), forCellReuseIdentifier: "descIdentifier")
         mrdaTable.register(DescriptionTextViewCell.nib(), forCellReuseIdentifier: DescriptionTextViewCell.identifier)
         
         //MARK: -Moving Content that is located under the keyboard
@@ -92,20 +92,20 @@ class MRDAViewController: UIViewController, UITextFieldDelegate, UITextViewDeleg
     
     //MARK: - Save Medical Record
     @objc private func didSaveButtonTapped(){
-//                let storyboard = UIStoryboard(name: "MRD", bundle: nil)
-//
-//                let vc = storyboard.instantiateViewController(identifier: "mrd")
-//
-//                let navVc = UINavigationController(rootViewController: vc)
-//
-//                self.present(navVc, animated: false, completion: nil)
+        let storyboard = UIStoryboard(name: "MRD", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(identifier: "mrd")
+        
+        let navVc = UINavigationController(rootViewController: vc)
+        
+        self.present(navVc, animated: false, completion: nil)
         DataManipulation.sharedData.insertDataToMedicalRecord(with: UserControl.shared.user?.uid ?? "unknown", with: 0, with: MRDModel(id: 0, date: date, veterinarian: vet, diagnosis: diagnosis, vaccine: vaccine, medicine: medicine, vaccineType: vaccineType, dosage: dosage, description: desc))
         print("Description: \(desc)")
         
     }
 }
 
-extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
+extension MRDAViewController: UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate, UITextViewDelegate{
     func numberOfSections(in tableView: UITableView) -> Int {
         return 4
     }
@@ -167,7 +167,7 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
         else {
             let largeCell = mrdaTable.dequeueReusableCell(withIdentifier: DescriptionTextViewCell.identifier) as! DescriptionTextViewCell
             largeCell.descriptionTextView.delegate = self
-            largeCell.configure(description: desc)
+            largeCell.configure(description: "hello world")
             return largeCell
         }
         
@@ -200,15 +200,17 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     //MARK: -Read data from textView
-    func textViewShouldBeginEditing(_ textView: UITextView) {
+    func textViewDidChange(_ textView: UITextView) {
         if textView.tag == 6 {
             desc = textView.text
         }
         else{
             desc = "no value"
         }
-        
     }
+
+    
+    
     //MARK: -Return Title in Section
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
