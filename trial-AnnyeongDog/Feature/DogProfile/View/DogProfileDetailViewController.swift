@@ -67,8 +67,13 @@ class DogProfileDetailViewController: UIViewController {
     
     //MARK: - Save Button Pressed
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        DataManipulation.sharedData.updateDogProfile(with: UserControl.shared.user?.uid ?? "unknown", with: DogsModel(dogID: 0, dogName: dogsTextField.text, dateofBirth: dogsDOB.text, gender: genderTextField.text, breed: breedTextField.text, weight: weightTextField.text, color: colorTextField.text, alergen: allergyTextField.text))
         
-        getTextfieldData()
+        let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(identifier: "DPDE")
+        self.navigationController?.pushViewController(vc, animated: false)
+//        getTextfieldData()
     }
     
     
@@ -106,6 +111,9 @@ class DogProfileDetailViewController: UIViewController {
             
             let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
             self.navigationController?.pushViewController(vc, animated: false)
+            
+            DataManipulation.sharedData.deleteDogProfile(with: UserControl.shared.user?.uid ?? "unknown", with: 0)
+            
         }))
         self.present(alert, animated: true)
     }
@@ -122,11 +130,11 @@ class DogProfileDetailViewController: UIViewController {
     }
    
     //MARK: - Get user data from Text Field
-    func getTextfieldData(){
-        
-        dogsModel.updateModel(dogsModel.dogsIdGenerator(), dogsTextField.text ?? "" , dogsDOB.text ?? "", genderTextField.text ?? "" , breedTextField.text ?? "" , weightTextField.text ?? "" , colorTextField.text ?? "" , allergyTextField.text ?? "")
-        
-    }
+//    func getTextfieldData(){
+//
+//        dogsModel.updateModel(dogsModel.dogsIdGenerator(), dogsTextField.text ?? "" , dogsDOB.text ?? "", genderTextField.text ?? "" , breedTextField.text ?? "" , weightTextField.text ?? "" , colorTextField.text ?? "" , allergyTextField.text ?? "")
+//
+//    }
     
 
     //MARK: - UpdateUI function

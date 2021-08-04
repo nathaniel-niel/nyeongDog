@@ -33,7 +33,7 @@ class MRDEViewController: UIViewController/*, deletedelegate*/{
         
         //register XIB cell
         MRDEtable.register(MRDTableViewCell.nib(), forCellReuseIdentifier: MRDTableViewCell.identifier)
-        MRDEtable.register(LargeTextFieldTableViewCell.nib(), forCellReuseIdentifier: LargeTextFieldTableViewCell.identifier)
+//        MRDEtable.register(LargeTextFieldTableViewCell.nib(), forCellReuseIdentifier: LargeTextFieldTableViewCell.identifier)
         MRDEtable.register(DeleteButtonTableViewCell.nib(), forCellReuseIdentifier: DeleteButtonTableViewCell.identifier)
         
         //Moving Content that is located under the keyboard
@@ -103,7 +103,11 @@ class MRDEViewController: UIViewController/*, deletedelegate*/{
     
     //Function to cancelaction
     private func cancelaction(){
+        
         self.dismiss(animated: true, completion: nil)
+        
+        DataManipulation.sharedData.deleteDataToMedicalRecord(with: UserControl.shared.user?.uid ?? "unknown", with: 0, with: 0)
+        
     }
 
     

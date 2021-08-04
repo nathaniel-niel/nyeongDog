@@ -7,8 +7,8 @@
 
 import UIKit
 
-class MRDViewController: UIViewController, UITextFieldDelegate {
-
+class MRDViewController: UIViewController, UITextFieldDelegate, UITextViewDelegate {
+    
     // MARK: UI Component Declaration
     @IBOutlet weak var table: UITableView!
     
@@ -21,6 +21,7 @@ class MRDViewController: UIViewController, UITextFieldDelegate {
     var medicine: String = ""
     var vaccineType: String = ""
     var dosage: String = ""
+    var desc: String = ""
     
     let ViewModel = MRDViewModel()
     var mrdModel : [MRDModel] = []
@@ -28,21 +29,21 @@ class MRDViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setup()
         
-        //setup delegate
+        //MARK: -Setup delegate table
         table.delegate = self
         table.dataSource = self
         
-        //register XIB cell
+        //MARK: -Register XIB cell
         table.register(MRDTableViewCell.nib(), forCellReuseIdentifier: MRDTableViewCell.identifier)
-        table.register(LargeTextFieldTableViewCell.nib(), forCellReuseIdentifier: LargeTextFieldTableViewCell.identifier)
-        
+        table.register(DescriptionTextViewCell.nib(), forCellReuseIdentifier: DescriptionTextViewCell.identifier)
+//        table.register(UINib(nibName: "TextDescCell", bundle: nil), forCellReuseIdentifier: "descIdentifier")
         //Moving Content that is located under the keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDisapear), name: UIResponder.keyboardWillHideNotification, object: nil)
-       
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -71,7 +72,7 @@ class MRDViewController: UIViewController, UITextFieldDelegate {
             isExpand = false
         }
     }
-
+    
     private func setup(){
         self.navigationItem.title = "Medical Record"
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonTapped))
@@ -88,22 +89,22 @@ class MRDViewController: UIViewController, UITextFieldDelegate {
     // Function to go show modally edit page
     @objc private func didEditButtonTapped(){
         let storyboard = UIStoryboard(name: "MRDE", bundle: nil)
-
+        
         let vc = storyboard.instantiateViewController(identifier: "MRDEStoryboard")
-
+        
         let navVc = UINavigationController(rootViewController: vc)
-
+        
         self.present(navVc, animated: false, completion: nil)
         
     }
-
+    
     
 }
 
 
 extension MRDViewController: UITableViewDataSource, UITableViewDelegate{
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -114,65 +115,54 @@ extension MRDViewController: UITableViewDataSource, UITableViewDelegate{
             return 2
         case 2:
             return 3
-        //        case 3:
-        //            return 1
+        case 3:
+            return 1
         default:
             fatalError()
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
-        cell.contenTextField.delegate = self
-        cell.contenTextField.autocorrectionType = .no
-        
-        switch indexPath.section {
-        case 0:
-            switch indexPath.row {
-            case 0:
-                cell.configure(title: "Tanggal", placeholder: "\(DataManipulation.sharedData.mrdModel.count)", tag: 0)
-                return cell
-            default:
-                fatalError()
-            }
-        case 1:
-            switch indexPath.row {
-            case 0:
-                
+        if indexPath.section == 0 {
+            let cell = table.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
+            cell.contenTextField.delegate = self
+            cell.contenTextField.autocorrectionType = .no
+            cell.configure(title: "Tanggal", placeholder: ViewModel.dataSource[0].date, tag: 0)
+            return cell
+        }
+        else if indexPath.section == 1 {
+            let cell = table.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
+            cell.contenTextField.delegate = self
+            cell.contenTextField.autocorrectionType = .no
+            if indexPath.row == 0 {
                 cell.configure(title: "Dokter Hewan", placeholder: ViewModel.dataSource[0].veterinarian,tag: 1)
-                return cell
-            case 1:
-                
+            } else {
                 cell.configure(title: "Tipe Vaksin", placeholder: ViewModel.dataSource[0].diagnosis, tag: 2)
-                return cell
-           
-            default:
-                fatalError()
             }
-        case 2:
-            switch indexPath.row {
-            case 0:
-                cell.configure(title: "Diagnosa", placeholder: ViewModel.dataSource[0].medicine, tag: 3)
-                return cell
-            case 1:
-                
-                
-                cell.configure(title: "Obat", placeholder: ViewModel.dataSource[0].vaccineType, tag: 4)
-                return cell
-            case 2:
-                
-                
-                cell.configure(title: "Dosis", placeholder: ViewModel.dataSource[0].dosage, tag: 5)
-                return cell
-            default:
-                fatalError()
-            }
-
-        default:
-            fatalError()
+            return cell
         }
         
+        else if indexPath.section == 2 {
+            let cell = table.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
+            cell.contenTextField.delegate = self
+            cell.contenTextField.autocorrectionType = .no
+            
+            if indexPath.row == 0 {
+                cell.configure(title: "Diagnosa", placeholder: ViewModel.dataSource[0].medicine, tag: 3)
+            } else if indexPath.row == 1 {
+                cell.configure(title: "Obat", placeholder: ViewModel.dataSource[0].vaccineType, tag: 4)
+            } else {
+                cell.configure(title: "Dosis", placeholder: ViewModel.dataSource[0].dosage, tag: 5)
+            }
+            
+            return cell
+        }
         
+        else {
+            let largeCell = table.dequeueReusableCell(withIdentifier: DescriptionTextViewCell.identifier) as! DescriptionTextViewCell
+            largeCell.descriptionTextView.delegate = self
+            return largeCell
+        }
     }
     
     //MARK: - Read data from text field
@@ -195,13 +185,18 @@ extension MRDViewController: UITableViewDataSource, UITableViewDelegate{
             medicine = textField.text ?? "no value"
         case 5:
             vaccineType = textField.text ?? "no value"
-
         default:
             print("not yet developed")
         }
     }
-
+    //MARK: -Read data from textView
     
+//    func textViewDidChange(_ textView: UITextView) {
+//        desc = textView.text ?? "no value"
+//    }
+    func textViewShouldEndEditing(_ textView: UITextView) {
+        desc = textView.text ?? "no value"
+    }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
@@ -210,9 +205,8 @@ extension MRDViewController: UITableViewDataSource, UITableViewDelegate{
             return "Detail"
         case 2:
             return "Riwayat Kesehatan"
-        //        case 3:
-        //
-        //            return "Description"
+        case 3:
+            return "Deskripsi"
         default:
             fatalError()
         }

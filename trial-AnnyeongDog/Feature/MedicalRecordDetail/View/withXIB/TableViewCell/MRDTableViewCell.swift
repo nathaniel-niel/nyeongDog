@@ -13,7 +13,6 @@ class MRDTableViewCell: UITableViewCell {
     
     static func nib() -> UINib{
         return UINib(nibName: "MRDTableViewCell", bundle: nil)
-        
     }
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contenTextField: UITextField!
