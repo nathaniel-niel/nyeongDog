@@ -17,6 +17,8 @@ struct MRDModel {
     var medicine: String?
     var vaccineType: String?
     var dosage: String?
+    
+    var mrdID = 0
     //var description: String = ""
     
 //    init(id: Int,date: String, veterinarian: String, diagnosis: String, vaccine: String, medicine: String, vaccineType: String, dosage: String) {
@@ -56,5 +58,10 @@ struct MRDModel {
 //        
 //     
 //      }
-
+    mutating func dogsIdGenerator() -> Int{
+        mrdID += 1
+        return mrdID
+    }
+    
 }
+
