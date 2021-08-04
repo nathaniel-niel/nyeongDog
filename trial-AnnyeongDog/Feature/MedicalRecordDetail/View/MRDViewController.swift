@@ -12,6 +12,7 @@ class MRDViewController: UIViewController, UITextFieldDelegate {
     // MARK: UI Component Declaration
     @IBOutlet weak var table: UITableView!
     
+    
     // MARK: Variable declaration
     var date: String = ""
     var vet: String = ""
@@ -22,6 +23,8 @@ class MRDViewController: UIViewController, UITextFieldDelegate {
     var dosage: String = ""
     
     let ViewModel = MRDViewModel()
+    var mrdModel : [MRDModel] = []
+    var isExpand: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,10 +42,17 @@ class MRDViewController: UIViewController, UITextFieldDelegate {
         //Moving Content that is located under the keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppear), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDisapear), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
+       
     }
-
-    var isExpand: Bool = false
+    
+    override func viewDidAppear(_ animated: Bool) {
+        DataManipulation.sharedData.fetchMedicalRecordData(with: UserControl.shared.user?.uid ?? "unknown", with: 0) { responseData in
+            self.mrdModel = responseData
+            DispatchQueue.main.async {
+                self.table.reloadData()
+            }
+        }
+    }
     
     // table view will expand size by + 300
     @objc func keyboardAppear(){
@@ -64,14 +74,14 @@ class MRDViewController: UIViewController, UITextFieldDelegate {
 
     private func setup(){
         self.navigationItem.title = "Medical Record"
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(dismissModal))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonTapped))
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(didEditButtonTapped))
     }
     
     
     // Function to dismiss modal view
-    @objc private func dismissModal(){
+    @objc private func backButtonTapped(){
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -120,7 +130,7 @@ extension MRDViewController: UITableViewDataSource, UITableViewDelegate{
         case 0:
             switch indexPath.row {
             case 0:
-                cell.configure(title: "Tanggal", placeholder: ViewModel.dataSource[0].date, tag: 0)
+                cell.configure(title: "Tanggal", placeholder: "\(DataManipulation.sharedData.mrdModel.count)", tag: 0)
                 return cell
             default:
                 fatalError()

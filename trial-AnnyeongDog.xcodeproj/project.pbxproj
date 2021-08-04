@@ -482,6 +482,7 @@
 		C037879526B2A21F004344E0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */,
 				5B67967226B41796004514F3 /* DogProfileListViewController.swift */,
 				C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */,
 				5B67967026B41794004514F3 /* DogProfileTableViewCell.swift */,

@@ -130,7 +130,11 @@ class DogProfileDetailViewController: UIViewController {
         
     }
     
+
     //MARK: - UpdateUI function
+
+    
+
     func updateUI(){
         
         scrollView.contentSize = CGSize(width: self.view.frame.width - 40, height: self.view.frame.height - 80)

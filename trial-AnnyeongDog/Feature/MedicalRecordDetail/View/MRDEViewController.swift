@@ -57,6 +57,7 @@ class MRDEViewController: UIViewController/*, deletedelegate*/{
     
     @IBAction func deleteDidTapped(_ sender: Any) {
         alertViewDelete()
+        
     }
     
     
@@ -97,6 +98,7 @@ class MRDEViewController: UIViewController/*, deletedelegate*/{
     //MARK: - save button (belum ke save ke database)
     @objc private func didSaveButtonTapped(){
         dismiss(animated: true, completion: nil)
+        DataManipulation.sharedData.updateDataToMedicalRecord(with: UserControl.shared.user?.uid ?? "unknown", with: 0, with: MRDModel(id: 0, date: date, veterinarian: vet, diagnosis: diagnosis, vaccine: vaccine, medicine: medicine, vaccineType: vaccineType, dosage: dosage))
     }
     
     //Function to cancelaction
@@ -208,18 +210,19 @@ extension MRDEViewController: UITableViewDataSource, UITableViewDelegate{
         case 1:
             vet = textField.text ?? "no value"
         case 2:
-            diagnosis = textField.text ?? "no value"
+            vaccineType = textField.text ?? "no value"
         case 3:
-            vaccine = textField.text ?? "no value"
+            diagnosis = textField.text ?? "no value"
         case 4:
             medicine = textField.text ?? "no value"
         case 5:
-            vaccineType = textField.text ?? "no value"
+            dosage = textField.text ?? "no value"
 
         default:
             print("not yet developed")
         }
     }
+
 
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
