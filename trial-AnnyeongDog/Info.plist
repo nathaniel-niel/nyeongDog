@@ -68,5 +68,16 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>facetime</string>
+			</array>
+			<key>CFBundleURLName</key>
+			<string>Novi.trial-AnnyeongDog</string>
+		</dict>
+	</array>
 </dict>
 </plist>

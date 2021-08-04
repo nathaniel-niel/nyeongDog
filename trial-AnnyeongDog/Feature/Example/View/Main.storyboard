@@ -40,6 +40,14 @@
                                     <action selector="didMedicalRecordDetailAddTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="8oZ-Fw-28e"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAB-OZ-aOy">
+                                <rect key="frame" x="127" y="601" width="136" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Facetime Video Call"/>
+                                <connections>
+                                    <action selector="facetimeVideoCall:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Xmg-58-aYx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
