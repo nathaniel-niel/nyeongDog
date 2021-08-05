@@ -69,6 +69,10 @@
 		C00DE8FE26B3D8AE00E99343 /* PrepareToMRD.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00DE8F826B3D8AE00E99343 /* PrepareToMRD.swift */; };
 		C00DE8FF26B3D8AE00E99343 /* MedicalFiilledTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00DE8F926B3D8AE00E99343 /* MedicalFiilledTableViewCell.swift */; };
 		C00DE90026B3D8AE00E99343 /* MedicalRecordsFilledState.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C00DE8FA26B3D8AE00E99343 /* MedicalRecordsFilledState.storyboard */; };
+		C01A908E26BAF080007FA0B6 /* VideoCallStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01A908D26BAF080007FA0B6 /* VideoCallStoryboard.storyboard */; };
+		C01A909026BAF095007FA0B6 /* VideoCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01A908F26BAF095007FA0B6 /* VideoCallViewController.swift */; };
+		C01A909426BAF6BC007FA0B6 /* FacetimeVideoCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01A909326BAF6BC007FA0B6 /* FacetimeVideoCall.swift */; };
+		C01A909626BAF706007FA0B6 /* FacetimeEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01A909526BAF706007FA0B6 /* FacetimeEmail.swift */; };
 		C037876A26B2A199004344E0 /* MedicalRecordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037876626B2A199004344E0 /* MedicalRecordsViewController.swift */; };
 		C037876B26B2A199004344E0 /* MedicalRecords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C037876926B2A199004344E0 /* MedicalRecords.storyboard */; };
 		C037878726B2A1CB004344E0 /* DogProfileDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C037877126B2A1CB004344E0 /* DogProfileDetail.storyboard */; };
@@ -146,6 +150,10 @@
 		C00DE8F826B3D8AE00E99343 /* PrepareToMRD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareToMRD.swift; sourceTree = "<group>"; };
 		C00DE8F926B3D8AE00E99343 /* MedicalFiilledTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalFiilledTableViewCell.swift; sourceTree = "<group>"; };
 		C00DE8FA26B3D8AE00E99343 /* MedicalRecordsFilledState.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MedicalRecordsFilledState.storyboard; sourceTree = "<group>"; };
+		C01A908D26BAF080007FA0B6 /* VideoCallStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoCallStoryboard.storyboard; sourceTree = "<group>"; };
+		C01A908F26BAF095007FA0B6 /* VideoCallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCallViewController.swift; sourceTree = "<group>"; };
+		C01A909326BAF6BC007FA0B6 /* FacetimeVideoCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacetimeVideoCall.swift; sourceTree = "<group>"; };
+		C01A909526BAF706007FA0B6 /* FacetimeEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacetimeEmail.swift; sourceTree = "<group>"; };
 		C037876626B2A199004344E0 /* MedicalRecordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalRecordsViewController.swift; sourceTree = "<group>"; };
 		C037876926B2A199004344E0 /* MedicalRecords.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MedicalRecords.storyboard; sourceTree = "<group>"; };
 		C037877126B2A1CB004344E0 /* DogProfileDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DogProfileDetail.storyboard; sourceTree = "<group>"; };
@@ -281,8 +289,7 @@
 				B535E08D26BBA2FC0038251D /* Model */,
 				B535E08F26BBA2FC0038251D /* View */,
 			);
-			name = Chat;
-			path = "../../../trial-AnnyeongDog[Chat]/trial-AnnyeongDog/Feature/Chat";
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		B535E08C26BBA2FC0038251D /* ViewModel */ = {
@@ -402,6 +409,7 @@
 		B584B3C126B28C71005A02C5 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				C01A908826BAF046007FA0B6 /* VideoCall */,
 				B535E08B26BBA2FC0038251D /* Chat */,
 				B584B3CE26B28DF2005A02C5 /* Main */,
 				B5821A5726B7EEA0006DDED9 /* SignIn */,
@@ -483,6 +491,49 @@
 				B584B3B326B264CD005A02C5 /* LaunchScreen.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C01A908826BAF046007FA0B6 /* VideoCall */ = {
+			isa = PBXGroup;
+			children = (
+				C01A908C26BAF064007FA0B6 /* Controller */,
+				C01A908B26BAF060007FA0B6 /* Model */,
+				C01A908A26BAF059007FA0B6 /* View */,
+				C01A908926BAF04E007FA0B6 /* ViewModel */,
+			);
+			path = VideoCall;
+			sourceTree = "<group>";
+		};
+		C01A908926BAF04E007FA0B6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C01A909326BAF6BC007FA0B6 /* FacetimeVideoCall.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C01A908A26BAF059007FA0B6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C01A908F26BAF095007FA0B6 /* VideoCallViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C01A908B26BAF060007FA0B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C01A909526BAF706007FA0B6 /* FacetimeEmail.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C01A908C26BAF064007FA0B6 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C01A908D26BAF080007FA0B6 /* VideoCallStoryboard.storyboard */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		C037876426B2A199004344E0 /* MedicalRecords */ = {
@@ -668,6 +719,7 @@
 				B584B3BD26B265C0005A02C5 /* GoogleService-Info.plist in Resources */,
 				C00DE8FC26B3D8AE00E99343 /* MedicalFiilledTableViewCell.xib in Resources */,
 				B584B3B226B264CD005A02C5 /* Assets.xcassets in Resources */,
+				C01A908E26BAF080007FA0B6 /* VideoCallStoryboard.storyboard in Resources */,
 				B5A0B08A26BA974000D5C273 /* TextDescCell.xib in Resources */,
 				C037876B26B2A199004344E0 /* MedicalRecords.storyboard in Resources */,
 			);
@@ -727,6 +779,7 @@
 				B535E09326BBA2FC0038251D /* ChatViewController.swift in Sources */,
 				C037876A26B2A199004344E0 /* MedicalRecordsViewController.swift in Sources */,
 				5B3CE4A426B8E96700ECF396 /* DogProfileDetailAddViewController.swift in Sources */,
+				C01A909026BAF095007FA0B6 /* VideoCallViewController.swift in Sources */,
 				B5821A6426B7EEA0006DDED9 /* Signin.swift in Sources */,
 				C00DE8FF26B3D8AE00E99343 /* MedicalFiilledTableViewCell.swift in Sources */,
 				C00DE8FB26B3D8AE00E99343 /* dummyTesting.swift in Sources */,
@@ -754,8 +807,10 @@
 				5B05C39A26B2A9450034A66A /* MRDEViewController.swift in Sources */,
 				2D74BE1B26B45535009B3629 /* DogProfileDetailModel.swift in Sources */,
 				2D628ED326B297B20008ECD2 /* MRDTableViewCell.swift in Sources */,
+				C01A909426BAF6BC007FA0B6 /* FacetimeVideoCall.swift in Sources */,
 				B59BDB9826BB02B400AED6D6 /* LoadingViewController.swift in Sources */,
 				C00DE8F126B312D400E99343 /* MedicalRecordsDummyData.swift in Sources */,
+				C01A909626BAF706007FA0B6 /* FacetimeEmail.swift in Sources */,
 				2D628ED826B297B20008ECD2 /* MRDViewController.swift in Sources */,
 				B584B3A926B264CC005A02C5 /* AppDelegate.swift in Sources */,
 				B535E09D26BBB1BE0038251D /* ChatViewCell.swift in Sources */,

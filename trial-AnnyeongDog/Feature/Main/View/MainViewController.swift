@@ -42,10 +42,23 @@ class MainViewController: UIViewController {
     
     // MARK: - IBAction from button SignIn
     @IBAction func didSignInTapped(_ sender: UIButton) {
+        
         let storyboard = UIStoryboard(name: "Signin", bundle: nil)
         let signInVC = (storyboard.instantiateViewController(identifier: "Signin")) as! SigninViewController
+
+        self.navigationController?.pushViewController(signInVC, animated: true)
+       
+        
+  }
+    
+    
+    @IBAction func facetimeVideoCall(_ sender: UIButton) {
+        
+        let storyboard = UIStoryboard(name: "VideoCallStoryboard", bundle: nil)
+        let signInVC = (storyboard.instantiateViewController(identifier: "videoCall")) as! VideoCallViewController
         
         self.navigationController?.pushViewController(signInVC, animated: true)
+        
     }
     
     //MARK: -IBAction from button MedicalRecordDetail
