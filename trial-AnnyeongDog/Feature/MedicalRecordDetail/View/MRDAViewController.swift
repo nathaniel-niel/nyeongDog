@@ -93,13 +93,7 @@ class MRDAViewController: UIViewController  {
     
     //MARK: - Save Medical Record
     @objc private func didSaveButtonTapped(){
-        let storyboard = UIStoryboard(name: "MRD", bundle: nil)
-        
-        let vc = storyboard.instantiateViewController(identifier: "mrd")
-        
-        let navVc = UINavigationController(rootViewController: vc)
-        
-        self.present(navVc, animated: false, completion: nil)
+        self.dismiss(animated: true, completion: nil)
         DataManipulation.sharedData.insertDataToMedicalRecord(with: UserControl.shared.user?.uid ?? "unknown", with: 0, with: MRDModel(id: 0, date: date, veterinarian: vet, diagnosis: diagnosis, vaccine: vaccine, medicine: medicine, vaccineType: vaccineType, dosage: dosage, description: desc))
         
     }

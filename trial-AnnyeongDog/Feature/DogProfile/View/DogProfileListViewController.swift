@@ -16,6 +16,9 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //disable back button
+        navigationItem.hidesBackButton = true
+        
         dogProfileTableView.dataSource = self
         dogProfileTableView.delegate = self
     }
