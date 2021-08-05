@@ -34,8 +34,8 @@ class VetListTableViewCell: UITableViewCell {
         // Initialization code
         
         // UI Custom
-        viewExp.layer.cornerRadius = 10
-        viewRating.layer.cornerRadius = 10
+        viewExp.layer.cornerRadius = 6.5
+        viewRating.layer.cornerRadius = 6.5
         statusView.layer.cornerRadius = statusView.bounds.size.width / 2
         statusView.backgroundColor = UIColor.green
         

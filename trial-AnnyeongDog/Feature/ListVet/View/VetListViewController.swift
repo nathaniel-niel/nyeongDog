@@ -16,6 +16,8 @@ class VetListViewController: UIViewController {
     let dummydata = VetDummyData()
 //    var VetModel: [VetListModel] = []
     
+    //change value string i
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
