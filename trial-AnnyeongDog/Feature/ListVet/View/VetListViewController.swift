@@ -34,7 +34,7 @@ extension VetListViewController: UITableViewDelegate, UITableViewDataSource{
     
     //MARK: - Height Cell Setting
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 170
+        return 140
 
     }
     
@@ -53,6 +53,14 @@ extension VetListViewController: UITableViewDelegate, UITableViewDataSource{
         
         return cell
         
+    }
+    
+    //MARK: - Ketika Row di klik
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        performSegue(withIdentifier: "segueDogProfileDetail", sender: nil)
+        let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
+        let nVC = (storyboard.instantiateViewController(identifier: "DPDE")) as! DogProfileDetailEditViewController
+        self.present(nVC, animated: true, completion: nil)
     }
     
     

@@ -17,6 +17,7 @@ class VetListTableViewCell: UITableViewCell {
     @IBOutlet weak var viewCell: UIView!
     @IBOutlet weak var viewRating: UIView!
     @IBOutlet weak var viewExp: UIView!
+    @IBOutlet weak var statusView: UIView!
     
     static let identifier = "cell"
     
@@ -35,6 +36,8 @@ class VetListTableViewCell: UITableViewCell {
         // UI Custom
         viewExp.layer.cornerRadius = 10
         viewRating.layer.cornerRadius = 10
+        statusView.layer.cornerRadius = statusView.bounds.size.width / 2
+        statusView.backgroundColor = UIColor.green
         
         
         // UI View Cell
