@@ -8,7 +8,7 @@
 import Foundation
 
 struct VetListModel {
-    var vetName: String?
+    var vetName: String
     var price: String?
     var expYears: String?
     var rating: String?
