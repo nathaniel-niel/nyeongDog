@@ -9,9 +9,14 @@ import UIKit
 
 class PrescriptionViewCell: UITableViewCell {
 
+    @IBOutlet weak var pView: UIView!
+    static let identifier = "prescriptionCell"
+    static func nib() -> UINib {
+        return UINib(nibName: "PrescriptionViewCell", bundle: nil)
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+//        pView.layer.cornerRadius = pView.frame.height/10
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
