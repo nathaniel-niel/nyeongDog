@@ -31,6 +31,17 @@ class DogProfileDetailViewController: UIViewController {
     var dobPickerView = UIPickerView()
     var isExpand = false
     
+    
+    //MARK: -Temporary variables
+    var id: String?
+    var dogName: String?
+    var dob: String?
+    var gender: String?
+    var breed: String?
+    var weight: String?
+    var color: String?
+    var alergen: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,6 +58,10 @@ class DogProfileDetailViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppear), name:UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDissapear), name:UIResponder.keyboardWillHideNotification, object: nil)
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        assignData()
     }
     
     @objc func keyboardAppear(notification:NSNotification){
@@ -69,8 +84,13 @@ class DogProfileDetailViewController: UIViewController {
     
     //MARK: - Save Button Pressed
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        DataManipulation.sharedData.updateDogProfile(with: UserControl.shared.user?.uid ?? "unknown", with: DogsModel(dogID: id, dogName: dogsTextField.text, dateofBirth: dogsDOB.text, gender: genderTextField.text, breed: breedTextField.text, weight: weightTextField.text, color: colorTextField.text, alergen: allergyTextField.text))
         
-        getTextfieldData()
+        let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(identifier: "DPDE")
+        self.navigationController?.popViewController(animated: true)
+//        getTextfieldData()
     }
     
     
@@ -108,6 +128,9 @@ class DogProfileDetailViewController: UIViewController {
             
             let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
             self.navigationController?.pushViewController(vc, animated: false)
+            
+            DataManipulation.sharedData.deleteDogProfile(with: UserControl.shared.user?.uid ?? "unknown", with: 0)
+            
         }))
         self.present(alert, animated: true)
     }
@@ -124,11 +147,11 @@ class DogProfileDetailViewController: UIViewController {
     }
    
     //MARK: - Get user data from Text Field
-    func getTextfieldData(){
-        
-        dogsModel.updateModel(dogsModel.dogsIdGenerator(), dogsTextField.text ?? "" , dogsDOB.text ?? "", genderTextField.text ?? "" , breedTextField.text ?? "" , weightTextField.text ?? "" , colorTextField.text ?? "" , allergyTextField.text ?? "")
-        
-    }
+//    func getTextfieldData(){
+//
+//        dogsModel.updateModel(dogsModel.dogsIdGenerator(), dogsTextField.text ?? "" , dogsDOB.text ?? "", genderTextField.text ?? "" , breedTextField.text ?? "" , weightTextField.text ?? "" , colorTextField.text ?? "" , allergyTextField.text ?? "")
+//
+//    }
     
 
     //MARK: - UpdateUI function
@@ -152,6 +175,16 @@ class DogProfileDetailViewController: UIViewController {
         dogImage.layer.borderColor = UIColor.black.cgColor
         dogImage.layer.cornerRadius = dogImage.frame.height/2
         dogImage.clipsToBounds = true
+    }
+    
+    func assignData(){
+        dogsTextField.text = dogName
+        genderTextField.text = gender
+        breedTextField.text = breed
+        weightTextField.text = weight
+        colorTextField.text = color
+        allergyTextField.text = alergen
+        dogsDOB.text = dob
     }
     
     //MARK: - for Picker View function

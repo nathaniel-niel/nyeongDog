@@ -17,6 +17,7 @@ class DataManipulation {
     
     // MARK: Model Declaration
     var mrdModel : [MRDModel] = []
+    var dogModel : [DogsModel] = []
     // MARK: Firebase configuration
     
     //Connection ke Firebase
@@ -37,30 +38,73 @@ class DataManipulation {
     
     
     // insert Dog Profile data to Firebase
-    func insertDogProfileData(with user: UserModel, with dog: DogProfileModel){
-        ref.child("users").child("\(user.id)").child("dogs").child("\(dog.dogId)").setValue([
-            "dog name": dog.dogName,
-            "DOB": dog.dateOfBirth,
-            "gender": dog.gender,
-            "breed": dog.breed,
-            "weight": dog.weight,
-            "color": dog.color,
-            "alergen": dog.alergen
-        ])
+    func insertDogProfile(with userId: String, with dog: DogsModel){
+        
+        let object: [String: Any] = [
+            "dogId": dog.dogID ?? "no data",
+            "dogName": dog.dogName ?? "no data",
+            "dateofBirth": dog.dateofBirth ?? "no data",
+            "gender": dog.dogID ?? "no data",
+            "breed": dog.breed ?? "no data",
+            "weight": dog.weight ?? "no data",
+            "color": dog.color ?? "no data",
+            "alergen": dog.alergen ?? "no data"
+        ]
+        ref.child("users/\(userId)/dogs/\(dog.dogID ?? "no data")").setValue(object)
+        
     }
     
-    // update Dog Profile data in Firebase
-    func updateDogProfileData(with user: UserModel, with dog: DogProfileModel){
-        ref.child("users").child("\(user.id)").child("dogs").child("\(dog.dogId)").updateChildValues([
-            "dog name": dog.dogName,
-            "DOB": dog.dateOfBirth,
-            "gender": dog.gender,
-            "breed": dog.breed,
-            "weight": dog.weight,
-            "color": dog.color,
-            "alergen": dog.alergen
-        ])
+    //update dog profile data in Firebase
+    func updateDogProfile(with userId: String, with dog: DogsModel){
+        
+        let object: [String: Any] = [
+            "dogId": dog.dogID ?? "no data",
+            "dogName": dog.dogName ?? "no data",
+            "dateofBirth": dog.dateofBirth ?? "no data",
+            "gender": dog.dogID ?? "no data",
+            "breed": dog.breed ?? "no data",
+            "weight": dog.weight ?? "no data",
+            "color": dog.color ?? "no data",
+            "alergen": dog.alergen ?? "no data"
+        ]
+        ref.child("users/\(userId)/dogs/\(dog.dogID ?? "no data")").updateChildValues(object)
+        
     }
+    
+    //retrieve dog profile data from Firebase
+    func fetchDogDataFromFirebase(with userId: String, completion: @escaping ([DogsModel]) -> Void){
+        
+        //remove all data
+        dogModel.removeAll()
+        
+        ref.child("users/\(userId)/dogs").observe(DataEventType.value) { snapshot in
+            if snapshot.exists(){
+                for child in snapshot.children{
+                    if let snap = child as? DataSnapshot{
+                        guard let val = snap.value as? [String : AnyObject] else { return }
+                        
+                        self.dogModel.append(DogsModel(
+                                                dogID: val["dogId"] as? String,
+                                                dogName: val["dogName"] as? String,
+                                                dateofBirth: val["dateofBirth"] as? String,
+                                                gender: val["gender"] as? String,
+                                                breed: val["breed"] as? String,
+                                                weight: val["weight"] as? String,
+                                                color: val["color"] as? String,
+                                                alergen: val["alergen"] as? String))
+                    }
+                }
+                print(self.dogModel)
+                completion(self.dogModel)
+            }
+            else{
+                print(Error.self)
+            }
+        }
+        
+        
+    }
+    
     
     //MARK: -Function for Medical Record
     
@@ -75,7 +119,7 @@ class DataManipulation {
             "medicine": mrd.medicine ?? "no data",
             "vaccineType": mrd.vaccineType ?? "no data",
             "dosage": mrd.dosage ?? "no data",
-            "description": mrd.description ?? "no data"
+            "description": mrd.description
         ]
         ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrd.id ?? 0)").setValue(object)
         
@@ -92,7 +136,7 @@ class DataManipulation {
             "medicine": mrd.medicine ?? "no data",
             "vaccineType": mrd.vaccineType ?? "no data",
             "dosage": mrd.dosage ?? "no data",
-            "description": mrd.description ?? "no data"
+            "description": mrd.description
         ]
         ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrd.id ?? 0)").updateChildValues(object)
         
@@ -135,5 +179,25 @@ class DataManipulation {
                 print(Error.self)
             }
         }
+    }
+    
+    // delete data medical record detail
+    func deleteDataToMedicalRecord(with userId: String, with dogID: Int, with mrdID: Int ){
+        
+        ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrdID)/").removeValue()
+        //
+        //        ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrdID)/date").removeValue()
+        //        ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrdID)/diagnosis").removeValue()
+        //        ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrdID)/dosage").removeValue()
+        //        ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrdID)/medicine").removeValue()
+        //        ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrdID)/vaccineType").removeValue()
+        //        ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrdID)/vaccinne").removeValue()
+        //        ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrdID)/vets").removeValue()
+    }
+    
+    //MARK: - delete dog profile
+    func deleteDogProfile(with userId: String, with dogID: Int){
+        
+        ref.child("users/\(userId)/dogs/\(dogID)").removeValue()
     }
 }

@@ -33,6 +33,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        }
         
 //        storageManager.resetNewUser()
+//        
+//        if user != nil{
+//            print("You're signed in as \(user?.uid ?? "unknown"), email: \(user?.email ?? "unknown")")
+//        }
         
         return true
     }
