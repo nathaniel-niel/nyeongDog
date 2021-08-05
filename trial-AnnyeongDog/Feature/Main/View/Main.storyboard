@@ -41,7 +41,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAB-OZ-aOy">
-                                <rect key="frame" x="127" y="601" width="136" height="30"/>
+                                <rect key="frame" x="134" y="195" width="136" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Facetime Video Call"/>
                                 <connections>
@@ -61,7 +61,6 @@
         <!--Item-->
         <scene sceneID="4Lh-3N-Emm">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mim-nD-tCf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cfu-x0-tRB" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="GmR-kk-bOn"/>
                     <toolbarItems/>
@@ -74,16 +73,17 @@
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="H8l-Lj-KAd"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mim-nD-tCf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2880" y="44.7867298578199"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="OuW-tY-T8V">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Xxi-Ky-Olb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="P5b-4J-xJt" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="js8-TX-nnN">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -91,6 +91,7 @@
                         <segue destination="cfu-x0-tRB" kind="relationship" relationship="viewControllers" id="ClO-z9-LsZ"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xxi-Ky-Olb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1950.7692307692307" y="44.7867298578199"/>
         </scene>
