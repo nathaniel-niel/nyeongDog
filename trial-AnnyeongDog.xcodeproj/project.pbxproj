@@ -289,8 +289,7 @@
 				B535E08D26BBA2FC0038251D /* Model */,
 				B535E08F26BBA2FC0038251D /* View */,
 			);
-			name = Chat;
-			path = "../../../trial-AnnyeongDog[Chat]/trial-AnnyeongDog/Feature/Chat";
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		B535E08C26BBA2FC0038251D /* ViewModel */ = {

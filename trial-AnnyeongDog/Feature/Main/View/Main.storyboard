@@ -46,6 +46,8 @@
                                 <state key="normal" title="Facetime Video Call"/>
                                 <connections>
                                     <action selector="facetimeVideoCall:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="Xmg-58-aYx"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyG-ja-T1L">
                                 <rect key="frame" x="151" y="610" width="112" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
