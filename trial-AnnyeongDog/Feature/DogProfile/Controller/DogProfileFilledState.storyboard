@@ -108,28 +108,11 @@
                     </navigationItem>
                     <connections>
                         <outlet property="dogProfileTableView" destination="P4g-rg-Ilg" id="8Y2-10-62B"/>
-                        <segue destination="ZQL-wX-Npa" kind="show" identifier="segueDogProfileDetail" id="vql-Fq-mEr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FVY-6h-7df" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1969.5652173913045" y="834.375"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="Atp-lT-A6D">
-            <objects>
-                <viewController id="ZQL-wX-Npa" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="w86-rP-Yf9">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="uEZ-IO-Zr2"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Pj6-4L-cib"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ULW-5w-nYh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2851" y="834"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zZZ-lE-dv0">

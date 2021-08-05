@@ -10,7 +10,7 @@ import UIKit
 class DogProfileDetailEditViewController: UIViewController {
     
     
-    //MARK: UI Components Declaration
+    //MARK: -UI Components Declaration
     @IBOutlet weak var dogsTextField: UITextField!
     @IBOutlet weak var dogImage: UIImageView!
     @IBOutlet weak var genderTextField: UITextField!
@@ -21,6 +21,15 @@ class DogProfileDetailEditViewController: UIViewController {
     @IBOutlet weak var allergyTextField: UITextField!
     @IBOutlet weak var dogsDOB: UITextField!
     
+    //MARK: -Temporary variables
+    var id: String?
+    var dogName: String?
+    var dob: String?
+    var gender: String?
+    var breed: String?
+    var weight: String?
+    var color: String?
+    var alergen: String?
     
     // MARK: Object Declaration
     var genderModel = GenderModel()
@@ -39,12 +48,15 @@ class DogProfileDetailEditViewController: UIViewController {
         
         genderTextField.inputView = pickerView
         
-        print("testing 1234")
+        
         
         navigationItem.largeTitleDisplayMode = .never
         setup()
-        
-        
+
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        assignData()
     }
     
     // MARK: Functions
@@ -89,8 +101,28 @@ class DogProfileDetailEditViewController: UIViewController {
     @objc func editButtonTapped(){
         let storyboard = UIStoryboard(name: "DogProfileDetail", bundle: nil)
         
-        let vc = storyboard.instantiateViewController(identifier: "DogProfileDetail")
+        let vc = storyboard.instantiateViewController(identifier: "DogProfileDetail")  as! DogProfileDetailViewController
+        
+        vc.id = id
+        vc.dogName = dogName
+        vc.dob = dob
+        vc.gender = gender
+        vc.breed = breed
+        vc.weight = weight
+        vc.color = color
+        vc.alergen = alergen
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    //MARK: - Assign data
+    func assignData(){
+        dogsTextField.text = dogName
+        genderTextField.text = gender
+        breedTextField.text = breed
+        weightTextField.text = weight
+        colorTextField.text = color
+        allergyTextField.text = alergen
+        dogsDOB.text = dob
     }
     
     //MARK: - Medical Record Button
@@ -98,6 +130,8 @@ class DogProfileDetailEditViewController: UIViewController {
         let storyboard = UIStoryboard(name: "MedicalRecordsFilledState", bundle: nil)
         
         let vc = storyboard.instantiateViewController(identifier: "medicalRecordsFilled")
+        
+    
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

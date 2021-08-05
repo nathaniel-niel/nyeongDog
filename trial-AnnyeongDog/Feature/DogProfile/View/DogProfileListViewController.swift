@@ -10,21 +10,25 @@ import UIKit
 class DogProfileListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var dogProfileTableView: UITableView!
     
-    //Dummy Data
-    let dogs = [
-        Dogs(dogName: "Rayzki", dogGender: "Male", dogWeight: "2 Kg"),
-        Dogs(dogName: "Chiko", dogGender: "Male", dogWeight: "1 Kg"),
-        Dogs(dogName: "Cara", dogGender: "Female", dogWeight: "2 Kg"),
-        Dogs(dogName: "Buddy", dogGender: "Male", dogWeight: "10 Kg"),
-        Dogs(dogName: "Rexy", dogGender: "Male", dogWeight: "5 Kg"),
-        Dogs(dogName: "Brody", dogGender: "Male", dogWeight: "7 Kg")
-    ]
+    var dogModel: [DogsModel] = []
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         dogProfileTableView.dataSource = self
         dogProfileTableView.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        DataManipulation.sharedData.fetchDogDataFromFirebase(with: UserControl.shared.user?.uid ?? "unknown") { responseData in
+            self.dogModel = responseData
+            
+            DispatchQueue.main.async {
+                self.dogProfileTableView.reloadData()
+            }
+            print("oke")
+        }
     }
  
     //MARK: - Height Cell Setting
@@ -35,14 +39,23 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     
     //MARK: - Jumlah Cell
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dogs.count
+        return dogModel.count
     }
     
     //MARK: - Ketika Row di klik
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        performSegue(withIdentifier: "segueDogProfileDetail", sender: nil)
         let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
-        let nVC = (storyboard.instantiateViewController(identifier: "DPDE"))
+        let nVC = (storyboard.instantiateViewController(identifier: "DPDE")) as! DogProfileDetailEditViewController
+        
+        nVC.id = dogModel[indexPath.row].dogID
+        nVC.dogName = dogModel[indexPath.row].dogName
+        nVC.dob = dogModel[indexPath.row].dateofBirth
+        nVC.gender = dogModel[indexPath.row].gender
+        nVC.breed = dogModel[indexPath.row].breed
+        nVC.weight = dogModel[indexPath.row].weight
+        nVC.color = dogModel[indexPath.row].color
+        nVC.alergen = dogModel[indexPath.row].alergen
         
         self.navigationController?.pushViewController(nVC, animated: true)
     }
@@ -56,9 +69,9 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         cell.dogProfileView.layer.borderColor = UIColor(red: 0.37, green: 0.43, blue: 0.69, alpha: 1).cgColor
     
         cell.dogPicture.layer.cornerRadius = 8
-        cell.dogName.text = dogs[indexPath.row].dogName
-        cell.dogGender.text = dogs[indexPath.row].dogGender
-        cell.dogWeight.text = dogs[indexPath.row].dogWeight
+        cell.dogName.text = dogModel[indexPath.row].dogName
+        cell.dogGender.text = dogModel[indexPath.row].gender
+        cell.dogWeight.text = dogModel[indexPath.row].weight
         
         cell.selectionStyle = .none
         
