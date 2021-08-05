@@ -40,7 +40,7 @@ class MainViewController: UIViewController {
         
     }
     
-    // MARK: - IBAction from button
+    // MARK: - IBAction from button SignIn
     @IBAction func didSignInTapped(_ sender: UIButton) {
         
         let storyboard = UIStoryboard(name: "Signin", bundle: nil)
@@ -61,7 +61,7 @@ class MainViewController: UIViewController {
         
     }
     
-    
+    //MARK: -IBAction from button MedicalRecordDetail
     @IBAction func didMedicalRecordDetailTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "MRD", bundle: nil)
         
@@ -73,6 +73,7 @@ class MainViewController: UIViewController {
         self.present(navVc, animated: true, completion: nil)
     }
     
+    //MARK: -IBAction from button MedicalRecordDetailAdd
     @IBAction func didMedicalRecordDetailAddTapped(_ sender: Any) {
         let storyboard = UIStoryboard(name: "MRDA", bundle: nil)
         
@@ -83,6 +84,14 @@ class MainViewController: UIViewController {
         self.present(navVc, animated: true, completion: nil)
     }
     
+    @IBAction func didTapChatPage(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Chat", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(identifier: "Chat")
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
     
     
     

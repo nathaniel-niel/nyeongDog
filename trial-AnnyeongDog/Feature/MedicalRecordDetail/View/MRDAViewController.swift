@@ -38,7 +38,8 @@ class MRDAViewController: UIViewController  {
         
         //MARK: -Register XIB cell
         mrdaTable.register(MRDTableViewCell.nib(), forCellReuseIdentifier: MRDTableViewCell.identifier)
-        //        mrdaTable.register(UINib(nibName: "TextDescCell", bundle: nil), forCellReuseIdentifier: "descIdentifier")
+        //        mrdaTable.register(LargeTextFieldTableViewCell.nib(), forCellReuseIdentifier: LargeTextFieldTableViewCell.identifier)
+//        mrdaTable.register(UINib(nibName: "TextDescCell", bundle: nil), forCellReuseIdentifier: "descIdentifier")
         mrdaTable.register(DescriptionTextViewCell.nib(), forCellReuseIdentifier: DescriptionTextViewCell.identifier)
         
         //MARK: -Moving Content that is located under the keyboard
@@ -100,7 +101,6 @@ class MRDAViewController: UIViewController  {
         
         self.present(navVc, animated: false, completion: nil)
         DataManipulation.sharedData.insertDataToMedicalRecord(with: UserControl.shared.user?.uid ?? "unknown", with: 0, with: MRDModel(id: 0, date: date, veterinarian: vet, diagnosis: diagnosis, vaccine: vaccine, medicine: medicine, vaccineType: vaccineType, dosage: dosage, description: desc))
-        print("Description: \(desc)")
         
     }
 }
@@ -126,45 +126,52 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate, UIText
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //Waktu
         if indexPath.section == 0 {
+            
             let cell = mrdaTable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
             cell.contenTextField.delegate = self
             cell.contenTextField.autocorrectionType = .no
             cell.configure(title: "Tanggal", placeholder: ViewModel.dataSource[0].date, tag: 0)
             return cell
         }
-        //Detail
         else if indexPath.section == 1 {
             let cell = mrdaTable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
             cell.contenTextField.delegate = self
             cell.contenTextField.autocorrectionType = .no
             if indexPath.row == 0 {
+                
                 cell.configure(title: "Dokter Hewan", placeholder: ViewModel.dataSource[0].veterinarian,tag: 1)
+                
             } else {
                 cell.configure(title: "Tipe Vaksin", placeholder: ViewModel.dataSource[0].diagnosis, tag: 2)
+                
             }
             return cell
         }
         
-        //Riwayat Kesehatan
         else if indexPath.section == 2 {
             let cell = mrdaTable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
             cell.contenTextField.delegate = self
             cell.contenTextField.autocorrectionType = .no
             
             if indexPath.row == 0 {
+                
                 cell.configure(title: "Diagnosa", placeholder: ViewModel.dataSource[0].medicine, tag: 3)
             } else if indexPath.row == 1 {
                 cell.configure(title: "Obat", placeholder: ViewModel.dataSource[0].vaccineType, tag: 4)
+                
             } else {
                 cell.configure(title: "Dosis", placeholder: ViewModel.dataSource[0].dosage, tag: 5)
+                
             }
             
             return cell
         }
-        //Deskripsi
+        
         else {
+            
+            
+            //            let largeCell = mrdaTable.dequeueReusableCell(withIdentifier: TextDescCell.identifier) as! TextDescCell
             let largeCell = mrdaTable.dequeueReusableCell(withIdentifier: DescriptionTextViewCell.identifier) as! DescriptionTextViewCell
             largeCell.descriptionTextView.delegate = self
             largeCell.configure(description: "hello world")
@@ -221,7 +228,8 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate, UIText
         case 2:
             return "Riwayat Kesehatan"
         case 3:
-            return "Deskripsi"
+            
+            return "Description"
         default:
             fatalError()
         }
