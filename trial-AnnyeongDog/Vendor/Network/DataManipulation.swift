@@ -18,6 +18,7 @@ class DataManipulation {
     // MARK: Model Declaration
     var mrdModel : [MRDModel] = []
     var dogModel : [DogsModel] = []
+    var vetModel : [VetListModel] = []
     // MARK: Firebase configuration
     
     //Connection ke Firebase
@@ -200,4 +201,5 @@ class DataManipulation {
         
         ref.child("users/\(userId)/dogs/\(dogID)").removeValue()
     }
+    
 }
