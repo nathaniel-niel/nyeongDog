@@ -8,7 +8,7 @@
 import UIKit
 
 class DogProfileDetailAddViewController: UIViewController {
-
+    
     //MARK: UI Components Declaration
     @IBOutlet weak var dogsTextField: UITextField!
     @IBOutlet weak var genderTextField: UITextField!
@@ -27,6 +27,7 @@ class DogProfileDetailAddViewController: UIViewController {
     var dogsModel = DogsModel()
     var pickerView = UIPickerView()
     var dobPickerView = UIPickerView()
+    let helper = Helper()
     
     // MARK: Life Cycle
     override func viewDidLoad() {
@@ -103,7 +104,6 @@ class DogProfileDetailAddViewController: UIViewController {
         
         dobPickerView.tag = 1
         pickerView.tag = 2
-        
         pickerView.delegate = self
         pickerView.dataSource = self
         dobPickerView.delegate = self
@@ -139,19 +139,19 @@ class DogProfileDetailAddViewController: UIViewController {
     
     func getTextfieldData(){
         
-        DataManipulation.sharedData.insertDogProfile(with: UserControl.shared.user?.uid ?? "unknown", with: DogsModel(dogID: 0, dogName: dogsTextField.text, dateofBirth: dogsDOB.text, gender: genderTextField.text, breed: breedTextField.text, weight: weightTextField.text, color: colorTextField.text, alergen: allergyTextField.text))
+        DataManipulation.sharedData.insertDogProfile(with: UserControl.shared.user?.uid ?? "unknown", with: DogsModel(dogID: helper.generateUniqueID(), dogName: dogsTextField.text, dateofBirth: dogsDOB.text, gender: genderTextField.text, breed: breedTextField.text, weight: weightTextField.text, color: colorTextField.text, alergen: allergyTextField.text))
         
     }
     
-//    @IBAction func MedicalRecordButton(_ sender: Any) {
-//        let storyboard = UIStoryboard(name: "MedicalRecordsFilledState", bundle: nil)
-//
-//        let vc = storyboard.instantiateViewController(identifier: "medicalRecordsFilled")
-//        self.navigationController?.pushViewController(vc, animated: true)
-//    }
+    //    @IBAction func MedicalRecordButton(_ sender: Any) {
+    //        let storyboard = UIStoryboard(name: "MedicalRecordsFilledState", bundle: nil)
+    //
+    //        let vc = storyboard.instantiateViewController(identifier: "medicalRecordsFilled")
+    //        self.navigationController?.pushViewController(vc, animated: true)
+    //    }
 }
 
-    
+
 
 // MARK: Function for UiPicker on Keyboard ( Both DOB and Gender )
 
