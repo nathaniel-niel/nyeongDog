@@ -39,6 +39,7 @@ class ChatViewController: UIViewController {
         //MARK: -Customize Video Call Button
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "video"), style: .plain, target: self, action: #selector(didTapVideoButton))
         
+        //MARK: -Hide tab bar in chat
         self.tabBarController?.tabBar.isHidden = true
     }
     
