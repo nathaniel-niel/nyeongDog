@@ -77,7 +77,10 @@
                         <barButtonItem key="backBarButtonItem" id="6ZT-qH-gni"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="cameraButton" destination="US9-lh-0O1" id="Hfo-7q-Cji"/>
                         <outlet property="chatTableView" destination="4ps-xg-ho1" id="zU2-Tv-TLe"/>
+                        <outlet property="messageTextField" destination="RXA-KD-ItD" id="4k4-W1-7wL"/>
+                        <outlet property="sendButton" destination="hmP-yJ-2eY" id="6O5-Cd-dDm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

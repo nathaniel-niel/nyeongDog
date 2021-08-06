@@ -10,6 +10,11 @@ import UIKit
 class ChatViewController: UIViewController {
     
     @IBOutlet weak var chatTableView: UITableView!
+    @IBOutlet weak var cameraButton: UIButton!
+    @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var messageTextField: UITextField!
+    
+    
     //MARK: - Calling Facetime Methods
     var facetimeCall = FacetimeVideoCall()
     
@@ -24,7 +29,32 @@ class ChatViewController: UIViewController {
         //MARK: -Register xib cell
         chatTableView.register(ChatViewCell.nib(), forCellReuseIdentifier: ChatViewCell.identifier)
         chatTableView.register(PrescriptionViewCell.nib(), forCellReuseIdentifier: PrescriptionViewCell.identifier)
+        
+        messageTextField.delegate = self
+        
+//        let center: NotificationCenter = NotificationCenter.default;
+//        center.addObserver(self, selector: #selector(keyboardDidShow(notification:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+//        center.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
+    
+//    func keyboardDidShow(notification: Notification) {
+//        let info: NSDictionary = notification.userInfo! as NSDictionary
+//        let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+//        let keyboardY = self.view.frame.size.height - keyboardSize.height
+//        
+//        let editingTextFieldY: CGFloat! = self.messageTextField.frame.origin.y
+//        
+//        if editingTextFieldY > keyboardY - 60 {
+//            UIView.animate(withDuration: 0.25, delay: 0.0, options: UIView.AnimationOption, animations: <#T##() -> Void#>, completion: <#T##((Bool) -> Void)?##((Bool) -> Void)?##(Bool) -> Void#>)
+//        }
+//        
+//    }
+    
+//    func keyboardWillHide(notification: Notification) {
+//        UIView.animate(withDuration: 0.25, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
+//            self.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+//        }, completion: nil)
+//    }
     
     
     func setup() {
@@ -38,7 +68,9 @@ class ChatViewController: UIViewController {
         
         //MARK: -Customize Video Call Button
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "video"), style: .plain, target: self, action: #selector(didTapVideoButton))
+    
         
+        self.navigationItem.largeTitleDisplayMode = .never
         //MARK: -Hide tab bar in chat
         self.tabBarController?.tabBar.isHidden = true
     }
@@ -76,10 +108,15 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         default :
             print("Error")
         }
-        
-        
         return cell
     }
+ 
+}
+extension ChatViewController: UITextFieldDelegate {
     
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        print(textField.text)
+        return true
+    }
 }
