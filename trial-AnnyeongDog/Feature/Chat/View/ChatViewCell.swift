@@ -11,6 +11,9 @@ class ChatViewCell: UITableViewCell {
 
     @IBOutlet weak var messageBubble: UIView!
     @IBOutlet weak var messageLabel: UILabel!
+    
+    
+    
     static let identifier = "chatViewCell"
     override func awakeFromNib() {
         super.awakeFromNib()

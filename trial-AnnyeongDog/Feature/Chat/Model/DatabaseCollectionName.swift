@@ -11,5 +11,6 @@ struct DatabaseCollectionName {
     
     let collectionName = "message"
     let senderField = "sender"
-    let bodyField = "body" 
+    let bodyField = "body"
+    let dateField = "date"
 }

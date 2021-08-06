@@ -117,7 +117,9 @@ class ChatViewController: UIViewController {
             
             db.collection(dbCollection.collectionName).addDocument(data: [
                 dbCollection.senderField : messageSender,
-                dbCollection.bodyField : messageBody
+                dbCollection.bodyField : messageBody,
+                dbCollection.dateField: Date().timeIntervalSince1970
+                
             ]) { (error) in
                 if let a = error {
                     print(a)
@@ -131,29 +133,41 @@ class ChatViewController: UIViewController {
     }
     
     func getMessage(){
-
-        db.collection(dbCollection.collectionName).getDocuments { (querrySnapshot, error) in
-            if let e = error{
-                print(e)
-            }else{
-                if let snapshotDocuments = querrySnapshot?.documents{
-                    for doc in snapshotDocuments{
-                       let data = doc.data()
-                        if let sender = data[self.dbCollection.senderField] as? String, let messageBody = data[self.dbCollection.bodyField] as? String{
-                            let newMessage = Messages(sender: sender, body: messageBody)
-                            self.messages.append(newMessage)
-                            
-                            DispatchQueue.main.async {
-                                self.chatTableView.reloadData()
-                            }
-                           
-                            
-                        }
-                    }
+        
+        db.collection(dbCollection.collectionName)
+            .order(by: dbCollection.dateField )
+            .addSnapshotListener{ (querrySnapshot, error) in
+                
+                self.messages = []
+                
+                if let e = error{
+                    print(e)
+                }
+                else{
                     
+                    
+                    if let snapshotDocuments = querrySnapshot?.documents{
+                        
+                        for doc in snapshotDocuments{
+                            
+                            let data = doc.data()
+                            
+                            
+                            if let sender = data[self.dbCollection.senderField] as? String, let messageBody = data[self.dbCollection.bodyField] as? String{
+                                let newMessage = Messages(sender: sender, body: messageBody)
+                                self.messages.append(newMessage)
+                                
+                                DispatchQueue.main.async {
+                                    self.chatTableView.reloadData()
+                                }
+                                
+                                
+                            }
+                        }
+                        
+                    }
                 }
             }
-        }
         
     }
     
@@ -175,21 +189,35 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let messageCell =  messages[indexPath.row]
         let cell = chatTableView.dequeueReusableCell(withIdentifier: ChatViewCell.identifier, for: indexPath) as! ChatViewCell
         
-        cell.messageLabel.text = messages[indexPath.row].body
-//        switch indexPath.row {
-//
-//        case 0 :
-//            cell.messageLabel.text = messages[indexPath.row].body
-//        case 1 :
-//            cell.messageLabel.text = messages[indexPath.row].body
-//        case 2 :
-//            let prescriptionCell = chatTableView.dequeueReusableCell(withIdentifier: PrescriptionViewCell.identifier) as! PrescriptionViewCell
-//
-//        default :
-//            print("Error")
-//        }
+        
+        if messageCell.sender == Auth.auth().currentUser?.email {
+            print("sama")
+            cell.messageBubble.backgroundColor = .blue
+            cell.messageLabel.text = messages[indexPath.row].body
+        }
+        else{
+            print("beda")
+            cell.messageBubble.backgroundColor = .black
+            cell.messageLabel.text = messages[indexPath.row].body
+        }
+        
+        
+        //        switch indexPath.row {
+        //
+        //        case 0 :
+        //            cell.messageLabel.text = messages[indexPath.row].body
+        //        case 1 :
+        //            cell.messageLabel.text = messages[indexPath.row].body
+        //        case 2 :
+        //            let prescriptionCell = chatTableView.dequeueReusableCell(withIdentifier: PrescriptionViewCell.identifier) as! PrescriptionViewCell
+        //
+        //        default :
+        //            print("Error")
+        //        }
         return cell
     }
     
