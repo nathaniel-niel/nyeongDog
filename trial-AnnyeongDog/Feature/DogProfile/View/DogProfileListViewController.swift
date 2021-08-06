@@ -21,22 +21,14 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //MARK: - Empty Statement
-        if dogModel.isEmpty{
-            let storyboard = UIStoryboard(name: "DogProfileEmptyState", bundle: nil)
-            let nVC = (storyboard.instantiateViewController(identifier: "DogProfileEmptyState"))
-
-            self.navigationController?.pushViewController(nVC, animated: true)
-        }
+       
         
         //disable back button
         navigationItem.hidesBackButton = true
-        
         dogProfileTableView.dataSource = self
         dogProfileTableView.delegate = self
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         DataManipulation.sharedData.fetchDogDataFromFirebase(with: UserControl.shared.user?.uid ?? "unknown") { responseData in
             self.dogModel = responseData
             
@@ -46,6 +38,17 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
 
         }
     }
+  
+//    override func viewDidAppear(_ animated: Bool) {
+//        DataManipulation.sharedData.fetchDogDataFromFirebase(with: UserControl.shared.user?.uid ?? "unknown") { responseData in
+//            self.dogModel = responseData
+//
+//            DispatchQueue.main.async {
+//                self.dogProfileTableView.reloadData()
+//            }
+//
+//        }
+//    }
     
        
 
@@ -79,6 +82,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         self.navigationController?.pushViewController(nVC, animated: true)
     }
     
+   
     //MARK: - Tampilan CEll
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "dogProfileListIdentifier") as! DogProfileTableViewCell

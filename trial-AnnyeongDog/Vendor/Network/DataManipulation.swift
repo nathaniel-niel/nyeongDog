@@ -82,7 +82,7 @@ class DataManipulation {
             "dogId": dog.dogID ?? "no data",
             "dogName": dog.dogName ?? "no data",
             "dateofBirth": dog.dateofBirth ?? "no data",
-            "gender": dog.dogID ?? "no data",
+            "gender": dog.gender ?? "no data",
             "breed": dog.breed ?? "no data",
             "weight": dog.weight ?? "no data",
             "color": dog.color ?? "no data",
@@ -214,6 +214,7 @@ class DataManipulation {
                 completion(self.mrdModel)
             }
             else{
+                
                 print(Error.self)
             }
         }
