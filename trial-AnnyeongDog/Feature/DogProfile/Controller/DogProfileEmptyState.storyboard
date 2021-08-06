@@ -11,7 +11,7 @@
         <!--DogProfileEmptyState-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="DogProfileEmptyState" title="DogProfileEmptyState" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DogProfileEmptyState" title="DogProfileEmptyState" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="DogProfileEmptyStateViewController" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,6 +54,9 @@
                                 <state key="normal" title="Add">
                                     <color key="titleColor" red="0.2196078431372549" green="0.25882352941176467" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="addButtonDidTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="dbe-rd-6YD"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -65,6 +68,7 @@
         <!--Navigation Controller-->
         <scene sceneID="zKB-Ce-cPM">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BfD-F8-PJ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FzB-Ll-hSe" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8SI-1a-rqs">
@@ -76,7 +80,6 @@
                         <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="WHX-Fs-ztp"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BfD-F8-PJ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="130.76923076923077" y="115.87677725118483"/>
         </scene>

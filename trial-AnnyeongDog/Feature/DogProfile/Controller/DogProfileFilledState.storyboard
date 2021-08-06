@@ -92,6 +92,7 @@
                         <viewLayoutGuide key="safeArea" id="ke4-f5-cGC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Dog Profile" image="seal.fill" catalog="system" id="2NI-uD-ukp"/>
                     <navigationItem key="navigationItem" title="Dog Profile" id="QdZ-hT-M9e">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Imc-Gc-UuL">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="Cjw-iV-eKD">
@@ -106,6 +107,7 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="dogProfileTableView" destination="P4g-rg-Ilg" id="8Y2-10-62B"/>
                     </connections>
@@ -135,6 +137,7 @@
     </scenes>
     <resources>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
+        <image name="seal.fill" catalog="system" width="128" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

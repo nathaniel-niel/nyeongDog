@@ -21,6 +21,14 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        //MARK: - Empty Statement
+        if dogModel.isEmpty{
+            let storyboard = UIStoryboard(name: "DogProfileEmptyState", bundle: nil)
+            let nVC = (storyboard.instantiateViewController(identifier: "DogProfileEmptyState"))
+
+            self.navigationController?.pushViewController(nVC, animated: true)
+        }
+        
         //disable back button
         navigationItem.hidesBackButton = true
         
@@ -38,6 +46,9 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
 
         }
     }
+    
+       
+
  
     //MARK: - Height Cell Setting
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
