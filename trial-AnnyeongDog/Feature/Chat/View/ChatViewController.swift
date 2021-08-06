@@ -10,6 +10,9 @@ import UIKit
 class ChatViewController: UIViewController {
     
     @IBOutlet weak var chatTableView: UITableView!
+    //MARK: - Calling Facetime Methods
+    var facetimeCall = FacetimeVideoCall()
+    
     var messages: [Messages] = [
         Messages(sender: "novi", body: "Hey"),
         Messages(sender: "vivi", body: "Hello nov")
@@ -45,8 +48,11 @@ class ChatViewController: UIViewController {
     //MARK: -Logic Video Call Button
     @objc func didTapVideoButton() {
         
+        facetimeCall.fetchFacetime()
+        
     }
 }
+
 extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return messages.count+1
