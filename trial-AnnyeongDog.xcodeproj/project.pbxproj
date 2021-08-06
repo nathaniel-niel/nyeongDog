@@ -95,6 +95,7 @@
 		C037878826B2A1CB004344E0 /* GenderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037877226B2A1CB004344E0 /* GenderModel.swift */; };
 		C037879126B2A1CB004344E0 /* DogProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */; };
 		C037879226B2A1CB004344E0 /* PrepareForMedical.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037878426B2A1CB004344E0 /* PrepareForMedical.swift */; };
+		C0541BD226BD40D4000D2BB4 /* DatabaseCollectionName.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0541BD126BD40D4000D2BB4 /* DatabaseCollectionName.swift */; };
 		C079A37726B844D00061EC30 /* DogsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C079A37626B844D00061EC30 /* DogsModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -193,6 +194,7 @@
 		C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogProfileDetailViewController.swift; sourceTree = "<group>"; };
 		C037878426B2A1CB004344E0 /* PrepareForMedical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareForMedical.swift; sourceTree = "<group>"; };
 		C037878526B2A1CB004344E0 /* ModelBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelBackButton.swift; sourceTree = "<group>"; };
+		C0541BD126BD40D4000D2BB4 /* DatabaseCollectionName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseCollectionName.swift; sourceTree = "<group>"; };
 		C079A37626B844D00061EC30 /* DogsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -392,6 +394,7 @@
 			isa = PBXGroup;
 			children = (
 				B535E08E26BBA2FC0038251D /* Messages.swift */,
+				C0541BD126BD40D4000D2BB4 /* DatabaseCollectionName.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -509,7 +512,6 @@
 		B584B3C126B28C71005A02C5 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
-
 				5BC1EF8226BBDD8E0024A57C /* ListVet */,
 				2D646C1C26BCDDBA00E90EDF /* VetListDetail */,
 				C01A908826BAF046007FA0B6 /* VideoCall */,
@@ -913,6 +915,7 @@
 				B5821A6626B7EEA0006DDED9 /* SigninViewController.swift in Sources */,
 				B584B3D826B28DF2005A02C5 /* ExampleViewModel.swift in Sources */,
 				2D628EDA26B297DE0008ECD2 /* MRD-dummyData.swift in Sources */,
+				C0541BD226BD40D4000D2BB4 /* DatabaseCollectionName.swift in Sources */,
 				5B94000C26B7F8CA0020C09C /* MRDModel.swift in Sources */,
 				5B05C39D26B2B3B00034A66A /* DeleteButtonTableViewCell.swift in Sources */,
 				B5821A6126B7EEA0006DDED9 /* UserModel.swift in Sources */,
