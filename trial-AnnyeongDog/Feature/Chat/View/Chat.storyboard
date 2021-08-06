@@ -79,6 +79,7 @@
                     <connections>
                         <outlet property="cameraButton" destination="US9-lh-0O1" id="Hfo-7q-Cji"/>
                         <outlet property="chatTableView" destination="4ps-xg-ho1" id="zU2-Tv-TLe"/>
+                        <outlet property="chatView" destination="7bi-KM-t3k" id="bGn-UZ-Ka5"/>
                         <outlet property="messageTextField" destination="RXA-KD-ItD" id="4k4-W1-7wL"/>
                         <outlet property="sendButton" destination="hmP-yJ-2eY" id="6O5-Cd-dDm"/>
                     </connections>
