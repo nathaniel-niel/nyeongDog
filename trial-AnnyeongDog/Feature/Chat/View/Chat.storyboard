@@ -28,10 +28,12 @@
                                 <rect key="frame" x="0.0" y="759" width="390" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tulis pesan..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RXA-KD-ItD">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tulis pesan..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RXA-KD-ItD">
                                         <rect key="frame" x="73" y="8" width="244" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="244" id="udY-JK-gbW"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <userDefinedRuntimeAttributes>
@@ -40,9 +42,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="US9-lh-0O1">
-                                        <rect key="frame" x="20" y="6.6666666666666661" width="40" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="US9-lh-0O1">
+                                        <rect key="frame" x="20" y="6.6666666666666679" width="40" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="tintColor" red="0.22352941179999999" green="0.25882352939999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal">
@@ -50,9 +51,8 @@
                                             <imageReference key="backgroundImage" image="camera" catalog="system" symbolScale="large"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmP-yJ-2eY">
-                                        <rect key="frame" x="332" y="6.6666666666666856" width="36" height="36"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmP-yJ-2eY">
+                                        <rect key="frame" x="332" y="6.6666666666666643" width="36" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="tintColor" red="0.22352941179999999" green="0.25882352939999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                         <state key="normal">
@@ -65,11 +65,24 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="separatorColor"/>
+                                <constraints>
+                                    <constraint firstItem="US9-lh-0O1" firstAttribute="top" secondItem="7bi-KM-t3k" secondAttribute="top" constant="7.9999999999999982" id="FoU-AK-O5p"/>
+                                    <constraint firstAttribute="bottom" secondItem="US9-lh-0O1" secondAttribute="bottom" constant="43.000000000000014" id="H3L-xg-fFU"/>
+                                    <constraint firstAttribute="bottom" secondItem="hmP-yJ-2eY" secondAttribute="bottom" constant="44.333333333333314" id="Iy2-Bd-dsI"/>
+                                    <constraint firstItem="US9-lh-0O1" firstAttribute="leading" secondItem="7bi-KM-t3k" secondAttribute="leading" constant="20" symbolic="YES" id="QWV-Av-rC8"/>
+                                    <constraint firstItem="hmP-yJ-2eY" firstAttribute="leading" secondItem="RXA-KD-ItD" secondAttribute="trailing" constant="15" id="YVT-8W-Zd0"/>
+                                    <constraint firstAttribute="trailing" secondItem="hmP-yJ-2eY" secondAttribute="trailing" constant="22" id="cPB-zO-NWe"/>
+                                    <constraint firstItem="hmP-yJ-2eY" firstAttribute="top" secondItem="7bi-KM-t3k" secondAttribute="top" constant="8.0000000000000213" id="d8m-JL-Jxz"/>
+                                    <constraint firstAttribute="bottom" secondItem="RXA-KD-ItD" secondAttribute="bottom" constant="43" id="dC0-c9-hXM"/>
+                                    <constraint firstItem="RXA-KD-ItD" firstAttribute="leading" secondItem="US9-lh-0O1" secondAttribute="trailing" constant="13" id="kUg-Sb-pEx"/>
+                                    <constraint firstItem="RXA-KD-ItD" firstAttribute="centerX" secondItem="7bi-KM-t3k" secondAttribute="centerX" id="vff-f6-b9l"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="7bi-KM-t3k" firstAttribute="top" secondItem="4ps-xg-ho1" secondAttribute="bottom" id="0sg-Nt-6Yx"/>
                             <constraint firstItem="4ps-xg-ho1" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="OT7-mr-Nw1"/>
                             <constraint firstItem="4ps-xg-ho1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Qz2-Kg-DoE"/>
                             <constraint firstItem="4ps-xg-ho1" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="d6S-jb-zPZ"/>
@@ -82,6 +95,7 @@
                     <connections>
                         <outlet property="cameraButton" destination="US9-lh-0O1" id="Hfo-7q-Cji"/>
                         <outlet property="chatTableView" destination="4ps-xg-ho1" id="zU2-Tv-TLe"/>
+                        <outlet property="chatView" destination="7bi-KM-t3k" id="bGn-UZ-Ka5"/>
                         <outlet property="messageTextField" destination="RXA-KD-ItD" id="4k4-W1-7wL"/>
                         <outlet property="sendButton" destination="hmP-yJ-2eY" id="6O5-Cd-dDm"/>
                     </connections>
