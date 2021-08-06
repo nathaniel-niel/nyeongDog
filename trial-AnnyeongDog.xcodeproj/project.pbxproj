@@ -13,6 +13,10 @@
 		2D628ED826B297B20008ECD2 /* MRDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D628ED226B297B20008ECD2 /* MRDViewController.swift */; };
 		2D628EDA26B297DE0008ECD2 /* MRD-dummyData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D628ED926B297DE0008ECD2 /* MRD-dummyData.swift */; };
 		2D628F0426B2FB590008ECD2 /* MRDViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D628F0326B2FB590008ECD2 /* MRDViewModel.swift */; };
+		2D646C2126BCDF2900E90EDF /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D646C1D26BCDF2900E90EDF /* ModalView.swift */; };
+		2D646C2226BCDF2900E90EDF /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D646C1E26BCDF2900E90EDF /* PresentationController.swift */; };
+		2D646C2326BCDF2900E90EDF /* ModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D646C1F26BCDF2900E90EDF /* ModalView.xib */; };
+		2D646C2426BCDF2900E90EDF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D646C2026BCDF2900E90EDF /* ViewController.swift */; };
 		2D74BE1726B454E8009B3629 /* DogProfileDetailEdit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D74BE1526B454E8009B3629 /* DogProfileDetailEdit.storyboard */; };
 		2D74BE1826B454E8009B3629 /* DogProfileDetailEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D74BE1626B454E8009B3629 /* DogProfileDetailEditViewController.swift */; };
 		2D74BE1B26B45535009B3629 /* DogProfileDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D74BE1A26B45535009B3629 /* DogProfileDetailModel.swift */; };
@@ -91,6 +95,10 @@
 		2D628ED226B297B20008ECD2 /* MRDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRDViewController.swift; sourceTree = "<group>"; };
 		2D628ED926B297DE0008ECD2 /* MRD-dummyData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MRD-dummyData.swift"; sourceTree = "<group>"; };
 		2D628F0326B2FB590008ECD2 /* MRDViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRDViewModel.swift; sourceTree = "<group>"; };
+		2D646C1D26BCDF2900E90EDF /* ModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		2D646C1E26BCDF2900E90EDF /* PresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
+		2D646C1F26BCDF2900E90EDF /* ModalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalView.xib; sourceTree = "<group>"; };
+		2D646C2026BCDF2900E90EDF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2D74BE1526B454E8009B3629 /* DogProfileDetailEdit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DogProfileDetailEdit.storyboard; sourceTree = "<group>"; };
 		2D74BE1626B454E8009B3629 /* DogProfileDetailEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogProfileDetailEditViewController.swift; sourceTree = "<group>"; };
 		2D74BE1A26B45535009B3629 /* DogProfileDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileDetailModel.swift; sourceTree = "<group>"; };
@@ -238,6 +246,24 @@
 				B5A0B08C26BA9E2F00D5C273 /* DescriptionTextViewCell.xib */,
 			);
 			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		2D646C1C26BCDDBA00E90EDF /* VetListDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2D646C2526BCDF6900E90EDF /* View */,
+			);
+			path = VetListDetail;
+			sourceTree = "<group>";
+		};
+		2D646C2526BCDF6900E90EDF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D646C1D26BCDF2900E90EDF /* ModalView.swift */,
+				2D646C1F26BCDF2900E90EDF /* ModalView.xib */,
+				2D646C2026BCDF2900E90EDF /* ViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		2D74BE1126B454E8009B3629 /* DogProfileDetail */ = {
@@ -409,6 +435,7 @@
 		B584B3C126B28C71005A02C5 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				2D646C1C26BCDDBA00E90EDF /* VetListDetail */,
 				C01A908826BAF046007FA0B6 /* VideoCall */,
 				B535E08B26BBA2FC0038251D /* Chat */,
 				B584B3CE26B28DF2005A02C5 /* Main */,
@@ -425,6 +452,7 @@
 		B584B3C226B28C77005A02C5 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				2D646C1E26BCDF2900E90EDF /* PresentationController.swift */,
 				B584B3CC26B28DCD005A02C5 /* Helper.swift */,
 				2D74BE1C26B4558F009B3629 /* UserControl.swift */,
 				B59BDB9326BAFE3300AED6D6 /* StorageManager.swift */,
@@ -718,6 +746,7 @@
 				5B05C39E26B2B3B00034A66A /* DeleteButtonTableViewCell.xib in Resources */,
 				B584B3BD26B265C0005A02C5 /* GoogleService-Info.plist in Resources */,
 				C00DE8FC26B3D8AE00E99343 /* MedicalFiilledTableViewCell.xib in Resources */,
+				2D646C2326BCDF2900E90EDF /* ModalView.xib in Resources */,
 				B584B3B226B264CD005A02C5 /* Assets.xcassets in Resources */,
 				C01A908E26BAF080007FA0B6 /* VideoCallStoryboard.storyboard in Resources */,
 				B5A0B08A26BA974000D5C273 /* TextDescCell.xib in Resources */,
@@ -783,6 +812,8 @@
 				B5821A6426B7EEA0006DDED9 /* Signin.swift in Sources */,
 				C00DE8FF26B3D8AE00E99343 /* MedicalFiilledTableViewCell.swift in Sources */,
 				C00DE8FB26B3D8AE00E99343 /* dummyTesting.swift in Sources */,
+				2D646C2426BCDF2900E90EDF /* ViewController.swift in Sources */,
+				2D646C2226BCDF2900E90EDF /* PresentationController.swift in Sources */,
 				5B67967426B41796004514F3 /* DogProfileTableViewCell.swift in Sources */,
 				B5A0B08926BA974000D5C273 /* TextDescCell.swift in Sources */,
 				C079A37726B844D00061EC30 /* DogsModel.swift in Sources */,
@@ -820,6 +851,7 @@
 				B5A0B08D26BA9E2F00D5C273 /* DescriptionTextViewCell.swift in Sources */,
 				B584B3AB26B264CC005A02C5 /* SceneDelegate.swift in Sources */,
 				B5821A6226B7EEA0006DDED9 /* SignInViewExtension.swift in Sources */,
+				2D646C2126BCDF2900E90EDF /* ModalView.swift in Sources */,
 				C037879226B2A1CB004344E0 /* PrepareForMedical.swift in Sources */,
 				B535E09226BBA2FC0038251D /* Messages.swift in Sources */,
 			);
