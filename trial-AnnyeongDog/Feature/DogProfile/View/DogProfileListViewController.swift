@@ -67,7 +67,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "dogProfileListIdentifier") as! DogProfileTableViewCell
         
-        cell.dogProfileView.layer.cornerRadius = 8
+        cell.dogProfileView.layer.cornerRadius = 10
         cell.dogProfileView.layer.borderWidth = 2
         cell.dogProfileView.layer.borderColor = UIColor(red: 0.37, green: 0.43, blue: 0.69, alpha: 1).cgColor
     
