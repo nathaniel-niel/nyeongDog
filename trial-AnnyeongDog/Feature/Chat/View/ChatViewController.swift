@@ -25,7 +25,7 @@ class ChatViewController: UIViewController {
     ]
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setup()
         
         //MARK: -Register xib cell
@@ -38,14 +38,14 @@ class ChatViewController: UIViewController {
         
         //MARK: -Keyboard Notification Center
         let center: NotificationCenter = NotificationCenter.default;
-//        center.addObserver(self, selector: #selector(keyboardDidShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-//        center.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-//        center.addObserver(self, selector: #selector(self.keyboardNotification(notification: )), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-//        center.addObserver(self, selector: #selector(keyboardWillChange(notification: )), name: UIResponder.keyboardWillShowNotification, object: nil)
-//        center.addObserver(self, selector: #selector(keyboardWillChange(notification: )), name: UIResponder.keyboardWillHideNotification, object: nil)
-        center.addObserver(self, selector: #selector(keyboardWillChange(notification: )), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-//
-//
+        //        center.addObserver(self, selector: #selector(keyboardDidShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        //        center.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        //        center.addObserver(self, selector: #selector(self.keyboardNotification(notification: )), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        center.addObserver(self, selector: #selector(keyboardWillChange(notification: )), name: UIResponder.keyboardWillShowNotification, object: nil)
+        center.addObserver(self, selector: #selector(keyboardWillChange(notification: )), name: UIResponder.keyboardWillHideNotification, object: nil)
+        //        center.addObserver(self, selector: #selector(keyboardWillChange(notification: )), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        //
+        //
     }
     
     deinit {
@@ -53,42 +53,51 @@ class ChatViewController: UIViewController {
         center.removeObserver(self)
     }
     @objc func keyboardWillChange(notification: Notification) {
-        view.frame.origin.y = -300
+        if let userInfo = notification.userInfo {
+            let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+            let isKeyboardShowing = notification.name == UIResponder.keyboardWillShowNotification
+            //MARK: Put the textfield precisely above the keyboard
+            view.frame.origin.y = isKeyboardShowing ? -keyboardFrame!.height : 0
+        }
+        
+        //        UIView.animate(withDuration: 0.25, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
+        //                    self.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+        //                }, completion: nil)
     }
     
-//    @objc func keyboardNotification(notification: NSNotification) {
-//        if let userInfo = notification.userInfo {
-//            let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
-//            let duration:TimeInterval = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue ?? 0
-//            let animationCurveRawNSN = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber
-//            let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIView.AnimationOptions.curveEaseInOut.rawValue
-//            let animationCurve: UIView.AnimationOptions = UIView.AnimationOptions(rawValue: animationCurveRaw)
-//
-//            UIView.animate(withDuration: duration, delay: TimeInterval(0), options: animationCurve, animations: {self.view.layoutIfNeeded()}, completion: nil)
-//        }
-//    }
-//    //MARK: -Function Keyboard is Called
-//    @objc func keyboardDidShow(notification: Notification) {
-//        let info: NSDictionary = notification.userInfo! as NSDictionary
-//        let keyboardSize = (info[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
-//        let keyboardY = self.view.frame.size.height - keyboardSize.height
-//
-//        let editingTextFieldY: CGFloat! = self.messageTextField.frame.origin.y
-//        if editingTextFieldY > keyboardY - 60 {
-//            UIView.animate(withDuration: 0.25, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
-//                self.view.frame = CGRect(x: 0, y: self.view.frame.origin.y, width: self.view.bounds.width, height: self.view.bounds.height)
-//            }, completion: nil)
-//        }
-//
-//    }
-//    //MARK: -Function Keyboard is Dismissed
-//    @objc func keyboardWillHide(notification: Notification) {
-//        UIView.animate(withDuration: 0.25, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
-//            self.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
-//        }, completion: nil)
-//    }
+    //    @objc func keyboardNotification(notification: NSNotification) {
+    //        if let userInfo = notification.userInfo {
+    //            let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+    //            let duration:TimeInterval = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue ?? 0
+    //            let animationCurveRawNSN = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber
+    //            let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIView.AnimationOptions.curveEaseInOut.rawValue
+    //            let animationCurve: UIView.AnimationOptions = UIView.AnimationOptions(rawValue: animationCurveRaw)
+    //
+    //            UIView.animate(withDuration: duration, delay: TimeInterval(0), options: animationCurve, animations: {self.view.layoutIfNeeded()}, completion: nil)
+    //        }
+    //    }
+    //    //MARK: -Function Keyboard is Called
+    //    @objc func keyboardDidShow(notification: Notification) {
+    //        let info: NSDictionary = notification.userInfo! as NSDictionary
+    //        let keyboardSize = (info[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+    //        let keyboardY = self.view.frame.size.height - keyboardSize.height
+    //
+    //        let editingTextFieldY: CGFloat! = self.messageTextField.frame.origin.y
+    //        if editingTextFieldY > keyboardY - 60 {
+    //            UIView.animate(withDuration: 0.25, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
+    //                self.view.frame = CGRect(x: 0, y: self.view.frame.origin.y, width: self.view.bounds.width, height: self.view.bounds.height)
+    //            }, completion: nil)
+    //        }
+    //
+    //    }
+    //    //MARK: -Function Keyboard is Dismissed
+    //    @objc func keyboardWillHide(notification: Notification) {
+    //        UIView.animate(withDuration: 0.25, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
+    //            self.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+    //        }, completion: nil)
+    //    }
     
-   
+    
     //MARK: -Setup navigation and tabbar
     func setup() {
         //MARK: Customize Back Button
@@ -100,7 +109,7 @@ class ChatViewController: UIViewController {
         
         //MARK: Customize Video Call Button
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "video"), style: .plain, target: self, action: #selector(didTapVideoButton))
-     
+        
         self.navigationItem.largeTitleDisplayMode = .never
         //MARK: Hide tab bar in chat
         self.tabBarController?.tabBar.isHidden = true
@@ -139,15 +148,18 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return cell
     }
- 
+    
 }
 extension ChatViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         //MARK: If return button is tapped, keyboard will be dismissed
-//        self.view.endEditing(true)
+        //        self.view.endEditing(true)
         textField.resignFirstResponder()
         print(textField.text)
         return true
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        messageTextField.endEditing(true)
     }
 }
