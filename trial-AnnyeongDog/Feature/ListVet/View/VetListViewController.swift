@@ -46,6 +46,7 @@ class VetListViewController: UIViewController{
 //        vetNameList.append(dokter2)
     }
     
+    //MARK: - Configure Search Bar
     private func configureSearchController(){
         searchController.loadViewIfNeeded()
         searchController.searchResultsUpdater = self
@@ -55,7 +56,7 @@ class VetListViewController: UIViewController{
         searchController.searchBar.returnKeyType = UIReturnKeyType.done
         self.navigationItem.searchController = searchController
         self.navigationItem.hidesSearchBarWhenScrolling = false
-        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.hidesNavigationBarDuringPresentation = true
         definesPresentationContext = true
         searchController.searchBar.placeholder = "Example: Drh. Budi"
     }
@@ -139,7 +140,6 @@ extension VetListViewController: UITableViewDelegate, UITableViewDataSource, UIS
         self.present(nVC, animated: true, completion: nil)
     }
     
-    //MARK: - Config Search Bar
 }
 
 
