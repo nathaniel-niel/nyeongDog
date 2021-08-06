@@ -20,9 +20,9 @@ class SigninViewController: UIViewController {
         super.viewDidLoad()
         signInButtonView.delegate = self
         setupSignInButton()
-//        view.addSubview(views)
+        //        view.addSubview(views)
     }
-
+    
     
     func setupSignInButton() {
         signInButtonView.appleSignInButton.addTarget(self, action: #selector(handleSignInWithAppleTapped), for: .touchUpInside)
@@ -112,7 +112,7 @@ extension SigninViewController: ASAuthorizationControllerPresentationContextProv
 extension SigninViewController: signinDelegate {
     
     func skipSignin() {
-        print("Ini harusnya ke page vetlist")
+        dismiss(animated: true, completion: nil)
     }
     func appleSignin() {
         setupSignInButton()

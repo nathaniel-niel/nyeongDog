@@ -42,6 +42,8 @@ class DogProfileDetailViewController: UIViewController {
     var color: String?
     var alergen: String?
     
+    // MARK: - App Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
