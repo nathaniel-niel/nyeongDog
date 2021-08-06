@@ -14,7 +14,7 @@ class ChatViewCell: UITableViewCell {
     static let identifier = "chatViewCell"
     override func awakeFromNib() {
         super.awakeFromNib()
-        messageBubble.layer.cornerRadius = messageBubble.frame.height/5
+        messageBubble.layer.cornerRadius = messageBubble.frame.height/10
     }
     static func nib() -> UINib {
         return UINib(nibName: "ChatViewCell", bundle: nil)

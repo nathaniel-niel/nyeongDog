@@ -24,20 +24,17 @@ class MainViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         //harusnya ada di scene delegate.
-        handle = Firebase.Auth.auth().addStateDidChangeListener({ (auth, user) in
-            
-            if user == nil {
-                let storyboard = UIStoryboard(name: "Signin", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "Signin")
-                vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated: true, completion: nil)
-                print("sign in first")
-            }
-            
-        })
-        
-       
-        
+//        handle = Firebase.Auth.auth().addStateDidChangeListener({ (auth, user) in
+//
+//            if user == nil {
+//                let storyboard = UIStoryboard(name: "Signin", bundle: nil)
+//                let vc = storyboard.instantiateViewController(withIdentifier: "Signin")
+//                vc.modalPresentationStyle = .fullScreen
+//                self.present(vc, animated: true, completion: nil)
+//                print("sign in first")
+//            }
+//
+//        })
     }
     
     // MARK: - IBAction from button SignIn
