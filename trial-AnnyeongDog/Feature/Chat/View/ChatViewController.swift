@@ -19,7 +19,7 @@ class ChatViewController: UIViewController {
     ]
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigation()
+        setup()
         
         //MARK: -Register xib cell
         chatTableView.register(ChatViewCell.nib(), forCellReuseIdentifier: ChatViewCell.identifier)
@@ -27,7 +27,7 @@ class ChatViewController: UIViewController {
     }
     
     
-    func setupNavigation() {
+    func setup() {
         //MARK: -Customize Back Button
         let backButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(didTapBackButton))
         
@@ -38,6 +38,8 @@ class ChatViewController: UIViewController {
         
         //MARK: -Customize Video Call Button
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "video"), style: .plain, target: self, action: #selector(didTapVideoButton))
+        
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     //MARK: Back Button Logic
