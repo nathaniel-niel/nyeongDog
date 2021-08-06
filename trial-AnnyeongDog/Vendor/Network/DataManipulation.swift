@@ -12,20 +12,21 @@ import FirebaseDatabase
 class DataManipulation {
     
     
-    // MARK: Singletone
+    // MARK: - Singletone
     static let sharedData = DataManipulation()
     
     // MARK: Model Declaration
     var mrdModel : [MRDModel] = []
     var dogModel : [DogsModel] = []
     var vetModel : [VetListModel] = []
-    // MARK: Firebase configuration
+    
+    // MARK: - Firebase configuration
     
     //Connection ke Firebase
     var ref = Database.database(url: "https://trial-annyeongdog-default-rtdb.asia-southeast1.firebasedatabase.app/").reference()
     
     
-    // MARK: -Function  for user data
+    // MARK: - Function  for user data
     
     //Insert new User to Firebase
     func insertUser(with user : UserModel ) {
@@ -34,8 +35,44 @@ class DataManipulation {
         ])
     }
     
+    // MARK: - Function for vets data
     
-    // MARK: -Function for dog data
+    // retrieve vets data from firebase
+    func fetchVetsDataFromFirebase(completion: @escaping ([VetListModel]) -> Void){
+        // remove all data in vet model
+        vetModel.removeAll()
+        
+        ref.child("vets").observe(DataEventType.value) { snapshot in
+            
+            if snapshot.exists(){
+                for child in snapshot.children{
+                    if let snap = child as? DataSnapshot{
+                        guard let val = snap.value as? [String : AnyObject] else { return }
+                        self.vetModel.append(VetListModel(
+                            vetName: val["vetName"] as? String,
+                            expYears: val["experience"]  as? String,
+                            timeSlot: val["timeSlot"] as? String,
+                            clinicName: val["clinic"] as? String,
+                            strvNumber: val["STRV"] as? String,
+                            rating: val["rating"] as? String,
+                            price: val["price"] as? String,
+                            alumnus: val["alumnus"] as? String
+                        ))
+                    }
+                }
+                completion(self.vetModel)
+                print(self.vetModel)
+                
+            }
+            
+            else{
+                print(Error.self)
+            }
+        }
+    }
+    
+    
+    // MARK: - Function for dog data
     
     
     // insert Dog Profile data to Firebase
@@ -45,7 +82,7 @@ class DataManipulation {
             "dogId": dog.dogID ?? "no data",
             "dogName": dog.dogName ?? "no data",
             "dateofBirth": dog.dateofBirth ?? "no data",
-            "gender": dog.dogID ?? "no data",
+            "gender": dog.gender ?? "no data",
             "breed": dog.breed ?? "no data",
             "weight": dog.weight ?? "no data",
             "color": dog.color ?? "no data",
@@ -107,7 +144,7 @@ class DataManipulation {
     }
     
     
-    //MARK: -Function for Medical Record
+    //MARK: - Function for Medical Record
     
     // insert data medical record to firebase
     func insertDataToMedicalRecord(with userId: String, with dogID: Int, with mrd: MRDModel ){
@@ -177,6 +214,7 @@ class DataManipulation {
                 completion(self.mrdModel)
             }
             else{
+                
                 print(Error.self)
             }
         }

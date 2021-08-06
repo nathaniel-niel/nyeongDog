@@ -8,31 +8,50 @@
 import UIKit
 
 class DogProfileListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    // MARK: - UI Components Declaration
     @IBOutlet weak var dogProfileTableView: UITableView!
     
+    // MARK: - Object Declaration
     var dogModel: [DogsModel] = []
    
     
+    
+    // MARK: - App Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
+       
+        
         //disable back button
         navigationItem.hidesBackButton = true
-        
         dogProfileTableView.dataSource = self
         dogProfileTableView.delegate = self
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         DataManipulation.sharedData.fetchDogDataFromFirebase(with: UserControl.shared.user?.uid ?? "unknown") { responseData in
             self.dogModel = responseData
             
             DispatchQueue.main.async {
                 self.dogProfileTableView.reloadData()
             }
-            print("oke")
+
         }
     }
+  
+//    override func viewDidAppear(_ animated: Bool) {
+//        DataManipulation.sharedData.fetchDogDataFromFirebase(with: UserControl.shared.user?.uid ?? "unknown") { responseData in
+//            self.dogModel = responseData
+//
+//            DispatchQueue.main.async {
+//                self.dogProfileTableView.reloadData()
+//            }
+//
+//        }
+//    }
+    
+       
+
  
     //MARK: - Height Cell Setting
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -63,6 +82,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         self.navigationController?.pushViewController(nVC, animated: true)
     }
     
+   
     //MARK: - Tampilan CEll
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "dogProfileListIdentifier") as! DogProfileTableViewCell

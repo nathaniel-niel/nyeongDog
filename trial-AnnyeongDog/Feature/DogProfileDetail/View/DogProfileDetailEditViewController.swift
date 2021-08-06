@@ -137,10 +137,6 @@ class DogProfileDetailEditViewController: UIViewController {
 }
 
 
-    
-    
-    
-
 // Picker buat Keyboard Gender
 
 extension DogProfileDetailEditViewController: UIPickerViewDelegate, UIPickerViewDataSource {
