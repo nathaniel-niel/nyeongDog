@@ -19,11 +19,9 @@ class VetListViewController: UIViewController{
     let searchController = UISearchController(searchResultsController: nil)
     var searching = false
 
-
-    //change value string i
-
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Masukin data
         filldata()
         configureSearchController()
 
@@ -56,7 +54,7 @@ class VetListViewController: UIViewController{
         searchController.searchBar.enablesReturnKeyAutomatically = false
         searchController.searchBar.returnKeyType = UIReturnKeyType.done
         self.navigationItem.searchController = searchController
-        self.navigationItem.hidesSearchBarWhenScrolling = true
+        self.navigationItem.hidesSearchBarWhenScrolling = false
         searchController.hidesNavigationBarDuringPresentation = false
         definesPresentationContext = true
         searchController.searchBar.placeholder = "Example: Drh. Budi"
