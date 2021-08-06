@@ -91,6 +91,13 @@ class MainViewController: UIViewController {
     }
     
     
+    @IBAction func didiVetListButtonTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "VetList", bundle: nil)
+        
+        let vc = storyboard.instantiateViewController(identifier: "VetList")
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     
 }
