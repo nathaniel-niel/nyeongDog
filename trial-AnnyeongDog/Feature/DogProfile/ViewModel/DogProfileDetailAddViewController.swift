@@ -141,6 +141,7 @@ class DogProfileDetailAddViewController: UIViewController {
         
         DataManipulation.sharedData.insertDogProfile(with: UserControl.shared.user?.uid ?? "unknown", with: DogsModel(dogID: helper.generateUniqueID(), dogName: dogsTextField.text, dateofBirth: dogsDOB.text, gender: genderTextField.text, breed: breedTextField.text, weight: weightTextField.text, color: colorTextField.text, alergen: allergyTextField.text))
         
+        
     }
     
     //    @IBAction func MedicalRecordButton(_ sender: Any) {
