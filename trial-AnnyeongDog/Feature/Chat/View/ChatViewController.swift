@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ChatViewController: UIViewController {
     
@@ -18,11 +19,11 @@ class ChatViewController: UIViewController {
     
     //MARK: - Calling Facetime Methods
     var facetimeCall = FacetimeVideoCall()
+    let db = Firestore.firestore()
+    var dbCollection = DatabaseCollectionName()
     
-    var messages: [Messages] = [
-        Messages(sender: "novi", body: "Hey"),
-        Messages(sender: "vivi", body: "Hello nov")
-    ]
+    var messages: [Messages] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,6 +36,8 @@ class ChatViewController: UIViewController {
         //MARK: -Message TextField Configuration
         messageTextField.delegate = self
         messageTextField.autocorrectionType = .no
+        
+        getMessage()
         
         //MARK: -Keyboard Notification Center
         let center: NotificationCenter = NotificationCenter.default;
@@ -115,6 +118,74 @@ class ChatViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = true
     }
     
+    //MARK: Send Button Logic
+    @IBAction func sendButtonPressed(_ sender: UIButton) {
+        
+        messageTextField.endEditing(true)
+        sendPressed()
+        
+     }
+    //MARK: If the message are ready to sent to Firebase
+    func sendPressed(){
+        if let messageBody = messageTextField.text,  let messageSender = Auth.auth().currentUser?.email{
+            
+            db.collection(dbCollection.collectionName).addDocument(data: [
+                dbCollection.senderField : messageSender,
+                dbCollection.bodyField : messageBody,
+                dbCollection.dateField: Date().timeIntervalSince1970
+                
+            ]) { (error) in
+                if let a = error {
+                    print(a)
+                }else{
+                    print("success")
+                }
+            }
+            
+        }
+    }
+    //MARK: Logic to send and or retereieving a message to Firebase
+    
+    func getMessage(){
+        
+        db.collection(dbCollection.collectionName)
+            .order(by: dbCollection.dateField )
+            .addSnapshotListener{ (querrySnapshot, error) in
+                
+                self.messages = []
+                
+                if let e = error{
+                    print(e)
+                }
+                else{
+                    
+                    
+                    if let snapshotDocuments = querrySnapshot?.documents{
+                        
+                        for doc in snapshotDocuments{
+                            
+                            let data = doc.data()
+                            
+                            
+                            if let sender = data[self.dbCollection.senderField] as? String, let messageBody = data[self.dbCollection.bodyField] as? String{
+                                let newMessage = Messages(sender: sender, body: messageBody)
+                                self.messages.append(newMessage)
+                                
+                                DispatchQueue.main.async {
+                                    self.chatTableView.reloadData()
+                                }
+                                
+                                
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        
+    }
+    
+    
     //MARK: Back Button Logic
     @objc func didTapBackButton() {
         navigationController?.popViewController(animated: true)
@@ -132,29 +203,48 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let messageCell =  messages[indexPath.row]
         let cell = chatTableView.dequeueReusableCell(withIdentifier: ChatViewCell.identifier, for: indexPath) as! ChatViewCell
         
-        switch indexPath.row {
-        
-        case 0 :
+        //MARK: If it's not the current user, the cell will show different color
+        if messageCell.sender == Auth.auth().currentUser?.email {
+            print("sama")
+            cell.messageBubble.backgroundColor = .blue
             cell.messageLabel.text = messages[indexPath.row].body
-        case 1 :
-            cell.messageLabel.text = messages[indexPath.row].body
-        case 2 :
-            let prescriptionCell = chatTableView.dequeueReusableCell(withIdentifier: PrescriptionViewCell.identifier) as! PrescriptionViewCell
-            
-        default :
-            print("Error")
         }
+        else{
+            print("beda")
+            cell.messageBubble.backgroundColor = .black
+            cell.messageLabel.text = messages[indexPath.row].body
+        }
+        
+        
+        //        switch indexPath.row {
+        //
+        //        case 0 :
+        //            cell.messageLabel.text = messages[indexPath.row].body
+        //        case 1 :
+        //            cell.messageLabel.text = messages[indexPath.row].body
+        //        case 2 :
+        //            let prescriptionCell = chatTableView.dequeueReusableCell(withIdentifier: PrescriptionViewCell.identifier) as! PrescriptionViewCell
+        //
+        //        default :
+        //            print("Error")
+        //        }
         return cell
     }
     
 }
+
 extension ChatViewController: UITextFieldDelegate {
-    
+    //MARK: If return button is tapped, keyboard will be dismissed
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        //MARK: If return button is tapped, keyboard will be dismissed
+       
         //        self.view.endEditing(true)
+        
+        messageTextField.endEditing(true)
+        
         textField.resignFirstResponder()
         print(textField.text)
         return true
@@ -162,4 +252,15 @@ extension ChatViewController: UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         messageTextField.endEditing(true)
     }
+    
+    //MARK: If return button is tapped, keyboard will be dismissed, the text field will be empty and it will send the text to Firebase
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        sendPressed()
+        textField.text = ""
+       
+        
+    }
+    
+   
+    
 }

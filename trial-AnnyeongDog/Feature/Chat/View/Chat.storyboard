@@ -59,6 +59,9 @@
                                             <color key="titleColor" red="0.22352941179999999" green="0.25882352939999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                                             <imageReference key="backgroundImage" image="arrow.right.circle" catalog="system" symbolScale="large"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sendButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bTK-uY-yBI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="separatorColor"/>
