@@ -7,7 +7,6 @@
 
 //source: https://www.youtube.com/watch?v=cI3Bzmq4EgY
 import UIKit
-import Firebase
 
 class ModalView: UIViewController {
     
@@ -30,6 +29,16 @@ class ModalView: UIViewController {
     var hasSetPointOrigin = false
     var originPoint: CGPoint?
     
+    // MARK: - Temporary Variable
+    var vetName: String = ""
+    var experience: String = ""
+    var rating: String = ""
+    var alumnus: String = ""
+    var clinic: String = ""
+    var strvNumber: String = ""
+    var price: String = ""
+    
+    
     // MARK: - App Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +54,12 @@ class ModalView: UIViewController {
             hasSetPointOrigin = true
             originPoint = self.view.frame.origin
         }
+        
     }
+    override func viewWillAppear(_ animated: Bool) {
+        assing()
+    }
+    
     
     // MARK: - Function for UI Component
     func setup(){
@@ -61,7 +75,7 @@ class ModalView: UIViewController {
         
         doctorProfileImage.layer.masksToBounds  = true
         doctorProfileImage.layer.cornerRadius = doctorProfileImage.bounds.width / 2
-        doctorProfileImage.layer.borderWidth = 1
+       // doctorProfileImage.layer.borderWidth = 1
         
     }
     
@@ -69,42 +83,23 @@ class ModalView: UIViewController {
     
     func assing(){
         // Coming soon
+        
+        doctorNameLabel.text = vetName
+        doctorExperienceLabel.text = experience
+        doctorRatingLabel.text = rating
+        alumnusLabel.text = alumnus
+        klinikLabel.text = clinic
+        STRVLabel.text = strvNumber
+        ChargeLabel.text = price
     }
     
     // MARK: - IB Action
     @IBAction func didKonsultasiButtonTapped(_ sender: UIButton) {
         
+        // if user is login = true -> whos consult page
         
-        if Firebase.Auth.auth().currentUser != nil{
-            // if user is login = true -> whos consult page
-            
-            //            let storyboard = UIStoryboard(name: "storyboard name", bundle: nil)
-            //            let vc = storyboard.instantiateViewController(withIdentifier: "storyboard identifier")
-            //
-            //            self.navigationController?.pushViewController(vc, animated: true)
-        }
-        else{
-            // if user is not login/ new user -> show signin alert
-            showSigninAlert()
-        }
+        // if user is not login/ new user -> login page
         
-    }
-    
-    
-    // MARK: - Function For Alert
-    func showSigninAlert(){
-        let alert = UIAlertController(title: "Masuk untuk lanjutkan", message: "Untuk melanjutkan, Anda harus masuk terlebih dahulu", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "Batal", style: .destructive, handler: nil))
-        alert.addAction(UIAlertAction(title: "Masuk", style: .default, handler: { action in
-            // go to login page
-            let storyboard = UIStoryboard(name: "Signin", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "Signin")
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true, completion: nil)
-        }))
-        
-        self.present(alert, animated: true)
     }
     
     

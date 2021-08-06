@@ -56,6 +56,14 @@
                                     <action selector="didTapChatPage:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="9oZ-nw-xlO"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JxC-ok-Cjj">
+                                <rect key="frame" x="155" y="320" width="81" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="goto vet list"/>
+                                <connections>
+                                    <action selector="didiVetListButtonTapped:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="aux-ER-2Dd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

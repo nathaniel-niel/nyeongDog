@@ -8,11 +8,16 @@
 import UIKit
 
 class DogProfileListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    // MARK: - UI Components Declaration
     @IBOutlet weak var dogProfileTableView: UITableView!
     
+    // MARK: - Object Declaration
     var dogModel: [DogsModel] = []
    
     
+    
+    // MARK: - App Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,7 +35,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
             DispatchQueue.main.async {
                 self.dogProfileTableView.reloadData()
             }
-            print("oke")
+
         }
     }
  

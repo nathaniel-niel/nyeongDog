@@ -8,9 +8,14 @@
 import Foundation
 
 struct VetListModel {
-    var vetName: String
-    var price: String?
+    var vetName: String?
     var expYears: String?
+    var timeSlot: String?
+    var clinicName: String?
+    var strvNumber: String?
     var rating: String?
+    var price: String?
+    var alumnus: String?
+    
     
 }
