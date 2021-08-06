@@ -113,6 +113,12 @@ class ChatViewController: UIViewController {
     //MARK: Send Button Logic
     @IBAction func sendButtonPressed(_ sender: UIButton) {
         
+        messageTextField.endEditing(true)
+        sendPressed()
+        
+     }
+    //MARK: If the message are ready to sent to Firebase
+    func sendPressed(){
         if let messageBody = messageTextField.text,  let messageSender = Auth.auth().currentUser?.email{
             
             db.collection(dbCollection.collectionName).addDocument(data: [
@@ -129,8 +135,8 @@ class ChatViewController: UIViewController {
             }
             
         }
-        
     }
+    //MARK: Logic to send and or retereieving a message to Firebase
     
     func getMessage(){
         
@@ -193,7 +199,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         let messageCell =  messages[indexPath.row]
         let cell = chatTableView.dequeueReusableCell(withIdentifier: ChatViewCell.identifier, for: indexPath) as! ChatViewCell
         
-        
+        //MARK: If it's not the current user, the cell will show different color
         if messageCell.sender == Auth.auth().currentUser?.email {
             print("sama")
             cell.messageBubble.backgroundColor = .blue
@@ -224,13 +230,26 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension ChatViewController: UITextFieldDelegate {
-    
+    //MARK: If return button is tapped, keyboard will be dismissed
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        //MARK: If return button is tapped, keyboard will be dismissed
+       
         //        self.view.endEditing(true)
+        
+        messageTextField.endEditing(true)
+        
         textField.resignFirstResponder()
         print(textField.text)
         return true
     }
+    
+    //MARK: If return button is tapped, keyboard will be dismissed, the text field will be empty and it will send the text to Firebase
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        sendPressed()
+        textField.text = ""
+       
+        
+    }
+    
+   
     
 }
