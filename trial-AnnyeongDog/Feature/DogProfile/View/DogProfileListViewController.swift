@@ -37,6 +37,8 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
             }
 
         }
+        
+        self.tabBarController?.tabBar.isHidden = false
     }
   
 //    override func viewDidAppear(_ animated: Bool) {
