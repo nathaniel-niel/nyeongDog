@@ -186,7 +186,7 @@ class ChatViewController: UIViewController {
     
     //MARK: Back Button Logic
     @objc func didTapBackButton() {
-        navigationController?.popViewController(animated: true)
+        self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
     }
     
     //MARK: -Logic Video Call Button
