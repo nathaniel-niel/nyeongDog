@@ -98,23 +98,25 @@ class ModalView: UIViewController {
     @IBAction func didKonsultasiButtonTapped(_ sender: UIButton) {
         
         // if user is login = true -> whos consult page
-        if Firebase.Auth.auth().currentUser != nil{
+       //  if Firebase.Auth.auth().currentUser != nil{
             // go to whos consult page
-        }
-        else{
+       // }
+        //else{
             let alert = UIAlertController(title: "Masuk untuk lanjutkan", message: "Untuk melanjutkan, Anda harus masuk terlebih dahulu", preferredStyle: .alert)
 
             alert.addAction(UIAlertAction(title: "Batal", style: .destructive, handler: nil))
             alert.addAction(UIAlertAction(title: "Masuk", style: .default, handler: { action in
                 let storyboard = UIStoryboard(name: "Signin", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "Signin")
+                let nav = UINavigationController(rootViewController: vc)
                 
-                vc.modalPresentationStyle = .fullScreen
-                self.present(vc, animated: true, completion: nil)
+                nav.modalPresentationStyle = .fullScreen
+                self.navigationController?.pushViewController(nav, animated: true)
+                self.present(nav, animated: true, completion: nil)
             }))
 
             self.present(alert, animated: true)
-        }
+        //}
         
         // if user is not login/ new user -> login page
         
