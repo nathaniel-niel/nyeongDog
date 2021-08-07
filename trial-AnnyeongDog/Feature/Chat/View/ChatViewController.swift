@@ -46,9 +46,10 @@ class ChatViewController: UIViewController {
         //        center.addObserver(self, selector: #selector(self.keyboardNotification(notification: )), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         center.addObserver(self, selector: #selector(keyboardWillChange(notification: )), name: UIResponder.keyboardWillShowNotification, object: nil)
         center.addObserver(self, selector: #selector(keyboardWillChange(notification: )), name: UIResponder.keyboardWillHideNotification, object: nil)
+
         //center.addObserver(self, selector: #selector(keyboardWillChange(notification: )), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-        //
-        //
+
+
     }
     
     deinit {
@@ -63,6 +64,13 @@ class ChatViewController: UIViewController {
             //MARK: Put the textfield precisely above the keyboard
             view.frame.origin.y = isKeyboardShowing ? -keyboardFrame!.height : 0
         }
+
+
+        
+        //        UIView.animate(withDuration: 0.25, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
+        //                    self.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
+        //                }, completion: nil)
+
     }
     
     //    @objc func keyboardNotification(notification: NSNotification) {
@@ -109,7 +117,6 @@ class ChatViewController: UIViewController {
         
         //MARK: Customize Video Call Button
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "video"), style: .plain, target: self, action: #selector(didTapVideoButton))
-        
         
         self.navigationItem.largeTitleDisplayMode = .never
         //MARK: Hide tab bar in chat
@@ -246,6 +253,9 @@ extension ChatViewController: UITextFieldDelegate {
         textField.resignFirstResponder()
         print(textField.text)
         return true
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        messageTextField.endEditing(true)
     }
     
     //MARK: If return button is tapped, keyboard will be dismissed, the text field will be empty and it will send the text to Firebase
