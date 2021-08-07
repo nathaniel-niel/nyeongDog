@@ -112,7 +112,7 @@ class DogProfileDetailViewController: UIViewController {
     //MARK: - Delete Button on Dog's Profile
     @IBAction func deleteDidTapped(_ sender: UIButton) {
         
-        //        if prepareForMedical.statement(){
+        //        cif prepareForMedical.statement(){
         //            self.navigationController?.pushViewController(prepareForMedical.navigateToMedicalRecords(), animated: true)
         //
         //        }else{

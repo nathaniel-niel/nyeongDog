@@ -104,10 +104,10 @@ class ModalView: UIViewController {
        // }
         //else{
 
-            let alert = UIAlertController(title: "Masuk untuk lanjutkan", message: "Untuk melanjutkan, Anda harus masuk terlebih dahulu", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Sign in to continue", message: "To proceed, you need to have an account", preferredStyle: .alert)
 
-            alert.addAction(UIAlertAction(title: "Batal", style: .destructive, handler: nil))
-            alert.addAction(UIAlertAction(title: "Masuk", style: .default, handler: { action in
+            alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+            alert.addAction(UIAlertAction(title: "Sign In", style: .default, handler: { action in
                 let storyboard = UIStoryboard(name: "Signin", bundle: nil)
                 let vc = storyboard.instantiateViewController(withIdentifier: "Signin")
 
