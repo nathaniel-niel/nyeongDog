@@ -49,10 +49,14 @@ class DogProfileDetailAddViewController: UIViewController {
         //MARK: - Risen the View that blocked by the Keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppear), name:UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDissapear), name:UIResponder.keyboardWillHideNotification, object: nil)
-        
-        
+ 
     }
-    // MARK: Keyboard Function
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    // MARK: - Keyboard Function
     @objc func keyboardAppear(notification:NSNotification){
         
         guard let userInfo = notification.userInfo else { return }
@@ -118,11 +122,11 @@ class DogProfileDetailAddViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
         alert.addAction(UIAlertAction(title: "Yes", style: .destructive,handler: { action in
             
-            // back to dog profile view
-            let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
-            
-            let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
-            self.navigationController?.pushViewController(vc, animated: false)
+//            // back to dog profile view
+//            let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
+//
+//            let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
+            self.navigationController?.popViewController(animated: true)
         }))
         self.present(alert, animated: true)
     }
@@ -131,10 +135,10 @@ class DogProfileDetailAddViewController: UIViewController {
     @objc func saveButtonTapped(){
         getTextfieldData()
         
-        let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
-        
-        let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
-        self.navigationController?.pushViewController(vc, animated: false)
+//        let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
+//
+//        let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     func getTextfieldData(){

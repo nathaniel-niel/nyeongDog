@@ -55,8 +55,11 @@ class DogProfileDetailEditViewController: UIViewController {
 
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
         assignData()
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     // MARK: Functions
@@ -70,10 +73,10 @@ class DogProfileDetailEditViewController: UIViewController {
     
     //MARK: - back button did tapped
     @objc func backButtonTapped(){
-        let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
-        
-        let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
-        self.navigationController?.pushViewController(vc, animated: false)
+//        let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
+//
+//        let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     //MARK: - Scroll function
