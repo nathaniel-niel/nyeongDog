@@ -158,13 +158,25 @@ extension VetListViewController: UITableViewDelegate, UITableViewDataSource, UIS
         let vc = ModalView()
         vc.modalPresentationStyle = .custom
         vc.transitioningDelegate = self
-                vc.vetName = vetNameList[indexPath.row].vetName ?? "no data"
-                vc.experience = vetNameList[indexPath.row].expYears ?? "no data"
-                vc.rating = vetNameList[indexPath.row].rating ?? "no data"
-                vc.alumnus = vetNameList[indexPath.row].alumnus ?? "no data"
-                vc.clinic = vetNameList[indexPath.row].clinicName ?? "no data"
-                vc.strvNumber = vetNameList[indexPath.row].strvNumber ?? "no data"
-                vc.price = vetNameList[indexPath.row].price ?? "no data"
+        
+        if searching{
+                vc.vetName = searchVetName[indexPath.row].vetName ?? "no data"
+                vc.experience = searchVetName[indexPath.row].expYears ?? "no data"
+                vc.rating = searchVetName[indexPath.row].rating ?? "no data"
+                vc.alumnus = searchVetName[indexPath.row].alumnus ?? "no data"
+                vc.clinic = searchVetName[indexPath.row].clinicName ?? "no data"
+                vc.strvNumber = searchVetName[indexPath.row].strvNumber ?? "no data"
+                vc.price = searchVetName[indexPath.row].price ?? "no data"
+        }
+        else{
+            vc.vetName = vetNameList[indexPath.row].vetName ?? "no data"
+            vc.experience = vetNameList[indexPath.row].expYears ?? "no data"
+            vc.rating = vetNameList[indexPath.row].rating ?? "no data"
+            vc.alumnus = vetNameList[indexPath.row].alumnus ?? "no data"
+            vc.clinic = vetNameList[indexPath.row].clinicName ?? "no data"
+            vc.strvNumber = vetNameList[indexPath.row].strvNumber ?? "no data"
+            vc.price = vetNameList[indexPath.row].price ?? "no data"
+        }
         self.present(vc, animated: true, completion: nil)
     }
 }
