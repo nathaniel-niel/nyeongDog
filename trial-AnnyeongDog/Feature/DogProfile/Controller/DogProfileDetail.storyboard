@@ -57,7 +57,7 @@
                                         <rect key="frame" x="22" y="270" width="110" height="19"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <attributedString key="attributedText">
-                                            <fragment content="Date of Birth">
+                                            <fragment content="Age">
                                                 <attributes>
                                                     <font key="NSFont" metaFont="system"/>
                                                     <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -166,7 +166,7 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="17"/>
-                                        <state key="normal" title="Hapus Profil">
+                                        <state key="normal" title="Delete Profile">
                                             <color key="titleColor" systemColor="systemRedColor"/>
                                         </state>
                                         <connections>
