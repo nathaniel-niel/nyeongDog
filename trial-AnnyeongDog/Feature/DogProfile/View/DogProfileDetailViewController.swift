@@ -86,10 +86,10 @@ class DogProfileDetailViewController: UIViewController {
     @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
         DataManipulation.sharedData.updateDogProfile(with: UserControl.shared.user?.uid ?? "unknown", with: DogsModel(dogID: id, dogName: dogsTextField.text, dateofBirth: dogsDOB.text, gender: genderTextField.text, breed: breedTextField.text, weight: weightTextField.text, color: colorTextField.text, alergen: allergyTextField.text))
         
-        let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
+        let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
         
-        let vc = storyboard.instantiateViewController(identifier: "DPDE")
-        self.navigationController?.popViewController(animated: true)
+        let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
+        self.navigationController?.pushViewController(vc, animated: false)
 //        getTextfieldData()
     }
     
