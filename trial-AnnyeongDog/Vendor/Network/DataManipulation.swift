@@ -235,7 +235,7 @@ class DataManipulation {
     }
     
     //MARK: - delete dog profile
-    func deleteDogProfile(with userId: String, with dogID: Int){
+    func deleteDogProfile(with userId: String, with dogID: String){
         
         ref.child("users/\(userId)/dogs/\(dogID)").removeValue()
     }
