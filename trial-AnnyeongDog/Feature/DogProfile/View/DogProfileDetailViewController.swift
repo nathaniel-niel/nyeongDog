@@ -129,7 +129,7 @@ class DogProfileDetailViewController: UIViewController {
             let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
             self.navigationController?.pushViewController(vc, animated: false)
             
-            DataManipulation.sharedData.deleteDogProfile(with: UserControl.shared.user?.uid ?? "unknown", with: 0)
+            DataManipulation.sharedData.deleteDogProfile(with: UserControl.shared.user?.uid ?? "unknown", with: self.id ?? "")
             
         }))
         self.present(alert, animated: true)
