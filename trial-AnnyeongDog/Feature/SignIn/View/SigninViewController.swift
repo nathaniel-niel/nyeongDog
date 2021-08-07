@@ -82,24 +82,33 @@ extension SigninViewController: ASAuthorizationControllerDelegate {
             //Sign in with Firebase
             Auth.auth().signIn(with: credential) { authDataResult, error in
                 if let user = authDataResult?.user {
+                  
                     print("Nice! You're now signed in as \(user.uid), email : \(user.email ?? "unknown")")
                     DataManipulation.sharedData.insertUser(with: UserModel(id: user.uid, email: user.email ?? "no email"))
+                  
                 }
             }
         }
         print("Login success")
         let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
         let dogProfileVC = storyboard.instantiateViewController(identifier: "DogProfileListViewController") as! DogProfileListViewController
-        self.navigationController?.pushViewController(dogProfileVC, animated: true)
-        
-    }
+        let newVC = dogProfileVC
+      
+        let vc = newVC // your view controller
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .fullScreen
+        self.present(nav, animated: true, completion: nil)
+      
+            
+     }
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         print("Login failed")
     }
     
-    
 }
+
+
 extension SigninViewController: ASAuthorizationControllerPresentationContextProviding {
     func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         return self.view.window!

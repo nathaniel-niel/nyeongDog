@@ -46,15 +46,17 @@ class ChatViewController: UIViewController {
         //        center.addObserver(self, selector: #selector(self.keyboardNotification(notification: )), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         center.addObserver(self, selector: #selector(keyboardWillChange(notification: )), name: UIResponder.keyboardWillShowNotification, object: nil)
         center.addObserver(self, selector: #selector(keyboardWillChange(notification: )), name: UIResponder.keyboardWillHideNotification, object: nil)
-        //        center.addObserver(self, selector: #selector(keyboardWillChange(notification: )), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-        //
-        //
+
+        //center.addObserver(self, selector: #selector(keyboardWillChange(notification: )), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+
+
     }
     
     deinit {
         let center: NotificationCenter = NotificationCenter.default;
         center.removeObserver(self)
     }
+    
     @objc func keyboardWillChange(notification: Notification) {
         if let userInfo = notification.userInfo {
             let keyboardFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
@@ -62,10 +64,13 @@ class ChatViewController: UIViewController {
             //MARK: Put the textfield precisely above the keyboard
             view.frame.origin.y = isKeyboardShowing ? -keyboardFrame!.height : 0
         }
+
+
         
         //        UIView.animate(withDuration: 0.25, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
         //                    self.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
         //                }, completion: nil)
+
     }
     
     //    @objc func keyboardNotification(notification: NSNotification) {
@@ -124,7 +129,7 @@ class ChatViewController: UIViewController {
         messageTextField.endEditing(true)
         sendPressed()
         
-     }
+    }
     //MARK: If the message are ready to sent to Firebase
     func sendPressed(){
         if let messageBody = messageTextField.text,  let messageSender = Auth.auth().currentUser?.email{
@@ -209,12 +214,12 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         
         //MARK: If it's not the current user, the cell will show different color
         if messageCell.sender == Auth.auth().currentUser?.email {
-            print("sama")
+            
             cell.messageBubble.backgroundColor = .blue
             cell.messageLabel.text = messages[indexPath.row].body
         }
         else{
-            print("beda")
+            
             cell.messageBubble.backgroundColor = .black
             cell.messageLabel.text = messages[indexPath.row].body
         }
@@ -240,7 +245,7 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
 extension ChatViewController: UITextFieldDelegate {
     //MARK: If return button is tapped, keyboard will be dismissed
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-       
+        
         //        self.view.endEditing(true)
         
         messageTextField.endEditing(true)
@@ -257,10 +262,10 @@ extension ChatViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         sendPressed()
         textField.text = ""
-       
+        
         
     }
     
-   
+    
     
 }
