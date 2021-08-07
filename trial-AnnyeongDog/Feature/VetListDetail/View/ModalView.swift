@@ -99,11 +99,16 @@ class ModalView: UIViewController {
         
         // if user is login = true -> whos consult page
 
-       //  if Firebase.Auth.auth().currentUser != nil{
-            // go to whos consult page
-       // }
-        //else{
-
+         if Firebase.Auth.auth().currentUser != nil{
+//             go to whos consult page
+            let storyboard = UIStoryboard(name: "Chat", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "Chat") as! ChatViewController
+            let nav = UINavigationController(rootViewController: vc)
+           
+            nav.modalPresentationStyle = .fullScreen
+            self.present(nav, animated: true, completion: nil)
+        }
+        else{
             let alert = UIAlertController(title: "Sign in to continue", message: "To proceed, you need to have an account", preferredStyle: .alert)
 
             alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
@@ -119,7 +124,9 @@ class ModalView: UIViewController {
             }))
 
             self.present(alert, animated: true)
-        //}
+
+          
+        }
 
         
         // if user is not login/ new user -> login page
