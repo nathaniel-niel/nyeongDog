@@ -99,10 +99,10 @@ class ModalView: UIViewController {
         
         // if user is login = true -> whos consult page
 
-       //  if Firebase.Auth.auth().currentUser != nil{
-            // go to whos consult page
-       // }
-        //else{
+         if Firebase.Auth.auth().currentUser != nil{
+             //go to whos consult page
+        }
+        else{
 
             let alert = UIAlertController(title: "Masuk untuk lanjutkan", message: "Untuk melanjutkan, Anda harus masuk terlebih dahulu", preferredStyle: .alert)
 
@@ -119,7 +119,7 @@ class ModalView: UIViewController {
             }))
 
             self.present(alert, animated: true)
-        //}
+        }
 
         
         // if user is not login/ new user -> login page

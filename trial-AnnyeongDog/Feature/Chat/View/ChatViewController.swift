@@ -116,14 +116,14 @@ class ChatViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = true
     }
     
-    //MARK: Send Button Logic
+    //MARK: -Send Button Logic
     @IBAction func sendButtonPressed(_ sender: UIButton) {
         
         messageTextField.endEditing(true)
         sendPressed()
         
     }
-    //MARK: If the message are ready to sent to Firebase
+    //MARK: -If the message are ready to sent to Firebase
     func sendPressed(){
         if let messageBody = messageTextField.text,  let messageSender = Auth.auth().currentUser?.email{
             
@@ -142,7 +142,7 @@ class ChatViewController: UIViewController {
             
         }
     }
-    //MARK: Logic to send and or retereieving a message to Firebase
+    //MARK: -Logic to send and or retrieving a message to Firebase
     
     func getMessage(){
         
@@ -184,7 +184,7 @@ class ChatViewController: UIViewController {
     }
     
     
-    //MARK: Back Button Logic
+    //MARK: -Back Button Logic
     @objc func didTapBackButton() {
         navigationController?.popViewController(animated: true)
     }
