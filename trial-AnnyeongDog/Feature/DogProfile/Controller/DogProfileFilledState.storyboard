@@ -127,7 +127,7 @@
         <!--Navigation Controller-->
         <scene sceneID="zZZ-lE-dv0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uex-sC-TXn" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="DogProfile" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Uex-sC-TXn" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Uzg-ui-sBN">
                         <rect key="frame" x="0.0" y="44" width="390" height="96"/>
