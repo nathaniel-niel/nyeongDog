@@ -28,6 +28,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         dogProfileTableView.dataSource = self
         dogProfileTableView.delegate = self
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         DataManipulation.sharedData.fetchDogDataFromFirebase(with: UserControl.shared.user?.uid ?? "unknown") { responseData in
             self.dogModel = responseData

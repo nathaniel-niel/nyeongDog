@@ -113,7 +113,7 @@ class DataManipulation {
     func fetchDogDataFromFirebase(with userId: String, completion: @escaping ([DogsModel]) -> Void){
         
         //remove all data
-        dogModel.removeAll()
+        dogModel = []
         
         ref.child("users/\(userId)/dogs").observe(DataEventType.value) { snapshot in
             if snapshot.exists(){
@@ -132,12 +132,13 @@ class DataManipulation {
                                                 alergen: val["alergen"] as? String))
                     }
                 }
-                print(self.dogModel)
+                print(self.dogModel.count)
                 completion(self.dogModel)
             }
             else{
                 print(Error.self)
             }
+            self.dogModel = []
         }
         
         
