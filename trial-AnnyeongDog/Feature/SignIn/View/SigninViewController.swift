@@ -90,14 +90,14 @@ extension SigninViewController: ASAuthorizationControllerDelegate {
             }
         }
         print("Login success")
-        let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
-        let dogProfileVC = storyboard.instantiateViewController(identifier: "DogProfileListViewController") as! DogProfileListViewController
-        let newVC = dogProfileVC
-      
-        let vc = newVC // your view controller
-        let nav = UINavigationController(rootViewController: vc)
-        nav.modalPresentationStyle = .fullScreen
-        self.present(nav, animated: true, completion: nil)
+//        let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
+//        let dogProfileVC = storyboard.instantiateViewController(identifier: "DogProfileListViewController") as! DogProfileListViewController
+//        let newVC = dogProfileVC
+//      
+//        let vc = newVC // your view controller
+//        let nav = UINavigationController(rootViewController: vc)
+//        nav.modalPresentationStyle = .fullScreen
+//        self.present(nav, animated: true, completion: nil)
       
             
      }
