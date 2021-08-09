@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DogProfileDetailEditViewController: UIViewController {
+class DogProfileDetailEditViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
     //MARK: -UI Components Declaration
@@ -52,7 +52,7 @@ class DogProfileDetailEditViewController: UIViewController {
         
         navigationItem.largeTitleDisplayMode = .never
         setup()
-
+        
     }
     
     
@@ -73,9 +73,9 @@ class DogProfileDetailEditViewController: UIViewController {
     
     //MARK: - back button did tapped
     @objc func backButtonTapped(){
-//        let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
-//
-//        let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
+        //        let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
+        //
+        //        let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
         self.navigationController?.popToRootViewController(animated: true)
     }
     
@@ -134,8 +134,47 @@ class DogProfileDetailEditViewController: UIViewController {
         
         let vc = storyboard.instantiateViewController(identifier: "medicalRecordsFilled")
         
-    
+        
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    //MARK: -Image Picker
+    
+
+    @IBAction func didTapImageButton(_ sender: UIButton) {
+        showImagePickerOptions()
+    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.originalImage] as! UIImage
+        self.dogImage.image = image
+        self.dismiss(animated: true, completion: nil)
+    }
+
+    func imagePicker(sourceType: UIImagePickerController.SourceType) -> UIImagePickerController {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = sourceType
+        return imagePicker
+    }
+    //MARK: Image Picker Alert
+    func showImagePickerOptions() {
+        let alertVC = UIAlertController(title: "Pick a photo", message: "Pick photo from library", preferredStyle: .actionSheet)
+        
+        let libraryAction = UIAlertAction(title: "Library", style: .default) { [weak self] (action) in
+            guard let self = self else {
+                return
+            }
+            let libraryImagePicker = self.imagePicker(sourceType: .photoLibrary)
+            libraryImagePicker.delegate = self
+            self.present(libraryImagePicker, animated: true) {
+                
+            }
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertVC.addAction(libraryAction)
+        alertVC.addAction(cancelAction)
+        self.present(alertVC, animated: true, completion: nil)
     }
 }
 
