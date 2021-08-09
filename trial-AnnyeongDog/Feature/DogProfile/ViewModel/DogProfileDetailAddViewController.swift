@@ -201,11 +201,11 @@ extension DogProfileDetailAddViewController: UIPickerViewDelegate, UIPickerViewD
             case 0:
                 return genderModel.dogYear[row]
             case 1 :
-                return "Tahun"
+                return "Years"
             case 2:
                 return genderModel.dogMonth[row]
             case 3:
-                return "Bulan"
+                return "Months"
             default:
                 return genderModel.dogMonth[row]
             }
@@ -224,7 +224,7 @@ extension DogProfileDetailAddViewController: UIPickerViewDelegate, UIPickerViewD
             let selectedDogYear = genderModel.dogYear[dogYear]
             let selectedDogMonth = genderModel.dogMonth[dogMonth]
             
-            dogsDOB.text = "\(selectedDogYear) Tahun \(selectedDogMonth) Bulan"
+            dogsDOB.text = "\(selectedDogYear) Years \(selectedDogMonth) Months"
         }
         
     }
