@@ -93,7 +93,7 @@ extension SigninViewController: ASAuthorizationControllerDelegate {
         let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
         let dogProfileVC = storyboard.instantiateViewController(identifier: "DogProfileListViewController") as! DogProfileListViewController
         let newVC = dogProfileVC
-      
+
         let vc = newVC // your view controller
         let nav = UINavigationController(rootViewController: vc)
         nav.modalPresentationStyle = .fullScreen

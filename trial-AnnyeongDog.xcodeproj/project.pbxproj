@@ -60,7 +60,6 @@
 		B584B3AB26B264CC005A02C5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3AA26B264CC005A02C5 /* SceneDelegate.swift */; };
 		B584B3B226B264CD005A02C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B584B3B126B264CD005A02C5 /* Assets.xcassets */; };
 		B584B3B526B264CD005A02C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B584B3B326B264CD005A02C5 /* LaunchScreen.storyboard */; };
-		B584B3BD26B265C0005A02C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B584B3BC26B265C0005A02C5 /* GoogleService-Info.plist */; };
 		B584B3CD26B28DCD005A02C5 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3CC26B28DCD005A02C5 /* Helper.swift */; };
 		B584B3D826B28DF2005A02C5 /* ExampleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3D026B28DF2005A02C5 /* ExampleViewModel.swift */; };
 		B584B3D926B28DF2005A02C5 /* ExampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B584B3D226B28DF2005A02C5 /* ExampleModel.swift */; };
@@ -96,6 +95,7 @@
 		C037879226B2A1CB004344E0 /* PrepareForMedical.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037878426B2A1CB004344E0 /* PrepareForMedical.swift */; };
 		C0541BD226BD40D4000D2BB4 /* DatabaseCollectionName.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0541BD126BD40D4000D2BB4 /* DatabaseCollectionName.swift */; };
 		C079A37726B844D00061EC30 /* DogsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C079A37626B844D00061EC30 /* DogsModel.swift */; };
+		C0C72ABB26C1068C00666FF6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0C72ABA26C1068C00666FF6 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -156,7 +156,6 @@
 		B584B3B126B264CD005A02C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B584B3B426B264CD005A02C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B584B3B626B264CD005A02C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B584B3BC26B265C0005A02C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B584B3BE26B2690E005A02C5 /* trial-AnnyeongDog.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "trial-AnnyeongDog.entitlements"; sourceTree = "<group>"; };
 		B584B3CC26B28DCD005A02C5 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		B584B3D026B28DF2005A02C5 /* ExampleViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleViewModel.swift; sourceTree = "<group>"; };
@@ -194,6 +193,7 @@
 		C037878526B2A1CB004344E0 /* ModelBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelBackButton.swift; sourceTree = "<group>"; };
 		C0541BD126BD40D4000D2BB4 /* DatabaseCollectionName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseCollectionName.swift; sourceTree = "<group>"; };
 		C079A37626B844D00061EC30 /* DogsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsModel.swift; sourceTree = "<group>"; };
+		C0C72ABA26C1068C00666FF6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -481,7 +481,7 @@
 				B584B3BE26B2690E005A02C5 /* trial-AnnyeongDog.entitlements */,
 				B584B3B126B264CD005A02C5 /* Assets.xcassets */,
 				B584B3B626B264CD005A02C5 /* Info.plist */,
-				B584B3BC26B265C0005A02C5 /* GoogleService-Info.plist */,
+				C0C72ABA26C1068C00666FF6 /* GoogleService-Info.plist */,
 			);
 			path = "trial-AnnyeongDog";
 			sourceTree = "<group>";
@@ -823,6 +823,7 @@
 				B584B3B526B264CD005A02C5 /* LaunchScreen.storyboard in Resources */,
 				B584B3DD26B28DF2005A02C5 /* Main.storyboard in Resources */,
 				B54FBEB226BBD41A00659D14 /* PrescriptionViewCell.xib in Resources */,
+				C0C72ABB26C1068C00666FF6 /* GoogleService-Info.plist in Resources */,
 				B505207226BC39BE00306D99 /* VetProfile.xib in Resources */,
 				B5821A6326B7EEA0006DDED9 /* Signin.xib in Resources */,
 				B535E09E26BBB1BE0038251D /* ChatViewCell.xib in Resources */,
@@ -833,7 +834,6 @@
 				C00DE90026B3D8AE00E99343 /* MedicalRecordsFilledState.storyboard in Resources */,
 				2D628ED726B297B20008ECD2 /* MRD.storyboard in Resources */,
 				5B05C39E26B2B3B00034A66A /* DeleteButtonTableViewCell.xib in Resources */,
-				B584B3BD26B265C0005A02C5 /* GoogleService-Info.plist in Resources */,
 				C00DE8FC26B3D8AE00E99343 /* MedicalFiilledTableViewCell.xib in Resources */,
 				B584B3B226B264CD005A02C5 /* Assets.xcassets in Resources */,
 				C01A908E26BAF080007FA0B6 /* VideoCallStoryboard.storyboard in Resources */,
@@ -1091,16 +1091,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "trial-AnnyeongDog/trial-AnnyeongDog.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = LPRJV6392X;
 				INFOPLIST_FILE = "trial-AnnyeongDog/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Novi.trial-AnnyeongDog";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Novi.trial-AnnyeongDog";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1112,16 +1113,17 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "trial-AnnyeongDog/trial-AnnyeongDog.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = LPRJV6392X;
 				INFOPLIST_FILE = "trial-AnnyeongDog/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Novi.trial-AnnyeongDog";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Novi.trial-AnnyeongDog";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
