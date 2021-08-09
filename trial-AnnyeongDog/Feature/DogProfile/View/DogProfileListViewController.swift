@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import Firebase
 class DogProfileListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     // MARK: - UI Components Declaration
@@ -20,8 +20,8 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     // MARK: - App Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       
+        
+        
         
         //disable back button
         navigationItem.hidesBackButton = true
@@ -35,30 +35,30 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
             DispatchQueue.main.async {
                 self.dogProfileTableView.reloadData()
             }
-
+            
         }
         
         self.tabBarController?.tabBar.isHidden = false
     }
-  
-//    override func viewDidAppear(_ animated: Bool) {
-//        DataManipulation.sharedData.fetchDogDataFromFirebase(with: UserControl.shared.user?.uid ?? "unknown") { responseData in
-//            self.dogModel = responseData
-//
-//            DispatchQueue.main.async {
-//                self.dogProfileTableView.reloadData()
-//            }
-//
-//        }
-//    }
     
-       
-
- 
+    //    override func viewDidAppear(_ animated: Bool) {
+    //        DataManipulation.sharedData.fetchDogDataFromFirebase(with: UserControl.shared.user?.uid ?? "unknown") { responseData in
+    //            self.dogModel = responseData
+    //
+    //            DispatchQueue.main.async {
+    //                self.dogProfileTableView.reloadData()
+    //            }
+    //
+    //        }
+    //    }
+    
+    
+    
+    
     //MARK: - Height Cell Setting
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 130
-
+        
     }
     
     //MARK: - Jumlah Cell
@@ -68,7 +68,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     
     //MARK: - Ketika Row di klik
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        performSegue(withIdentifier: "segueDogProfileDetail", sender: nil)
+        //        performSegue(withIdentifier: "segueDogProfileDetail", sender: nil)
         let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
         let nVC = (storyboard.instantiateViewController(identifier: "DPDE")) as! DogProfileDetailEditViewController
         
@@ -84,7 +84,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         self.navigationController?.pushViewController(nVC, animated: true)
     }
     
-   
+    
     //MARK: - Tampilan CEll
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "dogProfileListIdentifier") as! DogProfileTableViewCell
@@ -92,7 +92,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         cell.dogProfileView.layer.cornerRadius = 10
         cell.dogProfileView.layer.borderWidth = 2
         cell.dogProfileView.layer.borderColor = UIColor(red: 0.37, green: 0.43, blue: 0.69, alpha: 1).cgColor
-    
+        
         cell.dogPicture.layer.cornerRadius = 8
         cell.dogName.text = dogModel[indexPath.row].dogName
         cell.dogGender.text = dogModel[indexPath.row].gender
@@ -105,10 +105,32 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     
     //MARK: - Add button di klik
     @IBAction func addDidTapped(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
-        let nVC = (storyboard.instantiateViewController(identifier: "DPDA"))
+        let user =  Auth.auth().currentUser
         
-        self.navigationController?.pushViewController(nVC, animated: true)
+        if user == nil {
+            let alert = UIAlertController(title: "Sign in to continue", message: "To proceed, you need to have an account", preferredStyle: .alert)
+
+            alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+            alert.addAction(UIAlertAction(title: "Sign In", style: .default, handler: { action in
+                let storyboard = UIStoryboard(name: "Signin", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "Signin")
+
+                let nav = UINavigationController(rootViewController: vc)
+
+                nav.modalPresentationStyle = .fullScreen
+                self.navigationController?.pushViewController(nav, animated: true)
+                self.present(nav, animated: true, completion: nil)
+            }))
+
+            self.present(alert, animated: true)
+
+        }
+        else {
+            let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
+            let nVC = (storyboard.instantiateViewController(identifier: "DPDA"))
+            
+            self.navigationController?.pushViewController(nVC, animated: true)
+        }
     }
     
 }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DogProfileDetailAddViewController: UIViewController {
+class DogProfileDetailAddViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
     //MARK: UI Components Declaration
     @IBOutlet weak var dogsTextField: UITextField!
@@ -20,7 +20,6 @@ class DogProfileDetailAddViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var dogsDOB: UITextField!
     
-    
     // MARK: Object Declaration
     var genderModel = GenderModel()
     var prepareForMedical = PrepareForMedical()
@@ -29,12 +28,17 @@ class DogProfileDetailAddViewController: UIViewController {
     var dobPickerView = UIPickerView()
     let helper = Helper()
     
+    lazy var textfields:[UITextField] = [dogsTextField, genderTextField, breedTextField, weightTextField, colorTextField, allergyTextField]
     // MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
+        //MARK: Declaration for validation textfield
+        navigationItem.rightBarButtonItem?.isEnabled = false
+        for textfield in textfields {
+            textfield.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        }
         updateUI()
-        // Do any additional setup after loading the view.
         genderTextField.inputView = pickerView
         dogsDOB.inputView = dobPickerView
         
@@ -45,13 +49,85 @@ class DogProfileDetailAddViewController: UIViewController {
         navigationItem.largeTitleDisplayMode = .never
         
         setup()
-        
         //MARK: - Risen the View that blocked by the Keyboard
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardAppear), name:UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDissapear), name:UIResponder.keyboardWillHideNotification, object: nil)
- 
+        
     }
     
+    //MARK: -Image Picker
+    @IBAction func didTapImageButton(_ sender: Any) {
+        showImagePickerOptions()
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        let image = info[.originalImage] as! UIImage
+        self.dogImage.image = image
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePicker(sourceType: UIImagePickerController.SourceType) -> UIImagePickerController {
+        let imagePicker = UIImagePickerController()
+        imagePicker.sourceType = sourceType
+        return imagePicker
+    }
+    //MARK: Image Picker Alert 
+    func showImagePickerOptions() {
+        let alertVC = UIAlertController(title: "Pick a photo", message: "Pick photo from library", preferredStyle: .actionSheet)
+        
+        let libraryAction = UIAlertAction(title: "Library", style: .default) { [weak self] (action) in
+            guard let self = self else {
+                return
+            }
+            let libraryImagePicker = self.imagePicker(sourceType: .photoLibrary)
+            libraryImagePicker.delegate = self
+            self.present(libraryImagePicker, animated: true) {
+                
+            }
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertVC.addAction(libraryAction)
+        alertVC.addAction(cancelAction)
+        self.present(alertVC, animated: true, completion: nil)
+    }
+    //MARK: -Add delegate to textfield
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        self.navigationItem.rightBarButtonItem?.isEnabled = false
+        
+        guard let dogTextField = textfields[0].text, dogTextField != "" else {
+            print("dogTextField is empty")
+            return
+        }
+        
+        guard let genderTextField = textfields[1].text, genderTextField != "" else {
+            print("genderTextField is empty")
+            return
+        }
+        
+        guard let breedTextField = textfields[2].text, breedTextField != "" else {
+            print("breedTextField is empty")
+            return
+        }
+        
+        guard let weightTextField = textfields[3].text, weightTextField != "" else {
+            print("weightTextField is empty")
+            return
+        }
+        
+        guard let colorTextField = textfields[4].text, colorTextField != "" else {
+            print("colorTextField is empty")
+            return
+        }
+        
+        guard let allergyTextField = textfields[5].text, allergyTextField != "" else {
+            print("allergyTextField is empty")
+            return
+        }
+        
+        self.navigationItem.rightBarButtonItem?.isEnabled = true
+    }
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = true
     }
@@ -122,10 +198,10 @@ class DogProfileDetailAddViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
         alert.addAction(UIAlertAction(title: "Yes", style: .destructive,handler: { action in
             
-//            // back to dog profile view
-//            let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
-//
-//            let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
+            //            // back to dog profile view
+            //            let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
+            //
+            //            let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
             self.navigationController?.popViewController(animated: true)
         }))
         self.present(alert, animated: true)
@@ -135,9 +211,9 @@ class DogProfileDetailAddViewController: UIViewController {
     @objc func saveButtonTapped(){
         getTextfieldData()
         
-//        let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
-//
-//        let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
+        //        let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
+        //
+        //        let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
         self.navigationController?.popToRootViewController(animated: true)
     }
     

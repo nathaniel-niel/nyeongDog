@@ -94,6 +94,23 @@ class ModalView: UIViewController {
         ChargeLabel.text = price
     }
     
+    func showAlertSignin() {
+        let alert = UIAlertController(title: "Sign in to continue", message: "To proceed, you need to have an account", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
+        alert.addAction(UIAlertAction(title: "Sign In", style: .default, handler: { action in
+            let storyboard = UIStoryboard(name: "Signin", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "Signin")
+
+            let nav = UINavigationController(rootViewController: vc)
+            
+            nav.modalPresentationStyle = .fullScreen
+            self.navigationController?.pushViewController(nav, animated: true)
+            self.present(nav, animated: true, completion: nil)
+        }))
+
+        self.present(alert, animated: true)
+    }
     // MARK: - IB Action
     @IBAction func didKonsultasiButtonTapped(_ sender: UIButton) {
         
@@ -113,21 +130,7 @@ class ModalView: UIViewController {
 
         
         else{
-            let alert = UIAlertController(title: "Sign in to continue", message: "To proceed, you need to have an account", preferredStyle: .alert)
-
-            alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
-            alert.addAction(UIAlertAction(title: "Sign In", style: .default, handler: { action in
-                let storyboard = UIStoryboard(name: "Signin", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "Signin")
-
-                let nav = UINavigationController(rootViewController: vc)
-                
-                nav.modalPresentationStyle = .fullScreen
-                self.navigationController?.pushViewController(nav, animated: true)
-                self.present(nav, animated: true, completion: nil)
-            }))
-
-            self.present(alert, animated: true)
+            showAlertSignin()
         }
 
         

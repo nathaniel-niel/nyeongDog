@@ -294,7 +294,7 @@
                                         <rect key="frame" x="23" y="467" width="310" height="28.666666666666664"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="numberPad" returnKeyType="next"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="decimalPad" returnKeyType="next"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SAB-kl-kTa">
                                         <rect key="frame" x="23" y="530" width="310" height="28.666666666666664"/>
@@ -346,6 +346,13 @@
                                         </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byj-4P-vBj" userLabel="selectPhotoButton">
+                                        <rect key="frame" x="134" y="74" width="99" height="63"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="didTapImageButton:" destination="tF7-rc-nec" eventType="touchUpInside" id="BZq-RD-hcA"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <viewLayoutGuide key="contentLayoutGuide" id="s9C-wH-AaZ"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="dl1-kE-nK4"/>
@@ -368,7 +375,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9SB-Uy-Nku" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="800" y="25"/>
+            <point key="canvasLocation" x="800" y="24.881516587677723"/>
         </scene>
     </scenes>
     <resources>
