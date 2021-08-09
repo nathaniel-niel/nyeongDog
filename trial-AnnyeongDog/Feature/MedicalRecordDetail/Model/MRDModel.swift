@@ -9,7 +9,7 @@ import Foundation
 import Firebase
 
 struct MRDModel {
-    var id: Int?
+    var id: String?
     var date: String?
     var veterinarian: String?
     var diagnosis: String?
@@ -19,7 +19,7 @@ struct MRDModel {
     var dosage: String?
 
     
-    var mrdID = 0
+   
     //var description: String = ""
 
     var description: String = ""
@@ -62,10 +62,10 @@ struct MRDModel {
 //        
 //     
 //      }
-    mutating func dogsIdGenerator() -> Int{
-        mrdID += 1
-        return mrdID
-    }
+//    mutating func dogsIdGenerator() -> Int{
+//        mrdID += 1
+//        return mrdID
+//    }
     
 }
 

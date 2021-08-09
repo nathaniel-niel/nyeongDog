@@ -147,9 +147,10 @@ class DataManipulation {
     //MARK: - Function for Medical Record
     
     // insert data medical record to firebase
-    func insertDataToMedicalRecord(with userId: String, with dogID: Int, with mrd: MRDModel ){
+    func insertDataToMedicalRecord(with userId: String, with dogID: String, with mrd: MRDModel ){
         
         let object: [String: Any] = [
+            "mrdId": mrd.id ?? "no data",
             "date": mrd.date ?? "no data",
             "vets": mrd.veterinarian ?? "no data",
             "diagnosis": mrd.diagnosis ?? "no data",
@@ -159,12 +160,12 @@ class DataManipulation {
             "dosage": mrd.dosage ?? "no data",
             "description": mrd.description
         ]
-        ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrd.id ?? 0)").setValue(object)
+        ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrd.id ?? "no data")").setValue(object)
         
     }
     
     // update data medicar record to firebase
-    func updateDataToMedicalRecord(with userId: String, with dogID: Int, with mrd: MRDModel ){
+    func updateDataToMedicalRecord(with userId: String, with dogID: String, with mrd: MRDModel ){
         
         let object: [String: Any] = [
             "date": mrd.date ?? "no data",
@@ -176,29 +177,27 @@ class DataManipulation {
             "dosage": mrd.dosage ?? "no data",
             "description": mrd.description
         ]
-        ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrd.id ?? 0)").updateChildValues(object)
+        ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrd.id ?? "no data")").updateChildValues(object)
         
     }
     
     
     // retrieve medical record data from firebase
     func fetchMedicalRecordData(with userId: String,
-                                with dogID: Int,
+                                with dogID: String,
                                 completion: @escaping ([MRDModel]) -> Void){
-        
-        // remove all data in model
-        mrdModel.removeAll()
-        
-        
+
+ 
+
         ref.child("users/\(userId)/dogs/\(dogID)/medical-records").observe(DataEventType.value) { snapshot in
-            
+
             if snapshot.exists(){
                 for child in snapshot.children{
                     if let snap = child as? DataSnapshot{
                         guard let val = snap.value as? [String : AnyObject] else { return }
-                        
+
                         self.mrdModel.append(MRDModel(
-                            id: 0,
+                            id: val["mrdId"] as? String,
                             date: val["date"] as? String,
                             veterinarian: val["vets"] as? String,
                             diagnosis: val["diagnosis"] as? String,
@@ -210,28 +209,22 @@ class DataManipulation {
                         ))
                     }
                 }
-                print(self.mrdModel)
+                print(self.mrdModel.count)
                 completion(self.mrdModel)
             }
             else{
-                
+
                 print(Error.self)
             }
+            self.mrdModel.removeAll()
         }
     }
     
     // delete data medical record detail
-    func deleteDataToMedicalRecord(with userId: String, with dogID: Int, with mrdID: Int ){
+    func deleteDataToMedicalRecord(with userId: String, with dogID: String, with mrdID: String ){
         
         ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrdID)/").removeValue()
-        //
-        //        ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrdID)/date").removeValue()
-        //        ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrdID)/diagnosis").removeValue()
-        //        ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrdID)/dosage").removeValue()
-        //        ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrdID)/medicine").removeValue()
-        //        ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrdID)/vaccineType").removeValue()
-        //        ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrdID)/vaccinne").removeValue()
-        //        ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrdID)/vets").removeValue()
+      
     }
     
     //MARK: - delete dog profile

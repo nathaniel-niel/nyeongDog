@@ -63,7 +63,7 @@ class Helper {
     
     // MARK: - Function for generate random id
     
-    // generate  unique id by name for dog profile
+    // generate  unique id  
     func generateUniqueID(length: Int = 8) -> String{
         
         precondition(length > 0)
@@ -97,4 +97,6 @@ class Helper {
         return result
         
     }
+    
+   
 }

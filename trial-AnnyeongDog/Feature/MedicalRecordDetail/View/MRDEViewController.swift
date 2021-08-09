@@ -17,11 +17,13 @@ class MRDEViewController: UIViewController/*, deletedelegate*/{
     var medicine: String = ""
     var vaccineType: String = ""
     var dosage: String = ""
+    var dogId: String = ""
+    var mrdId: String = ""
     @IBOutlet weak var MRDEtable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(mrdId)
         //MARK: - Disable dismiss modal
         self.isModalInPresentation = true
         
@@ -56,7 +58,7 @@ class MRDEViewController: UIViewController/*, deletedelegate*/{
     //MARK: - Delete Button
     
     @IBAction func deleteDidTapped(_ sender: Any) {
-        alertViewDelete()
+        alertViewDelete(dogId: dogId, mrdId: mrdId)
         
     }
     
@@ -80,33 +82,33 @@ class MRDEViewController: UIViewController/*, deletedelegate*/{
     
     
     // Function to Alert cancel
-    @objc private func alertView(){
+    @objc private func alertView(dogId: String, mrdId: String){
         let alert = UIAlertController(title: "Unchanged Changes", message: "You have unsaved change, are you sure you want to cancel?", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.destructive, handler:{ action in self.cancelaction() }))
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.destructive, handler:{ action in self.cancelaction(dogId: dogId, mrdId: mrdId) }))
         self.present(alert, animated: true, completion: nil)
     }
     
     // Function to Alert delete
-     func alertViewDelete(){
+    func alertViewDelete(dogId: String, mrdId: String){
         let alert = UIAlertController(title: "Delete Dog Profile", message: "Once you delete this, you won't be able to return it. Do you want to proceed?", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.destructive, handler:{ action in self.cancelaction() }))
+        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.destructive, handler:{ action in self.cancelaction(dogId: dogId, mrdId: mrdId) }))
         self.present(alert, animated: true, completion: nil)
     }
     
     //MARK: - save button (belum ke save ke database)
     @objc private func didSaveButtonTapped(){
         dismiss(animated: true, completion: nil)
-        DataManipulation.sharedData.updateDataToMedicalRecord(with: UserControl.shared.user?.uid ?? "unknown", with: 0, with: MRDModel(id: 0, date: date, veterinarian: vet, diagnosis: diagnosis, vaccine: vaccine, medicine: medicine, vaccineType: vaccineType, dosage: dosage))
+        DataManipulation.sharedData.updateDataToMedicalRecord(with: UserControl.shared.user?.uid ?? "unknown", with: dogId, with: MRDModel(id: mrdId, date: date, veterinarian: vet, diagnosis: diagnosis, vaccine: vaccine, medicine: medicine, vaccineType: vaccineType, dosage: dosage))
     }
     
     //Function to cancelaction
-    private func cancelaction(){
+    private func cancelaction(dogId: String, mrdId: String){
         
         self.dismiss(animated: true, completion: nil)
         
-        DataManipulation.sharedData.deleteDataToMedicalRecord(with: UserControl.shared.user?.uid ?? "unknown", with: 0, with: 0)
+        DataManipulation.sharedData.deleteDataToMedicalRecord(with: UserControl.shared.user?.uid ?? "unknown", with: dogId, with: mrdId)
         
     }
 
@@ -143,7 +145,7 @@ extension MRDEViewController: UITableViewDataSource, UITableViewDelegate{
         case 0:
             switch indexPath.row {
             case 0:
-                cell.configure(title: "Tanggal", placeholder: ViewModel.dataSource[0].date, tag: 0)
+                cell.configure(title: "Tanggal", placeholder: date, tag: 0)
                 return cell
             default:
                 fatalError()
@@ -152,11 +154,11 @@ extension MRDEViewController: UITableViewDataSource, UITableViewDelegate{
             switch indexPath.row {
             case 0:
                 
-                cell.configure(title: "Dokter Hewan", placeholder: ViewModel.dataSource[0].veterinarian,tag: 1)
+                cell.configure(title: "Dokter Hewan", placeholder: vet,tag: 1)
                 return cell
             case 1:
                 
-                cell.configure(title: "Tipe Vaksin", placeholder: ViewModel.dataSource[0].diagnosis, tag: 2)
+                cell.configure(title: "Tipe Vaksin", placeholder: vaccineType, tag: 2)
                 return cell
            
             default:
@@ -165,17 +167,17 @@ extension MRDEViewController: UITableViewDataSource, UITableViewDelegate{
         case 2:
             switch indexPath.row {
             case 0:
-                cell.configure(title: "Diagnosa", placeholder: ViewModel.dataSource[0].medicine, tag: 3)
+                cell.configure(title: "Diagnosa", placeholder: diagnosis, tag: 3)
                 return cell
             case 1:
                 
                 
-                cell.configure(title: "Obat", placeholder: ViewModel.dataSource[0].vaccineType, tag: 4)
+                cell.configure(title: "Obat", placeholder: medicine, tag: 4)
                 return cell
             case 2:
                 
                 
-                cell.configure(title: "Dosis", placeholder: ViewModel.dataSource[0].dosage, tag: 5)
+                cell.configure(title: "Dosis", placeholder: dosage, tag: 5)
                 return cell
             default:
                 fatalError()

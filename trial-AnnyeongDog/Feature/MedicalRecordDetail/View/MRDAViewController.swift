@@ -14,6 +14,7 @@ class MRDAViewController: UIViewController  {
     @IBOutlet weak var mrdaTable: UITableView!
     
     let ViewModel = MRDViewModel()
+    let helper = Helper()
     var date: String = ""
     var vet: String = ""
     var diagnosis: String = ""
@@ -23,10 +24,11 @@ class MRDAViewController: UIViewController  {
     var dosage: String = ""
     var desc: String = ""
     var isExpand: Bool = false
-    
+    var dogId: String?
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        
         
         //MARK: -Setup Delegate
         mrdaTable.delegate = self
@@ -94,7 +96,7 @@ class MRDAViewController: UIViewController  {
     //MARK: - Save Medical Record
     @objc private func didSaveButtonTapped(){
         self.dismiss(animated: true, completion: nil)
-        DataManipulation.sharedData.insertDataToMedicalRecord(with: UserControl.shared.user?.uid ?? "unknown", with: 0, with: MRDModel(id: 0, date: date, veterinarian: vet, diagnosis: diagnosis, vaccine: vaccine, medicine: medicine, vaccineType: vaccineType, dosage: dosage, description: desc))
+        DataManipulation.sharedData.insertDataToMedicalRecord(with: UserControl.shared.user?.uid ?? "unknown", with: dogId ?? "no data", with: MRDModel(id: helper.generateUniqueID(length: 6), date: date, veterinarian: vet, diagnosis: diagnosis, vaccine: vaccine, medicine: medicine, vaccineType: vaccineType, dosage: dosage,description: desc))
         
     }
 }
@@ -125,7 +127,7 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate, UIText
             let cell = mrdaTable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
             cell.contenTextField.delegate = self
             cell.contenTextField.autocorrectionType = .no
-            cell.configure(title: "Tanggal", placeholder: ViewModel.dataSource[0].date, tag: 0)
+            cell.configure(title: "Tanggal", placeholder: "00/00/2021", tag: 0)
             return cell
         }
         else if indexPath.section == 1 {
@@ -134,10 +136,10 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate, UIText
             cell.contenTextField.autocorrectionType = .no
             if indexPath.row == 0 {
                 
-                cell.configure(title: "Dokter Hewan", placeholder: ViewModel.dataSource[0].veterinarian,tag: 1)
+                cell.configure(title: "Dokter Hewan", placeholder: "Nama dokter hewan",tag: 1)
                 
             } else {
-                cell.configure(title: "Tipe Vaksin", placeholder: ViewModel.dataSource[0].diagnosis, tag: 2)
+                cell.configure(title: "Tipe Vaksin", placeholder: "Tipe vaksin", tag: 2)
                 
             }
             return cell
@@ -150,12 +152,12 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate, UIText
             
             if indexPath.row == 0 {
                 
-                cell.configure(title: "Diagnosa", placeholder: ViewModel.dataSource[0].medicine, tag: 3)
+                cell.configure(title: "Diagnosa", placeholder: "Diagnosis", tag: 3)
             } else if indexPath.row == 1 {
-                cell.configure(title: "Obat", placeholder: ViewModel.dataSource[0].vaccineType, tag: 4)
+                cell.configure(title: "Obat", placeholder: "Nama obat", tag: 4)
                 
             } else {
-                cell.configure(title: "Dosis", placeholder: ViewModel.dataSource[0].dosage, tag: 5)
+                cell.configure(title: "Dosis", placeholder: "Dosis obat", tag: 5)
                 
             }
             
