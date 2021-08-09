@@ -54,7 +54,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="medicineLable" destination="x9T-mI-KG1" id="Twa-T2-1L9"/>
+                <outlet property="dateLabel" destination="viq-DS-r1Q" id="OSf-zr-AEB"/>
+                <outlet property="diagnoseLabel" destination="x9T-mI-KG1" id="sRq-Hx-IFS"/>
+                <outlet property="medicineLabel" destination="Syh-C2-umB" id="QeD-Xb-7oE"/>
             </connections>
             <point key="canvasLocation" x="-8.6956521739130448" y="109.15178571428571"/>
         </tableViewCell>

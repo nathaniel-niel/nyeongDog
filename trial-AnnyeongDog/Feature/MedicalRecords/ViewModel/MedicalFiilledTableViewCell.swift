@@ -9,8 +9,14 @@ import UIKit
 
 class MedicalFiilledTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var medicineLable: UILabel!
     
+    
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    
+    @IBOutlet weak var medicineLabel: UILabel!
+    @IBOutlet weak var diagnoseLabel: UILabel!
     static let identifier = "cells"
     
     static func nib() -> UINib{
@@ -29,6 +35,12 @@ class MedicalFiilledTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configure (medicine: String, date: String, diagnose: String){
+        dateLabel.text = date
+        medicineLabel.text = medicine
+        diagnoseLabel.text = diagnose
     }
     
     func buatNovieGithubNgexchekSemuanya(){

@@ -132,7 +132,9 @@ class DogProfileDetailEditViewController: UIViewController {
     @IBAction func MedicalRecordButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: "MedicalRecordsFilledState", bundle: nil)
         
-        let vc = storyboard.instantiateViewController(identifier: "medicalRecordsFilled")
+        let vc = storyboard.instantiateViewController(identifier: "medicalRecordsFilled") as! MedicalRecordsFilledViewController
+        
+        vc.dogId = id
         
     
         self.navigationController?.pushViewController(vc, animated: true)

@@ -22,6 +22,8 @@ class MRDViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
     var vaccineType: String = ""
     var dosage: String = ""
     var desc: String = ""
+    var dogId: String = ""
+    var mrdId: String = ""
     
     let ViewModel = MRDViewModel()
     var mrdModel : [MRDModel] = []
@@ -46,14 +48,7 @@ class MRDViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        DataManipulation.sharedData.fetchMedicalRecordData(with: UserControl.shared.user?.uid ?? "unknown", with: 0) { responseData in
-            self.mrdModel = responseData
-            DispatchQueue.main.async {
-                self.table.reloadData()
-            }
-        }
-    }
+   
     
     // table view will expand size by + 300
     @objc func keyboardAppear(){
@@ -90,7 +85,17 @@ class MRDViewController: UIViewController, UITextFieldDelegate, UITextViewDelega
     @objc private func didEditButtonTapped(){
         let storyboard = UIStoryboard(name: "MRDE", bundle: nil)
         
-        let vc = storyboard.instantiateViewController(identifier: "MRDEStoryboard")
+        let vc = storyboard.instantiateViewController(identifier: "MRDEStoryboard") as! MRDEViewController
+        vc.dogId = dogId
+        vc.mrdId = mrdId
+        vc.date = date
+        vc.vet = vet
+        vc.diagnosis = diagnosis
+        vc.vaccine = vaccine
+        vc.medicine = medicine
+        vc.vaccineType = vaccineType
+        vc.dosage = dosage
+        print(mrdId)
         
         let navVc = UINavigationController(rootViewController: vc)
         
@@ -127,7 +132,7 @@ extension MRDViewController: UITableViewDataSource, UITableViewDelegate{
             let cell = table.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
             cell.contenTextField.delegate = self
             cell.contenTextField.autocorrectionType = .no
-            cell.configure(title: "Tanggal", placeholder: ViewModel.dataSource[0].date, tag: 0)
+            cell.configure(title: "Tanggal", placeholder: date, tag: 0)
             return cell
         }
         else if indexPath.section == 1 {
@@ -135,9 +140,9 @@ extension MRDViewController: UITableViewDataSource, UITableViewDelegate{
             cell.contenTextField.delegate = self
             cell.contenTextField.autocorrectionType = .no
             if indexPath.row == 0 {
-                cell.configure(title: "Dokter Hewan", placeholder: ViewModel.dataSource[0].veterinarian,tag: 1)
+                cell.configure(title: "Dokter Hewan", placeholder: vet,tag: 1)
             } else {
-                cell.configure(title: "Tipe Vaksin", placeholder: ViewModel.dataSource[0].diagnosis, tag: 2)
+                cell.configure(title: "Tipe Vaksin", placeholder: vaccineType, tag: 2)
             }
             return cell
         }
@@ -148,11 +153,11 @@ extension MRDViewController: UITableViewDataSource, UITableViewDelegate{
             cell.contenTextField.autocorrectionType = .no
             
             if indexPath.row == 0 {
-                cell.configure(title: "Diagnosa", placeholder: ViewModel.dataSource[0].medicine, tag: 3)
+                cell.configure(title: "Diagnosa", placeholder: diagnosis, tag: 3)
             } else if indexPath.row == 1 {
-                cell.configure(title: "Obat", placeholder: ViewModel.dataSource[0].vaccineType, tag: 4)
+                cell.configure(title: "Obat", placeholder: medicine, tag: 4)
             } else {
-                cell.configure(title: "Dosis", placeholder: ViewModel.dataSource[0].dosage, tag: 5)
+                cell.configure(title: "Dosis", placeholder: dosage, tag: 5)
             }
             
             return cell
@@ -191,12 +196,12 @@ extension MRDViewController: UITableViewDataSource, UITableViewDelegate{
     }
     //MARK: -Read data from textView
     
-//    func textViewDidChange(_ textView: UITextView) {
-//        desc = textView.text ?? "no value"
-//    }
-    func textViewShouldEndEditing(_ textView: UITextView) {
+    func textViewDidChange(_ textView: UITextView) {
         desc = textView.text ?? "no value"
     }
+//    func textViewShouldEndEditing(_ textView: UITextView) {
+//        desc = textView.text ?? "no value"
+//    }
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
