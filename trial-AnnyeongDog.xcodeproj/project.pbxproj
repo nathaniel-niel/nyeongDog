@@ -24,6 +24,7 @@
 		5B05C39A26B2A9450034A66A /* MRDEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05C39926B2A9450034A66A /* MRDEViewController.swift */; };
 		5B05C39D26B2B3B00034A66A /* DeleteButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05C39B26B2B3B00034A66A /* DeleteButtonTableViewCell.swift */; };
 		5B05C39E26B2B3B00034A66A /* DeleteButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B05C39C26B2B3B00034A66A /* DeleteButtonTableViewCell.xib */; };
+		5B391B3526C2E55400406CEC /* VetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B391B3426C2E55400406CEC /* VetListViewModel.swift */; };
 		5B3CE4A426B8E96700ECF396 /* DogProfileDetailAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3CE4A326B8E96700ECF396 /* DogProfileDetailAddViewController.swift */; };
 		5B3F4BEB26B3FA7F004448DA /* MRDA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3F4BEA26B3FA7F004448DA /* MRDA.storyboard */; };
 		5B3F4BEE26B3FAD7004448DA /* MRDAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F4BEC26B3FAD7004448DA /* MRDAViewController.swift */; };
@@ -118,6 +119,7 @@
 		5B05C39926B2A9450034A66A /* MRDEViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRDEViewController.swift; sourceTree = "<group>"; };
 		5B05C39B26B2B3B00034A66A /* DeleteButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButtonTableViewCell.swift; sourceTree = "<group>"; };
 		5B05C39C26B2B3B00034A66A /* DeleteButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteButtonTableViewCell.xib; sourceTree = "<group>"; };
+		5B391B3426C2E55400406CEC /* VetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetListViewModel.swift; sourceTree = "<group>"; };
 		5B3CE4A326B8E96700ECF396 /* DogProfileDetailAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileDetailAddViewController.swift; sourceTree = "<group>"; };
 		5B3F4BEA26B3FA7F004448DA /* MRDA.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MRDA.storyboard; sourceTree = "<group>"; };
 		5B3F4BEC26B3FAD7004448DA /* MRDAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRDAViewController.swift; sourceTree = "<group>"; };
@@ -322,11 +324,20 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5B391B3326C2E54400406CEC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5B391B3426C2E55400406CEC /* VetListViewModel.swift */,
+				5BC1EF9026BBF25A0024A57C /* Vetdummydata.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		5BC1EF8226BBDD8E0024A57C /* ListVet */ = {
 			isa = PBXGroup;
 			children = (
+				5B391B3326C2E54400406CEC /* ViewModel */,
 				5BC1EF8526BBDDBB0024A57C /* View */,
-				5BC1EF8426BBDDB40024A57C /* ViewModel */,
 				5BC1EF8326BBDDA80024A57C /* Model */,
 			);
 			path = ListVet;
@@ -336,16 +347,8 @@
 			isa = PBXGroup;
 			children = (
 				5BC1EF8E26BBE6480024A57C /* VetListModel.swift */,
-				5BC1EF9026BBF25A0024A57C /* Vetdummydata.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		5BC1EF8426BBDDB40024A57C /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		5BC1EF8526BBDDBB0024A57C /* View */ = {
@@ -907,6 +910,7 @@
 				B5A0B08926BA974000D5C273 /* TextDescCell.swift in Sources */,
 				C079A37726B844D00061EC30 /* DogsModel.swift in Sources */,
 				5BC1EF8D26BBE50C0024A57C /* VetListViewController.swift in Sources */,
+				5B391B3526C2E55400406CEC /* VetListViewModel.swift in Sources */,
 				B5821A6626B7EEA0006DDED9 /* SigninViewController.swift in Sources */,
 				B584B3D826B28DF2005A02C5 /* ExampleViewModel.swift in Sources */,
 				2D628EDA26B297DE0008ECD2 /* MRD-dummyData.swift in Sources */,

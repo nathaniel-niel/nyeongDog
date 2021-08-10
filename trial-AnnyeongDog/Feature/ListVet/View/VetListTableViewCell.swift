@@ -9,6 +9,7 @@ import UIKit
 
 class VetListTableViewCell: UITableViewCell {
     
+    //MARK : - IBOutlet
     @IBOutlet weak var vetImage: UIImageView!
     @IBOutlet weak var vetName: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -51,5 +52,7 @@ class VetListTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
     
 }
