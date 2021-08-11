@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D3418B826C3A8840003A70A /* MedicalRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3418B726C3A8840003A70A /* MedicalRecordViewModel.swift */; };
+		2D3418BB26C3AA000003A70A /* DogProfileState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3418BA26C3AA000003A70A /* DogProfileState.swift */; };
 		2D3B931526BD334E00899F3C /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B931326BD334E00899F3C /* ModalView.swift */; };
 		2D3B931626BD334E00899F3C /* ModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D3B931426BD334E00899F3C /* ModalView.xib */; };
 		2D628ED326B297B20008ECD2 /* MRDTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D628ECD26B297B10008ECD2 /* MRDTableViewCell.swift */; };
@@ -101,6 +103,8 @@
 /* Begin PBXFileReference section */
 		1F067EF30DC9F907FC10B78B /* Pods-trial-AnnyeongDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trial-AnnyeongDog.release.xcconfig"; path = "Target Support Files/Pods-trial-AnnyeongDog/Pods-trial-AnnyeongDog.release.xcconfig"; sourceTree = "<group>"; };
 		26A2976778E2B79F56C882C7 /* Pods-trial-AnnyeongDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trial-AnnyeongDog.debug.xcconfig"; path = "Target Support Files/Pods-trial-AnnyeongDog/Pods-trial-AnnyeongDog.debug.xcconfig"; sourceTree = "<group>"; };
+		2D3418B726C3A8840003A70A /* MedicalRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MedicalRecordViewModel.swift; path = ../../../../../../../../../Documents/MedicalRecordViewModel.swift; sourceTree = "<group>"; };
+		2D3418BA26C3AA000003A70A /* DogProfileState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileState.swift; sourceTree = "<group>"; };
 		2D3B931326BD334E00899F3C /* ModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		2D3B931426BD334E00899F3C /* ModalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalView.xib; sourceTree = "<group>"; };
 		2D628ECD26B297B10008ECD2 /* MRDTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRDTableViewCell.swift; sourceTree = "<group>"; };
@@ -208,6 +212,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D3418B926C3A9DD0003A70A /* DogProfileState */ = {
+			isa = PBXGroup;
+			children = (
+				2D3418BA26C3AA000003A70A /* DogProfileState.swift */,
+			);
+			path = DogProfileState;
+			sourceTree = "<group>";
+		};
 		2D628E8826B297350008ECD2 /* MedicalRecordDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -526,6 +538,7 @@
 		B584B3C226B28C77005A02C5 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				2D3418B926C3A9DD0003A70A /* DogProfileState */,
 				2D646C1E26BCDF2900E90EDF /* PresentationController.swift */,
 				B584B3CC26B28DCD005A02C5 /* Helper.swift */,
 				2D74BE1C26B4558F009B3629 /* UserControl.swift */,
@@ -664,6 +677,7 @@
 				C037876626B2A199004344E0 /* MedicalRecordsViewController.swift */,
 				C00DE8F926B3D8AE00E99343 /* MedicalFiilledTableViewCell.swift */,
 				C00DE8F226B3CEA800E99343 /* MedicalRecordsDummy.swift */,
+				2D3418B726C3A8840003A70A /* MedicalRecordViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -702,8 +716,8 @@
 			children = (
 				5B67967226B41796004514F3 /* DogProfileListViewController.swift */,
 				C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */,
-				5B71983A26BD42F9000F19A5 /* DogProfileEmptyStateViewController.swift */,
 				5B67967026B41794004514F3 /* DogProfileTableViewCell.swift */,
+				5B71983A26BD42F9000F19A5 /* DogProfileEmptyStateViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -920,6 +934,7 @@
 				B584B3DF26B28E10005A02C5 /* DataManipulation.swift in Sources */,
 				B59BDB9426BAFE3300AED6D6 /* StorageManager.swift in Sources */,
 				B584B3CD26B28DCD005A02C5 /* Helper.swift in Sources */,
+				2D3418B826C3A8840003A70A /* MedicalRecordViewModel.swift in Sources */,
 				B59BDB9626BAFF6A00AED6D6 /* NavigationManager.swift in Sources */,
 				B584B3D926B28DF2005A02C5 /* ExampleModel.swift in Sources */,
 				2D3B931526BD334E00899F3C /* ModalView.swift in Sources */,
@@ -927,6 +942,7 @@
 				5B3F4BEE26B3FAD7004448DA /* MRDAViewController.swift in Sources */,
 				C00DE8FD26B3D8AE00E99343 /* MedicalRecordsFilledViewController.swift in Sources */,
 				B584B3DC26B28DF2005A02C5 /* MainViewController.swift in Sources */,
+				2D3418BB26C3AA000003A70A /* DogProfileState.swift in Sources */,
 				5B71983B26BD42F9000F19A5 /* DogProfileEmptyStateViewController.swift in Sources */,
 				5B05C39A26B2A9450034A66A /* MRDEViewController.swift in Sources */,
 				2D74BE1B26B45535009B3629 /* DogProfileDetailModel.swift in Sources */,

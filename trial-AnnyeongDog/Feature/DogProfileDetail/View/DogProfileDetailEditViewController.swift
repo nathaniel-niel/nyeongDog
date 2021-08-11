@@ -134,7 +134,8 @@ class DogProfileDetailEditViewController: UIViewController, UIImagePickerControl
         
         let vc = storyboard.instantiateViewController(identifier: "medicalRecordsFilled") as! MedicalRecordsFilledViewController
         
-        vc.dogId = id
+//       // vc.dogId = id
+//        CurrentDogProfile.shared.currentDogId = id
         
         
         self.navigationController?.pushViewController(vc, animated: true)

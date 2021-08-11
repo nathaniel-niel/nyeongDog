@@ -81,7 +81,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         nVC.weight = dogModel[indexPath.row].weight
         nVC.color = dogModel[indexPath.row].color
         nVC.alergen = dogModel[indexPath.row].alergen
-        
+        CurrentDogProfile.shared.currentDogId = dogModel[indexPath.row].dogID
         self.navigationController?.pushViewController(nVC, animated: true)
     }
     
