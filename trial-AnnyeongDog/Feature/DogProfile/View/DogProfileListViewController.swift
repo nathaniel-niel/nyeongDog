@@ -14,7 +14,8 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     
     // MARK: - Object Declaration
     var fetchDatafromFirebase = FetchDatafromFirebase()
-
+    var userlogin = didUserLogin()
+    
     // MARK: - App Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     
     override func viewWillAppear(_ animated: Bool) {
         fetchFirebase()
-      
+        
         self.tabBarController?.tabBar.isHidden = false
         
         
@@ -116,24 +117,29 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     @IBAction func addDidTapped(_ sender: Any) {
         let user =  Auth.auth().currentUser
         
+        //User belom login
         if user == nil {
-            let alert = UIAlertController(title: "Sign in to continue", message: "To proceed, you need to have an account", preferredStyle: .alert)
             
-            alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
-            alert.addAction(UIAlertAction(title: "Sign In", style: .default, handler: { action in
-                let storyboard = UIStoryboard(name: "Signin", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "Signin")
-                
-                let nav = UINavigationController(rootViewController: vc)
-                
-                nav.modalPresentationStyle = .fullScreen
-                self.navigationController?.pushViewController(nav, animated: true)
-                self.present(nav, animated: true, completion: nil)
-            }))
+            self.present(
+                userlogin.userDetected(user) {
+                    
+                    let storyboard = UIStoryboard(name: "Signin", bundle: nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "Signin")
+                    
+                    let nav = UINavigationController(rootViewController: vc)
+                    
+                    nav.modalPresentationStyle = .fullScreen
+                    self.navigationController?.pushViewController(nav, animated: true)
+                    self.present(nav, animated: true, completion: nil)
+                    
+                    
+                    
+                } , animated: true)
             
-            self.present(alert, animated: true)
+            
             
         }
+        //User udah login
         else {
             let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
             let nVC = (storyboard.instantiateViewController(identifier: "DPDA"))
