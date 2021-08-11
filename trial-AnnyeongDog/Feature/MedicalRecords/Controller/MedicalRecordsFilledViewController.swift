@@ -15,7 +15,6 @@ class MedicalRecordsFilledViewController: UIViewController {
     
     // MARK: - Objects Declaration
     var prepareToMRD = PrepareToMRD()
-    var dummyData = MedicalRecordsDummyData()
     var mrdModel: [MRDModel] = []
     var mrdViewModel = MedicalRecordViewModel()
     
