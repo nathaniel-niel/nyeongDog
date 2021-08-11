@@ -220,6 +220,15 @@
 			path = DogProfileState;
 			sourceTree = "<group>";
 		};
+		2D3418BC26C3B1D20003A70A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C037876626B2A199004344E0 /* MedicalRecordsViewController.swift */,
+				C00DE8F726B3D8AE00E99343 /* MedicalRecordsFilledViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		2D628E8826B297350008ECD2 /* MedicalRecordDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -663,6 +672,7 @@
 		C037876426B2A199004344E0 /* MedicalRecords */ = {
 			isa = PBXGroup;
 			children = (
+				2D3418BC26C3B1D20003A70A /* Controller */,
 				C03787A426B2F53C004344E0 /* Model */,
 				C037876826B2A199004344E0 /* View */,
 				C037876526B2A199004344E0 /* ViewModel */,
@@ -673,10 +683,6 @@
 		C037876526B2A199004344E0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				C00DE8F726B3D8AE00E99343 /* MedicalRecordsFilledViewController.swift */,
-				C037876626B2A199004344E0 /* MedicalRecordsViewController.swift */,
-				C00DE8F926B3D8AE00E99343 /* MedicalFiilledTableViewCell.swift */,
-				C00DE8F226B3CEA800E99343 /* MedicalRecordsDummy.swift */,
 				2D3418B726C3A8840003A70A /* MedicalRecordViewModel.swift */,
 			);
 			path = ViewModel;
@@ -685,6 +691,7 @@
 		C037876826B2A199004344E0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C00DE8F926B3D8AE00E99343 /* MedicalFiilledTableViewCell.swift */,
 				C037876926B2A199004344E0 /* MedicalRecords.storyboard */,
 				C00DE8F626B3D8AE00E99343 /* MedicalFiilledTableViewCell.xib */,
 				C00DE8FA26B3D8AE00E99343 /* MedicalRecordsFilledState.storyboard */,
@@ -738,6 +745,7 @@
 		C03787A426B2F53C004344E0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C00DE8F226B3CEA800E99343 /* MedicalRecordsDummy.swift */,
 				C00DE8F026B312D400E99343 /* MedicalRecordsDummyData.swift */,
 				C00DE8F526B3D8AE00E99343 /* dummyTesting.swift */,
 				C00DE8F826B3D8AE00E99343 /* PrepareToMRD.swift */,
