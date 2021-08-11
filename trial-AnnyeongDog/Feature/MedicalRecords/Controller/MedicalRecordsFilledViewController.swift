@@ -27,9 +27,6 @@ class MedicalRecordsFilledViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-      
-        // Do any additional setup after loading the view.
         //XiB Delegate and DataSource
         self.tableViewMedicalRecords.delegate = self
         self.tableViewMedicalRecords.dataSource = self
@@ -66,6 +63,7 @@ class MedicalRecordsFilledViewController: UIViewController {
         self.present(prepareToMRD.prepareToAddMRD(dogId: CurrentDogProfile.shared.currentDogId ?? "no data"), animated: true, completion: nil)
     }
     
+    
     func updateUI(){
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always
@@ -73,6 +71,8 @@ class MedicalRecordsFilledViewController: UIViewController {
     }
 }
 
+
+// MARK: - Table View
 extension MedicalRecordsFilledViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
