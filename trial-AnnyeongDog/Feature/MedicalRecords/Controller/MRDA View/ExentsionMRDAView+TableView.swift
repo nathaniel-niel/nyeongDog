@@ -40,7 +40,6 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
         case 2:
             return "Medical Record"
         case 3:
-            
             return "Description"
         default:
             fatalError()
@@ -118,7 +117,6 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section != 3{
             return 45
-            
         }
         else{
             return 100
