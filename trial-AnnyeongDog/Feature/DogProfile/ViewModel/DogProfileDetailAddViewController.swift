@@ -211,10 +211,10 @@ class DogProfileDetailAddViewController: UIViewController, UIImagePickerControll
     @objc func saveButtonTapped(){
         getTextfieldData()
         
-        //        let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
-        //
-        //        let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
-        self.navigationController?.popToRootViewController(animated: true)
+                let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
+        
+                let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func getTextfieldData(){
