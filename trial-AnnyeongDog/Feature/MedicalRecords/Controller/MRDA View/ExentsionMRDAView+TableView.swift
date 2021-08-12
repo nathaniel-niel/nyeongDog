@@ -34,11 +34,11 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return "Waktu"
+            return "Time"
         case 1:
             return "Detail"
         case 2:
-            return "Riwayat Kesehatan"
+            return "Medical Record"
         case 3:
             
             return "Description"
@@ -58,7 +58,7 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
             let cell = mrdaTable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
             cell.contenTextField.delegate = self
             cell.contenTextField.autocorrectionType = .no
-            cell.configure(title: "Tanggal", placeholder: "00/00/2021", tag: 0)
+            cell.configure(title: "Date", placeholder: "00/00/2021", tag: 0)
             return cell
         }
         else if indexPath.section == 1 {
@@ -67,10 +67,10 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
             cell.contenTextField.autocorrectionType = .no
             if indexPath.row == 0 {
                 
-                cell.configure(title: "Dokter Hewan", placeholder: "Nama dokter hewan",tag: 1)
+                cell.configure(title: "Vet Name", placeholder: "Drh. Budi",tag: 1)
                 
             } else {
-                cell.configure(title: "Tipe Vaksin", placeholder: "Tipe vaksin", tag: 2)
+                cell.configure(title: "Vaccine Type", placeholder: "Distemper", tag: 2)
                 
             }
             return cell
@@ -83,12 +83,12 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
             
             if indexPath.row == 0 {
                 
-                cell.configure(title: "Diagnosa", placeholder: "Diagnosis", tag: 3)
+                cell.configure(title: "Diagnose", placeholder: "Diarrhea", tag: 3)
             } else if indexPath.row == 1 {
-                cell.configure(title: "Obat", placeholder: "Nama obat", tag: 4)
+                cell.configure(title: "Medecine", placeholder: "Pet Metronidazole Diarrhea", tag: 4)
                 
             } else {
-                cell.configure(title: "Dosis", placeholder: "Dosis obat", tag: 5)
+                cell.configure(title: "Dosage", placeholder: "4 x per Day", tag: 5)
                 
             }
             
@@ -98,7 +98,7 @@ extension MRDAViewController: UITableViewDataSource, UITableViewDelegate{
         else {
             let largeCell = mrdaTable.dequeueReusableCell(withIdentifier: DescriptionTextViewCell.identifier) as! DescriptionTextViewCell
             largeCell.descriptionTextView.delegate = self
-            largeCell.configure(description: "hello world")
+            largeCell.configure(description: "Type your descripcion here..")
             return largeCell
         }
         
