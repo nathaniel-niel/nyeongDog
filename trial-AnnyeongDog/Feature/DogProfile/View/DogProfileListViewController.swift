@@ -34,7 +34,8 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     // MARK: - update the UI
     func updateUI(){
         //disable back button
-        navigationItem.hidesBackButton = true
+        navigationItem.hidesBackButton = false
+        
         dogProfileTableView.dataSource = self
         dogProfileTableView.delegate = self
         
@@ -82,6 +83,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
         let nVC = (storyboard.instantiateViewController(identifier: "DPDE")) as! DogProfileDetailEditViewController
         
+
         nVC.id = fetchDatafromFirebase.dogModel[indexPath.row].dogID
         nVC.dogName = fetchDatafromFirebase.dogModel[indexPath.row].dogName
         nVC.dob = fetchDatafromFirebase.dogModel[indexPath.row].dateofBirth
@@ -89,8 +91,8 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         nVC.breed = fetchDatafromFirebase.dogModel[indexPath.row].breed
         nVC.weight = fetchDatafromFirebase.dogModel[indexPath.row].weight
         nVC.color = fetchDatafromFirebase.dogModel[indexPath.row].color
-        nVC.alergen = fetchDatafromFirebase.dogModel[indexPath.row].alergen
-        
+        nVC.alergen = fetchDatafromFirebase.dogModel[indexPath.row].alergen   
+        CurrentDogProfile.shared.currentDogId = dogModel[indexPath.row].dogID
         self.navigationController?.pushViewController(nVC, animated: true)
     }
     

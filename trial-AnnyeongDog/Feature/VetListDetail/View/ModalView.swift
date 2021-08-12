@@ -12,7 +12,6 @@ import Firebase
 class ModalView: UIViewController {
     
     // MARK: - UI Components Declaration
-    
     @IBOutlet weak var line: UIView!
     @IBOutlet weak var doctorProfileImage: UIImageView!
     @IBOutlet weak var doctorNameLabel: UILabel!
@@ -94,6 +93,7 @@ class ModalView: UIViewController {
         ChargeLabel.text = price
     }
     
+    //Mark: - Function Alert Sign In
     func showAlertSignin() {
         let alert = UIAlertController(title: "Sign in to continue", message: "To proceed, you need to have an account", preferredStyle: .alert)
 
@@ -111,7 +111,8 @@ class ModalView: UIViewController {
 
         self.present(alert, animated: true)
     }
-    // MARK: - IB Action
+    
+    // MARK: - IB Action Consult Button
     @IBAction func didKonsultasiButtonTapped(_ sender: UIButton) {
         
         // if user is login = true -> whos consult page
@@ -125,17 +126,11 @@ class ModalView: UIViewController {
             nav.modalPresentationStyle = .fullScreen
             self.present(nav, animated: true, completion: nil)
         }
-   
-
-
-        
+         // if user is not login/ new user -> login page
         else{
             showAlertSignin()
         }
 
-        
-        // if user is not login/ new user -> login page
-        
     }
     
     

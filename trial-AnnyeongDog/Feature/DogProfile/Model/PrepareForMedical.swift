@@ -9,17 +9,8 @@ import UIKit
 
 struct PrepareForMedical {
     
-    var dummyData = MedicalRecordsDummyData()
     
-    func statement() -> Bool{
-        if dummyData.arrayDummy.isEmpty{
-            return false
-        }
-        else{
-            return true
-        }
-    }
-    
+   
     func navigateToMedicalRecords(dogId : String) -> UIViewController {
         
         let storyBoard: UIStoryboard = UIStoryboard(name: "MedicalRecordsFilledState", bundle: nil)
@@ -32,13 +23,13 @@ struct PrepareForMedical {
         
     }
     
-    func navigateToMedicalRecordsEmpty() -> UIViewController {
-        
-        let storyBoard: UIStoryboard = UIStoryboard(name: "MedicalRecords", bundle: nil)
-        
-        let medicalEmptyVC = storyBoard.instantiateViewController(withIdentifier: "MedicalRecord") as! MedicalRecordsViewController
-        
-        return medicalEmptyVC
-        
-    }
+//    func navigateToMedicalRecordsEmpty() -> UIViewController {
+//        
+//        let storyBoard: UIStoryboard = UIStoryboard(name: "MedicalRecords", bundle: nil)
+//        
+//        let medicalEmptyVC = storyBoard.instantiateViewController(withIdentifier: "MedicalRecord") as! MedicalRecordsViewController
+//        
+//        return medicalEmptyVC
+//        
+//    }
 }

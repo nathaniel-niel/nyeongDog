@@ -10,7 +10,7 @@ import UIKit
 class DogProfileDetailEditViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     
-    //MARK: -UI Components Declaration
+    //MARK: - UI Components Declaration
     @IBOutlet weak var dogsTextField: UITextField!
     @IBOutlet weak var dogImage: UIImageView!
     @IBOutlet weak var genderTextField: UITextField!
@@ -21,7 +21,7 @@ class DogProfileDetailEditViewController: UIViewController, UIImagePickerControl
     @IBOutlet weak var allergyTextField: UITextField!
     @IBOutlet weak var dogsDOB: UITextField!
     
-    //MARK: -Temporary variables
+    //MARK: - Temporary variables
     var id: String?
     var dogName: String?
     var dob: String?
@@ -47,16 +47,12 @@ class DogProfileDetailEditViewController: UIViewController, UIImagePickerControl
         pickerView.dataSource = self
         
         genderTextField.inputView = pickerView
-        
-        
-        
+
         navigationItem.largeTitleDisplayMode = .never
         setup()
         
     }
-    
-    
-    
+   
     override func viewWillAppear(_ animated: Bool) {
         assignData()
         self.tabBarController?.tabBar.isHidden = true
@@ -73,9 +69,7 @@ class DogProfileDetailEditViewController: UIViewController, UIImagePickerControl
     
     //MARK: - back button did tapped
     @objc func backButtonTapped(){
-        //        let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
-        //
-        //        let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
+       
         self.navigationController?.popToRootViewController(animated: true)
     }
     
@@ -86,21 +80,11 @@ class DogProfileDetailEditViewController: UIViewController, UIImagePickerControl
         
         navigationItem.largeTitleDisplayMode = .never
         
-        makeRounded()
+        roundedImageVIew(image: dogImage)
     }
     
-    //MARK: - Dog profile rounded
-    func makeRounded() {
-        
-        dogImage.layer.borderWidth = 1
-        dogImage.layer.masksToBounds = false
-        dogImage.layer.borderColor = UIColor.black.cgColor
-        dogImage.layer.cornerRadius = dogImage.frame.height/2
-        dogImage.clipsToBounds = true
-    }
-    
-    
-    //MARK: - edit buttin did tapped
+
+    //MARK: - edit button did tapped
     @objc func editButtonTapped(){
         let storyboard = UIStoryboard(name: "DogProfileDetail", bundle: nil)
         
@@ -133,14 +117,11 @@ class DogProfileDetailEditViewController: UIViewController, UIImagePickerControl
         let storyboard = UIStoryboard(name: "MedicalRecordsFilledState", bundle: nil)
         
         let vc = storyboard.instantiateViewController(identifier: "medicalRecordsFilled") as! MedicalRecordsFilledViewController
-        
-        vc.dogId = id
-        
-        
+                
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    //MARK: -Image Picker
+    //MARK: - Image Picker
     
 
     @IBAction func didTapImageButton(_ sender: UIButton) {
@@ -157,7 +138,8 @@ class DogProfileDetailEditViewController: UIViewController, UIImagePickerControl
         imagePicker.sourceType = sourceType
         return imagePicker
     }
-    //MARK: Image Picker Alert
+    
+    // Image Picker Alert
     func showImagePickerOptions() {
         let alertVC = UIAlertController(title: "Pick a photo", message: "Pick photo from library", preferredStyle: .actionSheet)
         
@@ -181,7 +163,8 @@ class DogProfileDetailEditViewController: UIViewController, UIImagePickerControl
 }
 
 
-// Picker buat Keyboard Gender
+
+// MARK: - Picker For Gender
 
 extension DogProfileDetailEditViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

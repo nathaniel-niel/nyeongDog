@@ -16,9 +16,9 @@ class VetListViewController: UIViewController{
     
     
     // MARK: - Object Declaration
+    let ViewModel = VetListViewModel()
     let dummydata = VetDummyData()
     var searchVetName = [VetListModel]()
-    var vetNameList = [VetListModel]()
     let searchController = UISearchController(searchResultsController: nil)
     var searching = false
     
@@ -27,41 +27,15 @@ class VetListViewController: UIViewController{
     // MARK: - App Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Masukin data
-        filldata()
+        // Masukin data untuk function search
+        ViewModel.fillDataVetList()
         configureSearchController()
         
-        // delegate xib
-        //        self.vetListTable.delegate = self
-        //        self.vetListTable.dataSource = self
         
         //xib register
         vetListTable.register(VetListTableViewCell.nib(), forCellReuseIdentifier: VetListTableViewCell.identifier)
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        // kalo udah ada  app vets di uncomment
-//        //        DataManipulation.sharedData.fetchVetsDataFromFirebase { dataResponse in
-//        //            self.vetNameList = dataResponse
-//        //
-//        //            DispatchQueue.main.async {
-//        //                self.vetListTable.reloadData()
-//        //            }
-//        //        }
-//    }
-    
-    //MARK: - Function masukin data ke variable
-    func filldata(){
-        var looping = dummydata.data.count - 1
-        while  looping > -1{
-            vetNameList.append(dummydata.data[looping])
-            looping = looping - 1
-        }
-        //        let dokter1 = VetListModel(vetName: "Bambang", price: "fgd", expYears: "fsdfs", rating: "fsdfsdf")
-        //        vetNameList.append(dokter1)
-        //        let dokter2 = VetListModel(vetName: "siska", price: "fgd", expYears: "fsdfs", rating: "fsdfsdf")
-        //        vetNameList.append(dokter2)
-    }
     
     //MARK: - Configure Search Bar
     private func configureSearchController(){
@@ -95,7 +69,7 @@ extension VetListViewController: UITableViewDelegate, UITableViewDataSource, UIS
             return searchVetName.count
         }
         else{
-            return vetNameList.count
+            return ViewModel.vetNameList.count
         }
         //        return dummydata.data.count
     }
@@ -111,42 +85,15 @@ extension VetListViewController: UITableViewDelegate, UITableViewDataSource, UIS
         }
         else{
             
-            cell.vetName.text = vetNameList[indexPath.row].vetName
-            cell.priceLabel.text = vetNameList[indexPath.row].price
-            cell.pengalamanLabel.text = vetNameList[indexPath.row].expYears
-            cell.ratingLabel.text = vetNameList[indexPath.row].rating
+            cell.vetName.text = ViewModel.vetNameList[indexPath.row].vetName
+            cell.priceLabel.text = ViewModel.vetNameList[indexPath.row].price
+            cell.pengalamanLabel.text = ViewModel.vetNameList[indexPath.row].expYears
+            cell.ratingLabel.text = ViewModel.vetNameList[indexPath.row].rating
             
         }
         
         return cell
         
-    }
-    
-    //MARK: - Config Search Bar
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searching = false
-        searchVetName.removeAll()
-        vetListTable.reloadData()
-    }
-    
-    
-    func updateSearchResults(for searchController: UISearchController) {
-        let searchText = searchController.searchBar.text!
-        if !searchText.isEmpty{
-            searching = true
-            searchVetName.removeAll()
-            for vet in vetNameList{
-                if vet.vetName!.lowercased().contains(searchText.lowercased()){
-                    searchVetName.append(vet)
-                }
-            }
-        }
-        else{
-            searching = false
-            searchVetName.removeAll()
-            searchVetName = vetNameList
-        }
-        vetListTable.reloadData()
     }
     
     //MARK: - Ketika Row di klik
@@ -169,15 +116,42 @@ extension VetListViewController: UITableViewDelegate, UITableViewDataSource, UIS
                 vc.price = searchVetName[indexPath.row].price ?? "no data"
         }
         else{
-            vc.vetName = vetNameList[indexPath.row].vetName ?? "no data"
-            vc.experience = vetNameList[indexPath.row].expYears ?? "no data"
-            vc.rating = vetNameList[indexPath.row].rating ?? "no data"
-            vc.alumnus = vetNameList[indexPath.row].alumnus ?? "no data"
-            vc.clinic = vetNameList[indexPath.row].clinicName ?? "no data"
-            vc.strvNumber = vetNameList[indexPath.row].strvNumber ?? "no data"
-            vc.price = vetNameList[indexPath.row].price ?? "no data"
+            vc.vetName = ViewModel.vetNameList[indexPath.row].vetName ?? "no data"
+            vc.experience = ViewModel.vetNameList[indexPath.row].expYears ?? "no data"
+            vc.rating = ViewModel.vetNameList[indexPath.row].rating ?? "no data"
+            vc.alumnus = ViewModel.vetNameList[indexPath.row].alumnus ?? "no data"
+            vc.clinic = ViewModel.vetNameList[indexPath.row].clinicName ?? "no data"
+            vc.strvNumber = ViewModel.vetNameList[indexPath.row].strvNumber ?? "no data"
+            vc.price = ViewModel.vetNameList[indexPath.row].price ?? "no data"
         }
         self.present(vc, animated: true, completion: nil)
+    }
+    
+    //MARK: - Config Search Bar
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searching = false
+        searchVetName.removeAll()
+        vetListTable.reloadData()
+    }
+    
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchText = searchController.searchBar.text!
+        if !searchText.isEmpty{
+            searching = true
+            searchVetName.removeAll()
+            for vet in ViewModel.vetNameList{
+                if vet.vetName!.lowercased().contains(searchText.lowercased()){
+                    searchVetName.append(vet)
+                }
+            }
+        }
+        else{
+            searching = false
+            searchVetName.removeAll()
+            searchVetName = ViewModel.vetNameList
+        }
+        vetListTable.reloadData()
     }
 }
 

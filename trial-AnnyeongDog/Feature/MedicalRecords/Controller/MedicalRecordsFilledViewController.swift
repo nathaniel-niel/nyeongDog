@@ -15,18 +15,17 @@ class MedicalRecordsFilledViewController: UIViewController {
     
     // MARK: - Objects Declaration
     var prepareToMRD = PrepareToMRD()
-    var dummyData = MedicalRecordsDummyData()
     var mrdModel: [MRDModel] = []
+    var mrdViewModel = MedicalRecordViewModel()
     
     // MARK: - Variables Declaration
-    var dogId: String?
+    var dogId = CurrentDogProfile.shared.currentDogId
     
     
     // MARK: - App Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
         //XiB Delegate and DataSource
         self.tableViewMedicalRecords.delegate = self
         self.tableViewMedicalRecords.dataSource = self
@@ -39,17 +38,19 @@ class MedicalRecordsFilledViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        DataManipulation.sharedData.fetchMedicalRecordData(with: UserControl.shared.user?.uid ?? "unknown", with: dogId ?? "no data") { dataResponse in
-           
-                self.mrdModel = dataResponse
-            print(self.mrdModel)
-            
+      bindData()
+        
+    }
+    
+    // MARK: - Bind Data
+    func bindData(){
+        mrdViewModel.fetchData { data in
+            self.mrdModel = data
             
             DispatchQueue.main.async {
                 self.tableViewMedicalRecords.reloadData()
             }
         }
-        
     }
    
     
@@ -58,8 +59,9 @@ class MedicalRecordsFilledViewController: UIViewController {
     
     @IBAction func addPressed(_ sender: UIBarButtonItem) {
         
-        self.present(prepareToMRD.prepareToAddMRD(dogId: dogId ?? "no data"), animated: true, completion: nil)
+        self.present(prepareToMRD.prepareToAddMRD(dogId: CurrentDogProfile.shared.currentDogId ?? "no data"), animated: true, completion: nil)
     }
+    
     
     func updateUI(){
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -68,10 +70,11 @@ class MedicalRecordsFilledViewController: UIViewController {
     }
 }
 
+
+// MARK: - Table View
 extension MedicalRecordsFilledViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(mrdModel.count)
         return mrdModel.count
     }
     

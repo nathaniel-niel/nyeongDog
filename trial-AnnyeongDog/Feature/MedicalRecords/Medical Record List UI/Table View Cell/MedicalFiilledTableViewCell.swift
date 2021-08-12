@@ -11,10 +11,8 @@ class MedicalFiilledTableViewCell: UITableViewCell {
 
     
     
-    
+    // MARK: - UI Components Declaration
     @IBOutlet weak var dateLabel: UILabel!
-    
-    
     @IBOutlet weak var medicineLabel: UILabel!
     @IBOutlet weak var diagnoseLabel: UILabel!
     static let identifier = "cells"
@@ -37,14 +35,12 @@ class MedicalFiilledTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    // MARK: - UI Components Configuration
+    
     func configure (medicine: String, date: String, diagnose: String){
         dateLabel.text = date
         medicineLabel.text = medicine
         diagnoseLabel.text = diagnose
     }
-    
-    func buatNovieGithubNgexchekSemuanya(){
-        print("hello novie")
-    }
-    
+  
 }

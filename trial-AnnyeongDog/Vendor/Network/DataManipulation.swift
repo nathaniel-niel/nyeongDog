@@ -210,7 +210,7 @@ class DataManipulation {
                         ))
                     }
                 }
-                print(self.mrdModel.count)
+     
                 completion(self.mrdModel)
             }
             else{

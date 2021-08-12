@@ -90,8 +90,8 @@ extension SigninViewController: ASAuthorizationControllerDelegate {
             }
         }
         print("Login success")
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let menuVC = storyboard.instantiateViewController(identifier: "Main")
+        let storyboard = UIStoryboard(name: "DogProfileEmptyState", bundle: nil)
+        let menuVC = storyboard.instantiateViewController(identifier: "DogProfileEmptyState")
         self.navigationController?.pushViewController(menuVC, animated: true)
       
             
