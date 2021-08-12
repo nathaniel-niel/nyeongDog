@@ -23,6 +23,7 @@ class MRDEViewController: UIViewController{
     var dosage: String = ""
     var dogId: String = ""
     var mrdId: String = ""
+    var desc: String = ""
     var isExpand: Bool = false
     
     // MARK: App Life Cycle

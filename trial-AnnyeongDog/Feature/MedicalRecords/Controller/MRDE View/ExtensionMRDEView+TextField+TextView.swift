@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-extension  MRDEViewController: UITextFieldDelegate{
+extension  MRDEViewController: UITextFieldDelegate, UITextViewDelegate{
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         textField.addTarget(self, action: #selector(valueTextFieldChanged), for: .editingChanged)
@@ -34,6 +34,16 @@ extension  MRDEViewController: UITextFieldDelegate{
             print("not yet developed")
         }
     }
+    //MARK: - Read data from textView
+    func textViewDidChange(_ textView: UITextView) {
+        if textView.tag == 6 {
+            desc = textView.text
+        }
+        else{
+            desc = "no value"
+        }
+    }
+    
    
     
 }
