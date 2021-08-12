@@ -10,8 +10,6 @@
 		2D19F87826C4C2C300FDAA46 /* UIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D19F87726C4C2C300FDAA46 /* UIConfiguration.swift */; };
 		2D3418B826C3A8840003A70A /* MedicalRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3418B726C3A8840003A70A /* MedicalRecordViewModel.swift */; };
 		2D3418BB26C3AA000003A70A /* DogProfileState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3418BA26C3AA000003A70A /* DogProfileState.swift */; };
-		2D3B931526BD334E00899F3C /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B931326BD334E00899F3C /* ModalView.swift */; };
-		2D3B931626BD334E00899F3C /* ModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D3B931426BD334E00899F3C /* ModalView.xib */; };
 		2D5EE3CF26C4003400785683 /* ExtensionMRDView+TableVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5EE3CE26C4003400785683 /* ExtensionMRDView+TableVIew.swift */; };
 		2D5EE3D226C40C1600785683 /* ExentsionMRDAView+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5EE3D126C40C1600785683 /* ExentsionMRDAView+TableView.swift */; };
 		2D5EE3D426C40D9400785683 /* ExtensionMRDAView+TextField+TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5EE3D326C40D9400785683 /* ExtensionMRDAView+TextField+TextView.swift */; };
@@ -30,6 +28,8 @@
 		5B05C39A26B2A9450034A66A /* MRDEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05C39926B2A9450034A66A /* MRDEViewController.swift */; };
 		5B05C39D26B2B3B00034A66A /* DeleteButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05C39B26B2B3B00034A66A /* DeleteButtonTableViewCell.swift */; };
 		5B05C39E26B2B3B00034A66A /* DeleteButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B05C39C26B2B3B00034A66A /* DeleteButtonTableViewCell.xib */; };
+		5B1D8EF626C4E9620088FCB1 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D8EF426C4E9620088FCB1 /* ModalView.swift */; };
+		5B1D8EF726C4E9620088FCB1 /* ModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B1D8EF526C4E9620088FCB1 /* ModalView.xib */; };
 		5B391B3526C2E55400406CEC /* VetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B391B3426C2E55400406CEC /* VetListViewModel.swift */; };
 		5B3CE4A426B8E96700ECF396 /* DogProfileDetailAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3CE4A326B8E96700ECF396 /* DogProfileDetailAddViewController.swift */; };
 		5B3F4BEB26B3FA7F004448DA /* MRDA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3F4BEA26B3FA7F004448DA /* MRDA.storyboard */; };
@@ -41,7 +41,6 @@
 		5B67967626B41796004514F3 /* DogProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B67967226B41796004514F3 /* DogProfileListViewController.swift */; };
 		5B71983B26BD42F9000F19A5 /* DogProfileEmptyStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B71983A26BD42F9000F19A5 /* DogProfileEmptyStateViewController.swift */; };
 		5B94000C26B7F8CA0020C09C /* MRDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B94000B26B7F8CA0020C09C /* MRDModel.swift */; };
-		5BB6B73426C3C6BF00E967B9 /* UIModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB6B73326C3C6BF00E967B9 /* UIModalView.swift */; };
 		5BC1EF8A26BBE04B0024A57C /* VetListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC1EF8826BBE04B0024A57C /* VetListTableViewCell.swift */; };
 		5BC1EF8B26BBE04B0024A57C /* VetListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BC1EF8926BBE04B0024A57C /* VetListTableViewCell.xib */; };
 		5BC1EF8D26BBE50C0024A57C /* VetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC1EF8C26BBE50C0024A57C /* VetListViewController.swift */; };
@@ -108,8 +107,6 @@
 		2D19F87726C4C2C300FDAA46 /* UIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfiguration.swift; sourceTree = "<group>"; };
 		2D3418B726C3A8840003A70A /* MedicalRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalRecordViewModel.swift; sourceTree = "<group>"; };
 		2D3418BA26C3AA000003A70A /* DogProfileState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileState.swift; sourceTree = "<group>"; };
-		2D3B931326BD334E00899F3C /* ModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
-		2D3B931426BD334E00899F3C /* ModalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalView.xib; sourceTree = "<group>"; };
 		2D5EE3CE26C4003400785683 /* ExtensionMRDView+TableVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionMRDView+TableVIew.swift"; sourceTree = "<group>"; };
 		2D5EE3D126C40C1600785683 /* ExentsionMRDAView+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExentsionMRDAView+TableView.swift"; sourceTree = "<group>"; };
 		2D5EE3D326C40D9400785683 /* ExtensionMRDAView+TextField+TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionMRDAView+TextField+TextView.swift"; sourceTree = "<group>"; };
@@ -128,6 +125,8 @@
 		5B05C39926B2A9450034A66A /* MRDEViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRDEViewController.swift; sourceTree = "<group>"; };
 		5B05C39B26B2B3B00034A66A /* DeleteButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButtonTableViewCell.swift; sourceTree = "<group>"; };
 		5B05C39C26B2B3B00034A66A /* DeleteButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteButtonTableViewCell.xib; sourceTree = "<group>"; };
+		5B1D8EF426C4E9620088FCB1 /* ModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		5B1D8EF526C4E9620088FCB1 /* ModalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalView.xib; sourceTree = "<group>"; };
 		5B391B3426C2E55400406CEC /* VetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetListViewModel.swift; sourceTree = "<group>"; };
 		5B3CE4A326B8E96700ECF396 /* DogProfileDetailAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileDetailAddViewController.swift; sourceTree = "<group>"; };
 		5B3F4BEA26B3FA7F004448DA /* MRDA.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MRDA.storyboard; sourceTree = "<group>"; };
@@ -139,7 +138,6 @@
 		5B67967226B41796004514F3 /* DogProfileListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogProfileListViewController.swift; sourceTree = "<group>"; };
 		5B71983A26BD42F9000F19A5 /* DogProfileEmptyStateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileEmptyStateViewController.swift; sourceTree = "<group>"; };
 		5B94000B26B7F8CA0020C09C /* MRDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRDModel.swift; sourceTree = "<group>"; };
-		5BB6B73326C3C6BF00E967B9 /* UIModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIModalView.swift; sourceTree = "<group>"; };
 		5BC1EF8826BBE04B0024A57C /* VetListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetListTableViewCell.swift; sourceTree = "<group>"; };
 		5BC1EF8926BBE04B0024A57C /* VetListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VetListTableViewCell.xib; sourceTree = "<group>"; };
 		5BC1EF8C26BBE50C0024A57C /* VetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetListViewController.swift; sourceTree = "<group>"; };
@@ -318,9 +316,8 @@
 		2D646C2526BCDF6900E90EDF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2D3B931326BD334E00899F3C /* ModalView.swift */,
-				2D3B931426BD334E00899F3C /* ModalView.xib */,
-				5BB6B73326C3C6BF00E967B9 /* UIModalView.swift */,
+				5B1D8EF426C4E9620088FCB1 /* ModalView.swift */,
+				5B1D8EF526C4E9620088FCB1 /* ModalView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -842,7 +839,6 @@
 				B5AF9D4D26BBE7D000A59690 /* MedicineCell.xib in Resources */,
 				5B05C39826B2A9160034A66A /* MRDE.storyboard in Resources */,
 				B584B3DD26B28DF2005A02C5 /* Main.storyboard in Resources */,
-				2D3B931626BD334E00899F3C /* ModalView.xib in Resources */,
 				B5821A6526B7EEA0006DDED9 /* Signin.storyboard in Resources */,
 				B535E09426BBA2FC0038251D /* Chat.storyboard in Resources */,
 				5B67967526B41796004514F3 /* DogProfileFilledState.storyboard in Resources */,
@@ -862,6 +858,7 @@
 				C00DE90026B3D8AE00E99343 /* MedicalRecordsFilledState.storyboard in Resources */,
 				2D628ED726B297B20008ECD2 /* MRD.storyboard in Resources */,
 				5B05C39E26B2B3B00034A66A /* DeleteButtonTableViewCell.xib in Resources */,
+				5B1D8EF726C4E9620088FCB1 /* ModalView.xib in Resources */,
 				C00DE8FC26B3D8AE00E99343 /* MedicalFiilledTableViewCell.xib in Resources */,
 				B584B3B226B264CD005A02C5 /* Assets.xcassets in Resources */,
 				C01A908E26BAF080007FA0B6 /* VideoCallStoryboard.storyboard in Resources */,
@@ -943,13 +940,13 @@
 				C00DE8FE26B3D8AE00E99343 /* PrepareToMRD.swift in Sources */,
 				2D5EE3D226C40C1600785683 /* ExentsionMRDAView+TableView.swift in Sources */,
 				5B67966E26B41787004514F3 /* dummyDataDogProfile.swift in Sources */,
+				5B1D8EF626C4E9620088FCB1 /* ModalView.swift in Sources */,
 				B584B3DF26B28E10005A02C5 /* DataManipulation.swift in Sources */,
 				B59BDB9426BAFE3300AED6D6 /* StorageManager.swift in Sources */,
 				B584B3CD26B28DCD005A02C5 /* Helper.swift in Sources */,
 				2D3418B826C3A8840003A70A /* MedicalRecordViewModel.swift in Sources */,
 				B59BDB9626BAFF6A00AED6D6 /* NavigationManager.swift in Sources */,
 				B584B3D926B28DF2005A02C5 /* ExampleModel.swift in Sources */,
-				2D3B931526BD334E00899F3C /* ModalView.swift in Sources */,
 				5B67967626B41796004514F3 /* DogProfileListViewController.swift in Sources */,
 				5B3F4BEE26B3FAD7004448DA /* MRDAViewController.swift in Sources */,
 				2D5EE3DA26C414D600785683 /* ExtensionMRDEView+TextField+TextView.swift in Sources */,
@@ -965,7 +962,6 @@
 				B59BDB9826BB02B400AED6D6 /* LoadingViewController.swift in Sources */,
 				C01A909626BAF706007FA0B6 /* FacetimeEmail.swift in Sources */,
 				2D628ED826B297B20008ECD2 /* MRDViewController.swift in Sources */,
-				5BB6B73426C3C6BF00E967B9 /* UIModalView.swift in Sources */,
 				B505207026BC39B200306D99 /* VetProfile.swift in Sources */,
 				2D5EE3D826C4148C00785683 /* ExtensionMRDVIew+TableView.swift in Sources */,
 				2D5EE3D426C40D9400785683 /* ExtensionMRDAView+TextField+TextView.swift in Sources */,

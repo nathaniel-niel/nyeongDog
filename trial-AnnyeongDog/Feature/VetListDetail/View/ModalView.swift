@@ -11,7 +11,20 @@ import Firebase
 
 class ModalView: UIViewController {
     
-
+    // MARK: - UI Components Declaration
+    @IBOutlet weak var line: UIView!
+    @IBOutlet weak var doctorProfileImage: UIImageView!
+    @IBOutlet weak var doctorNameLabel: UILabel!
+    @IBOutlet weak var doctorExperienceLabel: UILabel!
+    @IBOutlet weak var doctorRatingLabel: UILabel!
+    @IBOutlet weak var ratingBackground: UIView!
+    @IBOutlet weak var alumnusLabel: UILabel!
+    @IBOutlet weak var klinikLabel: UILabel!
+    @IBOutlet weak var STRVLabel: UILabel!
+    @IBOutlet weak var ChargeLabel: UILabel!
+    @IBOutlet weak var konsultasiButton: UIButton!
+    
+    
     // MARK: - Variables
     var hasSetPointOrigin = false
     var originPoint: CGPoint?
@@ -25,9 +38,6 @@ class ModalView: UIViewController {
     var strvNumber: String = ""
     var price: String = ""
     
-    // MARK: - Object Declaration
-    let viewModal = UIModalView()
-    
     
     // MARK: - App Life Cycle
     override func viewDidLoad() {
@@ -36,7 +46,7 @@ class ModalView: UIViewController {
         
         view.addGestureRecognizer(panGesture)
         
-        viewModal.setup()
+        setup()
     }
     
     override func viewDidLayoutSubviews() {
@@ -51,22 +61,39 @@ class ModalView: UIViewController {
     }
     
     
+    // MARK: - Function for UI Component
+    func setup(){
+        
+        line.layer.cornerRadius = 2
+        konsultasiButton.layer.cornerRadius = 10
+        ratingBackground.layer.cornerRadius = 8
+        clipShapeCircle()
+    }
     
+    //Masking Image view into circle
+    func clipShapeCircle(){
+        
+        doctorProfileImage.layer.masksToBounds  = true
+        doctorProfileImage.layer.cornerRadius = doctorProfileImage.bounds.width / 2
+       // doctorProfileImage.layer.borderWidth = 1
+        
+    }
     
     //MARK: - Function to Set UI Components Valus
+    
     func assing(){
         // Coming soon
         
-        viewModal.doctorNameLabel.text = vetName
-        viewModal.doctorExperienceLabel.text = experience
-        viewModal.doctorRatingLabel.text = rating
-        viewModal.alumnusLabel.text = alumnus
-        viewModal.klinikLabel.text = clinic
-        viewModal.STRVLabel.text = strvNumber
-        viewModal.ChargeLabel.text = price
+        doctorNameLabel.text = vetName
+        doctorExperienceLabel.text = experience
+        doctorRatingLabel.text = rating
+        alumnusLabel.text = alumnus
+        klinikLabel.text = clinic
+        STRVLabel.text = strvNumber
+        ChargeLabel.text = price
     }
     
-    //MARK: - Function Alert for Sign In
+    //Mark: - Function Alert Sign In
     func showAlertSignin() {
         let alert = UIAlertController(title: "Sign in to continue", message: "To proceed, you need to have an account", preferredStyle: .alert)
 
@@ -85,7 +112,28 @@ class ModalView: UIViewController {
         self.present(alert, animated: true)
     }
     
- 
+    // MARK: - IB Action Consult Button
+    @IBAction func didKonsultasiButtonTapped(_ sender: UIButton) {
+        
+        // if user is login = true -> whos consult page
+
+         if Firebase.Auth.auth().currentUser != nil{
+             //             go to whos consult page
+            let storyboard = UIStoryboard(name: "Chat", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "Chat") as! ChatViewController
+            let nav = UINavigationController(rootViewController: vc)
+           
+            nav.modalPresentationStyle = .fullScreen
+            self.present(nav, animated: true, completion: nil)
+        }
+         // if user is not login/ new user -> login page
+        else{
+            showAlertSignin()
+        }
+
+    }
+    
+    
     // MARK: - Function for Pan Gesture
     @objc func panGestureAction(sender: UIPanGestureRecognizer){
         let translation = sender.translation(in: view)
@@ -108,29 +156,6 @@ class ModalView: UIViewController {
                 }
             }
         }
-    }
-    
-    // MARK: - IB Action Consult Button
-    @IBAction func didKonsultasiButtonTapped(_ sender: UIButton) {
-        
-        // if user is login = true -> whos consult page
-
-         if Firebase.Auth.auth().currentUser != nil{
-             //             go to whos consult page
-            let storyboard = UIStoryboard(name: "Chat", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "Chat") as! ChatViewController
-            let nav = UINavigationController(rootViewController: vc)
-           
-            nav.modalPresentationStyle = .fullScreen
-            self.present(nav, animated: true, completion: nil)
-        }
-        else{
-            showAlertSignin()
-        }
-
-        
-        // if user is not login/ new user -> login page
-        
     }
     
 }
