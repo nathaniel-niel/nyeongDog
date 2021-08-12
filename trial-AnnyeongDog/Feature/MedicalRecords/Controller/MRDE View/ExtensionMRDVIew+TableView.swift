@@ -12,7 +12,7 @@ extension MRDEViewController: UITableViewDataSource, UITableViewDelegate{
     
     // MARK: - Section
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -23,6 +23,8 @@ extension MRDEViewController: UITableViewDataSource, UITableViewDelegate{
             return 2
         case 2:
             return 3
+        case 3:
+            return 1
         default:
             fatalError()
         }
@@ -36,6 +38,8 @@ extension MRDEViewController: UITableViewDataSource, UITableViewDelegate{
             return "Detail"
         case 2:
             return "Medical Record"
+        case 3:
+            return "Description"
         default:
             fatalError()
         }
@@ -61,56 +65,54 @@ extension MRDEViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
-        cell.contenTextField.delegate = self
-        cell.contenTextField.autocorrectionType = .no
-        
-        switch indexPath.section {
-        case 0:
-            switch indexPath.row {
-            case 0:
-                cell.configure(title: "Date", placeholder: date, tag: 0)
-                return cell
-            default:
-                fatalError()
-            }
-        case 1:
-            switch indexPath.row {
-            case 0:
-                
-                cell.configure(title: "Vet Name", placeholder: vet,tag: 1)
-                return cell
-            case 1:
-                
-                cell.configure(title: "Vaccine Type", placeholder: vaccineType, tag: 2)
-                return cell
-                
-            default:
-                fatalError()
-            }
-        case 2:
-            switch indexPath.row {
-            case 0:
-                cell.configure(title: "Diagnose", placeholder: diagnosis, tag: 3)
-                return cell
-            case 1:
-                
-                
-                cell.configure(title: "Medecine", placeholder: medicine, tag: 4)
-                return cell
-            case 2:
-                
-                
-                cell.configure(title: "Dosage", placeholder: dosage, tag: 5)
-                return cell
-            default:
-                fatalError()
-            }
+        if indexPath.section == 0 {
             
-        default:
-            fatalError()
+            let cell = tableView.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
+            cell.contenTextField.delegate = self
+            cell.contenTextField.autocorrectionType = .no
+            cell.configure(title: "Date", placeholder: "00/00/2021", tag: 0)
+            return cell
+        }
+        else if indexPath.section == 1 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
+            cell.contenTextField.delegate = self
+            cell.contenTextField.autocorrectionType = .no
+            if indexPath.row == 0 {
+                
+                cell.configure(title: "Vet Name", placeholder: "Drh. Budi",tag: 1)
+                
+            } else {
+                cell.configure(title: "Vaccine Type", placeholder: "Distemper", tag: 2)
+                
+            }
+            return cell
         }
         
+        else if indexPath.section == 2 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
+            cell.contenTextField.delegate = self
+            cell.contenTextField.autocorrectionType = .no
+            
+            if indexPath.row == 0 {
+                
+                cell.configure(title: "Diagnose", placeholder: "Diarrhea", tag: 3)
+            } else if indexPath.row == 1 {
+                cell.configure(title: "Medecine", placeholder: "Pet Metronidazole Diarrhea", tag: 4)
+                
+            } else {
+                cell.configure(title: "Dosage", placeholder: "4 x per Day", tag: 5)
+                
+            }
+            
+            return cell
+        }
+        
+        else {
+            let largeCell = tableView.dequeueReusableCell(withIdentifier: DescriptionTextViewCell.identifier) as! DescriptionTextViewCell
+            largeCell.descriptionTextView.delegate = self
+            largeCell.configure(description: "Type your descripcion here..")
+            return largeCell
+        }
         
     }
     
