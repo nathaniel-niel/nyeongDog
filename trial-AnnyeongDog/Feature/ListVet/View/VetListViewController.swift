@@ -16,6 +16,7 @@ class VetListViewController: UIViewController{
     
     
     // MARK: - Object Declaration
+    let ViewModel = VetListViewModel()
     let dummydata = VetDummyData()
     var searchVetName = [VetListModel]()
     var vetNameList = [VetListModel]()
@@ -27,41 +28,15 @@ class VetListViewController: UIViewController{
     // MARK: - App Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Masukin data
-        filldata()
+        // Masukin data untuk function search
+        ViewModel.fillDataVetList()
         configureSearchController()
         
-        // delegate xib
-        //        self.vetListTable.delegate = self
-        //        self.vetListTable.dataSource = self
         
         //xib register
         vetListTable.register(VetListTableViewCell.nib(), forCellReuseIdentifier: VetListTableViewCell.identifier)
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        // kalo udah ada  app vets di uncomment
-//        //        DataManipulation.sharedData.fetchVetsDataFromFirebase { dataResponse in
-//        //            self.vetNameList = dataResponse
-//        //
-//        //            DispatchQueue.main.async {
-//        //                self.vetListTable.reloadData()
-//        //            }
-//        //        }
-//    }
-    
-    //MARK: - Function masukin data ke variable
-    func filldata(){
-        var looping = dummydata.data.count - 1
-        while  looping > -1{
-            vetNameList.append(dummydata.data[looping])
-            looping = looping - 1
-        }
-        //        let dokter1 = VetListModel(vetName: "Bambang", price: "fgd", expYears: "fsdfs", rating: "fsdfsdf")
-        //        vetNameList.append(dokter1)
-        //        let dokter2 = VetListModel(vetName: "siska", price: "fgd", expYears: "fsdfs", rating: "fsdfsdf")
-        //        vetNameList.append(dokter2)
-    }
     
     //MARK: - Configure Search Bar
     private func configureSearchController(){
@@ -122,33 +97,6 @@ extension VetListViewController: UITableViewDelegate, UITableViewDataSource, UIS
         
     }
     
-    //MARK: - Config Search Bar
-    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        searching = false
-        searchVetName.removeAll()
-        vetListTable.reloadData()
-    }
-    
-    
-    func updateSearchResults(for searchController: UISearchController) {
-        let searchText = searchController.searchBar.text!
-        if !searchText.isEmpty{
-            searching = true
-            searchVetName.removeAll()
-            for vet in vetNameList{
-                if vet.vetName!.lowercased().contains(searchText.lowercased()){
-                    searchVetName.append(vet)
-                }
-            }
-        }
-        else{
-            searching = false
-            searchVetName.removeAll()
-            searchVetName = vetNameList
-        }
-        vetListTable.reloadData()
-    }
-    
     //MARK: - Ketika Row di klik
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //        performSegue(withIdentifier: "segueDogProfileDetail", sender: nil)
@@ -178,6 +126,33 @@ extension VetListViewController: UITableViewDelegate, UITableViewDataSource, UIS
             vc.price = vetNameList[indexPath.row].price ?? "no data"
         }
         self.present(vc, animated: true, completion: nil)
+    }
+    
+    //MARK: - Config Search Bar
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searching = false
+        searchVetName.removeAll()
+        vetListTable.reloadData()
+    }
+    
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        let searchText = searchController.searchBar.text!
+        if !searchText.isEmpty{
+            searching = true
+            searchVetName.removeAll()
+            for vet in vetNameList{
+                if vet.vetName!.lowercased().contains(searchText.lowercased()){
+                    searchVetName.append(vet)
+                }
+            }
+        }
+        else{
+            searching = false
+            searchVetName.removeAll()
+            searchVetName = vetNameList
+        }
+        vetListTable.reloadData()
     }
 }
 

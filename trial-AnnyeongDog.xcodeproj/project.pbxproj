@@ -30,6 +30,7 @@
 		5B05C39A26B2A9450034A66A /* MRDEViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05C39926B2A9450034A66A /* MRDEViewController.swift */; };
 		5B05C39D26B2B3B00034A66A /* DeleteButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05C39B26B2B3B00034A66A /* DeleteButtonTableViewCell.swift */; };
 		5B05C39E26B2B3B00034A66A /* DeleteButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B05C39C26B2B3B00034A66A /* DeleteButtonTableViewCell.xib */; };
+		5B391B3526C2E55400406CEC /* VetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B391B3426C2E55400406CEC /* VetListViewModel.swift */; };
 		5B3CE4A426B8E96700ECF396 /* DogProfileDetailAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3CE4A326B8E96700ECF396 /* DogProfileDetailAddViewController.swift */; };
 		5B3F4BEB26B3FA7F004448DA /* MRDA.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3F4BEA26B3FA7F004448DA /* MRDA.storyboard */; };
 		5B3F4BEE26B3FAD7004448DA /* MRDAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F4BEC26B3FAD7004448DA /* MRDAViewController.swift */; };
@@ -40,6 +41,7 @@
 		5B67967626B41796004514F3 /* DogProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B67967226B41796004514F3 /* DogProfileListViewController.swift */; };
 		5B71983B26BD42F9000F19A5 /* DogProfileEmptyStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B71983A26BD42F9000F19A5 /* DogProfileEmptyStateViewController.swift */; };
 		5B94000C26B7F8CA0020C09C /* MRDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B94000B26B7F8CA0020C09C /* MRDModel.swift */; };
+		5BB6B73426C3C6BF00E967B9 /* UIModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB6B73326C3C6BF00E967B9 /* UIModalView.swift */; };
 		5BC1EF8A26BBE04B0024A57C /* VetListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC1EF8826BBE04B0024A57C /* VetListTableViewCell.swift */; };
 		5BC1EF8B26BBE04B0024A57C /* VetListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BC1EF8926BBE04B0024A57C /* VetListTableViewCell.xib */; };
 		5BC1EF8D26BBE50C0024A57C /* VetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC1EF8C26BBE50C0024A57C /* VetListViewController.swift */; };
@@ -126,6 +128,7 @@
 		5B05C39926B2A9450034A66A /* MRDEViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRDEViewController.swift; sourceTree = "<group>"; };
 		5B05C39B26B2B3B00034A66A /* DeleteButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButtonTableViewCell.swift; sourceTree = "<group>"; };
 		5B05C39C26B2B3B00034A66A /* DeleteButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteButtonTableViewCell.xib; sourceTree = "<group>"; };
+		5B391B3426C2E55400406CEC /* VetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetListViewModel.swift; sourceTree = "<group>"; };
 		5B3CE4A326B8E96700ECF396 /* DogProfileDetailAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileDetailAddViewController.swift; sourceTree = "<group>"; };
 		5B3F4BEA26B3FA7F004448DA /* MRDA.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MRDA.storyboard; sourceTree = "<group>"; };
 		5B3F4BEC26B3FAD7004448DA /* MRDAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRDAViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +139,7 @@
 		5B67967226B41796004514F3 /* DogProfileListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogProfileListViewController.swift; sourceTree = "<group>"; };
 		5B71983A26BD42F9000F19A5 /* DogProfileEmptyStateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileEmptyStateViewController.swift; sourceTree = "<group>"; };
 		5B94000B26B7F8CA0020C09C /* MRDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRDModel.swift; sourceTree = "<group>"; };
+		5BB6B73326C3C6BF00E967B9 /* UIModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIModalView.swift; sourceTree = "<group>"; };
 		5BC1EF8826BBE04B0024A57C /* VetListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetListTableViewCell.swift; sourceTree = "<group>"; };
 		5BC1EF8926BBE04B0024A57C /* VetListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VetListTableViewCell.xib; sourceTree = "<group>"; };
 		5BC1EF8C26BBE50C0024A57C /* VetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetListViewController.swift; sourceTree = "<group>"; };
@@ -316,6 +320,7 @@
 			children = (
 				2D3B931326BD334E00899F3C /* ModalView.swift */,
 				2D3B931426BD334E00899F3C /* ModalView.xib */,
+				5BB6B73326C3C6BF00E967B9 /* UIModalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -346,11 +351,20 @@
 			path = "Table View Cell";
 			sourceTree = "<group>";
 		};
+		5B391B3326C2E54400406CEC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5B391B3426C2E55400406CEC /* VetListViewModel.swift */,
+				5BC1EF9026BBF25A0024A57C /* Vetdummydata.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		5BC1EF8226BBDD8E0024A57C /* ListVet */ = {
 			isa = PBXGroup;
 			children = (
+				5B391B3326C2E54400406CEC /* ViewModel */,
 				5BC1EF8526BBDDBB0024A57C /* View */,
-				5BC1EF8426BBDDB40024A57C /* ViewModel */,
 				5BC1EF8326BBDDA80024A57C /* Model */,
 			);
 			path = ListVet;
@@ -360,16 +374,8 @@
 			isa = PBXGroup;
 			children = (
 				5BC1EF8E26BBE6480024A57C /* VetListModel.swift */,
-				5BC1EF9026BBF25A0024A57C /* Vetdummydata.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		5BC1EF8426BBDDB40024A57C /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		5BC1EF8526BBDDBB0024A57C /* View */ = {
@@ -927,6 +933,7 @@
 				B5A0B08926BA974000D5C273 /* TextDescCell.swift in Sources */,
 				C079A37726B844D00061EC30 /* DogsModel.swift in Sources */,
 				5BC1EF8D26BBE50C0024A57C /* VetListViewController.swift in Sources */,
+				5B391B3526C2E55400406CEC /* VetListViewModel.swift in Sources */,
 				B5821A6626B7EEA0006DDED9 /* SigninViewController.swift in Sources */,
 				B584B3D826B28DF2005A02C5 /* ExampleViewModel.swift in Sources */,
 				C0541BD226BD40D4000D2BB4 /* DatabaseCollectionName.swift in Sources */,
@@ -958,6 +965,7 @@
 				B59BDB9826BB02B400AED6D6 /* LoadingViewController.swift in Sources */,
 				C01A909626BAF706007FA0B6 /* FacetimeEmail.swift in Sources */,
 				2D628ED826B297B20008ECD2 /* MRDViewController.swift in Sources */,
+				5BB6B73426C3C6BF00E967B9 /* UIModalView.swift in Sources */,
 				B505207026BC39B200306D99 /* VetProfile.swift in Sources */,
 				2D5EE3D826C4148C00785683 /* ExtensionMRDVIew+TableView.swift in Sources */,
 				2D5EE3D426C40D9400785683 /* ExtensionMRDAView+TextField+TextView.swift in Sources */,
