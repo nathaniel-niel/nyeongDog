@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D19F87826C4C2C300FDAA46 /* UIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D19F87726C4C2C300FDAA46 /* UIConfiguration.swift */; };
 		2D3418B826C3A8840003A70A /* MedicalRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3418B726C3A8840003A70A /* MedicalRecordViewModel.swift */; };
 		2D3418BB26C3AA000003A70A /* DogProfileState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3418BA26C3AA000003A70A /* DogProfileState.swift */; };
 		2D3B931526BD334E00899F3C /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B931326BD334E00899F3C /* ModalView.swift */; };
@@ -102,6 +103,7 @@
 /* Begin PBXFileReference section */
 		1F067EF30DC9F907FC10B78B /* Pods-trial-AnnyeongDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trial-AnnyeongDog.release.xcconfig"; path = "Target Support Files/Pods-trial-AnnyeongDog/Pods-trial-AnnyeongDog.release.xcconfig"; sourceTree = "<group>"; };
 		26A2976778E2B79F56C882C7 /* Pods-trial-AnnyeongDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trial-AnnyeongDog.debug.xcconfig"; path = "Target Support Files/Pods-trial-AnnyeongDog/Pods-trial-AnnyeongDog.debug.xcconfig"; sourceTree = "<group>"; };
+		2D19F87726C4C2C300FDAA46 /* UIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfiguration.swift; sourceTree = "<group>"; };
 		2D3418B726C3A8840003A70A /* MedicalRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalRecordViewModel.swift; sourceTree = "<group>"; };
 		2D3418BA26C3AA000003A70A /* DogProfileState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileState.swift; sourceTree = "<group>"; };
 		2D3B931326BD334E00899F3C /* ModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
@@ -210,6 +212,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D19F87626C4C2A600FDAA46 /* UI Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				2D646C1E26BCDF2900E90EDF /* PresentationController.swift */,
+				2D19F87726C4C2C300FDAA46 /* UIConfiguration.swift */,
+			);
+			path = "UI Configuration";
+			sourceTree = "<group>";
+		};
 		2D3418B926C3A9DD0003A70A /* DogProfileState */ = {
 			isa = PBXGroup;
 			children = (
@@ -538,8 +549,8 @@
 		B584B3C226B28C77005A02C5 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				2D19F87626C4C2A600FDAA46 /* UI Configuration */,
 				2D3418B926C3A9DD0003A70A /* DogProfileState */,
-				2D646C1E26BCDF2900E90EDF /* PresentationController.swift */,
 				B584B3CC26B28DCD005A02C5 /* Helper.swift */,
 				2D74BE1C26B4558F009B3629 /* UserControl.swift */,
 				B59BDB9326BAFE3300AED6D6 /* StorageManager.swift */,
@@ -938,6 +949,7 @@
 				C00DE8FD26B3D8AE00E99343 /* MedicalRecordsFilledViewController.swift in Sources */,
 				B584B3DC26B28DF2005A02C5 /* MainViewController.swift in Sources */,
 				2D3418BB26C3AA000003A70A /* DogProfileState.swift in Sources */,
+				2D19F87826C4C2C300FDAA46 /* UIConfiguration.swift in Sources */,
 				5B71983B26BD42F9000F19A5 /* DogProfileEmptyStateViewController.swift in Sources */,
 				5B05C39A26B2A9450034A66A /* MRDEViewController.swift in Sources */,
 				2D74BE1B26B45535009B3629 /* DogProfileDetailModel.swift in Sources */,

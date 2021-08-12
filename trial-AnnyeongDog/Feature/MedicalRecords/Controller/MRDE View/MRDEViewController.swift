@@ -131,7 +131,6 @@ class MRDEViewController: UIViewController{
         self.dismiss(animated: true, completion: nil)
         
         DataManipulation.sharedData.deleteDataToMedicalRecord(with: UserControl.shared.user?.uid ?? "unknown", with: dogId, with: mrdId)
-        
     }
     
 }
