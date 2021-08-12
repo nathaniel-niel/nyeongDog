@@ -13,34 +13,43 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     @IBOutlet weak var dogProfileTableView: UITableView!
     
     // MARK: - Object Declaration
-    var dogModel: [DogsModel] = []
-   
-    
+    var fetchDatafromFirebase = FetchDatafromFirebase()
+    var userlogin = didUserLogin()
     
     // MARK: - App Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        fetchFirebase()
+        
+        self.tabBarController?.tabBar.isHidden = false
         
         
-        
+    }
+    
+    // MARK: - update the UI
+    func updateUI(){
         //disable back button
         navigationItem.hidesBackButton = false
         
         dogProfileTableView.dataSource = self
         dogProfileTableView.delegate = self
+        
+        
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        DataManipulation.sharedData.fetchDogDataFromFirebase(with: UserControl.shared.user?.uid ?? "unknown") { responseData in
-            self.dogModel = responseData
-            
+    // MARK: - Fetching the Firebase using ViewModel
+    func fetchFirebase(){
+        
+        fetchDatafromFirebase.fetchDataFirebase {
             DispatchQueue.main.async {
                 self.dogProfileTableView.reloadData()
             }
-            
         }
         
-        self.tabBarController?.tabBar.isHidden = false
     }
     
     //    override func viewDidAppear(_ animated: Bool) {
@@ -65,7 +74,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     
     //MARK: - Jumlah Cell
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dogModel.count
+        return fetchDatafromFirebase.dogModel.count
     }
     
     //MARK: - Ketika Row di klik
@@ -74,14 +83,15 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
         let nVC = (storyboard.instantiateViewController(identifier: "DPDE")) as! DogProfileDetailEditViewController
         
-        nVC.id = dogModel[indexPath.row].dogID
-        nVC.dogName = dogModel[indexPath.row].dogName
-        nVC.dob = dogModel[indexPath.row].dateofBirth
-        nVC.gender = dogModel[indexPath.row].gender
-        nVC.breed = dogModel[indexPath.row].breed
-        nVC.weight = dogModel[indexPath.row].weight
-        nVC.color = dogModel[indexPath.row].color
-        nVC.alergen = dogModel[indexPath.row].alergen
+
+        nVC.id = fetchDatafromFirebase.dogModel[indexPath.row].dogID
+        nVC.dogName = fetchDatafromFirebase.dogModel[indexPath.row].dogName
+        nVC.dob = fetchDatafromFirebase.dogModel[indexPath.row].dateofBirth
+        nVC.gender = fetchDatafromFirebase.dogModel[indexPath.row].gender
+        nVC.breed = fetchDatafromFirebase.dogModel[indexPath.row].breed
+        nVC.weight = fetchDatafromFirebase.dogModel[indexPath.row].weight
+        nVC.color = fetchDatafromFirebase.dogModel[indexPath.row].color
+        nVC.alergen = fetchDatafromFirebase.dogModel[indexPath.row].alergen   
         CurrentDogProfile.shared.currentDogId = dogModel[indexPath.row].dogID
         self.navigationController?.pushViewController(nVC, animated: true)
     }
@@ -96,9 +106,9 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         cell.dogProfileView.layer.borderColor = UIColor(red: 0.37, green: 0.43, blue: 0.69, alpha: 1).cgColor
         
         cell.dogPicture.layer.cornerRadius = 8
-        cell.dogName.text = dogModel[indexPath.row].dogName
-        cell.dogGender.text = dogModel[indexPath.row].gender
-        cell.dogWeight.text = dogModel[indexPath.row].weight
+        cell.dogName.text = fetchDatafromFirebase.dogModel[indexPath.row].dogName
+        cell.dogGender.text = fetchDatafromFirebase.dogModel[indexPath.row].gender
+        cell.dogWeight.text = fetchDatafromFirebase.dogModel[indexPath.row].weight
         
         cell.selectionStyle = .none
         
@@ -109,24 +119,29 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     @IBAction func addDidTapped(_ sender: Any) {
         let user =  Auth.auth().currentUser
         
+        //User belom login
         if user == nil {
-            let alert = UIAlertController(title: "Sign in to continue", message: "To proceed, you need to have an account", preferredStyle: .alert)
-
-            alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
-            alert.addAction(UIAlertAction(title: "Sign In", style: .default, handler: { action in
-                let storyboard = UIStoryboard(name: "Signin", bundle: nil)
-                let vc = storyboard.instantiateViewController(withIdentifier: "Signin")
-
-                let nav = UINavigationController(rootViewController: vc)
-
-                nav.modalPresentationStyle = .fullScreen
-                self.navigationController?.pushViewController(nav, animated: true)
-                self.present(nav, animated: true, completion: nil)
-            }))
-
-            self.present(alert, animated: true)
-
+            
+            self.present(
+                userlogin.userDetected(user) {
+                    
+                    let storyboard = UIStoryboard(name: "Signin", bundle: nil)
+                    let vc = storyboard.instantiateViewController(withIdentifier: "Signin")
+                    
+                    let nav = UINavigationController(rootViewController: vc)
+                    
+                    nav.modalPresentationStyle = .fullScreen
+                    self.navigationController?.pushViewController(nav, animated: true)
+                    self.present(nav, animated: true, completion: nil)
+                    
+                    
+                    
+                } , animated: true)
+            
+            
+            
         }
+        //User udah login
         else {
             let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
             let nVC = (storyboard.instantiateViewController(identifier: "DPDA"))
