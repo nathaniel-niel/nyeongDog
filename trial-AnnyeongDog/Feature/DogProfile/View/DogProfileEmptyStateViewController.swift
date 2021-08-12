@@ -12,11 +12,6 @@ class DogProfileEmptyStateViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //disable back button
-        navigationItem.hidesBackButton = true
-        
-        // Do any additional setup after loading the view.
     }
     
 
@@ -36,4 +31,12 @@ class DogProfileEmptyStateViewController: UIViewController {
         }
     }
 
+    @IBAction func backButtonDidTapped(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let signInVC = (storyboard.instantiateViewController(identifier: "Main"))
+
+        signInVC.modalPresentationStyle = .fullScreen
+        self.present(signInVC, animated: false, completion: nil)
+        
+    }
 }

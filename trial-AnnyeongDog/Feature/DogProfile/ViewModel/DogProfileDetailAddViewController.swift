@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class DogProfileDetailAddViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
     
@@ -210,7 +211,12 @@ class DogProfileDetailAddViewController: UIViewController, UIImagePickerControll
     // MARK: - Save button udah bisa simpen data
     @objc func saveButtonTapped(){
         getTextfieldData()
-        
+        if Firebase.Auth.auth().currentUser == nil{
+                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+                    let vc = storyboard.instantiateViewController(identifier: "Main")
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
                 let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
         
                 let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
