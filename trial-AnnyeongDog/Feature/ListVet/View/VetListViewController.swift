@@ -9,7 +9,7 @@ import UIKit
 
 class VetListViewController: UIViewController{
     
-    
+    let searchBar = UIVetList()
     
     // MARK: - UI Component Declaration
     @IBOutlet weak var vetListTable: UITableView!
@@ -19,7 +19,6 @@ class VetListViewController: UIViewController{
     let ViewModel = VetListViewModel()
     let dummydata = VetDummyData()
     var searchVetName = [VetListModel]()
-    let searchController = UISearchController(searchResultsController: nil)
     var searching = false
     
     
@@ -29,34 +28,21 @@ class VetListViewController: UIViewController{
         super.viewDidLoad()
         // Masukin data untuk function search
         ViewModel.fillDataVetList()
-        configureSearchController()
         
+        // Configure Search Bar
+        searchBar.configureSearchController()
+        searchBar.searchController.searchResultsUpdater = searchBar.self as? UISearchResultsUpdating
+        searchBar.searchController.searchBar.delegate = searchBar.self as? UISearchBarDelegate
+        navigationItem.searchController = searchBar.searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        definesPresentationContext = true
         
         //xib register
         vetListTable.register(VetListTableViewCell.nib(), forCellReuseIdentifier: VetListTableViewCell.identifier)
     }
-    
-    
-    //MARK: - Configure Search Bar
-    private func configureSearchController(){
-        searchController.loadViewIfNeeded()
-        searchController.searchResultsUpdater = self
-        searchController.searchBar.delegate = self
-        searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.enablesReturnKeyAutomatically = false
-        searchController.searchBar.returnKeyType = UIReturnKeyType.done
-        self.navigationItem.searchController = searchController
-        self.navigationItem.hidesSearchBarWhenScrolling = false
-        searchController.hidesNavigationBarDuringPresentation = true
-        definesPresentationContext = true
-        searchController.searchBar.placeholder = "Example: Drh. Budi"
-    }
-    
-    
 }
 
-extension VetListViewController: UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UISearchBarDelegate{
-    
+extension VetListViewController: UITableViewDelegate, UITableViewDataSource{
     //MARK: - Height Cell Setting
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 140
