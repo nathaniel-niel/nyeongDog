@@ -19,7 +19,6 @@ class VetListViewController: UIViewController{
     let ViewModel = VetListViewModel()
     let dummydata = VetDummyData()
     var searchVetName = [VetListModel]()
-    var vetNameList = [VetListModel]()
     let searchController = UISearchController(searchResultsController: nil)
     var searching = false
     
@@ -70,7 +69,7 @@ extension VetListViewController: UITableViewDelegate, UITableViewDataSource, UIS
             return searchVetName.count
         }
         else{
-            return vetNameList.count
+            return ViewModel.vetNameList.count
         }
         //        return dummydata.data.count
     }
@@ -86,10 +85,10 @@ extension VetListViewController: UITableViewDelegate, UITableViewDataSource, UIS
         }
         else{
             
-            cell.vetName.text = vetNameList[indexPath.row].vetName
-            cell.priceLabel.text = vetNameList[indexPath.row].price
-            cell.pengalamanLabel.text = vetNameList[indexPath.row].expYears
-            cell.ratingLabel.text = vetNameList[indexPath.row].rating
+            cell.vetName.text = ViewModel.vetNameList[indexPath.row].vetName
+            cell.priceLabel.text = ViewModel.vetNameList[indexPath.row].price
+            cell.pengalamanLabel.text = ViewModel.vetNameList[indexPath.row].expYears
+            cell.ratingLabel.text = ViewModel.vetNameList[indexPath.row].rating
             
         }
         
@@ -117,13 +116,13 @@ extension VetListViewController: UITableViewDelegate, UITableViewDataSource, UIS
                 vc.price = searchVetName[indexPath.row].price ?? "no data"
         }
         else{
-            vc.vetName = vetNameList[indexPath.row].vetName ?? "no data"
-            vc.experience = vetNameList[indexPath.row].expYears ?? "no data"
-            vc.rating = vetNameList[indexPath.row].rating ?? "no data"
-            vc.alumnus = vetNameList[indexPath.row].alumnus ?? "no data"
-            vc.clinic = vetNameList[indexPath.row].clinicName ?? "no data"
-            vc.strvNumber = vetNameList[indexPath.row].strvNumber ?? "no data"
-            vc.price = vetNameList[indexPath.row].price ?? "no data"
+            vc.vetName = ViewModel.vetNameList[indexPath.row].vetName ?? "no data"
+            vc.experience = ViewModel.vetNameList[indexPath.row].expYears ?? "no data"
+            vc.rating = ViewModel.vetNameList[indexPath.row].rating ?? "no data"
+            vc.alumnus = ViewModel.vetNameList[indexPath.row].alumnus ?? "no data"
+            vc.clinic = ViewModel.vetNameList[indexPath.row].clinicName ?? "no data"
+            vc.strvNumber = ViewModel.vetNameList[indexPath.row].strvNumber ?? "no data"
+            vc.price = ViewModel.vetNameList[indexPath.row].price ?? "no data"
         }
         self.present(vc, animated: true, completion: nil)
     }
@@ -141,7 +140,7 @@ extension VetListViewController: UITableViewDelegate, UITableViewDataSource, UIS
         if !searchText.isEmpty{
             searching = true
             searchVetName.removeAll()
-            for vet in vetNameList{
+            for vet in ViewModel.vetNameList{
                 if vet.vetName!.lowercased().contains(searchText.lowercased()){
                     searchVetName.append(vet)
                 }
@@ -150,7 +149,7 @@ extension VetListViewController: UITableViewDelegate, UITableViewDataSource, UIS
         else{
             searching = false
             searchVetName.removeAll()
-            searchVetName = vetNameList
+            searchVetName = ViewModel.vetNameList
         }
         vetListTable.reloadData()
     }

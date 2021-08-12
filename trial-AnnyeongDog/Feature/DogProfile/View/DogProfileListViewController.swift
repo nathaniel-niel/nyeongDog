@@ -24,7 +24,8 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         
         
         //disable back button
-        navigationItem.hidesBackButton = true
+        navigationItem.hidesBackButton = false
+        
         dogProfileTableView.dataSource = self
         dogProfileTableView.delegate = self
     }
