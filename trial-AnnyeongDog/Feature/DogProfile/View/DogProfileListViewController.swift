@@ -92,7 +92,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         nVC.weight = fetchDatafromFirebase.dogModel[indexPath.row].weight
         nVC.color = fetchDatafromFirebase.dogModel[indexPath.row].color
         nVC.alergen = fetchDatafromFirebase.dogModel[indexPath.row].alergen   
-        CurrentDogProfile.shared.currentDogId = dogModel[indexPath.row].dogID
+        CurrentDogProfile.shared.currentDogId = fetchDatafromFirebase.dogModel[indexPath.row].dogID
         self.navigationController?.pushViewController(nVC, animated: true)
     }
     
