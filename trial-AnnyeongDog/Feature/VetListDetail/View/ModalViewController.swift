@@ -11,14 +11,13 @@ import Firebase
 
 class ModalView: UIViewController {
     
+    //MARK: - Declaration Variable
     let viewModel = ModalViewModel()
     let uiView = ModalUIView()
     
-    // MARK: - Variables
     var hasSetPointOrigin = false
     var originPoint: CGPoint?
-    
-    // MARK: - Temporary Variable
+ 
     var vetName: String = ""
     var experience: String = ""
     var rating: String = ""
@@ -76,27 +75,9 @@ class ModalView: UIViewController {
         self.present(alert, animated: true)
     }
     
-    // MARK: - IB Action Consult Button
-    @IBAction func didKonsultasiButtonTapped(_ sender: UIButton) {
-        
-        // if user is login = true -> whos consult page
-
-         if Firebase.Auth.auth().currentUser != nil{
-             //             go to whos consult page
-            let storyboard = UIStoryboard(name: "Chat", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "Chat") as! ChatViewController
-            let nav = UINavigationController(rootViewController: vc)
-           
-            nav.modalPresentationStyle = .fullScreen
-            self.present(nav, animated: true, completion: nil)
-        }
-         // if user is not login/ new user -> login page
-        else{
-            showAlertSignin()
-        }
-
+    func presentToChat(){
+        self.present(viewModel.preparetoChat(), animated: true, completion: nil)
     }
-    
     
     // MARK: - Function for Pan Gesture
     @objc func panGestureAction(sender: UIPanGestureRecognizer){

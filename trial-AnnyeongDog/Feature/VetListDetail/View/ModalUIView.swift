@@ -7,8 +7,12 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class ModalUIView{
+    
+    let viewModel = ModalViewModel()
+    let viewController = ModalView()
     
     // MARK: - UI Components Declaration
     @IBOutlet weak var line: UIView!
@@ -39,5 +43,20 @@ class ModalUIView{
         doctorProfileImage.layer.cornerRadius = doctorProfileImage.bounds.width / 2
        // doctorProfileImage.layer.borderWidth = 1
         
+    }
+    
+    // MARK: - IB Action Consult Button
+    @IBAction func didKonsultasiButtonTapped(_ sender: UIButton) {
+        
+        // if user is login = true -> whos consult page
+
+         if Firebase.Auth.auth().currentUser != nil{
+            viewController.presentToChat()
+        }
+         // if user is not login/ new user -> login page
+        else{
+            viewController.showAlertSignin()
+        }
+
     }
 }
