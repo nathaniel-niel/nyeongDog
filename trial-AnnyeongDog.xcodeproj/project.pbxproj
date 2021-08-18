@@ -30,7 +30,7 @@
 		5B05C39E26B2B3B00034A66A /* DeleteButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B05C39C26B2B3B00034A66A /* DeleteButtonTableViewCell.xib */; };
 		5B0B128826CC15AA00069538 /* ExtensionVetList+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B128726CC15AA00069538 /* ExtensionVetList+TableView.swift */; };
 		5B0B128C26CC192000069538 /* ExtensionVetList+SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B128B26CC192000069538 /* ExtensionVetList+SearchBar.swift */; };
-		5B1D8EF626C4E9620088FCB1 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D8EF426C4E9620088FCB1 /* ModalView.swift */; };
+		5B1D8EF626C4E9620088FCB1 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D8EF426C4E9620088FCB1 /* ModalViewController.swift */; };
 		5B1D8EF726C4E9620088FCB1 /* ModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B1D8EF526C4E9620088FCB1 /* ModalView.xib */; };
 		5B391B3526C2E55400406CEC /* VetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B391B3426C2E55400406CEC /* VetListViewModel.swift */; };
 		5B3CE4A426B8E96700ECF396 /* DogProfileDetailAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3CE4A326B8E96700ECF396 /* DogProfileDetailAddViewController.swift */; };
@@ -42,6 +42,8 @@
 		5B67967526B41796004514F3 /* DogProfileFilledState.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B67967126B41795004514F3 /* DogProfileFilledState.storyboard */; };
 		5B67967626B41796004514F3 /* DogProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B67967226B41796004514F3 /* DogProfileListViewController.swift */; };
 		5B71983B26BD42F9000F19A5 /* DogProfileEmptyStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B71983A26BD42F9000F19A5 /* DogProfileEmptyStateViewController.swift */; };
+		5B8EF41E26CCE8DC000761D6 /* ModalUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EF41D26CCE8DC000761D6 /* ModalUIView.swift */; };
+		5B8EF42126CCED57000761D6 /* ModalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EF42026CCED57000761D6 /* ModalViewModel.swift */; };
 		5B94000C26B7F8CA0020C09C /* MRDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B94000B26B7F8CA0020C09C /* MRDModel.swift */; };
 		5BC1EF8A26BBE04B0024A57C /* VetListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC1EF8826BBE04B0024A57C /* VetListTableViewCell.swift */; };
 		5BC1EF8B26BBE04B0024A57C /* VetListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BC1EF8926BBE04B0024A57C /* VetListTableViewCell.xib */; };
@@ -130,7 +132,7 @@
 		5B05C39C26B2B3B00034A66A /* DeleteButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteButtonTableViewCell.xib; sourceTree = "<group>"; };
 		5B0B128726CC15AA00069538 /* ExtensionVetList+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionVetList+TableView.swift"; sourceTree = "<group>"; };
 		5B0B128B26CC192000069538 /* ExtensionVetList+SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionVetList+SearchBar.swift"; sourceTree = "<group>"; };
-		5B1D8EF426C4E9620088FCB1 /* ModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
+		5B1D8EF426C4E9620088FCB1 /* ModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		5B1D8EF526C4E9620088FCB1 /* ModalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalView.xib; sourceTree = "<group>"; };
 		5B391B3426C2E55400406CEC /* VetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetListViewModel.swift; sourceTree = "<group>"; };
 		5B3CE4A326B8E96700ECF396 /* DogProfileDetailAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileDetailAddViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +144,8 @@
 		5B67967126B41795004514F3 /* DogProfileFilledState.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DogProfileFilledState.storyboard; sourceTree = "<group>"; };
 		5B67967226B41796004514F3 /* DogProfileListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogProfileListViewController.swift; sourceTree = "<group>"; };
 		5B71983A26BD42F9000F19A5 /* DogProfileEmptyStateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileEmptyStateViewController.swift; sourceTree = "<group>"; };
+		5B8EF41D26CCE8DC000761D6 /* ModalUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalUIView.swift; sourceTree = "<group>"; };
+		5B8EF42026CCED57000761D6 /* ModalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewModel.swift; sourceTree = "<group>"; };
 		5B94000B26B7F8CA0020C09C /* MRDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRDModel.swift; sourceTree = "<group>"; };
 		5BC1EF8826BBE04B0024A57C /* VetListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetListTableViewCell.swift; sourceTree = "<group>"; };
 		5BC1EF8926BBE04B0024A57C /* VetListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VetListTableViewCell.xib; sourceTree = "<group>"; };
@@ -314,6 +318,7 @@
 		2D646C1C26BCDDBA00E90EDF /* VetListDetail */ = {
 			isa = PBXGroup;
 			children = (
+				5B8EF41F26CCED34000761D6 /* ViewModel */,
 				2D646C2526BCDF6900E90EDF /* View */,
 			);
 			path = VetListDetail;
@@ -322,8 +327,9 @@
 		2D646C2526BCDF6900E90EDF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5B1D8EF426C4E9620088FCB1 /* ModalView.swift */,
+				5B1D8EF426C4E9620088FCB1 /* ModalViewController.swift */,
 				5B1D8EF526C4E9620088FCB1 /* ModalView.xib */,
+				5B8EF41D26CCE8DC000761D6 /* ModalUIView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -360,6 +366,14 @@
 				5B391B3426C2E55400406CEC /* VetListViewModel.swift */,
 				5BC1EF9026BBF25A0024A57C /* Vetdummydata.swift */,
 				5B0B128B26CC192000069538 /* ExtensionVetList+SearchBar.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5B8EF41F26CCED34000761D6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5B8EF42026CCED57000761D6 /* ModalViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -950,7 +964,7 @@
 				C00DE8FE26B3D8AE00E99343 /* PrepareToMRD.swift in Sources */,
 				2D5EE3D226C40C1600785683 /* ExentsionMRDAView+TableView.swift in Sources */,
 				5B67966E26B41787004514F3 /* dummyDataDogProfile.swift in Sources */,
-				5B1D8EF626C4E9620088FCB1 /* ModalView.swift in Sources */,
+				5B1D8EF626C4E9620088FCB1 /* ModalViewController.swift in Sources */,
 				B584B3DF26B28E10005A02C5 /* DataManipulation.swift in Sources */,
 				B59BDB9426BAFE3300AED6D6 /* StorageManager.swift in Sources */,
 				B584B3CD26B28DCD005A02C5 /* Helper.swift in Sources */,
@@ -970,6 +984,7 @@
 				2D74BE1B26B45535009B3629 /* DogProfileDetailModel.swift in Sources */,
 				C0254B3126C3A29800376A04 /* FetchDatafromFirebase.swift in Sources */,
 				2D628ED326B297B20008ECD2 /* MRDTableViewCell.swift in Sources */,
+				5B8EF42126CCED57000761D6 /* ModalViewModel.swift in Sources */,
 				C01A909426BAF6BC007FA0B6 /* FacetimeVideoCall.swift in Sources */,
 				B59BDB9826BB02B400AED6D6 /* LoadingViewController.swift in Sources */,
 				C01A909626BAF706007FA0B6 /* FacetimeEmail.swift in Sources */,
@@ -983,6 +998,7 @@
 				2D74BE1D26B4558F009B3629 /* UserControl.swift in Sources */,
 				B5A0B08D26BA9E2F00D5C273 /* DescriptionTextViewCell.swift in Sources */,
 				5BC1EF9126BBF25A0024A57C /* Vetdummydata.swift in Sources */,
+				5B8EF41E26CCE8DC000761D6 /* ModalUIView.swift in Sources */,
 				B584B3AB26B264CC005A02C5 /* SceneDelegate.swift in Sources */,
 				B54FBEB126BBD41A00659D14 /* PrescriptionViewCell.swift in Sources */,
 				B5821A6226B7EEA0006DDED9 /* SignInViewExtension.swift in Sources */,

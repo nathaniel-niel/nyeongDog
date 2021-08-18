@@ -11,19 +11,8 @@ import Firebase
 
 class ModalView: UIViewController {
     
-    // MARK: - UI Components Declaration
-    @IBOutlet weak var line: UIView!
-    @IBOutlet weak var doctorProfileImage: UIImageView!
-    @IBOutlet weak var doctorNameLabel: UILabel!
-    @IBOutlet weak var doctorExperienceLabel: UILabel!
-    @IBOutlet weak var doctorRatingLabel: UILabel!
-    @IBOutlet weak var ratingBackground: UIView!
-    @IBOutlet weak var alumnusLabel: UILabel!
-    @IBOutlet weak var klinikLabel: UILabel!
-    @IBOutlet weak var STRVLabel: UILabel!
-    @IBOutlet weak var ChargeLabel: UILabel!
-    @IBOutlet weak var konsultasiButton: UIButton!
-    
+    let viewModel = ModalViewModel()
+    let uiView = ModalUIView()
     
     // MARK: - Variables
     var hasSetPointOrigin = false
@@ -46,7 +35,7 @@ class ModalView: UIViewController {
         
         view.addGestureRecognizer(panGesture)
         
-        setup()
+        uiView.setup()
     }
     
     override func viewDidLayoutSubviews() {
@@ -60,37 +49,18 @@ class ModalView: UIViewController {
         assing()
     }
     
-    
-    // MARK: - Function for UI Component
-    func setup(){
-        
-        line.layer.cornerRadius = 2
-        konsultasiButton.layer.cornerRadius = 10
-        ratingBackground.layer.cornerRadius = 8
-        clipShapeCircle()
-    }
-    
-    //Masking Image view into circle
-    func clipShapeCircle(){
-        
-        doctorProfileImage.layer.masksToBounds  = true
-        doctorProfileImage.layer.cornerRadius = doctorProfileImage.bounds.width / 2
-       // doctorProfileImage.layer.borderWidth = 1
-        
-    }
-    
     //MARK: - Function to Set UI Components Valus
     
     func assing(){
         // Coming soon
         
-        doctorNameLabel.text = vetName
-        doctorExperienceLabel.text = experience
-        doctorRatingLabel.text = rating
-        alumnusLabel.text = alumnus
-        klinikLabel.text = clinic
-        STRVLabel.text = strvNumber
-        ChargeLabel.text = price
+        uiView.doctorNameLabel.text = vetName
+        uiView.doctorExperienceLabel.text = experience
+        uiView.doctorRatingLabel.text = rating
+        uiView.alumnusLabel.text = alumnus
+        uiView.klinikLabel.text = clinic
+        uiView.STRVLabel.text = strvNumber
+        uiView.ChargeLabel.text = price
     }
     
     //Mark: - Function Alert Sign In
@@ -99,14 +69,8 @@ class ModalView: UIViewController {
 
         alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
         alert.addAction(UIAlertAction(title: "Sign In", style: .default, handler: { action in
-            let storyboard = UIStoryboard(name: "Signin", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "Signin")
-
-            let nav = UINavigationController(rootViewController: vc)
-            
-            nav.modalPresentationStyle = .fullScreen
-            self.navigationController?.pushViewController(nav, animated: true)
-            self.present(nav, animated: true, completion: nil)
+            self.navigationController?.pushViewController(self.viewModel.preparetoSignIn(), animated: true)
+            self.present(self.viewModel.preparetoSignIn(), animated: true, completion: nil)
         }))
 
         self.present(alert, animated: true)

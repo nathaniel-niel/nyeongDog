@@ -8,20 +8,19 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModalView" customModule="trial_AnnyeongDog" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ModalUIView" customModule="trial_AnnyeongDog" customModuleProvider="target">
             <connections>
-                <outlet property="ChargeLabel" destination="2B9-KV-94l" id="zCI-rv-hzk"/>
-                <outlet property="STRVLabel" destination="msC-00-0GI" id="ffN-6N-MNR"/>
-                <outlet property="alumnusLabel" destination="g7p-7T-azj" id="mUT-Ui-Ff9"/>
-                <outlet property="doctorExperienceLabel" destination="82b-3D-pMZ" id="ZSs-Nr-ggA"/>
-                <outlet property="doctorNameLabel" destination="IQg-3t-Rpt" id="efy-pq-T8J"/>
-                <outlet property="doctorProfileImage" destination="VTf-tM-EDy" id="Sb2-id-ckw"/>
-                <outlet property="doctorRatingLabel" destination="TLH-Nb-STP" id="35t-FD-fnF"/>
-                <outlet property="klinikLabel" destination="5zF-Dj-dYK" id="azk-nA-Q1p"/>
-                <outlet property="konsultasiButton" destination="3yy-qa-YhK" id="D9U-s9-BYG"/>
-                <outlet property="line" destination="xu1-Gl-Ipq" id="mj1-IN-QrU"/>
-                <outlet property="ratingBackground" destination="C9a-g5-nWE" id="c3R-vu-MP8"/>
-                <outlet property="view" destination="cnh-Da-EC4" id="hwm-uP-DbK"/>
+                <outlet property="ChargeLabel" destination="2B9-KV-94l" id="kvw-6Y-UFG"/>
+                <outlet property="STRVLabel" destination="msC-00-0GI" id="IOo-19-biY"/>
+                <outlet property="alumnusLabel" destination="g7p-7T-azj" id="VxH-jF-xu7"/>
+                <outlet property="doctorExperienceLabel" destination="82b-3D-pMZ" id="vKi-jK-8K8"/>
+                <outlet property="doctorNameLabel" destination="IQg-3t-Rpt" id="kDY-wc-3xG"/>
+                <outlet property="doctorProfileImage" destination="VTf-tM-EDy" id="AcV-BY-Sfd"/>
+                <outlet property="doctorRatingLabel" destination="TLH-Nb-STP" id="j9A-1e-u6D"/>
+                <outlet property="klinikLabel" destination="5zF-Dj-dYK" id="K57-yT-h9x"/>
+                <outlet property="konsultasiButton" destination="3yy-qa-YhK" id="UQX-vU-GFS"/>
+                <outlet property="line" destination="fJy-lg-zxE" id="wdz-sn-dRe"/>
+                <outlet property="ratingBackground" destination="C9a-g5-nWE" id="FPF-Ax-TDB"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -386,9 +385,6 @@
                                             <state key="normal" title="Consult">
                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
-                                            <connections>
-                                                <action selector="didKonsultasiButtonTapped:" destination="-1" eventType="touchUpInside" id="DOz-v5-U0l"/>
-                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
