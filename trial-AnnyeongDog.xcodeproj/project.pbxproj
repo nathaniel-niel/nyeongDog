@@ -98,6 +98,7 @@
 		C037879126B2A1CB004344E0 /* DogProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */; };
 		C037879226B2A1CB004344E0 /* PrepareForMedical.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037878426B2A1CB004344E0 /* PrepareForMedical.swift */; };
 		C0541BD226BD40D4000D2BB4 /* DatabaseCollectionName.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0541BD126BD40D4000D2BB4 /* DatabaseCollectionName.swift */; };
+		C07230B726CD717A007E7EE7 /* DogProfileDetailAddViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07230B626CD717A007E7EE7 /* DogProfileDetailAddViewControllerViewModel.swift */; };
 		C079A37726B844D00061EC30 /* DogsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C079A37626B844D00061EC30 /* DogsModel.swift */; };
 		C0C72ABB26C1068C00666FF6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0C72ABA26C1068C00666FF6 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
@@ -200,6 +201,7 @@
 		C037878426B2A1CB004344E0 /* PrepareForMedical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareForMedical.swift; sourceTree = "<group>"; };
 		C037878526B2A1CB004344E0 /* ModelBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelBackButton.swift; sourceTree = "<group>"; };
 		C0541BD126BD40D4000D2BB4 /* DatabaseCollectionName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseCollectionName.swift; sourceTree = "<group>"; };
+		C07230B626CD717A007E7EE7 /* DogProfileDetailAddViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileDetailAddViewControllerViewModel.swift; sourceTree = "<group>"; };
 		C079A37626B844D00061EC30 /* DogsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsModel.swift; sourceTree = "<group>"; };
 		C0C72ABA26C1068C00666FF6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -721,6 +723,7 @@
 			isa = PBXGroup;
 			children = (
 				C0254B3026C3A29800376A04 /* FetchDatafromFirebase.swift */,
+				C07230B626CD717A007E7EE7 /* DogProfileDetailAddViewControllerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -948,6 +951,7 @@
 				B59BDB9426BAFE3300AED6D6 /* StorageManager.swift in Sources */,
 				B584B3CD26B28DCD005A02C5 /* Helper.swift in Sources */,
 				2D3418B826C3A8840003A70A /* MedicalRecordViewModel.swift in Sources */,
+				C07230B726CD717A007E7EE7 /* DogProfileDetailAddViewControllerViewModel.swift in Sources */,
 				B59BDB9626BAFF6A00AED6D6 /* NavigationManager.swift in Sources */,
 				B584B3D926B28DF2005A02C5 /* ExampleModel.swift in Sources */,
 				5B67967626B41796004514F3 /* DogProfileListViewController.swift in Sources */,
