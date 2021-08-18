@@ -29,7 +29,7 @@
 		5B05C39D26B2B3B00034A66A /* DeleteButtonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B05C39B26B2B3B00034A66A /* DeleteButtonTableViewCell.swift */; };
 		5B05C39E26B2B3B00034A66A /* DeleteButtonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B05C39C26B2B3B00034A66A /* DeleteButtonTableViewCell.xib */; };
 		5B0B128826CC15AA00069538 /* ExtensionVetList+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B128726CC15AA00069538 /* ExtensionVetList+TableView.swift */; };
-		5B0B128C26CC192000069538 /* VetListSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B128B26CC192000069538 /* VetListSearchBar.swift */; };
+		5B0B128C26CC192000069538 /* ExtensionVetList+SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B128B26CC192000069538 /* ExtensionVetList+SearchBar.swift */; };
 		5B1D8EF626C4E9620088FCB1 /* ModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1D8EF426C4E9620088FCB1 /* ModalView.swift */; };
 		5B1D8EF726C4E9620088FCB1 /* ModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B1D8EF526C4E9620088FCB1 /* ModalView.xib */; };
 		5B391B3526C2E55400406CEC /* VetListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B391B3426C2E55400406CEC /* VetListViewModel.swift */; };
@@ -129,7 +129,7 @@
 		5B05C39B26B2B3B00034A66A /* DeleteButtonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButtonTableViewCell.swift; sourceTree = "<group>"; };
 		5B05C39C26B2B3B00034A66A /* DeleteButtonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteButtonTableViewCell.xib; sourceTree = "<group>"; };
 		5B0B128726CC15AA00069538 /* ExtensionVetList+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionVetList+TableView.swift"; sourceTree = "<group>"; };
-		5B0B128B26CC192000069538 /* VetListSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetListSearchBar.swift; sourceTree = "<group>"; };
+		5B0B128B26CC192000069538 /* ExtensionVetList+SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionVetList+SearchBar.swift"; sourceTree = "<group>"; };
 		5B1D8EF426C4E9620088FCB1 /* ModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		5B1D8EF526C4E9620088FCB1 /* ModalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalView.xib; sourceTree = "<group>"; };
 		5B391B3426C2E55400406CEC /* VetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetListViewModel.swift; sourceTree = "<group>"; };
@@ -359,7 +359,7 @@
 			children = (
 				5B391B3426C2E55400406CEC /* VetListViewModel.swift */,
 				5BC1EF9026BBF25A0024A57C /* Vetdummydata.swift */,
-				5B0B128B26CC192000069538 /* VetListSearchBar.swift */,
+				5B0B128B26CC192000069538 /* ExtensionVetList+SearchBar.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -935,7 +935,7 @@
 				5BC1EF8F26BBE6480024A57C /* VetListModel.swift in Sources */,
 				C00DE8FF26B3D8AE00E99343 /* MedicalFiilledTableViewCell.swift in Sources */,
 				2D646C2226BCDF2900E90EDF /* PresentationController.swift in Sources */,
-				5B0B128C26CC192000069538 /* VetListSearchBar.swift in Sources */,
+				5B0B128C26CC192000069538 /* ExtensionVetList+SearchBar.swift in Sources */,
 				5B67967426B41796004514F3 /* DogProfileTableViewCell.swift in Sources */,
 				B5A0B08926BA974000D5C273 /* TextDescCell.swift in Sources */,
 				C079A37726B844D00061EC30 /* DogsModel.swift in Sources */,

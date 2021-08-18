@@ -10,7 +10,6 @@ import UIKit
 
 extension VetListViewController: UISearchResultsUpdating, UISearchBarDelegate{
     
-    //MARK: - Config Search Bar
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searching = false
         searchVetName.removeAll()
@@ -37,7 +36,6 @@ extension VetListViewController: UISearchResultsUpdating, UISearchBarDelegate{
         vetListTable.reloadData()
     }
     
-    //MARK: - Configure Search Bar
     func configureSearchController(){
         searchController.loadViewIfNeeded()
         searchController.obscuresBackgroundDuringPresentation = false
