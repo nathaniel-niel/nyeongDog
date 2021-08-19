@@ -360,6 +360,14 @@
                                             <action selector="didTapImageButton:" destination="tF7-rc-nec" eventType="touchUpInside" id="BZq-RD-hcA"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="01a-9K-0ff">
+                                        <rect key="frame" x="155" y="648" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <segue destination="rYo-Hv-cLA" kind="show" id="ZsJ-RW-SrW"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <viewLayoutGuide key="contentLayoutGuide" id="s9C-wH-AaZ"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="dl1-kE-nK4"/>
@@ -384,16 +392,16 @@
             </objects>
             <point key="canvasLocation" x="800" y="24.881516587677723"/>
         </scene>
-        <!--Dog Profile Detail TableV Iew View Controller-->
+        <!--Dog Profile Detail Table View-->
         <scene sceneID="nXJ-Od-kch">
             <objects>
-                <viewController id="rYo-Hv-cLA" customClass="DogProfileDetailTableVIewViewController" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="0CX-tX-dHA">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                <viewController id="rYo-Hv-cLA" customClass="DogProfileDetailTableView" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0CX-tX-dHA" customClass="DogProfileDetailView" customModule="trial_AnnyeongDog" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dbU-GL-3ek">
-                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -405,7 +413,14 @@
                             <constraint firstItem="dbU-GL-3ek" firstAttribute="top" secondItem="Ip1-SB-B32" secondAttribute="top" id="a3J-tz-cZE"/>
                             <constraint firstItem="Ip1-SB-B32" firstAttribute="trailing" secondItem="dbU-GL-3ek" secondAttribute="trailing" id="uaK-X3-5qI"/>
                         </constraints>
+                        <connections>
+                            <outlet property="DogProfileTableView" destination="dbU-GL-3ek" id="01b-KP-tRs"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="dSK-OH-Plv"/>
+                    <connections>
+                        <outlet property="dogProfileDetail" destination="0CX-tX-dHA" id="7Sl-kk-V0a"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aix-kF-vkp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
