@@ -100,6 +100,7 @@
 		C0541BD226BD40D4000D2BB4 /* DatabaseCollectionName.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0541BD126BD40D4000D2BB4 /* DatabaseCollectionName.swift */; };
 		C07230B726CD717A007E7EE7 /* DogProfileDetailAddViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07230B626CD717A007E7EE7 /* DogProfileDetailAddViewControllerViewModel.swift */; };
 		C079A37726B844D00061EC30 /* DogsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C079A37626B844D00061EC30 /* DogsModel.swift */; };
+		C0A21CD826CE242700DF0BCE /* DogProfileDetailTableVIewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A21CD726CE242700DF0BCE /* DogProfileDetailTableVIewViewController.swift */; };
 		C0C72ABB26C1068C00666FF6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0C72ABA26C1068C00666FF6 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -203,6 +204,7 @@
 		C0541BD126BD40D4000D2BB4 /* DatabaseCollectionName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseCollectionName.swift; sourceTree = "<group>"; };
 		C07230B626CD717A007E7EE7 /* DogProfileDetailAddViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileDetailAddViewControllerViewModel.swift; sourceTree = "<group>"; };
 		C079A37626B844D00061EC30 /* DogsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsModel.swift; sourceTree = "<group>"; };
+		C0A21CD726CE242700DF0BCE /* DogProfileDetailTableVIewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileDetailTableVIewViewController.swift; sourceTree = "<group>"; };
 		C0C72ABA26C1068C00666FF6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -342,6 +344,7 @@
 			children = (
 				2D74BE1626B454E8009B3629 /* DogProfileDetailEditViewController.swift */,
 				5B3CE4A326B8E96700ECF396 /* DogProfileDetailAddViewController.swift */,
+				C0A21CD726CE242700DF0BCE /* DogProfileDetailTableVIewViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1004,6 +1007,7 @@
 				B5A0B08D26BA9E2F00D5C273 /* DescriptionTextViewCell.swift in Sources */,
 				5BC1EF9126BBF25A0024A57C /* Vetdummydata.swift in Sources */,
 				B584B3AB26B264CC005A02C5 /* SceneDelegate.swift in Sources */,
+				C0A21CD826CE242700DF0BCE /* DogProfileDetailTableVIewViewController.swift in Sources */,
 				B54FBEB126BBD41A00659D14 /* PrescriptionViewCell.swift in Sources */,
 				B5821A6226B7EEA0006DDED9 /* SignInViewExtension.swift in Sources */,
 				2D5EE3CF26C4003400785683 /* ExtensionMRDView+TableVIew.swift in Sources */,

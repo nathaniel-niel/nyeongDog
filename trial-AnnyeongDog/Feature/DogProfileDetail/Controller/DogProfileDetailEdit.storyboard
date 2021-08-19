@@ -384,6 +384,33 @@
             </objects>
             <point key="canvasLocation" x="800" y="24.881516587677723"/>
         </scene>
+        <!--Dog Profile Detail TableV Iew View Controller-->
+        <scene sceneID="nXJ-Od-kch">
+            <objects>
+                <viewController id="rYo-Hv-cLA" customClass="DogProfileDetailTableVIewViewController" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0CX-tX-dHA">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dbU-GL-3ek">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ip1-SB-B32"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dbU-GL-3ek" firstAttribute="leading" secondItem="Ip1-SB-B32" secondAttribute="leading" id="2gI-6l-lfb"/>
+                            <constraint firstItem="Ip1-SB-B32" firstAttribute="bottom" secondItem="dbU-GL-3ek" secondAttribute="bottom" id="WVg-2p-8hx"/>
+                            <constraint firstItem="dbU-GL-3ek" firstAttribute="top" secondItem="Ip1-SB-B32" secondAttribute="top" id="a3J-tz-cZE"/>
+                            <constraint firstItem="Ip1-SB-B32" firstAttribute="trailing" secondItem="dbU-GL-3ek" secondAttribute="trailing" id="uaK-X3-5qI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aix-kF-vkp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1634" y="25"/>
+        </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
