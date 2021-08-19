@@ -97,6 +97,8 @@
 		C037878826B2A1CB004344E0 /* GenderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037877226B2A1CB004344E0 /* GenderModel.swift */; };
 		C037879126B2A1CB004344E0 /* DogProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */; };
 		C037879226B2A1CB004344E0 /* PrepareForMedical.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037878426B2A1CB004344E0 /* PrepareForMedical.swift */; };
+		C050E2E926CEB97E0075A1D4 /* DogProfileDetailAdd+TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C050E2E826CEB97E0075A1D4 /* DogProfileDetailAdd+TableViewExtension.swift */; };
+		C050E2EC26CEBC6C0075A1D4 /* DogsProfileDetailAdd+PickerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C050E2EB26CEBC6C0075A1D4 /* DogsProfileDetailAdd+PickerExtension.swift */; };
 		C0541BD226BD40D4000D2BB4 /* DatabaseCollectionName.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0541BD126BD40D4000D2BB4 /* DatabaseCollectionName.swift */; };
 		C07230B726CD717A007E7EE7 /* DogProfileDetailAddViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07230B626CD717A007E7EE7 /* DogProfileDetailAddViewControllerViewModel.swift */; };
 		C079A37726B844D00061EC30 /* DogsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C079A37626B844D00061EC30 /* DogsModel.swift */; };
@@ -206,6 +208,8 @@
 		C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogProfileDetailViewController.swift; sourceTree = "<group>"; };
 		C037878426B2A1CB004344E0 /* PrepareForMedical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareForMedical.swift; sourceTree = "<group>"; };
 		C037878526B2A1CB004344E0 /* ModelBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelBackButton.swift; sourceTree = "<group>"; };
+		C050E2E826CEB97E0075A1D4 /* DogProfileDetailAdd+TableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogProfileDetailAdd+TableViewExtension.swift"; sourceTree = "<group>"; };
+		C050E2EB26CEBC6C0075A1D4 /* DogsProfileDetailAdd+PickerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogsProfileDetailAdd+PickerExtension.swift"; sourceTree = "<group>"; };
 		C0541BD126BD40D4000D2BB4 /* DatabaseCollectionName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseCollectionName.swift; sourceTree = "<group>"; };
 		C07230B626CD717A007E7EE7 /* DogProfileDetailAddViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileDetailAddViewControllerViewModel.swift; sourceTree = "<group>"; };
 		C079A37626B844D00061EC30 /* DogsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsModel.swift; sourceTree = "<group>"; };
@@ -356,6 +360,8 @@
 				2D74BE1626B454E8009B3629 /* DogProfileDetailEditViewController.swift */,
 				5B3CE4A326B8E96700ECF396 /* DogProfileDetailAddViewController.swift */,
 				C0A21CD726CE242700DF0BCE /* DogProfileDetailTableView.swift */,
+				C050E2E826CEB97E0075A1D4 /* DogProfileDetailAdd+TableViewExtension.swift */,
+				C050E2EB26CEBC6C0075A1D4 /* DogsProfileDetailAdd+PickerExtension.swift */,
 				C0A21CD926CE270500DF0BCE /* DogProfileDetailView.swift */,
 			);
 			path = View;
@@ -760,7 +766,6 @@
 			isa = PBXGroup;
 			children = (
 				5B67966D26B41787004514F3 /* dummyDataDogProfile.swift */,
-				C037877226B2A1CB004344E0 /* GenderModel.swift */,
 				C037878426B2A1CB004344E0 /* PrepareForMedical.swift */,
 				C037878526B2A1CB004344E0 /* ModelBackButton.swift */,
 				2D74BE1A26B45535009B3629 /* DogProfileDetailModel.swift */,
@@ -775,6 +780,13 @@
 				C00DE8F826B3D8AE00E99343 /* PrepareToMRD.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C050E2EA26CEBA090075A1D4 /* Picker */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Picker;
 			sourceTree = "<group>";
 		};
 		C07230BD26CE1856007E7EE7 /* ViewModel */ = {
@@ -797,6 +809,7 @@
 			isa = PBXGroup;
 			children = (
 				C079A37626B844D00061EC30 /* DogsModel.swift */,
+				C037877226B2A1CB004344E0 /* GenderModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -814,6 +827,7 @@
 		C0A21CDB26CE2C2700DF0BCE /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C050E2EA26CEBA090075A1D4 /* Picker */,
 				C0A21CE526CE356900DF0BCE /* DogImage */,
 				C0A21CDC26CE2C2F00DF0BCE /* TextField */,
 			);
@@ -991,8 +1005,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C037879126B2A1CB004344E0 /* DogProfileDetailViewController.swift in Sources */,
+				C050E2EC26CEBC6C0075A1D4 /* DogsProfileDetailAdd+PickerExtension.swift in Sources */,
 				2D74BE1826B454E8009B3629 /* DogProfileDetailEditViewController.swift in Sources */,
 				B535E09326BBA2FC0038251D /* ChatViewController.swift in Sources */,
+				C050E2E926CEB97E0075A1D4 /* DogProfileDetailAdd+TableViewExtension.swift in Sources */,
 				B5AF9D4C26BBE7D000A59690 /* MedicineCell.swift in Sources */,
 				5B3CE4A426B8E96700ECF396 /* DogProfileDetailAddViewController.swift in Sources */,
 				C01A909026BAF095007FA0B6 /* VideoCallViewController.swift in Sources */,

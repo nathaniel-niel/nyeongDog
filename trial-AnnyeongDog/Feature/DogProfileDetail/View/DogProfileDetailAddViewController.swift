@@ -130,7 +130,6 @@ class DogProfileDetailAddViewController: UIViewController,  UINavigationControll
         scrollView.contentSize = CGSize(width: self.view.frame.width - 40, height: self.view.frame.height - 80)
         
         // UiPickerView Input View
-        genderTextField.inputView = pickerView
         dogsDOB.inputView = dobPickerView
         genderTextField.inputView = pickerView
         

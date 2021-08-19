@@ -14,4 +14,5 @@ struct DogProfileDetailAddViewControllerViewModel {
         imagePicker.sourceType = sourceType
         return imagePicker
     }
+    
 }

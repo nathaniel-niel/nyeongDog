@@ -7,54 +7,40 @@
 
 import UIKit
 
-class DogProfileDetailTableView: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DogProfileDetailTableView: UIViewController{
     
     @IBOutlet var dogProfileDetail: DogProfileDetailView!
     
+    var viewModel = DogProfileDetailAddViewControllerViewModel()
+    var genderModel = GenderModel()
+    var dogsModel = DogsModel()
+    
+    var dogsDOBPicker = UIPickerView()
+    var genderPicker = UIPickerView()
+    
+    var stringPickerGender: String = ""
+    var stringPickerDOB: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         dogProfileDetail.DogProfileTableView.delegate = self
         dogProfileDetail.DogProfileTableView.dataSource = self
         dogProfileDetail.setup()
+        uiPickerView()
     }
     
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func uiPickerView(){
         
-        switch indexPath.row {
-        case 0:
-            let dogImageCell = dogProfileDetail.DogProfileTableView.dequeueReusableCell(withIdentifier: DogImageCell.identifier, for: indexPath) as! DogImageCell
-            return dogImageCell
-        
-        default:
-            let cell =  dogProfileDetail.DogProfileTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
-           
-           
-            cell.textFieldLabel.text = "Testing"
-            return cell
-            
-        }
+        dogsDOBPicker.tag = 1
+        dogsDOBPicker.delegate = self
+        dogsDOBPicker.dataSource = self
         
         
-        
-        
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        switch indexPath.row {
-        case 0:
-            return 219
-        default:
-            return 92
-        }
-    }
+        genderPicker.tag = 2
+        genderPicker.delegate = self
+        genderPicker.dataSource = self
 
-  
-
+        
+    }
 }

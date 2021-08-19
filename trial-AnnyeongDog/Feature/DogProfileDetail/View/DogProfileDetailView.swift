@@ -17,6 +17,7 @@ class DogProfileDetailView: UIView {
         
         DogProfileTableView.register(DogImageCell.nib(), forCellReuseIdentifier: DogImageCell.identifier)
         
+        
     }
     
 }
