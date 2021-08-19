@@ -329,7 +329,10 @@
 		2D74BE1126B454E8009B3629 /* DogProfileDetail */ = {
 			isa = PBXGroup;
 			children = (
+				C07230BE26CE185E007E7EE7 /* Controller */,
+				C07230BF26CE1865007E7EE7 /* Model */,
 				2D74BE1426B454E8009B3629 /* View */,
+				C07230BD26CE1856007E7EE7 /* ViewModel */,
 			);
 			path = DogProfileDetail;
 			sourceTree = "<group>";
@@ -337,8 +340,8 @@
 		2D74BE1426B454E8009B3629 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2D74BE1526B454E8009B3629 /* DogProfileDetailEdit.storyboard */,
 				2D74BE1626B454E8009B3629 /* DogProfileDetailEditViewController.swift */,
+				5B3CE4A326B8E96700ECF396 /* DogProfileDetailAddViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -723,7 +726,6 @@
 			isa = PBXGroup;
 			children = (
 				C0254B3026C3A29800376A04 /* FetchDatafromFirebase.swift */,
-				C07230B626CD717A007E7EE7 /* DogProfileDetailAddViewControllerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -735,7 +737,6 @@
 				C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */,
 				5B67967026B41794004514F3 /* DogProfileTableViewCell.swift */,
 				5B71983A26BD42F9000F19A5 /* DogProfileEmptyStateViewController.swift */,
-				5B3CE4A326B8E96700ECF396 /* DogProfileDetailAddViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -747,7 +748,6 @@
 				C037877226B2A1CB004344E0 /* GenderModel.swift */,
 				C037878426B2A1CB004344E0 /* PrepareForMedical.swift */,
 				C037878526B2A1CB004344E0 /* ModelBackButton.swift */,
-				C079A37626B844D00061EC30 /* DogsModel.swift */,
 				2D74BE1A26B45535009B3629 /* DogProfileDetailModel.swift */,
 			);
 			path = Model;
@@ -758,6 +758,30 @@
 			children = (
 				5B94000B26B7F8CA0020C09C /* MRDModel.swift */,
 				C00DE8F826B3D8AE00E99343 /* PrepareToMRD.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C07230BD26CE1856007E7EE7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C07230B626CD717A007E7EE7 /* DogProfileDetailAddViewControllerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C07230BE26CE185E007E7EE7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2D74BE1526B454E8009B3629 /* DogProfileDetailEdit.storyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C07230BF26CE1865007E7EE7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C079A37626B844D00061EC30 /* DogsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
