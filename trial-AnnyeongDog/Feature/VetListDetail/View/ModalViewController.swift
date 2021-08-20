@@ -77,10 +77,6 @@ class ModalViewController: UIViewController {
         self.present(alert, animated: true)
     }
     
-//    func presentToChat(){
-//        self.present(viewModel.preparetoChat(), animated: true, completion: nil)
-//    }
-    
     // MARK: - Function for Pan Gesture
     @objc func panGestureAction(sender: UIPanGestureRecognizer){
         let translation = sender.translation(in: view)
@@ -102,6 +98,20 @@ class ModalViewController: UIViewController {
                     self.view.frame.origin = self.originPoint ?? CGPoint(x: 0, y: 400)
                 }
             }
+        }
+    }
+    
+    
+    @IBAction func consultButtonDidTapped(_ sender: Any) {
+        // if user is login = true -> whos consult page
+
+         if Firebase.Auth.auth().currentUser != nil{
+            
+            self.present(self.viewModel.preparetoChat(), animated: true, completion: nil)
+        }
+         // if user is not login/ new user -> login page
+        else{
+            showAlertSignin()
         }
     }
     
