@@ -38,14 +38,15 @@ class ModalView: UIViewController {
     var strvNumber: String = ""
     var price: String = ""
     
+    //MARK:- Declaration Storage Manager [User Login Information]
+    var isNewUser: Bool!
+    let storageManager = StorageManager()
     
     // MARK: - App Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureAction))
-        
         view.addGestureRecognizer(panGesture)
-        
         setup()
     }
     
@@ -54,8 +55,8 @@ class ModalView: UIViewController {
             hasSetPointOrigin = true
             originPoint = self.view.frame.origin
         }
-        
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         assing()
     }
@@ -63,7 +64,7 @@ class ModalView: UIViewController {
     
     // MARK: - Function for UI Component
     func setup(){
-        
+        isNewUser = storageManager.isNewUser()
         line.layer.cornerRadius = 2
         konsultasiButton.layer.cornerRadius = 10
         ratingBackground.layer.cornerRadius = 8
@@ -75,7 +76,7 @@ class ModalView: UIViewController {
         
         doctorProfileImage.layer.masksToBounds  = true
         doctorProfileImage.layer.cornerRadius = doctorProfileImage.bounds.width / 2
-       // doctorProfileImage.layer.borderWidth = 1
+        // doctorProfileImage.layer.borderWidth = 1
         
     }
     
@@ -93,47 +94,18 @@ class ModalView: UIViewController {
         ChargeLabel.text = price
     }
     
-    //Mark: - Function Alert Sign In
-    func showAlertSignin() {
-        let alert = UIAlertController(title: "Sign in to continue", message: "To proceed, you need to have an account", preferredStyle: .alert)
-
-        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
-        alert.addAction(UIAlertAction(title: "Sign In", style: .default, handler: { action in
-            let storyboard = UIStoryboard(name: "Signin", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "Signin")
-
-            let nav = UINavigationController(rootViewController: vc)
-            
-            nav.modalPresentationStyle = .fullScreen
-            self.navigationController?.pushViewController(nav, animated: true)
-            self.present(nav, animated: true, completion: nil)
-        }))
-
-        self.present(alert, animated: true)
-    }
-    
     // MARK: - IB Action Consult Button
     @IBAction func didKonsultasiButtonTapped(_ sender: UIButton) {
         
-        // if user is login = true -> whos consult page
-
-         if Firebase.Auth.auth().currentUser != nil{
-             //             go to whos consult page
-            let storyboard = UIStoryboard(name: "Chat", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "Chat") as! ChatViewController
-            let nav = UINavigationController(rootViewController: vc)
-           
-            nav.modalPresentationStyle = .fullScreen
-            self.present(nav, animated: true, completion: nil)
+        //MARK: Function detect user has logged in or not
+        if isNewUser {
+            AlertManager.alert.createSignInAlert(viewController: self)
+        } else {
+            NavigationManager.navigateToPage.showModal(modal: .chat, vc: self)
         }
-         // if user is not login/ new user -> login page
-        else{
-            showAlertSignin()
-        }
-
+        
     }
-    
-    
+ 
     // MARK: - Function for Pan Gesture
     @objc func panGestureAction(sender: UIPanGestureRecognizer){
         let translation = sender.translation(in: view)
@@ -157,5 +129,4 @@ class ModalView: UIViewController {
             }
         }
     }
-    
 }

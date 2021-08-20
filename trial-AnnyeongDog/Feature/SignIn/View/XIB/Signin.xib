@@ -16,19 +16,18 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Signin" customModule="trial_AnnyeongDog" customModuleProvider="target">
             <connections>
                 <outlet property="appleSignInButton" destination="gZ5-nd-YRa" id="kVf-0u-0u0"/>
-                <outlet property="skipButton" destination="uYw-Ma-ty0" id="2pS-6s-B5o"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" restorationIdentifier="Signin" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
+            <rect key="frame" x="0.0" y="0.0" width="300" height="100"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZ5-nd-YRa">
-                    <rect key="frame" x="45" y="0.0" width="300" height="44"/>
+                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZ5-nd-YRa" userLabel="appleButton">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="44"/>
                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="78M-Gn-Szc"/>
+                        <constraint firstAttribute="height" constant="44" id="CCM-C2-zuW"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                     <color key="tintColor" red="0.98039215690000003" green="0.98039215690000003" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -42,28 +41,27 @@
                         <action selector="didTapSigninButton:" destination="-1" eventType="touchUpInside" id="ajn-G3-WJB"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="uYw-Ma-ty0">
-                    <rect key="frame" x="45" y="64" width="300" height="36"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1B-KP-Z4b">
+                    <rect key="frame" x="0.0" y="64" width="300" height="36"/>
                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                     <state key="normal" title="Skip for now">
-                        <color key="titleColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
-                    <connections>
-                        <action selector="didTapSkipButton:" destination="-1" eventType="touchUpInside" id="25b-Uu-xVX"/>
-                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="uYw-Ma-ty0" firstAttribute="top" secondItem="gZ5-nd-YRa" secondAttribute="bottom" constant="20" id="8uI-Wa-7Bu"/>
-                <constraint firstItem="gZ5-nd-YRa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="45" id="RCv-ZY-eyK"/>
-                <constraint firstItem="uYw-Ma-ty0" firstAttribute="leading" secondItem="gZ5-nd-YRa" secondAttribute="leading" id="SeB-Rh-uKw"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="gZ5-nd-YRa" secondAttribute="trailing" constant="45" id="bVw-HG-UZ3"/>
+                <constraint firstItem="w1B-KP-Z4b" firstAttribute="trailing" secondItem="gZ5-nd-YRa" secondAttribute="trailing" id="C5Y-2q-0Ep"/>
+                <constraint firstItem="gZ5-nd-YRa" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ej4-QT-NoF"/>
+                <constraint firstItem="gZ5-nd-YRa" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Vk4-yh-Jlh"/>
+                <constraint firstAttribute="bottom" secondItem="w1B-KP-Z4b" secondAttribute="bottom" id="YP0-1Z-HMr"/>
+                <constraint firstAttribute="trailing" secondItem="gZ5-nd-YRa" secondAttribute="trailing" id="cWi-gn-Yax"/>
+                <constraint firstItem="w1B-KP-Z4b" firstAttribute="top" secondItem="gZ5-nd-YRa" secondAttribute="bottom" constant="20" id="fQ2-JB-Uvf"/>
+                <constraint firstItem="w1B-KP-Z4b" firstAttribute="leading" secondItem="gZ5-nd-YRa" secondAttribute="leading" id="kLd-tZ-Keh"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="116.92307692307692" y="266.58767772511845"/>
+            <point key="canvasLocation" x="121.53846153846153" y="263.74407582938386"/>
         </view>
     </objects>
     <resources>

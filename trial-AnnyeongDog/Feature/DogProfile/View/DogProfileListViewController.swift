@@ -9,6 +9,11 @@ import UIKit
 import Firebase
 class DogProfileListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    //MARK: Declaration Storage Manager [User Login Information]
+    let storageManager = StorageManager()
+    var isNewUser: Bool!
+
+    
     // MARK: - UI Components Declaration
     @IBOutlet weak var dogProfileTableView: UITableView!
     
@@ -25,46 +30,25 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     
     override func viewWillAppear(_ animated: Bool) {
         fetchFirebase()
-        
         self.tabBarController?.tabBar.isHidden = false
-        
-        
     }
     
     // MARK: - update the UI
     func updateUI(){
-        //disable back button
+        //MARK: disable back button
         navigationItem.hidesBackButton = false
-        
         dogProfileTableView.dataSource = self
         dogProfileTableView.delegate = self
-        
-        
+        isNewUser = storageManager.isNewUser()
     }
     // MARK: - Fetching the Firebase using ViewModel
     func fetchFirebase(){
-        
         fetchDatafromFirebase.fetchDataFirebase {
             DispatchQueue.main.async {
                 self.dogProfileTableView.reloadData()
             }
         }
-        
     }
-    
-    //    override func viewDidAppear(_ animated: Bool) {
-    //        DataManipulation.sharedData.fetchDogDataFromFirebase(with: UserControl.shared.user?.uid ?? "unknown") { responseData in
-    //            self.dogModel = responseData
-    //
-    //            DispatchQueue.main.async {
-    //                self.dogProfileTableView.reloadData()
-    //            }
-    //
-    //        }
-    //    }
-    
-    
-    
     
     //MARK: - Height Cell Setting
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -83,7 +67,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
         let nVC = (storyboard.instantiateViewController(identifier: "DPDE")) as! DogProfileDetailEditViewController
         
-
+        
         nVC.id = fetchDatafromFirebase.dogModel[indexPath.row].dogID
         nVC.dogName = fetchDatafromFirebase.dogModel[indexPath.row].dogName
         nVC.dob = fetchDatafromFirebase.dogModel[indexPath.row].dateofBirth
@@ -97,7 +81,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     }
     
     
-    //MARK: - Tampilan CEll
+    //MARK: - Tampilan Cell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "dogProfileListIdentifier") as! DogProfileTableViewCell
         
@@ -117,36 +101,11 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     
     //MARK: - Add button di klik
     @IBAction func addDidTapped(_ sender: Any) {
-        let user =  Auth.auth().currentUser
-        
-        //User belom login
-        if user == nil {
-            
-            self.present(
-                userlogin.userDetected(user) {
-                    
-                    let storyboard = UIStoryboard(name: "Signin", bundle: nil)
-                    let vc = storyboard.instantiateViewController(withIdentifier: "Signin")
-                    
-                    let nav = UINavigationController(rootViewController: vc)
-                    
-                    nav.modalPresentationStyle = .fullScreen
-                    self.navigationController?.pushViewController(nav, animated: true)
-                    self.present(nav, animated: true, completion: nil)
-                    
-                    
-                    
-                } , animated: true)
-            
-            
-            
-        }
-        //User udah login
-        else {
-            let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
-            let nVC = (storyboard.instantiateViewController(identifier: "DPDA"))
-            
-            self.navigationController?.pushViewController(nVC, animated: true)
+        //MARK: Function detect user has logged in or not
+        if isNewUser {
+            AlertManager.alert.createSignInAlert(viewController: self)
+        } else {
+            NavigationManager.navigateToPage.showModal(modal: .dogProfileDetailEdit, vc: self)
         }
     }
     

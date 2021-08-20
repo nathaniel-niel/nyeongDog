@@ -20,27 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let db = Firestore.firestore()
         
         print(db)
-//        let user =  Auth.auth().currentUser
-//
-//        if user != nil{
-//            print("You're signed in as \(user?.uid ?? "unknown"), email: \(user?.email ?? "unknown")")
-//        }
-//        else{
-//            // view login page
-//            let storyboard = UIStoryboard(name: "Signin", bundle: nil)
-//
-//            let vc = storyboard.instantiateViewController(identifier: "Signin") as! SigninViewController
-//
-//            self.window?.rootViewController = vc
-//            window?.makeKeyAndVisible()
-//        }
-        
-//        storageManager.resetNewUser()
-//        
-//        if user != nil{
-//            print("You're signed in as \(user?.uid ?? "unknown"), email: \(user?.email ?? "unknown")")
-//        }
-        
+        let user =  Auth.auth().currentUser
+
+        if user != nil{
+            storageManager.setExistingUser()
+        }
+        else{
+            storageManager.setNewUser()
+        }
+  
         return true
     }
 

@@ -95,44 +95,12 @@ class DogProfileDetailViewController: UIViewController {
     
     
     @IBAction func didBackButtonTapped(_ sender: UIBarButtonItem) {
-        let alert = UIAlertController(title: "Unsaved Changes", message: "You have unsaved changes, are you sure you want to cancel?.", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
-        alert.addAction(UIAlertAction(title: "Yes", style: .destructive,handler: { action in
-            
-            // back to dog profile view
-            let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
-            
-            let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
-            self.navigationController?.pushViewController(vc, animated: false)
-        }))
-        self.present(alert, animated: true)
+        AlertManager.alert.createChangeSavedAlert(viewController: self)
     }
     
     //MARK: - Delete Button on Dog's Profile
     @IBAction func deleteDidTapped(_ sender: UIButton) {
-        
-        //        cif prepareForMedical.statement(){
-        //            self.navigationController?.pushViewController(prepareForMedical.navigateToMedicalRecords(), animated: true)
-        //
-        //        }else{
-        //            self.navigationController?.pushViewController(prepareForMedical.navigateToMedicalRecordsEmpty(), animated: true)
-        //        }
-        let alert = UIAlertController(title: "Delete Dog Profile", message: "Once you delete this, you won't be able to return it. Do you want to proceed?", preferredStyle: .alert)
-        
-        alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
-        alert.addAction(UIAlertAction(title: "Yes", style: .destructive,handler: { action in
-            
-            // back to dog profile view
-            let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
-            
-            let vc = storyboard.instantiateViewController(identifier: "DogProfileListViewController")
-            self.navigationController?.pushViewController(vc, animated: false)
-            
-            DataManipulation.sharedData.deleteDogProfile(with: UserControl.shared.user?.uid ?? "unknown", with: self.id ?? "")
-            
-        }))
-        self.present(alert, animated: true)
+        AlertManager.alert.createDeleteDogProfileAlert(viewController: self)
     }
     
     //MARK: - Button to Choose Dog Image
@@ -145,13 +113,6 @@ class DogProfileDetailViewController: UIViewController {
         present(vc, animated: true, completion: nil)
         
     }
-   
-    //MARK: - Get user data from Text Field
-//    func getTextfieldData(){
-//
-//        dogsModel.updateModel(dogsModel.dogsIdGenerator(), dogsTextField.text ?? "" , dogsDOB.text ?? "", genderTextField.text ?? "" , breedTextField.text ?? "" , weightTextField.text ?? "" , colorTextField.text ?? "" , allergyTextField.text ?? "")
-//
-//    }
     
 
     //MARK: - UpdateUI function
@@ -210,7 +171,7 @@ class DogProfileDetailViewController: UIViewController {
     }
     
     @objc func editDogProfileNiel(){
-        
+        //TODO:
         print("go to niel")
     }
     
