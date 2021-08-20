@@ -9,39 +9,36 @@ import Foundation
 import UIKit
 import Firebase
 
-class ModalUIView{
+class ModalUIView: UIView{
     
-    let viewModel = ModalViewModel()
-    let viewController = ModalView()
+//    let viewModel = ModalViewModel()
+//    let viewController = ModalView()
     
     // MARK: - UI Components Declaration
+
     @IBOutlet weak var line: UIView!
-    @IBOutlet weak var doctorProfileImage: UIImageView!
-    @IBOutlet weak var doctorNameLabel: UILabel!
-    @IBOutlet weak var doctorExperienceLabel: UILabel!
-    @IBOutlet weak var doctorRatingLabel: UILabel!
-    @IBOutlet weak var ratingBackground: UIView!
-    @IBOutlet weak var alumnusLabel: UILabel!
-    @IBOutlet weak var klinikLabel: UILabel!
-    @IBOutlet weak var STRVLabel: UILabel!
-    @IBOutlet weak var ChargeLabel: UILabel!
-    @IBOutlet weak var konsultasiButton: UIButton!
+    @IBOutlet weak var vetImage: UIImageView!
+    @IBOutlet weak var vetName: UILabel!
+    @IBOutlet weak var vetExp: UILabel!
+    @IBOutlet weak var vetRating: UILabel!
+    @IBOutlet weak var viewRating: UIView!
+    @IBOutlet weak var strvNumber: UILabel!
+    @IBOutlet weak var alumniLabel: UILabel!
+    @IBOutlet weak var clinicLabel: UILabel!
+    @IBOutlet weak var chargeLabel: UILabel!
+    @IBOutlet weak var consultButton: UIButton!
     
-    // MARK: - Function for UI Component
     func setup(){
-        
         line.layer.cornerRadius = 2
-        konsultasiButton.layer.cornerRadius = 10
-        ratingBackground.layer.cornerRadius = 8
+        consultButton.layer.cornerRadius = 10
+        viewRating.layer.cornerRadius = 8
         clipShapeCircle()
     }
-    
+//
     //Masking Image view into circle
     func clipShapeCircle(){
-        
-        doctorProfileImage.layer.masksToBounds  = true
-        doctorProfileImage.layer.cornerRadius = doctorProfileImage.bounds.width / 2
-       // doctorProfileImage.layer.borderWidth = 1
+        vetImage.layer.masksToBounds  = true
+        vetImage.layer.cornerRadius = vetImage.bounds.width / 2
         
     }
     
@@ -51,11 +48,11 @@ class ModalUIView{
         // if user is login = true -> whos consult page
 
          if Firebase.Auth.auth().currentUser != nil{
-            viewController.presentToChat()
+//            viewController.presentToChat()
         }
          // if user is not login/ new user -> login page
         else{
-            viewController.showAlertSignin()
+//            viewController.showAlertSignin()
         }
 
     }

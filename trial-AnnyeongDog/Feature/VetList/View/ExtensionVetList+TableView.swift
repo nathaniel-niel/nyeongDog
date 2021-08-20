@@ -50,7 +50,7 @@ extension VetListViewController: UITableViewDelegate, UITableViewDataSource{
         
         tableView.deselectRow(at: indexPath, animated: true)
         
-        let vc = ModalView()
+        let vc = ModalViewController()
         vc.modalPresentationStyle = .custom
         vc.transitioningDelegate = self
         

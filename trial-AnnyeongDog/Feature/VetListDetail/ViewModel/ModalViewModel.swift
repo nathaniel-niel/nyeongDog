@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Firebase
 
 class ModalViewModel{
     
@@ -30,4 +31,5 @@ class ModalViewModel{
         
         return nav
     }
+    
 }

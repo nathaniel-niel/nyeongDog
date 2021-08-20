@@ -10,13 +10,14 @@ import UIKit
 
 extension VetListViewController: UISearchResultsUpdating, UISearchBarDelegate{
     
+    //Cancel button did tapped in search bar
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searching = false
         searchVetName.removeAll()
         vetListTable.reloadData()
     }
     
-    
+    //Update search resutlts
     func updateSearchResults(for searchController: UISearchController) {
         let searchText = searchController.searchBar.text!
         if !searchText.isEmpty{
@@ -36,6 +37,7 @@ extension VetListViewController: UISearchResultsUpdating, UISearchBarDelegate{
         vetListTable.reloadData()
     }
     
+    // Configure search bar
     func configureSearchController(){
         searchController.loadViewIfNeeded()
         searchController.obscuresBackgroundDuringPresentation = false

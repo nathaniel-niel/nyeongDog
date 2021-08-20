@@ -9,11 +9,14 @@
 import UIKit
 import Firebase
 
-class ModalView: UIViewController {
+class ModalViewController: UIViewController {
+    
+
+    @IBOutlet var uiView: ModalUIView!
     
     //MARK: - Declaration Variable
     let viewModel = ModalViewModel()
-    let uiView = ModalUIView()
+//    let uiView = ModalUIView()
     
     var hasSetPointOrigin = false
     var originPoint: CGPoint?
@@ -26,7 +29,6 @@ class ModalView: UIViewController {
     var strvNumber: String = ""
     var price: String = ""
     
-    
     // MARK: - App Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +36,7 @@ class ModalView: UIViewController {
         
         view.addGestureRecognizer(panGesture)
         
-        uiView.setup()
+//        uiView.setup()
     }
     
     override func viewDidLayoutSubviews() {
@@ -53,13 +55,13 @@ class ModalView: UIViewController {
     func assing(){
         // Coming soon
         
-        uiView.doctorNameLabel.text = vetName
-        uiView.doctorExperienceLabel.text = experience
-        uiView.doctorRatingLabel.text = rating
-        uiView.alumnusLabel.text = alumnus
-        uiView.klinikLabel.text = clinic
-        uiView.STRVLabel.text = strvNumber
-        uiView.ChargeLabel.text = price
+        uiView.vetName.text = vetName
+        uiView.vetExp.text = experience
+        uiView.vetRating.text = rating
+        uiView.alumniLabel.text = alumnus
+        uiView.clinicLabel.text = clinic
+        uiView.strvNumber.text = strvNumber
+        uiView.chargeLabel.text = price
     }
     
     //Mark: - Function Alert Sign In
@@ -75,9 +77,9 @@ class ModalView: UIViewController {
         self.present(alert, animated: true)
     }
     
-    func presentToChat(){
-        self.present(viewModel.preparetoChat(), animated: true, completion: nil)
-    }
+//    func presentToChat(){
+//        self.present(viewModel.preparetoChat(), animated: true, completion: nil)
+//    }
     
     // MARK: - Function for Pan Gesture
     @objc func panGestureAction(sender: UIPanGestureRecognizer){
@@ -104,3 +106,4 @@ class ModalView: UIViewController {
     }
     
 }
+

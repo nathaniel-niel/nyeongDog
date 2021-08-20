@@ -28,14 +28,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="390" height="140"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BGE-cj-LGA">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGE-cj-LGA">
                         <rect key="frame" x="20" y="11" width="350" height="118"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j2O-EI-Z5c">
-                                <rect key="frame" x="-8" y="0.0" width="357" height="129"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j2O-EI-Z5c">
+                                <rect key="frame" x="8" y="0.0" width="342" height="129"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bLo-ti-aXw" userLabel="First">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bLo-ti-aXw" userLabel="First">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="129"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1nl-tS-QHQ">
@@ -50,8 +49,8 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BG4-73-dCJ" userLabel="Second">
-                                        <rect key="frame" x="100" y="0.0" width="167" height="129"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BG4-73-dCJ" userLabel="Second">
+                                        <rect key="frame" x="100" y="0.0" width="153" height="129"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Veterinarian" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D7D-9L-GNW">
                                                 <rect key="frame" x="8" y="42" width="99" height="21"/>
@@ -77,8 +76,8 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NK8-yz-V5V">
-                                        <rect key="frame" x="267" y="0.0" width="90" height="129"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NK8-yz-V5V">
+                                        <rect key="frame" x="253" y="0.0" width="89" height="129"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8lU-Fx-Ptg">
                                                 <rect key="frame" x="11" y="41" width="68" height="21"/>
@@ -130,11 +129,27 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="BG4-73-dCJ" firstAttribute="leading" secondItem="j2O-EI-Z5c" secondAttribute="leading" constant="100" id="DEr-QS-M1h"/>
+                                    <constraint firstItem="NK8-yz-V5V" firstAttribute="leading" secondItem="j2O-EI-Z5c" secondAttribute="leading" constant="253" id="Y34-ti-E1Y"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="j2O-EI-Z5c" secondAttribute="trailing" id="YxH-qW-uVO"/>
+                            <constraint firstItem="j2O-EI-Z5c" firstAttribute="top" secondItem="BGE-cj-LGA" secondAttribute="top" id="b8P-lr-0Dg"/>
+                            <constraint firstAttribute="bottom" secondItem="j2O-EI-Z5c" secondAttribute="bottom" constant="-11" id="cIa-Zl-dys"/>
+                            <constraint firstItem="j2O-EI-Z5c" firstAttribute="leading" secondItem="BGE-cj-LGA" secondAttribute="leadingMargin" id="fMD-Hd-e1T"/>
+                        </constraints>
                     </view>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="BGE-cj-LGA" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="9mu-S5-0ip"/>
+                    <constraint firstItem="BGE-cj-LGA" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Fkf-qo-2y9"/>
+                    <constraint firstItem="BGE-cj-LGA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="PnX-s1-gbr"/>
+                    <constraint firstItem="BGE-cj-LGA" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="dGd-NW-NUJ"/>
+                </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>

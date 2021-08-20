@@ -20,15 +20,13 @@ class VetListTableViewCell: UITableViewCell {
     @IBOutlet weak var viewExp: UIView!
     @IBOutlet weak var statusView: UIView!
     
+    
     static let identifier = "cell"
     
     static func nib() -> UINib{
         return UINib(nibName: "VetListTableViewCell", bundle: nil)
         
     }
-    
-    
-    
     
     override func awakeFromNib() {
         super.awakeFromNib()
