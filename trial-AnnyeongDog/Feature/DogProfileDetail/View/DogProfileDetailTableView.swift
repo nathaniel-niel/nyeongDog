@@ -21,6 +21,8 @@ class DogProfileDetailTableView: UIViewController{
     var stringPickerGender: String = ""
     var stringPickerDOB: String = ""
     
+    var cell = DogProfileDetailTextField()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

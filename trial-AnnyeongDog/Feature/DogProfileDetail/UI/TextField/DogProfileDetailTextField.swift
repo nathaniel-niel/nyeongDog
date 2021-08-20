@@ -29,4 +29,11 @@ class DogProfileDetailTextField: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func cellText(_ cellText: String?){
+        
+        guard let safeUnwarp = cellText else { return }
+        //TODO textField.text = safeUnwarp
+       
+    }
+    
 }

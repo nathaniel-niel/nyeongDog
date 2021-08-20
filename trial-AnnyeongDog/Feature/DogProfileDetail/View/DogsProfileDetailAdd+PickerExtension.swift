@@ -60,8 +60,9 @@ extension DogProfileDetailTableView: UIPickerViewDelegate, UIPickerViewDataSourc
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 2{
-            print("picker view tag 2")
+           
             stringPickerGender = genderModel.genderArray[row]
+            cell.cellText(stringPickerGender)
             
         } else {
             
@@ -70,6 +71,8 @@ extension DogProfileDetailTableView: UIPickerViewDelegate, UIPickerViewDataSourc
             let selectedDogYear = genderModel.dogYear[dogYear]
             let selectedDogMonth = genderModel.dogMonth[dogMonth]
             stringPickerDOB = "\(selectedDogYear) Tahun \(selectedDogMonth) Bulan"
+            cell.cellText(stringPickerDOB)
+            
             
            
         }

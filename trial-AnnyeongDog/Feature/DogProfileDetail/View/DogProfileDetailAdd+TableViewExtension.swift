@@ -32,7 +32,7 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
             let cell =  dogProfileDetail.DogProfileTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
             
             cell.textField.inputView = dogsDOBPicker
-            cell.textField.text = stringPickerDOB
+            
             cell.textFieldLabel.text = "Usia"
             return cell
             
