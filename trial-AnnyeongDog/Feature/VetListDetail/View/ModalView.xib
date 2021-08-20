@@ -51,15 +51,13 @@
                                         <constraint firstAttribute="height" constant="150" id="TRC-HD-Aho"/>
                                     </constraints>
                                 </imageView>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Br-fb-WIy">
+                                    <rect key="frame" x="47" y="139" width="19" height="19"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82b-3D-pMZ">
                                     <rect key="frame" x="190" y="95" width="26" height="20"/>
-                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Years Experience" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2AO-dL-aOA">
-                                    <rect key="frame" x="212" y="94" width="145" height="24"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
@@ -72,7 +70,7 @@
                                             <color key="tintColor" red="1" green="0.83921568629999999" blue="0.039215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="4.9" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLH-Nb-STP">
-                                            <rect key="frame" x="8" y="5" width="23.333333333333332" height="19.333333333333332"/>
+                                            <rect key="frame" x="11" y="5" width="23.333333333333332" height="19.333333333333332"/>
                                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -102,11 +100,13 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Br-fb-WIy">
-                                    <rect key="frame" x="47" y="139" width="19" height="19"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Years Experience" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2AO-dL-aOA">
+                                    <rect key="frame" x="212" y="91" width="145" height="24"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                </view>
+                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
@@ -179,20 +179,13 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vL7-E6-au0" userLabel="divider">
                                                             <rect key="frame" x="0.0" y="62" width="414" height="31"/>
                                                             <subviews>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yTW-Ms-1Oq">
-                                                                    <rect key="frame" x="20" y="15" width="374" height="1"/>
+                                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CVB-AG-gf3">
+                                                                    <rect key="frame" x="16" y="15" width="353" height="1"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <color key="backgroundColor" systemColor="systemGray3Color"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="1" id="4aG-FG-xfb"/>
-                                                                    </constraints>
                                                                 </view>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="yTW-Ms-1Oq" secondAttribute="trailing" constant="20" id="9DQ-Gr-giB"/>
-                                                                <constraint firstItem="yTW-Ms-1Oq" firstAttribute="centerY" secondItem="vL7-E6-au0" secondAttribute="centerY" id="XWD-w3-K6s"/>
-                                                                <constraint firstItem="yTW-Ms-1Oq" firstAttribute="leading" secondItem="vL7-E6-au0" secondAttribute="leading" constant="20" id="ctI-Qz-wOH"/>
-                                                            </constraints>
                                                         </view>
                                                     </subviews>
                                                 </stackView>
@@ -246,23 +239,16 @@
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         </view>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uAx-Pz-hoc" userLabel="divider">
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aeO-y6-ogL">
                                                             <rect key="frame" x="0.0" y="61.666666666666629" width="414" height="31"/>
                                                             <subviews>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Sm-sE-SA4">
-                                                                    <rect key="frame" x="20" y="15" width="374" height="1"/>
+                                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CB8-zJ-O6c">
+                                                                    <rect key="frame" x="16" y="14" width="353" height="1"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <color key="backgroundColor" systemColor="systemGray3Color"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="1" id="XPP-y3-2kz"/>
-                                                                    </constraints>
                                                                 </view>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                            <constraints>
-                                                                <constraint firstItem="7Sm-sE-SA4" firstAttribute="centerY" secondItem="uAx-Pz-hoc" secondAttribute="centerY" id="7IL-Q0-P2p"/>
-                                                                <constraint firstAttribute="trailing" secondItem="7Sm-sE-SA4" secondAttribute="trailing" constant="20" id="CnM-Af-vJc"/>
-                                                                <constraint firstItem="7Sm-sE-SA4" firstAttribute="leading" secondItem="uAx-Pz-hoc" secondAttribute="leading" constant="20" id="Jov-Kq-mTH"/>
-                                                            </constraints>
                                                         </view>
                                                     </subviews>
                                                 </stackView>
@@ -323,20 +309,13 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wSg-k3-FgR" userLabel="divider">
                                                             <rect key="frame" x="0.0" y="62.000000000000057" width="414" height="31"/>
                                                             <subviews>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zrq-b7-bz0">
-                                                                    <rect key="frame" x="20" y="15" width="374" height="1"/>
+                                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PRh-Sy-nZn">
+                                                                    <rect key="frame" x="16" y="15" width="353" height="1"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <color key="backgroundColor" systemColor="systemGray3Color"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="1" id="3Iv-t6-hjX"/>
-                                                                    </constraints>
                                                                 </view>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                            <constraints>
-                                                                <constraint firstItem="zrq-b7-bz0" firstAttribute="centerY" secondItem="wSg-k3-FgR" secondAttribute="centerY" id="Fsx-Dz-g7U"/>
-                                                                <constraint firstItem="zrq-b7-bz0" firstAttribute="leading" secondItem="wSg-k3-FgR" secondAttribute="leading" constant="20" id="ISO-h6-lqW"/>
-                                                                <constraint firstAttribute="trailing" secondItem="zrq-b7-bz0" secondAttribute="trailing" constant="20" id="lfW-JU-tWA"/>
-                                                            </constraints>
                                                         </view>
                                                     </subviews>
                                                 </stackView>
