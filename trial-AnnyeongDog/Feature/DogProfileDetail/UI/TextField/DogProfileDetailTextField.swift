@@ -31,8 +31,7 @@ class DogProfileDetailTextField: UITableViewCell {
     
     func cellText(_ cellText: String?){
         
-        guard let safeUnwarp = cellText else { return }
-        //TODO textField.text = safeUnwarp
+        textField.text = cellText
        
     }
     

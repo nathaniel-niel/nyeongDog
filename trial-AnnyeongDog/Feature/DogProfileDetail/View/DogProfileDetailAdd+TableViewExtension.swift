@@ -41,9 +41,11 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
             
            
             cell.textField.inputView = genderPicker
+            
             //TODO -> Listener, Pickernya masih belum mau connect ke TextField
+            
             cell.textField.text = stringPickerGender
-            print(stringPickerDOB)
+           
             cell.textFieldLabel.text = "Jenis Kelamin"
             return cell
             
@@ -56,7 +58,6 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
             
         case 5:
             let cell =  dogProfileDetail.DogProfileTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
-            
             
             cell.textFieldLabel.text = "Berat Badan"
             return cell
@@ -88,5 +89,8 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
             return 86
         }
     }
+    
+ 
+    
     
 }
