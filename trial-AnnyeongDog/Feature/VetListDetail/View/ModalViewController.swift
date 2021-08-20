@@ -36,7 +36,7 @@ class ModalViewController: UIViewController {
         
         view.addGestureRecognizer(panGesture)
         
-//        uiView.setup()
+        uiView.setup()
     }
     
     override func viewDidLayoutSubviews() {

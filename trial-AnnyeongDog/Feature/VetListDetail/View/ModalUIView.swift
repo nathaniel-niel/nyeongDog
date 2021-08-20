@@ -32,14 +32,8 @@ class ModalUIView: UIView{
         line.layer.cornerRadius = 2
         consultButton.layer.cornerRadius = 10
         viewRating.layer.cornerRadius = 8
-        clipShapeCircle()
-    }
-//
-    //Masking Image view into circle
-    func clipShapeCircle(){
         vetImage.layer.masksToBounds  = true
         vetImage.layer.cornerRadius = vetImage.bounds.width / 2
-        
     }
     
     // MARK: - IB Action Consult Button
