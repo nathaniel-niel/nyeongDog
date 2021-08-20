@@ -38,19 +38,4 @@ class ModalUIView: UIView{
         statusView.layer.cornerRadius = statusView.bounds.size.width / 2
         statusView.backgroundColor = UIColor.green
     }
-    
-    // MARK: - IB Action Consult Button
-    @IBAction func didKonsultasiButtonTapped(_ sender: UIButton) {
-        
-        // if user is login = true -> whos consult page
-
-         if Firebase.Auth.auth().currentUser != nil{
-//            viewController.presentToChat()
-        }
-         // if user is not login/ new user -> login page
-        else{
-//            viewController.showAlertSignin()
-        }
-
-    }
 }

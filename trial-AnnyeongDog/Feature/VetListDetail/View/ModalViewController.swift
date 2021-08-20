@@ -20,7 +20,7 @@ class ModalViewController: UIViewController {
     
     var hasSetPointOrigin = false
     var originPoint: CGPoint?
- 
+    
     var vetName: String = ""
     var experience: String = ""
     var rating: String = ""
