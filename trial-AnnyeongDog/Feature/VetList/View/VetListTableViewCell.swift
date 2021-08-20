@@ -39,6 +39,12 @@ class VetListTableViewCell: UITableViewCell {
             statusView.backgroundColor = UIColor.green
         }
     }
+    
+    var objectModel: VetListModel?{
+        didSet{
+            setupCell()
+        }
+    }
   
     static let identifier = "cell"
     
@@ -58,6 +64,14 @@ class VetListTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func setupCell(){
+        guard let object = objectModel else { return }
+        vetName.text = object.vetName
+        priceLabel.text = object.price
+        pengalamanLabel.text = object.expYears
+        ratingLabel.text = object.rating
+        statusView.backgroundColor = object.statusVet
+    }
     
     
 }

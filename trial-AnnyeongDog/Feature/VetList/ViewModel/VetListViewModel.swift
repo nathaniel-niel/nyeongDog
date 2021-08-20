@@ -12,7 +12,6 @@ class VetListViewModel{
     // MARK: - Object Declaration
     let dummydata = VetDummyData()
     var vetNameList = [VetListModel]()
-
     
     //MARK: - Function Fill Data for Search
     func fillDataVetList(){
@@ -22,7 +21,4 @@ class VetListViewModel{
             looping = looping - 1
         }
     }
-    
-
-    
 }

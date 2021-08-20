@@ -26,20 +26,12 @@ extension VetListViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = vetListTable.dequeueReusableCell(withIdentifier: VetListTableViewCell.identifier) as! VetListTableViewCell
         if searching{
-            cell.vetName.text = searchVetName[indexPath.row].vetName
-            cell.priceLabel.text = searchVetName[indexPath.row].price
-            cell.pengalamanLabel.text = searchVetName[indexPath.row].expYears
-            cell.ratingLabel.text = searchVetName[indexPath.row].rating
-            cell.statusView.backgroundColor = searchVetName[indexPath.row].statusVet
+            cell.objectModel = searchVetName[indexPath.row]
         }
         else{
-            
-            cell.vetName.text = ViewModel.vetNameList[indexPath.row].vetName
-            cell.priceLabel.text = ViewModel.vetNameList[indexPath.row].price
-            cell.pengalamanLabel.text = ViewModel.vetNameList[indexPath.row].expYears
-            cell.ratingLabel.text = ViewModel.vetNameList[indexPath.row].rating
-            cell.statusView.backgroundColor = ViewModel.vetNameList[indexPath.row].statusVet
+            cell.objectModel = ViewModel.vetNameList[indexPath.row]
         }
+            
         
         return cell
         
@@ -77,5 +69,5 @@ extension VetListViewController: UITableViewDelegate, UITableViewDataSource{
         }
         self.present(vc, animated: true, completion: nil)
     }
-    
+
 }
