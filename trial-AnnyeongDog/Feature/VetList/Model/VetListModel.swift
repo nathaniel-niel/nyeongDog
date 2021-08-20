@@ -16,6 +16,5 @@ struct VetListModel {
     var rating: String?
     var price: String?
     var alumnus: String?
-    
-    
 }
+

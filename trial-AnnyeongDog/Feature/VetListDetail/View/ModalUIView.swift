@@ -27,6 +27,7 @@ class ModalUIView: UIView{
     @IBOutlet weak var clinicLabel: UILabel!
     @IBOutlet weak var chargeLabel: UILabel!
     @IBOutlet weak var consultButton: UIButton!
+    @IBOutlet weak var statusView: UIView!
     
     func setup(){
         line.layer.cornerRadius = 2
@@ -34,6 +35,8 @@ class ModalUIView: UIView{
         viewRating.layer.cornerRadius = 8
         vetImage.layer.masksToBounds  = true
         vetImage.layer.cornerRadius = vetImage.bounds.width / 2
+        statusView.layer.cornerRadius = statusView.bounds.size.width / 2
+        statusView.backgroundColor = UIColor.green
     }
     
     // MARK: - IB Action Consult Button

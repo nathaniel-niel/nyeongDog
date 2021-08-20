@@ -102,6 +102,11 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Br-fb-WIy">
+                                    <rect key="frame" x="52" y="142" width="15" height="15"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
@@ -436,6 +441,7 @@
                 <outlet property="clinicLabel" destination="5zF-Dj-dYK" id="huj-5R-NBh"/>
                 <outlet property="consultButton" destination="3yy-qa-YhK" id="AzS-6E-mYt"/>
                 <outlet property="line" destination="Ux0-5M-Pmo" id="cm6-xd-LNb"/>
+                <outlet property="statusView" destination="5Br-fb-WIy" id="U3u-Qc-PeW"/>
                 <outlet property="strvNumber" destination="msC-00-0GI" id="sm1-cj-KHb"/>
                 <outlet property="vetExp" destination="82b-3D-pMZ" id="OOY-Be-yfs"/>
                 <outlet property="vetImage" destination="VTf-tM-EDy" id="vdh-Ro-1OX"/>
