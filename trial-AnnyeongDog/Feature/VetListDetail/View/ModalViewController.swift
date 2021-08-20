@@ -21,14 +21,7 @@ class ModalViewController: UIViewController {
     var hasSetPointOrigin = false
     var originPoint: CGPoint?
     
-    var vetName: String = ""
-    var experience: String = ""
-    var rating: String = ""
-    var alumnus: String = ""
-    var clinic: String = ""
-    var strvNumber: String = ""
-    var price: String = ""
-    var statusVet: UIColor = .clear
+    var vetListModel: VetListModel?
     
     // MARK: - App Life Cycle
     override func viewDidLoad() {
@@ -55,15 +48,7 @@ class ModalViewController: UIViewController {
     
     func assing(){
         // Coming soon
-        
-        uiView.vetName.text = vetName
-        uiView.vetExp.text = experience
-        uiView.vetRating.text = rating
-        uiView.alumniLabel.text = alumnus
-        uiView.clinicLabel.text = clinic
-        uiView.strvNumber.text = strvNumber
-        uiView.chargeLabel.text = price
-        uiView.statusView.backgroundColor = statusVet
+        uiView.objectModel = vetListModel
     }
     
     //Mark: - Function Alert Sign In

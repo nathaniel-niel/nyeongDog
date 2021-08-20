@@ -29,6 +29,27 @@ class ModalUIView: UIView{
     @IBOutlet weak var consultButton: UIButton!
     @IBOutlet weak var statusView: UIView!
     
+    // didset function
+    var objectModel: VetListModel?{
+        didSet{
+            setupCell()
+        }
+    }
+    
+    // assign data to model
+    func setupCell(){
+        guard let object = objectModel else { return }
+        vetName.text = object.vetName
+        vetExp.text = object.expYears
+        vetRating.text = object.rating
+        strvNumber.text = object.strvNumber
+        alumniLabel.text = object.alumnus
+        clinicLabel.text = object.clinicName
+        chargeLabel.text = object.price
+        statusView.backgroundColor = object.statusVet
+    }
+    
+    // setup UI Component
     func setup(){
         line.layer.cornerRadius = 2
         consultButton.layer.cornerRadius = 10

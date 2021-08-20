@@ -48,24 +48,26 @@ extension VetListViewController: UITableViewDelegate, UITableViewDataSource{
         vc.transitioningDelegate = self
         
         if searching{
-                vc.vetName = searchVetName[indexPath.row].vetName ?? "no data"
-                vc.experience = searchVetName[indexPath.row].expYears ?? "no data"
-                vc.rating = searchVetName[indexPath.row].rating ?? "no data"
-                vc.alumnus = searchVetName[indexPath.row].alumnus ?? "no data"
-                vc.clinic = searchVetName[indexPath.row].clinicName ?? "no data"
-                vc.strvNumber = searchVetName[indexPath.row].strvNumber ?? "no data"
-                vc.price = searchVetName[indexPath.row].price ?? "no data"
-                vc.statusVet = searchVetName[indexPath.row].statusVet ?? .clear
+            vc.vetListModel = searchVetName[indexPath.row]
+//                vc.vetName = searchVetName[indexPath.row].vetName ?? "no data"
+//                vc.experience = searchVetName[indexPath.row].expYears ?? "no data"
+//                vc.rating = searchVetName[indexPath.row].rating ?? "no data"
+//                vc.alumnus = searchVetName[indexPath.row].alumnus ?? "no data"
+//                vc.clinic = searchVetName[indexPath.row].clinicName ?? "no data"
+//                vc.strvNumber = searchVetName[indexPath.row].strvNumber ?? "no data"
+//                vc.price = searchVetName[indexPath.row].price ?? "no data"
+//                vc.statusVet = searchVetName[indexPath.row].statusVet ?? .clear
         }
         else{
-            vc.vetName = ViewModel.vetNameList[indexPath.row].vetName ?? "no data"
-            vc.experience = ViewModel.vetNameList[indexPath.row].expYears ?? "no data"
-            vc.rating = ViewModel.vetNameList[indexPath.row].rating ?? "no data"
-            vc.alumnus = ViewModel.vetNameList[indexPath.row].alumnus ?? "no data"
-            vc.clinic = ViewModel.vetNameList[indexPath.row].clinicName ?? "no data"
-            vc.strvNumber = ViewModel.vetNameList[indexPath.row].strvNumber ?? "no data"
-            vc.price = ViewModel.vetNameList[indexPath.row].price ?? "no data"
-            vc.statusVet = ViewModel.vetNameList[indexPath.row].statusVet ?? .clear
+            vc.vetListModel = ViewModel.vetNameList[indexPath.row]
+//            vc.vetName = ViewModel.vetNameList[indexPath.row].vetName ?? "no data"
+//            vc.experience = ViewModel.vetNameList[indexPath.row].expYears ?? "no data"
+//            vc.rating = ViewModel.vetNameList[indexPath.row].rating ?? "no data"
+//            vc.alumnus = ViewModel.vetNameList[indexPath.row].alumnus ?? "no data"
+//            vc.clinic = ViewModel.vetNameList[indexPath.row].clinicName ?? "no data"
+//            vc.strvNumber = ViewModel.vetNameList[indexPath.row].strvNumber ?? "no data"
+//            vc.price = ViewModel.vetNameList[indexPath.row].price ?? "no data"
+//            vc.statusVet = ViewModel.vetNameList[indexPath.row].statusVet ?? .clear
         }
         self.present(vc, animated: true, completion: nil)
     }
