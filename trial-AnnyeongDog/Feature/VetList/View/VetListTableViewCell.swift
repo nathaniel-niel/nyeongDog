@@ -15,12 +15,31 @@ class VetListTableViewCell: UITableViewCell {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var pengalamanLabel: UILabel!
     @IBOutlet weak var ratingLabel: UILabel!
-    @IBOutlet weak var viewCell: UIView!
-    @IBOutlet weak var viewRating: UIView!
-    @IBOutlet weak var viewExp: UIView!
-    @IBOutlet weak var statusView: UIView!
-    
-    
+    @IBOutlet weak var viewCell: UIView!{
+        didSet{
+            // UI View Cell
+            viewCell.layer.cornerRadius = 10
+            viewCell.layer.borderWidth = 1
+            viewCell.layer.borderColor = UIColor(red: 0.59, green: 0.59, blue: 0.59, alpha: 1).cgColor
+        }
+    }
+    @IBOutlet weak var viewRating: UIView! {
+        didSet{
+            viewRating.layer.cornerRadius = 6.5
+        }
+    }
+    @IBOutlet weak var viewExp: UIView! {
+        didSet{
+            viewExp.layer.cornerRadius = 6.5
+        }
+    }
+    @IBOutlet weak var statusView: UIView!{
+        didSet{
+            statusView.layer.cornerRadius = statusView.bounds.size.width / 2
+            statusView.backgroundColor = UIColor.green
+        }
+    }
+  
     static let identifier = "cell"
     
     static func nib() -> UINib{
@@ -31,18 +50,6 @@ class VetListTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        
-        // UI Custom
-        viewExp.layer.cornerRadius = 6.5
-        viewRating.layer.cornerRadius = 6.5
-        statusView.layer.cornerRadius = statusView.bounds.size.width / 2
-        statusView.backgroundColor = UIColor.green
-        
-        
-        // UI View Cell
-        viewCell.layer.cornerRadius = 10
-        viewCell.layer.borderWidth = 1
-        viewCell.layer.borderColor = UIColor(red: 0.59, green: 0.59, blue: 0.59, alpha: 1).cgColor
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
