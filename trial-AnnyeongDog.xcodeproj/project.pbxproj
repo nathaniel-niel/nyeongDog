@@ -34,8 +34,8 @@
 		2DEBE8BC26CFBED400740A24 /* MedicalRecordDetailAdd.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DEBE89C26CFBED400740A24 /* MedicalRecordDetailAdd.storyboard */; };
 		2DEBE8BD26CFBED400740A24 /* MedicalRecordList+UI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEBE89F26CFBED400740A24 /* MedicalRecordList+UI.swift */; };
 		2DEBE8BE26CFBED400740A24 /* MedicalRecordListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEBE8A026CFBED400740A24 /* MedicalRecordListViewController.swift */; };
-		2DEBE8BF26CFBED400740A24 /* MedicalRecords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DEBE8A326CFBED400740A24 /* MedicalRecords.storyboard */; };
-		2DEBE8C026CFBED400740A24 /* MedicalRecordList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DEBE8A426CFBED400740A24 /* MedicalRecordList.storyboard */; };
+		2DEBE8BF26CFBED400740A24 /* MedicalRecordList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DEBE8A326CFBED400740A24 /* MedicalRecordList.storyboard */; };
+		2DEBE8C026CFBED400740A24 /* MedicalRecords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DEBE8A426CFBED400740A24 /* MedicalRecords.storyboard */; };
 		2DEBE8C126CFBED400740A24 /* MedicalRecordListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEBE8A626CFBED400740A24 /* MedicalRecordListTableViewCell.swift */; };
 		2DEBE8C226CFBED400740A24 /* MedicalRecordListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DEBE8A726CFBED400740A24 /* MedicalRecordListTableViewCell.xib */; };
 		2DEBE8C326CFBED400740A24 /* PrepareToMRD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEBE8A926CFBED400740A24 /* PrepareToMRD.swift */; };
@@ -133,12 +133,12 @@
 		2DEBE89C26CFBED400740A24 /* MedicalRecordDetailAdd.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MedicalRecordDetailAdd.storyboard; sourceTree = "<group>"; };
 		2DEBE89F26CFBED400740A24 /* MedicalRecordList+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MedicalRecordList+UI.swift"; sourceTree = "<group>"; };
 		2DEBE8A026CFBED400740A24 /* MedicalRecordListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalRecordListViewController.swift; sourceTree = "<group>"; };
-		2DEBE8A326CFBED400740A24 /* MedicalRecords.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MedicalRecords.storyboard; sourceTree = "<group>"; };
-		2DEBE8A426CFBED400740A24 /* MedicalRecordList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MedicalRecordList.storyboard; sourceTree = "<group>"; };
-		2DEBE8A626CFBED400740A24 /* MedicalRecordListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalRecordListTableViewCell.swift; sourceTree = "<group>"; };
-		2DEBE8A726CFBED400740A24 /* MedicalRecordListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalRecordListTableViewCell.xib; sourceTree = "<group>"; };
-		2DEBE8A926CFBED400740A24 /* PrepareToMRD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareToMRD.swift; sourceTree = "<group>"; };
-		2DEBE8AA26CFBED400740A24 /* MRDModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MRDModel.swift; sourceTree = "<group>"; };
+		2DEBE8A326CFBED400740A24 /* MedicalRecordList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MedicalRecordList.storyboard; path = "../../../../../../../../Desktop/nyeongDog/trial-AnnyeongDog/Feature/MedicalRecords/List/View/Storyboard/MedicalRecordList.storyboard"; sourceTree = "<group>"; };
+		2DEBE8A426CFBED400740A24 /* MedicalRecords.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MedicalRecords.storyboard; path = "../../../../../../../../Desktop/nyeongDog/trial-AnnyeongDog/Feature/MedicalRecords/List/View/Storyboard/MedicalRecords.storyboard"; sourceTree = "<group>"; };
+		2DEBE8A626CFBED400740A24 /* MedicalRecordListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MedicalRecordListTableViewCell.swift; path = "../../../../../../../../Desktop/nyeongDog/trial-AnnyeongDog/Feature/MedicalRecords/List/View/Table View Cell/MedicalRecordListTableViewCell.swift"; sourceTree = "<group>"; };
+		2DEBE8A726CFBED400740A24 /* MedicalRecordListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MedicalRecordListTableViewCell.xib; path = "../../../../../../../../Desktop/nyeongDog/trial-AnnyeongDog/Feature/MedicalRecords/List/View/Table View Cell/MedicalRecordListTableViewCell.xib"; sourceTree = "<group>"; };
+		2DEBE8A926CFBED400740A24 /* PrepareToMRD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrepareToMRD.swift; path = "../../../../../../Desktop/nyeongDog/trial-AnnyeongDog/Feature/MedicalRecords/Model/PrepareToMRD.swift"; sourceTree = "<group>"; };
+		2DEBE8AA26CFBED400740A24 /* MRDModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MRDModel.swift; path = "../../../../../../Desktop/nyeongDog/trial-AnnyeongDog/Feature/MedicalRecords/Model/MRDModel.swift"; sourceTree = "<group>"; };
 		5B1D8EF426C4E9620088FCB1 /* ModalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModalView.swift; sourceTree = "<group>"; };
 		5B1D8EF526C4E9620088FCB1 /* ModalView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ModalView.xib; sourceTree = "<group>"; };
 		5B391B3426C2E55400406CEC /* VetListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetListViewModel.swift; sourceTree = "<group>"; };
@@ -286,7 +286,8 @@
 			children = (
 				2DEBE87F26CFBED400740A24 /* MedicalRecordViewModel.swift */,
 			);
-			path = ViewModel;
+			name = ViewModel;
+			path = "../../../../../Desktop/nyeongDog/trial-AnnyeongDog/Feature/MedicalRecords/ViewModel";
 			sourceTree = "<group>";
 		};
 		2DEBE88026CFBED400740A24 /* Detail */ = {
@@ -295,7 +296,8 @@
 				2DEBE88126CFBED400740A24 /* Controller */,
 				2DEBE88D26CFBED400740A24 /* View */,
 			);
-			path = Detail;
+			name = Detail;
+			path = "../../../../../Desktop/nyeongDog/trial-AnnyeongDog/Feature/MedicalRecords/Detail";
 			sourceTree = "<group>";
 		};
 		2DEBE88126CFBED400740A24 /* Controller */ = {
@@ -416,7 +418,8 @@
 				2DEBE89F26CFBED400740A24 /* MedicalRecordList+UI.swift */,
 				2DEBE8A026CFBED400740A24 /* MedicalRecordListViewController.swift */,
 			);
-			path = Controller;
+			name = Controller;
+			path = "../../../../../../Desktop/nyeongDog/trial-AnnyeongDog/Feature/MedicalRecords/List/Controller";
 			sourceTree = "<group>";
 		};
 		2DEBE8A126CFBED400740A24 /* View */ = {
@@ -431,8 +434,8 @@
 		2DEBE8A226CFBED400740A24 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				2DEBE8A326CFBED400740A24 /* MedicalRecords.storyboard */,
-				2DEBE8A426CFBED400740A24 /* MedicalRecordList.storyboard */,
+				2DEBE8A326CFBED400740A24 /* MedicalRecordList.storyboard */,
+				2DEBE8A426CFBED400740A24 /* MedicalRecords.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -923,10 +926,10 @@
 				C037878726B2A1CB004344E0 /* DogProfileDetail.storyboard in Resources */,
 				B584B3B526B264CD005A02C5 /* LaunchScreen.storyboard in Resources */,
 				B584B3DD26B28DF2005A02C5 /* Main.storyboard in Resources */,
-				2DEBE8C026CFBED400740A24 /* MedicalRecordList.storyboard in Resources */,
+				2DEBE8C026CFBED400740A24 /* MedicalRecords.storyboard in Resources */,
 				2DEBE8B726CFBED400740A24 /* MRDTableViewCell.xib in Resources */,
 				2DEBE8B426CFBED400740A24 /* MedicalRecordDetailEdit.storyboard in Resources */,
-				2DEBE8BF26CFBED400740A24 /* MedicalRecords.storyboard in Resources */,
+				2DEBE8BF26CFBED400740A24 /* MedicalRecordList.storyboard in Resources */,
 				B54FBEB226BBD41A00659D14 /* PrescriptionViewCell.xib in Resources */,
 				C0C72ABB26C1068C00666FF6 /* GoogleService-Info.plist in Resources */,
 				B505207226BC39BE00306D99 /* VetProfile.xib in Resources */,
