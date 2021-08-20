@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>234294361299-bev4gdrpt4pe7q7c6cmn1j8iu3i88732.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.234294361299-bev4gdrpt4pe7q7c6cmn1j8iu3i88732</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCttD_qNDU7-Jyo8ShH0FnypZBgvEKTT78</string>
+	<key>GCM_SENDER_ID</key>
+	<string>234294361299</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.Novi.trial-AnnyeongDog</string>
+	<key>PROJECT_ID</key>
+	<string>trial-annyeongdog</string>
+	<key>STORAGE_BUCKET</key>
+	<string>trial-annyeongdog.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:234294361299:ios:994946d29bc06fed036826</string>
+	<key>DATABASE_URL</key>
+	<string>https://trial-annyeongdog-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+</dict>
+</plist>

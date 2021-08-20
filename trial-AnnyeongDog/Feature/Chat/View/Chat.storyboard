@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Chat View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Chat" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="ChatViewController" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4ps-xg-ho1">
+                                <rect key="frame" x="0.0" y="44" width="390" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Y6W-OH-hqX" id="Rgr-Cu-Y8A"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" id="7bi-KM-t3k">
+                                <rect key="frame" x="0.0" y="759" width="390" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tulis pesan..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RXA-KD-ItD">
+                                        <rect key="frame" x="73" y="8" width="244" height="34"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="244" id="udY-JK-gbW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="30"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="US9-lh-0O1">
+                                        <rect key="frame" x="20" y="6.6666666666666679" width="40" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="tintColor" red="0.22352941179999999" green="0.25882352939999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.22352941176470587" green="0.25882352941176467" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
+                                            <imageReference key="backgroundImage" image="camera" catalog="system" symbolScale="large"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmP-yJ-2eY">
+                                        <rect key="frame" x="332" y="6.6666666666666643" width="36" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="tintColor" red="0.22352941179999999" green="0.25882352939999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="0.22352941179999999" green="0.25882352939999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
+                                            <imageReference key="backgroundImage" image="arrow.right.circle" catalog="system" symbolScale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="sendButtonPressed:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bTK-uY-yBI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="separatorColor"/>
+                                <constraints>
+                                    <constraint firstItem="US9-lh-0O1" firstAttribute="top" secondItem="7bi-KM-t3k" secondAttribute="top" constant="7.9999999999999982" id="FoU-AK-O5p"/>
+                                    <constraint firstAttribute="bottom" secondItem="US9-lh-0O1" secondAttribute="bottom" constant="43.000000000000014" id="H3L-xg-fFU"/>
+                                    <constraint firstAttribute="bottom" secondItem="hmP-yJ-2eY" secondAttribute="bottom" constant="44.333333333333314" id="Iy2-Bd-dsI"/>
+                                    <constraint firstItem="US9-lh-0O1" firstAttribute="leading" secondItem="7bi-KM-t3k" secondAttribute="leading" constant="20" symbolic="YES" id="QWV-Av-rC8"/>
+                                    <constraint firstItem="hmP-yJ-2eY" firstAttribute="leading" secondItem="RXA-KD-ItD" secondAttribute="trailing" constant="15" id="YVT-8W-Zd0"/>
+                                    <constraint firstAttribute="trailing" secondItem="hmP-yJ-2eY" secondAttribute="trailing" constant="22" id="cPB-zO-NWe"/>
+                                    <constraint firstItem="hmP-yJ-2eY" firstAttribute="top" secondItem="7bi-KM-t3k" secondAttribute="top" constant="8.0000000000000213" id="d8m-JL-Jxz"/>
+                                    <constraint firstAttribute="bottom" secondItem="RXA-KD-ItD" secondAttribute="bottom" constant="43" id="dC0-c9-hXM"/>
+                                    <constraint firstItem="RXA-KD-ItD" firstAttribute="leading" secondItem="US9-lh-0O1" secondAttribute="trailing" constant="13" id="kUg-Sb-pEx"/>
+                                    <constraint firstItem="RXA-KD-ItD" firstAttribute="centerX" secondItem="7bi-KM-t3k" secondAttribute="centerX" id="vff-f6-b9l"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="7bi-KM-t3k" firstAttribute="top" secondItem="4ps-xg-ho1" secondAttribute="bottom" id="0sg-Nt-6Yx"/>
+                            <constraint firstItem="4ps-xg-ho1" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="OT7-mr-Nw1"/>
+                            <constraint firstItem="4ps-xg-ho1" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Qz2-Kg-DoE"/>
+                            <constraint firstItem="4ps-xg-ho1" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="d6S-jb-zPZ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="4ps-xg-ho1" secondAttribute="bottom" constant="51" id="khL-8W-2PZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="QF4-wV-aaa">
+                        <barButtonItem key="backBarButtonItem" id="6ZT-qH-gni"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cameraButton" destination="US9-lh-0O1" id="Hfo-7q-Cji"/>
+                        <outlet property="chatTableView" destination="4ps-xg-ho1" id="zU2-Tv-TLe"/>
+                        <outlet property="chatView" destination="7bi-KM-t3k" id="bGn-UZ-Ka5"/>
+                        <outlet property="messageTextField" destination="RXA-KD-ItD" id="4k4-W1-7wL"/>
+                        <outlet property="sendButton" destination="hmP-yJ-2eY" id="6O5-Cd-dDm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-258.46153846153845" y="32.701421800947863"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.right.circle" catalog="system" width="128" height="121"/>
+        <image name="camera" catalog="system" width="128" height="94"/>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

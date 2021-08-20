@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="poppins.semibold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VetProfile" customModule="trial_AnnyeongDog" customModuleProvider="target">
+            <connections>
+                <outlet property="vetImage" destination="Xa1-IS-sFU" id="3q2-r9-ba5"/>
+                <outlet property="vetName" destination="hPt-tC-Cme" id="0LL-Zd-yp5"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="33"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hPt-tC-Cme">
+                    <rect key="frame" x="62" y="4.6666666666666679" width="112" height="24"/>
+                    <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vet" translatesAutoresizingMaskIntoConstraints="NO" id="Xa1-IS-sFU">
+                    <rect key="frame" x="12" y="-3.6666666666666679" width="40" height="40.333333333333343"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="JZW-4h-okN"/>
+                        <constraint firstAttribute="width" constant="40" id="Qj7-Ks-919"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="hPt-tC-Cme" firstAttribute="leading" secondItem="Xa1-IS-sFU" secondAttribute="trailing" constant="10" id="BG1-qa-gLa"/>
+                <constraint firstItem="Xa1-IS-sFU" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="YTs-2o-rpw"/>
+                <constraint firstItem="hPt-tC-Cme" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="a7T-pm-2IJ"/>
+                <constraint firstAttribute="trailing" secondItem="hPt-tC-Cme" secondAttribute="trailing" constant="6" id="qkb-f7-II8"/>
+                <constraint firstItem="Xa1-IS-sFU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="12" id="xMM-Rp-kCH"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="296.92307692307691" y="83.175355450236964"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="vet" width="58" height="58"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

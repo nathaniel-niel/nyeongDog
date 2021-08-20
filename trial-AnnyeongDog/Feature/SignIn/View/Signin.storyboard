@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="poppins.semibold.ttf">
+            <string>Poppins-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Signin View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="Signin" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="SigninViewController" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let’s Start Maintaining Your Pet’s Health." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEz-M9-UqA">
+                                <rect key="frame" x="20" y="99" width="350" height="209"/>
+                                <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xiX-Dj-QWq">
+                                <rect key="frame" x="66" y="364" width="258" height="258"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="258" id="zKh-a5-Tvi"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wHH-81-KSK" customClass="Signin" customModule="trial_AnnyeongDog" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="710" width="390" height="100"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="2ea-8N-wWC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="wHH-81-KSK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="0vc-XM-SVV"/>
+                            <constraint firstItem="xiX-Dj-QWq" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="66" id="HOF-xf-Yln"/>
+                            <constraint firstItem="wHH-81-KSK" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="Jcg-g6-Wdc"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="xiX-Dj-QWq" secondAttribute="trailing" constant="66" id="Ohr-cE-mmY"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wHH-81-KSK" secondAttribute="trailing" id="Pw6-5l-xVD"/>
+                            <constraint firstItem="yEz-M9-UqA" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="20" id="bOA-kl-jid"/>
+                            <constraint firstAttribute="trailing" secondItem="yEz-M9-UqA" secondAttribute="trailing" constant="20" id="jHO-j1-T12"/>
+                            <constraint firstItem="xiX-Dj-QWq" firstAttribute="top" secondItem="yEz-M9-UqA" secondAttribute="bottom" constant="56" id="tRO-ma-9gg"/>
+                            <constraint firstItem="wHH-81-KSK" firstAttribute="top" secondItem="xiX-Dj-QWq" secondAttribute="bottom" constant="88" id="wJ8-pH-ZUc"/>
+                            <constraint firstItem="yEz-M9-UqA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="55" id="ybf-aB-Ca0"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AZW-ne-s1K"/>
+                    <connections>
+                        <outlet property="signInButtonView" destination="wHH-81-KSK" id="h7j-TN-Zft"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1033.8461538461538" y="64.691943127962077"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
