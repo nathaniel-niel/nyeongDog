@@ -16,9 +16,9 @@ class DataManipulation {
     static let sharedData = DataManipulation()
     
     // MARK: Model Declaration
-    var mrdModel : [MRDModel] = []
-    var dogModel : [DogsModel] = []
-    var vetModel : [VetListModel] = []
+    private var mrdModel : [MRDModel] = []
+    private var dogModel : [DogsModel] = []
+    private var vetModel : [VetListModel] = []
     
     // MARK: - Firebase configuration
     
@@ -235,3 +235,4 @@ class DataManipulation {
     }
     
 }
+

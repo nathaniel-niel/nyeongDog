@@ -114,9 +114,9 @@ class DogProfileDetailEditViewController: UIViewController, UIImagePickerControl
     
     //MARK: - Medical Record Button
     @IBAction func MedicalRecordButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "MedicalRecordsFilledState", bundle: nil)
+        let storyboard = UIStoryboard(name: "MedicalRecordList", bundle: nil)
         
-        let vc = storyboard.instantiateViewController(identifier: "medicalRecordsFilled") as! MedicalRecordsFilledViewController
+        let vc = storyboard.instantiateViewController(identifier: "medicalRecordsFilled") as! MedicalRecordListViewController
                 
         self.navigationController?.pushViewController(vc, animated: true)
     }
