@@ -30,6 +30,7 @@ extension VetListViewController: UITableViewDelegate, UITableViewDataSource{
             cell.priceLabel.text = searchVetName[indexPath.row].price
             cell.pengalamanLabel.text = searchVetName[indexPath.row].expYears
             cell.ratingLabel.text = searchVetName[indexPath.row].rating
+            cell.statusView.backgroundColor = searchVetName[indexPath.row].statusVet
         }
         else{
             
@@ -37,7 +38,7 @@ extension VetListViewController: UITableViewDelegate, UITableViewDataSource{
             cell.priceLabel.text = ViewModel.vetNameList[indexPath.row].price
             cell.pengalamanLabel.text = ViewModel.vetNameList[indexPath.row].expYears
             cell.ratingLabel.text = ViewModel.vetNameList[indexPath.row].rating
-            
+            cell.statusView.backgroundColor = ViewModel.vetNameList[indexPath.row].statusVet
         }
         
         return cell
@@ -62,6 +63,7 @@ extension VetListViewController: UITableViewDelegate, UITableViewDataSource{
                 vc.clinic = searchVetName[indexPath.row].clinicName ?? "no data"
                 vc.strvNumber = searchVetName[indexPath.row].strvNumber ?? "no data"
                 vc.price = searchVetName[indexPath.row].price ?? "no data"
+                vc.statusVet = searchVetName[indexPath.row].statusVet ?? .clear
         }
         else{
             vc.vetName = ViewModel.vetNameList[indexPath.row].vetName ?? "no data"
@@ -71,6 +73,7 @@ extension VetListViewController: UITableViewDelegate, UITableViewDataSource{
             vc.clinic = ViewModel.vetNameList[indexPath.row].clinicName ?? "no data"
             vc.strvNumber = ViewModel.vetNameList[indexPath.row].strvNumber ?? "no data"
             vc.price = ViewModel.vetNameList[indexPath.row].price ?? "no data"
+            vc.statusVet = ViewModel.vetNameList[indexPath.row].statusVet ?? .clear
         }
         self.present(vc, animated: true, completion: nil)
     }

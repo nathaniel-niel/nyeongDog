@@ -4,7 +4,7 @@
 //
 //  Created by Pieter Yonathan on 05/08/21.
 //
-
+import UIKit
 import Foundation
 
 struct VetListModel {
@@ -16,5 +16,6 @@ struct VetListModel {
     var rating: String?
     var price: String?
     var alumnus: String?
+    var statusVet: UIColor?
 }
 

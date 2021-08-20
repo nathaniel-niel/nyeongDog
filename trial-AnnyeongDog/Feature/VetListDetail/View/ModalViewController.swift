@@ -28,6 +28,7 @@ class ModalViewController: UIViewController {
     var clinic: String = ""
     var strvNumber: String = ""
     var price: String = ""
+    var statusVet: UIColor = .clear
     
     // MARK: - App Life Cycle
     override func viewDidLoad() {
@@ -62,6 +63,7 @@ class ModalViewController: UIViewController {
         uiView.clinicLabel.text = clinic
         uiView.strvNumber.text = strvNumber
         uiView.chargeLabel.text = price
+        uiView.statusView.backgroundColor = statusVet
     }
     
     //Mark: - Function Alert Sign In
