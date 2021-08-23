@@ -100,7 +100,7 @@
                         <viewLayoutGuide key="safeArea" id="ke4-f5-cGC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Dog Profile" image="ic_dogProfileGray" selectedImage="ic_dogProfilePurple" id="2NI-uD-ukp">
+                    <tabBarItem key="tabBarItem" title="Dog Profile" image="ic_dogProfileGray1" selectedImage="ic_dogProfilePurple" id="2NI-uD-ukp">
                         <inset key="imageInsets" minX="0.0" minY="45" maxX="0.0" maxY="44"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" title="Dog Profile" id="QdZ-hT-M9e">
@@ -146,7 +146,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_dogProfileGray" width="61" height="59"/>
+        <image name="ic_dogProfileGray1" width="27" height="26"/>
         <image name="ic_dogProfilePurple" width="61" height="59"/>
         <image name="person.3.fill" catalog="system" width="128" height="61"/>
         <systemColor name="systemBackgroundColor">

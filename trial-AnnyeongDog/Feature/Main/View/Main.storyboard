@@ -101,7 +101,7 @@
         <scene sceneID="EgM-MG-R9k">
             <objects>
                 <viewControllerPlaceholder storyboardIdentifier="DogProfileMenu" storyboardName="DogProfileFilledState" id="rzu-iK-bps" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Dog Profile" image="ic_dogProfileGray" selectedImage="ic_dogProfilePurple" id="5r7-PL-1qy">
+                    <tabBarItem key="tabBarItem" title="Dog Profile" image="ic_dogProfileGray1" selectedImage="ic_dogProfilePurple" id="5r7-PL-1qy">
                         <inset key="imageInsets" minX="0.0" minY="45" maxX="0.0" maxY="45"/>
                     </tabBarItem>
                 </viewControllerPlaceholder>
@@ -176,7 +176,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_dogProfileGray" width="61" height="59"/>
+        <image name="ic_dogProfileGray1" width="27" height="26"/>
         <image name="ic_dogProfilePurple" width="61" height="59"/>
         <image name="ic_findVetGray" width="126" height="102"/>
         <image name="ic_findVetPurple" width="126" height="102"/>
