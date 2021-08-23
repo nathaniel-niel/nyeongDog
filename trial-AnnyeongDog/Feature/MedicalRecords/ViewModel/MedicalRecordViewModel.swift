@@ -42,4 +42,9 @@ class MedicalRecordViewModel{
         DataManipulation.sharedData.deleteDataToMedicalRecord(with: UserControl.shared.user?.uid ?? "unknown", with: dogId, with: mrId)
     }
     
+    //Create Data
+    func createData(dogId: String, id: String, date: String, vet: String, diagnosis: String, vaccine: String, medicine: String, vaccineType: String, dosage: String, desc: String ){
+        DataManipulation.sharedData.insertDataToMedicalRecord(with: UserControl.shared.user?.uid ?? "unknown", with: dogId , with: MRDModel(id: id, date: date, veterinarian: vet, diagnosis: diagnosis, vaccine: vaccine, medicine: medicine, vaccineType: vaccineType, dosage: dosage,description: desc))
+    }
+    
 }

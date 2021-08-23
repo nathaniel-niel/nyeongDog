@@ -17,7 +17,7 @@ class MedicalRecordDetailAddViewController: UIViewController {
     // MARK: Object Declaration
     let helper = Helper()
     var mrdModel: MRDModel?
-    
+    let viewModel = MedicalRecordViewModel()
     // MARK: Variables Declaration
     var date: String = ""
     var vet: String = ""
@@ -90,7 +90,7 @@ class MedicalRecordDetailAddViewController: UIViewController {
     }
     
     
-    //MARK: - Display Alert
+    // MARK: - Display Alert
     
     // function to show alert when back button tapped
     @objc private func alertView(){
@@ -106,7 +106,8 @@ class MedicalRecordDetailAddViewController: UIViewController {
     
     @objc private func didSaveButtonTapped(){
         self.dismiss(animated: true, completion: nil)
-        DataManipulation.sharedData.insertDataToMedicalRecord(with: UserControl.shared.user?.uid ?? "unknown", with: dogId ?? "no data", with: MRDModel(id: helper.generateUniqueID(length: 6), date: date, veterinarian: vet, diagnosis: diagnosis, vaccine: vaccine, medicine: medicine, vaccineType: vaccineType, dosage: dosage,description: desc))
+        viewModel.createData(dogId: dogId ?? "unknown", id: helper.generateUniqueID(length: 6), date: date, vet: vet, diagnosis: diagnosis, vaccine: vaccine, medicine: medicine, vaccineType: vaccineType, dosage: dosage, desc: desc)
+
     }
 }
 
