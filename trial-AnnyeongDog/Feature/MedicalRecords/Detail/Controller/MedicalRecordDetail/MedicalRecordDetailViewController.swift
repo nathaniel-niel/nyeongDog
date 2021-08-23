@@ -94,7 +94,7 @@ class MedicalRecordDetailViewcontroller: UIViewController{
         
         let navVc = UINavigationController(rootViewController: vc)
         
-        self.present(navVc, animated: false, completion: nil)
+        self.navigationController?.pushViewController(navVc, animated: true)
         
     }
 
