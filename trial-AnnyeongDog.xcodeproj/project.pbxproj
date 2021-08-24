@@ -88,6 +88,8 @@
 		B5A0B08E26BA9E2F00D5C273 /* DescriptionTextViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5A0B08C26BA9E2F00D5C273 /* DescriptionTextViewCell.xib */; };
 		B5AF9D4C26BBE7D000A59690 /* MedicineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF9D4A26BBE7D000A59690 /* MedicineCell.swift */; };
 		B5AF9D4D26BBE7D000A59690 /* MedicineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B5AF9D4B26BBE7D000A59690 /* MedicineCell.xib */; };
+		C00D231026D54A0A004BC076 /* MedicalRecordsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00D230E26D54A0A004BC076 /* MedicalRecordsButton.swift */; };
+		C00D231126D54A0A004BC076 /* MedicalRecordsButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = C00D230F26D54A0A004BC076 /* MedicalRecordsButton.xib */; };
 		C00DE8FC26B3D8AE00E99343 /* MedicalRecordListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C00DE8F626B3D8AE00E99343 /* MedicalRecordListTableViewCell.xib */; };
 		C00DE8FE26B3D8AE00E99343 /* PrepareToMRD.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00DE8F826B3D8AE00E99343 /* PrepareToMRD.swift */; };
 		C00DE8FF26B3D8AE00E99343 /* MedicalRecordListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00DE8F926B3D8AE00E99343 /* MedicalRecordListTableViewCell.swift */; };
@@ -202,6 +204,8 @@
 		B5A0B08C26BA9E2F00D5C273 /* DescriptionTextViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionTextViewCell.xib; sourceTree = "<group>"; };
 		B5AF9D4A26BBE7D000A59690 /* MedicineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineCell.swift; sourceTree = "<group>"; };
 		B5AF9D4B26BBE7D000A59690 /* MedicineCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedicineCell.xib; sourceTree = "<group>"; };
+		C00D230E26D54A0A004BC076 /* MedicalRecordsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalRecordsButton.swift; sourceTree = "<group>"; };
+		C00D230F26D54A0A004BC076 /* MedicalRecordsButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MedicalRecordsButton.xib; sourceTree = "<group>"; };
 		C00DE8F626B3D8AE00E99343 /* MedicalRecordListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicalRecordListTableViewCell.xib; sourceTree = "<group>"; };
 		C00DE8F826B3D8AE00E99343 /* PrepareToMRD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareToMRD.swift; sourceTree = "<group>"; };
 		C00DE8F926B3D8AE00E99343 /* MedicalRecordListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalRecordListTableViewCell.swift; sourceTree = "<group>"; };
@@ -770,6 +774,15 @@
 			path = Medicine;
 			sourceTree = "<group>";
 		};
+		C00D230D26D549F0004BC076 /* MedicalRecordsButton */ = {
+			isa = PBXGroup;
+			children = (
+				C00D230E26D54A0A004BC076 /* MedicalRecordsButton.swift */,
+				C00D230F26D54A0A004BC076 /* MedicalRecordsButton.xib */,
+			);
+			path = MedicalRecordsButton;
+			sourceTree = "<group>";
+		};
 		C01A908826BAF046007FA0B6 /* VideoCall */ = {
 			isa = PBXGroup;
 			children = (
@@ -874,13 +887,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		C050E2EA26CEBA090075A1D4 /* Picker */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Picker;
-			sourceTree = "<group>";
-		};
 		C07230BD26CE1856007E7EE7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -919,7 +925,7 @@
 		C0A21CDB26CE2C2700DF0BCE /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				C050E2EA26CEBA090075A1D4 /* Picker */,
+				C00D230D26D549F0004BC076 /* MedicalRecordsButton */,
 				C0A21CE526CE356900DF0BCE /* DogImage */,
 				C0A21CDC26CE2C2F00DF0BCE /* TextField */,
 			);
@@ -1036,6 +1042,7 @@
 				C0A21CE426CE2C8400DF0BCE /* DogProfileDetailTextField.xib in Resources */,
 				B584B3B526B264CD005A02C5 /* LaunchScreen.storyboard in Resources */,
 				C00DE90026B3D8AE00E99343 /* MedicalRecordList.storyboard in Resources */,
+				C00D231126D54A0A004BC076 /* MedicalRecordsButton.xib in Resources */,
 				2D628ED726B297B20008ECD2 /* MedicalRecordDetail.storyboard in Resources */,
 				5B05C39E26B2B3B00034A66A /* DeleteButtonTableViewCell.xib in Resources */,
 				C0A21CE926CE359700DF0BCE /* DogImageCell.xib in Resources */,
@@ -1105,6 +1112,7 @@
 				C01A909026BAF095007FA0B6 /* VideoCallViewController.swift in Sources */,
 				B5821A6426B7EEA0006DDED9 /* Signin.swift in Sources */,
 				C00DE8FF26B3D8AE00E99343 /* MedicalRecordListTableViewCell.swift in Sources */,
+				C00D231026D54A0A004BC076 /* MedicalRecordsButton.swift in Sources */,
 				5B3A109E26D4F6160022F85B /* ExtensionVetList+TableView.swift in Sources */,
 				2D646C2226BCDF2900E90EDF /* PresentationController.swift in Sources */,
 				5B67967426B41796004514F3 /* DogProfileTableViewCell.swift in Sources */,
