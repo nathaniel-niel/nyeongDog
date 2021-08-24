@@ -30,6 +30,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     
     override func viewWillAppear(_ animated: Bool) {
         fetchFirebase()
+        self.navigationItem.hidesBackButton = true
         self.tabBarController?.tabBar.isHidden = false
     }
     
