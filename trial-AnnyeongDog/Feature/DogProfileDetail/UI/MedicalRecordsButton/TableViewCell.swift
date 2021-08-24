@@ -1,27 +1,26 @@
 //
-//  DogProfileDetailTextField.swift
+//  TableViewCell.swift
 //  trial-AnnyeongDog
 //
-//  Created by Azka Kusuma on 19/08/21.
+//  Created by Azka Kusuma on 24/08/21.
 //
 
 import UIKit
 
-class DogProfileDetailTextField: UITableViewCell {
+class TableViewCell: UITableViewCell {
 
-    @IBOutlet weak var textFieldLabel: UILabel!
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var medicalRecordsButton: UIButton!
     
-    static let identifier = "textField"
+    static let identifier = "medicalButton"
     
     static func nib() -> UINib{
-        return UINib(nibName: "DogProfileDetailTextField", bundle: nil)
+        return UINib(nibName: "TableViewCell", bundle: nil)
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-       
+        medicalRecordsButton.layer.cornerRadius = 15
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,6 +28,5 @@ class DogProfileDetailTextField: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }
-
