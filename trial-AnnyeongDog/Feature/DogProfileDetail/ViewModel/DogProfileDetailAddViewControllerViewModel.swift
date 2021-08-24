@@ -16,7 +16,7 @@ struct DogProfileDetailAddViewControllerViewModel {
         return imagePicker
     }
     
-    
+    // TODO -> Nambah Gender + DogsDOB Buggy
     func saveDatatoFirebase(dogsName: String, dogDOB: String, dogBreed: String, dogWeight: String, dogColor: String, dogAllergy: String){
         print("fetch firebase")
         
