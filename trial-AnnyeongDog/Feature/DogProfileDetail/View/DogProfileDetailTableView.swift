@@ -39,6 +39,7 @@ class DogProfileDetailTableView: UIViewController{
         dogProfileDetail.DogProfileTableView.dataSource = self
         dogProfileDetail.setup()
         uiPickerView()
+       
         
     }
     
@@ -56,7 +57,7 @@ class DogProfileDetailTableView: UIViewController{
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: nil)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector( fetchToFirebase))
      
     }
     
@@ -68,6 +69,10 @@ class DogProfileDetailTableView: UIViewController{
     
     @objc private func keyboardWillHide(notification: NSNotification) {
         dogProfileDetail.DogProfileTableView.contentInset = .zero
+    }
+    
+    @objc func fetchToFirebase(){
+        viewModel.saveDatatoFirebase(dogsName: dogName, dogDOB: dogDOb, dogBreed: dogType, dogWeight: dogWeight, dogColor: dogColor, dogAllergy: dogAlergy)
     }
     
 }
