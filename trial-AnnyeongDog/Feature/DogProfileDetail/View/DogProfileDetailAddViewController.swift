@@ -174,7 +174,7 @@ class DogProfileDetailAddViewController: UIViewController,  UINavigationControll
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
         alert.addAction(UIAlertAction(title: "Yes", style: .destructive,handler: { action in
             
-            self.navigationController?.popViewController(animated: true)
+            self.navigationController?.dismiss(animated: true, completion: nil)
         }))
         
         self.present(alert, animated: true)
