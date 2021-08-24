@@ -31,6 +31,7 @@ extension MedicalRecordDetailAddViewController : UITextFieldDelegate, UITextView
         switch textField.tag {
         case 0:
             date = textField.text ?? "no value"
+            
         case 1:
             vet = textField.text ?? "no value"
         case 2:

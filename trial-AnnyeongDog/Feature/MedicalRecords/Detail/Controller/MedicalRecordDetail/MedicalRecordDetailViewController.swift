@@ -92,9 +92,9 @@ class MedicalRecordDetailViewcontroller: UIViewController{
         vc.dogId = dogId ?? "no data"
         vc.mrdModel = mrdModel
         
-        let navVc = UINavigationController(rootViewController: vc)
+//        let navVc = UINavigationController(rootViewController: vc)
         
-        self.navigationController?.pushViewController(navVc, animated: true)
+        self.navigationController?.pushViewController(vc, animated: true)
         
     }
 
