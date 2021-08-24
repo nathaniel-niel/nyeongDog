@@ -18,11 +18,14 @@
                 <subviews>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EMt-Tw-uHn">
                         <rect key="frame" x="13.5" y="26.5" width="310" height="50"/>
+                        <color key="backgroundColor" red="0.3835351467" green="0.42501482369999999" blue="0.67061495780000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="50" id="19U-HI-lfq"/>
                             <constraint firstAttribute="width" constant="310" id="Lu2-TD-JRR"/>
                         </constraints>
-                        <state key="normal" title="Button"/>
+                        <state key="normal" title="Button">
+                            <color key="titleColor" red="0.9208304665" green="0.9208304665" blue="0.9208304665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
                     </button>
                 </subviews>
                 <constraints>
