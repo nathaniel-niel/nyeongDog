@@ -103,6 +103,8 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
             
            
             cell.textFieldLabel.text = "Nama Anjing"
+            cell.tagFrom = 1
+            cell.delegate = self
             return cell
             
         case 2:
@@ -112,6 +114,8 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
             cell.textField.text = stringPickerDOB
             
             cell.textFieldLabel.text = "Usia"
+            cell.tagFrom = 2
+            cell.delegate = self
             return cell
             
         case 3:
@@ -122,6 +126,8 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
             cell.textField.text = stringPickerGender
             
             cell.textFieldLabel.text = "Jenis Kelamin"
+            cell.tagFrom = 3
+            cell.delegate = self
             return cell
             
         case 4:
@@ -129,6 +135,8 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
             
             
             cell.textFieldLabel.text = "Jenis Anjing"
+            cell.tagFrom = 4
+            cell.delegate = self
             return cell
             
         case 5:
@@ -136,6 +144,8 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
             
             cell.textField.keyboardType = .numberPad
             cell.textFieldLabel.text = "Berat Badan"
+            cell.tagFrom = 5
+            cell.delegate = self
             return cell
             
         case 6:
@@ -143,6 +153,8 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
             
             
             cell.textFieldLabel.text = "Warna"
+            cell.tagFrom = 6
+            cell.delegate = self
             return cell
             
         case 7:
@@ -150,6 +162,8 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
             
             
             cell.textFieldLabel.text = "Alergi"
+            cell.tagFrom = 7
+            cell.delegate = self
             return cell
             
         default:
@@ -174,6 +188,32 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
     
     
     
+}
+
+extension DogProfileDetailTableView: addData {
+    func addDogName(value: String) {
+        self.dogName = value
+    }
+    
+    func addDogType(value: String) {
+        self.dogType = value
+    }
+    
+    func addDogWeight(value: String) {
+        self.dogWeight = value
+    }
+    
+    func addDogColor(value: String) {
+        self.dogColor = value
+    }
+    
+    func addDogAlergy(value: String) {
+        self.dogAlergy = value
+    }
+    
+    func addDogDOB(value: String) {
+        self.dogDOb = value
+    }
 }
 
 

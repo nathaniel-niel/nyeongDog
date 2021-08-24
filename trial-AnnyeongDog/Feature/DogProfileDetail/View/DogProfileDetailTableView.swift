@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class DogProfileDetailTableView: UIViewController{
     
     @IBOutlet var dogProfileDetail: DogProfileDetailView!
@@ -14,6 +15,7 @@ class DogProfileDetailTableView: UIViewController{
     var viewModel = DogProfileDetailAddViewControllerViewModel()
     var genderModel = GenderModel()
     var dogsModel = DogsModel()
+//    var delegate: addData?
     
     var dogsDOBPicker = UIPickerView()
     var genderPicker = UIPickerView()
@@ -22,6 +24,13 @@ class DogProfileDetailTableView: UIViewController{
     var stringPickerDOB: String = ""
     
     var cell = DogProfileDetailTextField()
+        
+    var dogName = ""
+    var dogType = ""
+    var dogWeight = ""
+    var dogColor = ""
+    var dogAlergy = ""
+    var dogDOb = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +39,7 @@ class DogProfileDetailTableView: UIViewController{
         dogProfileDetail.DogProfileTableView.dataSource = self
         dogProfileDetail.setup()
         uiPickerView()
+        
     }
     
     func uiPickerView(){
