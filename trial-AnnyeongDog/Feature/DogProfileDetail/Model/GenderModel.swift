@@ -13,3 +13,7 @@ struct GenderModel {
     let dogYear = (0...49).map(String.init)
     let dogMonth = (0...12).map(String.init)
 }
+
+struct SelectedGenderModel {
+    let value: String
+}
