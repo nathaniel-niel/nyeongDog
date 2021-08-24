@@ -13,9 +13,9 @@ struct PrepareForMedical {
    
     func navigateToMedicalRecords(dogId : String) -> UIViewController {
         
-        let storyBoard: UIStoryboard = UIStoryboard(name: "MedicalRecordsFilledState", bundle: nil)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "MedicalRecordList", bundle: nil)
         
-        let medicalVC = storyBoard.instantiateViewController(withIdentifier: "medicalRecordsFilled") as! MedicalRecordsFilledViewController
+        let medicalVC = storyBoard.instantiateViewController(withIdentifier: "medicalRecordsFilled") as! MedicalRecordListViewController
         
         medicalVC.dogId =  dogId
         return medicalVC

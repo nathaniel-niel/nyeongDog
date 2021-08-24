@@ -20,9 +20,13 @@ class StorageManager {
         UserDefaults.standard.set(true, forKey: Key.isNewUser.rawValue)
     }
     
-    //Test
-    
-    func resetNewUser() {
+    func setExistingUser(){
         UserDefaults.standard.set(false, forKey: Key.isNewUser.rawValue)
     }
+    
+    //Test
+    
+//    func resetNewUser() {
+//        UserDefaults.standard.set(false, forKey: Key.isNewUser.rawValue)
+//    }
 }
