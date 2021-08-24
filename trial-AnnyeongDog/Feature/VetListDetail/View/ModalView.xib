@@ -162,8 +162,8 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Mw-2L-VHP" userLabel="Label">
                                                             <rect key="frame" x="0.0" y="31" width="414" height="31"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Universitas Nama" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7p-7T-azj" userLabel="Alumnus">
-                                                                    <rect key="frame" x="20" y="3.3333333333333144" width="374" height="24"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Universitas Nama" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7p-7T-azj" userLabel="Alumnus">
+                                                                    <rect key="frame" x="20" y="8" width="374" height="24"/>
                                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -230,7 +230,7 @@
                                                             <rect key="frame" x="0.0" y="31" width="414" height="30.666666666666671"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nama Klinik/ Tempat Praktik" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zF-Dj-dYK" userLabel="Alumnus">
-                                                                    <rect key="frame" x="20" y="4.3333333333333712" width="374" height="20.333333333333332"/>
+                                                                    <rect key="frame" x="20" y="10" width="374" height="20.333333333333332"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                                     <nil key="textColor"/>
@@ -292,19 +292,15 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkN-Ju-ZJg" userLabel="Label">
                                                             <rect key="frame" x="0.0" y="31.000000000000057" width="414" height="31"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xxxx xxxx xxxx xxxx" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msC-00-0GI" userLabel="Alumnus">
-                                                                    <rect key="frame" x="20" y="3.6666666666666288" width="374" height="24"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="xxxx xxxx xxxx xxxx" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msC-00-0GI" userLabel="Alumnus">
+                                                                    <rect key="frame" x="20" y="2.6666666666666856" width="374" height="24"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                            <constraints>
-                                                                <constraint firstItem="msC-00-0GI" firstAttribute="centerY" secondItem="kkN-Ju-ZJg" secondAttribute="centerY" id="bKn-zp-EUL"/>
-                                                                <constraint firstAttribute="trailing" secondItem="msC-00-0GI" secondAttribute="trailing" constant="20" id="jNo-YP-2SX"/>
-                                                                <constraint firstItem="msC-00-0GI" firstAttribute="leading" secondItem="kkN-Ju-ZJg" secondAttribute="leading" constant="20" id="n5H-Pb-Ju0"/>
-                                                            </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wSg-k3-FgR" userLabel="divider">
                                                             <rect key="frame" x="0.0" y="62.000000000000057" width="414" height="31"/>
@@ -314,6 +310,13 @@
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <color key="backgroundColor" systemColor="systemGray3Color"/>
                                                                 </view>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="STRV is Veterinary Registration Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmE-EB-C5t">
+                                                                    <rect key="frame" x="16" y="19.999999999999943" width="353" height="11"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
+                                                                    <color key="textColor" systemColor="systemGray3Color"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         </view>
