@@ -133,7 +133,7 @@
 		2D74BE1C26B4558F009B3629 /* UserControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserControl.swift; sourceTree = "<group>"; };
 		2D7E85E426D3533B0074FF44 /* MedicalRecordList+UI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MedicalRecordList+UI.swift"; sourceTree = "<group>"; };
 		2D7E85E526D3533B0074FF44 /* MedicalRecordListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicalRecordListViewController.swift; sourceTree = "<group>"; };
-		2D7E85E826D371620074FF44 /* SigninViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SigninViewModel.swift; path = "../../../../../../../../../Downloads/nyeongDog-7eba996de2d6d2b618961596ab30d83b32b703bf/trial-AnnyeongDog/Feature/SignIn/View/SigninViewModel.swift"; sourceTree = "<group>"; };
+		2D7E85E826D371620074FF44 /* SigninViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninViewModel.swift; sourceTree = "<group>"; };
 		2D7E85EB26D371920074FF44 /* AlertManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		5B05C39726B2A9160034A66A /* MedicalRecordDetailEdit.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MedicalRecordDetailEdit.storyboard; sourceTree = "<group>"; };
 		5B05C39926B2A9450034A66A /* MedicalRecordDetailEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalRecordDetailEditViewController.swift; sourceTree = "<group>"; };
@@ -462,8 +462,7 @@
 			children = (
 				2D7E85EB26D371920074FF44 /* AlertManager.swift */,
 			);
-			name = Alert;
-			path = "../../../../../../../../Downloads/nyeongDog-7eba996de2d6d2b618961596ab30d83b32b703bf/trial-AnnyeongDog/Vendor/Util/Alert";
+			path = Alert;
 			sourceTree = "<group>";
 		};
 		5B391B3326C2E54400406CEC /* ViewModel */ = {
