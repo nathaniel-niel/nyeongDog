@@ -59,4 +59,14 @@ class ModalUIView: UIView{
         statusView.layer.cornerRadius = statusView.bounds.size.width / 2
         statusView.backgroundColor = UIColor.green
     }
+    
+    func consultButtonCondition(){
+        if statusView.backgroundColor == UIColor.red {
+            consultButton.isEnabled = false
+            consultButton.backgroundColor = UIColor.gray
+        }
+        else{
+            consultButton.isEnabled = true
+        }
+    }
 }
