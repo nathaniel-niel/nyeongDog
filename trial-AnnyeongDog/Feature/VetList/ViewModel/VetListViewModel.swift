@@ -12,9 +12,8 @@ class VetListViewModel{
     // MARK: - Object Declaration
     let dummydata = VetDummyData()
     var vetNameList = [VetListModel]()
-
     
-    //MARK: - Function masukin data ke variable
+    //MARK: - Function Fill Data for Search
     func fillDataVetList(){
         var looping = dummydata.data.count - 1
         while  looping > -1{
@@ -22,6 +21,4 @@ class VetListViewModel{
             looping = looping - 1
         }
     }
-    
-    
 }
