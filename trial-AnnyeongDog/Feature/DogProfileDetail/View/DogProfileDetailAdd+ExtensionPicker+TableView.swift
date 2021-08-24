@@ -59,9 +59,11 @@ extension DogProfileDetailTableView: UIPickerViewDelegate, UIPickerViewDataSourc
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if pickerView.tag == 2{
+        if pickerView.tag == 2 {
            
             stringPickerGender = genderModel.genderArray[row]
+            dogProfileDetail.DogProfileTableView.reloadRows(at: [IndexPath(row: 3, section: 0)], with: .none)
+           // cell.textField.text = stringPickerGender
             
             
         } else {
@@ -71,10 +73,11 @@ extension DogProfileDetailTableView: UIPickerViewDelegate, UIPickerViewDataSourc
             let selectedDogYear = genderModel.dogYear[dogYear]
             let selectedDogMonth = genderModel.dogMonth[dogMonth]
             stringPickerDOB = "\(selectedDogYear) Tahun \(selectedDogMonth) Bulan"
-            print(stringPickerDOB)
-          
-          
-        }
+            
+            dogProfileDetail.DogProfileTableView.reloadRows(at: [IndexPath(row: 2, section: 0)], with: .none)
+//            cell.textField.text = stringPickerDOB
+            
+          }
         
     }
     
@@ -106,6 +109,7 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
             let cell =  dogProfileDetail.DogProfileTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
             
             cell.textField.inputView = dogsDOBPicker
+            cell.textField.text = stringPickerDOB
             
             cell.textFieldLabel.text = "Usia"
             return cell
@@ -163,6 +167,8 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
             return 86
         }
     }
+    
+    
     
 }
 
