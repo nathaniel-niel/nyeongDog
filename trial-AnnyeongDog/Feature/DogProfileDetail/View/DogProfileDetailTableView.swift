@@ -30,8 +30,6 @@ class DogProfileDetailTableView: UIViewController{
         dogProfileDetail.DogProfileTableView.dataSource = self
         dogProfileDetail.setup()
         uiPickerView()
-        
-        
     }
     
     func uiPickerView(){

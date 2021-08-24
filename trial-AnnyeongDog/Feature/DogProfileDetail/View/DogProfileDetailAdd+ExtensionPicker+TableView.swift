@@ -101,7 +101,7 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
         case 1:
             let cell =  dogProfileDetail.DogProfileTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
             
-            
+           
             cell.textFieldLabel.text = "Nama Anjing"
             return cell
             
@@ -119,9 +119,6 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
             
             
             cell.textField.inputView = genderPicker
-            
-            //TODO -> Listener, Pickernya masih belum mau connect ke TextField
-            
             cell.textField.text = stringPickerGender
             
             cell.textFieldLabel.text = "Jenis Kelamin"
