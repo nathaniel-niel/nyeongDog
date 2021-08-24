@@ -18,6 +18,7 @@ class DogProfileDetailAddViewController: UIViewController,  UINavigationControll
     @IBOutlet weak var colorTextField: UITextField!
     @IBOutlet weak var dogImage: UIImageView!
     @IBOutlet weak var allergyTextField: UITextField!
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var dogsDOB: UITextField!
     
     // MARK: Object Declaration
@@ -96,14 +97,15 @@ class DogProfileDetailAddViewController: UIViewController,  UINavigationControll
         var keyboardFrame:CGRect = (userInfo[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
         keyboardFrame = self.view.convert(keyboardFrame, from: nil)
         
-       
-        
+        var contentInset:UIEdgeInsets = self.scrollView.contentInset
+        contentInset.bottom = keyboardFrame.size.height + 20
+        scrollView.contentInset = contentInset
     }
     
     
     @objc func keyboardDissapear(notification:NSNotification){
         let contentInset:UIEdgeInsets = UIEdgeInsets.zero
-       
+        scrollView.contentInset = contentInset
     }
     
     // MARK: Functions to Navigation Bar
@@ -123,6 +125,9 @@ class DogProfileDetailAddViewController: UIViewController,  UINavigationControll
         for textfield in textfields {
             textfield.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
         }
+        
+        //MARK: - Scroll function
+        scrollView.contentSize = CGSize(width: self.view.frame.width - 40, height: self.view.frame.height - 80)
         
         // UiPickerView Input View
         dogsDOB.inputView = dobPickerView
