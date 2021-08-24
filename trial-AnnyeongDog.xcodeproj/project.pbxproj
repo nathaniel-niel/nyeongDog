@@ -103,8 +103,6 @@
 		C037879126B2A1CB004344E0 /* DogProfileDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */; };
 		C037879226B2A1CB004344E0 /* PrepareForMedical.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037878426B2A1CB004344E0 /* PrepareForMedical.swift */; };
 		C050E2EE26CFB9070075A1D4 /* DogProfileDetailAdd+ExtensionPicker+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C050E2ED26CFB9070075A1D4 /* DogProfileDetailAdd+ExtensionPicker+TableView.swift */; };
-		C050E2F226D4F51C0075A1D4 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C050E2F026D4F51C0075A1D4 /* TableViewCell.swift */; };
-		C050E2F326D4F51C0075A1D4 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C050E2F126D4F51C0075A1D4 /* TableViewCell.xib */; };
 		C0541BD226BD40D4000D2BB4 /* DatabaseCollectionName.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0541BD126BD40D4000D2BB4 /* DatabaseCollectionName.swift */; };
 		C07230B726CD717A007E7EE7 /* DogProfileDetailAddViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07230B626CD717A007E7EE7 /* DogProfileDetailAddViewControllerViewModel.swift */; };
 		C079A37726B844D00061EC30 /* DogsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C079A37626B844D00061EC30 /* DogsModel.swift */; };
@@ -220,8 +218,6 @@
 		C037878426B2A1CB004344E0 /* PrepareForMedical.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrepareForMedical.swift; sourceTree = "<group>"; };
 		C037878526B2A1CB004344E0 /* ModelBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelBackButton.swift; sourceTree = "<group>"; };
 		C050E2ED26CFB9070075A1D4 /* DogProfileDetailAdd+ExtensionPicker+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogProfileDetailAdd+ExtensionPicker+TableView.swift"; sourceTree = "<group>"; };
-		C050E2F026D4F51C0075A1D4 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		C050E2F126D4F51C0075A1D4 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		C0541BD126BD40D4000D2BB4 /* DatabaseCollectionName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseCollectionName.swift; sourceTree = "<group>"; };
 		C07230B626CD717A007E7EE7 /* DogProfileDetailAddViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileDetailAddViewControllerViewModel.swift; sourceTree = "<group>"; };
 		C079A37626B844D00061EC30 /* DogsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsModel.swift; sourceTree = "<group>"; };
@@ -878,13 +874,11 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		C050E2EF26D4F4FD0075A1D4 /* MedicalRecordsButton */ = {
+		C050E2EA26CEBA090075A1D4 /* Picker */ = {
 			isa = PBXGroup;
 			children = (
-				C050E2F026D4F51C0075A1D4 /* TableViewCell.swift */,
-				C050E2F126D4F51C0075A1D4 /* TableViewCell.xib */,
 			);
-			path = MedicalRecordsButton;
+			path = Picker;
 			sourceTree = "<group>";
 		};
 		C07230BD26CE1856007E7EE7 /* ViewModel */ = {
@@ -925,7 +919,7 @@
 		C0A21CDB26CE2C2700DF0BCE /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				C050E2EF26D4F4FD0075A1D4 /* MedicalRecordsButton */,
+				C050E2EA26CEBA090075A1D4 /* Picker */,
 				C0A21CE526CE356900DF0BCE /* DogImage */,
 				C0A21CDC26CE2C2F00DF0BCE /* TextField */,
 			);
@@ -1018,7 +1012,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B57E0EB826B45B2900FACDAC /* Poppins in Resources */,
-				C050E2F326D4F51C0075A1D4 /* TableViewCell.xib in Resources */,
 				5B3F4BEB26B3FA7F004448DA /* MedicalRecordDetailAdd.storyboard in Resources */,
 				2D74BE1726B454E8009B3629 /* DogProfileDetailEdit.storyboard in Resources */,
 				B5AF9D4D26BBE7D000A59690 /* MedicineCell.xib in Resources */,
@@ -1163,11 +1156,7 @@
 				2D5EE3D426C40D9400785683 /* ExtensionMRDAView+TextField+TextView.swift in Sources */,
 				B584B3A926B264CC005A02C5 /* AppDelegate.swift in Sources */,
 				B535E09D26BBB1BE0038251D /* ChatViewCell.swift in Sources */,
-<<<<<<< Updated upstream
 				5B3A10A126D4F6160022F85B /* ModalViewController.swift in Sources */,
-=======
-				C050E2F226D4F51C0075A1D4 /* TableViewCell.swift in Sources */,
->>>>>>> Stashed changes
 				C037878826B2A1CB004344E0 /* GenderModel.swift in Sources */,
 				2D74BE1D26B4558F009B3629 /* UserControl.swift in Sources */,
 				B5A0B08D26BA9E2F00D5C273 /* DescriptionTextViewCell.swift in Sources */,

@@ -16,13 +16,6 @@ class DogProfileDetailView: UIView {
         DogProfileTableView.register(DogProfileDetailTextField.nib(), forCellReuseIdentifier: DogProfileDetailTextField.identifier)
         
         DogProfileTableView.register(DogImageCell.nib(), forCellReuseIdentifier: DogImageCell.identifier)
-        
-        DogProfileTableView.register(TableViewCell.nib(), forCellReuseIdentifier: TableViewCell.identifier)
-        
-        DogProfileTableView.separatorColor = .clear
-        
-        DogProfileTableView.allowsSelection = false
-        
     }
     
 }

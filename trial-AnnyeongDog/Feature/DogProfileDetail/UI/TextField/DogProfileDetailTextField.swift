@@ -21,7 +21,6 @@ class DogProfileDetailTextField: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-       
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,6 +28,11 @@ class DogProfileDetailTextField: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
+    func cellText(_ cellText: String?){
+        
+        textField.text = cellText
+       
+    }
+    
 }
-
