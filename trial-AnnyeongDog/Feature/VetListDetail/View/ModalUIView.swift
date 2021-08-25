@@ -16,6 +16,37 @@ class ModalUIView: UIView{
     
     // MARK: - UI Components Declaration
 
+    @IBOutlet weak var alumniTitle: UILabel!{
+        didSet{
+            alumniTitle.text = language.alumniTitleLabel
+        }
+    }
+    @IBOutlet weak var clinicTitle: UILabel!{
+        didSet{
+            clinicTitle.text = language.clinicTitleLabel
+        }
+    }
+    @IBOutlet weak var strvTitle: UILabel!{
+        didSet{
+            strvTitle.text = language.srtvTitleLabel
+        }
+    }
+    @IBOutlet weak var yearsexpTitle: UILabel!{
+        didSet{
+            yearsexpTitle.text = language.yearsexpTitleLabel
+        }
+    }
+    @IBOutlet weak var descSTRVTitle: UILabel!{
+        didSet{
+            descSTRVTitle.text = language.descSTRCTitleLabel
+        }
+    }
+    @IBOutlet weak var consultRateTitle: UILabel!{
+        didSet{
+            consultRateTitle.text = language.consultRateTitleLabel
+        }
+    }
+    
     @IBOutlet weak var line: UIView!
     @IBOutlet weak var vetImage: UIImageView!
     @IBOutlet weak var vetName: UILabel!
@@ -26,7 +57,11 @@ class ModalUIView: UIView{
     @IBOutlet weak var alumniLabel: UILabel!
     @IBOutlet weak var clinicLabel: UILabel!
     @IBOutlet weak var chargeLabel: UILabel!
-    @IBOutlet weak var consultButton: UIButton!
+    @IBOutlet weak var consultButton: UIButton!{
+        didSet{
+            consultButton.setTitle(language.consultButtonTitle, for: .normal)
+        }
+    }
     @IBOutlet weak var statusView: UIView!
     
     // didset function

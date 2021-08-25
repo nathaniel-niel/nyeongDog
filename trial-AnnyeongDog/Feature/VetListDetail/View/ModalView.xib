@@ -419,17 +419,23 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="alumniLabel" destination="g7p-7T-azj" id="9mX-LA-aks"/>
+                <outlet property="alumniTitle" destination="A5q-x3-VOV" id="8lq-Q0-pvM"/>
                 <outlet property="chargeLabel" destination="2B9-KV-94l" id="PP4-qZ-U0P"/>
                 <outlet property="clinicLabel" destination="5zF-Dj-dYK" id="huj-5R-NBh"/>
+                <outlet property="clinicTitle" destination="1QG-ri-OdS" id="jNq-WL-Ab3"/>
                 <outlet property="consultButton" destination="3yy-qa-YhK" id="AzS-6E-mYt"/>
+                <outlet property="consultRateTitle" destination="Ydj-BQ-f0Z" id="Ql1-hB-CtP"/>
+                <outlet property="descSTRVTitle" destination="JmE-EB-C5t" id="aOx-dd-vry"/>
                 <outlet property="line" destination="Ux0-5M-Pmo" id="cm6-xd-LNb"/>
                 <outlet property="statusView" destination="5Br-fb-WIy" id="U3u-Qc-PeW"/>
                 <outlet property="strvNumber" destination="msC-00-0GI" id="sm1-cj-KHb"/>
+                <outlet property="strvTitle" destination="iAb-O0-7lf" id="dIf-e0-5jh"/>
                 <outlet property="vetExp" destination="82b-3D-pMZ" id="OOY-Be-yfs"/>
                 <outlet property="vetImage" destination="VTf-tM-EDy" id="vdh-Ro-1OX"/>
                 <outlet property="vetName" destination="IQg-3t-Rpt" id="J4f-M2-XE6"/>
                 <outlet property="vetRating" destination="TLH-Nb-STP" id="f1R-6B-UJE"/>
                 <outlet property="viewRating" destination="C9a-g5-nWE" id="t65-jF-Ibl"/>
+                <outlet property="yearsexpTitle" destination="2AO-dL-aOA" id="cT9-hx-OMt"/>
             </connections>
             <point key="canvasLocation" x="-160" y="184.83412322274881"/>
         </view>

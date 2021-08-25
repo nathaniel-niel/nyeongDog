@@ -42,6 +42,7 @@ class VetListViewController: UIViewController{
     vetListTable.delegate = self
     vetListTable.dataSource = self
     self.navigationItem.title = language.navtitleLabel
+    
         
     //xib register
     vetListTable.register(VetListTableViewCell.nib(), forCellReuseIdentifier: VetListTableViewCell.identifier)

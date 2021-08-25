@@ -7,6 +7,15 @@
 */
 "vetListCell.vetLabel" = "Veterinarian";
 "vetListCell.yrsLabel" = "Yrs";
+
 "navigationItem.titleLabel" = "Veterinarian";
 "searchBar.placeholder" = "Example: Drh. Budi";
 "tabBarItem.Title.dogProfile" = "Dog Profile";
+
+"modal.alumniTitle" = "Alumni";
+"modal.clinicTitle" = "Clinic";
+"modal.strvTitle" = "STRV Number";
+"modal.descSTRVTitle" = "STRV is Veterinary Registration Number";
+"modal.yearsExpTitle" = "Years Experience";
+"modal.consultRateTitle" = "Consultation Rate";
+"modal.consultButtonTitle" = "Consult";

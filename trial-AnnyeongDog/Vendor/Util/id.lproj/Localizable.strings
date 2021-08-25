@@ -7,6 +7,15 @@
 */
 "vetListCell.vetLabel" = "Dokter Hewan";
 "vetListCell.yrsLabel" = "Thn";
+
 "navigationItem.titleLabel" = "Dokter Hewan";
 "searchBar.placeholder" = "Contoh: Drh. Budi";
 "tabBarItem.Title.dogProfile" = "Profil Anjing";
+
+"modal.alumniTitle" = "Alumnus";
+"modal.clinicTitle" = "Klinik";
+"modal.strvTitle" = "Nomor STRV";
+"modal.descSTRVTitle" = "STRV adalah Surat Tanda Register Veteriner";
+"modal.yearsExpTitle" = "Tahun Pengalaman";
+"modal.consultRateTitle" = "Biaya Konsultasi";
+"modal.consultButtonTitle" = "Konsultasi";
