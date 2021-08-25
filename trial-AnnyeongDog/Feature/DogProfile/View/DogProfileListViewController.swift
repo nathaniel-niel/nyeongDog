@@ -104,9 +104,14 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     @IBAction func addDidTapped(_ sender: Any) {
         //MARK: Function detect user has logged in or not
         if isNewUser {
+            
             AlertManager.alert.createSignInAlert(viewController: self)
         } else {
-            NavigationManager.navigateToPage.showModal(modal: .dogProfileDetailTableView, vc: self)
+            
+            let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
+            let nVC = (storyboard.instantiateViewController(identifier: "XiBVC")) as! DogProfileDetailTableView
+            
+            self.navigationController?.pushViewController(nVC, animated: true)
         }
     }
     
