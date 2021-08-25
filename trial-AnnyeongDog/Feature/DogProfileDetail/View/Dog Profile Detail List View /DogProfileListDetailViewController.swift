@@ -7,112 +7,53 @@
 
 import UIKit
 
-class DogProfileListDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-   
+class DogProfileListDetailViewController: UIViewController{
+    
     @IBOutlet var dogProfileDetailTableView: DogProfileDetailListTableView!
+    
+    
+    var viewModel = DogProfileListDetailViewControllerViewModel()
+    //MARK: - Temporary variables
+    var id: String?
+    var dogName: String?
+    var dob: String?
+    var gender: String?
+    var breed: String?
+    var weight: String?
+    var color: String?
+    var alergen: String?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setup()
+    }
+    
+    func setup(){
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editButtonTapped))
+        
         dogProfileDetailTableView.dogProfileDetailListTableView.delegate = self
         dogProfileDetailTableView.dogProfileDetailListTableView.dataSource = self
         dogProfileDetailTableView.setup()
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 9
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        switch indexPath.row {
-        case 0:
-            let dogImageCell = dogProfileDetailTableView.dogProfileDetailListTableView.dequeueReusableCell(withIdentifier: DogImageCell.identifier, for: indexPath) as! DogImageCell
-            return dogImageCell
-            
-            
-        case 1:
-            let cell =  dogProfileDetailTableView.dogProfileDetailListTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
-            
-            
-            cell.textFieldLabel.text = "Nama Anjing"
-            cell.tagFrom = 1
-            cell.textField.isUserInteractionEnabled = false
-            return cell
-            
-        case 2:
-            let cell =  dogProfileDetailTableView.dogProfileDetailListTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
-            
-            cell.textFieldLabel.text = "Usia"
-            cell.tagFrom = 2
-            cell.textField.isUserInteractionEnabled = false
-            return cell
-            
-        case 3:
-            let cell =  dogProfileDetailTableView.dogProfileDetailListTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
-            
-            cell.textFieldLabel.text = "Jenis Kelamin"
-            cell.tagFrom = 3
-            cell.textField.isUserInteractionEnabled = false
-            return cell
-            
-        case 4:
-            let cell =  dogProfileDetailTableView.dogProfileDetailListTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
-            
-            
-            cell.textFieldLabel.text = "Jenis Anjing"
-            cell.tagFrom = 4
-            cell.textField.isUserInteractionEnabled = false
-            return cell
-            
-        case 5:
-            let cell =  dogProfileDetailTableView.dogProfileDetailListTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
-            
-            cell.textField.keyboardType = .numberPad
-            cell.textFieldLabel.text = "Berat Badan"
-            cell.tagFrom = 5
-            cell.textField.isUserInteractionEnabled = false
-            return cell
-            
-        case 6:
-            let cell =  dogProfileDetailTableView.dogProfileDetailListTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
-            
-            
-            cell.textFieldLabel.text = "Warna"
-            cell.tagFrom = 6
-            cell.textField.isUserInteractionEnabled = false
-            return cell
-            
-        case 7:
-            let cell =  dogProfileDetailTableView.dogProfileDetailListTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
-            
-            
-            cell.textFieldLabel.text = "Alergi"
-            cell.tagFrom = 7
-            cell.textField.isUserInteractionEnabled = false
-            return cell
-            
-        default:
-            let cell = dogProfileDetailTableView.dogProfileDetailListTableView.dequeueReusableCell(withIdentifier: MedicalRecordsButton.identifier, for: indexPath) as!
-                MedicalRecordsButton
-            
-            return cell
-            
-        }
-        
         
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    //MARK: - edit button did tapped
+    @objc func editButtonTapped(){
+        let storyboard = UIStoryboard(name: "DogProfileDetail", bundle: nil)
         
-        switch indexPath.row {
-        case 0:
-            return 161
-        default:
-            return 67
-        }
+        let vc = storyboard.instantiateViewController(identifier: "DogProfileDetail")  as! DogProfileDetailViewController
+        
+        vc.id = id
+        vc.dogName = dogName
+        vc.dob = dob
+        vc.gender = gender
+        vc.breed = breed
+        vc.weight = weight
+        vc.color = color
+        vc.alergen = alergen
+        self.navigationController?.pushViewController(vc, animated: true)
     }
-    
-
 }
+

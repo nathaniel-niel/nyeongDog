@@ -99,6 +99,8 @@
 		C01A909426BAF6BC007FA0B6 /* FacetimeVideoCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01A909326BAF6BC007FA0B6 /* FacetimeVideoCall.swift */; };
 		C01A909626BAF706007FA0B6 /* FacetimeEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01A909526BAF706007FA0B6 /* FacetimeEmail.swift */; };
 		C0254B3126C3A29800376A04 /* FetchDatafromFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0254B3026C3A29800376A04 /* FetchDatafromFirebase.swift */; };
+		C032476826D63D61000464DB /* DogProfileListDetailViewController+TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C032476726D63D61000464DB /* DogProfileListDetailViewController+TableViewExtension.swift */; };
+		C032476A26D63E3B000464DB /* DogProfileListDetailViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C032476926D63E3B000464DB /* DogProfileListDetailViewControllerViewModel.swift */; };
 		C037876B26B2A199004344E0 /* MedicalRecords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C037876926B2A199004344E0 /* MedicalRecords.storyboard */; };
 		C037878726B2A1CB004344E0 /* DogProfileDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C037877126B2A1CB004344E0 /* DogProfileDetail.storyboard */; };
 		C037878826B2A1CB004344E0 /* GenderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037877226B2A1CB004344E0 /* GenderModel.swift */; };
@@ -217,6 +219,8 @@
 		C01A909326BAF6BC007FA0B6 /* FacetimeVideoCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacetimeVideoCall.swift; sourceTree = "<group>"; };
 		C01A909526BAF706007FA0B6 /* FacetimeEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacetimeEmail.swift; sourceTree = "<group>"; };
 		C0254B3026C3A29800376A04 /* FetchDatafromFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDatafromFirebase.swift; sourceTree = "<group>"; };
+		C032476726D63D61000464DB /* DogProfileListDetailViewController+TableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogProfileListDetailViewController+TableViewExtension.swift"; sourceTree = "<group>"; };
+		C032476926D63E3B000464DB /* DogProfileListDetailViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileListDetailViewControllerViewModel.swift; sourceTree = "<group>"; };
 		C037876926B2A199004344E0 /* MedicalRecords.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MedicalRecords.storyboard; sourceTree = "<group>"; };
 		C037877126B2A1CB004344E0 /* DogProfileDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DogProfileDetail.storyboard; sourceTree = "<group>"; };
 		C037877226B2A1CB004344E0 /* GenderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenderModel.swift; sourceTree = "<group>"; };
@@ -897,6 +901,7 @@
 			children = (
 				C064CDBB26D6315300378325 /* DogProfileDetailListTableView.swift */,
 				C064CDB926D630E900378325 /* DogProfileListDetailViewController.swift */,
+				C032476726D63D61000464DB /* DogProfileListDetailViewController+TableViewExtension.swift */,
 			);
 			path = "Dog Profile Detail List View ";
 			sourceTree = "<group>";
@@ -905,6 +910,7 @@
 			isa = PBXGroup;
 			children = (
 				C07230B626CD717A007E7EE7 /* DogProfileDetailAddViewControllerViewModel.swift */,
+				C032476926D63E3B000464DB /* DogProfileListDetailViewControllerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1165,6 +1171,7 @@
 				5B71983B26BD42F9000F19A5 /* DogProfileEmptyStateViewController.swift in Sources */,
 				C064CDBA26D630E900378325 /* DogProfileListDetailViewController.swift in Sources */,
 				5B05C39A26B2A9450034A66A /* MedicalRecordDetailEditViewController.swift in Sources */,
+				C032476A26D63E3B000464DB /* DogProfileListDetailViewControllerViewModel.swift in Sources */,
 				5B3A10A026D4F6160022F85B /* ModalUIView.swift in Sources */,
 				2D74BE1B26B45535009B3629 /* DogProfileDetailModel.swift in Sources */,
 				C0254B3126C3A29800376A04 /* FetchDatafromFirebase.swift in Sources */,
@@ -1194,6 +1201,7 @@
 				2D5EE3CF26C4003400785683 /* ExtensionMedicalRecordDetailViewController+TableVIew.swift in Sources */,
 				C037879226B2A1CB004344E0 /* PrepareForMedical.swift in Sources */,
 				B535E09226BBA2FC0038251D /* Messages.swift in Sources */,
+				C032476826D63D61000464DB /* DogProfileListDetailViewController+TableViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
