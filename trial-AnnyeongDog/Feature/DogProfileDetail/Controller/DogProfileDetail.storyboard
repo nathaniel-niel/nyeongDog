@@ -222,7 +222,7 @@
         <!--Dog Profile Detail EditVC-->
         <scene sceneID="uMB-gg-wqT">
             <objects>
-                <viewController id="BnY-Kq-GBL" customClass="DogProfileDetailEditVC" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="xibDogEdit" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BnY-Kq-GBL" customClass="DogProfileDetailEditVC" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="f6o-Ii-VT1" customClass="DogProfileDetailEditView" customModule="trial_AnnyeongDog" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

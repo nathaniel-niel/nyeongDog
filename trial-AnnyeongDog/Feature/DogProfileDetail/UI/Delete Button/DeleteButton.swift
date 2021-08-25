@@ -8,6 +8,12 @@
 import UIKit
 
 class DeleteButton: UITableViewCell {
+    
+    static let identifier = "xibDeletebutton"
+    
+    static func nib() -> UINib{
+        return UINib(nibName: "DeleteButton", bundle: nil)
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -105,6 +105,7 @@
 		C032477026D65AFF000464DB /* DeleteButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = C032476E26D65AFF000464DB /* DeleteButton.xib */; };
 		C032477326D65BE8000464DB /* DogProfileDetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C032477226D65BE8000464DB /* DogProfileDetailEditView.swift */; };
 		C032477526D65C0B000464DB /* DogProfileDetailEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C032477426D65C0B000464DB /* DogProfileDetailEditVC.swift */; };
+		C032477726D688E1000464DB /* DogProfileDetailEditVC+ExtensionTableView+Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C032477626D688E1000464DB /* DogProfileDetailEditVC+ExtensionTableView+Picker.swift */; };
 		C037876B26B2A199004344E0 /* MedicalRecords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C037876926B2A199004344E0 /* MedicalRecords.storyboard */; };
 		C037878726B2A1CB004344E0 /* DogProfileDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C037877126B2A1CB004344E0 /* DogProfileDetail.storyboard */; };
 		C037878826B2A1CB004344E0 /* GenderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037877226B2A1CB004344E0 /* GenderModel.swift */; };
@@ -229,6 +230,7 @@
 		C032476E26D65AFF000464DB /* DeleteButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteButton.xib; sourceTree = "<group>"; };
 		C032477226D65BE8000464DB /* DogProfileDetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileDetailEditView.swift; sourceTree = "<group>"; };
 		C032477426D65C0B000464DB /* DogProfileDetailEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileDetailEditVC.swift; sourceTree = "<group>"; };
+		C032477626D688E1000464DB /* DogProfileDetailEditVC+ExtensionTableView+Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogProfileDetailEditVC+ExtensionTableView+Picker.swift"; sourceTree = "<group>"; };
 		C037876926B2A199004344E0 /* MedicalRecords.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MedicalRecords.storyboard; sourceTree = "<group>"; };
 		C037877126B2A1CB004344E0 /* DogProfileDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DogProfileDetail.storyboard; sourceTree = "<group>"; };
 		C037877226B2A1CB004344E0 /* GenderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenderModel.swift; sourceTree = "<group>"; };
@@ -846,6 +848,7 @@
 				C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */,
 				C032477226D65BE8000464DB /* DogProfileDetailEditView.swift */,
 				C032477426D65C0B000464DB /* DogProfileDetailEditVC.swift */,
+				C032477626D688E1000464DB /* DogProfileDetailEditVC+ExtensionTableView+Picker.swift */,
 			);
 			path = "Dog Profile Detail Edit";
 			sourceTree = "<group>";
@@ -1201,6 +1204,7 @@
 				5B67967626B41796004514F3 /* DogProfileListViewController.swift in Sources */,
 				5B3F4BEE26B3FAD7004448DA /* MedicalRecordDetailAddViewController.swift in Sources */,
 				2D5EE3DA26C414D600785683 /* ExtensionMedicalRecordDetailEditView+TextField+TextView.swift in Sources */,
+				C032477726D688E1000464DB /* DogProfileDetailEditVC+ExtensionTableView+Picker.swift in Sources */,
 				B584B3DC26B28DF2005A02C5 /* MainViewController.swift in Sources */,
 				2D7E85E926D3716D0074FF44 /* SigninViewModel.swift in Sources */,
 				2D3418BB26C3AA000003A70A /* DogProfileState.swift in Sources */,

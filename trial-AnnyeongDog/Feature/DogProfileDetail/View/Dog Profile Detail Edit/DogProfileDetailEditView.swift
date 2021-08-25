@@ -17,7 +17,7 @@ class DogProfileDetailEditView: UIView {
         
         dogProfileEditTableView.register(DogImageCell.nib(), forCellReuseIdentifier: DogImageCell.identifier)
         
-        dogProfileEditTableView.register(MedicalRecordsButton.nib(), forCellReuseIdentifier: MedicalRecordsButton.identifier)
+        dogProfileEditTableView.register(DeleteButton.nib(), forCellReuseIdentifier: DeleteButton.identifier)
         
         dogProfileEditTableView.separatorColor = .clear
         

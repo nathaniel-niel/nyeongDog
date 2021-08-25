@@ -43,7 +43,7 @@ class DogProfileListDetailViewController: UIViewController{
     @objc func editButtonTapped(){
         let storyboard = UIStoryboard(name: "DogProfileDetail", bundle: nil)
         
-        let vc = storyboard.instantiateViewController(identifier: "DogProfileDetail")  as! DogProfileDetailViewController
+        let vc = storyboard.instantiateViewController(identifier: "xibDogEdit")  as! DogProfileDetailEditVC
         
         vc.id = id
         vc.dogName = dogName
