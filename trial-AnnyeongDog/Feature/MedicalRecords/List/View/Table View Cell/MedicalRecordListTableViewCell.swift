@@ -12,11 +12,7 @@ class MedicalRecordListTableViewCell: UITableViewCell {
     
     
     // MARK: - UI Components Declaration
-    @IBOutlet weak var dateLabel: UILabel!{
-        didSet{
-            dateLabel.text = language.dateMedicalRecord
-        }
-    }
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var medicineLabel: UILabel!
     @IBOutlet weak var diagnoseLabel: UILabel!
     static let identifier = "cells"
