@@ -73,7 +73,6 @@ extension DogProfileDetailTableView: UIPickerViewDelegate, UIPickerViewDataSourc
             let selectedDogYear = genderModel.dogYear[dogYear]
             let selectedDogMonth = genderModel.dogMonth[dogMonth]
             stringPickerDOB = "\(selectedDogYear) Tahun \(selectedDogMonth) Bulan"
-            
             dogProfileDetail.DogProfileTableView.reloadRows(at: [IndexPath(row: 2, section: 0)], with: .none)
             //            cell.textField.text = stringPickerDOB
             
@@ -101,7 +100,7 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
         case 1:
             let cell =  dogProfileDetail.DogProfileTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
             
-           
+            
             cell.textFieldLabel.text = "Nama Anjing"
             cell.tagFrom = 1
             cell.delegate = self
@@ -191,8 +190,18 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
 }
 
 extension DogProfileDetailTableView: addData {
+    
     func addDogName(value: String) {
         self.dogName = value
+    }
+    
+    func addDogDOB() {
+        self.dogDOb = stringPickerDOB
+    }
+    
+    func addDogGender() {
+        print(stringPickerGender)
+        self.dogGender = stringPickerGender
     }
     
     func addDogType(value: String) {
@@ -211,9 +220,6 @@ extension DogProfileDetailTableView: addData {
         self.dogAlergy = value
     }
     
-    func addDogDOB(value: String) {
-        self.dogDOb = value
-    }
 }
 
 

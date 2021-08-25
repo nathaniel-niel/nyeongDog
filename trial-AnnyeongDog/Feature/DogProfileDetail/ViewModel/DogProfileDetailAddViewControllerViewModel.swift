@@ -16,11 +16,10 @@ struct DogProfileDetailAddViewControllerViewModel {
         return imagePicker
     }
     
-    // TODO -> Nambah Gender + DogsDOB Buggy
-    func saveDatatoFirebase(dogsName: String, dogDOB: String, dogBreed: String, dogWeight: String, dogColor: String, dogAllergy: String){
+    func saveDatatoFirebase(dogsName: String, dogDOB: String, dogGender: String, dogBreed: String, dogWeight: String, dogColor: String, dogAllergy: String){
         print("fetch firebase")
         
-        DataManipulation.sharedData.insertDogProfile(with: UserControl.shared.user?.uid ?? "unknown", with: DogsModel(dogID: helper.generateUniqueID(), dogName: dogsName, dateofBirth: dogDOB, breed: dogBreed, weight: dogWeight, color: dogColor, alergen: dogAllergy))
+        DataManipulation.sharedData.insertDogProfile(with: UserControl.shared.user?.uid ?? "unknown", with: DogsModel(dogID: helper.generateUniqueID(), dogName: dogsName, dateofBirth: dogDOB, gender: dogGender, breed: dogBreed, weight: dogWeight, color: dogColor, alergen: dogAllergy))
         
         
     }
