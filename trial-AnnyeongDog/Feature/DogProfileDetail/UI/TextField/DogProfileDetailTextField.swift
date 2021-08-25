@@ -7,6 +7,16 @@
 
 import UIKit
 
+protocol addData: AnyObject {
+    func addDogName(value: String)
+    func addDogType(value: String)
+    func addDogWeight(value: String)
+    func addDogColor(value: String)
+    func addDogAlergy(value: String)
+    func addDogDOB(value: String)
+}
+
+
 class DogProfileDetailTextField: UITableViewCell {
 
     @IBOutlet weak var textFieldLabel: UILabel!
@@ -14,13 +24,18 @@ class DogProfileDetailTextField: UITableViewCell {
     
     static let identifier = "textField"
     
+    weak var delegate: addData?
+    
     static func nib() -> UINib{
         return UINib(nibName: "DogProfileDetailTextField", bundle: nil)
     }
     
+    var tagFrom = 0
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        textField.delegate = self
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -29,10 +44,34 @@ class DogProfileDetailTextField: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func cellText(_ cellText: String?){
+}
+
+extension DogProfileDetailTextField: UITextFieldDelegate{
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        switch tagFrom {
+        case 1:
+            delegate?.addDogName(value: textField.text!)
+        case 2:
+            delegate?.addDogDOB(value: textField.text!)
+        case 3:
+            delegate?.addDogType(value: textField.text!)
+        case 4:
+            delegate?.addDogType(value: textField.text!)
+        case 5:
+            delegate?.addDogWeight(value: textField.text!)
+        case 6:
+            delegate?.addDogColor(value: textField.text!)
+        case 7:
+            delegate?.addDogAlergy(value: textField.text!)
+        default:
+            delegate?.addDogName(value: textField.text!)
+        }
         
-        textField.text = cellText
-       
+    }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
 }

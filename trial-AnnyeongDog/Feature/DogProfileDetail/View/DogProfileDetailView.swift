@@ -8,7 +8,7 @@
 import UIKit
 
 class DogProfileDetailView: UIView {
-
+    
     @IBOutlet weak var DogProfileTableView: UITableView!
     
     func setup(){
@@ -16,6 +16,13 @@ class DogProfileDetailView: UIView {
         DogProfileTableView.register(DogProfileDetailTextField.nib(), forCellReuseIdentifier: DogProfileDetailTextField.identifier)
         
         DogProfileTableView.register(DogImageCell.nib(), forCellReuseIdentifier: DogImageCell.identifier)
+        
+        DogProfileTableView.register(MedicalRecordsButton.nib(), forCellReuseIdentifier: MedicalRecordsButton.identifier)
+        
+        DogProfileTableView.separatorColor = .clear
+        
+        DogProfileTableView.allowsSelection = false
+        
     }
     
 }

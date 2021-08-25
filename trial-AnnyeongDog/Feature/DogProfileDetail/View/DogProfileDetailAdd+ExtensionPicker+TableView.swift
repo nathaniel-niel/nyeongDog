@@ -60,10 +60,10 @@ extension DogProfileDetailTableView: UIPickerViewDelegate, UIPickerViewDataSourc
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         if pickerView.tag == 2 {
-           
+            
             stringPickerGender = genderModel.genderArray[row]
             dogProfileDetail.DogProfileTableView.reloadRows(at: [IndexPath(row: 3, section: 0)], with: .none)
-           // cell.textField.text = stringPickerGender
+            // cell.textField.text = stringPickerGender
             
             
         } else {
@@ -75,9 +75,9 @@ extension DogProfileDetailTableView: UIPickerViewDelegate, UIPickerViewDataSourc
             stringPickerDOB = "\(selectedDogYear) Tahun \(selectedDogMonth) Bulan"
             
             dogProfileDetail.DogProfileTableView.reloadRows(at: [IndexPath(row: 2, section: 0)], with: .none)
-//            cell.textField.text = stringPickerDOB
+            //            cell.textField.text = stringPickerDOB
             
-          }
+        }
         
     }
     
@@ -87,7 +87,7 @@ extension DogProfileDetailTableView: UIPickerViewDelegate, UIPickerViewDataSourc
 extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return 9
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -101,8 +101,10 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
         case 1:
             let cell =  dogProfileDetail.DogProfileTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
             
-            
+           
             cell.textFieldLabel.text = "Nama Anjing"
+            cell.tagFrom = 1
+            cell.delegate = self
             return cell
             
         case 2:
@@ -112,19 +114,20 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
             cell.textField.text = stringPickerDOB
             
             cell.textFieldLabel.text = "Usia"
+            cell.tagFrom = 2
+            cell.delegate = self
             return cell
             
         case 3:
             let cell =  dogProfileDetail.DogProfileTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
             
-           
+            
             cell.textField.inputView = genderPicker
-            
-            //TODO -> Listener, Pickernya masih belum mau connect ke TextField
-            
             cell.textField.text = stringPickerGender
-           
+            
             cell.textFieldLabel.text = "Jenis Kelamin"
+            cell.tagFrom = 3
+            cell.delegate = self
             return cell
             
         case 4:
@@ -132,12 +135,17 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
             
             
             cell.textFieldLabel.text = "Jenis Anjing"
+            cell.tagFrom = 4
+            cell.delegate = self
             return cell
             
         case 5:
             let cell =  dogProfileDetail.DogProfileTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
             
+            cell.textField.keyboardType = .numberPad
             cell.textFieldLabel.text = "Berat Badan"
+            cell.tagFrom = 5
+            cell.delegate = self
             return cell
             
         case 6:
@@ -145,13 +153,23 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
             
             
             cell.textFieldLabel.text = "Warna"
+            cell.tagFrom = 6
+            cell.delegate = self
             return cell
             
-        default:
+        case 7:
             let cell =  dogProfileDetail.DogProfileTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
             
             
             cell.textFieldLabel.text = "Alergi"
+            cell.tagFrom = 7
+            cell.delegate = self
+            return cell
+            
+        default:
+            let cell = dogProfileDetail.DogProfileTableView.dequeueReusableCell(withIdentifier: MedicalRecordsButton.identifier, for: indexPath) as!
+                MedicalRecordsButton
+            
             return cell
             
         }
@@ -162,14 +180,40 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
         
         switch indexPath.row {
         case 0:
-            return 219
+            return 161
         default:
-            return 86
+            return 67
         }
     }
     
     
     
+}
+
+extension DogProfileDetailTableView: addData {
+    func addDogName(value: String) {
+        self.dogName = value
+    }
+    
+    func addDogType(value: String) {
+        self.dogType = value
+    }
+    
+    func addDogWeight(value: String) {
+        self.dogWeight = value
+    }
+    
+    func addDogColor(value: String) {
+        self.dogColor = value
+    }
+    
+    func addDogAlergy(value: String) {
+        self.dogAlergy = value
+    }
+    
+    func addDogDOB(value: String) {
+        self.dogDOb = value
+    }
 }
 
 
