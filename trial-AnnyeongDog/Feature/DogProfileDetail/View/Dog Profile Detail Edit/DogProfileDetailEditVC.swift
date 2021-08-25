@@ -14,6 +14,7 @@ class DogProfileDetailEditVC: UIViewController {
     //MARK: - Object Declaration
     var genderModel = GenderModel()
     var dogsModel = DogsModel()
+    var viewModel = DogProfileDetailEditViewCOntrollerViewModel()
     
     var dogsDOBPicker = UIPickerView()
     var genderPicker = UIPickerView()
@@ -75,8 +76,11 @@ class DogProfileDetailEditVC: UIViewController {
     }
     
     @objc func fetchToFirebase(){
+     
         
-        self.navigationController?.dismiss(animated: true, completion: nil)
+        viewModel.editFirebase(id: id, Name: dogName, dob: dob, gender: gender, breed: breed, weight: weight, color: color, allergy: alergen)
+        
+        self.navigationController?.popToRootViewController(animated: true)
         
     }
     
