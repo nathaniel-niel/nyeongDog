@@ -101,6 +101,8 @@
 		C0254B3126C3A29800376A04 /* FetchDatafromFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0254B3026C3A29800376A04 /* FetchDatafromFirebase.swift */; };
 		C032476826D63D61000464DB /* DogProfileListDetailViewController+TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C032476726D63D61000464DB /* DogProfileListDetailViewController+TableViewExtension.swift */; };
 		C032476A26D63E3B000464DB /* DogProfileListDetailViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C032476926D63E3B000464DB /* DogProfileListDetailViewControllerViewModel.swift */; };
+		C032476F26D65AFF000464DB /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C032476D26D65AFF000464DB /* DeleteButton.swift */; };
+		C032477026D65AFF000464DB /* DeleteButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = C032476E26D65AFF000464DB /* DeleteButton.xib */; };
 		C037876B26B2A199004344E0 /* MedicalRecords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C037876926B2A199004344E0 /* MedicalRecords.storyboard */; };
 		C037878726B2A1CB004344E0 /* DogProfileDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C037877126B2A1CB004344E0 /* DogProfileDetail.storyboard */; };
 		C037878826B2A1CB004344E0 /* GenderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037877226B2A1CB004344E0 /* GenderModel.swift */; };
@@ -221,6 +223,8 @@
 		C0254B3026C3A29800376A04 /* FetchDatafromFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchDatafromFirebase.swift; sourceTree = "<group>"; };
 		C032476726D63D61000464DB /* DogProfileListDetailViewController+TableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogProfileListDetailViewController+TableViewExtension.swift"; sourceTree = "<group>"; };
 		C032476926D63E3B000464DB /* DogProfileListDetailViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileListDetailViewControllerViewModel.swift; sourceTree = "<group>"; };
+		C032476D26D65AFF000464DB /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
+		C032476E26D65AFF000464DB /* DeleteButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeleteButton.xib; sourceTree = "<group>"; };
 		C037876926B2A199004344E0 /* MedicalRecords.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MedicalRecords.storyboard; sourceTree = "<group>"; };
 		C037877126B2A1CB004344E0 /* DogProfileDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DogProfileDetail.storyboard; sourceTree = "<group>"; };
 		C037877226B2A1CB004344E0 /* GenderModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenderModel.swift; sourceTree = "<group>"; };
@@ -442,13 +446,9 @@
 		2D74BE1426B454E8009B3629 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C032477126D65B8E000464DB /* Dog Profile Detail Add */,
+				C032476B26D65A22000464DB /* Dog Profile Detail Edit */,
 				C064CDBD26D631C100378325 /* Dog Profile Detail List View  */,
-				2D74BE1626B454E8009B3629 /* DogProfileDetailEditViewController.swift */,
-				5B3CE4A326B8E96700ECF396 /* DogProfileDetailAddViewController.swift */,
-				C0A21CD726CE242700DF0BCE /* DogProfileDetailTableView.swift */,
-				C0A21CD926CE270500DF0BCE /* DogProfileDetailView.swift */,
-				C050E2ED26CFB9070075A1D4 /* DogProfileDetailAdd+ExtensionPicker+TableView.swift */,
-				C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -836,6 +836,35 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		C032476B26D65A22000464DB /* Dog Profile Detail Edit */ = {
+			isa = PBXGroup;
+			children = (
+				C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */,
+			);
+			path = "Dog Profile Detail Edit";
+			sourceTree = "<group>";
+		};
+		C032476C26D65AC9000464DB /* Delete Button */ = {
+			isa = PBXGroup;
+			children = (
+				C032476D26D65AFF000464DB /* DeleteButton.swift */,
+				C032476E26D65AFF000464DB /* DeleteButton.xib */,
+			);
+			path = "Delete Button";
+			sourceTree = "<group>";
+		};
+		C032477126D65B8E000464DB /* Dog Profile Detail Add */ = {
+			isa = PBXGroup;
+			children = (
+				2D74BE1626B454E8009B3629 /* DogProfileDetailEditViewController.swift */,
+				5B3CE4A326B8E96700ECF396 /* DogProfileDetailAddViewController.swift */,
+				C0A21CD726CE242700DF0BCE /* DogProfileDetailTableView.swift */,
+				C0A21CD926CE270500DF0BCE /* DogProfileDetailView.swift */,
+				C050E2ED26CFB9070075A1D4 /* DogProfileDetailAdd+ExtensionPicker+TableView.swift */,
+			);
+			path = "Dog Profile Detail Add";
+			sourceTree = "<group>";
+		};
 		C037876426B2A199004344E0 /* MedicalRecords */ = {
 			isa = PBXGroup;
 			children = (
@@ -945,6 +974,7 @@
 		C0A21CDB26CE2C2700DF0BCE /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				C032476C26D65AC9000464DB /* Delete Button */,
 				C00D230D26D549F0004BC076 /* MedicalRecordsButton */,
 				C0A21CE526CE356900DF0BCE /* DogImage */,
 				C0A21CDC26CE2C2F00DF0BCE /* TextField */,
@@ -1045,6 +1075,7 @@
 				B584B3DD26B28DF2005A02C5 /* Main.storyboard in Resources */,
 				5B3A10A226D4F6160022F85B /* ModalView.xib in Resources */,
 				B5821A6526B7EEA0006DDED9 /* Signin.storyboard in Resources */,
+				C032477026D65AFF000464DB /* DeleteButton.xib in Resources */,
 				B535E09426BBA2FC0038251D /* Chat.storyboard in Resources */,
 				5B67967526B41796004514F3 /* DogProfileFilledState.storyboard in Resources */,
 				B5A0B08E26BA9E2F00D5C273 /* DescriptionTextViewCell.xib in Resources */,
@@ -1172,6 +1203,7 @@
 				C064CDBA26D630E900378325 /* DogProfileListDetailViewController.swift in Sources */,
 				5B05C39A26B2A9450034A66A /* MedicalRecordDetailEditViewController.swift in Sources */,
 				C032476A26D63E3B000464DB /* DogProfileListDetailViewControllerViewModel.swift in Sources */,
+				C032476F26D65AFF000464DB /* DeleteButton.swift in Sources */,
 				5B3A10A026D4F6160022F85B /* ModalUIView.swift in Sources */,
 				2D74BE1B26B45535009B3629 /* DogProfileDetailModel.swift in Sources */,
 				C0254B3126C3A29800376A04 /* FetchDatafromFirebase.swift in Sources */,
