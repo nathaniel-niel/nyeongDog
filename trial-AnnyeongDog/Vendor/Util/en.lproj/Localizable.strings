@@ -19,3 +19,10 @@
 "modal.yearsExpTitle" = "Years Experience";
 "modal.consultRateTitle" = "Consultation Rate";
 "modal.consultButtonTitle" = "Consult";
+
+"dogProfile.navtitleLabelDogProfile" = "Dog Profile";
+"dogProfile.addButtonTitle" = "Add";
+"alertTitle" = "Sign in to continue";
+"alertMessage" = "To proceed, you need to have an account";
+"alertCancelTitle" = "Cancel";
+"alertSigninTitle" = "Sing In";

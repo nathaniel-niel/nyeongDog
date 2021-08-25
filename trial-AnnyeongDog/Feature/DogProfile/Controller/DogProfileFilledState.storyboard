@@ -117,6 +117,7 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="addButtonTitle" destination="Cjw-iV-eKD" id="Tp3-4L-F0h"/>
                         <outlet property="dogProfileTabBarItem" destination="2NI-uD-ukp" id="Wf3-pN-OCM"/>
                         <outlet property="dogProfileTableView" destination="P4g-rg-Ilg" id="8Y2-10-62B"/>
                         <outlet property="tabBarItem" destination="2NI-uD-ukp" id="fZZ-VR-SOX"/>

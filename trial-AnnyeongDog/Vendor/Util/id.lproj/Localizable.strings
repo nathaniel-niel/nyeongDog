@@ -19,3 +19,11 @@
 "modal.yearsExpTitle" = "Tahun Pengalaman";
 "modal.consultRateTitle" = "Biaya Konsultasi";
 "modal.consultButtonTitle" = "Konsultasi";
+
+"dogProfile.navtitleLabelDogProfile" = "Profil Anjing";
+"dogProfile.addButtonTitle" = "Tambah";
+"alertTitle" = "Masuk untuk melanjutkan";
+"alertMessage" = "Untuk lanjut, anda membutuhkan akun";
+"alertCancelTitle" = "Batal";
+"alertSigninTitle" = "Masuk";
+
