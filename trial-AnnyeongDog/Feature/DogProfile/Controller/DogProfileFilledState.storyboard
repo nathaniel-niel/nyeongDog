@@ -117,7 +117,9 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="dogProfileTabBarItem" destination="2NI-uD-ukp" id="Wf3-pN-OCM"/>
                         <outlet property="dogProfileTableView" destination="P4g-rg-Ilg" id="8Y2-10-62B"/>
+                        <outlet property="tabBarItem" destination="2NI-uD-ukp" id="fZZ-VR-SOX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FVY-6h-7df" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

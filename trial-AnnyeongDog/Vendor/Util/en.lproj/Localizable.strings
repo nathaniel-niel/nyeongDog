@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  trial-AnnyeongDog
+
+  Created by Pieter Yonathan on 25/08/21.
+  
+*/
+"vetListCell.vetLabel" = "Veterinarian";
+"vetListCell.yrsLabel" = "Yrs";
+"navigationItem.titleLabel" = "Veterinarian";
+"searchBar.placeholder" = "Example: Drh. Budi";
+"tabBarItem.Title.dogProfile" = "Dog Profile";

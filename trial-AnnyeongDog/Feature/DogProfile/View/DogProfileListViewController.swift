@@ -16,6 +16,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     
     // MARK: - UI Components Declaration
     @IBOutlet weak var dogProfileTableView: UITableView!
+    @IBOutlet weak var dogProfileTabBarItem: UITabBarItem!
     
     // MARK: - Object Declaration
     var fetchDatafromFirebase = FetchDatafromFirebase()
@@ -40,6 +41,8 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         dogProfileTableView.dataSource = self
         dogProfileTableView.delegate = self
         isNewUser = storageManager.isNewUser()
+        dogProfileTabBarItem.title = language.tabBarTitleDogProfileLabel
+        
     }
     // MARK: - Fetching the Firebase using ViewModel
     func fetchFirebase(){
