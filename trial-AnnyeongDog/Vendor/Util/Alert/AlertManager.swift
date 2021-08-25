@@ -40,7 +40,7 @@ class AlertManager: UIViewController {
         viewController.present(alert, animated: true)
     }
     
-    func createDeleteDogProfileAlert(viewController: DogProfileDetailViewController!){
+    func createDeleteDogProfileAlert(viewController: DogProfileDetailEditVC!){
         let alert = UIAlertController(title: "Delete Dog Profile", message: "Once you delete this, you won't be able to return it. Do you want to proceed?", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))

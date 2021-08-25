@@ -100,7 +100,7 @@ class DogProfileDetailViewController: UIViewController {
     
     //MARK: - Delete Button on Dog's Profile
     @IBAction func deleteDidTapped(_ sender: UIButton) {
-        AlertManager.alert.createDeleteDogProfileAlert(viewController: self)
+//        AlertManager.alert.createDeleteDogProfileAlert(viewController: self)
     }
     
     //MARK: - Button to Choose Dog Image

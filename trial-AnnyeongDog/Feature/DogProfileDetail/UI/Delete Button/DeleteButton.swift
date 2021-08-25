@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol button {
+    func deleteButton()
+}
+
 class DeleteButton: UITableViewCell {
+    
+    var delegate: button?
     
     static let identifier = "xibDeletebutton"
     
@@ -27,6 +33,6 @@ class DeleteButton: UITableViewCell {
     }
     
     @IBAction func deleteProfilePress(_ sender: UIButton) {
-        
+        delegate?.deleteButton()
     }
 }

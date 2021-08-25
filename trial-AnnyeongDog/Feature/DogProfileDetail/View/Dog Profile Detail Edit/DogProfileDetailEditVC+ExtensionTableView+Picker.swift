@@ -168,7 +168,7 @@ extension DogProfileDetailEditVC: UITableViewDelegate, UITableViewDataSource, UI
             
         default:
             let cell = dogProfileDetailEditTableView.dogProfileEditTableView.dequeueReusableCell(withIdentifier: DeleteButton.identifier, for: indexPath) as! DeleteButton
-            
+            cell.delegate = self
             return cell
             
         }
@@ -189,7 +189,14 @@ extension DogProfileDetailEditVC: UITableViewDelegate, UITableViewDataSource, UI
     
 }
 
-extension DogProfileDetailEditVC: addData {
+
+
+extension DogProfileDetailEditVC: addData,button{
+    
+    func deleteButton() {
+        AlertManager.alert.createDeleteDogProfileAlert(viewController: self)
+    }
+    
     
     func addDogName(value: String) {
         self.dogName = value
