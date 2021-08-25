@@ -30,4 +30,9 @@ class MedicalRecordsButton: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func medicalRecordsPressed(_ sender: UIButton) {
+        
+        
+        
+    }
 }

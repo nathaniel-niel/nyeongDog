@@ -66,18 +66,18 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //        performSegue(withIdentifier: "segueDogProfileDetail", sender: nil)
         let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
-        let nVC = (storyboard.instantiateViewController(identifier: "DPDE")) as! DogProfileDetailEditViewController
+        let nVC = (storyboard.instantiateViewController(identifier: "XiBEdit")) as! DogProfileListDetailViewController
         
         
-        nVC.id = fetchDatafromFirebase.dogModel[indexPath.row].dogID
-        nVC.dogName = fetchDatafromFirebase.dogModel[indexPath.row].dogName
-        nVC.dob = fetchDatafromFirebase.dogModel[indexPath.row].dateofBirth
-        nVC.gender = fetchDatafromFirebase.dogModel[indexPath.row].gender
-        nVC.breed = fetchDatafromFirebase.dogModel[indexPath.row].breed
-        nVC.weight = fetchDatafromFirebase.dogModel[indexPath.row].weight
-        nVC.color = fetchDatafromFirebase.dogModel[indexPath.row].color
-        nVC.alergen = fetchDatafromFirebase.dogModel[indexPath.row].alergen   
-        CurrentDogProfile.shared.currentDogId = fetchDatafromFirebase.dogModel[indexPath.row].dogID
+//        nVC.id = fetchDatafromFirebase.dogModel[indexPath.row].dogID
+//        nVC.dogName = fetchDatafromFirebase.dogModel[indexPath.row].dogName
+//        nVC.dob = fetchDatafromFirebase.dogModel[indexPath.row].dateofBirth
+//        nVC.gender = fetchDatafromFirebase.dogModel[indexPath.row].gender
+//        nVC.breed = fetchDatafromFirebase.dogModel[indexPath.row].breed
+//        nVC.weight = fetchDatafromFirebase.dogModel[indexPath.row].weight
+//        nVC.color = fetchDatafromFirebase.dogModel[indexPath.row].color
+//        nVC.alergen = fetchDatafromFirebase.dogModel[indexPath.row].alergen
+//        CurrentDogProfile.shared.currentDogId = fetchDatafromFirebase.dogModel[indexPath.row].dogID
         self.navigationController?.pushViewController(nVC, animated: true)
     }
     

@@ -106,6 +106,8 @@
 		C037879226B2A1CB004344E0 /* PrepareForMedical.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037878426B2A1CB004344E0 /* PrepareForMedical.swift */; };
 		C050E2EE26CFB9070075A1D4 /* DogProfileDetailAdd+ExtensionPicker+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C050E2ED26CFB9070075A1D4 /* DogProfileDetailAdd+ExtensionPicker+TableView.swift */; };
 		C0541BD226BD40D4000D2BB4 /* DatabaseCollectionName.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0541BD126BD40D4000D2BB4 /* DatabaseCollectionName.swift */; };
+		C064CDBA26D630E900378325 /* DogProfileListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C064CDB926D630E900378325 /* DogProfileListDetailViewController.swift */; };
+		C064CDBC26D6315300378325 /* DogProfileDetailListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C064CDBB26D6315300378325 /* DogProfileDetailListTableView.swift */; };
 		C07230B726CD717A007E7EE7 /* DogProfileDetailAddViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07230B626CD717A007E7EE7 /* DogProfileDetailAddViewControllerViewModel.swift */; };
 		C079A37726B844D00061EC30 /* DogsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C079A37626B844D00061EC30 /* DogsModel.swift */; };
 		C0A21CD826CE242700DF0BCE /* DogProfileDetailTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A21CD726CE242700DF0BCE /* DogProfileDetailTableView.swift */; };
@@ -223,6 +225,8 @@
 		C037878526B2A1CB004344E0 /* ModelBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelBackButton.swift; sourceTree = "<group>"; };
 		C050E2ED26CFB9070075A1D4 /* DogProfileDetailAdd+ExtensionPicker+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogProfileDetailAdd+ExtensionPicker+TableView.swift"; sourceTree = "<group>"; };
 		C0541BD126BD40D4000D2BB4 /* DatabaseCollectionName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseCollectionName.swift; sourceTree = "<group>"; };
+		C064CDB926D630E900378325 /* DogProfileListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileListDetailViewController.swift; sourceTree = "<group>"; };
+		C064CDBB26D6315300378325 /* DogProfileDetailListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileDetailListTableView.swift; sourceTree = "<group>"; };
 		C07230B626CD717A007E7EE7 /* DogProfileDetailAddViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileDetailAddViewControllerViewModel.swift; sourceTree = "<group>"; };
 		C079A37626B844D00061EC30 /* DogsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsModel.swift; sourceTree = "<group>"; };
 		C0A21CD726CE242700DF0BCE /* DogProfileDetailTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileDetailTableView.swift; sourceTree = "<group>"; };
@@ -434,11 +438,13 @@
 		2D74BE1426B454E8009B3629 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C064CDBD26D631C100378325 /* Dog Profile Detail List View  */,
 				2D74BE1626B454E8009B3629 /* DogProfileDetailEditViewController.swift */,
 				5B3CE4A326B8E96700ECF396 /* DogProfileDetailAddViewController.swift */,
 				C0A21CD726CE242700DF0BCE /* DogProfileDetailTableView.swift */,
 				C0A21CD926CE270500DF0BCE /* DogProfileDetailView.swift */,
 				C050E2ED26CFB9070075A1D4 /* DogProfileDetailAdd+ExtensionPicker+TableView.swift */,
+				C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -860,7 +866,6 @@
 			isa = PBXGroup;
 			children = (
 				5B67967226B41796004514F3 /* DogProfileListViewController.swift */,
-				C037878326B2A1CB004344E0 /* DogProfileDetailViewController.swift */,
 				5B67967026B41794004514F3 /* DogProfileTableViewCell.swift */,
 				5B71983A26BD42F9000F19A5 /* DogProfileEmptyStateViewController.swift */,
 			);
@@ -887,6 +892,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C064CDBD26D631C100378325 /* Dog Profile Detail List View  */ = {
+			isa = PBXGroup;
+			children = (
+				C064CDBB26D6315300378325 /* DogProfileDetailListTableView.swift */,
+				C064CDB926D630E900378325 /* DogProfileListDetailViewController.swift */,
+			);
+			path = "Dog Profile Detail List View ";
+			sourceTree = "<group>";
+		};
 		C07230BD26CE1856007E7EE7 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -899,6 +913,7 @@
 			isa = PBXGroup;
 			children = (
 				2D74BE1526B454E8009B3629 /* DogProfileDetailEdit.storyboard */,
+				C037877126B2A1CB004344E0 /* DogProfileDetail.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -917,7 +932,6 @@
 			children = (
 				5B67966F26B41793004514F3 /* DogProfileEmptyState.storyboard */,
 				5B67967126B41795004514F3 /* DogProfileFilledState.storyboard */,
-				C037877126B2A1CB004344E0 /* DogProfileDetail.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1115,6 +1129,7 @@
 				C00D231026D54A0A004BC076 /* MedicalRecordsButton.swift in Sources */,
 				5B3A109E26D4F6160022F85B /* ExtensionVetList+TableView.swift in Sources */,
 				2D646C2226BCDF2900E90EDF /* PresentationController.swift in Sources */,
+				C064CDBC26D6315300378325 /* DogProfileDetailListTableView.swift in Sources */,
 				5B67967426B41796004514F3 /* DogProfileTableViewCell.swift in Sources */,
 				C079A37726B844D00061EC30 /* DogsModel.swift in Sources */,
 				B5821A6626B7EEA0006DDED9 /* SigninViewController.swift in Sources */,
@@ -1148,6 +1163,7 @@
 				5B3A109F26D4F6160022F85B /* ModalViewModel.swift in Sources */,
 				2D19F87826C4C2C300FDAA46 /* UIConfiguration.swift in Sources */,
 				5B71983B26BD42F9000F19A5 /* DogProfileEmptyStateViewController.swift in Sources */,
+				C064CDBA26D630E900378325 /* DogProfileListDetailViewController.swift in Sources */,
 				5B05C39A26B2A9450034A66A /* MedicalRecordDetailEditViewController.swift in Sources */,
 				5B3A10A026D4F6160022F85B /* ModalUIView.swift in Sources */,
 				2D74BE1B26B45535009B3629 /* DogProfileDetailModel.swift in Sources */,

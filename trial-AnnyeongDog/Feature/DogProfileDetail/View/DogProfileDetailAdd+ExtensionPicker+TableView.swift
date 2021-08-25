@@ -5,6 +5,8 @@
 //  Created by Azka Kusuma on 19/08/21.
 //
 
+//                  This Page Replace DogProfileDetailAdd
+
 import UIKit
 
 extension DogProfileDetailTableView: UIPickerViewDelegate, UIPickerViewDataSource {
@@ -86,7 +88,7 @@ extension DogProfileDetailTableView: UIPickerViewDelegate, UIPickerViewDataSourc
 extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 9
+        return 8
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

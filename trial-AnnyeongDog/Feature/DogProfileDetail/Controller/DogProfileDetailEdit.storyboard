@@ -364,9 +364,6 @@
                                         <rect key="frame" x="155" y="648" width="46" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="Button"/>
-                                        <connections>
-                                            <segue destination="rYo-Hv-cLA" kind="show" id="ZsJ-RW-SrW"/>
-                                        </connections>
                                     </button>
                                 </subviews>
                                 <viewLayoutGuide key="contentLayoutGuide" id="s9C-wH-AaZ"/>
@@ -392,16 +389,49 @@
             </objects>
             <point key="canvasLocation" x="800" y="24.881516587677723"/>
         </scene>
+        <!--Dog Profile List Detail View Controller-->
+        <scene sceneID="K99-Ta-hvZ">
+            <objects>
+                <viewController storyboardIdentifier="XiBEdit" useStoryboardIdentifierAsRestorationIdentifier="YES" id="g39-lO-b3o" customClass="DogProfileListDetailViewController" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Df9-Im-Q5w" customClass="DogProfileDetailListTableView" customModule="trial_AnnyeongDog" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eGe-h2-Whc">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="T4j-gu-pAH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="T4j-gu-pAH" firstAttribute="trailing" secondItem="eGe-h2-Whc" secondAttribute="trailing" id="1Di-QQ-JQS"/>
+                            <constraint firstItem="eGe-h2-Whc" firstAttribute="top" secondItem="T4j-gu-pAH" secondAttribute="top" id="E0d-XD-bbr"/>
+                            <constraint firstItem="eGe-h2-Whc" firstAttribute="leading" secondItem="T4j-gu-pAH" secondAttribute="leading" id="Glm-ro-45U"/>
+                            <constraint firstItem="T4j-gu-pAH" firstAttribute="bottom" secondItem="eGe-h2-Whc" secondAttribute="bottom" id="xZK-fj-MWL"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="dogProfileDetailListTableView" destination="eGe-h2-Whc" id="7kd-ET-Tbw"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="dogProfileDetailTableView" destination="Df9-Im-Q5w" id="oXG-Nd-ETR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8V1-n5-wra" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="125" y="717"/>
+        </scene>
         <!--Dog Profile Detail Table View-->
         <scene sceneID="nXJ-Od-kch">
             <objects>
                 <viewController storyboardIdentifier="XiBVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rYo-Hv-cLA" customClass="DogProfileDetailTableView" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0CX-tX-dHA" customClass="DogProfileDetailView" customModule="trial_AnnyeongDog" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dbU-GL-3ek">
-                                <rect key="frame" x="0.0" y="0.0" width="390" height="756"/>
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -424,7 +454,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aix-kF-vkp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1634" y="25"/>
+            <point key="canvasLocation" x="800" y="718"/>
         </scene>
     </scenes>
     <resources>
