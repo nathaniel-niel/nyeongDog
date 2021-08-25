@@ -219,11 +219,11 @@
             </objects>
             <point key="canvasLocation" x="1044.6153846153845" y="95.260663507109001"/>
         </scene>
-        <!--View Controller-->
+        <!--Dog Profile Detail EditVC-->
         <scene sceneID="uMB-gg-wqT">
             <objects>
-                <viewController id="BnY-Kq-GBL" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="f6o-Ii-VT1">
+                <viewController id="BnY-Kq-GBL" customClass="DogProfileDetailEditVC" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f6o-Ii-VT1" customClass="DogProfileDetailEditView" customModule="trial_AnnyeongDog" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -240,7 +240,13 @@
                             <constraint firstItem="RKi-LF-fC9" firstAttribute="trailing" secondItem="nJM-FL-G6S" secondAttribute="trailing" id="IGe-6W-okU"/>
                             <constraint firstItem="nJM-FL-G6S" firstAttribute="top" secondItem="RKi-LF-fC9" secondAttribute="top" id="afx-8k-bNo"/>
                         </constraints>
+                        <connections>
+                            <outlet property="dogProfileEditTableView" destination="nJM-FL-G6S" id="pwt-FY-gKC"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="dogProfileDetailEditTableView" destination="f6o-Ii-VT1" id="CAB-dk-sPm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jgt-Ax-hAu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
