@@ -34,4 +34,7 @@ class language{
     static let alertMessageSignIn = NSLocalizedString("alertMessage", comment: "")
     static let cancelTitle = NSLocalizedString("alertCancelTitle", comment: "")
     static let singinTitle = NSLocalizedString("alertSigninTitle", comment: "")
+    
+    // Medical Record List
+    static let dateMedicalRecord = NSLocalizedString("medicalRecord.date", comment: "")
 }

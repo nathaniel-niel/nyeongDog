@@ -26,3 +26,5 @@
 "alertMessage" = "To proceed, you need to have an account";
 "alertCancelTitle" = "Cancel";
 "alertSigninTitle" = "Sing In";
+
+"medicalRecord.date" = "Date";
