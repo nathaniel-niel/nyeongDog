@@ -18,8 +18,9 @@ class NavigationManager {
     }
     
     enum Modal {
-        case dogProfileDetailEdit
+        case dogProfileDetailTableView
         case chat
+        
     }
     
     func show(screen: Screen, inController: UIViewController!) {
@@ -45,8 +46,8 @@ class NavigationManager {
         var navController: UINavigationController!
         
         switch modal {
-        case .dogProfileDetailEdit:
-            viewController = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil).instantiateViewController(identifier: "DPDA")
+        case .dogProfileDetailTableView:
+            viewController = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil).instantiateViewController(identifier: "XiBVC")
    
         case .chat:
             viewController = UIStoryboard(name: "Chat", bundle: nil).instantiateViewController(identifier: "Chat")

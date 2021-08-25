@@ -395,7 +395,7 @@
         <!--Dog Profile Detail Table View-->
         <scene sceneID="nXJ-Od-kch">
             <objects>
-                <viewController id="rYo-Hv-cLA" customClass="DogProfileDetailTableView" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="XiBVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rYo-Hv-cLA" customClass="DogProfileDetailTableView" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0CX-tX-dHA" customClass="DogProfileDetailView" customModule="trial_AnnyeongDog" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

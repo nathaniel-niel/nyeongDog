@@ -106,7 +106,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         if isNewUser {
             AlertManager.alert.createSignInAlert(viewController: self)
         } else {
-            NavigationManager.navigateToPage.showModal(modal: .dogProfileDetailEdit, vc: self)
+            NavigationManager.navigateToPage.showModal(modal: .dogProfileDetailTableView, vc: self)
         }
     }
     

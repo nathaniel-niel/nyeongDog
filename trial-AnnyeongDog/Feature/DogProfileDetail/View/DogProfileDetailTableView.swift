@@ -54,6 +54,9 @@ class DogProfileDetailTableView: UIViewController{
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector( fetchToFirebase))
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonTapped))
+    
      
     }
     
@@ -69,6 +72,22 @@ class DogProfileDetailTableView: UIViewController{
     
     @objc func fetchToFirebase(){
         viewModel.saveDatatoFirebase(dogsName: dogName, dogDOB: dogDOb,dogGender: dogGender, dogBreed: dogType, dogWeight: dogWeight, dogColor: dogColor, dogAllergy: dogAlergy)
+        
+        self.navigationController?.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    // MARK: - Back button
+    @objc func backButtonTapped(){
+        let alert = UIAlertController(title: "Unsaved Changes", message: "You have unsaved changes, are you sure you want to cancel?.", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Yes", style: .destructive,handler: { action in
+            
+            self.navigationController?.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true)
     }
     
 }
