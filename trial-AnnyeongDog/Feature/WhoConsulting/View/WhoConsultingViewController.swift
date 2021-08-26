@@ -12,7 +12,8 @@ class WhoConsultingViewController: UIViewController {
 
     // MARK: - Object Declaration
     var fetchDatafromFirebase = FetchDatafromFirebase()
-    
+    var dogModel: [DogsModel] = []
+    // IBOutlet
     @IBOutlet weak var dogProfileCollectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -20,24 +21,45 @@ class WhoConsultingViewController: UIViewController {
         setup()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        fetchFirebase()
+    }
+    
+    // MARK: - Fetching the Firebase using ViewModel
+    func fetchFirebase(){
+        fetchDatafromFirebase.fetchDataFirebase {
+            DispatchQueue.main.async {
+                self.dogProfileCollectionView.reloadData()
+            }
+        }
+    }
+    
+    
     private func setup(){
-        
+        //SetupLayoutCell
         dogProfileCollectionView.collectionViewLayout = UICollectionViewFlowLayout()
+        //Delegate and Register
         dogProfileCollectionView.delegate = self
         dogProfileCollectionView.dataSource = self
         dogProfileCollectionView.register(WhoConsultingCollectionViewCell.nib(), forCellWithReuseIdentifier: WhoConsultingCollectionViewCell.identifier)
+        //NavigationBar
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
     }
+    
+    //Back button did tapped
     @IBAction func backButtonDidTapped(_ sender: Any) {
-        self.present(<#T##viewControllerToPresent: UIViewController##UIViewController#>, animated: <#T##Bool#>, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Main")
+        self.navigationController?.pushViewController(vc, animated: false)
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
     }
 }
 
 extension WhoConsultingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 12
-//        return fetchDatafromFirebase.dogModel.count
+        return fetchDatafromFirebase.dogModel.count
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -49,9 +71,10 @@ extension WhoConsultingViewController: UICollectionViewDelegate, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WhoConsultingCollectionViewCell.identifier, for: indexPath) as! WhoConsultingCollectionViewCell
-        
-//        cell.configure(with: UIImage(named: "AppIcon")!, nameDog: fetchDatafromFirebase.dogModel[indexPath.row].dogName ?? "no data")
+    
         cell.configure(with: UIImage(named: "AppIcon")!, nameDog: "Bunny")
+        cell.dogName.text = fetchDatafromFirebase.dogModel[indexPath.row].dogName
+        
         
         return cell
     }
