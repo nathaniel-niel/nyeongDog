@@ -54,6 +54,7 @@ class MedicalRecordDetailEditViewController: UIViewController{
         // Register XIB table view cell
         MRDEtable.register(MRDTableViewCell.nib(), forCellReuseIdentifier: MRDTableViewCell.identifier)
         MRDEtable.register(DescriptionTextViewCell.nib(), forCellReuseIdentifier: DescriptionTextViewCell.identifier)
+        MRDEtable.register(DeleteButton.nib(), forCellReuseIdentifier: DeleteButton.identifier)
         
     }
   
