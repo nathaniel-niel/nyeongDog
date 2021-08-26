@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class DogProfileDetailTableView: UIViewController{
     
     @IBOutlet var dogProfileDetail: DogProfileDetailView!
@@ -15,15 +14,12 @@ class DogProfileDetailTableView: UIViewController{
     var viewModel = DogProfileDetailAddViewControllerViewModel()
     var genderModel = GenderModel()
     var dogsModel = DogsModel()
-//    var delegate: addData?
     
     var dogsDOBPicker = UIPickerView()
     var genderPicker = UIPickerView()
     
     var stringPickerGender: String = ""
     var stringPickerDOB: String = ""
-    
-    var cell = DogProfileDetailTextField()
         
     var dogName = ""
     var dogType = ""
@@ -31,6 +27,7 @@ class DogProfileDetailTableView: UIViewController{
     var dogColor = ""
     var dogAlergy = ""
     var dogDOb = ""
+    var dogGender = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +37,6 @@ class DogProfileDetailTableView: UIViewController{
         dogProfileDetail.setup()
         uiPickerView()
        
-        
     }
     
     func uiPickerView(){
@@ -58,6 +54,9 @@ class DogProfileDetailTableView: UIViewController{
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector( fetchToFirebase))
+        
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonTapped))
+    
      
     }
     
@@ -72,7 +71,23 @@ class DogProfileDetailTableView: UIViewController{
     }
     
     @objc func fetchToFirebase(){
-        viewModel.saveDatatoFirebase(dogsName: dogName, dogDOB: dogDOb, dogBreed: dogType, dogWeight: dogWeight, dogColor: dogColor, dogAllergy: dogAlergy)
+        viewModel.saveDatatoFirebase(dogsName: dogName, dogDOB: dogDOb,dogGender: dogGender, dogBreed: dogType, dogWeight: dogWeight, dogColor: dogColor, dogAllergy: dogAlergy)
+        
+        self.navigationController?.popViewController(animated: true)
+        
+    }
+    
+    // MARK: - Back button
+    @objc func backButtonTapped(){
+        let alert = UIAlertController(title: "Unsaved Changes", message: "You have unsaved changes, are you sure you want to cancel?.", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "Yes", style: .destructive,handler: { action in
+            
+            self.navigationController?.popToRootViewController(animated: true)
+        }))
+        
+        self.present(alert, animated: true)
     }
     
 }

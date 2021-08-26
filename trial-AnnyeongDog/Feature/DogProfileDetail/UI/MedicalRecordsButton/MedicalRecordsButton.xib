@@ -26,6 +26,9 @@
                         <state key="normal" title="Laporan Medis">
                             <color key="titleColor" red="0.9208304665" green="0.9208304665" blue="0.9208304665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
+                        <connections>
+                            <action selector="medicalRecordsPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="5uf-qC-5pe"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>

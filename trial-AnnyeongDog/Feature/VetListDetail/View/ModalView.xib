@@ -162,8 +162,8 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Mw-2L-VHP" userLabel="Label">
                                                             <rect key="frame" x="0.0" y="31" width="414" height="31"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Universitas Nama" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7p-7T-azj" userLabel="Alumnus">
-                                                                    <rect key="frame" x="20" y="3.3333333333333144" width="374" height="24"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Universitas Nama" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g7p-7T-azj" userLabel="Alumnus">
+                                                                    <rect key="frame" x="20" y="8" width="374" height="24"/>
                                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -230,7 +230,7 @@
                                                             <rect key="frame" x="0.0" y="31" width="414" height="30.666666666666671"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nama Klinik/ Tempat Praktik" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zF-Dj-dYK" userLabel="Alumnus">
-                                                                    <rect key="frame" x="20" y="4.3333333333333712" width="374" height="20.333333333333332"/>
+                                                                    <rect key="frame" x="20" y="10" width="374" height="20.333333333333332"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                                     <nil key="textColor"/>
@@ -292,19 +292,15 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkN-Ju-ZJg" userLabel="Label">
                                                             <rect key="frame" x="0.0" y="31.000000000000057" width="414" height="31"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="xxxx xxxx xxxx xxxx" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msC-00-0GI" userLabel="Alumnus">
-                                                                    <rect key="frame" x="20" y="3.6666666666666288" width="374" height="24"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="xxxx xxxx xxxx xxxx" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msC-00-0GI" userLabel="Alumnus">
+                                                                    <rect key="frame" x="20" y="2.6666666666666856" width="374" height="24"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                            <constraints>
-                                                                <constraint firstItem="msC-00-0GI" firstAttribute="centerY" secondItem="kkN-Ju-ZJg" secondAttribute="centerY" id="bKn-zp-EUL"/>
-                                                                <constraint firstAttribute="trailing" secondItem="msC-00-0GI" secondAttribute="trailing" constant="20" id="jNo-YP-2SX"/>
-                                                                <constraint firstItem="msC-00-0GI" firstAttribute="leading" secondItem="kkN-Ju-ZJg" secondAttribute="leading" constant="20" id="n5H-Pb-Ju0"/>
-                                                            </constraints>
                                                         </view>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wSg-k3-FgR" userLabel="divider">
                                                             <rect key="frame" x="0.0" y="62.000000000000057" width="414" height="31"/>
@@ -314,6 +310,13 @@
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <color key="backgroundColor" systemColor="systemGray3Color"/>
                                                                 </view>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="STRV is Veterinary Registration Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmE-EB-C5t">
+                                                                    <rect key="frame" x="16" y="19.999999999999943" width="353" height="11"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="11"/>
+                                                                    <color key="textColor" systemColor="systemGray3Color"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         </view>
@@ -416,17 +419,23 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="alumniLabel" destination="g7p-7T-azj" id="9mX-LA-aks"/>
+                <outlet property="alumniTitle" destination="A5q-x3-VOV" id="8lq-Q0-pvM"/>
                 <outlet property="chargeLabel" destination="2B9-KV-94l" id="PP4-qZ-U0P"/>
                 <outlet property="clinicLabel" destination="5zF-Dj-dYK" id="huj-5R-NBh"/>
+                <outlet property="clinicTitle" destination="1QG-ri-OdS" id="jNq-WL-Ab3"/>
                 <outlet property="consultButton" destination="3yy-qa-YhK" id="AzS-6E-mYt"/>
+                <outlet property="consultRateTitle" destination="Ydj-BQ-f0Z" id="Ql1-hB-CtP"/>
+                <outlet property="descSTRVTitle" destination="JmE-EB-C5t" id="aOx-dd-vry"/>
                 <outlet property="line" destination="Ux0-5M-Pmo" id="cm6-xd-LNb"/>
                 <outlet property="statusView" destination="5Br-fb-WIy" id="U3u-Qc-PeW"/>
                 <outlet property="strvNumber" destination="msC-00-0GI" id="sm1-cj-KHb"/>
+                <outlet property="strvTitle" destination="iAb-O0-7lf" id="dIf-e0-5jh"/>
                 <outlet property="vetExp" destination="82b-3D-pMZ" id="OOY-Be-yfs"/>
                 <outlet property="vetImage" destination="VTf-tM-EDy" id="vdh-Ro-1OX"/>
                 <outlet property="vetName" destination="IQg-3t-Rpt" id="J4f-M2-XE6"/>
                 <outlet property="vetRating" destination="TLH-Nb-STP" id="f1R-6B-UJE"/>
                 <outlet property="viewRating" destination="C9a-g5-nWE" id="t65-jF-Ibl"/>
+                <outlet property="yearsexpTitle" destination="2AO-dL-aOA" id="cT9-hx-OMt"/>
             </connections>
             <point key="canvasLocation" x="-160" y="184.83412322274881"/>
         </view>

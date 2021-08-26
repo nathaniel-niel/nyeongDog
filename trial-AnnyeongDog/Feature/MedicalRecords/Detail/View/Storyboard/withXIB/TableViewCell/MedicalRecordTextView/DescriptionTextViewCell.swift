@@ -22,7 +22,8 @@ class DescriptionTextViewCell: UITableViewCell{
 
     
     func configure(description: String){
-        descriptionTextView.text = description
+        //placeholder
+        descriptionTextView.text = language.descriptionPlaceholder
         descriptionTextView.layer.borderWidth = 1
         descriptionTextView.layer.cornerRadius = 10
     }

@@ -25,7 +25,7 @@ class DogProfileEmptyStateViewController: UIViewController {
         }
         else{
             let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
-            let nVC = (storyboard.instantiateViewController(identifier: "DPDA"))
+            let nVC = (storyboard.instantiateViewController(identifier: "XiBVC"))
             
             self.navigationController?.pushViewController(nVC, animated: true)
         }

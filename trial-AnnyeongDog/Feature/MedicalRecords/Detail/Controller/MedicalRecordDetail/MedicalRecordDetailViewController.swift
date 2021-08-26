@@ -32,10 +32,10 @@ class MedicalRecordDetailViewcontroller: UIViewController{
     
     private func setup(){
         // Navigation controller
-        self.navigationItem.title = "Medical Record"
+        self.navigationItem.title = language.navTitleMedicalRecord
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonTapped))
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(didEditButtonTapped))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: language.editButtonTitle, style: .plain, target: self, action: #selector(didEditButtonTapped))
         
         // Setup table view delegate and data source
         table.delegate = self

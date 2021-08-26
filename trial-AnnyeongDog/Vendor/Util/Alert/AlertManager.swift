@@ -11,10 +11,10 @@ class AlertManager: UIViewController {
     static let alert = AlertManager()
     
     func createSignInAlert(viewController: UIViewController) {
-        let alert = UIAlertController(title: "Sign in to continue", message: "To proceed, you need to have an account", preferredStyle: .alert)
+        let alert = UIAlertController(title: language.alertTitleSignIn, message: language.alertMessageSignIn, preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil) )
-        alert.addAction(UIAlertAction(title: "Sign In", style: .default, handler: { action in
+        alert.addAction(UIAlertAction(title: language.cancelTitle, style: .destructive, handler: nil) )
+        alert.addAction(UIAlertAction(title: language.singinTitle, style: .default, handler: { action in
             let storyboard = UIStoryboard(name: "Signin", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "Signin")
             
@@ -40,7 +40,7 @@ class AlertManager: UIViewController {
         viewController.present(alert, animated: true)
     }
     
-    func createDeleteDogProfileAlert(viewController: DogProfileDetailViewController!){
+    func createDeleteDogProfileAlert(viewController: DogProfileDetailEditVC!){
         let alert = UIAlertController(title: "Delete Dog Profile", message: "Once you delete this, you won't be able to return it. Do you want to proceed?", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))

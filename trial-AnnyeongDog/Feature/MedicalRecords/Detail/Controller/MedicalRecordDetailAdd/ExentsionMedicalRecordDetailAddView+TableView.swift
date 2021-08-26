@@ -34,13 +34,13 @@ extension MedicalRecordDetailAddViewController: UITableViewDataSource, UITableVi
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return "Time"
+            return language.timeTitle
         case 1:
-            return "Detail"
+            return language.detailTitle
         case 2:
-            return "Medical Record"
+            return language.medicalHistoryTitle
         case 3:
-            return "Description"
+            return language.descriptionTitle
         default:
             fatalError()
         }
@@ -57,7 +57,7 @@ extension MedicalRecordDetailAddViewController: UITableViewDataSource, UITableVi
             let cell = mrdaTable.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
             cell.contenTextField.delegate = self
             cell.contenTextField.autocorrectionType = .no
-            cell.configure(title: "Date", placeholder: "00/00/2021", tag: 0)
+            cell.configure(title: language.dateMedicalRecord, placeholder: language.datePlaceholder, tag: 0)
             return cell
         }
         else if indexPath.section == 1 {
@@ -66,10 +66,10 @@ extension MedicalRecordDetailAddViewController: UITableViewDataSource, UITableVi
             cell.contenTextField.autocorrectionType = .no
             if indexPath.row == 0 {
                 
-                cell.configure(title: "Vet Name", placeholder: "Drh. Budi",tag: 1)
+                cell.configure(title: language.vetTitle, placeholder: language.vetNamePlaceholder,tag: 1)
                 
             } else {
-                cell.configure(title: "Vaccine Type", placeholder: "Distemper", tag: 2)
+                cell.configure(title: language.typeVaccineTitle, placeholder: language.vaccineTypePlaceholder, tag: 2)
                 
             }
             return cell
@@ -82,12 +82,12 @@ extension MedicalRecordDetailAddViewController: UITableViewDataSource, UITableVi
             
             if indexPath.row == 0 {
                 
-                cell.configure(title: "Diagnose", placeholder: "Diarrhea", tag: 3)
+                cell.configure(title: language.diagnosisTitle, placeholder: language.diagnosisPlaceholder, tag: 3)
             } else if indexPath.row == 1 {
-                cell.configure(title: "Medecine", placeholder: "Pet Metronidazole Diarrhea", tag: 4)
+                cell.configure(title: language.medicineTitle, placeholder: language.medicinePlaceholder, tag: 4)
                 
             } else {
-                cell.configure(title: "Dosage", placeholder: "4 x per Day", tag: 5)
+                cell.configure(title: language.dosageTitle, placeholder: language.dosagePlaceholder, tag: 5)
                 
             }
             
@@ -97,7 +97,7 @@ extension MedicalRecordDetailAddViewController: UITableViewDataSource, UITableVi
         else {
             let largeCell = mrdaTable.dequeueReusableCell(withIdentifier: DescriptionTextViewCell.identifier) as! DescriptionTextViewCell
             largeCell.descriptionTextView.delegate = self
-            largeCell.configure(description: "Type your descripcion here..")
+            largeCell.configure(description: language.descriptionPlaceholder)
             return largeCell
         }
         

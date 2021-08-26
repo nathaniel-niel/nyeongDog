@@ -30,6 +30,7 @@ class ModalViewController: UIViewController {
         view.addGestureRecognizer(panGesture)
         
         uiView.setup()
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -41,6 +42,7 @@ class ModalViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         assing()
+        uiView.consultButtonCondition()
     }
     
     //MARK: - Function to Set UI Components Values

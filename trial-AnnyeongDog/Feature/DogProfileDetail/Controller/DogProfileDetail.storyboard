@@ -219,6 +219,39 @@
             </objects>
             <point key="canvasLocation" x="1044.6153846153845" y="95.260663507109001"/>
         </scene>
+        <!--Dog Profile Detail EditVC-->
+        <scene sceneID="uMB-gg-wqT">
+            <objects>
+                <viewController storyboardIdentifier="xibDogEdit" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BnY-Kq-GBL" customClass="DogProfileDetailEditVC" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f6o-Ii-VT1" customClass="DogProfileDetailEditView" customModule="trial_AnnyeongDog" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nJM-FL-G6S">
+                                <rect key="frame" x="0.0" y="44" width="390" height="766"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RKi-LF-fC9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nJM-FL-G6S" firstAttribute="leading" secondItem="RKi-LF-fC9" secondAttribute="leading" id="5EK-wC-6DW"/>
+                            <constraint firstItem="RKi-LF-fC9" firstAttribute="bottom" secondItem="nJM-FL-G6S" secondAttribute="bottom" id="FrM-hH-sYA"/>
+                            <constraint firstItem="RKi-LF-fC9" firstAttribute="trailing" secondItem="nJM-FL-G6S" secondAttribute="trailing" id="IGe-6W-okU"/>
+                            <constraint firstItem="nJM-FL-G6S" firstAttribute="top" secondItem="RKi-LF-fC9" secondAttribute="top" id="afx-8k-bNo"/>
+                        </constraints>
+                        <connections>
+                            <outlet property="dogProfileEditTableView" destination="nJM-FL-G6S" id="pwt-FY-gKC"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="dogProfileDetailEditTableView" destination="f6o-Ii-VT1" id="CAB-dk-sPm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jgt-Ax-hAu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1045" y="786"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="s9F-yj-GL8">
             <objects>
