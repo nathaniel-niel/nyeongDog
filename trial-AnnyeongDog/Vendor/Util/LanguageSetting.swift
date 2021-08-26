@@ -17,6 +17,7 @@ class language{
     static let navtitleLabelVet = NSLocalizedString("navigationItem.titleLabel", comment: "")
     static let searchbarPlaceholder = NSLocalizedString("searchBar.placeholder", comment: "")
     static let tabBarTitleDogProfileLabel = NSLocalizedString("tabBarItem.Title.dogProfile", comment: "")
+    static let tabBarTitleVetListLabel = NSLocalizedString("tabBarItem.Title.vetList", comment: "")
    
     // Navigation Item
     static let addButtonTitle = NSLocalizedString("addButtonTitle", comment: "")
@@ -40,6 +41,9 @@ class language{
     static let alertTitleDeleteMedicalRecord = NSLocalizedString("alertTitleDeleteMedicalRecord", comment: "")
     static let alertMessageDeleteMedicalRecord = NSLocalizedString("alertMessageDeleteMedicalRecord", comment: "")
     
+    // Alert Delete Dog Profile
+    static let alertTitleDeleteDogProfile = NSLocalizedString("alertTitleDeleteDogProfile", comment: "")
+
     //  Modal Vet List 
     static let yearsexpTitleLabel = NSLocalizedString("modal.yearsExpTitle", comment: "")
     static let alumniTitleLabel = NSLocalizedString("modal.alumniTitle", comment: "")
@@ -76,4 +80,18 @@ class language{
     static let diagnosisPlaceholder = NSLocalizedString("medicalRecordPlaceholder.diagnosis", comment: "")
     static let medicinePlaceholder = NSLocalizedString("medicalRecordPlaceholder.medicine", comment: "")
     static let dosagePlaceholder = NSLocalizedString("medicalRecordPlaceholder.dosage", comment: "")
+    
+    // Dog Profile Detail
+    static let deleteButtonTitleDogProfile = NSLocalizedString("dogProfileDetail.deleteButton", comment: "")
+    static let medicalRecordButtonTitleDogProfile = NSLocalizedString("dogProfileDetail.medicalRecordButton", comment: "")
+    static let dogNameTitleDogProfile = NSLocalizedString("dogProfileDetail.dogName", comment: "")
+    static let dogAgeTitleDogProfile = NSLocalizedString("dogProfileDetail.dogAge", comment: "")
+    static let dogGenderTitleDogProfile = NSLocalizedString("dogProfile.Detail.dogGender", comment: "")
+    static let dogBreedTitleDogProfile = NSLocalizedString("dogProfileDetail.dogBreed", comment: "")
+    static let dogWeightTitleDogProfile = NSLocalizedString("dogProfileDetail.dogWeight", comment: "")
+    static let dogColorTitleDogProfile = NSLocalizedString("dogProfileDetail.dogColor", comment: "")
+    static let dogAllergenTitleDogProfile = NSLocalizedString("dogProfileDetail.dogAllergen", comment: "")
+    // Picker Age
+    static let yearsTitlePicker = NSLocalizedString("picker.yearsTitle", comment: "")
+    static let monthsTitlePicker = NSLocalizedString("picker.monthsTitle", comment: "")
 }

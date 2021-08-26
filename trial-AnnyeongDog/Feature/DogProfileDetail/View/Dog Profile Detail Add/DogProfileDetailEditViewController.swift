@@ -61,10 +61,10 @@ class DogProfileDetailEditViewController: UIViewController, UIImagePickerControl
     // MARK: Functions
     
     func setup(){
-        self.navigationItem.title = "Dog Profile"
+        self.navigationItem.title = language.navTitleLabelDogProfile
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonTapped))
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editButtonTapped))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: language.editButtonTitle, style: .plain, target: self, action: #selector(editButtonTapped))
     }
     
     //MARK: - back button did tapped
@@ -154,7 +154,7 @@ class DogProfileDetailEditViewController: UIViewController, UIImagePickerControl
             }
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: language.cancelButtonTitle, style: .cancel, handler: nil)
         
         alertVC.addAction(libraryAction)
         alertVC.addAction(cancelAction)

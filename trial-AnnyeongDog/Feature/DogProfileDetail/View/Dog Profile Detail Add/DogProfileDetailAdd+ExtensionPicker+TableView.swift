@@ -49,11 +49,11 @@ extension DogProfileDetailTableView: UIPickerViewDelegate, UIPickerViewDataSourc
             case 0:
                 return genderModel.dogYear[row]
             case 1 :
-                return "Years"
+                return language.yearsTitlePicker
             case 2:
                 return genderModel.dogMonth[row]
             case 3:
-                return "Months"
+                return language.monthsTitlePicker
             default:
                 return genderModel.dogMonth[row]
             }
@@ -74,7 +74,7 @@ extension DogProfileDetailTableView: UIPickerViewDelegate, UIPickerViewDataSourc
             let dogYear = pickerView.selectedRow(inComponent: 0)
             let selectedDogYear = genderModel.dogYear[dogYear]
             let selectedDogMonth = genderModel.dogMonth[dogMonth]
-            stringPickerDOB = "\(selectedDogYear) Tahun \(selectedDogMonth) Bulan"
+            stringPickerDOB = "\(selectedDogYear) \(language.yearsTitlePicker) \(selectedDogMonth) \(language.monthsTitlePicker)"
             dogProfileDetail.DogProfileTableView.reloadRows(at: [IndexPath(row: 2, section: 0)], with: .none)
             //            cell.textField.text = stringPickerDOB
             
@@ -103,7 +103,7 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
             let cell =  dogProfileDetail.DogProfileTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
             
             
-            cell.textFieldLabel.text = "Nama Anjing"
+            cell.textFieldLabel.text = language.dogNameTitleDogProfile
             cell.tagFrom = 1
             cell.delegate = self
             return cell
@@ -114,7 +114,7 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
             cell.textField.inputView = dogsDOBPicker
             cell.textField.text = stringPickerDOB
             
-            cell.textFieldLabel.text = "Usia"
+            cell.textFieldLabel.text = language.dogAgeTitleDogProfile
             cell.tagFrom = 2
             cell.delegate = self
             return cell
@@ -126,7 +126,7 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
             cell.textField.inputView = genderPicker
             cell.textField.text = stringPickerGender
             
-            cell.textFieldLabel.text = "Jenis Kelamin"
+            cell.textFieldLabel.text = language.dogGenderTitleDogProfile
             cell.tagFrom = 3
             cell.delegate = self
             return cell
@@ -135,7 +135,7 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
             let cell =  dogProfileDetail.DogProfileTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
             
             
-            cell.textFieldLabel.text = "Jenis Anjing"
+            cell.textFieldLabel.text = language.dogBreedTitleDogProfile
             cell.tagFrom = 4
             cell.delegate = self
             return cell
@@ -144,7 +144,7 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
             let cell =  dogProfileDetail.DogProfileTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
             
             cell.textField.keyboardType = .numberPad
-            cell.textFieldLabel.text = "Berat Badan"
+            cell.textFieldLabel.text = language.dogWeightTitleDogProfile
             cell.tagFrom = 5
             cell.delegate = self
             return cell
@@ -153,7 +153,7 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
             let cell =  dogProfileDetail.DogProfileTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
             
             
-            cell.textFieldLabel.text = "Warna"
+            cell.textFieldLabel.text = language.dogColorTitleDogProfile
             cell.tagFrom = 6
             cell.delegate = self
             return cell
@@ -162,7 +162,7 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
             let cell =  dogProfileDetail.DogProfileTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
             
             
-            cell.textFieldLabel.text = "Alergi"
+            cell.textFieldLabel.text = language.dogAllergenTitleDogProfile
             cell.tagFrom = 7
             cell.delegate = self
             return cell

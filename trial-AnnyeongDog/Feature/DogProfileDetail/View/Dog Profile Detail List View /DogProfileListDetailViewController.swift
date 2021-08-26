@@ -31,7 +31,7 @@ class DogProfileListDetailViewController: UIViewController{
     
     func setup(){
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(editButtonTapped))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: language.editButtonTitle, style: .plain, target: self, action: #selector(editButtonTapped))
         
         dogProfileDetailTableView.dogProfileDetailListTableView.delegate = self
         dogProfileDetailTableView.dogProfileDetailListTableView.dataSource = self
