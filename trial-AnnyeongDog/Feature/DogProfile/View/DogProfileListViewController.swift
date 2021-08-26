@@ -10,9 +10,9 @@ import Firebase
 class DogProfileListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //MARK: Declaration Storage Manager [User Login Information]
-//    let storageManager = StorageManager()
+    //    let storageManager = StorageManager()
     var isNewUser: Bool!
-
+    
     @IBOutlet weak var addButtonTitle: UIButton!{
         didSet{
             addButtonTitle.setTitle(language.addButtonTitle, for: .normal)
@@ -27,10 +27,12 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     var fetchDatafromFirebase = FetchDatafromFirebase()
     var userlogin = didUserLogin()
     
+    
     // MARK: - App Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
+        isNewUser = StorageManager.shared.isNewUser()
     }
     
     
@@ -47,7 +49,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         dogProfileTableView.dataSource = self
         dogProfileTableView.delegate = self
         isNewUser = StorageManager.shared.isNewUser()
-
+        
         dogProfileTabBarItem.title = language.tabBarTitleDogProfileLabel
         self.navigationItem.title = language.navTitleLabelDogProfile
         
@@ -55,11 +57,14 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     }
     // MARK: - Fetching the Firebase using ViewModel
     func fetchFirebase(){
-        fetchDatafromFirebase.fetchDataFirebase {
-            DispatchQueue.main.async {
-                self.dogProfileTableView.reloadData()
+        
+        if StorageManager.shared.isNewUser() == false {
+            fetchDatafromFirebase.fetchDataFirebase {
+                DispatchQueue.main.async {
+                    self.dogProfileTableView.reloadData()
+                }
             }
-        }
+        } else {}
     }
     
     //MARK: - Height Cell Setting
@@ -114,7 +119,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     //MARK: - Add button di klik
     @IBAction func addDidTapped(_ sender: Any) {
         //MARK: Function detect user has logged in or not
-        if isNewUser {
+        if isNewUser == true{
             
             AlertManager.alert.createSignInAlert(viewController: self)
         } else {

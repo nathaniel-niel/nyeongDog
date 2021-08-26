@@ -15,11 +15,11 @@ class ModalViewController: UIViewController {
     
     //MARK: - Declaration Variable
     let viewModel = ModalViewModel()
-//    let uiView = ModalUIView()
+    //    let uiView = ModalUIView()
     
     var hasSetPointOrigin = false
     var originPoint: CGPoint?
-    
+    var isNewUser: Bool?
     var vetListModel: VetListModel?
     
     // MARK: - App Life Cycle
@@ -30,6 +30,7 @@ class ModalViewController: UIViewController {
         view.addGestureRecognizer(panGesture)
         
         uiView.setup()
+        isNewUser = StorageManager.shared.isNewUser()
         
     }
     
@@ -79,13 +80,15 @@ class ModalViewController: UIViewController {
     
     @IBAction func consultButtonDidTapped(_ sender: Any) {
         // if user is login = true -> whos consult page
-         if Firebase.Auth.auth().currentUser != nil{
-            self.present(self.viewModel.preparetoChat(), animated: true, completion: nil)
-        }
-         // if user is not login/ new user -> login page
-        else{
+        
+        //MARK: User hasn't logged in
+        if isNewUser == true {
             AlertManager.alert.createSignInAlert(viewController: self)
+        }else {
+            self.present(self.viewModel.preparetoChat(), animated: true, completion: nil)
+            print("Status user : \(isNewUser)")
         }
+        
     }
 }
 

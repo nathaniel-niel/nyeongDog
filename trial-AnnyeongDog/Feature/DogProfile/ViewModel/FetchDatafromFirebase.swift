@@ -14,11 +14,16 @@ class FetchDatafromFirebase {
     
     func fetchDataFirebase(completion: @escaping() -> Void){
         
-        DataManipulation.sharedData.fetchDogDataFromFirebase(with: UserControl.shared.user?.uid ?? "unknown") { responseData in
-            self.dogModel = responseData
-            completion()
-            
-        }
+        //MARK: if user hasn't signed in
+//        if StorageManager.shared.isNewUser() == true {
+//
+//        } else {
+            DataManipulation.sharedData.fetchDogDataFromFirebase(with: UserControl.shared.user?.uid ?? "unknown") { responseData in
+                self.dogModel = responseData
+                completion()
+                
+            }
+//        }
         
     }
     
