@@ -11,7 +11,13 @@ class MedicalRecordListViewController: UIViewController {
     
     
     // MARK: - UI Component
+    @IBOutlet weak var addButton: UIBarButtonItem!{
+        didSet{
+            addButton.title = language.addButtonTitle
+        }
+    }
     @IBOutlet var MedicalRecordUI: MedicalRecordList_UI!
+    
     
     // MARK: - Objects Declaration
     var prepareToMRD = PrepareToMRD()
@@ -43,6 +49,9 @@ class MedicalRecordListViewController: UIViewController {
         
         // register XIB table view cell
         MedicalRecordUI.table.register(MedicalRecordListTableViewCell.nib(), forCellReuseIdentifier: MedicalRecordListTableViewCell.identifier)
+        
+        // set title navigation bar
+        self.navigationItem.title = language.navTitleMedicalRecord
     }
     
     func updateUI(){

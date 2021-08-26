@@ -33,13 +33,13 @@ extension MedicalRecordDetailViewcontroller: UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return "Waktu"
+            return language.timeTitle
         case 1:
-            return "Detail"
+            return language.detailTitle
         case 2:
-            return "Riwayat Kesehatan"
+            return language.medicalHistoryTitle
         case 3:
-            return "Deskripsi"
+            return language.descriptionTitle
         default:
             fatalError()
         }
@@ -57,7 +57,7 @@ extension MedicalRecordDetailViewcontroller: UITableViewDataSource, UITableViewD
             let cell = table.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
            
             cell.contenTextField.autocorrectionType = .no
-            cell.configure(title: "Tanggal", placeholder: mrdModel?.date ?? "no data", tag: 0)
+            cell.configure(title: language.dateMedicalRecord, placeholder: mrdModel?.date ?? "no data", tag: 0)
             return cell
         }
         else if indexPath.section == 1 {
@@ -65,9 +65,9 @@ extension MedicalRecordDetailViewcontroller: UITableViewDataSource, UITableViewD
         
             cell.contenTextField.autocorrectionType = .no
             if indexPath.row == 0 {
-                cell.configure(title: "Dokter Hewan", placeholder: mrdModel?.veterinarian ?? "no data",tag: 1)
+                cell.configure(title: language.vetTitle, placeholder: mrdModel?.veterinarian ?? "no data",tag: 1)
             } else {
-                cell.configure(title: "Tipe Vaksin", placeholder: mrdModel?.vaccineType ?? "no data", tag: 2)
+                cell.configure(title: language.typeVaccineTitle, placeholder: mrdModel?.vaccineType ?? "no data", tag: 2)
             }
             return cell
         }
@@ -78,11 +78,11 @@ extension MedicalRecordDetailViewcontroller: UITableViewDataSource, UITableViewD
             cell.contenTextField.autocorrectionType = .no
             
             if indexPath.row == 0 {
-                cell.configure(title: "Diagnosa", placeholder: mrdModel?.diagnosis ?? "no data", tag: 3)
+                cell.configure(title: language.diagnosisTitle, placeholder: mrdModel?.diagnosis ?? "no data", tag: 3)
             } else if indexPath.row == 1 {
-                cell.configure(title: "Obat", placeholder: mrdModel?.medicine ?? "no data", tag: 4)
+                cell.configure(title: language.medicineTitle, placeholder: mrdModel?.medicine ?? "no data", tag: 4)
             } else {
-                cell.configure(title: "Dosis", placeholder: mrdModel?.dosage ?? "no data", tag: 5)
+                cell.configure(title: language.dosageTitle, placeholder: mrdModel?.dosage ?? "no data", tag: 5)
             }
             
             return cell

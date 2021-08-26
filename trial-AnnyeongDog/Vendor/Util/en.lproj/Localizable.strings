@@ -5,13 +5,22 @@
   Created by Pieter Yonathan on 25/08/21.
   
 */
+// Vet List Cell
 "vetListCell.vetLabel" = "Veterinarian";
 "vetListCell.yrsLabel" = "Yrs";
 
+// Navigation and Tab Bar Main
 "navigationItem.titleLabel" = "Veterinarian";
 "searchBar.placeholder" = "Example: Drh. Budi";
 "tabBarItem.Title.dogProfile" = "Dog Profile";
 
+// Navigation Item
+"addButtonTitle" = "Add";
+"editButtonTitle" = "Edit";
+"cancelButtonTitle" = "Cancel";
+"saveButtonTitle" = "Save";
+
+// Modal Vet List
 "modal.alumniTitle" = "Alumni";
 "modal.clinicTitle" = "Clinic";
 "modal.strvTitle" = "STRV Number";
@@ -20,11 +29,47 @@
 "modal.consultRateTitle" = "Consultation Rate";
 "modal.consultButtonTitle" = "Consult";
 
+// Dog Profile
 "dogProfile.navtitleLabelDogProfile" = "Dog Profile";
-"dogProfile.addButtonTitle" = "Add";
-"alertTitle" = "Sign in to continue";
-"alertMessage" = "To proceed, you need to have an account";
-"alertCancelTitle" = "Cancel";
-"alertSigninTitle" = "Sing In";
 
+// Alert Sign In
+"alertTitleSignIn" = "Sign in to continue";
+"alertMessageSignIn" = "To proceed, you need to have an account";
+"alertCancelTitleSignIn" = "Cancel";
+"alertSigninTitleSignIn" = "Sing In";
+
+// Alert Cancel
+"alertTitleCancel" = "Unsaved Changes";
+"alertMessageCancel" = "You have unsaved change, are you sure you want to cancel?";
+"alertNoTitleCancel" = "No";
+"alertYesTitleCancel" = "Yes";
+
+// Alert Delete Medical Record
+"alertTitleDeleteMedicalRecord" = "Delete Medical Record";
+"alertMessageDeleteMedicalRecord" = "Once you delete this, you won't be able to return it. Do you want to proceeed?";
+
+// Medical Record List
 "medicalRecord.date" = "Date";
+"medicalRecord.navTitle" = "Medical Records";
+
+// Modal Medical Record Detail
+"modalMedicalRecord.timeTitle" = "Time";
+"modalMedicalRecord.detailTitle" = "Details";
+"modalMedicalRecord.vetTitle" = "Veterinarian";
+"modalMedicalRecord.typeVaccineTitle" = "Vacine Type";
+"modalMedicalRecord.medicalHistoryTitle" = "Medical History";
+"modalMedicalRecord.diagnosisTitle" = "Diagnosis";
+"modalMedicalRecord.medicineTitle" = "Medicine";
+"modalMedicalRecord.dosageTitle" = "Dosage";
+"modalMedicalRecord.descriptionTitle" = "Description";
+"modalMedicalRecord.deleteButtonTitle" = "Delete Medical Record";
+"modalMedicalRecord.descriptionPlaceholder" = "Type your descripcion here..";
+
+// Medical Record Detail Placeholder
+"medicalRecordPlaceholder.date" = "01/02/2021";
+"medicalRecordPlaceholder.vatName" = "Drh.Budi";
+"medicalRecordPlaceholder.vaccineType" = "Distemper";
+"medicalRecordPlaceholder.diagnosis" = "Diarrhea";
+"medicalRecordPlaceholder.medicine" = "Pet Metronidazole Diarrhea";
+"medicalRecordPlaceholder.dosage" = "2 Times a Day";
+

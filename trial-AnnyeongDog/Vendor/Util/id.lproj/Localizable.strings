@@ -5,13 +5,22 @@
   Created by Pieter Yonathan on 25/08/21.
   
 */
+// Vet List Cell
 "vetListCell.vetLabel" = "Dokter Hewan";
 "vetListCell.yrsLabel" = "Thn";
 
+// Navigation and Tab Bar Main
 "navigationItem.titleLabel" = "Dokter Hewan";
 "searchBar.placeholder" = "Contoh: Drh. Budi";
 "tabBarItem.Title.dogProfile" = "Profil Anjing";
 
+// Navigation Item
+"addButtonTitle" = "Tambah";
+"editButtonTitle" = "Ubah";
+"cancelButtonTitle" = "Batal";
+"saveButtonTitle" = "Simpan";
+
+// Modal Vet List
 "modal.alumniTitle" = "Alumnus";
 "modal.clinicTitle" = "Klinik";
 "modal.strvTitle" = "Nomor STRV";
@@ -20,11 +29,49 @@
 "modal.consultRateTitle" = "Biaya Konsultasi";
 "modal.consultButtonTitle" = "Konsultasi";
 
+// Dog Profile
 "dogProfile.navtitleLabelDogProfile" = "Profil Anjing";
-"dogProfile.addButtonTitle" = "Tambah";
-"alertTitle" = "Masuk untuk melanjutkan";
-"alertMessage" = "Untuk lanjut, anda membutuhkan akun";
-"alertCancelTitle" = "Batal";
-"alertSigninTitle" = "Masuk";
 
+// Alert Sign In
+"alertTitleSignIn" = "Masuk untuk melanjutkan";
+"alertMessageSignIn" = "Untuk lanjut, anda membutuhkan akun";
+"alertCancelTitleSignIn" = "Batal";
+"alertSigninTitleSignIn" = "Masuk";
+
+// Alert Cancel
+"alertTitleCancel" = "Batalkan Perubahan";
+"alertMessageCancel" = "Perubahan belum tersimpan, Anda yakin ingin membatalkannya?";
+"alertNoTitleCancel" = "Tidak";
+"alertYesTitleCancel" = "Ya";
+
+// Alert Delete Medical Record
+"alertTitleDeleteMedicalRecord" = "Hapus Laporan Medis";
+"alertMessageDeleteMedicalRecord" = "Setelah Anda menghapus, Anda tidak akan dapat mengembalikannya. Apakah Anda ingin melanjutkannya?";
+
+
+// Medical Record List
 "medicalRecord.date" = "Tanggal";
+"medicalRecord.navTitle" = "Laporan Medis";
+
+
+// Modal Medical Record Detail
+"modalMedicalRecord.timeTitle" = "Waktu";
+"modalMedicalRecord.detailTitle" = "Detail";
+"modalMedicalRecord.vetTitle" = "Dokter Hewan";
+"modalMedicalRecord.typeVaccineTitle" = "Tipe Vaksin";
+"modalMedicalRecord.medicalHistoryTitle" = "Riwayat Kesehatan";
+"modalMedicalRecord.diagnosisTitle" = "Diagnosa";
+"modalMedicalRecord.medicineTitle" = "Obat";
+"modalMedicalRecord.dosageTitle" = "Dosis";
+"modalMedicalRecord.descriptionTitle" = "Deskripsi";
+"modalMedicalRecord.deleteButtonTitle" = "Hapus Laporan Medis";
+"modalMedicalRecord.descriptionPlaceholder" = "Ketik deskripsimu disini...";
+
+// Medical Record Detail Placeholder
+"medicalRecordPlaceholder.date" = "01/02/2021";
+"medicalRecordPlaceholder.vatName" = "Drh.Budi";
+"medicalRecordPlaceholder.vaccineType" = "Distemper";
+"medicalRecordPlaceholder.diagnosis" = "Diarrhea";
+"medicalRecordPlaceholder.medicine" = "Pet Metronidazole Diarrhea";
+"medicalRecordPlaceholder.dosage" = "2 Kali Sehari";
+
