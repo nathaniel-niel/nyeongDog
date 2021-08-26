@@ -7,10 +7,15 @@
 
 import UIKit
 
+protocol medicalRecordPressed: AnyObject {
+    func medicalrecordPress()
+}
+
 class MedicalRecordsButton: UITableViewCell {
     
     @IBOutlet weak var medicalRecordsButton: UIButton!
     
+    var delegate: medicalRecordPressed?
     static let identifier = "medicalButton"
     
     static func nib() -> UINib{
@@ -30,4 +35,9 @@ class MedicalRecordsButton: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    @IBAction func medicalRecordsPressed(_ sender: UIButton) {
+        
+        delegate?.medicalrecordPress()
+        
+    }
 }

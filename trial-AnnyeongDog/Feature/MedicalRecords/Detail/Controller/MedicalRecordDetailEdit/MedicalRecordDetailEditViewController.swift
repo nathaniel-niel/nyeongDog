@@ -35,10 +35,10 @@ class MedicalRecordDetailEditViewController: UIViewController{
     //MARK: - Setup UI Components
     
     private func setup(){
-        self.navigationItem.title = "Medical Record"
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(alertView))
+        self.navigationItem.title = language.navTitleMedicalRecord
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: language.cancelButtonTitle, style: .plain, target: self, action: #selector(alertView))
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(didSaveButtonTapped))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: language.saveButtonTitle, style: .plain, target: self, action: #selector(didSaveButtonTapped))
         
         // Disable dismiss modal
         self.isModalInPresentation = true
@@ -93,9 +93,9 @@ class MedicalRecordDetailEditViewController: UIViewController{
     
     // func to show alert when back button tapped
     @objc private func alertView(){
-        let alert = UIAlertController(title: "Unchanged Changes", message: "You have unsaved change, are you sure you want to cancel?", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.destructive, handler:{ action in
+        let alert = UIAlertController(title: language.alertTitleCancel, message: language.alertMessageCancel, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: language.noTitleCancel, style: UIAlertAction.Style.cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: language.yesTitleCancel, style: UIAlertAction.Style.destructive, handler:{ action in
                                         self.dismiss(animated: true, completion: nil) }))
         
         self.present(alert, animated: true, completion: nil)
@@ -103,9 +103,9 @@ class MedicalRecordDetailEditViewController: UIViewController{
     
     // Function to Alert delete
     func alertViewDelete(dogId: String, mrdId: String){
-        let alert = UIAlertController(title: "Delete Dog Profile", message: "Once you delete this, you won't be able to return it. Do you want to proceed?", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "No", style: UIAlertAction.Style.cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: "Yes", style: UIAlertAction.Style.destructive, handler:{ action in self.deleteAction() }))
+        let alert = UIAlertController(title: language.alertTitleDeleteMedicalRecord, message: language.alertMessageDeleteMedicalRecord, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: language.noTitleCancel, style: UIAlertAction.Style.cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: language.yesTitleCancel, style: UIAlertAction.Style.destructive, handler:{ action in self.deleteAction() }))
         
         self.present(alert, animated: true, completion: nil)
     }

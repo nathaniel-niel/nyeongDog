@@ -41,6 +41,8 @@ class VetListViewController: UIViewController{
     searchController.searchBar.delegate = self
     vetListTable.delegate = self
     vetListTable.dataSource = self
+    self.navigationItem.title = language.navtitleLabelVet
+    
         
     //xib register
     vetListTable.register(VetListTableViewCell.nib(), forCellReuseIdentifier: VetListTableViewCell.identifier)

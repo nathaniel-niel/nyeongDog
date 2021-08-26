@@ -10,6 +10,18 @@ import UIKit
 class VetListTableViewCell: UITableViewCell {
     
     //MARK : - IBOutlet
+    @IBOutlet weak var labelVeterinarian: UILabel!{
+        didSet{
+            labelVeterinarian.text = language.veterinarianLabel
+        }
+    }
+    @IBOutlet weak var yrsLabel: UILabel!{
+        didSet{
+            yrsLabel.text = language.yrsLabel
+        }
+    }
+
+    
     @IBOutlet weak var vetImage: UIImageView!
     @IBOutlet weak var vetName: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -75,3 +87,4 @@ class VetListTableViewCell: UITableViewCell {
     
     
 }
+

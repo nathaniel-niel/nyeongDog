@@ -46,6 +46,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="MedicalRecordUI" destination="5EZ-qb-Rvc" id="KCb-CA-ndZ"/>
+                        <outlet property="addButton" destination="qCe-19-ZGm" id="1J9-3m-Gkz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

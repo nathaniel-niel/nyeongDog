@@ -13,9 +13,15 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     let storageManager = StorageManager()
     var isNewUser: Bool!
 
+    @IBOutlet weak var addButtonTitle: UIButton!{
+        didSet{
+            addButtonTitle.setTitle(language.addButtonTitle, for: .normal)
+        }
+    }
     
     // MARK: - UI Components Declaration
     @IBOutlet weak var dogProfileTableView: UITableView!
+    @IBOutlet weak var dogProfileTabBarItem: UITabBarItem!
     
     // MARK: - Object Declaration
     var fetchDatafromFirebase = FetchDatafromFirebase()
@@ -41,6 +47,10 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         dogProfileTableView.dataSource = self
         dogProfileTableView.delegate = self
         isNewUser = storageManager.isNewUser()
+        dogProfileTabBarItem.title = language.tabBarTitleDogProfileLabel
+        self.navigationItem.title = language.navTitleLabelDogProfile
+        
+        
     }
     // MARK: - Fetching the Firebase using ViewModel
     func fetchFirebase(){
@@ -66,7 +76,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //        performSegue(withIdentifier: "segueDogProfileDetail", sender: nil)
         let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
-        let nVC = (storyboard.instantiateViewController(identifier: "DPDE")) as! DogProfileDetailEditViewController
+        let nVC = (storyboard.instantiateViewController(identifier: "XiBEdit")) as! DogProfileListDetailViewController
         
         
         nVC.id = fetchDatafromFirebase.dogModel[indexPath.row].dogID
@@ -76,7 +86,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         nVC.breed = fetchDatafromFirebase.dogModel[indexPath.row].breed
         nVC.weight = fetchDatafromFirebase.dogModel[indexPath.row].weight
         nVC.color = fetchDatafromFirebase.dogModel[indexPath.row].color
-        nVC.alergen = fetchDatafromFirebase.dogModel[indexPath.row].alergen   
+        nVC.alergen = fetchDatafromFirebase.dogModel[indexPath.row].alergen
         CurrentDogProfile.shared.currentDogId = fetchDatafromFirebase.dogModel[indexPath.row].dogID
         self.navigationController?.pushViewController(nVC, animated: true)
     }
@@ -104,9 +114,14 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     @IBAction func addDidTapped(_ sender: Any) {
         //MARK: Function detect user has logged in or not
         if isNewUser {
+            
             AlertManager.alert.createSignInAlert(viewController: self)
         } else {
-            NavigationManager.navigateToPage.showModal(modal: .dogProfileDetailEdit, vc: self)
+            
+            let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
+            let nVC = (storyboard.instantiateViewController(identifier: "XiBVC")) as! DogProfileDetailTableView
+            
+            self.navigationController?.pushViewController(nVC, animated: true)
         }
     }
     

@@ -15,11 +15,13 @@ class NavigationManager {
     enum Screen {
         case signIn
         case main
+        case dogProfileDetailTableView
     }
     
     enum Modal {
-        case dogProfileDetailEdit
+        
         case chat
+        
     }
     
     func show(screen: Screen, inController: UIViewController!) {
@@ -31,7 +33,11 @@ class NavigationManager {
             
         case .main:
             viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "main")
+            
+        case .dogProfileDetailTableView:
+            viewController = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil).instantiateViewController(identifier: "XiBVC")
         }
+        
         
         if let sceneDelegate = inController.view.window?.windowScene?.delegate as? SceneDelegate,
            let window = sceneDelegate.window {
@@ -45,9 +51,7 @@ class NavigationManager {
         var navController: UINavigationController!
         
         switch modal {
-        case .dogProfileDetailEdit:
-            viewController = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil).instantiateViewController(identifier: "DPDA")
-   
+       
         case .chat:
             viewController = UIStoryboard(name: "Chat", bundle: nil).instantiateViewController(identifier: "Chat")
         }

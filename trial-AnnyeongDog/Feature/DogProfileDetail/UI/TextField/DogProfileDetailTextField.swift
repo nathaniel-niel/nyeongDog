@@ -13,7 +13,8 @@ protocol addData: AnyObject {
     func addDogWeight(value: String)
     func addDogColor(value: String)
     func addDogAlergy(value: String)
-    func addDogDOB(value: String)
+    func addDogDOB()
+    func addDogGender()
 }
 
 
@@ -25,7 +26,7 @@ class DogProfileDetailTextField: UITableViewCell {
     static let identifier = "textField"
     
     weak var delegate: addData?
-    
+   
     static func nib() -> UINib{
         return UINib(nibName: "DogProfileDetailTextField", bundle: nil)
     }
@@ -36,6 +37,8 @@ class DogProfileDetailTextField: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         textField.delegate = self
+      
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -48,14 +51,15 @@ class DogProfileDetailTextField: UITableViewCell {
 
 extension DogProfileDetailTextField: UITextFieldDelegate{
     
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
         switch tagFrom {
         case 1:
             delegate?.addDogName(value: textField.text!)
         case 2:
-            delegate?.addDogDOB(value: textField.text!)
+            delegate?.addDogDOB()
         case 3:
-            delegate?.addDogType(value: textField.text!)
+            delegate?.addDogGender()
         case 4:
             delegate?.addDogType(value: textField.text!)
         case 5:

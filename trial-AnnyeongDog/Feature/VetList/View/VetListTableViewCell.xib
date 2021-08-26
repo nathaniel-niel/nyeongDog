@@ -89,14 +89,14 @@
                                                         <color key="tintColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yrs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYV-YO-2tw">
-                                                        <rect key="frame" x="43" y="1" width="22" height="19"/>
+                                                        <rect key="frame" x="39" y="1" width="29" height="19"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Ym-P5-H2x">
-                                                        <rect key="frame" x="25" y="1" width="19" height="19"/>
+                                                        <rect key="frame" x="21" y="1" width="19" height="19"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
                                                         <nil key="textColor"/>
@@ -153,6 +153,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="labelVeterinarian" destination="D7D-9L-GNW" id="Cn0-Nv-Cow"/>
                 <outlet property="pengalamanLabel" destination="0Ym-P5-H2x" id="2Ad-5R-ylk"/>
                 <outlet property="priceLabel" destination="nl6-S2-gB0" id="e1w-a0-UdL"/>
                 <outlet property="ratingLabel" destination="8LM-Wa-bZa" id="hsh-wW-Rez"/>
@@ -162,6 +163,7 @@
                 <outlet property="viewCell" destination="BGE-cj-LGA" id="mbf-J6-8xX"/>
                 <outlet property="viewExp" destination="8lU-Fx-Ptg" id="ba3-P4-mYG"/>
                 <outlet property="viewRating" destination="Dmm-kV-KSV" id="m5D-yZ-Rda"/>
+                <outlet property="yrsLabel" destination="kYV-YO-2tw" id="fEO-1Q-TDS"/>
             </connections>
             <point key="canvasLocation" x="128.98550724637681" y="74.330357142857139"/>
         </tableViewCell>
