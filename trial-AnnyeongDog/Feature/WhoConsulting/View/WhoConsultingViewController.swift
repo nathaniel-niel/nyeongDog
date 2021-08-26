@@ -49,10 +49,7 @@ class WhoConsultingViewController: UIViewController {
     
     //Back button did tapped
     @IBAction func backButtonDidTapped(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "Main")
-        self.navigationController?.pushViewController(vc, animated: false)
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.view.window!.rootViewController?.dismiss(animated: true, completion: nil)
     }
 }
 
@@ -63,10 +60,7 @@ extension WhoConsultingViewController: UICollectionViewDelegate, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Collection View Cell Did Tapped")
-        let storyboard = UIStoryboard(name: "Chat", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "Chat") as! ChatViewController
-        self.navigationController?.pushViewController(vc, animated: true)
+       print("go to sign in page")
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
