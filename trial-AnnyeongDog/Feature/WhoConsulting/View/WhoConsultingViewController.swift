@@ -26,6 +26,11 @@ class WhoConsultingViewController: UIViewController {
         dogProfileCollectionView.delegate = self
         dogProfileCollectionView.dataSource = self
         dogProfileCollectionView.register(WhoConsultingCollectionViewCell.nib(), forCellWithReuseIdentifier: WhoConsultingCollectionViewCell.identifier)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+    }
+    @IBAction func backButtonDidTapped(_ sender: Any) {
+        self.present(<#T##viewControllerToPresent: UIViewController##UIViewController#>, animated: <#T##Bool#>, completion: <#T##(() -> Void)?##(() -> Void)?##() -> Void#>)
     }
 }
 
@@ -52,6 +57,6 @@ extension WhoConsultingViewController: UICollectionViewDelegate, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 155, height: 188)
+        return CGSize(width: 155, height: 210)
     }
 }
