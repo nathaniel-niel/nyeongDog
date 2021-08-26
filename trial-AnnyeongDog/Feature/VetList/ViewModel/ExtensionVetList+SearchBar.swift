@@ -47,6 +47,6 @@ extension VetListViewController: UISearchResultsUpdating, UISearchBarDelegate{
         self.navigationItem.hidesSearchBarWhenScrolling = false
         searchController.hidesNavigationBarDuringPresentation = true
         definesPresentationContext = true
-        searchController.searchBar.placeholder = "Example: Drh. Budi"
+        searchController.searchBar.placeholder = language.searchbarPlaceholder
     }
 }

@@ -31,6 +31,7 @@ class ModalViewController: UIViewController {
         view.addGestureRecognizer(panGesture)
         
         uiView.setup()
+        
     }
     
     override func viewDidLayoutSubviews() {
@@ -42,6 +43,7 @@ class ModalViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         assing()
+        uiView.consultButtonCondition()
     }
     
     //MARK: - Function to Set UI Components Valus
@@ -53,10 +55,10 @@ class ModalViewController: UIViewController {
     
     //Mark: - Function Alert Sign In
     func showAlertSignin() {
-        let alert = UIAlertController(title: "Sign in to continue", message: "To proceed, you need to have an account", preferredStyle: .alert)
+        let alert = UIAlertController(title: language.alertTitleSignIn, message: language.alertMessageSignIn, preferredStyle: .alert)
 
-        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
-        alert.addAction(UIAlertAction(title: "Sign In", style: .default, handler: { action in
+        alert.addAction(UIAlertAction(title: language.cancelTitle, style: .destructive, handler: nil))
+        alert.addAction(UIAlertAction(title: language.singinTitle, style: .default, handler: { action in
             self.navigationController?.pushViewController(self.viewModel.preparetoSignIn(), animated: true)
             self.present(self.viewModel.preparetoSignIn(), animated: true, completion: nil)
         }))

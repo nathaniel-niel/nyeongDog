@@ -13,9 +13,15 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     let storageManager = StorageManager()
     var isNewUser: Bool!
 
+    @IBOutlet weak var addButtonTitle: UIButton!{
+        didSet{
+            addButtonTitle.setTitle(language.addButtonTitle, for: .normal)
+        }
+    }
     
     // MARK: - UI Components Declaration
     @IBOutlet weak var dogProfileTableView: UITableView!
+    @IBOutlet weak var dogProfileTabBarItem: UITabBarItem!
     
     // MARK: - Object Declaration
     var fetchDatafromFirebase = FetchDatafromFirebase()
@@ -41,6 +47,10 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         dogProfileTableView.dataSource = self
         dogProfileTableView.delegate = self
         isNewUser = storageManager.isNewUser()
+        dogProfileTabBarItem.title = language.tabBarTitleDogProfileLabel
+        self.navigationItem.title = language.navTitleLabelDogProfile
+        
+        
     }
     // MARK: - Fetching the Firebase using ViewModel
     func fetchFirebase(){

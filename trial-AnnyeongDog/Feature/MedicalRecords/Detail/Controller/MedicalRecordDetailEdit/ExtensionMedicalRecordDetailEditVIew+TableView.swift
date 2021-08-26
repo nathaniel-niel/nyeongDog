@@ -33,13 +33,13 @@ extension MedicalRecordDetailEditViewController: UITableViewDataSource, UITableV
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return "Time"
+            return language.timeTitle
         case 1:
-            return "Detail"
+            return language.detailTitle
         case 2:
-            return "Medical Record"
+            return language.medicalHistoryTitle
         case 3:
-            return "Description"
+            return language.descriptionTitle
         default:
             fatalError()
         }
@@ -70,7 +70,7 @@ extension MedicalRecordDetailEditViewController: UITableViewDataSource, UITableV
             let cell = tableView.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
             cell.contenTextField.delegate = self
             cell.contenTextField.autocorrectionType = .no
-            cell.configure(title: "Date", placeholder: mrdModel?.date ?? "no data", tag: 0)
+            cell.configure(title: language.dateMedicalRecord, placeholder: mrdModel?.date ?? "no data", tag: 0)
             return cell
         }
         else if indexPath.section == 1 {
@@ -79,10 +79,10 @@ extension MedicalRecordDetailEditViewController: UITableViewDataSource, UITableV
             cell.contenTextField.autocorrectionType = .no
             if indexPath.row == 0 {
                 
-                cell.configure(title: "Vet Name", placeholder: mrdModel?.veterinarian ?? "no data",tag: 1)
+                cell.configure(title: language.vetTitle, placeholder: mrdModel?.veterinarian ?? "no data",tag: 1)
                 
             } else {
-                cell.configure(title: "Vaccine Type", placeholder: mrdModel?.vaccineType ?? "no data", tag: 2)
+                cell.configure(title: language.typeVaccineTitle, placeholder: mrdModel?.vaccineType ?? "no data", tag: 2)
                 
             }
             return cell
@@ -95,12 +95,12 @@ extension MedicalRecordDetailEditViewController: UITableViewDataSource, UITableV
             
             if indexPath.row == 0 {
                 
-                cell.configure(title: "Diagnose", placeholder: mrdModel?.diagnosis ?? "no data", tag: 3)
+                cell.configure(title: language.diagnosisTitle, placeholder: mrdModel?.diagnosis ?? "no data", tag: 3)
             } else if indexPath.row == 1 {
-                cell.configure(title: "Medicine", placeholder: mrdModel?.medicine ?? "no data", tag: 4)
+                cell.configure(title: language.medicineTitle, placeholder: mrdModel?.medicine ?? "no data", tag: 4)
                 
             } else {
-                cell.configure(title: "Dosage", placeholder: mrdModel?.dosage ?? "no data", tag: 5)
+                cell.configure(title: language.dosageTitle, placeholder: mrdModel?.dosage ?? "no data", tag: 5)
                 
             }
             
@@ -110,7 +110,7 @@ extension MedicalRecordDetailEditViewController: UITableViewDataSource, UITableV
         else {
             let largeCell = tableView.dequeueReusableCell(withIdentifier: DescriptionTextViewCell.identifier) as! DescriptionTextViewCell
             largeCell.descriptionTextView.delegate = self
-            largeCell.configure(description: "Type your descripcion here..")
+            largeCell.configure(description: language.descriptionPlaceholder)
             return largeCell
         }
         

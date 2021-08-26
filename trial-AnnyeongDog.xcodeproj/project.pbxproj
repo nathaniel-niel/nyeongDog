@@ -54,6 +54,8 @@
 		5B67967626B41796004514F3 /* DogProfileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B67967226B41796004514F3 /* DogProfileListViewController.swift */; };
 		5B71983B26BD42F9000F19A5 /* DogProfileEmptyStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B71983A26BD42F9000F19A5 /* DogProfileEmptyStateViewController.swift */; };
 		5B94000C26B7F8CA0020C09C /* MRDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B94000B26B7F8CA0020C09C /* MRDModel.swift */; };
+		5BB603A526D64EE60056B95C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BB603A726D64EE60056B95C /* Localizable.strings */; };
+		5BB603E526D654C20056B95C /* LanguageSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB603E426D654C20056B95C /* LanguageSetting.swift */; };
 		7ACD3D5FCF25095A1818F235 /* Pods_trial_AnnyeongDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717D5942BF1328C6EDE1986A /* Pods_trial_AnnyeongDog.framework */; };
 		B505207026BC39B200306D99 /* VetProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B505206F26BC39B200306D99 /* VetProfile.swift */; };
 		B505207226BC39BE00306D99 /* VetProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = B505207126BC39BE00306D99 /* VetProfile.xib */; };
@@ -177,6 +179,9 @@
 		5B67967226B41796004514F3 /* DogProfileListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogProfileListViewController.swift; sourceTree = "<group>"; };
 		5B71983A26BD42F9000F19A5 /* DogProfileEmptyStateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileEmptyStateViewController.swift; sourceTree = "<group>"; };
 		5B94000B26B7F8CA0020C09C /* MRDModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MRDModel.swift; sourceTree = "<group>"; };
+		5BB603A626D64EE60056B95C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5BB603A826D64EFD0056B95C /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5BB603E426D654C20056B95C /* LanguageSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSetting.swift; sourceTree = "<group>"; };
 		717D5942BF1328C6EDE1986A /* Pods_trial_AnnyeongDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trial_AnnyeongDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B505206F26BC39B200306D99 /* VetProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetProfile.swift; sourceTree = "<group>"; };
 		B505207126BC39BE00306D99 /* VetProfile.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VetProfile.xib; sourceTree = "<group>"; };
@@ -720,6 +725,8 @@
 				B59BDB9326BAFE3300AED6D6 /* StorageManager.swift */,
 				B59BDB9526BAFF6A00AED6D6 /* NavigationManager.swift */,
 				B59BDB9726BB02B400AED6D6 /* LoadingViewController.swift */,
+				5BB603A726D64EE60056B95C /* Localizable.strings */,
+				5BB603E426D654C20056B95C /* LanguageSetting.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -1063,6 +1070,7 @@
 			knownRegions = (
 				en,
 				Base,
+				id,
 			);
 			mainGroup = B584B39C26B264CB005A02C5;
 			productRefGroup = B584B3A626B264CC005A02C5 /* Products */;
@@ -1093,6 +1101,7 @@
 				B5A0B08E26BA9E2F00D5C273 /* DescriptionTextViewCell.xib in Resources */,
 				C037878726B2A1CB004344E0 /* DogProfileDetail.storyboard in Resources */,
 				B584B3B526B264CD005A02C5 /* LaunchScreen.storyboard in Resources */,
+				5BB603A526D64EE60056B95C /* Localizable.strings in Resources */,
 				5B3A109C26D4F6160022F85B /* VetListTableViewCell.xib in Resources */,
 				B584B3DD26B28DF2005A02C5 /* Main.storyboard in Resources */,
 				B54FBEB226BBD41A00659D14 /* PrescriptionViewCell.xib in Resources */,
@@ -1212,6 +1221,7 @@
 				B584B3DC26B28DF2005A02C5 /* MainViewController.swift in Sources */,
 				2D7E85E926D3716D0074FF44 /* SigninViewModel.swift in Sources */,
 				2D3418BB26C3AA000003A70A /* DogProfileState.swift in Sources */,
+				5BB603E526D654C20056B95C /* LanguageSetting.swift in Sources */,
 				5B3A109F26D4F6160022F85B /* ModalViewModel.swift in Sources */,
 				2D19F87826C4C2C300FDAA46 /* UIConfiguration.swift in Sources */,
 				5B71983B26BD42F9000F19A5 /* DogProfileEmptyStateViewController.swift in Sources */,
@@ -1256,6 +1266,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		5BB603A726D64EE60056B95C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BB603A626D64EE60056B95C /* en */,
+				5BB603A826D64EFD0056B95C /* id */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		B584B3B326B264CD005A02C5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1271,6 +1290,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1332,6 +1352,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

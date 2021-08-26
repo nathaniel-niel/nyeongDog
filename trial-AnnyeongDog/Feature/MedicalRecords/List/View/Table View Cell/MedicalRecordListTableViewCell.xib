@@ -95,6 +95,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="dateLabel" destination="viq-DS-r1Q" id="OSf-zr-AEB"/>
+                <outlet property="dateTitle" destination="11U-h1-mTI" id="kDp-DK-jTB"/>
                 <outlet property="diagnoseLabel" destination="x9T-mI-KG1" id="sRq-Hx-IFS"/>
                 <outlet property="medicineLabel" destination="Syh-C2-umB" id="QeD-Xb-7oE"/>
             </connections>
