@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		2D07E2A126D7EDA500D12963 /* PaymentUIVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D07E2A026D7EDA500D12963 /* PaymentUIVIew.swift */; };
 		2D07E2A326D7F16300D12963 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D07E2A226D7F16300D12963 /* PaymentViewModel.swift */; };
+		2D07E2AB26D8031000D12963 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D07E2AA26D8031000D12963 /* UserProfileViewModel.swift */; };
+		2D07E2B026D8033900D12963 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D07E2AE26D8033900D12963 /* UserProfileViewController.swift */; };
+		2D07E2B126D8033900D12963 /* UserProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D07E2AF26D8033900D12963 /* UserProfileViewController.xib */; };
+		2D07E2B526D8036600D12963 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D07E2B426D8036600D12963 /* UserProfileView.swift */; };
 		2D19F87826C4C2C300FDAA46 /* UIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D19F87726C4C2C300FDAA46 /* UIConfiguration.swift */; };
 		2D1B494F26D67FC20030DBD5 /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B494E26D67FC20030DBD5 /* IAPManager.swift */; };
 		2D1B495226D68D500030DBD5 /* userStateForPayement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B495126D68D500030DBD5 /* userStateForPayement.swift */; };
@@ -142,6 +146,10 @@
 		26A2976778E2B79F56C882C7 /* Pods-trial-AnnyeongDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trial-AnnyeongDog.debug.xcconfig"; path = "Target Support Files/Pods-trial-AnnyeongDog/Pods-trial-AnnyeongDog.debug.xcconfig"; sourceTree = "<group>"; };
 		2D07E2A026D7EDA500D12963 /* PaymentUIVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentUIVIew.swift; sourceTree = "<group>"; };
 		2D07E2A226D7F16300D12963 /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
+		2D07E2AA26D8031000D12963 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
+		2D07E2AE26D8033900D12963 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		2D07E2AF26D8033900D12963 /* UserProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfileViewController.xib; sourceTree = "<group>"; };
+		2D07E2B426D8036600D12963 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		2D19F87726C4C2C300FDAA46 /* UIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfiguration.swift; sourceTree = "<group>"; };
 		2D1B494E26D67FC20030DBD5 /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
 		2D1B495026D68B0A0030DBD5 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
@@ -305,6 +313,33 @@
 				2D1B495126D68D500030DBD5 /* userStateForPayement.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		2D07E2A626D7FFFB00D12963 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				2D07E2A826D802E300D12963 /* ViewModel */,
+				2D07E2A726D802DA00D12963 /* View */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		2D07E2A726D802DA00D12963 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D07E2AE26D8033900D12963 /* UserProfileViewController.swift */,
+				2D07E2AF26D8033900D12963 /* UserProfileViewController.xib */,
+				2D07E2B426D8036600D12963 /* UserProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2D07E2A826D802E300D12963 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2D07E2AA26D8031000D12963 /* UserProfileViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		2D19F87626C4C2A600FDAA46 /* UI Configuration */ = {
@@ -757,6 +792,7 @@
 		B584B3C126B28C71005A02C5 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				2D07E2A626D7FFFB00D12963 /* UserProfile */,
 				2D1B494D26D67ECF0030DBD5 /* Payment */,
 				5B3A108426D4F6150022F85B /* VetList */,
 				5B3A109026D4F6160022F85B /* VetListDetail */,
@@ -1170,6 +1206,7 @@
 				B535E09E26BBB1BE0038251D /* ChatViewCell.xib in Resources */,
 				5B67967326B41796004514F3 /* DogProfileEmptyState.storyboard in Resources */,
 				2D628ED526B297B20008ECD2 /* MRDTableViewCell.xib in Resources */,
+				2D07E2B126D8033900D12963 /* UserProfileViewController.xib in Resources */,
 				C0A21CE426CE2C8400DF0BCE /* DogProfileDetailTextField.xib in Resources */,
 				B584B3B526B264CD005A02C5 /* LaunchScreen.storyboard in Resources */,
 				C00DE90026B3D8AE00E99343 /* MedicalRecordList.storyboard in Resources */,
@@ -1239,6 +1276,7 @@
 				2D1B495226D68D500030DBD5 /* userStateForPayement.swift in Sources */,
 				2D74BE1826B454E8009B3629 /* DogProfileDetailEditViewController.swift in Sources */,
 				5B3A109B26D4F6160022F85B /* VetListViewController.swift in Sources */,
+				2D07E2B526D8036600D12963 /* UserProfileView.swift in Sources */,
 				2D7E85E626D3533B0074FF44 /* MedicalRecordList+UI.swift in Sources */,
 				B535E09326BBA2FC0038251D /* ChatViewController.swift in Sources */,
 				B5AF9D4C26BBE7D000A59690 /* MedicineCell.swift in Sources */,
@@ -1326,6 +1364,8 @@
 				C037879226B2A1CB004344E0 /* PrepareForMedical.swift in Sources */,
 				B535E09226BBA2FC0038251D /* Messages.swift in Sources */,
 				C032476826D63D61000464DB /* DogProfileListDetailViewController+TableViewExtension.swift in Sources */,
+				2D07E2AB26D8031000D12963 /* UserProfileViewModel.swift in Sources */,
+				2D07E2B026D8033900D12963 /* UserProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

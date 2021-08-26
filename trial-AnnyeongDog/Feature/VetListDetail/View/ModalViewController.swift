@@ -95,7 +95,6 @@ class ModalViewController: UIViewController {
         // if user is login = true -> whos consult page
 
          if Firebase.Auth.auth().currentUser != nil{
-            IAPManager.shared.purchase()
             if PaymentUserState.shared.ispaymentPaid() == true{
                 self.present(self.viewModel.preparetoChat(), animated: true, completion: nil)
             }
