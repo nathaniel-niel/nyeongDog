@@ -118,13 +118,14 @@ class ChatViewController: UIViewController {
     
     //MARK: -Send Button Logic
     @IBAction func sendButtonPressed(_ sender: UIButton) {
-        
+        print("x")
         messageTextField.endEditing(true)
-        sendPressed()
+        print(messageTextField.text)
         
     }
     //MARK: -If the message are ready to sent to Firebase
-    func sendPressed(){
+   
+    func sendPressed(completion: @escaping() -> Void){
         if let messageBody = messageTextField.text,  let messageSender = Auth.auth().currentUser?.email{
             
             db.collection(dbCollection.collectionName).addDocument(data: [
@@ -136,7 +137,8 @@ class ChatViewController: UIViewController {
                 if let a = error {
                     print(a)
                 }else{
-                    print("success")
+                    print(messageBody)
+                    completion()
                 }
             }
             
@@ -244,7 +246,6 @@ extension ChatViewController: UITextFieldDelegate {
         messageTextField.endEditing(true)
         
         textField.resignFirstResponder()
-        print(textField.text)
         return true
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -253,8 +254,10 @@ extension ChatViewController: UITextFieldDelegate {
     
     //MARK: If return button is tapped, keyboard will be dismissed, the text field will be empty and it will send the text to Firebase
     func textFieldDidEndEditing(_ textField: UITextField) {
-        sendPressed()
-        textField.text = ""
+        sendPressed(completion: {
+            textField.text = ""
+        })
+        
         
         
     }
