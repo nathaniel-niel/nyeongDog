@@ -57,6 +57,10 @@
 		5BB603A526D64EE60056B95C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BB603A726D64EE60056B95C /* Localizable.strings */; };
 		5BB603E526D654C20056B95C /* LanguageSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB603E426D654C20056B95C /* LanguageSetting.swift */; };
 		5BB95A5826D77145000E7272 /* VetListNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB95A5726D77145000E7272 /* VetListNavigationController.swift */; };
+		5BB95A9026D7CB7C000E7272 /* whoConsulting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB95A8A26D7CB7B000E7272 /* whoConsulting.storyboard */; };
+		5BB95A9126D7CB7C000E7272 /* WhoConsultingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB95A8C26D7CB7B000E7272 /* WhoConsultingCollectionViewCell.swift */; };
+		5BB95A9226D7CB7C000E7272 /* WhoConsultingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB95A8D26D7CB7B000E7272 /* WhoConsultingCollectionViewCell.xib */; };
+		5BB95A9326D7CB7C000E7272 /* WhoConsultingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB95A8E26D7CB7B000E7272 /* WhoConsultingViewController.swift */; };
 		7ACD3D5FCF25095A1818F235 /* Pods_trial_AnnyeongDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717D5942BF1328C6EDE1986A /* Pods_trial_AnnyeongDog.framework */; };
 		B505207026BC39B200306D99 /* VetProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B505206F26BC39B200306D99 /* VetProfile.swift */; };
 		B505207226BC39BE00306D99 /* VetProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = B505207126BC39BE00306D99 /* VetProfile.xib */; };
@@ -184,6 +188,10 @@
 		5BB603A826D64EFD0056B95C /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5BB603E426D654C20056B95C /* LanguageSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSetting.swift; sourceTree = "<group>"; };
 		5BB95A5726D77145000E7272 /* VetListNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetListNavigationController.swift; sourceTree = "<group>"; };
+		5BB95A8A26D7CB7B000E7272 /* whoConsulting.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = whoConsulting.storyboard; sourceTree = "<group>"; };
+		5BB95A8C26D7CB7B000E7272 /* WhoConsultingCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoConsultingCollectionViewCell.swift; sourceTree = "<group>"; };
+		5BB95A8D26D7CB7B000E7272 /* WhoConsultingCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WhoConsultingCollectionViewCell.xib; sourceTree = "<group>"; };
+		5BB95A8E26D7CB7B000E7272 /* WhoConsultingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WhoConsultingViewController.swift; sourceTree = "<group>"; };
 		717D5942BF1328C6EDE1986A /* Pods_trial_AnnyeongDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trial_AnnyeongDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B505206F26BC39B200306D99 /* VetProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetProfile.swift; sourceTree = "<group>"; };
 		B505207126BC39BE00306D99 /* VetProfile.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VetProfile.xib; sourceTree = "<group>"; };
@@ -552,6 +560,49 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5BB95A8726D7CB7B000E7272 /* WhoConsulting */ = {
+			isa = PBXGroup;
+			children = (
+				5BB95A8826D7CB7B000E7272 /* ModelView */,
+				5BB95A8926D7CB7B000E7272 /* View */,
+				5BB95A8F26D7CB7B000E7272 /* Modal */,
+			);
+			path = WhoConsulting;
+			sourceTree = "<group>";
+		};
+		5BB95A8826D7CB7B000E7272 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelView;
+			sourceTree = "<group>";
+		};
+		5BB95A8926D7CB7B000E7272 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BB95A8A26D7CB7B000E7272 /* whoConsulting.storyboard */,
+				5BB95A8E26D7CB7B000E7272 /* WhoConsultingViewController.swift */,
+				5BB95A8B26D7CB7B000E7272 /* xibCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BB95A8B26D7CB7B000E7272 /* xibCell */ = {
+			isa = PBXGroup;
+			children = (
+				5BB95A8C26D7CB7B000E7272 /* WhoConsultingCollectionViewCell.swift */,
+				5BB95A8D26D7CB7B000E7272 /* WhoConsultingCollectionViewCell.xib */,
+			);
+			path = xibCell;
+			sourceTree = "<group>";
+		};
+		5BB95A8F26D7CB7B000E7272 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
 		90B83845868CD0FB085773B5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -703,6 +754,7 @@
 		B584B3C126B28C71005A02C5 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				5BB95A8726D7CB7B000E7272 /* WhoConsulting */,
 				5B3A108426D4F6150022F85B /* VetList */,
 				5B3A109026D4F6160022F85B /* VetListDetail */,
 				C01A908826BAF046007FA0B6 /* VideoCall */,
@@ -1093,8 +1145,10 @@
 				B57E0EB826B45B2900FACDAC /* Poppins in Resources */,
 				5B3F4BEB26B3FA7F004448DA /* MedicalRecordDetailAdd.storyboard in Resources */,
 				2D74BE1726B454E8009B3629 /* DogProfileDetailEdit.storyboard in Resources */,
+				5BB95A9026D7CB7C000E7272 /* whoConsulting.storyboard in Resources */,
 				B5AF9D4D26BBE7D000A59690 /* MedicineCell.xib in Resources */,
 				5B05C39826B2A9160034A66A /* MedicalRecordDetailEdit.storyboard in Resources */,
+				5BB95A9226D7CB7C000E7272 /* WhoConsultingCollectionViewCell.xib in Resources */,
 				B584B3DD26B28DF2005A02C5 /* Main.storyboard in Resources */,
 				5B3A10A226D4F6160022F85B /* ModalView.xib in Resources */,
 				B5821A6526B7EEA0006DDED9 /* Signin.storyboard in Resources */,
@@ -1196,6 +1250,7 @@
 				C079A37726B844D00061EC30 /* DogsModel.swift in Sources */,
 				B5821A6626B7EEA0006DDED9 /* SigninViewController.swift in Sources */,
 				B584B3D826B28DF2005A02C5 /* ExampleViewModel.swift in Sources */,
+				5BB95A9126D7CB7C000E7272 /* WhoConsultingCollectionViewCell.swift in Sources */,
 				C032477326D65BE8000464DB /* DogProfileDetailEditView.swift in Sources */,
 				C0541BD226BD40D4000D2BB4 /* DatabaseCollectionName.swift in Sources */,
 				C050E2EE26CFB9070075A1D4 /* DogProfileDetailAdd+ExtensionPicker+TableView.swift in Sources */,
@@ -1214,6 +1269,7 @@
 				B584B3CD26B28DCD005A02C5 /* Helper.swift in Sources */,
 				2D7E85E726D3533B0074FF44 /* MedicalRecordListViewController.swift in Sources */,
 				2D3418B826C3A8840003A70A /* MedicalRecordViewModel.swift in Sources */,
+				5BB95A9326D7CB7C000E7272 /* WhoConsultingViewController.swift in Sources */,
 				C07230B726CD717A007E7EE7 /* DogProfileDetailAddViewControllerViewModel.swift in Sources */,
 				B59BDB9626BAFF6A00AED6D6 /* NavigationManager.swift in Sources */,
 				B584B3D926B28DF2005A02C5 /* ExampleModel.swift in Sources */,
