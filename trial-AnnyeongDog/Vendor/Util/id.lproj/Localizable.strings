@@ -75,3 +75,16 @@
 "medicalRecordPlaceholder.medicine" = "Pet Metronidazole Diarrhea";
 "medicalRecordPlaceholder.dosage" = "2 Kali Sehari";
 
+// Dog Profile Detail
+"dogProfileDetail.deleteButton" = "Hapus Profil";
+"dogProfileDetail.medicalRecordButton" = "Laporan Medis";
+"dogProfileDetail.dogName" = "Nama Anjing";
+"dogProfileDetail.dogAge" = "Usia";
+"dogProfile.Detail.dogGender" = "Jenis Kelamin";
+"dogProfileDetail.dogBreed" = "Jenis Anjing";
+"dogProfileDetail.dogWeight" = "Berat Badan";
+"dogProfileDetail.dogColor" = "Warna";
+"dogProfileDetail.dogAllergen" = "Alergi";
+// Picker
+"picker.yearsTitle" = "Tahun";
+"picker.monthsTitle" = "Bulan";

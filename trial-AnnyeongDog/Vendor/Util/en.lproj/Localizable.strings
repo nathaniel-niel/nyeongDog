@@ -63,7 +63,7 @@
 "modalMedicalRecord.dosageTitle" = "Dosage";
 "modalMedicalRecord.descriptionTitle" = "Description";
 "modalMedicalRecord.deleteButtonTitle" = "Delete Medical Record";
-"modalMedicalRecord.descriptionPlaceholder" = "Type your descripcion here..";
+"modalMedicalRecord.descriptionPlaceholder" = "Type your description here..";
 
 // Medical Record Detail Placeholder
 "medicalRecordPlaceholder.date" = "01/02/2021";
@@ -73,3 +73,16 @@
 "medicalRecordPlaceholder.medicine" = "Pet Metronidazole Diarrhea";
 "medicalRecordPlaceholder.dosage" = "2 Times a Day";
 
+// Dog Profile Detail
+"dogProfileDetail.deleteButton" = "Delete Profile";
+"dogProfileDetail.medicalRecordButton" = "Medical Record";
+"dogProfileDetail.dogName" = "Dog Name";
+"dogProfileDetail.dogAge" = "Age";
+"dogProfile.Detail.dogGender" = "Gender";
+"dogProfileDetail.dogBreed" = "Breed";
+"dogProfileDetail.dogWeight" = "Weight";
+"dogProfileDetail.dogColor" = "Color";
+"dogProfileDetail.dogAllergen" = "Allergen";
+// Picker
+"picker.yearsTitle" = "Years";
+"picker.monthsTitle" = "Months";

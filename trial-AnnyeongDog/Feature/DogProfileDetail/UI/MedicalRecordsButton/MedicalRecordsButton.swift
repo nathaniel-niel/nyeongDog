@@ -13,7 +13,11 @@ protocol medicalRecordPressed: AnyObject {
 
 class MedicalRecordsButton: UITableViewCell {
     
-    @IBOutlet weak var medicalRecordsButton: UIButton!
+    @IBOutlet weak var medicalRecordsButton: UIButton!{
+        didSet{
+            medicalRecordsButton.setTitle(language.medicalRecordButtonTitleDogProfile, for: .normal)
+        }
+    }
     
     var delegate: medicalRecordPressed?
     static let identifier = "medicalButton"

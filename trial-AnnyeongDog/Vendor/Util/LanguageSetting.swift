@@ -76,4 +76,18 @@ class language{
     static let diagnosisPlaceholder = NSLocalizedString("medicalRecordPlaceholder.diagnosis", comment: "")
     static let medicinePlaceholder = NSLocalizedString("medicalRecordPlaceholder.medicine", comment: "")
     static let dosagePlaceholder = NSLocalizedString("medicalRecordPlaceholder.dosage", comment: "")
+    
+    // Dog Profile Detail
+    static let deleteButtonTitleDogProfile = NSLocalizedString("dogProfileDetail.deleteButton", comment: "")
+    static let medicalRecordButtonTitleDogProfile = NSLocalizedString("dogProfileDetail.medicalRecordButton", comment: "")
+    static let dogNameTitleDogProfile = NSLocalizedString("dogProfileDetail.dogName", comment: "")
+    static let dogAgeTitleDogProfile = NSLocalizedString("dogProfileDetail.dogAge", comment: "")
+    static let dogGenderTitleDogProfile = NSLocalizedString("dogProfile.Detail.dogGender", comment: "")
+    static let dogBreedTitleDogProfile = NSLocalizedString("dogProfileDetail.dogBreed", comment: "")
+    static let dogWeightTitleDogProfile = NSLocalizedString("dogProfileDetail.dogWeight", comment: "")
+    static let dogColorTitleDogProfile = NSLocalizedString("dogProfileDetail.dogColor", comment: "")
+    static let dogAllergenTitleDogProfile = NSLocalizedString("dogProfileDetail.dogAllergen", comment: "")
+    // Picker Age
+    static let yearsTitlePicker = NSLocalizedString("picker.yearsTitle", comment: "")
+    static let monthsTitlePicker = NSLocalizedString("picker.monthsTitle", comment: "")
 }
