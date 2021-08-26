@@ -54,7 +54,7 @@ class MedicalRecordDetailEditViewController: UIViewController{
         // Register XIB table view cell
         MRDEtable.register(MRDTableViewCell.nib(), forCellReuseIdentifier: MRDTableViewCell.identifier)
         MRDEtable.register(DescriptionTextViewCell.nib(), forCellReuseIdentifier: DescriptionTextViewCell.identifier)
-        MRDEtable.register(DeleteButton.nib(), forCellReuseIdentifier: DeleteButton.identifier)
+        MRDEtable.register(DeleteButtonTableViewCell.nib(), forCellReuseIdentifier: DeleteButtonTableViewCell.identifier)
         
     }
   
@@ -81,15 +81,7 @@ class MedicalRecordDetailEditViewController: UIViewController{
             isExpand = false
         }
     }
-    
-    //MARK: - Delete Button
-    
-    @IBAction func deleteDidTapped(_ sender: UIButton) {
-        alertViewDelete(dogId: dogId, mrdId: mrdModel?.id ?? "no data")
-        
-    }
-    
-    
+  
     // MARK: - Display Alert
     
     // func to show alert when back button tapped

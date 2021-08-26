@@ -25,7 +25,7 @@ extension MedicalRecordDetailAddViewController: UITableViewDataSource, UITableVi
         case 2:
             return 3
         case 3:
-            return 2
+            return 1
         default:
             return 1
         }
@@ -95,20 +95,11 @@ extension MedicalRecordDetailAddViewController: UITableViewDataSource, UITableVi
         }
         
         else {
-            if indexPath.row == 0{
                 let largeCell = mrdaTable.dequeueReusableCell(withIdentifier: DescriptionTextViewCell.identifier) as! DescriptionTextViewCell
                 largeCell.descriptionTextView.delegate = self
                 largeCell.configure(description: language.descriptionPlaceholder)
                 return largeCell
-            }
-            
-            else{
-                let cell = mrdaTable.dequeueReusableCell(withIdentifier: DeleteButton.identifier, for: indexPath) as! DeleteButton
-                return cell
-            }
-            
-            
-        }
+       }
         
     }
     
@@ -128,15 +119,7 @@ extension MedicalRecordDetailAddViewController: UITableViewDataSource, UITableVi
             return 45
         }
         else{
-            
-            if indexPath.row == 0{
-                return 100
-            }
-            else{
-                return 60
-                
-            }
-//            
+            return 100
         }
         
     }
