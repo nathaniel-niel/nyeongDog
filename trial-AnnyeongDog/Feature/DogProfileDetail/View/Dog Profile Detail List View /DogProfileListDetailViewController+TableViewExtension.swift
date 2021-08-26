@@ -25,7 +25,7 @@ extension DogProfileListDetailViewController: UITableViewDelegate, UITableViewDa
             let cell =  dogProfileDetailTableView.dogProfileDetailListTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
             
             
-            cell.textFieldLabel.text = "Nama Anjing"
+            cell.textFieldLabel.text = language.dogNameTitleDogProfile
             cell.textField.text = dogName
             cell.tagFrom = 1
             cell.textField.isUserInteractionEnabled = false
@@ -34,7 +34,7 @@ extension DogProfileListDetailViewController: UITableViewDelegate, UITableViewDa
         case 2:
             let cell =  dogProfileDetailTableView.dogProfileDetailListTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
             
-            cell.textFieldLabel.text = "Usia"
+            cell.textFieldLabel.text = language.dogAgeTitleDogProfile
             cell.textField.text = dob
             cell.tagFrom = 2
             cell.textField.isUserInteractionEnabled = false
@@ -43,7 +43,7 @@ extension DogProfileListDetailViewController: UITableViewDelegate, UITableViewDa
         case 3:
             let cell =  dogProfileDetailTableView.dogProfileDetailListTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
             
-            cell.textFieldLabel.text = "Jenis Kelamin"
+            cell.textFieldLabel.text = language.dogGenderTitleDogProfile
             cell.tagFrom = 3
             cell.textField.text = gender
             cell.textField.isUserInteractionEnabled = false
@@ -53,7 +53,7 @@ extension DogProfileListDetailViewController: UITableViewDelegate, UITableViewDa
             let cell =  dogProfileDetailTableView.dogProfileDetailListTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
             
             
-            cell.textFieldLabel.text = "Jenis Anjing"
+            cell.textFieldLabel.text = language.dogBreedTitleDogProfile
             cell.tagFrom = 4
             cell.textField.text = breed
             cell.textField.isUserInteractionEnabled = false
@@ -63,7 +63,7 @@ extension DogProfileListDetailViewController: UITableViewDelegate, UITableViewDa
             let cell =  dogProfileDetailTableView.dogProfileDetailListTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
             
             cell.textField.keyboardType = .numberPad
-            cell.textFieldLabel.text = "Berat Badan"
+            cell.textFieldLabel.text = language.dogWeightTitleDogProfile
             cell.tagFrom = 5
             cell.textField.text = weight
             cell.textField.isUserInteractionEnabled = false
@@ -73,7 +73,7 @@ extension DogProfileListDetailViewController: UITableViewDelegate, UITableViewDa
             let cell =  dogProfileDetailTableView.dogProfileDetailListTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
             
             
-            cell.textFieldLabel.text = "Warna"
+            cell.textFieldLabel.text = language.dogColorTitleDogProfile
             cell.tagFrom = 6
             cell.textField.text = color
             cell.textField.isUserInteractionEnabled = false
@@ -83,7 +83,7 @@ extension DogProfileListDetailViewController: UITableViewDelegate, UITableViewDa
             let cell =  dogProfileDetailTableView.dogProfileDetailListTableView.dequeueReusableCell(withIdentifier: DogProfileDetailTextField.identifier, for: indexPath) as! DogProfileDetailTextField
             
             
-            cell.textFieldLabel.text = "Alergi"
+            cell.textFieldLabel.text = language.dogAllergenTitleDogProfile
             cell.tagFrom = 7
             cell.textField.text = alergen
             cell.textField.isUserInteractionEnabled = false

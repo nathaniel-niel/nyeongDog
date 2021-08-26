@@ -13,6 +13,7 @@
 "navigationItem.titleLabel" = "Dokter Hewan";
 "searchBar.placeholder" = "Contoh: Drh. Budi";
 "tabBarItem.Title.dogProfile" = "Profil Anjing";
+"tabBarItem.Title.vetList" = "Temukan Dokter";
 
 // Navigation Item
 "addButtonTitle" = "Tambah";
@@ -48,6 +49,8 @@
 "alertTitleDeleteMedicalRecord" = "Hapus Laporan Medis";
 "alertMessageDeleteMedicalRecord" = "Setelah Anda menghapus, Anda tidak akan dapat mengembalikannya. Apakah Anda ingin melanjutkannya?";
 
+// Alert Delete Dog Profile
+"alertTitleDeleteDogProfile" = "Hapus Profil Anjing";
 
 // Medical Record List
 "medicalRecord.date" = "Tanggal";
@@ -75,3 +78,16 @@
 "medicalRecordPlaceholder.medicine" = "Pet Metronidazole Diarrhea";
 "medicalRecordPlaceholder.dosage" = "2 Kali Sehari";
 
+// Dog Profile Detail
+"dogProfileDetail.deleteButton" = "Hapus Profil";
+"dogProfileDetail.medicalRecordButton" = "Laporan Medis";
+"dogProfileDetail.dogName" = "Nama Anjing";
+"dogProfileDetail.dogAge" = "Usia";
+"dogProfile.Detail.dogGender" = "Jenis Kelamin";
+"dogProfileDetail.dogBreed" = "Jenis Anjing";
+"dogProfileDetail.dogWeight" = "Berat Badan";
+"dogProfileDetail.dogColor" = "Warna";
+"dogProfileDetail.dogAllergen" = "Alergi";
+// Picker
+"picker.yearsTitle" = "Tahun";
+"picker.monthsTitle" = "Bulan";

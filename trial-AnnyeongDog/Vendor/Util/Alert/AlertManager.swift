@@ -27,10 +27,10 @@ class AlertManager: UIViewController {
     }
     
     func createChangeSavedAlert(viewController: UIViewController!) {
-        let alert = UIAlertController(title: "Unsaved Changes", message: "You have unsaved changes, are you sure you want to cancel?.", preferredStyle: .alert)
+        let alert = UIAlertController(title: language.alertTitleCancel, message: language.alertMessageCancel, preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
-        alert.addAction(UIAlertAction(title: "Yes", style: .destructive,handler: { action in
+        alert.addAction(UIAlertAction(title: language.noTitleCancel, style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: language.yesTitleCancel, style: .destructive,handler: { action in
             
             // back to dog profile view
             let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)
@@ -41,10 +41,10 @@ class AlertManager: UIViewController {
     }
     
     func createDeleteDogProfileAlert(viewController: DogProfileDetailEditVC!){
-        let alert = UIAlertController(title: "Delete Dog Profile", message: "Once you delete this, you won't be able to return it. Do you want to proceed?", preferredStyle: .alert)
+        let alert = UIAlertController(title: language.alertTitleDeleteDogProfile, message: language.alertMessageDeleteMedicalRecord, preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
-        alert.addAction(UIAlertAction(title: "Yes", style: .destructive,handler: { action in
+        alert.addAction(UIAlertAction(title: language.noTitleCancel, style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: language.yesTitleCancel, style: .destructive,handler: { action in
             
             // back to dog profile view
             let storyboard = UIStoryboard(name: "DogProfileFilledState", bundle: nil)

@@ -56,6 +56,7 @@ class MedicalRecordDetailAddViewController: UIViewController {
         // Register XIB table view cell
         mrdaTable.register(MRDTableViewCell.nib(), forCellReuseIdentifier: MRDTableViewCell.identifier)
         mrdaTable.register(DescriptionTextViewCell.nib(), forCellReuseIdentifier: DescriptionTextViewCell.identifier)
+        mrdaTable.register(DeleteButton.nib(), forCellReuseIdentifier: DeleteButton.identifier)
         
         // Setup table view delegate and data source
         mrdaTable.delegate = self

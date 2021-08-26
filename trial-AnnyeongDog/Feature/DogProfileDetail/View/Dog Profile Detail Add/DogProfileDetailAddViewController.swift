@@ -111,10 +111,10 @@ class DogProfileDetailAddViewController: UIViewController,  UINavigationControll
     // MARK: Functions to Navigation Bar
     
     func setup(){
-        self.navigationItem.title = "Dog Profile"
+        self.navigationItem.title = language.navTitleLabelDogProfile
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonTapped))
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveButtonTapped))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: language.saveButtonTitle, style: .plain, target: self, action: #selector(saveButtonTapped))
     }
     
     
@@ -169,10 +169,10 @@ class DogProfileDetailAddViewController: UIViewController,  UINavigationControll
     
     // MARK: - Back button
     @objc func backButtonTapped(){
-        let alert = UIAlertController(title: "Unsaved Changes", message: "You have unsaved changes, are you sure you want to cancel?.", preferredStyle: .alert)
+        let alert = UIAlertController(title: language.alertTitleCancel, message: language.alertMessageCancel, preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
-        alert.addAction(UIAlertAction(title: "Yes", style: .destructive,handler: { action in
+        alert.addAction(UIAlertAction(title: language.noTitleCancel, style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: language.yesTitleCancel, style: .destructive,handler: { action in
             
             self.navigationController?.dismiss(animated: true, completion: nil)
         }))
@@ -248,11 +248,11 @@ extension DogProfileDetailAddViewController: UIPickerViewDelegate, UIPickerViewD
             case 0:
                 return genderModel.dogYear[row]
             case 1 :
-                return "Years"
+                return language.yearsTitlePicker
             case 2:
                 return genderModel.dogMonth[row]
             case 3:
-                return "Months"
+                return language.monthsTitlePicker
             default:
                 return genderModel.dogMonth[row]
             }
@@ -271,7 +271,7 @@ extension DogProfileDetailAddViewController: UIPickerViewDelegate, UIPickerViewD
             let selectedDogYear = genderModel.dogYear[dogYear]
             let selectedDogMonth = genderModel.dogMonth[dogMonth]
             
-            dogsDOB.text = "\(selectedDogYear) Years \(selectedDogMonth) Months"
+            dogsDOB.text = "\(selectedDogYear) \(language.yearsTitlePicker) \(selectedDogMonth) \(language.monthsTitlePicker)"
         }
         
     }
@@ -303,7 +303,7 @@ extension DogProfileDetailAddViewController: UIImagePickerControllerDelegate{
             }
         }
         
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let cancelAction = UIAlertAction(title: language.cancelButtonTitle, style: .cancel, handler: nil)
         
         alertVC.addAction(libraryAction)
         alertVC.addAction(cancelAction)

@@ -24,7 +24,7 @@ extension MedicalRecordDetailEditViewController: UITableViewDataSource, UITableV
         case 2:
             return 3
         case 3:
-            return 1
+            return 2
         default:
             fatalError()
         }
@@ -54,12 +54,20 @@ extension MedicalRecordDetailEditViewController: UITableViewDataSource, UITableV
     // MARK: - Row
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
         if indexPath.section != 3{
             return 45
-            
         }
         else{
-            return 100
+            
+            if indexPath.row == 0{
+                return 100
+            }
+            else{
+                return 65
+                
+            }
+            
         }
         
     }
@@ -108,10 +116,18 @@ extension MedicalRecordDetailEditViewController: UITableViewDataSource, UITableV
         }
         
         else {
-            let largeCell = tableView.dequeueReusableCell(withIdentifier: DescriptionTextViewCell.identifier) as! DescriptionTextViewCell
-            largeCell.descriptionTextView.delegate = self
-            largeCell.configure(description: language.descriptionPlaceholder)
-            return largeCell
+            if indexPath.row == 0 {
+                let largeCell = tableView.dequeueReusableCell(withIdentifier: DescriptionTextViewCell.identifier) as! DescriptionTextViewCell
+                largeCell.descriptionTextView.delegate = self
+                largeCell.configure(description: language.descriptionPlaceholder)
+                return largeCell
+            }
+            else{
+                let cell = tableView.dequeueReusableCell(withIdentifier: DeleteButtonTableViewCell.identifier, for: indexPath) as! DeleteButtonTableViewCell
+                cell.delegate = self
+                return cell
+            }
+           
         }
         
     }
@@ -123,4 +139,13 @@ extension MedicalRecordDetailEditViewController: UITableViewDataSource, UITableV
         
         
     }
+}
+
+extension MedicalRecordDetailEditViewController: deletedelegate{
+    
+    func deleteAlert() {
+        alertViewDelete(dogId: dogId, mrdId: mrdModel?.id ?? "no data")
+    }
+    
+    
 }

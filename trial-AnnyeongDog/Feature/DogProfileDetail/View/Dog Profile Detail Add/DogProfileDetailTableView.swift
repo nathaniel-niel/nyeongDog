@@ -53,7 +53,7 @@ class DogProfileDetailTableView: UIViewController{
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
         
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector( fetchToFirebase))
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: language.saveButtonTitle, style: .plain, target: self, action: #selector( fetchToFirebase))
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonTapped))
     
@@ -79,10 +79,10 @@ class DogProfileDetailTableView: UIViewController{
     
     // MARK: - Back button
     @objc func backButtonTapped(){
-        let alert = UIAlertController(title: "Unsaved Changes", message: "You have unsaved changes, are you sure you want to cancel?.", preferredStyle: .alert)
+        let alert = UIAlertController(title:language.alertTitleCancel, message: language.alertMessageCancel, preferredStyle: .alert)
         
-        alert.addAction(UIAlertAction(title: "No", style: .default, handler: nil))
-        alert.addAction(UIAlertAction(title: "Yes", style: .destructive,handler: { action in
+        alert.addAction(UIAlertAction(title: language.noTitleCancel, style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: language.yesTitleCancel, style: .destructive,handler: { action in
             
             self.navigationController?.popToRootViewController(animated: true)
         }))

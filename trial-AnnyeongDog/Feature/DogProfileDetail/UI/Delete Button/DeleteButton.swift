@@ -13,6 +13,13 @@ protocol button {
 
 class DeleteButton: UITableViewCell {
     
+    
+    @IBOutlet weak var deleteProfileButton: UIButton!{
+        didSet{
+            deleteProfileButton.setTitle(language.deleteButtonTitleDogProfile, for: .normal)
+        }
+    }
+    
     var delegate: button?
     
     static let identifier = "xibDeletebutton"
