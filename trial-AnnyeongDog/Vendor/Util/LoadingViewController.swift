@@ -10,11 +10,11 @@ import UIKit
 class LoadingViewController: UIViewController {
     
     private var isNewUser: Bool!
-    private let storageManager = StorageManager()
+//    private let storageManager = StorageManager()
     private let navigationManager = NavigationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
-        isNewUser = storageManager.isNewUser()
+        isNewUser = StorageManager.shared.isNewUser()
         
     }
     

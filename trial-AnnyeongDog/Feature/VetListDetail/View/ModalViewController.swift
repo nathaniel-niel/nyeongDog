@@ -11,7 +11,6 @@ import Firebase
 
 class ModalViewController: UIViewController {
     
-
     @IBOutlet var uiView: ModalUIView!
     
     //MARK: - Declaration Variable
@@ -44,24 +43,11 @@ class ModalViewController: UIViewController {
         assing()
     }
     
-    //MARK: - Function to Set UI Components Valus
+    //MARK: - Function to Set UI Components Values
     
     func assing(){
         // Coming soon
         uiView.objectModel = vetListModel
-    }
-    
-    //Mark: - Function Alert Sign In
-    func showAlertSignin() {
-        let alert = UIAlertController(title: "Sign in to continue", message: "To proceed, you need to have an account", preferredStyle: .alert)
-
-        alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
-        alert.addAction(UIAlertAction(title: "Sign In", style: .default, handler: { action in
-            self.navigationController?.pushViewController(self.viewModel.preparetoSignIn(), animated: true)
-            self.present(self.viewModel.preparetoSignIn(), animated: true, completion: nil)
-        }))
-
-        self.present(alert, animated: true)
     }
     
     // MARK: - Function for Pan Gesture
@@ -91,16 +77,13 @@ class ModalViewController: UIViewController {
     
     @IBAction func consultButtonDidTapped(_ sender: Any) {
         // if user is login = true -> whos consult page
-
          if Firebase.Auth.auth().currentUser != nil{
-            
             self.present(self.viewModel.preparetoChat(), animated: true, completion: nil)
         }
          // if user is not login/ new user -> login page
         else{
-            showAlertSignin()
+            AlertManager.alert.createSignInAlert(viewController: self)
         }
     }
-    
 }
 

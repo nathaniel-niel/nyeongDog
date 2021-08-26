@@ -23,39 +23,46 @@ class ChatViewController: UIViewController {
     let db = Firestore.firestore()
     var dbCollection = DatabaseCollectionName()
     
+    var vetProfile: VetProfile?
     var messages: [Messages] = []
+    let ViewModel = VetListViewModel()
+//    var chatViewCell: ChatViewCell?
     
+    //MARK: -Constraints
+
+    
+    //MARK: - App Life Cycle
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        vetProfileLoadFromModel()
+//    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setup()
-        
-        //MARK: -Register xib cell
+        //MARK: Register xib cell
         chatTableView.register(ChatViewCell.nib(), forCellReuseIdentifier: ChatViewCell.identifier)
         chatTableView.register(PrescriptionViewCell.nib(), forCellReuseIdentifier: PrescriptionViewCell.identifier)
         
-        //MARK: -Message TextField Configuration
+        //MARK: Message TextField Configuration
         messageTextField.delegate = self
         messageTextField.autocorrectionType = .no
         
         getMessage()
-        
-        //MARK: -Keyboard Notification Center
+//        vetProfile?.vetName.text = ViewModel.vetNameList[UserControl.shared.indexPath].vetName
+        //MARK: Keyboard Notification Center
         let center: NotificationCenter = NotificationCenter.default;
-        //        center.addObserver(self, selector: #selector(keyboardDidShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
-        //        center.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-        //        center.addObserver(self, selector: #selector(self.keyboardNotification(notification: )), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
         center.addObserver(self, selector: #selector(keyboardWillChange(notification: )), name: UIResponder.keyboardWillShowNotification, object: nil)
         center.addObserver(self, selector: #selector(keyboardWillChange(notification: )), name: UIResponder.keyboardWillHideNotification, object: nil)
-        //        center.addObserver(self, selector: #selector(keyboardWillChange(notification: )), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-        //
-        //
     }
     
     deinit {
         let center: NotificationCenter = NotificationCenter.default;
         center.removeObserver(self)
     }
+    
+
+    
+    //MARK: -Function keyboard dismiss
     
     @objc func keyboardWillChange(notification: Notification) {
         if let userInfo = notification.userInfo {
@@ -65,39 +72,6 @@ class ChatViewController: UIViewController {
             view.frame.origin.y = isKeyboardShowing ? -keyboardFrame!.height : 0
         }
     }
-    
-    //    @objc func keyboardNotification(notification: NSNotification) {
-    //        if let userInfo = notification.userInfo {
-    //            let endFrame = (userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
-    //            let duration:TimeInterval = (userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as! NSNumber).doubleValue ?? 0
-    //            let animationCurveRawNSN = userInfo[UIResponder.keyboardAnimationCurveUserInfoKey] as? NSNumber
-    //            let animationCurveRaw = animationCurveRawNSN?.uintValue ?? UIView.AnimationOptions.curveEaseInOut.rawValue
-    //            let animationCurve: UIView.AnimationOptions = UIView.AnimationOptions(rawValue: animationCurveRaw)
-    //
-    //            UIView.animate(withDuration: duration, delay: TimeInterval(0), options: animationCurve, animations: {self.view.layoutIfNeeded()}, completion: nil)
-    //        }
-    //    }
-    //    //MARK: -Function Keyboard is Called
-    //    @objc func keyboardDidShow(notification: Notification) {
-    //        let info: NSDictionary = notification.userInfo! as NSDictionary
-    //        let keyboardSize = (info[UIResponder.keyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
-    //        let keyboardY = self.view.frame.size.height - keyboardSize.height
-    //
-    //        let editingTextFieldY: CGFloat! = self.messageTextField.frame.origin.y
-    //        if editingTextFieldY > keyboardY - 60 {
-    //            UIView.animate(withDuration: 0.25, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
-    //                self.view.frame = CGRect(x: 0, y: self.view.frame.origin.y, width: self.view.bounds.width, height: self.view.bounds.height)
-    //            }, completion: nil)
-    //        }
-    //
-    //    }
-    //    //MARK: -Function Keyboard is Dismissed
-    //    @objc func keyboardWillHide(notification: Notification) {
-    //        UIView.animate(withDuration: 0.25, delay: 0.0, options: UIView.AnimationOptions.curveEaseIn, animations: {
-    //            self.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.view.bounds.height)
-    //        }, completion: nil)
-    //    }
-    
     
     //MARK: -Setup navigation and tabbar
     func setup() {
@@ -118,11 +92,15 @@ class ChatViewController: UIViewController {
     
     //MARK: -Send Button Logic
     @IBAction func sendButtonPressed(_ sender: UIButton) {
-        
-        messageTextField.endEditing(true)
+//        messageTextField.endEditing(true)
         sendPressed()
-        
     }
+    
+    //MARK: -Vet Profile : Load name from model
+//    func vetProfileLoadFromModel() {
+//        vetProfile.objectModel = vetListModel
+//    }
+    
     //MARK: -If the message are ready to sent to Firebase
     func sendPressed(){
         if let messageBody = messageTextField.text,  let messageSender = Auth.auth().currentUser?.email{
@@ -135,8 +113,11 @@ class ChatViewController: UIViewController {
             ]) { (error) in
                 if let a = error {
                     print(a)
-                }else{
+                } else{
                     print("success")
+                    DispatchQueue.main.async {
+                         self.messageTextField.text = ""
+                    }
                 }
             }
             
@@ -163,7 +144,7 @@ class ChatViewController: UIViewController {
                         for doc in snapshotDocuments{
                             
                             let data = doc.data()
-                            
+                            print(data)
                             
                             if let sender = data[self.dbCollection.senderField] as? String, let messageBody = data[self.dbCollection.bodyField] as? String{
                                 let newMessage = Messages(sender: sender, body: messageBody)
@@ -171,6 +152,8 @@ class ChatViewController: UIViewController {
                                 
                                 DispatchQueue.main.async {
                                     self.chatTableView.reloadData()
+                                    let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                                    self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
                                 }
                                 
                                 
@@ -200,38 +183,39 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         return messages.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width, height: 100)
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let messageCell =  messages[indexPath.row]
         let cell = chatTableView.dequeueReusableCell(withIdentifier: ChatViewCell.identifier, for: indexPath) as! ChatViewCell
         
+        let size = CGSize(width: 250, height: 1000)
+        let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
+        let estimatedFrame = NSString(string: messageCell.body).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 18)], context: nil)
+        
         //MARK: If it's not the current user, the cell will show different color
         if messageCell.sender == Auth.auth().currentUser?.email {
             
-            cell.messageBubble.backgroundColor = .blue
+            cell.messageBubble.backgroundColor = UIColor(named: "bubble-0")
             cell.messageLabel.text = messages[indexPath.row].body
+            cell.messageLabel.textColor = .white
+//            cell.trailingMessageBubbleConstraint.constant = 200
         }
         else{
             
-            cell.messageBubble.backgroundColor = .black
+            cell.messageBubble.backgroundColor = UIColor(named: "bubble-1")
             cell.messageLabel.text = messages[indexPath.row].body
+            cell.messageLabel.textColor = .black
+//            cell.leadingMessageBubbleConstraint.constant = 100
         }
         
-        
-        //        switch indexPath.row {
-        //
-        //        case 0 :
-        //            cell.messageLabel.text = messages[indexPath.row].body
-        //        case 1 :
-        //            cell.messageLabel.text = messages[indexPath.row].body
-        //        case 2 :
-        //            let prescriptionCell = chatTableView.dequeueReusableCell(withIdentifier: PrescriptionViewCell.identifier) as! PrescriptionViewCell
-        //
-        //        default :
-        //            print("Error")
-        //        }
+
         return cell
     }
+    
+    
     
 }
 
@@ -244,7 +228,7 @@ extension ChatViewController: UITextFieldDelegate {
         messageTextField.endEditing(true)
         
         textField.resignFirstResponder()
-        print(textField.text)
+//        print(textField.text)
         return true
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

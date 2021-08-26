@@ -11,7 +11,8 @@ class ChatViewCell: UITableViewCell {
 
     @IBOutlet weak var messageBubble: UIView!
     @IBOutlet weak var messageLabel: UILabel!
-    
+    @IBOutlet weak var leadingMessageBubbleConstraint: NSLayoutConstraint!
+    @IBOutlet weak var trailingMessageBubbleConstraint: NSLayoutConstraint!
     
     
     static let identifier = "chatViewCell"

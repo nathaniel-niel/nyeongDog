@@ -10,7 +10,7 @@ import Firebase
 class DogProfileListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //MARK: Declaration Storage Manager [User Login Information]
-    let storageManager = StorageManager()
+//    let storageManager = StorageManager()
     var isNewUser: Bool!
 
     
@@ -40,7 +40,7 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         navigationItem.hidesBackButton = false
         dogProfileTableView.dataSource = self
         dogProfileTableView.delegate = self
-        isNewUser = storageManager.isNewUser()
+        isNewUser = StorageManager.shared.isNewUser()
     }
     // MARK: - Fetching the Firebase using ViewModel
     func fetchFirebase(){

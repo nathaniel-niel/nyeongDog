@@ -15,7 +15,9 @@ class UserControl {
     
     // current user
     var user = FirebaseAuth.Auth.auth().currentUser
+    // indexPath
     
+    var indexPath: Int = 0
     // check if user is login or not
     func userIsLogin(){
         if FirebaseAuth.Auth.auth().currentUser == nil{

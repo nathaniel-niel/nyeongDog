@@ -11,7 +11,7 @@ class StorageManager {
     enum Key: String {
         case isNewUser
     }
-    
+    static var shared = StorageManager()
     func isNewUser() -> Bool {
         UserDefaults.standard.bool(forKey: Key.isNewUser.rawValue )
     }
