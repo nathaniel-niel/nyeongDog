@@ -21,7 +21,11 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     
     // MARK: - UI Components Declaration
     @IBOutlet weak var dogProfileTableView: UITableView!
-    @IBOutlet weak var dogProfileTabBarItem: UITabBarItem!
+    @IBOutlet weak var dogProfileTabBarItem: UITabBarItem!{
+        didSet{
+            dogProfileTabBarItem.title = language.tabBarTitleDogProfileLabel
+        }
+    }
     
     // MARK: - Object Declaration
     var fetchDatafromFirebase = FetchDatafromFirebase()

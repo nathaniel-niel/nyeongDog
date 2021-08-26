@@ -13,8 +13,11 @@ protocol deletedelegate {
 }
 
 class DeleteButtonTableViewCell: UITableViewCell {
+    
     var delegate: deletedelegate?
+    
     static let identifier = "deletebutton"
+    
     @IBOutlet weak var deleteButton: UIButton!
     
     static func nib() -> UINib{

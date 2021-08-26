@@ -94,6 +94,10 @@ class ChatViewController: UIViewController {
     @IBAction func sendButtonPressed(_ sender: UIButton) {
 //        messageTextField.endEditing(true)
         sendPressed()
+        print("x")
+        messageTextField.endEditing(true)
+        print(messageTextField.text)
+        
     }
     
     //MARK: -Vet Profile : Load name from model
@@ -102,7 +106,8 @@ class ChatViewController: UIViewController {
 //    }
     
     //MARK: -If the message are ready to sent to Firebase
-    func sendPressed(){
+   
+    func sendPressed(completion: @escaping() -> Void){
         if let messageBody = messageTextField.text,  let messageSender = Auth.auth().currentUser?.email{
             
             db.collection(dbCollection.collectionName).addDocument(data: [
@@ -113,11 +118,9 @@ class ChatViewController: UIViewController {
             ]) { (error) in
                 if let a = error {
                     print(a)
-                } else{
-                    print("success")
-                    DispatchQueue.main.async {
-                         self.messageTextField.text = ""
-                    }
+                }else{
+                    print(messageBody)
+                    completion()
                 }
             }
             
@@ -237,8 +240,10 @@ extension ChatViewController: UITextFieldDelegate {
     
     //MARK: If return button is tapped, keyboard will be dismissed, the text field will be empty and it will send the text to Firebase
     func textFieldDidEndEditing(_ textField: UITextField) {
-        sendPressed()
-        textField.text = ""
+        sendPressed(completion: {
+            textField.text = ""
+        })
+        
         
         
     }

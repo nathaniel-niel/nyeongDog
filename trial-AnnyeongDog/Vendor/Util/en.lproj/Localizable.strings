@@ -13,6 +13,7 @@
 "navigationItem.titleLabel" = "Veterinarian";
 "searchBar.placeholder" = "Example: Drh. Budi";
 "tabBarItem.Title.dogProfile" = "Dog Profile";
+"tabBarItem.Title.vetList" = "Find Vet";
 
 // Navigation Item
 "addButtonTitle" = "Add";
@@ -48,6 +49,9 @@
 "alertTitleDeleteMedicalRecord" = "Delete Medical Record";
 "alertMessageDeleteMedicalRecord" = "Once you delete this, you won't be able to return it. Do you want to proceeed?";
 
+// Alert Delete Dog Profile
+"alertTitleDeleteDogProfile" = "Delete Dog Profile";
+
 // Medical Record List
 "medicalRecord.date" = "Date";
 "medicalRecord.navTitle" = "Medical Records";
@@ -63,7 +67,7 @@
 "modalMedicalRecord.dosageTitle" = "Dosage";
 "modalMedicalRecord.descriptionTitle" = "Description";
 "modalMedicalRecord.deleteButtonTitle" = "Delete Medical Record";
-"modalMedicalRecord.descriptionPlaceholder" = "Type your descripcion here..";
+"modalMedicalRecord.descriptionPlaceholder" = "Type your description here..";
 
 // Medical Record Detail Placeholder
 "medicalRecordPlaceholder.date" = "01/02/2021";
@@ -73,3 +77,16 @@
 "medicalRecordPlaceholder.medicine" = "Pet Metronidazole Diarrhea";
 "medicalRecordPlaceholder.dosage" = "2 Times a Day";
 
+// Dog Profile Detail
+"dogProfileDetail.deleteButton" = "Delete Profile";
+"dogProfileDetail.medicalRecordButton" = "Medical Record";
+"dogProfileDetail.dogName" = "Dog Name";
+"dogProfileDetail.dogAge" = "Age";
+"dogProfile.Detail.dogGender" = "Gender";
+"dogProfileDetail.dogBreed" = "Breed";
+"dogProfileDetail.dogWeight" = "Weight";
+"dogProfileDetail.dogColor" = "Color";
+"dogProfileDetail.dogAllergen" = "Allergen";
+// Picker
+"picker.yearsTitle" = "Years";
+"picker.monthsTitle" = "Months";

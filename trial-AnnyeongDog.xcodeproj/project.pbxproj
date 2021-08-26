@@ -56,6 +56,7 @@
 		5B94000C26B7F8CA0020C09C /* MRDModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B94000B26B7F8CA0020C09C /* MRDModel.swift */; };
 		5BB603A526D64EE60056B95C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BB603A726D64EE60056B95C /* Localizable.strings */; };
 		5BB603E526D654C20056B95C /* LanguageSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB603E426D654C20056B95C /* LanguageSetting.swift */; };
+		5BB95A5826D77145000E7272 /* VetListNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB95A5726D77145000E7272 /* VetListNavigationController.swift */; };
 		7ACD3D5FCF25095A1818F235 /* Pods_trial_AnnyeongDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 717D5942BF1328C6EDE1986A /* Pods_trial_AnnyeongDog.framework */; };
 		B505207026BC39B200306D99 /* VetProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B505206F26BC39B200306D99 /* VetProfile.swift */; };
 		B505207226BC39BE00306D99 /* VetProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = B505207126BC39BE00306D99 /* VetProfile.xib */; };
@@ -183,6 +184,7 @@
 		5BB603A626D64EE60056B95C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5BB603A826D64EFD0056B95C /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		5BB603E426D654C20056B95C /* LanguageSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSetting.swift; sourceTree = "<group>"; };
+		5BB95A5726D77145000E7272 /* VetListNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetListNavigationController.swift; sourceTree = "<group>"; };
 		717D5942BF1328C6EDE1986A /* Pods_trial_AnnyeongDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_trial_AnnyeongDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B505206F26BC39B200306D99 /* VetProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VetProfile.swift; sourceTree = "<group>"; };
 		B505207126BC39BE00306D99 /* VetProfile.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VetProfile.xib; sourceTree = "<group>"; };
@@ -520,6 +522,7 @@
 				5B3A108D26D4F6160022F85B /* VetListTableViewCell.xib */,
 				5B3A108E26D4F6160022F85B /* VetListTableViewCell.swift */,
 				5B3A108F26D4F6160022F85B /* ExtensionVetList+TableView.swift */,
+				5BB95A5726D77145000E7272 /* VetListNavigationController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1236,6 +1239,7 @@
 				5BB603E526D654C20056B95C /* LanguageSetting.swift in Sources */,
 				5B3A109F26D4F6160022F85B /* ModalViewModel.swift in Sources */,
 				2D19F87826C4C2C300FDAA46 /* UIConfiguration.swift in Sources */,
+				5BB95A5826D77145000E7272 /* VetListNavigationController.swift in Sources */,
 				5B71983B26BD42F9000F19A5 /* DogProfileEmptyStateViewController.swift in Sources */,
 				C064CDBA26D630E900378325 /* DogProfileListDetailViewController.swift in Sources */,
 				5B05C39A26B2A9450034A66A /* MedicalRecordDetailEditViewController.swift in Sources */,

@@ -63,6 +63,7 @@ extension DogProfileDetailTextField: UITextFieldDelegate{
         case 4:
             delegate?.addDogType(value: textField.text!)
         case 5:
+            textField.text = "\(textField.text!) Kg"
             delegate?.addDogWeight(value: textField.text!)
         case 6:
             delegate?.addDogColor(value: textField.text!)
