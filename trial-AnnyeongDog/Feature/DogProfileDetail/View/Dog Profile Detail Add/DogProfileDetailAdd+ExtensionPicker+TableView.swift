@@ -202,7 +202,6 @@ extension DogProfileDetailTableView: addData {
     }
     
     func addDogGender() {
-        print(stringPickerGender)
         self.dogGender = stringPickerGender
     }
     
