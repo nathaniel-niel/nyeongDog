@@ -17,6 +17,7 @@ class language{
     static let navtitleLabelVet = NSLocalizedString("navigationItem.titleLabel", comment: "")
     static let searchbarPlaceholder = NSLocalizedString("searchBar.placeholder", comment: "")
     static let tabBarTitleDogProfileLabel = NSLocalizedString("tabBarItem.Title.dogProfile", comment: "")
+    static let tabBarTitleVetListLabel = NSLocalizedString("tabBarItem.Title.vetList", comment: "")
    
     // Navigation Item
     static let addButtonTitle = NSLocalizedString("addButtonTitle", comment: "")
@@ -40,6 +41,9 @@ class language{
     static let alertTitleDeleteMedicalRecord = NSLocalizedString("alertTitleDeleteMedicalRecord", comment: "")
     static let alertMessageDeleteMedicalRecord = NSLocalizedString("alertMessageDeleteMedicalRecord", comment: "")
     
+    // Alert Delete Dog Profile
+    static let alertTitleDeleteDogProfile = NSLocalizedString("alertTitleDeleteDogProfile", comment: "")
+
     //  Modal Vet List 
     static let yearsexpTitleLabel = NSLocalizedString("modal.yearsExpTitle", comment: "")
     static let alumniTitleLabel = NSLocalizedString("modal.alumniTitle", comment: "")

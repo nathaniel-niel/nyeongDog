@@ -13,6 +13,7 @@
 "navigationItem.titleLabel" = "Veterinarian";
 "searchBar.placeholder" = "Example: Drh. Budi";
 "tabBarItem.Title.dogProfile" = "Dog Profile";
+"tabBarItem.Title.vetList" = "Find Vet";
 
 // Navigation Item
 "addButtonTitle" = "Add";
@@ -47,6 +48,9 @@
 // Alert Delete Medical Record
 "alertTitleDeleteMedicalRecord" = "Delete Medical Record";
 "alertMessageDeleteMedicalRecord" = "Once you delete this, you won't be able to return it. Do you want to proceeed?";
+
+// Alert Delete Dog Profile
+"alertTitleDeleteDogProfile" = "Delete Dog Profile";
 
 // Medical Record List
 "medicalRecord.date" = "Date";
