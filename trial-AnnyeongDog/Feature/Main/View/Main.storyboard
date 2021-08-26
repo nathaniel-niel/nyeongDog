@@ -78,7 +78,7 @@
         <!--Vet List-->
         <scene sceneID="4Lh-3N-Emm">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cfu-x0-tRB" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cfu-x0-tRB" customClass="VetListNavigationController" customModule="trial_AnnyeongDog" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Vet List" image="ic_findVetGray" selectedImage="ic_findVetPurple" id="GmR-kk-bOn">
                         <color key="badgeColor" red="0.21960784310000001" green="0.25882352939999997" blue="0.4431372549" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBarItem>
@@ -89,6 +89,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+                        <outlet property="tabBarItemVetList" destination="GmR-kk-bOn" id="f6c-pv-sTs"/>
                         <segue destination="aAJ-fW-8nP" kind="relationship" relationship="rootViewController" id="yLH-z4-H4V"/>
                     </connections>
                 </navigationController>
