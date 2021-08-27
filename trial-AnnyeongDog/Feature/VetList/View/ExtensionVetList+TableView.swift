@@ -45,6 +45,7 @@ extension VetListViewController: UITableViewDelegate, UITableViewDataSource{
         tableView.deselectRow(at: indexPath, animated: true)
         
         let vc = ModalViewController()
+        let chatVC = ChatViewController()
         vc.modalPresentationStyle = .custom
         vc.transitioningDelegate = self
         
@@ -54,6 +55,7 @@ extension VetListViewController: UITableViewDelegate, UITableViewDataSource{
         }
         else{
             vc.vetListModel = ViewModel.vetNameList[indexPath.row]
+            chatVC.vetListModel = ViewModel.vetNameList[indexPath.row]
         }
         self.present(vc, animated: true, completion: nil)
     }

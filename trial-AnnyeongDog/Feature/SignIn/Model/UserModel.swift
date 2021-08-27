@@ -12,15 +12,15 @@ struct UserModel {
     let id: String
     let email: String
     
-    init(id: String, email: String) {
-        self.id = id
-        self.email = email
-    }
-    
-    init(authData: Firebase.User) {
-        id = authData.uid
-        email = authData.email ?? "no email"
-    }
+//    init(id: String, email: String) {
+//        self.id = id
+//        self.email = email
+//    }
+//
+//    init(authData: Firebase.User) {
+//        id = authData.uid
+//        email = authData.email ?? "no email"
+//    }
 }
 
 

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VetProfileViewController" customModule="trial_AnnyeongDog" customModuleProvider="target">
+            <connections>
+                <outlet property="vetProfileView" destination="hUy-Ko-AiM" id="pVw-p1-iDf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="180" height="54"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hUy-Ko-AiM" customClass="VetProfile" customModule="trial_AnnyeongDog" customModuleProvider="target">
+                    <rect key="frame" x="5" y="5" width="170" height="44"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="hUy-Ko-AiM" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" constant="-5" id="bge-92-34y"/>
+                <constraint firstItem="hUy-Ko-AiM" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" constant="-5" id="cWe-Bt-lEZ"/>
+                <constraint firstAttribute="top" secondItem="hUy-Ko-AiM" secondAttribute="top" constant="-5" id="jEs-bF-wu4"/>
+                <constraint firstAttribute="leading" secondItem="hUy-Ko-AiM" secondAttribute="leading" constant="-5" id="oyW-Yi-HbE"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-10.144927536231885" y="246.42857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

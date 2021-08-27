@@ -11,9 +11,10 @@ class ChatViewCell: UITableViewCell {
 
     @IBOutlet weak var messageBubble: UIView!
     @IBOutlet weak var messageLabel: UILabel!
-    @IBOutlet weak var leadingMessageBubbleConstraint: NSLayoutConstraint!
-    @IBOutlet weak var trailingMessageBubbleConstraint: NSLayoutConstraint!
+    @IBOutlet weak var messageBubbleImage: UIImageView!
     
+    @IBOutlet weak var doctorImage: UIImageView!
+    @IBOutlet weak var senderImage: UIImageView!
     
     static let identifier = "chatViewCell"
     override func awakeFromNib() {

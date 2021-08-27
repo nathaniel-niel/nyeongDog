@@ -17,7 +17,7 @@ class VetListViewController: UIViewController{
     
     // MARK: - Object Declaration
     let ViewModel = VetListViewModel()
-    let dummydata = VetDummyData()
+//    let dummydata = VetDummyData()
     var searchVetName = [VetListModel]()
     var searching = false
     let searchController = UISearchController(searchResultsController: nil)

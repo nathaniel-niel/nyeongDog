@@ -23,36 +23,39 @@ class ChatViewController: UIViewController {
     let db = Firestore.firestore()
     var dbCollection = DatabaseCollectionName()
     
-    var vetProfile: VetProfile?
+    var vetProfile: VetProfile!
     var messages: [Messages] = []
-    let ViewModel = VetListViewModel()
-//    var chatViewCell: ChatViewCell?
+    let viewModel = VetListViewModel()
+    var vetListModel: VetListModel?
     
     //MARK: -Constraints
 
     
     //MARK: - App Life Cycle
     
-//    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+//        viewModel.fillDataVetList()
+//        print(viewModel.vetNameList)
+//        print(vetProfile.objectModel)
 //        vetProfileLoadFromModel()
-//    }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
         //MARK: Register xib cell
         chatTableView.register(ChatViewCell.nib(), forCellReuseIdentifier: ChatViewCell.identifier)
         chatTableView.register(PrescriptionViewCell.nib(), forCellReuseIdentifier: PrescriptionViewCell.identifier)
-        
         //MARK: Message TextField Configuration
         messageTextField.delegate = self
         messageTextField.autocorrectionType = .no
         
         getMessage()
-//        vetProfile?.vetName.text = ViewModel.vetNameList[UserControl.shared.indexPath].vetName
+//        vetProfile?.objectModel = viewModel.vetNameList[UserControl.shared.indexPath]
         //MARK: Keyboard Notification Center
         let center: NotificationCenter = NotificationCenter.default;
         center.addObserver(self, selector: #selector(keyboardWillChange(notification: )), name: UIResponder.keyboardWillShowNotification, object: nil)
         center.addObserver(self, selector: #selector(keyboardWillChange(notification: )), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
     }
     
     deinit {
@@ -93,7 +96,6 @@ class ChatViewController: UIViewController {
     //MARK: -Send Button Logic
     @IBAction func sendButtonPressed(_ sender: UIButton) {
 //        messageTextField.endEditing(true)
-        sendPressed()
         print("x")
         messageTextField.endEditing(true)
         print(messageTextField.text)
@@ -198,20 +200,24 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
         let options = NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin)
         let estimatedFrame = NSString(string: messageCell.body).boundingRect(with: size, options: options, attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 18)], context: nil)
         
+        
         //MARK: If it's not the current user, the cell will show different color
         if messageCell.sender == Auth.auth().currentUser?.email {
             
-            cell.messageBubble.backgroundColor = UIColor(named: "bubble-0")
+            cell.messageBubbleImage.image = UIImage(named: "bubble-0")
             cell.messageLabel.text = messages[indexPath.row].body
             cell.messageLabel.textColor = .white
-//            cell.trailingMessageBubbleConstraint.constant = 200
+            cell.doctorImage.isHidden = false
+            cell.senderImage.isHidden = true
+            
         }
         else{
             
-            cell.messageBubble.backgroundColor = UIColor(named: "bubble-1")
+            cell.messageBubbleImage.image = UIImage(named: "bubble-1")
             cell.messageLabel.text = messages[indexPath.row].body
             cell.messageLabel.textColor = .black
-//            cell.leadingMessageBubbleConstraint.constant = 100
+            cell.doctorImage.isHidden = true
+            cell.senderImage.isHidden = false
         }
         
 
@@ -243,11 +249,14 @@ extension ChatViewController: UITextFieldDelegate {
         sendPressed(completion: {
             textField.text = ""
         })
-        
-        
-        
     }
-    
-    
-    
 }
+
+//extension ChatViewController: chatDelegate {
+//    func fillVetListModel() {
+//
+//    }
+// }
+    
+
+
