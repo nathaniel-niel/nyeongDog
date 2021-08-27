@@ -12,3 +12,8 @@ struct CurrentDogProfile {
     var currentDogId: String?
     
 }
+
+struct vetState{
+    static var shared = vetState()
+    var currentVetIndex: Int?
+}

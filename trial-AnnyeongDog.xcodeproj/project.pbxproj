@@ -20,7 +20,7 @@
 		2D27006626D7817000A4077B /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D27006426D7817000A4077B /* PaymentViewController.swift */; };
 		2D27006726D7817000A4077B /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D27006526D7817000A4077B /* PaymentViewController.xib */; };
 		2D3418B826C3A8840003A70A /* MedicalRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3418B726C3A8840003A70A /* MedicalRecordViewModel.swift */; };
-		2D3418BB26C3AA000003A70A /* DogProfileState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3418BA26C3AA000003A70A /* DogProfileState.swift */; };
+		2D3418BB26C3AA000003A70A /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3418BA26C3AA000003A70A /* State.swift */; };
 		2D5EE3CF26C4003400785683 /* ExtensionMedicalRecordDetailViewController+TableVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5EE3CE26C4003400785683 /* ExtensionMedicalRecordDetailViewController+TableVIew.swift */; };
 		2D5EE3D226C40C1600785683 /* ExentsionMedicalRecordDetailAddView+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5EE3D126C40C1600785683 /* ExentsionMedicalRecordDetailAddView+TableView.swift */; };
 		2D5EE3D426C40D9400785683 /* ExtensionMRDAView+TextField+TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5EE3D326C40D9400785683 /* ExtensionMRDAView+TextField+TextView.swift */; };
@@ -164,7 +164,7 @@
 		2D27006426D7817000A4077B /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		2D27006526D7817000A4077B /* PaymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentViewController.xib; sourceTree = "<group>"; };
 		2D3418B726C3A8840003A70A /* MedicalRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalRecordViewModel.swift; sourceTree = "<group>"; };
-		2D3418BA26C3AA000003A70A /* DogProfileState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileState.swift; sourceTree = "<group>"; };
+		2D3418BA26C3AA000003A70A /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		2D5EE3CE26C4003400785683 /* ExtensionMedicalRecordDetailViewController+TableVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionMedicalRecordDetailViewController+TableVIew.swift"; sourceTree = "<group>"; };
 		2D5EE3D126C40C1600785683 /* ExentsionMedicalRecordDetailAddView+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExentsionMedicalRecordDetailAddView+TableView.swift"; sourceTree = "<group>"; };
 		2D5EE3D326C40D9400785683 /* ExtensionMRDAView+TextField+TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionMRDAView+TextField+TextView.swift"; sourceTree = "<group>"; };
@@ -386,7 +386,7 @@
 		2D3418B926C3A9DD0003A70A /* DogProfileState */ = {
 			isa = PBXGroup;
 			children = (
-				2D3418BA26C3AA000003A70A /* DogProfileState.swift */,
+				2D3418BA26C3AA000003A70A /* State.swift */,
 			);
 			path = DogProfileState;
 			sourceTree = "<group>";
@@ -1393,7 +1393,7 @@
 				C032477726D688E1000464DB /* DogProfileDetailEditVC+ExtensionTableView+Picker.swift in Sources */,
 				B584B3DC26B28DF2005A02C5 /* MainViewController.swift in Sources */,
 				2D7E85E926D3716D0074FF44 /* SigninViewModel.swift in Sources */,
-				2D3418BB26C3AA000003A70A /* DogProfileState.swift in Sources */,
+				2D3418BB26C3AA000003A70A /* State.swift in Sources */,
 				5BB603E526D654C20056B95C /* LanguageSetting.swift in Sources */,
 				5B3A109F26D4F6160022F85B /* ModalViewModel.swift in Sources */,
 				2D19F87826C4C2C300FDAA46 /* UIConfiguration.swift in Sources */,

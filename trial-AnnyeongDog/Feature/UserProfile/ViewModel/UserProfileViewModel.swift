@@ -20,6 +20,7 @@ class UserProfileViewModel {
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
+           
         } catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
         }
@@ -31,7 +32,7 @@ class UserProfileViewModel {
     }
     
     func getProfileData(completion: @escaping((String, String) ->())){
-        name = Firebase.Auth.auth().currentUser?.displayName
+        name = Firebase.Auth.auth().currentUser?.uid
         email = Firebase.Auth.auth().currentUser?.email
         completion(name ?? "no data",email ?? "no data")
     }
