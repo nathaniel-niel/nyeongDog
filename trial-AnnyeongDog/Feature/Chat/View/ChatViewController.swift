@@ -142,8 +142,6 @@ class ChatViewController: UIViewController {
                     print(e)
                 }
                 else{
-                    
-                    
                     if let snapshotDocuments = querrySnapshot?.documents{
                         
                         for doc in snapshotDocuments{
@@ -160,15 +158,11 @@ class ChatViewController: UIViewController {
                                     let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
                                     self.chatTableView.scrollToRow(at: indexPath, at: .bottom, animated: false)
                                 }
-                                
-                                
                             }
                         }
-                        
                     }
                 }
             }
-        
     }
     
     
