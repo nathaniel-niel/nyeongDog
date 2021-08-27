@@ -35,6 +35,10 @@ class VetListViewController: UIViewController{
         setup()
 
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tabBarController?.tabBar.isHidden = false
+    }
        
     private func setup(){
     searchController.searchResultsUpdater = self
@@ -46,6 +50,12 @@ class VetListViewController: UIViewController{
         
     //xib register
     vetListTable.register(VetListTableViewCell.nib(), forCellReuseIdentifier: VetListTableViewCell.identifier)
+    }
+    
+    @IBAction func didProfileTapped(_ sender: Any) {
+        let vc = UserProfileViewController()
+        navigationController?.pushViewController(vc, animated: true)
+        tabBarController?.hidesBottomBarWhenPushed = true
     }
 }
 

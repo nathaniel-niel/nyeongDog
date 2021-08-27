@@ -7,7 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D07E2A126D7EDA500D12963 /* PaymentUIVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D07E2A026D7EDA500D12963 /* PaymentUIVIew.swift */; };
+		2D07E2A326D7F16300D12963 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D07E2A226D7F16300D12963 /* PaymentViewModel.swift */; };
+		2D07E2AB26D8031000D12963 /* UserProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D07E2AA26D8031000D12963 /* UserProfileViewModel.swift */; };
+		2D07E2B026D8033900D12963 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D07E2AE26D8033900D12963 /* UserProfileViewController.swift */; };
+		2D07E2B126D8033900D12963 /* UserProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D07E2AF26D8033900D12963 /* UserProfileViewController.xib */; };
+		2D07E2B526D8036600D12963 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D07E2B426D8036600D12963 /* UserProfileView.swift */; };
 		2D19F87826C4C2C300FDAA46 /* UIConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D19F87726C4C2C300FDAA46 /* UIConfiguration.swift */; };
+		2D1B494F26D67FC20030DBD5 /* IAPManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B494E26D67FC20030DBD5 /* IAPManager.swift */; };
+		2D1B495226D68D500030DBD5 /* userStateForPayement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1B495126D68D500030DBD5 /* userStateForPayement.swift */; };
+		2D1B495426D699D50030DBD5 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D1B495326D699D50030DBD5 /* StoreKit.framework */; };
+		2D27006626D7817000A4077B /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D27006426D7817000A4077B /* PaymentViewController.swift */; };
+		2D27006726D7817000A4077B /* PaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D27006526D7817000A4077B /* PaymentViewController.xib */; };
 		2D3418B826C3A8840003A70A /* MedicalRecordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3418B726C3A8840003A70A /* MedicalRecordViewModel.swift */; };
 		2D3418BB26C3AA000003A70A /* DogProfileState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3418BA26C3AA000003A70A /* DogProfileState.swift */; };
 		2D5EE3CF26C4003400785683 /* ExtensionMedicalRecordDetailViewController+TableVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5EE3CE26C4003400785683 /* ExtensionMedicalRecordDetailViewController+TableVIew.swift */; };
@@ -133,7 +144,19 @@
 /* Begin PBXFileReference section */
 		1F067EF30DC9F907FC10B78B /* Pods-trial-AnnyeongDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trial-AnnyeongDog.release.xcconfig"; path = "Target Support Files/Pods-trial-AnnyeongDog/Pods-trial-AnnyeongDog.release.xcconfig"; sourceTree = "<group>"; };
 		26A2976778E2B79F56C882C7 /* Pods-trial-AnnyeongDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-trial-AnnyeongDog.debug.xcconfig"; path = "Target Support Files/Pods-trial-AnnyeongDog/Pods-trial-AnnyeongDog.debug.xcconfig"; sourceTree = "<group>"; };
+		2D07E2A026D7EDA500D12963 /* PaymentUIVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentUIVIew.swift; sourceTree = "<group>"; };
+		2D07E2A226D7F16300D12963 /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
+		2D07E2AA26D8031000D12963 /* UserProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewModel.swift; sourceTree = "<group>"; };
+		2D07E2AE26D8033900D12963 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		2D07E2AF26D8033900D12963 /* UserProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserProfileViewController.xib; sourceTree = "<group>"; };
+		2D07E2B426D8036600D12963 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		2D19F87726C4C2C300FDAA46 /* UIConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIConfiguration.swift; sourceTree = "<group>"; };
+		2D1B494E26D67FC20030DBD5 /* IAPManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPManager.swift; sourceTree = "<group>"; };
+		2D1B495026D68B0A0030DBD5 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
+		2D1B495126D68D500030DBD5 /* userStateForPayement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = userStateForPayement.swift; sourceTree = "<group>"; };
+		2D1B495326D699D50030DBD5 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		2D27006426D7817000A4077B /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		2D27006526D7817000A4077B /* PaymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentViewController.xib; sourceTree = "<group>"; };
 		2D3418B726C3A8840003A70A /* MedicalRecordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalRecordViewModel.swift; sourceTree = "<group>"; };
 		2D3418BA26C3AA000003A70A /* DogProfileState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileState.swift; sourceTree = "<group>"; };
 		2D5EE3CE26C4003400785683 /* ExtensionMedicalRecordDetailViewController+TableVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExtensionMedicalRecordDetailViewController+TableVIew.swift"; sourceTree = "<group>"; };
@@ -267,12 +290,58 @@
 			buildActionMask = 2147483647;
 			files = (
 				7ACD3D5FCF25095A1818F235 /* Pods_trial_AnnyeongDog.framework in Frameworks */,
+				2D1B495426D699D50030DBD5 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D07E2A426D7F17200D12963 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2D07E2A226D7F16300D12963 /* PaymentViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2D07E2A526D7F18200D12963 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2D1B494E26D67FC20030DBD5 /* IAPManager.swift */,
+				2D1B495026D68B0A0030DBD5 /* Configuration.storekit */,
+				2D1B495126D68D500030DBD5 /* userStateForPayement.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		2D07E2A626D7FFFB00D12963 /* UserProfile */ = {
+			isa = PBXGroup;
+			children = (
+				2D07E2A826D802E300D12963 /* ViewModel */,
+				2D07E2A726D802DA00D12963 /* View */,
+			);
+			path = UserProfile;
+			sourceTree = "<group>";
+		};
+		2D07E2A726D802DA00D12963 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D07E2AE26D8033900D12963 /* UserProfileViewController.swift */,
+				2D07E2AF26D8033900D12963 /* UserProfileViewController.xib */,
+				2D07E2B426D8036600D12963 /* UserProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2D07E2A826D802E300D12963 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2D07E2AA26D8031000D12963 /* UserProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		2D19F87626C4C2A600FDAA46 /* UI Configuration */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,6 +349,26 @@
 				2D19F87726C4C2C300FDAA46 /* UIConfiguration.swift */,
 			);
 			path = "UI Configuration";
+			sourceTree = "<group>";
+		};
+		2D1B494D26D67ECF0030DBD5 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+				2D07E2A526D7F18200D12963 /* Manager */,
+				2D07E2A426D7F17200D12963 /* ViewModel */,
+				2D27006326D7815F00A4077B /* View */,
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		2D27006326D7815F00A4077B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D27006426D7817000A4077B /* PaymentViewController.swift */,
+				2D27006526D7817000A4077B /* PaymentViewController.xib */,
+				2D07E2A026D7EDA500D12963 /* PaymentUIVIew.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		2D3418B926C3A9DD0003A70A /* DogProfileState */ = {
@@ -703,6 +792,8 @@
 		B584B3C126B28C71005A02C5 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				2D07E2A626D7FFFB00D12963 /* UserProfile */,
+				2D1B494D26D67ECF0030DBD5 /* Payment */,
 				5B3A108426D4F6150022F85B /* VetList */,
 				5B3A109026D4F6160022F85B /* VetListDetail */,
 				C01A908826BAF046007FA0B6 /* VideoCall */,
@@ -1025,6 +1116,7 @@
 		C30359627F5E9F0180384BB1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2D1B495326D699D50030DBD5 /* StoreKit.framework */,
 				717D5942BF1328C6EDE1986A /* Pods_trial_AnnyeongDog.framework */,
 			);
 			name = Frameworks;
@@ -1114,6 +1206,7 @@
 				B535E09E26BBB1BE0038251D /* ChatViewCell.xib in Resources */,
 				5B67967326B41796004514F3 /* DogProfileEmptyState.storyboard in Resources */,
 				2D628ED526B297B20008ECD2 /* MRDTableViewCell.xib in Resources */,
+				2D07E2B126D8033900D12963 /* UserProfileViewController.xib in Resources */,
 				C0A21CE426CE2C8400DF0BCE /* DogProfileDetailTextField.xib in Resources */,
 				B584B3B526B264CD005A02C5 /* LaunchScreen.storyboard in Resources */,
 				C00DE90026B3D8AE00E99343 /* MedicalRecordList.storyboard in Resources */,
@@ -1123,6 +1216,7 @@
 				C0A21CE926CE359700DF0BCE /* DogImageCell.xib in Resources */,
 				C00DE8FC26B3D8AE00E99343 /* MedicalRecordListTableViewCell.xib in Resources */,
 				B584B3B226B264CD005A02C5 /* Assets.xcassets in Resources */,
+				2D27006726D7817000A4077B /* PaymentViewController.xib in Resources */,
 				C01A908E26BAF080007FA0B6 /* VideoCallStoryboard.storyboard in Resources */,
 				C037876B26B2A199004344E0 /* MedicalRecords.storyboard in Resources */,
 			);
@@ -1179,8 +1273,10 @@
 			files = (
 				C032477926D69145000464DB /* DogProfileDetailEditViewControllerViewModel.swift in Sources */,
 				C037879126B2A1CB004344E0 /* DogProfileDetailViewController.swift in Sources */,
+				2D1B495226D68D500030DBD5 /* userStateForPayement.swift in Sources */,
 				2D74BE1826B454E8009B3629 /* DogProfileDetailEditViewController.swift in Sources */,
 				5B3A109B26D4F6160022F85B /* VetListViewController.swift in Sources */,
+				2D07E2B526D8036600D12963 /* UserProfileView.swift in Sources */,
 				2D7E85E626D3533B0074FF44 /* MedicalRecordList+UI.swift in Sources */,
 				B535E09326BBA2FC0038251D /* ChatViewController.swift in Sources */,
 				B5AF9D4C26BBE7D000A59690 /* MedicineCell.swift in Sources */,
@@ -1203,6 +1299,7 @@
 				C0A21CDA26CE270500DF0BCE /* DogProfileDetailView.swift in Sources */,
 				5B94000C26B7F8CA0020C09C /* MRDModel.swift in Sources */,
 				5B3A109A26D4F6160022F85B /* VetListModel.swift in Sources */,
+				2D27006626D7817000A4077B /* PaymentViewController.swift in Sources */,
 				5B05C39D26B2B3B00034A66A /* DeleteButtonTableViewCell.swift in Sources */,
 				B5821A6126B7EEA0006DDED9 /* UserModel.swift in Sources */,
 				C00DE8FE26B3D8AE00E99343 /* PrepareToMRD.swift in Sources */,
@@ -1215,8 +1312,10 @@
 				2D7E85E726D3533B0074FF44 /* MedicalRecordListViewController.swift in Sources */,
 				2D3418B826C3A8840003A70A /* MedicalRecordViewModel.swift in Sources */,
 				C07230B726CD717A007E7EE7 /* DogProfileDetailAddViewControllerViewModel.swift in Sources */,
+				2D1B494F26D67FC20030DBD5 /* IAPManager.swift in Sources */,
 				B59BDB9626BAFF6A00AED6D6 /* NavigationManager.swift in Sources */,
 				B584B3D926B28DF2005A02C5 /* ExampleModel.swift in Sources */,
+				2D07E2A326D7F16300D12963 /* PaymentViewModel.swift in Sources */,
 				5B67967626B41796004514F3 /* DogProfileListViewController.swift in Sources */,
 				5B3F4BEE26B3FAD7004448DA /* MedicalRecordDetailAddViewController.swift in Sources */,
 				2D5EE3DA26C414D600785683 /* ExtensionMedicalRecordDetailEditView+TextField+TextView.swift in Sources */,
@@ -1253,6 +1352,7 @@
 				C037878826B2A1CB004344E0 /* GenderModel.swift in Sources */,
 				2D74BE1D26B4558F009B3629 /* UserControl.swift in Sources */,
 				B5A0B08D26BA9E2F00D5C273 /* DescriptionTextViewCell.swift in Sources */,
+				2D07E2A126D7EDA500D12963 /* PaymentUIVIew.swift in Sources */,
 				2D7E85EC26D371920074FF44 /* AlertManager.swift in Sources */,
 				B584B3AB26B264CC005A02C5 /* SceneDelegate.swift in Sources */,
 				5B3A109926D4F6160022F85B /* VetListViewModel.swift in Sources */,
@@ -1264,6 +1364,8 @@
 				C037879226B2A1CB004344E0 /* PrepareForMedical.swift in Sources */,
 				B535E09226BBA2FC0038251D /* Messages.swift in Sources */,
 				C032476826D63D61000464DB /* DogProfileListDetailViewController+TableViewExtension.swift in Sources */,
+				2D07E2AB26D8031000D12963 /* UserProfileViewModel.swift in Sources */,
+				2D07E2B026D8033900D12963 /* UserProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
