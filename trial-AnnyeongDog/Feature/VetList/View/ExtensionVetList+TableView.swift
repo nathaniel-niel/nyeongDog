@@ -51,6 +51,7 @@ extension VetListViewController: UITableViewDelegate, UITableViewDataSource{
         }
         else{
             vc.vetListModel = ViewModel.vetNameList[indexPath.row]
+            vetState.shared.currentVetIndex = indexPath.row
         }
         self.present(vc, animated: true, completion: nil)
     }

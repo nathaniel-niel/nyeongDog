@@ -60,7 +60,10 @@ extension WhoConsultingViewController: UICollectionViewDelegate, UICollectionVie
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       print("go to sign in page")
+       
+        let vc = PaymentViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -76,4 +79,5 @@ extension WhoConsultingViewController: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 155, height: 210)
     }
+    
 }

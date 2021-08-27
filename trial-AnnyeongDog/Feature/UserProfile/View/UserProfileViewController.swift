@@ -42,9 +42,8 @@ class UserProfileViewController: UIViewController {
     // MARK: - Data Function
     
     func bindData(){
-        userProfileViewModel.getProfileData { name, email in
-            self.userProfileView.userName.text = name
-            self.userProfileView.userName1.text = name
+        userProfileViewModel.getProfileData { uid, email in
+            self.userProfileView.userName1.text = uid
             self.userProfileView.userEmail.text = email
         }
     }

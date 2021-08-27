@@ -51,7 +51,7 @@
          </BuildableReference>
       </BuildableProductRunnable>
       <StoreKitConfigurationFileReference
-         identifier = "../trial-AnnyeongDog/Feature/Payment/Configuration.storekit">
+         identifier = "../trial-AnnyeongDog/Feature/Payment/Manager/Configuration.storekit">
       </StoreKitConfigurationFileReference>
    </LaunchAction>
    <ProfileAction
