@@ -80,13 +80,11 @@ class ModalViewController: UIViewController {
     
     @IBAction func consultButtonDidTapped(_ sender: Any) {
         // if user is login = true -> whos consult page
-        
-        //MARK: User hasn't logged in
-        if isNewUser == true {
-            AlertManager.alert.createSignInAlert(viewController: self)
-        }else {
-            self.present(self.viewModel.preparetoChat(), animated: true, completion: nil)
-            print("Status user : \(isNewUser)")
+
+         if Firebase.Auth.auth().currentUser != nil{
+
+            self.present(self.viewModel.preparetoWhoConsulting(), animated: false, completion: nil)
+
         }
         
     }

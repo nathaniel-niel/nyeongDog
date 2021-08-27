@@ -23,6 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if user == false{
             StorageManager.shared.setExistingUser()
+        IAPManager.shared.fetchproducts()
+        print(db)
+        let user =  Auth.auth().currentUser
+
+        if user != nil{
+            storageManager.setExistingUser()
         }
         else{
             StorageManager.shared.setNewUser()

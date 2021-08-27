@@ -21,10 +21,10 @@ class ModalViewModel{
         return nav
     }
     
-    func preparetoChat() -> UINavigationController{
+    func preparetoWhoConsulting() -> UINavigationController{
     //             go to whos consult page
-   let storyboard = UIStoryboard(name: "Chat", bundle: nil)
-   let vc = storyboard.instantiateViewController(withIdentifier: "Chat") as! ChatViewController
+   let storyboard = UIStoryboard(name: "whoConsulting", bundle: nil)
+   let vc = storyboard.instantiateViewController(withIdentifier: "whoConsulting")
         
    let nav = UINavigationController(rootViewController: vc)
    nav.modalPresentationStyle = .fullScreen
