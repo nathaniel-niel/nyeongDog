@@ -161,6 +161,9 @@
                     <navigationItem key="navigationItem" title="Veterinarian" id="tQV-Di-4E5">
                         <barButtonItem key="rightBarButtonItem" title="Item" width="15" style="plain" id="iIA-B1-8Js">
                             <imageReference key="image" image="person.circle.fill" catalog="system" symbolScale="large" renderingMode="original"/>
+                            <connections>
+                                <action selector="didProfileTapped:" destination="aAJ-fW-8nP" id="meI-Y1-vqa"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

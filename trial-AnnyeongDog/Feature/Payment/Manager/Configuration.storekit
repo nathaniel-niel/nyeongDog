@@ -1,0 +1,38 @@
+{
+  "identifier" : "C6732D02",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "35000",
+      "familyShareable" : false,
+      "internalID" : "5D1974EF",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "",
+          "locale" : "en_US"
+        },
+        {
+          "description" : "",
+          "displayName" : "IDR 35000",
+          "locale" : "id"
+        }
+      ],
+      "productID" : "price_35000",
+      "referenceName" : "IDR 35000",
+      "type" : "Consumable"
+    }
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 1,
+    "minor" : 1
+  }
+}
