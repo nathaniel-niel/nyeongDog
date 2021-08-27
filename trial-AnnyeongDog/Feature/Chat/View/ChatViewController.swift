@@ -23,7 +23,7 @@ class ChatViewController: UIViewController {
     let db = Firestore.firestore()
     var dbCollection = DatabaseCollectionName()
     
-    var vetProfile: VetProfile!
+//    var vetProfile: VetProfile!
     var messages: [Messages] = []
     let viewModel = VetListViewModel()
     var vetListModel: VetListModel?
@@ -101,7 +101,6 @@ class ChatViewController: UIViewController {
         print(messageTextField.text)
         
     }
-    
     //MARK: -Vet Profile : Load name from model
 //    func vetProfileLoadFromModel() {
 //        vetProfile.objectModel = vetListModel

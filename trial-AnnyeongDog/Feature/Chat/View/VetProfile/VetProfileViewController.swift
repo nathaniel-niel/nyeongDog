@@ -8,23 +8,43 @@
 import UIKit
 
 class VetProfileViewController: UIViewController {
-    @IBOutlet weak var vetProfileView: UIView!
+    
+//    static var shared = VetProfileViewController()
+//    @IBOutlet var vetProfileView: VetProfile!
+    
+    let vetProfile = VetProfile().loadViewFromNib(nibName: "VetProfile") as! VetProfile
+    //MARK: - App Life Cycle
+    override func viewWillAppear(_ animated: Bool) {
+//        getVetName { name in
+//            self.vetProfileView.vetName.text = name
+//        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+//        vetProfileView.vetName.text = "Vet"
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    //MARK: -Functions
+//    func getVetName(completion: @escaping(String) -> ()) {
+//        name = "Vet"
+//        completion(name ?? "noname")
+//    }
+    
+//    var name: String? {
+//        didSet {
+//            setupName()
+//        }
+//    }
+//
+//    func setupName() {
+//        guard let name =
+//    }
 
 }
+//extension VetProfileViewController: fillNameDelegate {
+//    func fillName() {
+//        <#code#>
+//    }
+//}

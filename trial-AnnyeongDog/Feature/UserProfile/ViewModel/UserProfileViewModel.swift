@@ -26,16 +26,13 @@ class UserProfileViewModel {
     }
     
     // Go to payment method page
-    func goToPayemntMethod(){
+    func gotoPaymentMethod(){
         
     }
     
     func getProfileData(completion: @escaping((String, String) ->())){
         name = Firebase.Auth.auth().currentUser?.displayName
         email = Firebase.Auth.auth().currentUser?.email
-        
         completion(name ?? "no data",email ?? "no data")
     }
-    
-    
 }

@@ -53,7 +53,7 @@ class UserProfileViewController: UIViewController {
 
 
     @IBAction func didPaymentMethodTapped(_ sender: Any) {
-        userProfileViewModel.goToPayemntMethod()
+        userProfileViewModel.gotoPaymentMethod()
     }
     
 

@@ -14,7 +14,7 @@ class ModalViewModel{
     func preparetoSignIn() -> UINavigationController{
         let storyboard = UIStoryboard(name: "Signin", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "Signin") as! SigninViewController
-
+        
         let nav = UINavigationController(rootViewController: vc)
         nav.modalPresentationStyle = .fullScreen
         
@@ -22,12 +22,23 @@ class ModalViewModel{
     }
     
     func preparetoWhoConsulting() -> UINavigationController{
-    //             go to whos consult page
-   let storyboard = UIStoryboard(name: "whoConsulting", bundle: nil)
-   let vc = storyboard.instantiateViewController(withIdentifier: "whoConsulting")
+        //             go to whos consult page
+        let storyboard = UIStoryboard(name: "whoConsulting", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "whoConsulting")
         
-   let nav = UINavigationController(rootViewController: vc)
-   nav.modalPresentationStyle = .fullScreen
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .fullScreen
+        
+        return nav
+    }
+    
+    func preparetoChat() -> UINavigationController{
+        //             go to whos consult page
+        let storyboard = UIStoryboard(name: "Chat", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Chat")
+        
+        let nav = UINavigationController(rootViewController: vc)
+        nav.modalPresentationStyle = .fullScreen
         
         return nav
     }

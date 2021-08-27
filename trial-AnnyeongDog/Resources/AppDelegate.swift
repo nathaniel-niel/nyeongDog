@@ -18,25 +18,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         let db = Firestore.firestore()
-//        StorageManager.shared.setNewUser()
+        StorageManager.shared.setNewUser()
+        print(StorageManager.shared.isNewUser())
         let user =  StorageManager.shared.isNewUser()
         
         if user == false{
             StorageManager.shared.setExistingUser()
-        IAPManager.shared.fetchproducts()
-        print(db)
-        let user =  Auth.auth().currentUser
-
-        if user != nil{
-            storageManager.setExistingUser()
-        }
-        else{
+            IAPManager.shared.fetchproducts()
+            print(db)
+            print(user)
+        } else {
             StorageManager.shared.setNewUser()
         }
-        print(user)
+        
+//        if user != nil{
+//            storageManager.setExistingUser()
+//        }
+//        else{
+//            StorageManager.shared.setNewUser()
+//        }
+        
         return true
     }
-    
     // MARK: UISceneSession Lifecycle
     
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -52,5 +55,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
+    
+    
 }
-
