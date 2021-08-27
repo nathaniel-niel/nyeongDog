@@ -18,8 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         FirebaseApp.configure()
         let db = Firestore.firestore()
+        
+        //MARK: -Biar tiap ke run ngga harus sign in terus, function di bawah ini comment aja ya
         StorageManager.shared.setNewUser()
-        print(StorageManager.shared.isNewUser())
+        
+        //MARK: -Check condition user state
         let user =  StorageManager.shared.isNewUser()
         
         if user == false{
