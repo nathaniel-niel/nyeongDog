@@ -10,11 +10,17 @@ import StoreKit
 
 
 
-final class IAPManager: NSObject, SKProductsRequestDelegate, SKPaymentTransactionObserver {
+final class IAPManager: NSObject, SKProductsRequestDelegate, SKPaymentTransactionObserver{
+    
+
     
     
+
     static let shared = IAPManager()
     var product: SKProduct?
+    
+   
+    private var completion: ((Bool) -> Void)?
     
     func fetchproducts(){
         // product id: price_35000
@@ -23,14 +29,18 @@ final class IAPManager: NSObject, SKProductsRequestDelegate, SKPaymentTransactio
         request.start()
     }
     
-    func purchase(){
+    func purchase(completion: @escaping((Bool)->())){
         guard let myProduct = product else { return }
         
         if SKPaymentQueue.canMakePayments(){
             let payment  = SKPayment(product: myProduct)
             SKPaymentQueue.default().add(self)
             SKPaymentQueue.default().add(payment)
+           
         }
+        self.completion = completion
+        
+       
     }
     
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
@@ -51,6 +61,11 @@ final class IAPManager: NSObject, SKProductsRequestDelegate, SKPaymentTransactio
                 break
             case .purchased:
                 PaymentUserState.shared.setStateIntoPaid()
+                
+                if PaymentUserState.shared.ispaymentPaid() == true{
+                    completion?(PaymentUserState.shared.ispaymentPaid())
+                }
+                
                 SKPaymentQueue.default().finishTransaction(transaction)
                 SKPaymentQueue.default().remove(self)
                 break
