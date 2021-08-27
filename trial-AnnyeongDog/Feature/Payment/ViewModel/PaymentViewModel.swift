@@ -14,7 +14,9 @@ class PaymentViewModel{
     let dummyData = VetDummyData()
     
     func pay(completion: @escaping(Bool)->()){
+        
         IAPManager.shared.purchase { response in
+            
             completion(response)
         }
     }

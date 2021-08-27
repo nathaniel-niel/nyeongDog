@@ -47,13 +47,21 @@ class PaymentViewController: UIViewController{
     
     // MARK: - Action Function
     @IBAction func didPayButtonTapped(_ sender: Any) {
-        paymentViewModel.pay { responseData in
-            if responseData == true{
-                let storyboard = UIStoryboard(name: "Chat", bundle: nil)
-                let vc = storyboard.instantiateViewController(identifier: "Chat") as! ChatViewController
-                self.navigationController?.pushViewController(vc, animated: true)
+        if PaymentUserState.shared.ispaymentPaid() == false{
+            paymentViewModel.pay { responseData in
+                if responseData == true{
+                    let storyboard = UIStoryboard(name: "Chat", bundle: nil)
+                    let vc = storyboard.instantiateViewController(identifier: "Chat") as! ChatViewController
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
             }
         }
+        else{
+            let storyboard = UIStoryboard(name: "Chat", bundle: nil)
+            let vc = storyboard.instantiateViewController(identifier: "Chat") as! ChatViewController
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
         
     }
     
