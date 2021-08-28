@@ -82,10 +82,13 @@ class ModalViewController: UIViewController {
         // if user is login = true -> whos consult page
 
         if StorageManager.shared.isNewUser() == false{
-
-            self.present(self.viewModel.preparetoWhoConsulting(), animated: false, completion: nil)
-//            self.present(self.viewModel.preparetoChat(), animated: false, completion: nil)
-
+            //MARK: Go to chat, pass model from ModalVC to ChatVC
+            let storyboard = UIStoryboard(name: "Chat", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "Chat") as! ChatViewController
+            vc.vetListModel = self.vetListModel
+            let nav = UINavigationController(rootViewController: vc)
+            nav.modalPresentationStyle = .fullScreen
+            self.present(nav, animated: true, completion: nil)
          } else {
             
             AlertManager.alert.createSignInAlert(viewController: self)

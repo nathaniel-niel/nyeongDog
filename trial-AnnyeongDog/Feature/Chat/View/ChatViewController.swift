@@ -27,18 +27,12 @@ class ChatViewController: UIViewController {
     var messages: [Messages] = []
     let viewModel = VetListViewModel()
     var vetListModel: VetListModel?
+    let profileVetView = VetProfile()
     
     //MARK: -Constraints
 
     
     //MARK: - App Life Cycle
-    
-    override func viewWillAppear(_ animated: Bool) {
-//        viewModel.fillDataVetList()
-//        print(viewModel.vetNameList)
-//        print(vetProfile.objectModel)
-//        vetProfileLoadFromModel()
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -50,7 +44,6 @@ class ChatViewController: UIViewController {
         messageTextField.autocorrectionType = .no
         
         getMessage()
-//        vetProfile?.objectModel = viewModel.vetNameList[UserControl.shared.indexPath]
         //MARK: Keyboard Notification Center
         let center: NotificationCenter = NotificationCenter.default;
         center.addObserver(self, selector: #selector(keyboardWillChange(notification: )), name: UIResponder.keyboardWillShowNotification, object: nil)
@@ -82,7 +75,8 @@ class ChatViewController: UIViewController {
         let backButton = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(didTapBackButton))
         
         //MARK: Customize Vet Profile
-        let profileVet = UIBarButtonItem(customView: VetProfile.init())
+        profileVetView.vetName.text = self.vetListModel?.vetName
+        let profileVet = UIBarButtonItem(customView: profileVetView)
         self.navigationItem.leftBarButtonItems = [backButton, profileVet]
         
         //MARK: Customize Video Call Button
@@ -95,16 +89,8 @@ class ChatViewController: UIViewController {
     
     //MARK: -Send Button Logic
     @IBAction func sendButtonPressed(_ sender: UIButton) {
-//        messageTextField.endEditing(true)
-        print("x")
         messageTextField.endEditing(true)
-        print(messageTextField.text)
-        
     }
-    //MARK: -Vet Profile : Load name from model
-//    func vetProfileLoadFromModel() {
-//        vetProfile.objectModel = vetListModel
-//    }
     
     //MARK: -If the message are ready to sent to Firebase
    
@@ -228,13 +214,8 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
 extension ChatViewController: UITextFieldDelegate {
     //MARK: If return button is tapped, keyboard will be dismissed
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        //        self.view.endEditing(true)
-        
         messageTextField.endEditing(true)
-        
         textField.resignFirstResponder()
-//        print(textField.text)
         return true
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -249,11 +230,6 @@ extension ChatViewController: UITextFieldDelegate {
     }
 }
 
-//extension ChatViewController: chatDelegate {
-//    func fillVetListModel() {
-//
-//    }
-// }
     
 
 
