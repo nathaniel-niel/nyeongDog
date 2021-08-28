@@ -12,7 +12,7 @@ import Firebase
 class ModalViewController: UIViewController {
     
     @IBOutlet var uiView: ModalUIView!
-    
+    static var shared = ModalViewController()
     //MARK: - Declaration Variable
     let viewModel = ModalViewModel()
     //    let uiView = ModalUIView()
@@ -82,13 +82,18 @@ class ModalViewController: UIViewController {
         // if user is login = true -> whos consult page
 
         if StorageManager.shared.isNewUser() == false{
-            //MARK: Go to chat, pass model from ModalVC to ChatVC
-            let storyboard = UIStoryboard(name: "Chat", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "Chat") as! ChatViewController
+            let storyboard = UIStoryboard(name: "whoConsulting", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "whoConsulting") as! WhoConsultingViewController
             vc.vetListModel = self.vetListModel
             let nav = UINavigationController(rootViewController: vc)
             nav.modalPresentationStyle = .fullScreen
+            
             self.present(nav, animated: true, completion: nil)
+            //MARK: Go to chat, pass model from ModalVC to ChatVC
+            
+//            let nav = UINavigationController(rootViewController: vc)
+//            nav.modalPresentationStyle = .fullScreen
+//            self.present(nav, animated: true, completion: nil)
          } else {
             
             AlertManager.alert.createSignInAlert(viewController: self)

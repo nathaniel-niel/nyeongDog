@@ -13,6 +13,7 @@ class WhoConsultingViewController: UIViewController {
     // MARK: - Object Declaration
     var fetchDatafromFirebase = FetchDatafromFirebase()
     var dogModel: [DogsModel] = []
+    var vetListModel: VetListModel?
     // IBOutlet
     @IBOutlet weak var dogProfileCollectionView: UICollectionView!
     
@@ -62,6 +63,7 @@ extension WhoConsultingViewController: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
        
         let vc = PaymentViewController()
+        vc.vetListModel = self.vetListModel
         self.navigationController?.pushViewController(vc, animated: true)
 
     }

@@ -17,6 +17,8 @@ class PaymentViewController: UIViewController{
     
     // MARK: - Object Declaration
     let paymentViewModel = PaymentViewModel()
+//    let modalVC = ModalViewController()
+    var vetListModel: VetListModel?
     
     
     // MARK: - App Life Cycle
@@ -52,6 +54,7 @@ class PaymentViewController: UIViewController{
                 if responseData == true{
                     let storyboard = UIStoryboard(name: "Chat", bundle: nil)
                     let vc = storyboard.instantiateViewController(identifier: "Chat") as! ChatViewController
+                    vc.vetListModel = self.vetListModel
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
             }
@@ -59,6 +62,7 @@ class PaymentViewController: UIViewController{
         else{
             let storyboard = UIStoryboard(name: "Chat", bundle: nil)
             let vc = storyboard.instantiateViewController(identifier: "Chat") as! ChatViewController
+            vc.vetListModel = self.vetListModel
             self.navigationController?.pushViewController(vc, animated: true)
         }
         
