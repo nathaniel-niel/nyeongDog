@@ -63,7 +63,7 @@
 "modalMedicalRecord.vetTitle" = "Dokter Hewan";
 "modalMedicalRecord.typeVaccineTitle" = "Tipe Vaksin";
 "modalMedicalRecord.medicalHistoryTitle" = "Riwayat Kesehatan";
-"modalMedicalRecord.diagnosisTitle" = "Diagnosa";
+"modalMedicalRecord.diagnosisTitle" = "Diagnosis";
 "modalMedicalRecord.medicineTitle" = "Obat";
 "modalMedicalRecord.dosageTitle" = "Dosis";
 "modalMedicalRecord.descriptionTitle" = "Deskripsi";

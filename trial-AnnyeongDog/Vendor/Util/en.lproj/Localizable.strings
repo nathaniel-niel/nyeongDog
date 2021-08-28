@@ -37,17 +37,17 @@
 "alertTitleSignIn" = "Sign in to continue";
 "alertMessageSignIn" = "To proceed, you need to have an account";
 "alertCancelTitleSignIn" = "Cancel";
-"alertSigninTitleSignIn" = "Sing In";
+"alertSigninTitleSignIn" = "Sign In";
 
 // Alert Cancel
 "alertTitleCancel" = "Unsaved Changes";
-"alertMessageCancel" = "You have unsaved change, are you sure you want to cancel?";
+"alertMessageCancel" = "You have unsaved changes, are you sure you want to cancel?";
 "alertNoTitleCancel" = "No";
 "alertYesTitleCancel" = "Yes";
 
 // Alert Delete Medical Record
 "alertTitleDeleteMedicalRecord" = "Delete Medical Record";
-"alertMessageDeleteMedicalRecord" = "Once you delete this, you won't be able to return it. Do you want to proceeed?";
+"alertMessageDeleteMedicalRecord" = "Once you delete this, you won't be able to return it. Do you want to proceed?";
 
 // Alert Delete Dog Profile
 "alertTitleDeleteDogProfile" = "Delete Dog Profile";
@@ -60,7 +60,7 @@
 "modalMedicalRecord.timeTitle" = "Time";
 "modalMedicalRecord.detailTitle" = "Details";
 "modalMedicalRecord.vetTitle" = "Veterinarian";
-"modalMedicalRecord.typeVaccineTitle" = "Vacine Type";
+"modalMedicalRecord.typeVaccineTitle" = "Vaccine Type";
 "modalMedicalRecord.medicalHistoryTitle" = "Medical History";
 "modalMedicalRecord.diagnosisTitle" = "Diagnosis";
 "modalMedicalRecord.medicineTitle" = "Medicine";
