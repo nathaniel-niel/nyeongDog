@@ -20,6 +20,7 @@
 "editButtonTitle" = "Ubah";
 "cancelButtonTitle" = "Batal";
 "saveButtonTitle" = "Simpan";
+"backButtonTitle" = "Kembali";
 
 // Modal Vet List
 "modal.alumniTitle" = "Alumnus";
@@ -113,3 +114,6 @@
 //Sign In
 "signin.label" = "Mari Mulai Jaga Kesehatan Anjingmu";
 
+//Empty State Dog Profile
+"emptystateDogProfile.title" = "Buat profil ajing anda!";
+"emptystateDogProfile.descTitle" = "Tekan tombol “tambah” di kanan atas layar untuk menambahkan profil anjing anda.";
