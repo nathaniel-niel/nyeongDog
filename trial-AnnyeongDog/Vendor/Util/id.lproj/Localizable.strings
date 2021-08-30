@@ -88,9 +88,28 @@
 "dogProfileDetail.dogWeight" = "Berat Badan";
 "dogProfileDetail.dogColor" = "Warna";
 "dogProfileDetail.dogAllergen" = "Alergi";
+
 // Picker
 "picker.yearsTitle" = "Tahun";
 "picker.monthsTitle" = "Bulan";
 
+// Picker
+"picker.genderMale" = "Jantan";
+"picker.genderFemale" = "Betina";
+
+//Who's Consulting
+"navigationTitle.whoConsulting" = "Siapa yang konsultasi?";
+
+//Payment
+"navigationTitle.payment" = "Pembayaran";
+"payment.dogName" = "Nama Anjing";
+"payment.exp" = "Tahun Pengalaman";
+"payment.totalPrice" = "Total Harga";
+"payment.totalPayment" = "Total Pembayaran";
+"payment.choosePayment" = "Pilih Pembayaran";
+"payment.consultCharge" = "Biaya Konsultasi";
+"payment.payNow" = "Bayar Sekarang";
+
 //Sign In
 "signin.label" = "Mari Mulai Jaga Kesehatan Anjingmu";
+

@@ -34,7 +34,7 @@ class PaymentViewController: UIViewController{
     // MARK: - Setup UI Component
     func setup(){
         
-        navigationItem.title = "Payment"
+        navigationItem.title = language.navTitlePayment
         paymentUIView.configureUIButton()
         roundedImageVIew(image: paymentUIView.vetImageProfile)
         
