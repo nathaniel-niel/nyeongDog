@@ -1590,7 +1590,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "trial-AnnyeongDog/trial-AnnyeongDog.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = LPRJV6392X;
 				INFOPLIST_FILE = "trial-AnnyeongDog/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1612,7 +1612,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "trial-AnnyeongDog/trial-AnnyeongDog.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 5;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = LPRJV6392X;
 				INFOPLIST_FILE = "trial-AnnyeongDog/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
