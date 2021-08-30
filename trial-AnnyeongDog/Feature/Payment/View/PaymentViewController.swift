@@ -19,7 +19,7 @@ class PaymentViewController: UIViewController{
     let paymentViewModel = PaymentViewModel()
 //    let modalVC = ModalViewController()
     var vetListModel: VetListModel?
-    
+    var dogName: String?
     
     // MARK: - App Life Cycle
     override func viewDidLoad() {
@@ -40,12 +40,6 @@ class PaymentViewController: UIViewController{
         
     }
     
-    //    func present(){
-    //        let storyboard = UIStoryboard(name: "Chat", bundle: nil)
-    //        let vc = storyboard.instantiateViewController(identifier: "Chat") as! ChatViewController
-    //        self.navigationController?.pushViewController(vc, animated: true)
-    //
-    //    }
     
     // MARK: - Action Function
     @IBAction func didPayButtonTapped(_ sender: Any) {
@@ -82,6 +76,7 @@ class PaymentViewController: UIViewController{
             self.paymentUIView.totalPrice.text = response.price
             self.paymentUIView.rating.text = response.rating
             self.paymentUIView.totalPayment.text = response.price
+            self.paymentUIView.dogName.text = self.dogName ?? "no data"
         }
     }
 }

@@ -64,6 +64,7 @@ extension WhoConsultingViewController: UICollectionViewDelegate, UICollectionVie
        
         let vc = PaymentViewController()
         vc.vetListModel = self.vetListModel
+        vc.dogName = fetchDatafromFirebase.dogModel[indexPath.row].dogName
         self.navigationController?.pushViewController(vc, animated: true)
 
     }
