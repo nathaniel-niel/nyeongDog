@@ -91,3 +91,6 @@
 // Picker
 "picker.yearsTitle" = "Tahun";
 "picker.monthsTitle" = "Bulan";
+
+//Sign In
+"signin.label" = "Mari Mulai Jaga Kesehatan Anjingmu";

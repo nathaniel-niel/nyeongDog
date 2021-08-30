@@ -94,4 +94,7 @@ class language{
     // Picker Age
     static let yearsTitlePicker = NSLocalizedString("picker.yearsTitle", comment: "")
     static let monthsTitlePicker = NSLocalizedString("picker.monthsTitle", comment: "")
+    
+    //Sign In
+    static let signinLabel = NSLocalizedString("signin.label", comment: "")
 }

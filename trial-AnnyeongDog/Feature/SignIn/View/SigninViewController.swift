@@ -17,6 +17,11 @@ class SigninViewController: UIViewController {
     let viewModel = SigninViewModel()
     
     //MARK: Declare XIB Button SignIn
+    @IBOutlet weak var signinLabel: UILabel! {
+        didSet {
+            signinLabel.text = language.signinLabel
+        }
+    }
     @IBOutlet weak var signInButtonView: Signin!
     
     //MARK:- App Life Cycle
@@ -25,6 +30,7 @@ class SigninViewController: UIViewController {
         setupSignInButton()
     }
     
+    //MARK:- Functions
     func setupSignInButton() {
         signInButtonView.delegate = self
         signInButtonView.appleSignInButton.addTarget(self, action: #selector(handleSignInWithAppleTapped), for: .touchUpInside)
@@ -36,12 +42,6 @@ class SigninViewController: UIViewController {
     }
 }
 
-extension SigninViewController: ASAuthorizationControllerPresentationContextProviding {
-    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
-        return self.view.window!
-    }
-}
-
 //MARK:- Delegate Button Sign In
 extension SigninViewController: signinDelegate {
     
@@ -50,5 +50,11 @@ extension SigninViewController: signinDelegate {
     }
     func appleSignin() {
         setupSignInButton()
+    }
+}
+
+extension SigninViewController: ASAuthorizationControllerPresentationContextProviding {
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return self.view.window!
     }
 }

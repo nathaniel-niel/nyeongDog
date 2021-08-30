@@ -90,3 +90,7 @@
 // Picker
 "picker.yearsTitle" = "Years";
 "picker.monthsTitle" = "Months";
+
+//Sign in
+"signin.label" = "Let's Start Taking Care of Your Dog's Health";
+

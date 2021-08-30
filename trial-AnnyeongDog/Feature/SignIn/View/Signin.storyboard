@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mari Mulai Jaga Kesehatan Anjingmu! " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yEz-M9-UqA">
-                                <rect key="frame" x="20" y="143" width="350" height="61.666666666666657"/>
+                                <rect key="frame" x="20" y="129" width="350" height="63"/>
                                 <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -44,20 +44,23 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="yEz-M9-UqA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="99" id="7t1-fA-UCC"/>
+                            <constraint firstItem="yEz-M9-UqA" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="6Vu-RQ-VP5"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="yEz-M9-UqA" secondAttribute="bottom" constant="618" id="8eM-Ma-GXX"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="wHH-81-KSK" secondAttribute="bottom" constant="100" id="8eU-rQ-k7f"/>
                             <constraint firstItem="yEz-M9-UqA" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="BCU-rc-7oG"/>
+                            <constraint firstItem="yEz-M9-UqA" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="85" id="FNs-jP-E2m"/>
                             <constraint firstItem="wHH-81-KSK" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="45" id="R6m-MU-deY"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wHH-81-KSK" secondAttribute="trailing" constant="45" id="U7c-gy-Q0H"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="yEz-M9-UqA" secondAttribute="trailing" constant="20" id="Xf3-KB-gf7"/>
                             <constraint firstItem="wHH-81-KSK" firstAttribute="leading" secondItem="xiX-Dj-QWq" secondAttribute="leading" id="b5M-sy-WdY"/>
                             <constraint firstItem="wHH-81-KSK" firstAttribute="trailing" secondItem="xiX-Dj-QWq" secondAttribute="trailing" id="eau-B6-tRN"/>
-                            <constraint firstItem="xiX-Dj-QWq" firstAttribute="top" secondItem="yEz-M9-UqA" secondAttribute="bottom" constant="59.333333333333343" id="sj4-Gr-EvH"/>
+                            <constraint firstItem="wHH-81-KSK" firstAttribute="top" secondItem="xiX-Dj-QWq" secondAttribute="bottom" constant="88" id="pqG-Ks-6SM"/>
+                            <constraint firstItem="xiX-Dj-QWq" firstAttribute="top" secondItem="yEz-M9-UqA" secondAttribute="bottom" constant="72" id="sj4-Gr-EvH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AZW-ne-s1K"/>
                     <connections>
                         <outlet property="signInButtonView" destination="wHH-81-KSK" id="h7j-TN-Zft"/>
+                        <outlet property="signinLabel" destination="yEz-M9-UqA" id="Rcw-St-E8T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

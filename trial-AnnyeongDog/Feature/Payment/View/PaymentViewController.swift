@@ -76,5 +76,6 @@ class PaymentViewController: UIViewController{
             self.paymentUIView.rating.text = response.rating
             self.paymentUIView.totalPayment.text = response.price
         }
+        
     }
 }
