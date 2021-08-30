@@ -16,6 +16,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Signin" customModule="trial_AnnyeongDog" customModuleProvider="target">
             <connections>
                 <outlet property="appleSignInButton" destination="gZ5-nd-YRa" id="kVf-0u-0u0"/>
+                <outlet property="skipButton" destination="w1B-KP-Z4b" id="vAi-I3-dXS"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

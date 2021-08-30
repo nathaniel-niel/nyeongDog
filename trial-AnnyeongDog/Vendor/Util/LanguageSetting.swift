@@ -116,8 +116,10 @@ class language{
 
     // Sign In
     static let signinLabel = NSLocalizedString("signin.label", comment: "")
-
+    static let signinSkipButton = NSLocalizedString("signin.skipButton", comment: "")
+ 
     // Dog Profile Empty State
     static let emptyTitle = NSLocalizedString("emptystateDogProfile.title", comment: "")
     static let descTitle = NSLocalizedString("emptystateDogProfile.descTitle", comment: "")
+
 }
