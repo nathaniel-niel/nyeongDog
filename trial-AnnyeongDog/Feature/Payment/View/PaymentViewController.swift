@@ -57,6 +57,13 @@ class PaymentViewController: UIViewController{
                     vc.vetListModel = self.vetListModel
                     self.navigationController?.pushViewController(vc, animated: true)
                 }
+                else{
+                    let alert = UIAlertController(title: "Payment Error", message: "Please try again your payment", preferredStyle: .alert)
+
+                    alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+
+                    self.present(alert, animated: true)
+                }
             }
         }
         else{
