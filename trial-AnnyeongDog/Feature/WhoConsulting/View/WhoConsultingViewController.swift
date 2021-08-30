@@ -71,7 +71,7 @@ extension WhoConsultingViewController: UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WhoConsultingCollectionViewCell.identifier, for: indexPath) as! WhoConsultingCollectionViewCell
     
-        cell.configure(with: UIImage(named: "AppIcon")!, nameDog: "Bunny")
+        cell.configure(with: UIImage(named: "defaultPhotos")!, nameDog: "Bunny")
         cell.dogName.text = fetchDatafromFirebase.dogModel[indexPath.row].dogName
         
         

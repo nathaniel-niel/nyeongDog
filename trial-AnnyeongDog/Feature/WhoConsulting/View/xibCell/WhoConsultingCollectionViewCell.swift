@@ -9,11 +9,13 @@ import UIKit
 
 class WhoConsultingCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var cellView: UIView!{
+    @IBOutlet weak var dogPhotoView: UIView!{
         didSet{
-            cellView.layer.cornerRadius = 10
+            dogPhotoView.layer.cornerRadius = 10
+            dogPhotoView.backgroundColor = .gray
         }
     }
+    @IBOutlet weak var cellView: UIView!
     @IBOutlet weak var dogImage: UIImageView!{
         didSet{
             dogImage.layer.cornerRadius = 10
