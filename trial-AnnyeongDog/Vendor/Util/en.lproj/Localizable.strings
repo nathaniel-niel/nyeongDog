@@ -94,7 +94,7 @@
 
 // Picker Gender
 "picker.genderMale" = "Male";
-"picker.genderFemale" = "Jantan";
+"picker.genderFemale" = "Female";
 
 // Who's Consulting
 "navigationTitle.whoConsulting" = "Who's consulting?";

@@ -72,6 +72,13 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="addButton" destination="Sog-He-PbO" id="KGb-PF-4KE"/>
+                        <outlet property="backButton" destination="5wV-So-dt4" id="SBs-mz-X4g"/>
+                        <outlet property="descLabel" destination="Hdz-Ri-5Cr" id="h7f-P4-bx2"/>
+                        <outlet property="dogProfileLabel" destination="LRR-s2-MTz" id="C9t-Fk-AEm"/>
+                        <outlet property="titleLabel" destination="aTL-mF-Dqb" id="QUm-mj-xnl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
