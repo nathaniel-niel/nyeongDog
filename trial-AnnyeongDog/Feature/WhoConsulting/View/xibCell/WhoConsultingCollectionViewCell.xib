@@ -69,6 +69,7 @@
                 <outlet property="cellView" destination="Ezc-4G-DZB" id="q5E-dA-z5t"/>
                 <outlet property="dogImage" destination="pNl-xn-uaA" id="uz4-yn-ZyL"/>
                 <outlet property="dogName" destination="lNi-e6-VFM" id="KOb-st-dIR"/>
+                <outlet property="dogPhotoView" destination="9ia-wp-inR" id="EHQ-NT-di5"/>
             </connections>
             <point key="canvasLocation" x="-23.913043478260871" y="119.19642857142857"/>
         </collectionViewCell>
