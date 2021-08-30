@@ -24,6 +24,7 @@ class language{
     static let editButtonTitle = NSLocalizedString("editButtonTitle", comment: "")
     static let cancelButtonTitle = NSLocalizedString("cancelButtonTitle", comment: "")
     static let saveButtonTitle = NSLocalizedString("saveButtonTitle", comment: "")
+    static let backButtonTitle = NSLocalizedString("backButtonTitle", comment: "")
     
     // Alert Sign In
     static let alertTitleSignIn = NSLocalizedString("alertTitleSignIn", comment: "")
@@ -100,10 +101,10 @@ class language{
     static let genderMaleDogTitle = NSLocalizedString("picker.genderMale", comment: "")
     static let genderFemaleDogTitle = NSLocalizedString("picker.genderFemale", comment: "")
     
-    //Who's Consulting
+    // Who's Consulting
     static let navTitleWhoConsulting = NSLocalizedString("navigationTitle.whoConsulting", comment: "")
     
-    //Payment
+    // Payment
     static let navTitlePayment = NSLocalizedString("navigationTitle.payment", comment: "")
     static let dogNameLabelPayment = NSLocalizedString("payment.dogName", comment: "")
     static let experienceLabelPayment = NSLocalizedString("payment.exp", comment: "")
@@ -113,8 +114,12 @@ class language{
     static let consultChargeLabelPayment = NSLocalizedString("payment.consultCharge", comment: "")
     static let payNowLabelPayemt = NSLocalizedString("payment.payNow", comment: "")
 
-    //Sign In
+    // Sign In
     static let signinLabel = NSLocalizedString("signin.label", comment: "")
-    
     static let signinSkipButton = NSLocalizedString("signin.skipButton", comment: "")
+ 
+    // Dog Profile Empty State
+    static let emptyTitle = NSLocalizedString("emptystateDogProfile.title", comment: "")
+    static let descTitle = NSLocalizedString("emptystateDogProfile.descTitle", comment: "")
+
 }
