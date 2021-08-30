@@ -36,6 +36,8 @@ class DogProfileDetailTableView: UIViewController{
         dogProfileDetail.DogProfileTableView.dataSource = self
         dogProfileDetail.setup()
         uiPickerView()
+        
+//        self.tabBarController?.tabBar.isHidden = true
        
     }
     

@@ -65,6 +65,8 @@ class DogProfileDetailEditViewController: UIViewController, UIImagePickerControl
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "chevron.left"), style: .plain, target: self, action: #selector(backButtonTapped))
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: language.editButtonTitle, style: .plain, target: self, action: #selector(editButtonTapped))
+        
+//        self.tabBarController?.tabBar.isHidden = true
     }
     
     //MARK: - back button did tapped
@@ -81,6 +83,7 @@ class DogProfileDetailEditViewController: UIViewController, UIImagePickerControl
         navigationItem.largeTitleDisplayMode = .never
         
         roundedImageVIew(image: dogImage)
+        
     }
     
 

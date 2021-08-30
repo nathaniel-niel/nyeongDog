@@ -57,6 +57,7 @@ class MedicalRecordListViewController: UIViewController {
     func updateUI(){
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.largeTitleDisplayMode = .always
+        self.tabBarController?.tabBar.isHidden = true
         
     }
     

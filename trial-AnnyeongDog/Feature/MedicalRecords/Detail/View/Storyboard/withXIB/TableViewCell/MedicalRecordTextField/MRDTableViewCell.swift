@@ -24,6 +24,13 @@ class MRDTableViewCell: UITableViewCell {
         contenTextField.tag = tag
     }
     
+    func configureData(title: String, data: String, tag: Int){
+        titleLabel.text = title
+        contenTextField.text = data
+        contenTextField.borderStyle = .none
+        contenTextField.tag = tag
+    }
+    
     func setValue(value: String){
         contenTextField.text = value
     }
