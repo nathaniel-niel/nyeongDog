@@ -92,9 +92,19 @@
 "picker.yearsTitle" = "Years";
 "picker.monthsTitle" = "Months";
 
-//Picker Gender
+// Picker Gender
 "picker.genderMale" = "Male";
 "picker.genderFemale" = "Jantan";
 
-//Navigation Title
+// Who's Consulting
 "navigationTitle.whoConsulting" = "Who's consulting?";
+
+// Payment
+"navigationTitle.payment" = "Payment";
+"payment.dogName" = "Dog Name";
+"payment.exp" = "Years Experience";
+"payment.totalPrice" = "Total Price";
+"payment.totalPayment" = "Total Payment";
+"payment.choosePayment" = "Choose Payment Method";
+"payment.consultCharge" = "Consultation Charge";
+"payment.payNow" = "Pay Now";

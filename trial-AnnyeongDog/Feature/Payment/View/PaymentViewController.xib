@@ -85,17 +85,11 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 years experience" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGq-hq-idz">
-                                                    <rect key="frame" x="167" y="46" width="188" height="24"/>
-                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="051-TF-Yz9">
                                                     <rect key="frame" x="167" y="76" width="59" height="22"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4.9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q8B-CH-qJJ">
-                                                            <rect key="frame" x="6" y="1" width="19.666666666666668" height="19.666666666666668"/>
+                                                            <rect key="frame" x="6" y="1.3333333333333428" width="19.666666666666668" height="19.666666666666668"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="14"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -124,19 +118,35 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yLw-m7-9gh">
+                                                    <rect key="frame" x="167" y="46" width="18" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="years experience" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGq-hq-idz">
+                                                    <rect key="frame" x="193" y="44" width="188" height="24"/>
+                                                    <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstItem="Mk5-0F-5hY" firstAttribute="leading" secondItem="gLC-gS-G1q" secondAttribute="trailing" constant="20" id="4QN-gK-b8P"/>
                                                 <constraint firstItem="051-TF-Yz9" firstAttribute="leading" secondItem="gLC-gS-G1q" secondAttribute="trailing" constant="20" id="7gj-0d-Enu"/>
                                                 <constraint firstItem="gLC-gS-G1q" firstAttribute="centerY" secondItem="vWO-mb-RZs" secondAttribute="centerY" id="AEl-w8-UtY"/>
-                                                <constraint firstItem="SGq-hq-idz" firstAttribute="top" secondItem="Mk5-0F-5hY" secondAttribute="bottom" constant="6" id="DP5-h7-lCc"/>
-                                                <constraint firstItem="051-TF-Yz9" firstAttribute="top" secondItem="SGq-hq-idz" secondAttribute="bottom" constant="6" id="LmX-VY-CGF"/>
+                                                <constraint firstItem="SGq-hq-idz" firstAttribute="leading" secondItem="yLw-m7-9gh" secondAttribute="trailing" constant="8" symbolic="YES" id="B3c-ge-vg0"/>
+                                                <constraint firstItem="SGq-hq-idz" firstAttribute="top" secondItem="Mk5-0F-5hY" secondAttribute="bottom" constant="4" id="DP5-h7-lCc"/>
+                                                <constraint firstItem="051-TF-Yz9" firstAttribute="top" secondItem="SGq-hq-idz" secondAttribute="bottom" constant="8" id="LmX-VY-CGF"/>
+                                                <constraint firstItem="yLw-m7-9gh" firstAttribute="top" secondItem="Mk5-0F-5hY" secondAttribute="bottom" constant="6" id="XcV-3g-yzm"/>
+                                                <constraint firstItem="051-TF-Yz9" firstAttribute="top" secondItem="yLw-m7-9gh" secondAttribute="bottom" constant="9" id="Z1k-vb-hWa"/>
                                                 <constraint firstAttribute="trailing" secondItem="Mk5-0F-5hY" secondAttribute="trailing" constant="20" id="age-ZL-cqP"/>
-                                                <constraint firstItem="SGq-hq-idz" firstAttribute="leading" secondItem="gLC-gS-G1q" secondAttribute="trailing" constant="20" id="f1L-Ig-pTY"/>
-                                                <constraint firstItem="SGq-hq-idz" firstAttribute="centerY" secondItem="vWO-mb-RZs" secondAttribute="centerY" id="irM-Wr-0zJ"/>
+                                                <constraint firstItem="SGq-hq-idz" firstAttribute="leading" secondItem="gLC-gS-G1q" secondAttribute="trailing" constant="46" id="f1L-Ig-pTY"/>
+                                                <constraint firstItem="SGq-hq-idz" firstAttribute="centerY" secondItem="vWO-mb-RZs" secondAttribute="centerY" constant="-1.8333333333333286" id="irM-Wr-0zJ"/>
+                                                <constraint firstItem="yLw-m7-9gh" firstAttribute="leading" secondItem="gLC-gS-G1q" secondAttribute="trailing" constant="20" id="vbC-j9-B7G"/>
                                                 <constraint firstItem="gLC-gS-G1q" firstAttribute="leading" secondItem="vWO-mb-RZs" secondAttribute="leading" constant="20" id="xMa-AT-Ao6"/>
-                                                <constraint firstAttribute="trailing" secondItem="SGq-hq-idz" secondAttribute="trailing" constant="20" id="zFW-j1-zxo"/>
+                                                <constraint firstAttribute="trailing" secondItem="SGq-hq-idz" secondAttribute="trailing" constant="-6" id="zFW-j1-zxo"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d3K-C4-2UY">
@@ -355,13 +365,17 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1xo-Bv-UOS" secondAttribute="bottom" id="p6f-xQ-9gb"/>
             </constraints>
             <connections>
+                <outlet property="choosePaymentTitle" destination="I1B-hz-Zp0" id="gOw-J9-IUA"/>
                 <outlet property="consultationCharge" destination="RQ9-rX-0Wn" id="9P6-vV-1ou"/>
+                <outlet property="consultationChargeTitle" destination="yZO-I4-D2v" id="YKr-aW-U8y"/>
                 <outlet property="dogName" destination="wpL-qI-9wu" id="hy8-jD-3uT"/>
                 <outlet property="experience" destination="SGq-hq-idz" id="Vdd-k6-99w"/>
                 <outlet property="payButton" destination="drj-gH-hWQ" id="PAy-So-CcC"/>
                 <outlet property="rating" destination="Q8B-CH-qJJ" id="6o9-Jx-gF9"/>
                 <outlet property="totalPayment" destination="tIq-4K-5tz" id="dTt-eK-h9h"/>
+                <outlet property="totalPaymentTitle" destination="cUD-8p-ngo" id="wdk-Wp-ez4"/>
                 <outlet property="totalPrice" destination="mZS-6J-1Qq" id="BLz-Cc-pCF"/>
+                <outlet property="totalPriceTitle" destination="lZO-rN-lb7" id="8pJ-3z-3rT"/>
                 <outlet property="vetImageProfile" destination="gLC-gS-G1q" id="wTL-tX-2B7"/>
                 <outlet property="vetName" destination="Mk5-0F-5hY" id="jgE-AB-oiS"/>
             </connections>

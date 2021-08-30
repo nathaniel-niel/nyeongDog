@@ -97,5 +97,15 @@
 "picker.genderMale" = "Jantan";
 "picker.genderFemale" = "Betina";
 
-//Navigation Title
+//Who's Consulting
 "navigationTitle.whoConsulting" = "Siapa yang konsultasi?";
+
+//Payment
+"navigationTitle.payment" = "Pembayaran";
+"payment.dogName" = "Nama Anjing";
+"payment.exp" = "Tahun Pengalaman";
+"payment.totalPrice" = "Total Harga";
+"payment.totalPayment" = "Total Pembayaran";
+"payment.choosePayment" = "Pilih Pembayaran";
+"payment.consultCharge" = "Biaya Konsultasi";
+"payment.payNow" = "Bayar Sekarang";
