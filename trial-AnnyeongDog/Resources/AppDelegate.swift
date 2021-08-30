@@ -20,16 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let db = Firestore.firestore()
         
         //MARK: -Biar tiap ke run ngga harus sign in terus, function di bawah ini comment aja ya
-        StorageManager.shared.setNewUser()
+//                StorageManager.shared.setNewUser()
         
         //MARK: -Check condition user state
         let user =  StorageManager.shared.isNewUser()
         
+        IAPManager.shared.fetchproducts()
         if user == false{
             StorageManager.shared.setExistingUser()
-            IAPManager.shared.fetchproducts()
-            print(db)
-            print(user)
         } else {
             StorageManager.shared.setNewUser()
         }
