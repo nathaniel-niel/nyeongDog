@@ -46,6 +46,7 @@ class WhoConsultingViewController: UIViewController {
         //NavigationBar
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationItem.title = language.navTitleWhoConsulting
     }
     
     //Back button did tapped

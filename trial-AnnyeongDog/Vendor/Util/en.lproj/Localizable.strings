@@ -87,6 +87,14 @@
 "dogProfileDetail.dogWeight" = "Weight";
 "dogProfileDetail.dogColor" = "Color";
 "dogProfileDetail.dogAllergen" = "Allergen";
-// Picker
+
+// Picker Age
 "picker.yearsTitle" = "Years";
 "picker.monthsTitle" = "Months";
+
+//Picker Gender
+"picker.genderMale" = "Male";
+"picker.genderFemale" = "Jantan";
+
+//Navigation Title
+"navigationTitle.whoConsulting" = "Who's consulting?";

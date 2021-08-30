@@ -88,6 +88,14 @@
 "dogProfileDetail.dogWeight" = "Berat Badan";
 "dogProfileDetail.dogColor" = "Warna";
 "dogProfileDetail.dogAllergen" = "Alergi";
+
 // Picker
 "picker.yearsTitle" = "Tahun";
 "picker.monthsTitle" = "Bulan";
+
+// Picker
+"picker.genderMale" = "Jantan";
+"picker.genderFemale" = "Betina";
+
+//Navigation Title
+"navigationTitle.whoConsulting" = "Siapa yang konsultasi?";
