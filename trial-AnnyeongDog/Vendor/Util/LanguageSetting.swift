@@ -112,4 +112,8 @@ class language{
     static let choosepaymentLabelPayment = NSLocalizedString("payment.choosePayment", comment: "")
     static let consultChargeLabelPayment = NSLocalizedString("payment.consultCharge", comment: "")
     static let payNowLabelPayemt = NSLocalizedString("payment.payNow", comment: "")
+
+    //Sign In
+    static let signinLabel = NSLocalizedString("signin.label", comment: "")
+
 }

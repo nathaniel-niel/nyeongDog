@@ -109,3 +109,7 @@
 "payment.choosePayment" = "Pilih Pembayaran";
 "payment.consultCharge" = "Biaya Konsultasi";
 "payment.payNow" = "Bayar Sekarang";
+
+//Sign In
+"signin.label" = "Mari Mulai Jaga Kesehatan Anjingmu";
+

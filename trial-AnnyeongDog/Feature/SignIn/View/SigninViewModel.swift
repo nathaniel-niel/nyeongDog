@@ -70,22 +70,20 @@ extension SigninViewModel: ASAuthorizationControllerDelegate {
             //Sign in with Firebase
             Auth.auth().signIn(with: credential) { authDataResult, error in
                 if let user = authDataResult?.user {
-                  
-//                    print("Nice! You're now signed in as \(user.uid), email : \(user.email ?? "unknown")")
                     //MARK: Insert sign in data to Firebase
                     DataManipulation.sharedData.insertUser(with: UserModel(id: user.uid, email: user.email ?? "no email"))
                 }
             }
         }
         //MARK: login success
-        print("Login success")
+
         storageManager.setExistingUser()
             
      }
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        print("Login failed")
-        //TODO : Login failed
+
+        //MARK: Login failed
         storageManager.setNewUser()
     }
     

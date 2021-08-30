@@ -108,3 +108,7 @@
 "payment.choosePayment" = "Choose Payment Method";
 "payment.consultCharge" = "Consultation Charge";
 "payment.payNow" = "Pay Now";
+
+//Sign in
+"signin.label" = "Let's Start Taking Care of Your Dog's Health";
+
