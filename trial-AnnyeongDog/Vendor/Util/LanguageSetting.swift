@@ -91,10 +91,28 @@ class language{
     static let dogWeightTitleDogProfile = NSLocalizedString("dogProfileDetail.dogWeight", comment: "")
     static let dogColorTitleDogProfile = NSLocalizedString("dogProfileDetail.dogColor", comment: "")
     static let dogAllergenTitleDogProfile = NSLocalizedString("dogProfileDetail.dogAllergen", comment: "")
+    
     // Picker Age
     static let yearsTitlePicker = NSLocalizedString("picker.yearsTitle", comment: "")
     static let monthsTitlePicker = NSLocalizedString("picker.monthsTitle", comment: "")
     
+    // Picker Gender
+    static let genderMaleDogTitle = NSLocalizedString("picker.genderMale", comment: "")
+    static let genderFemaleDogTitle = NSLocalizedString("picker.genderFemale", comment: "")
+    
+    //Who's Consulting
+    static let navTitleWhoConsulting = NSLocalizedString("navigationTitle.whoConsulting", comment: "")
+    
+    //Payment
+    static let navTitlePayment = NSLocalizedString("navigationTitle.payment", comment: "")
+    static let dogNameLabelPayment = NSLocalizedString("payment.dogName", comment: "")
+    static let experienceLabelPayment = NSLocalizedString("payment.exp", comment: "")
+    static let totalPriceLabelPayment = NSLocalizedString("payment.totalPrice", comment: "")
+    static let totalPaymentLabelPayment = NSLocalizedString("payment.totalPayment", comment: "")
+    static let choosepaymentLabelPayment = NSLocalizedString("payment.choosePayment", comment: "")
+    static let consultChargeLabelPayment = NSLocalizedString("payment.consultCharge", comment: "")
+    static let payNowLabelPayemt = NSLocalizedString("payment.payNow", comment: "")
+
     //Sign In
     static let signinLabel = NSLocalizedString("signin.label", comment: "")
     
