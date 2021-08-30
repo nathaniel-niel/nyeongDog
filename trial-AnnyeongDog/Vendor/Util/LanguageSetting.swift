@@ -97,4 +97,6 @@ class language{
     
     //Sign In
     static let signinLabel = NSLocalizedString("signin.label", comment: "")
+    
+    static let signinSkipButton = NSLocalizedString("signin.skipButton", comment: "")
 }

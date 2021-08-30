@@ -17,9 +17,11 @@ class SigninViewController: UIViewController {
     let viewModel = SigninViewModel()
     
     //MARK: Declare XIB Button SignIn
-    @IBOutlet weak var signinLabel: UILabel! {
+    @IBOutlet weak var signinLabel: UILabel!
+    {
         didSet {
             signinLabel.text = language.signinLabel
+            signinLabel.font = UIFont.systemFont(ofSize: 22, weight: .bold)
         }
     }
     @IBOutlet weak var signInButtonView: Signin!

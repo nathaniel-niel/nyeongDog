@@ -16,7 +16,11 @@ protocol signinDelegate {
 final class Signin: UIView {
 
     @IBOutlet weak var appleSignInButton: UIButton!
-    @IBOutlet weak var skipButton: UIButton!
+    @IBOutlet weak var skipButton: UIButton! {
+        didSet {
+            skipButton.setTitle(language.signinSkipButton, for: .normal)
+        }
+    }
     var delegate: signinDelegate?
 
     @IBAction func didTapSkipButton(_ sender: UIButton) {
@@ -26,7 +30,6 @@ final class Signin: UIView {
     @IBAction func didTapSigninButton(_ sender: UIButton) {
         delegate?.appleSignin()
     }
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -93,4 +93,5 @@
 
 //Sign in
 "signin.label" = "Let's Start Taking Care of Your Dog's Health";
+"signin.skipButton" = "Skip for now";
 
