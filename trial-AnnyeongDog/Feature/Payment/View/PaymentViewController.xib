@@ -369,6 +369,7 @@
                 <outlet property="consultationCharge" destination="RQ9-rX-0Wn" id="9P6-vV-1ou"/>
                 <outlet property="consultationChargeTitle" destination="yZO-I4-D2v" id="YKr-aW-U8y"/>
                 <outlet property="dogName" destination="wpL-qI-9wu" id="hy8-jD-3uT"/>
+                <outlet property="dogNameTitle" destination="EMs-gF-lCk" id="1gg-YM-AxS"/>
                 <outlet property="experience" destination="SGq-hq-idz" id="Vdd-k6-99w"/>
                 <outlet property="payButton" destination="drj-gH-hWQ" id="PAy-So-CcC"/>
                 <outlet property="rating" destination="Q8B-CH-qJJ" id="6o9-Jx-gF9"/>

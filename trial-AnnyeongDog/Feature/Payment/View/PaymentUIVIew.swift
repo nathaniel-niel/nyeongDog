@@ -11,12 +11,11 @@ class PaymentUIVIew: UIView {
 
 
     // MARK: - UI Components Declaration
-    @IBOutlet weak var dogName: UILabel!{
+    @IBOutlet weak var dogNameTitle: UILabel!{
         didSet{
-            dogName.text = language.dogNameLabelPayment
+            dogNameTitle.text = language.dogNameLabelPayment
         }
     }
-    @IBOutlet weak var vetName: UILabel!
     @IBOutlet weak var experience: UILabel!{
         didSet{
             experience.text = language.experienceLabelPayment
@@ -44,7 +43,8 @@ class PaymentUIVIew: UIView {
         }
     }
     
-    
+    @IBOutlet weak var dogName: UILabel!
+    @IBOutlet weak var vetName: UILabel!
     @IBOutlet weak var rating: UILabel!
     @IBOutlet weak var totalPrice: UILabel!
     @IBOutlet weak var totalPayment: UILabel!
