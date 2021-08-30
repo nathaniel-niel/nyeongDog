@@ -57,7 +57,7 @@ extension MedicalRecordDetailViewcontroller: UITableViewDataSource, UITableViewD
             let cell = table.dequeueReusableCell(withIdentifier: MRDTableViewCell.identifier, for: indexPath) as! MRDTableViewCell
            
             cell.contenTextField.autocorrectionType = .no
-            cell.configure(title: language.dateMedicalRecord, placeholder: mrdModel?.date ?? "no data", tag: 0)
+            cell.configureData(title: language.dateMedicalRecord, data: mrdModel?.date ?? "no data", tag: 0)
             return cell
         }
         else if indexPath.section == 1 {
@@ -65,9 +65,9 @@ extension MedicalRecordDetailViewcontroller: UITableViewDataSource, UITableViewD
         
             cell.contenTextField.autocorrectionType = .no
             if indexPath.row == 0 {
-                cell.configure(title: language.vetTitle, placeholder: mrdModel?.veterinarian ?? "no data",tag: 1)
+                cell.configureData(title: language.vetTitle, data: mrdModel?.veterinarian ?? "no data",tag: 1)
             } else {
-                cell.configure(title: language.typeVaccineTitle, placeholder: mrdModel?.vaccineType ?? "no data", tag: 2)
+                cell.configureData(title: language.typeVaccineTitle, data: mrdModel?.vaccineType ?? "no data", tag: 2)
             }
             return cell
         }
@@ -78,11 +78,11 @@ extension MedicalRecordDetailViewcontroller: UITableViewDataSource, UITableViewD
             cell.contenTextField.autocorrectionType = .no
             
             if indexPath.row == 0 {
-                cell.configure(title: language.diagnosisTitle, placeholder: mrdModel?.diagnosis ?? "no data", tag: 3)
+                cell.configureData(title: language.diagnosisTitle, data: mrdModel?.diagnosis ?? "no data", tag: 3)
             } else if indexPath.row == 1 {
-                cell.configure(title: language.medicineTitle, placeholder: mrdModel?.medicine ?? "no data", tag: 4)
+                cell.configureData(title: language.medicineTitle, data: mrdModel?.medicine ?? "no data", tag: 4)
             } else {
-                cell.configure(title: language.dosageTitle, placeholder: mrdModel?.dosage ?? "no data", tag: 5)
+                cell.configureData(title: language.dosageTitle, data: mrdModel?.dosage ?? "no data", tag: 5)
             }
             
             return cell
