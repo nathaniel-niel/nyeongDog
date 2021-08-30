@@ -23,32 +23,26 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucL-Sj-M3J">
                                 <rect key="frame" x="0.0" y="0.0" width="324" height="28"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11U-h1-mTI">
-                                        <rect key="frame" x="0.0" y="4" width="36" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27 Juli 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viq-DS-r1Q">
-                                        <rect key="frame" x="251" y="6" width="73" height="16"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27 Juli 2021" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viq-DS-r1Q">
+                                        <rect key="frame" x="0.0" y="6" width="73" height="16"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" systemColor="systemGrayColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="11U-h1-mTI" firstAttribute="centerY" secondItem="ucL-Sj-M3J" secondAttribute="centerY" id="ST4-z8-mwJ"/>
-                                    <constraint firstItem="viq-DS-r1Q" firstAttribute="centerY" secondItem="ucL-Sj-M3J" secondAttribute="centerY" id="kIP-Au-0HP"/>
-                                    <constraint firstAttribute="trailing" secondItem="viq-DS-r1Q" secondAttribute="trailing" id="upo-5u-R1a"/>
-                                    <constraint firstItem="11U-h1-mTI" firstAttribute="leading" secondItem="ucL-Sj-M3J" secondAttribute="leading" id="wD2-Zr-LUe"/>
+                                    <constraint firstAttribute="bottom" secondItem="viq-DS-r1Q" secondAttribute="bottom" constant="6" id="4bK-kX-yl6"/>
+                                    <constraint firstItem="viq-DS-r1Q" firstAttribute="top" secondItem="ucL-Sj-M3J" secondAttribute="top" constant="6" id="I6F-Cm-wTJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="viq-DS-r1Q" secondAttribute="trailing" constant="251" id="sbu-n9-rRW"/>
+                                    <constraint firstItem="viq-DS-r1Q" firstAttribute="leading" secondItem="ucL-Sj-M3J" secondAttribute="leading" id="zFn-9l-B6J"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="itr-U1-6M1">
                                 <rect key="frame" x="0.0" y="28" width="324" height="28"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Batuk Pilek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x9T-mI-KG1">
-                                        <rect key="frame" x="0.0" y="1" width="105.5" height="26.5"/>
+                                        <rect key="frame" x="0.0" y="1" width="105.5" height="26"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -57,6 +51,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="x9T-mI-KG1" firstAttribute="leading" secondItem="itr-U1-6M1" secondAttribute="leading" id="Ven-iV-fJr"/>
+                                    <constraint firstItem="x9T-mI-KG1" firstAttribute="top" secondItem="itr-U1-6M1" secondAttribute="top" constant="1" id="jZZ-xA-XZD"/>
                                     <constraint firstItem="x9T-mI-KG1" firstAttribute="centerY" secondItem="itr-U1-6M1" secondAttribute="centerY" id="jZs-oz-sZF"/>
                                 </constraints>
                             </view>
@@ -68,7 +63,7 @@
                                         <color key="tintColor" systemColor="labelColor"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profen 400mg Tablets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Syh-C2-umB">
-                                        <rect key="frame" x="172" y="5" width="152" height="18"/>
+                                        <rect key="frame" x="32" y="6" width="152" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -76,10 +71,10 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="H47-Ld-G62" firstAttribute="leading" secondItem="N53-7p-OO6" secondAttribute="leading" id="GMj-uB-Omw"/>
-                                    <constraint firstAttribute="trailing" secondItem="Syh-C2-umB" secondAttribute="trailing" id="Tyg-LG-QIh"/>
-                                    <constraint firstItem="H47-Ld-G62" firstAttribute="centerY" secondItem="N53-7p-OO6" secondAttribute="centerY" id="UsE-Y1-4ta"/>
-                                    <constraint firstItem="Syh-C2-umB" firstAttribute="centerY" secondItem="N53-7p-OO6" secondAttribute="centerY" id="ae3-xZ-ais"/>
+                                    <constraint firstItem="Syh-C2-umB" firstAttribute="leading" secondItem="H47-Ld-G62" secondAttribute="trailing" constant="8" id="5Xa-Gv-Bd0"/>
+                                    <constraint firstItem="Syh-C2-umB" firstAttribute="bottom" secondItem="H47-Ld-G62" secondAttribute="bottom" id="7fN-Yj-SSp"/>
+                                    <constraint firstItem="Syh-C2-umB" firstAttribute="centerY" secondItem="N53-7p-OO6" secondAttribute="centerY" constant="1" id="ae3-xZ-ais"/>
+                                    <constraint firstItem="Syh-C2-umB" firstAttribute="leading" secondItem="N53-7p-OO6" secondAttribute="leading" constant="32" id="o2M-gn-rNY"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -95,7 +90,6 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="dateLabel" destination="viq-DS-r1Q" id="OSf-zr-AEB"/>
-                <outlet property="dateTitle" destination="11U-h1-mTI" id="kDp-DK-jTB"/>
                 <outlet property="diagnoseLabel" destination="x9T-mI-KG1" id="sRq-Hx-IFS"/>
                 <outlet property="medicineLabel" destination="Syh-C2-umB" id="QeD-Xb-7oE"/>
             </connections>
@@ -109,6 +103,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
