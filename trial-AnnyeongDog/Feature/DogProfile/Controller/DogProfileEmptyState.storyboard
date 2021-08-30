@@ -26,7 +26,13 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Rm-gS-LiC">
                                 <rect key="frame" x="75" y="196" width="240" height="307"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="emptyStateImage" translatesAutoresizingMaskIntoConstraints="NO" id="eem-FH-IXc">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="307"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Press Add button on the top right of the screen to add your dog's profile" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hdz-Ri-5Cr">
                                 <rect key="frame" x="27" y="591" width="337" height="38"/>
@@ -73,11 +79,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="addButton" destination="Sog-He-PbO" id="KGb-PF-4KE"/>
-                        <outlet property="backButton" destination="5wV-So-dt4" id="SBs-mz-X4g"/>
-                        <outlet property="descLabel" destination="Hdz-Ri-5Cr" id="h7f-P4-bx2"/>
-                        <outlet property="dogProfileLabel" destination="LRR-s2-MTz" id="C9t-Fk-AEm"/>
-                        <outlet property="titleLabel" destination="aTL-mF-Dqb" id="QUm-mj-xnl"/>
+                        <outlet property="addButton" destination="aRg-hH-zXG" id="19f-po-PHT"/>
+                        <outlet property="backButton" destination="hd8-jC-8df" id="QJE-gX-6Ua"/>
+                        <outlet property="descemptyTitle" destination="Hdz-Ri-5Cr" id="HcZ-rT-THv"/>
+                        <outlet property="emptyTitle" destination="aTL-mF-Dqb" id="i6S-t9-VGD"/>
+                        <outlet property="navigationTitleDogProfile" destination="LRR-s2-MTz" id="w8f-hh-WVk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -104,6 +110,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="emptyStateImage" width="202" height="232"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
