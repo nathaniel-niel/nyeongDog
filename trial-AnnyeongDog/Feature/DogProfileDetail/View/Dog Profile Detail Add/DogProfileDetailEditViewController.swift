@@ -127,6 +127,7 @@ class DogProfileDetailEditViewController: UIViewController, UIImagePickerControl
     @IBAction func didTapImageButton(_ sender: UIButton) {
         showImagePickerOptions()
     }
+    
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         let image = info[.originalImage] as! UIImage
         self.dogImage.image = image

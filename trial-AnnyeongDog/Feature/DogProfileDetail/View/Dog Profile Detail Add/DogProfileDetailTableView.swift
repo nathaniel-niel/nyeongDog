@@ -14,7 +14,7 @@ class DogProfileDetailTableView: UIViewController{
     var viewModel = DogProfileDetailAddViewControllerViewModel()
     var genderModel = GenderModel()
     var dogsModel = DogsModel()
-    
+   
     var dogsDOBPicker = UIPickerView()
     var genderPicker = UIPickerView()
     
@@ -36,7 +36,7 @@ class DogProfileDetailTableView: UIViewController{
         dogProfileDetail.DogProfileTableView.dataSource = self
         dogProfileDetail.setup()
         uiPickerView()
-       
+
     }
     
     func uiPickerView(){

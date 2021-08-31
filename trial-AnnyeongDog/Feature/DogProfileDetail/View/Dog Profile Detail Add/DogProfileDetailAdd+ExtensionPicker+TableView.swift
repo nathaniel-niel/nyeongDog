@@ -96,6 +96,8 @@ extension DogProfileDetailTableView: UITableViewDelegate, UITableViewDataSource 
         switch indexPath.row {
         case 0:
             let dogImageCell = dogProfileDetail.DogProfileTableView.dequeueReusableCell(withIdentifier: DogImageCell.identifier, for: indexPath) as! DogImageCell
+            dogImageCell.delegate = self
+            //dogImageCell.dogsModelDelegate = self
             return dogImageCell
             
             

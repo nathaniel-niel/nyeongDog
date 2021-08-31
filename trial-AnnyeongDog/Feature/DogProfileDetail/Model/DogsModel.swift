@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 
+
 struct DogsModel {
     var dogID: String?
     var dogName: String?
@@ -17,5 +18,5 @@ struct DogsModel {
     var weight: String?
     var color: String?
     var alergen: String?
-    
+    var dogPhoto: UIImage?
 }
