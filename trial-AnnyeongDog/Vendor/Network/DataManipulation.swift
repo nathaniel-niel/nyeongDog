@@ -8,6 +8,7 @@
 import Foundation
 import Firebase
 import FirebaseDatabase
+import FirebaseStorage
 
 
 class DataManipulation {
@@ -22,6 +23,7 @@ class DataManipulation {
     private var vetModel : [VetListModel] = []
     
     // MARK: - Firebase configuration
+    private var storage = Storage.storage().reference()
     
     //Connection ke Firebase
     var ref = Database.database(url: "https://trial-annyeongdog-default-rtdb.asia-southeast1.firebasedatabase.app/").reference()
@@ -78,6 +80,27 @@ class DataManipulation {
     
     // insert Dog Profile data to Firebase
     func insertDogProfile(with userId: String, with dog: DogsModel){
+        let imageData = dog.dogPhoto?.pngData()
+        
+        guard let saveImageData = imageData else { return }
+        storage.child("DogImage/file.png").putData(saveImageData,
+                                                   metadata: nil,
+                                                   completion: {_, error in
+                                                    guard error == nil else {
+                                                        print(error)
+                                                        return
+                                                        
+                                                    }
+                                                    
+                                                    self.storage.child("DogImage/file.png").downloadURL(completion: {url, error in
+                                                        guard let saveUrlString = url, error == nil else { return }
+                                                        
+                                                        let urlString = saveUrlString.absoluteString
+                                                        print("download URL \(urlString)")
+                                                        
+                                                    })
+                                                   })
+        
         
         let object: [String: Any] = [
             "dogId": dog.dogID ?? "no data",
@@ -188,16 +211,16 @@ class DataManipulation {
     func fetchMedicalRecordData(with userId: String,
                                 with dogID: String,
                                 completion: @escaping ([MRDModel]) -> Void){
-
- 
-
+        
+        
+        
         ref.child("users/\(userId)/dogs/\(dogID)/medical-records").observe(DataEventType.value) { snapshot in
-
+            
             if snapshot.exists(){
                 for child in snapshot.children{
                     if let snap = child as? DataSnapshot{
                         guard let val = snap.value as? [String : AnyObject] else { return }
-
+                        
                         self.mrdModel.append(MRDModel(
                             id: val["mrdId"] as? String,
                             date: val["date"] as? String,
@@ -211,11 +234,11 @@ class DataManipulation {
                         ))
                     }
                 }
-     
+                
                 completion(self.mrdModel)
             }
             else{
-
+                
                 print(Error.self)
             }
             self.mrdModel.removeAll()
@@ -226,7 +249,7 @@ class DataManipulation {
     func deleteDataToMedicalRecord(with userId: String, with dogID: String, with mrdID: String ){
         
         ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrdID)/").removeValue()
-      
+        
     }
     
     //MARK: - delete dog profile

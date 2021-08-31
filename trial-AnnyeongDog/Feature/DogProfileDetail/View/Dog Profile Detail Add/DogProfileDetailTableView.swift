@@ -28,6 +28,7 @@ class DogProfileDetailTableView: UIViewController{
     var dogAlergy = ""
     var dogDOb = ""
     var dogGender = ""
+    var dogPhoto: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,7 +72,11 @@ class DogProfileDetailTableView: UIViewController{
     }
     
     @objc func fetchToFirebase(){
-        viewModel.saveDatatoFirebase(dogsName: dogName, dogDOB: dogDOb,dogGender: dogGender, dogBreed: dogType, dogWeight: dogWeight, dogColor: dogColor, dogAllergy: dogAlergy)
+        
+        guard let saveDogPhoto = dogPhoto else { return }
+        
+        viewModel.saveDatatoFirebase(dogsName: dogName, dogDOB: dogDOb,dogGender: dogGender, dogBreed: dogType, dogWeight: dogWeight, dogColor: dogColor, dogAllergy: dogAlergy, photo: saveDogPhoto)
+        
         
         self.navigationController?.popViewController(animated: true)
         
