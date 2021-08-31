@@ -23,7 +23,7 @@ extension DogProfileDetailTableView: UIImagePickerControllerDelegate, UINavigati
         picker.dismiss(animated: true, completion: nil)
         
     }
-    
+         
     func imagePicker(sourceType: UIImagePickerController.SourceType) -> UIImagePickerController {
         let imagePicker = UIImagePickerController()
         imagePicker.sourceType = sourceType
