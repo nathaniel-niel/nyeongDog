@@ -14,7 +14,6 @@ extension DogProfileDetailTableView: UIImagePickerControllerDelegate, UINavigati
         let image = info[.originalImage] as? UIImage
         dogsModel.dogPhoto = image
         
-        
         let dogImageCell = dogProfileDetail.DogProfileTableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? DogImageCell
         
         guard let saveCell = dogImageCell else { return }

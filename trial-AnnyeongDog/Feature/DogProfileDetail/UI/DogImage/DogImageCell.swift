@@ -39,9 +39,7 @@ class DogImageCell: UITableViewCell{
     
     @IBAction func cameraButtonPressed(_ sender: UIButton) {
         
-      
         delegate?.showImagePickerOptions()
-       
     }
     
     func makeRounded() {
