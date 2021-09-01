@@ -37,13 +37,14 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         super.viewDidLoad()
         updateUI()
         isNewUser = StorageManager.shared.isNewUser()
+        
     }
-    
-    
+ 
     override func viewWillAppear(_ animated: Bool) {
         fetchFirebase()
         self.navigationItem.hidesBackButton = true
         self.tabBarController?.tabBar.isHidden = false
+       
     }
     
     // MARK: - update the UI
@@ -79,16 +80,15 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     
     //MARK: - Jumlah Cell
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       
         return fetchDatafromFirebase.dogModel.count
     }
     
     //MARK: - Ketika Row di klik
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //        performSegue(withIdentifier: "segueDogProfileDetail", sender: nil)
         let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
         let nVC = (storyboard.instantiateViewController(identifier: "XiBEdit")) as! DogProfileListDetailViewController
-        
-        
+
         nVC.id = fetchDatafromFirebase.dogModel[indexPath.row].dogID
         nVC.dogName = fetchDatafromFirebase.dogModel[indexPath.row].dogName
         nVC.dob = fetchDatafromFirebase.dogModel[indexPath.row].dateofBirth
@@ -98,7 +98,19 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         nVC.color = fetchDatafromFirebase.dogModel[indexPath.row].color
         nVC.alergen = fetchDatafromFirebase.dogModel[indexPath.row].alergen
         CurrentDogProfile.shared.currentDogId = fetchDatafromFirebase.dogModel[indexPath.row].dogID
-        self.navigationController?.pushViewController(nVC, animated: true)
+       
+        fetchDatafromFirebase.downdloadingDogPhoto(completion: { imageDownloaded in
+            DispatchQueue.main.async {
+                nVC.dogPhoto = imageDownloaded
+                self.navigationController?.pushViewController(nVC, animated: true)
+            }
+            //jadi tadi lo nge binding data didalam closure, nah data nya itu masih nil karena belum dii inisialisasi, kenapa pas di inisialisasi masih nil>??? karena lo manggil nnya didalam thread closure, bukan di class nya, jadi class nya sendiribelum ke init, jadi mending kalo sudah pake closure ya udah manfaatin binding dari closure nya buat apa di save di object yang belum keinit..
+            // jadi tadi tuh si objectnya kepanggil sebelum ke init? makanya dia nill?iya karena closure nya manggil object nya buukan manggil classs nya sedangkan object nya belum di create sama class nya ahh notedd.. tahnkss kaa zein, nect time langusng binding pake si closurenya aja yaa kaa? iyaasipp
+            //seepp thankss kaa zeinnnn yooo
+
+        })
+    
+        
     }
     
     

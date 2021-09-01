@@ -8,6 +8,8 @@
 import Foundation
 import Firebase
 import FirebaseDatabase
+import FirebaseStorage
+
 
 class DataManipulation {
     
@@ -21,6 +23,7 @@ class DataManipulation {
     private var vetModel : [VetListModel] = []
     
     // MARK: - Firebase configuration
+    private var storage = Storage.storage().reference()
     
     //Connection ke Firebase
     var ref = Database.database(url: "https://trial-annyeongdog-default-rtdb.asia-southeast1.firebasedatabase.app/").reference()
@@ -75,8 +78,12 @@ class DataManipulation {
     // MARK: - Function for dog data
     
     
+    
+    
     // insert Dog Profile data to Firebase
     func insertDogProfile(with userId: String, with dog: DogsModel){
+        
+        uploadImagetoFirebase(with: userId, with: dog)
         
         let object: [String: Any] = [
             "dogId": dog.dogID ?? "no data",
@@ -88,7 +95,36 @@ class DataManipulation {
             "color": dog.color ?? "no data",
             "alergen": dog.alergen ?? "no data"
         ]
+        
         ref.child("users/\(userId)/dogs/\(dog.dogID ?? "no data")").setValue(object)
+        
+    }
+    
+    func uploadImagetoFirebase(with userId: String, with dog: DogsModel){
+        
+        let imageData = dog.dogPhoto?.pngData()
+        
+        guard let saveImageData = imageData else { return }
+        
+        storage.child("\(userId)/\(dog.dogID!)").putData(saveImageData, metadata: nil, completion: {_, error in
+            guard error == nil else {
+                print(error)
+                print("upload error")
+                return
+            }
+            print("upload complete")
+            self.storage.child("\(userId)/\(dog.dogID!)").downloadURL(completion: {url, error in
+                guard let url = url, error == nil else { return }
+                
+                let urlString = url.absoluteString
+                print("download string \(urlString)")
+                UserDefaults.standard.set(urlString, forKey: "dogPhoto")
+                
+            })
+            
+            
+        })
+        
         
     }
     
@@ -187,16 +223,16 @@ class DataManipulation {
     func fetchMedicalRecordData(with userId: String,
                                 with dogID: String,
                                 completion: @escaping ([MRDModel]) -> Void){
-
- 
-
+        
+        
+        
         ref.child("users/\(userId)/dogs/\(dogID)/medical-records").observe(DataEventType.value) { snapshot in
-
+            
             if snapshot.exists(){
                 for child in snapshot.children{
                     if let snap = child as? DataSnapshot{
                         guard let val = snap.value as? [String : AnyObject] else { return }
-
+                        
                         self.mrdModel.append(MRDModel(
                             id: val["mrdId"] as? String,
                             date: val["date"] as? String,
@@ -210,11 +246,11 @@ class DataManipulation {
                         ))
                     }
                 }
-     
+                
                 completion(self.mrdModel)
             }
             else{
-
+                
                 print(Error.self)
             }
             self.mrdModel.removeAll()
@@ -225,7 +261,7 @@ class DataManipulation {
     func deleteDataToMedicalRecord(with userId: String, with dogID: String, with mrdID: String ){
         
         ref.child("users/\(userId)/dogs/\(dogID)/medical-records/\(mrdID)/").removeValue()
-      
+        
     }
     
     //MARK: - delete dog profile

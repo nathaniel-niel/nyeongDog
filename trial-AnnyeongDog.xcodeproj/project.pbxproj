@@ -134,6 +134,7 @@
 		C037879226B2A1CB004344E0 /* PrepareForMedical.swift in Sources */ = {isa = PBXBuildFile; fileRef = C037878426B2A1CB004344E0 /* PrepareForMedical.swift */; };
 		C050E2EE26CFB9070075A1D4 /* DogProfileDetailAdd+ExtensionPicker+TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C050E2ED26CFB9070075A1D4 /* DogProfileDetailAdd+ExtensionPicker+TableView.swift */; };
 		C0541BD226BD40D4000D2BB4 /* DatabaseCollectionName.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0541BD126BD40D4000D2BB4 /* DatabaseCollectionName.swift */; };
+		C05FB74F26DCEF710046697D /* DogProfileDetailAdd+ExtensionImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05FB74E26DCEF710046697D /* DogProfileDetailAdd+ExtensionImagePicker.swift */; };
 		C064CDBA26D630E900378325 /* DogProfileListDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C064CDB926D630E900378325 /* DogProfileListDetailViewController.swift */; };
 		C064CDBC26D6315300378325 /* DogProfileDetailListTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C064CDBB26D6315300378325 /* DogProfileDetailListTableView.swift */; };
 		C07230B726CD717A007E7EE7 /* DogProfileDetailAddViewControllerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C07230B626CD717A007E7EE7 /* DogProfileDetailAddViewControllerViewModel.swift */; };
@@ -283,6 +284,7 @@
 		C037878526B2A1CB004344E0 /* ModelBackButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelBackButton.swift; sourceTree = "<group>"; };
 		C050E2ED26CFB9070075A1D4 /* DogProfileDetailAdd+ExtensionPicker+TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogProfileDetailAdd+ExtensionPicker+TableView.swift"; sourceTree = "<group>"; };
 		C0541BD126BD40D4000D2BB4 /* DatabaseCollectionName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseCollectionName.swift; sourceTree = "<group>"; };
+		C05FB74E26DCEF710046697D /* DogProfileDetailAdd+ExtensionImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DogProfileDetailAdd+ExtensionImagePicker.swift"; sourceTree = "<group>"; };
 		C064CDB926D630E900378325 /* DogProfileListDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileListDetailViewController.swift; sourceTree = "<group>"; };
 		C064CDBB26D6315300378325 /* DogProfileDetailListTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileDetailListTableView.swift; sourceTree = "<group>"; };
 		C07230B626CD717A007E7EE7 /* DogProfileDetailAddViewControllerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogProfileDetailAddViewControllerViewModel.swift; sourceTree = "<group>"; };
@@ -1039,6 +1041,7 @@
 				C0A21CD726CE242700DF0BCE /* DogProfileDetailTableView.swift */,
 				C0A21CD926CE270500DF0BCE /* DogProfileDetailView.swift */,
 				C050E2ED26CFB9070075A1D4 /* DogProfileDetailAdd+ExtensionPicker+TableView.swift */,
+				C05FB74E26DCEF710046697D /* DogProfileDetailAdd+ExtensionImagePicker.swift */,
 			);
 			path = "Dog Profile Detail Add";
 			sourceTree = "<group>";
@@ -1359,6 +1362,7 @@
 				C064CDBC26D6315300378325 /* DogProfileDetailListTableView.swift in Sources */,
 				5B67967426B41796004514F3 /* DogProfileTableViewCell.swift in Sources */,
 				C079A37726B844D00061EC30 /* DogsModel.swift in Sources */,
+				C05FB74F26DCEF710046697D /* DogProfileDetailAdd+ExtensionImagePicker.swift in Sources */,
 				B5821A6626B7EEA0006DDED9 /* SigninViewController.swift in Sources */,
 				B584B3D826B28DF2005A02C5 /* ExampleViewModel.swift in Sources */,
 				5BB95A9126D7CB7C000E7272 /* WhoConsultingCollectionViewCell.swift in Sources */,

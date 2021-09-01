@@ -37,3 +37,18 @@ xcuserdata/
 # Cocoapods
 Pods/
 # End of https://www.gitignore.io/api/xcode
+Pods/Target Support Files/Pods-trial-AnnyeongDog/Pods-trial-AnnyeongDog.release.xcconfig
+Pods/Target Support Files/Pods-trial-AnnyeongDog/Pods-trial-AnnyeongDog.debug.xcconfig
+Pods/Target Support Files/Pods-trial-AnnyeongDog/Pods-trial-AnnyeongDog-frameworks.sh
+Pods/Target Support Files/Pods-trial-AnnyeongDog/Pods-trial-AnnyeongDog-frameworks-Release-output-files.xcfilelist
+Pods/Target Support Files/Pods-trial-AnnyeongDog/Pods-trial-AnnyeongDog-frameworks-Release-input-files.xcfilelist
+Pods/Target Support Files/Pods-trial-AnnyeongDog/Pods-trial-AnnyeongDog-frameworks-Debug-output-files.xcfilelist
+Pods/Target Support Files/Pods-trial-AnnyeongDog/Pods-trial-AnnyeongDog-frameworks-Debug-input-files.xcfilelist
+Pods/Target Support Files/Pods-trial-AnnyeongDog/Pods-trial-AnnyeongDog-acknowledgements.plist
+Pods/Target Support Files/Pods-trial-AnnyeongDog/Pods-trial-AnnyeongDog-acknowledgements.markdown
+Pods/Target Support Files/Firebase/Firebase.release.xcconfig
+Pods/Target Support Files/Firebase/Firebase.debug.xcconfig
+Pods/Pods.xcodeproj/project.pbxproj
+Pods/Manifest.lock
+Podfile.lock
+Podfile
