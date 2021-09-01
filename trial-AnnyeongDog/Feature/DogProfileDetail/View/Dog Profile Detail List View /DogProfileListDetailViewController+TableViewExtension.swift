@@ -18,6 +18,8 @@ extension DogProfileListDetailViewController: UITableViewDelegate, UITableViewDa
         switch indexPath.row {
         case 0:
             let dogImageCell = dogProfileDetailTableView.dogProfileDetailListTableView.dequeueReusableCell(withIdentifier: DogImageCell.identifier, for: indexPath) as! DogImageCell
+            dogImageCell.dogImage.image = dogPhoto
+            
             return dogImageCell
             
             

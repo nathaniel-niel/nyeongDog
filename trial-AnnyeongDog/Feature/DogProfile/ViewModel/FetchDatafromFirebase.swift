@@ -8,9 +8,15 @@
 import UIKit
 import Firebase
 
-class FetchDatafromFirebase {
-    
+class FetchDatafromFirebase { // siapa ygn manggil dia
+ 
     var dogModel: [DogsModel] = []
+    var dogPhotoModel: DogPhoto?
+    
+    init(dogModel: [DogsModel]) {
+        self.dogModel = dogModel
+
+    }
     
     func fetchDataFirebase(completion: @escaping() -> Void){
         
@@ -27,21 +33,18 @@ class FetchDatafromFirebase {
         
     }
     
-    func downdloadingDogPhoto(){
+    func downdloadingDogPhoto(completion: @escaping (UIImage) -> Void){
         
-             guard let urlString = UserDefaults.standard.value(forKey: "dogPhoto") as? String, let url = URL(string: urlString) else { return }
-
-             URLSession.shared.dataTask(with: url, completionHandler: { data, reponse, error in
-                 guard let data = data, error == nil else { return }
-
-                 UIImage(data: data)
-             })
-       
-    }
-  
-    
-    init(dogModel: [DogsModel] = []) {
-        self.dogModel = dogModel
+        guard let urlString = UserDefaults.standard.value(forKey: "dogPhoto") as? String, let url = URL(string: urlString) else { return }
+        
+        let task = URLSession.shared.dataTask(with: url, completionHandler: { data, response, error in
+            guard let data = data, error == nil else { return }
+           
+            if let imageDownloaded = UIImage(data: data) {
+                completion(imageDownloaded)
+            }
+        })
+         task.resume()
     }
 }
 

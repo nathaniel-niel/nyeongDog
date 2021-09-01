@@ -127,7 +127,6 @@ class DataManipulation {
         
         
     }
- 
     
     //update dog profile data in Firebase
     func updateDogProfile(with userId: String, with dog: DogsModel){
