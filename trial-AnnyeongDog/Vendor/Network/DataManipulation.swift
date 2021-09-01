@@ -78,29 +78,12 @@ class DataManipulation {
     // MARK: - Function for dog data
     
     
+    
+    
     // insert Dog Profile data to Firebase
     func insertDogProfile(with userId: String, with dog: DogsModel){
-        let imageData = dog.dogPhoto?.pngData()
         
-        guard let saveImageData = imageData else { return }
-        storage.child("DogImage/file.png").putData(saveImageData,
-                                                   metadata: nil,
-                                                   completion: {_, error in
-                                                    guard error == nil else {
-                                                        print(error)
-                                                        return
-                                                        
-                                                    }
-                                                    
-                                                    self.storage.child("DogImage/file.png").downloadURL(completion: {url, error in
-                                                        guard let saveUrlString = url, error == nil else { return }
-                                                        
-                                                        let urlString = saveUrlString.absoluteString
-                                                        print("download URL \(urlString)")
-                                                        
-                                                    })
-                                                   })
-        
+        uploadImagetoFirebase(with: userId, with: dog)
         
         let object: [String: Any] = [
             "dogId": dog.dogID ?? "no data",
@@ -112,9 +95,39 @@ class DataManipulation {
             "color": dog.color ?? "no data",
             "alergen": dog.alergen ?? "no data"
         ]
+        
         ref.child("users/\(userId)/dogs/\(dog.dogID ?? "no data")").setValue(object)
         
     }
+    
+    func uploadImagetoFirebase(with userId: String, with dog: DogsModel){
+        
+        let imageData = dog.dogPhoto?.pngData()
+        
+        guard let saveImageData = imageData else { return }
+        
+        storage.child("\(userId)/\(dog.dogID!)").putData(saveImageData, metadata: nil, completion: {_, error in
+            guard error == nil else {
+                print(error)
+                print("upload error")
+                return
+            }
+            print("upload complete")
+            self.storage.child("\(userId)/\(dog.dogID!)").downloadURL(completion: {url, error in
+                guard let url = url, error == nil else { return }
+                
+                let urlString = url.absoluteString
+                print("download string \(urlString)")
+                UserDefaults.standard.set(urlString, forKey: "dogPhoto")
+                
+            })
+            
+            
+        })
+        
+        
+    }
+ 
     
     //update dog profile data in Firebase
     func updateDogProfile(with userId: String, with dog: DogsModel){

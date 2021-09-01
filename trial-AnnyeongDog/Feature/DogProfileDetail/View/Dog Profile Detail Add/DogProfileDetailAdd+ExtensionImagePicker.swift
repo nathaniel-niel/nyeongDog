@@ -12,11 +12,11 @@ extension DogProfileDetailTableView: UIImagePickerControllerDelegate, UINavigati
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         let image = info[.originalImage] as? UIImage
-        
         dogPhoto = image
+        dogsModel.dogPhoto = image
         
         let dogImageCell = dogProfileDetail.DogProfileTableView.cellForRow(at: IndexPath(row: 0, section: 0)) as? DogImageCell
-        
+         
         guard let saveCell = dogImageCell else { return }
         
         saveCell.dogImage?.image = image

@@ -37,13 +37,14 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
         super.viewDidLoad()
         updateUI()
         isNewUser = StorageManager.shared.isNewUser()
+        
     }
-    
-    
+ 
     override func viewWillAppear(_ animated: Bool) {
         fetchFirebase()
         self.navigationItem.hidesBackButton = true
         self.tabBarController?.tabBar.isHidden = false
+       
     }
     
     // MARK: - update the UI
@@ -84,11 +85,12 @@ class DogProfileListViewController: UIViewController, UITableViewDataSource, UIT
     
     //MARK: - Ketika Row di klik
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //        performSegue(withIdentifier: "segueDogProfileDetail", sender: nil)
         let storyboard = UIStoryboard(name: "DogProfileDetailEdit", bundle: nil)
         let nVC = (storyboard.instantiateViewController(identifier: "XiBEdit")) as! DogProfileListDetailViewController
         
+        fetchDatafromFirebase.downdloadingDogPhoto()
         
+       
         nVC.id = fetchDatafromFirebase.dogModel[indexPath.row].dogID
         nVC.dogName = fetchDatafromFirebase.dogModel[indexPath.row].dogName
         nVC.dob = fetchDatafromFirebase.dogModel[indexPath.row].dateofBirth

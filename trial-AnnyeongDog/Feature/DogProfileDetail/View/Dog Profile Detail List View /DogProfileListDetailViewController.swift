@@ -22,6 +22,7 @@ class DogProfileListDetailViewController: UIViewController{
     var weight: String?
     var color: String?
     var alergen: String?
+    var dogPhoto: UIImage?
     
     
     override func viewDidLoad() {

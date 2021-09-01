@@ -73,9 +73,9 @@ class DogProfileDetailTableView: UIViewController{
     
     @objc func fetchToFirebase(){
         
-        guard let saveDogPhoto = dogPhoto else { return }
+        guard let saveDogImage = dogPhoto else { return }
         
-        viewModel.saveDatatoFirebase(dogsName: dogName, dogDOB: dogDOb,dogGender: dogGender, dogBreed: dogType, dogWeight: dogWeight, dogColor: dogColor, dogAllergy: dogAlergy, photo: saveDogPhoto)
+        viewModel.saveDatatoFirebase(dogsName: dogName, dogDOB: dogDOb,dogGender: dogGender, dogBreed: dogType, dogWeight: dogWeight, dogColor: dogColor, dogAllergy: dogAlergy, photo: saveDogImage)
         
         
         self.navigationController?.popViewController(animated: true)

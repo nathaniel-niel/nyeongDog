@@ -27,6 +27,19 @@ class FetchDatafromFirebase {
         
     }
     
+    func downdloadingDogPhoto(){
+        
+             guard let urlString = UserDefaults.standard.value(forKey: "dogPhoto") as? String, let url = URL(string: urlString) else { return }
+
+             URLSession.shared.dataTask(with: url, completionHandler: { data, reponse, error in
+                 guard let data = data, error == nil else { return }
+
+                 UIImage(data: data)
+             })
+       
+    }
+  
+    
     init(dogModel: [DogsModel] = []) {
         self.dogModel = dogModel
     }
